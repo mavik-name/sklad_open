@@ -1,5 +1,5 @@
 MaVik workspace · GitHub mirror
-Updated: 2026-08-13T11:42:16+03:00
+Updated: 2026-08-13T11:43:18+03:00
 Repository: https://github.com/mavik-name/sklad_open/tree/main/mavik-sklad
 
 Technic_Files.txt
@@ -9,5 +9,6 @@ PROJECT: Загальне
 
 Golovnyi_kanon_dlya_napysannya_na_redaguvannya_tekstiv_ta_rozmov.txt
 FILE: https://raw.githubusercontent.com/mavik-name/sklad_open/main/mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt
+TEXT: https://raw.githubusercontent.com/mavik-name/sklad_open/main/mavik-sklad/text/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt
 PROJECT: Загальне
 
