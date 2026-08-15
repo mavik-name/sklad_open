@@ -1,7 +1,7 @@
 {
-  "schema": 3,
+  "schema": 4,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T23:18:00+03:00",
+  "updated_at": "2026-08-15-session-end",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -20,13 +20,14 @@
     "every_process_file_must_be_persisted": true,
     "staging_contains_release_files_only": true,
     "next_file_only_after_readback": true,
-    "unfinished_social_is_archive_only": true
+    "unfinished_social_is_archive_only": true,
+    "every_intermediate_result_is_journaled": true
   },
   "books": [
-    {"slug":"sotsialna","uk_title":"Соціальна","publication_mode":"beta","english_pipeline":"excluded_unfinished"},
+    {"slug":"sotsialna","uk_title":"Соціальна","publication_mode":"beta","english_pipeline":"excluded_unfinished","note":"partial English work preserved archive-only"},
     {"slug":"mamo-zhyty","uk_title":"Мамо, жити!","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Mom, I Want to Live!","source_words":15291,"source_chunks":"7/7","translation_chunks":"7/7","structure":"26 chapters + afterword","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
     {"slug":"bezimenni","uk_title":"Безіменні","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Nameless","source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
-    {"slug":"skulptor","uk_title":"Скульптор","publication_mode":"final","english_pipeline":"queued"},
+    {"slug":"skulptor","uk_title":"Скульптор","publication_mode":"final","english_pipeline":"deferred_after_structure_analysis","english_title":"The Sculptor","source_words":138164,"structure":"47 chapters + afterword","planned_source_blocks":28,"translation_chunks":"0/28","source_block_001_persisted":false,"journal":"control/journal/2026-08-15-2324-skulptor-structure.txt","reason":"queue shorter completed works first"},
     {"slug":"universe","uk_title":"UNIVERSE","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"advokat-dyiavola","uk_title":"Адвокат Диявола","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"patsiient","uk_title":"Пацієнт","publication_mode":"final","english_pipeline":"queued"},
@@ -35,7 +36,7 @@
     {"slug":"olena","uk_title":"Олена","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"lysty-polkovnyku","uk_title":"Листи полковнику","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"queued"},
+    {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"in_progress","english_title":"The Man Without an Account","source_words":18840,"structure":"5 chapters + author's afterword","planned_blocks":6,"source_chunks":"1/6 persisted","translation_chunks":"0/6","current_source_path":"source/liudyna-bez-akaunta/uk-001.txt","current_source_blob":"46a215b96cd2c2591baaa4dbaeedef67ea12d687","current_translation_persisted":false,"exact_next":"translate Chapter 1 from persisted uk-001.txt, save to WORKSPACE + STAGING, readback, journal"},
     {"slug":"yak-vitko-z-moskaliamy-voiuvav","uk_title":"Як Вітько з москалями воював","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","translation_chunks":"3/3","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
     {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
@@ -45,45 +46,33 @@
     {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Gospel According to Macarius","source_chunks":"6/6","translation_chunks":"6/6","structure":"foreword + prologue + 25 chapters + afterword","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"}
   ],
   "verified_release_groups": {
-    "english_shell": {"status":"present_in_staging","routes":["en/","en/books/","en/books/new/","en/books/free/","en/about/","en/blog/","en/announcements/","en/music/"]},
-    "ty-i-ia": {"status":"complete_beta","copies":["workspace","staging"]},
-    "pishchynka-solya": {"status":"complete_beta","copies":["workspace","staging"]},
-    "vidmova-avansom": {"status":"complete_beta","translation_chunks":"3/3","copies":["workspace","staging"],"readback":"ok"},
-    "transfer": {"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
-    "yevanheliie-vid-makariia": {"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
-    "bezimenni": {"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
-    "paterny-samorefleksii": {"status":"complete_beta","source_chunks":"8/8","translation_chunks":"8/8","copies":["workspace","staging"],"readback":"ok"},
-    "mamo-zhyty": {
-      "status":"complete_beta",
-      "english_title":"Mom, I Want to Live!",
-      "source_chunks":"7/7",
-      "translation_chunks":"7/7",
-      "copies":["workspace","staging"],
-      "readback":"ok",
-      "release_files": {
-        "landing":{"path":"en/books/mamo-zhyty/index.html","github_blob":"80cfc24c367171809b387a802ec30d1dbd56caf6"},
-        "reader":{"path":"en/books/mamo-zhyty/read/index.html","github_blob":"aae1700c57c69c036c224cce1d2adc1805eb86ce"},
-        "text_index":{"path":"en/books/mamo-zhyty/read/text/index.html","github_blob":"6f868766e2707143340e05ac4328490832020d77"},
-        "part_001":"45226da36fe36a1d7de441ae05618b8a71a26478",
-        "part_002":"5a04c1c96cd07d63bc7676315637ec86e47feeeb",
-        "part_003":"003d58b394750f513cceff49b0fda98ecc0cf703",
-        "part_004":"aef244b694e76d95719716f7fd44c01eb0547094",
-        "part_005":"6ecb62fb020116bdc3af74b177f14a3610f2edfc",
-        "part_006":"1c14052d0dbdcea7f42d29ca83d23ab77c8dfaa3",
-        "part_007":"988ca7cad1ec1cef3def104dad95f87505b18ffc"
-      }
-    }
+    "english_shell":{"status":"present_in_staging"},
+    "ty-i-ia":{"status":"complete_beta"},
+    "pishchynka-solya":{"status":"complete_beta"},
+    "vidmova-avansom":{"status":"complete_beta","translation_chunks":"3/3"},
+    "transfer":{"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6"},
+    "yevanheliie-vid-makariia":{"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6"},
+    "bezimenni":{"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6"},
+    "paterny-samorefleksii":{"status":"complete_beta","source_chunks":"8/8","translation_chunks":"8/8"},
+    "mamo-zhyty":{"status":"complete_beta","source_chunks":"7/7","translation_chunks":"7/7","readback":"ok"}
   },
   "counts": {
     "completed_uk_works_target": 19,
     "complete_english_beta_web_editions": 8,
     "excluded_unfinished": 1,
-    "remaining_completed_works_to_translate": 11
+    "remaining_completed_works_not_complete_in_english": 11
   },
+  "queue_decision": {
+    "strategy":"shorter completed works first",
+    "journal":"control/journal/2026-08-15-2328-translation-queue-optimization.txt"
+  },
+  "session_end_handoff":"control/journal/2026-08-15-SESSION-END-HANDOFF.txt",
   "next": {
-    "rule": "Persist canonical Ukrainian source in WORKSPACE before translation.",
-    "title": "The Sculptor",
-    "uk_title": "Скульптор",
-    "slug": "skulptor"
+    "title":"The Man Without an Account",
+    "uk_title":"Людина без акаунта",
+    "slug":"liudyna-bez-akaunta",
+    "source_block":"1/6 already persisted",
+    "translation_block":"0/6 persisted",
+    "exact_action":"Translate Chapter 1 from WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt, persist English part-001 to WORKSPACE + STAGING, readback, journal, then continue source 2/6."
   }
 }
