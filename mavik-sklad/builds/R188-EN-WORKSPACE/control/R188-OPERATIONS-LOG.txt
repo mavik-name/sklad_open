@@ -40,3 +40,5 @@ Started: 15.08.2026 19:06 +03:00
 22:12 — Patterns of Self-Reflection source + English block 7/8 persisted; WORKSPACE + STAGING readback passed.
 22:15 — Patterns of Self-Reflection source + English block 8/8 persisted; final translation complete 8/8, covering author introduction + 49 texts.
 22:17 — Patterns of Self-Reflection landing page, eight-part reader and text-entry page persisted to WORKSPACE + STAGING. GitHub readback confirmed landing plus text index and all eight text parts. Book is now complete English beta web edition #7/19; English cover adaptation and validated EPUB remain pending.
+22:22 — Mom, I Want to Live! exact R187 source identified: 26 chapters, 15,291 words. Split into 7 controlled blocks strictly on chapter boundaries: 1–4 / 5–8 / 9–12 / 13–16 / 17–20 / 21–23 / 24–26.
+22:25 — Mom, I Want to Live! source block 1/7 (chapters 1–4) persisted under WORKSPACE/source/mamo-zhyty/uk-001.txt; English block 1/7 persisted to WORKSPACE + STAGING; staging readback passed.
