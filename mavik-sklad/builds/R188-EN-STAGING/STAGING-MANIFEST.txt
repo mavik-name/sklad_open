@@ -1,5 +1,5 @@
 R188 ENGLISH STAGING MANIFEST
-Updated: 15.08.2026 18:57 +03:00
+Updated: 15.08.2026 19:00 +03:00
 Status: WORK IN PROGRESS / NOT CANONICAL
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 Base SHA-256: daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21
@@ -10,6 +10,13 @@ RULE:
 - Final packaging must reconcile staging tree <-> manifest <-> `.mavik-release.json`.
 - A checkpoint description does not substitute for staging the real file.
 - Binary exception allowed only when GitHub upload is technically impossible; record exact permanent location + size + SHA-256 here.
+- FINAL R188 ZIP MUST BE ASSEMBLED FROM THIS STAGING TREE, NOT FROM AN UNSAVED LOCAL WORKING DIRECTORY.
+
+CONTENT ELIGIBILITY RULE:
+- Only COMPLETED Ukrainian works may be translated/published as English books in R188.
+- Unfinished works are excluded because the Ukrainian source remains subject to editing.
+- Partial English work on an unfinished title may be archived as work already performed, but MUST NOT be staged, published, EPUB-packaged, or counted as an R188 release book until the Ukrainian work is completed.
+- Before beginning any new book translation, verify that the Ukrainian title is completed/final enough for publication.
 
 CURRENT STAGED RELEASE FILES:
 [initialization only — release artifacts will be populated continuously as work proceeds]
@@ -17,8 +24,9 @@ CURRENT STAGED RELEASE FILES:
 CURRENT KNOWN R188 WORK STATE:
 - Native `/en/` architecture is active direction.
 - Separate Boss `English` management area is active direction.
-- 9 full English translations recorded in checkpoint.
-- `Social`: Chapters 1–7 translated; next Chapter 8.
+- 9 completed-title English translations are recorded historically in checkpoint and require physical recovery/reconstruction before staging.
+- `Social` / `Соціальна` is UNFINISHED and therefore EXCLUDED from R188 translation/publication staging.
+- Preserved partial Social English work remains archive-only and is not a release artifact.
 
 LATEST CHECKPOINT:
 `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
