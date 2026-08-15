@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 18:48 +03:00**
+Updated: **15.08.2026 18:53 +03:00**
 Purpose: authoritative handoff point for the next ChatGPT session working on the native English edition.
 
 ## CANONICAL BASE
@@ -25,111 +25,76 @@ Purpose: authoritative handoff point for the next ChatGPT session working on the
 - Final English publication requires validated English EPUBs.
 - Boss must have a separate top-level `English` management area.
 
-## ARCHITECTURE ALREADY IMPLEMENTED IN ACTIVE R188 WORK
+## RECOVERY NOTE
 
-Public English routes:
-- `/en/`
-- `/en/books/`
-- `/en/books/new/`
-- `/en/books/free/`
-- English landing route for every current book
-- `/en/blog/`
-- `/en/announcements/`
-- `/en/music/`
-- `/en/music/reading/`
-- `/en/about/`
-- `/en/privacy/`
-- `/en/copyright/`
-- `/en/discover/`
-- `/en/genres/`
-- `/en/themes/`
-- `/en/platformy/`
-- English PWA manifest
-- `assets/app/en-site.css`
-- native direct UA/EN language bridge
+The previous R188 working tree was not physically preserved after the earlier chat/session. Its architecture and completed-translation status survive in the journal/checkpoints, but do not treat the missing `/en/` code/readers/manuscripts as currently present on disk. Rebuild/package them from canonical R187 when preparing the actual R188 candidate.
 
-Boss English area implemented in active work:
-- top-level `English` tab;
-- Overview / Books / Blog views;
-- English state seed/runtime;
-- English state included in Boss export/import;
-- per-book English title, genre, description, status and publication mode;
-- English cover upload under `/images/covers/en/`;
-- English manuscript upload DOCX/TXT;
-- native English web-reader generation;
-- English EPUB generation path;
-- English blog editor/publishing;
-- rebuild-all action.
+## FULL ENGLISH TRANSLATIONS REPORTED COMPLETED IN PREVIOUS R188 WORK
 
-## FULL ENGLISH TRANSLATIONS COMPLETED IN ACTIVE R188 WORK
+1. **You and I** — full translation, native beta reader reported.
+2. **Solya, the Grain of Sand Who Dreamed of a Skyscraper** — full translation, native beta reader reported.
+3. **Rejection in Advance** — full literary translation, native beta reader reported.
+4. **Transfer** — full literary translation, about 8,161 English words, native beta reader reported.
+5. **The Gospel According to Macarius** — preface + prologue + 25 chapters + afterword, native beta reader reported.
+6. **The Nameless** — 13 chapters + afterword, about 12,786 English words, native beta reader reported.
+7. **Patterns of Self-Reflection** — introduction + 49 texts, about 14,554 English words, native beta reader reported.
+8. **Mom, I Want to Live!** — 26 chapters + afterword, about 15,801 English words, native beta reader reported.
+9. **The Man Without an Account** — 5 chapters + author’s afterword, about 22,961 English words, native beta reader reported.
 
-1. **You and I** — full translation, native beta reader.
-2. **Solya, the Grain of Sand Who Dreamed of a Skyscraper** — full translation, native beta reader.
-3. **Rejection in Advance** — full literary translation, native beta reader.
-4. **Transfer** — full literary translation, about 8,161 English words, native beta reader.
-5. **The Gospel According to Macarius** — preface + prologue + 25 chapters + afterword, native beta reader.
-6. **The Nameless** — 13 chapters + afterword, about 12,786 English words, native beta reader.
-7. **Patterns of Self-Reflection** — introduction + 49 texts, about 14,554 English words, native beta reader.
-8. **Mom, I Want to Live!** — 26 chapters + afterword, about 15,801 English words, native beta reader.
-9. **The Man Without an Account** — 5 chapters + author’s afterword, about 22,961 English words, native beta reader.
-
-`beta` means the full translated text exists in the active R188 work and is readable; final English copy-edit, English cover and validated EPUB may still be pending.
+Physical recovery/reconstruction of those missing English artifacts remains required.
 
 ## CURRENT ACTIVE TRANSLATION — SOCIAL
 
-Progress:
+Source: canonical R187 `Соціальна.docx`.
+
+Historical progress from previous session:
 - Chapters **1–7 translated**.
 - Chapter 1: about 1,959 English words.
-- Chapters 2–7: translated in the same literary pass.
+- The physical English files for Chapters 1–7 were not recovered.
 
-**NEXT CONTINUATION POINT: CHAPTER 8.**
+New persisted work:
+- **Chapters 8–10 translated/reconstructed from canonical R187 and physically saved.**
+- Artifact: `mavik-sklad/files/r188-social-en-ch08-10.md`
+- Word count: **2,972 English words**.
+- Save/readback on GitHub verified.
 
-Do not restart from Chapter 1 unless the user explicitly requests a new translation/editorial rewrite.
+**NEXT CONTINUATION POINT: CHAPTER 11.**
+
+Do not restart from Chapter 1 unless explicitly requested. Continue forward from Chapter 11; preserve each new batch as a real warehouse file immediately.
 
 Translation constraints for `Social`:
-- preserve restrained emotional delivery;
-- preserve authentic NGO/fund/bureaucratic register;
-- preserve the distinction between moral parasitism and actual criminality;
-- do not turn the fund into a cartoon villain;
-- do not invent corruption or embezzlement absent from the source;
-- keep the heroine’s personal loss as an emotional undercurrent rather than constant explanation.
+- restrained emotional delivery;
+- authentic NGO/fund/bureaucratic register;
+- preserve moral ambiguity and the distinction between moral parasitism and actual criminality;
+- no invented corruption/embezzlement;
+- no cartoon villain fund;
+- personal loss stays an undercurrent;
+- short hard beats remain short rather than being explained.
 
-## COVERS
+## MAJOR REMAINING WORK
 
-- Boss support for separate English covers is implemented.
-- Actual English cover adaptation/generation is still required title by title.
-- English cover should preserve the visual identity/composition of the Ukrainian edition where practical, replacing Ukrainian title/subtitle text with the approved English title.
-- Do not mark an edition final while it visibly uses a Ukrainian-title cover.
-
-## EPUB
-
-- Final English EPUB validation is still pending.
-- Local PHP CLI used during development lacked `ZipArchive`; before release, create actual English EPUB archives and validate structure/CRC.
-- Do not claim English EPUB completion without archive validation.
-
-## NEXT MAJOR WORK
-
-1. Continue `Social` from **Chapter 8**.
-2. Continue remaining literary translations.
-3. Create/adapt English covers.
-4. Final English editorial pass per completed work.
-5. Generate and validate English EPUBs.
-6. Translate/publish English blog and announcements.
-7. Finish English SEO: titles, descriptions, canonical, hreflang, sitemap.
-8. Service-worker/cache audit.
-9. Full local-reference audit.
-10. PHP lint / JS checks / JSON/XML / EPUB CRC.
-11. Build exact R188 manifest and validate through Boss deploy validator.
-12. Package full R188 candidate.
-13. Do **not** canonicalize without direct user approval.
+- continue Social from Chapter 11;
+- physically save each batch;
+- reconstruct/preserve the lost completed English manuscripts/readers;
+- reconstruct native `/en/` architecture and Boss English management from canonical R187;
+- English covers;
+- final English editorial passes;
+- validated English EPUBs;
+- English blog and announcements;
+- SEO/hreflang/sitemap;
+- service-worker/cache and local-ref audit;
+- PHP/JS/JSON/XML/EPUB checks;
+- exact R188 manifest and Boss validator;
+- full R188 candidate;
+- no canonicalization without direct user approval.
 
 ## CHECKPOINT PROTOCOL — MANDATORY
 
-After every meaningful block of work (for example: 2–4 translated chapters, one completed book, one cover batch, one Boss/SEO milestone):
+After every meaningful work block:
 1. Update this file `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`.
 2. Update `mavik-sklad/files/site-r188-english-development.md`.
 3. Mirror the checkpoint to `mavik-sklad/text/R188-EN-CHECKPOINT-LATEST.md`.
-4. When a major milestone is completed, also create a timestamped snapshot `R188-EN-CHECKPOINT-YYYY-MM-DD-HHMM.md` so history is preserved.
-5. Next session must read the latest checkpoint before doing any R188 work.
+4. Store the actual translation/code/cover/EPUB/ZIP artifact — a checkpoint description alone is not enough.
+5. On major milestones, create a timestamped checkpoint snapshot.
 
 This file is the authoritative continuation point unless a newer timestamped checkpoint explicitly supersedes it.
