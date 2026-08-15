@@ -1,0 +1,27 @@
+R188 ENGLISH STAGING MANIFEST
+Updated: 15.08.2026 18:57 +03:00
+Status: WORK IN PROGRESS / NOT CANONICAL
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+Base SHA-256: daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21
+
+RULE:
+- Every actual file intended for R188 must have a current copy under `mavik-sklad/builds/R188-EN-STAGING/` at the same relative path it will use in the ZIP.
+- This manifest is updated whenever staged files are added/replaced/deleted.
+- Final packaging must reconcile staging tree <-> manifest <-> `.mavik-release.json`.
+- A checkpoint description does not substitute for staging the real file.
+- Binary exception allowed only when GitHub upload is technically impossible; record exact permanent location + size + SHA-256 here.
+
+CURRENT STAGED RELEASE FILES:
+[initialization only — release artifacts will be populated continuously as work proceeds]
+
+CURRENT KNOWN R188 WORK STATE:
+- Native `/en/` architecture is active direction.
+- Separate Boss `English` management area is active direction.
+- 9 full English translations recorded in checkpoint.
+- `Social`: Chapters 1–7 translated; next Chapter 8.
+
+LATEST CHECKPOINT:
+`mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
+
+MANDATORY CANON:
+`mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
