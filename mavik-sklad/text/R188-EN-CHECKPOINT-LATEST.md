@@ -1,56 +1,61 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 19:00 +03:00**
+Updated: **15.08.2026 19:20 +03:00**
 
-Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`, SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
-R188 English: WORK IN PROGRESS / NOT CANONICAL.
+Canonical base: full R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`, SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
+R188: WORK IN PROGRESS / NOT CANONICAL.
+Old `187 Оболонка_Сайт_ОК.zip` is structural-reference-only, never the release base.
 
 Hard decisions:
-- native English site under `/en/`;
+- native `/en/` site;
 - direct `UA ↔ EN`;
-- no Google Translate as the English edition;
-- Ukrainian R187 remains intact;
-- ChatGPT performs literary translation;
-- English covers required;
-- validated English EPUBs required;
-- separate top-level English area in Boss;
-- **ONLY COMPLETED UKRAINIAN WORKS MAY BE TRANSLATED/PUBLISHED FOR R188.**
+- no Google Translate as English edition;
+- Ukrainian R187 intact;
+- separate Boss `English` area;
+- English covers + actually validated English EPUBs;
+- literary translation by ChatGPT without calques/invented details;
+- **ONLY COMPLETED UKRAINIAN WORKS MAY ENTER R188 TRANSLATION/PUBLICATION.**
 
-Previously reported full English translations:
-1. You and I
-2. Solya, the Grain of Sand Who Dreamed of a Skyscraper
-3. Rejection in Advance
-4. Transfer (~8,161 English words)
-5. The Gospel According to Macarius
-6. The Nameless (~12,786 words)
-7. Patterns of Self-Reflection (~14,554 words)
-8. Mom, I Want to Live! (~15,801 words)
-9. The Man Without an Account (~22,961 words)
+Persistence:
+- WORKSPACE: `mavik-sklad/builds/R188-EN-WORKSPACE/` — every process artifact/reference/archive.
+- STAGING: `mavik-sklad/builds/R188-EN-STAGING/` — only current release-eligible files at final ZIP-relative paths.
+- BATCH-01 persistent insurance copy: COMPLETE.
 
-Physical reconstruction/preservation of those missing artifacts remains required before staging.
+Completed-title inventory:
+- canonical/public R187 library: 19 full Ukrainian texts;
+- 9 full English translations were reported completed in lost previous R188 worktree and require physical recovery/reconstruction;
+- 10 completed works still require English translation.
+Full map: `R188-EN-WORKSPACE/control/COMPLETED-TITLE-QUEUE.txt`.
+
+Recovery target:
+`C:\Users\user\Downloads\mavik-name-en-20260815-0548.zip`
+- unfinished working R188 ZIP, NOT final release;
+- may contain lost `/en/`, Boss English and nine translations;
+- inspect before rebuilding/retranslating if recovered.
+
+Canonical full R187 binary is not currently mounted in runtime. `BASE-SOURCE.txt` records its exact identity only. Current File Library retrieval is returning service errors. Do not fake reconstruction from the obsolete shell.
 
 SOCIAL / СОЦІАЛЬНА:
-- unfinished Ukrainian work;
-- removed from active English translation queue;
-- do NOT continue from Chapter 14;
-- Chapters 8–10 physically preserved at `mavik-sklad/files/r188-social-en-ch08-10.md`;
-- Chapters 11–13 physically preserved at `mavik-sklad/files/r188-social-en-ch11-13.md`;
-- Chapters 1–7 were reported translated historically but physical files were not recovered;
-- preserved Social work is archive-only, not public `/en/`, not EPUB, not R188 staging;
-- resume only after Ukrainian completion and explicit user instruction.
+- unfinished; removed from active R188 queue;
+- Chapters 8–10 and 11–13 physically preserved;
+- Chapters 14–16 physically preserved at `mavik-sklad/files/r188-social-en-ch14-16.md`, blob `434d7ba575d595f578d2362285d43a64dc86b716`, with WORKSPACE archive reference;
+- all Social partial work = ARCHIVE ONLY;
+- do not continue Chapter 17, stage, publish or EPUB-package until Ukrainian original is complete and user explicitly resumes.
 
-STAGING:
-`mavik-sklad/builds/R188-EN-STAGING/`
-- every actual future R188 release file must be copied there at its final ZIP-relative path;
-- final ZIP is built from staging;
-- unfinished-work drafts stay outside staging.
+Recovery block completed:
+- warehouse audit;
+- persistent WORKSPACE/STAGING model confirmed;
+- BATCH-01 closed;
+- Social 14–16 archived;
+- completed-title queue created;
+- previous local R188 ZIP path recovered;
+- operations log updated;
+- `START-HERE-SITE.txt` synchronized to current state.
 
-NEXT:
-- identify the next COMPLETED Ukrainian title not yet translated;
-- reconstruct native `/en/` and Boss English from canonical R187;
-- reconstruct/preserve prior completed English manuscripts/readers;
-- continuously stage every actual release artifact;
-- English covers, editorial passes, EPUBs, blog/announcements, SEO, audits, manifest, Boss validation, full candidate.
+NEXT priority:
+1. recover/inspect `mavik-name-en-20260815-0548.zip` if available;
+2. otherwise mount exact canonical full R187 and reconstruct `/en/` + Boss English from it;
+3. translate only completed titles from verified canonical R187 source;
+4. persist everything to WORKSPACE and stage release-eligible files continuously.
 
-MANDATORY CHECKPOINT CANON:
-After every meaningful work block, update latest checkpoint, journal and mirror, and preserve the actual created artifact.
+Mandatory: after every meaningful block update checkpoint, journal, mirror, logs/manifests and preserve real artifacts.
