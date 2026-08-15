@@ -1,1 +1,12 @@
-BATCH 01 STATUS: IN PROGRESS
+BATCH 01 STATUS: COMPLETE
+
+Completed: 15.08.2026
+Purpose: persistent insurance copy/reference of R188 control, source and archive materials.
+
+Verified:
+- WORKSPACE/control populated and read back.
+- WORKSPACE/archive/social contains preserved source and Chapters 8–13 English batches.
+- Chapters 14–16 are preserved at `mavik-sklad/files/r188-social-en-ch14-16.md` with WORKSPACE archive reference `archive/social/r188-social-en-ch14-16.REFERENCE.txt`.
+- Social remains archive-only and excluded from STAGING under the completed-works-only rule.
+
+NEXT BATCH: reconstruct release-eligible native `/en/` architecture and Boss English management from canonical R187; copy every actual release file into STAGING at its final ZIP-relative path.
