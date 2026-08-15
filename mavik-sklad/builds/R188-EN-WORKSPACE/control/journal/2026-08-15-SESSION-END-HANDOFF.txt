@@ -1,0 +1,114 @@
+R188 ENGLISH — SESSION-END HANDOFF / AUTHORITATIVE JOURNAL ENTRY
+Date: 15.08.2026
+Status: WORK IN PROGRESS / NOT CANONICAL
+
+CANONICAL BASE
+- R187: `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+- SHA-256: daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21
+- Ukrainian R187 remains untouched/canonical.
+
+PERSISTENCE SYSTEM
+- Development branch: `r188-english-work`
+- WORKSPACE: `mavik-sklad/builds/R188-EN-WORKSPACE/`
+- STAGING: `mavik-sklad/builds/R188-EN-STAGING/`
+- Ledger: `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`
+- Operations log: `mavik-sklad/builds/R188-EN-WORKSPACE/control/R188-OPERATIONS-LOG.txt`
+- Immutable journal: `mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/`
+- Main checkpoint: `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
+- Mirror checkpoint: `mavik-sklad/text/R188-EN-CHECKPOINT-LATEST.md`
+
+HARD RULES
+1. Native English site under `/en/`; direct UA ↔ EN; no Google Translate as the English edition.
+2. Only completed Ukrainian works are translated/published. `Соціальна / Social` remains unfinished and archive-only.
+3. Every process file must be persisted. Source → WORKSPACE → translation/code → WORKSPACE → STAGING if release → readback → journal/ledger/checkpoint → next.
+4. Every intermediate result is journaled.
+5. English covers + validated English EPUBs remain mandatory before final publication.
+6. Separate Boss `English` area remains mandatory before R188 release.
+
+PHYSICALLY PRESERVED COMPLETE ENGLISH BETA WEB EDITIONS — 8/19
+1. You and I... (`ty-i-ia`)
+2. Solya, the Grain of Sand Who Dreamed of a Skyscraper (`pishchynka-solya`)
+3. Rejection in Advance (`vidmova-avansom`) — 3/3
+4. Transfer (`transfer`) — 6/6 + source 6/6
+5. The Gospel According to Macarius (`yevanheliie-vid-makariia`) — 6/6 covering foreword + prologue + 25 chapters + afterword; source preserved
+6. The Nameless (`bezimenni`) — 6/6 covering 13 chapters + afterword; source 6/6
+7. Patterns of Self-Reflection (`paterny-samorefleksii`) — 8/8 covering author introduction + 49 texts; source 8/8
+8. Mom, I Want to Live! (`mamo-zhyty`) — 7/7 covering 26 chapters + afterword; source 7/7; landing + reader + text page; staging readback passed
+
+All eight are `translated_beta`: English cover adaptation and validated EPUB still pending.
+
+ENGLISH SHELL
+Physical English shell/routes exist in STAGING, including `/en/`, `/en/books/`, `/en/books/new/`, `/en/books/free/`, `/en/about/`, `/en/blog/`, `/en/announcements/`, `/en/music/`.
+
+THE SCULPTOR — PRESERVED ANALYSIS, TRANSLATION DEFERRED
+- Exact canonical R187 source inspected: 47 chapters + afterword, about 138,164 words.
+- Safe plan: 28 controlled blocks, split only at chapter/afterword boundaries, target <= ~6,500 words/block.
+- Structure journal preserved at `control/journal/2026-08-15-2324-skulptor-structure.txt`.
+- Queue decision preserved at `control/journal/2026-08-15-2328-translation-queue-optimization.txt`.
+- IMPORTANT: no English Sculptor translation block was started. Therefore nothing translated was abandoned/lost.
+- `WORKSPACE/source/skulptor/uk-001.txt` is NOT present; do not assume Sculptor source block 1 was persisted. If returning to Sculptor later, persist source before translating.
+
+QUEUE OPTIMIZATION DECISION
+Remaining source sizes were measured from canonical R187. To maximize completed English catalog, shorter completed works are processed before the largest novels. Relevant preserved sizes:
+- liudyna-bez-akaunta ~18,840 words
+- try-romany-yaki-nikhto-ne-chytaie ~30,905
+- yak-vitko-z-moskaliamy-voiuvav ~33,499
+- toi-shcho-nese-svitlo ~41,372
+- lysty-polkovnyku ~52,406
+- olena ~62,766
+- universe ~68,944
+- petlia ~86,054
+- patsiient ~96,982
+- advokat-dyiavola ~108,462
+- skulptor ~138,164
+
+CURRENT ACTIVE WORK — THE MAN WITHOUT AN ACCOUNT
+Ukrainian title: `Людина без акаунта`
+English title: `The Man Without an Account`
+Slug: `liudyna-bez-akaunta`
+Canonical structure: 5 chapters + author's afterword, about 18,840 Ukrainian words.
+Planned split: 6 blocks, one chapter/afterword per block.
+
+PHYSICALLY PERSISTED CURRENT FILE
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt`
+- This is exact canonical R187 source for Chapter 1.
+- GitHub readback confirmed the file exists.
+- Blob SHA: 46a215b96cd2c2591baaa4dbaeedef67ea12d687
+
+EXACT STOP POINT
+- Source block 1/6 (Chapter 1) is safely persisted.
+- English translation block 1/6 has NOT been persisted and should be considered NOT STARTED for continuation purposes.
+- No English `part-001.txt` for `liudyna-bez-akaunta` should be assumed to exist.
+
+FIRST ACTION NEXT SESSION
+1. Read START-HERE-SITE.txt.
+2. Read releases/CANON.md.
+3. Read KANON-POSTIINYKH-CHECKPOINTIV.txt.
+4. Read `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`.
+5. Read this SESSION-END-HANDOFF.
+6. Fetch/read `WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt`.
+7. Translate Chapter 1 to English.
+8. Persist English block immediately to WORKSPACE + STAGING.
+9. Read back both copies.
+10. Journal it.
+11. Continue source 2/6 → translation 2/6.
+
+DO NOT REDO
+- Do not redo the 8 complete English beta web editions.
+- Do not restart `Patterns`, `Mom`, `Nameless`, Gospel, Transfer, Rejection, Solya, or You and I.
+- Do not restart Sculptor now; its structure analysis is preserved and it is deliberately deferred by queue optimization.
+
+MAJOR WORK STILL REQUIRED AFTER TRANSLATIONS
+- remaining 11 completed works;
+- English cover adaptations;
+- validated English EPUBs;
+- separate Boss `English` management area;
+- English blog/announcements;
+- SEO/hreflang/sitemap/service worker/link audit;
+- PHP/JS/JSON/XML/EPUB checks;
+- exact R188 manifest + Boss validator;
+- full R188 candidate ZIP;
+- explicit user approval before canonicalization.
+
+SESSION END FORMULA
+Tomorrow continue exactly from: `The Man Without an Account` → Chapter 1 translation, using already persisted `uk-001.txt`.
