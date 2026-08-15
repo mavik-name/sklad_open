@@ -1,0 +1,102 @@
+# Solya, the Grain of Sand Who Dreamed of a Skyscraper
+## Working literary translation — Part 2 of 4
+
+Earlier, she had thought that reaching the skyscraper was the only thing that mattered. But now, for the first time, she felt that the journey itself was already changing her. She had seen things the grains back on the beach had never seen. She knew what a ferry sounded like, what wet iron smelled like, what the sea looked like not from the shore but from the middle of it.
+
+And still she wanted to go farther.
+
+After the ferry came a bus.
+
+It waited by the dock — big and yellow, with wide windows and dark wheels. Lada and her family climbed aboard. The sandal stepped onto a rubber-covered step and then onto the floor inside.
+
+The bus pulled away.
+
+To Solya, it felt like living inside a giant beetle. The floor trembled. The engine growled. The doors hissed whenever they opened at a stop. People got on and off. Someone talked on the phone. Someone dozed with their head against the window. Someone held a bag of bread, and its warm smell reminded Solya, for a moment, of sun-heated sand.
+
+The world drifted past the windows.
+
+At first there were small houses beside the road, trees, bushes, roadside cafés, fields, and narrow paths. Then the road grew wider. There were more cars. Bridges appeared, traffic lights, tall poles strung with wires, huge signs, petrol stations, warehouses, apartment blocks.
+
+Solya looked and could not get enough of it.
+
+“The world doesn’t end where the beach ends,” she thought. “That’s only where it begins.”
+
+Lada sat by the window, drawing lines with her finger on the misted glass.
+
+“Mum, are we nearly there?” she asked.
+
+“Nearly,” her mother said. “A little farther and we’ll be in the city.”
+
+The city.
+
+Solya went still.
+
+The word rang inside her like a bell.
+
+The bus entered the metropolis toward evening.
+
+The sky was already turning violet, and windows were beginning to glow. At first there were only a few — yellow, white, warm. Then more and more appeared, as though someone were lighting thousands of tiny stars high above the streets.
+
+Buildings stood close together, holding up the sky. Roads crossed and tangled. Cars moved in streams, headlights flashing. Trams slid along their rails like long metal fish. People hurried down pavements, hardly noticing one another, let alone a tiny grain of sand on a child’s sandal.
+
+But Solya did not mind.
+
+She was looking up.
+
+Above the rooftops rose the skyscrapers.
+
+They were exactly as she had imagined them, and yet completely different. Not merely tall. Alive. In their windows burned the evenings of hundreds of people. Hidden inside their walls were warm rooms, footsteps, voices, laughter, tiredness, music, the smell of dinner, whispered conversations before sleep.
+
+“There it is,” Solya breathed. “Something big.”
+
+She felt certain that this was where she would finally become useful.
+
+The next day, Lada and her mother were walking along a street near a large construction site. Behind a tall fence, a new building was growing. It was not a skyscraper yet, but it was already reaching upward: floor by floor, beam by beam, slab by slab.
+
+A crane towered over the site. Its long boom moved slowly across the sky like the neck of an enormous metal giraffe. Concrete mixers turned, lorries delivered materials, workers in hard hats called to one another.
+
+The air smelled of cement, dust, hot metal, and rain that seemed likely to fall that evening.
+
+Solya felt it at once: this was the place.
+
+She waited until Lada stopped by the fence to look at the construction site.
+
+“Mum, what are they building here?” the girl asked.
+
+“Probably a big building,” her mother said. “Maybe offices. Maybe flats.”
+
+“Will it be tall?”
+
+“Very.”
+
+Solya hesitated no longer.
+
+When the sandal touched the ground beside a small gap beneath the fence, she let go of the sole and dropped.
+
+The fall was short, but to Solya it felt like real flight. She rolled through the dust, bumped against a tiny stone, slid a little farther, and came to rest beside a pile of sand inside the fence.
+
+It was enormous.
+
+Thousands upon thousands of grains lay there in silence. Ordinary grains. No dreams, no voices, no wish to become anything. They were simply material. A lorry had brought them here. Soon they would be mixed with cement, water, and gravel to make concrete.
+
+Solya looked at them and suddenly felt very small.
+
+Back on the beach, she too had been one among millions. But there she had at least known the sea, the sun, the waves. Here everything was strange: grey, noisy, enormous, indifferent.
+
+“I made it,” she told herself. “Now I only have to get into the skyscraper.”
+
+Days passed.
+
+Solya lay in the sand pile and waited.
+
+From time to time, a machine came. Its bucket scooped up sand and dumped it into a concrete mixer. Each time, Solya hoped that this time it would take her too.
+
+But the bucket passed to the left or to the right. Sometimes it took sand from the top, sometimes from the other side. Solya remained below.
+
+Meanwhile, the skyscraper kept growing.
+
+Every morning the workers came to the site. They put on their hard hats. They checked the plans. They spoke in short, loud sentences because something was always humming, hammering, or grinding around them. The crane lifted reinforcing steel. Lorries brought more materials. Concrete hardened in moulds and became part of walls, columns, floors.
+
+Solya watched the building rise higher and higher.
+
+And the higher it rose, the more strongly she felt that her dream was moving farther away.
