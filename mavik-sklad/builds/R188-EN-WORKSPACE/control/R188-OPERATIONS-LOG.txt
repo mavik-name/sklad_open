@@ -5,3 +5,6 @@ Started: 15.08.2026 19:06 +03:00
 19:05 — Updated hard checkpoint canon: after every intermediate result report to user what was done, saved, checked, and next step.
 19:06 — Audited repository tree. Previous native /en/ implementation files are not physically present in warehouse and must be reconstructed. R188 physical files currently present: control/checkpoint files plus partial Social translation batches. Social is unfinished and archive-only.
 19:07 — Confirmed two-layer persistence: WORKSPACE stores every process file; STAGING stores only final-release files. Every file used or created in the process must receive a warehouse copy.
+19:08 — Recorded exact canonical R187 identity in WORKSPACE/control/BASE-SOURCE.txt. Began first insurance copy batch.
+19:09 — Completed tree-copy batch into R188-EN-WORKSPACE. Copied control canons/checkpoints/R187 passport/staging manifest plus archived Social source and preserved English batches.
+19:10 — Verified WORKSPACE directory by GitHub readback. archive/social contains r188-social-en-ch08-10.md, r188-social-en-ch11-13.md, Соціальна.docx, and socialna-kanonichni-zamitky.txt. These remain archive-only and are excluded from STAGING.
