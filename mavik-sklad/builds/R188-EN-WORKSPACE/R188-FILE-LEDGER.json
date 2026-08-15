@@ -1,7 +1,7 @@
 {
-  "schema": 2,
+  "schema": 3,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T21:58:00+03:00",
+  "updated_at": "2026-08-15T23:18:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -12,6 +12,7 @@
     "branch": "r188-english-work",
     "workspace": "mavik-sklad/builds/R188-EN-WORKSPACE/",
     "staging": "mavik-sklad/builds/R188-EN-STAGING/",
+    "journal": "mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/",
     "server_fallback": "/_site-state/r188-workspace/"
   },
   "rules": {
@@ -21,14 +22,10 @@
     "next_file_only_after_readback": true,
     "unfinished_social_is_archive_only": true
   },
-  "history": {
-    "previous_detailed_ledger_blob_sha": "d468b08926ba8c47c1d75d979bb242829bbc5dd5",
-    "note": "The previous per-file ledger remains recoverable in Git history. Schema 2 records current release groups more compactly so it can be updated after every completed work without losing continuity."
-  },
   "books": [
     {"slug":"sotsialna","uk_title":"Соціальна","publication_mode":"beta","english_pipeline":"excluded_unfinished"},
-    {"slug":"mamo-zhyty","uk_title":"Мамо, жити!","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"bezimenni","uk_title":"Безіменні","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Nameless","chunks":"6/6","source":"6/6 persisted","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"mamo-zhyty","uk_title":"Мамо, жити!","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Mom, I Want to Live!","source_words":15291,"source_chunks":"7/7","translation_chunks":"7/7","structure":"26 chapters + afterword","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"bezimenni","uk_title":"Безіменні","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Nameless","source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
     {"slug":"skulptor","uk_title":"Скульптор","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"universe","uk_title":"UNIVERSE","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"advokat-dyiavola","uk_title":"Адвокат Диявола","publication_mode":"final","english_pipeline":"queued"},
@@ -40,60 +37,53 @@
     {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"yak-vitko-z-moskaliamy-voiuvav","uk_title":"Як Вітько з москалями воював","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","chunks":"3/3","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
-    {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","chunks":"6/6","source":"6/6 persisted","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
-    {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper","web_edition":"complete","cover":"pending_english","epub":"pending"},
-    {"slug":"paterny-samorefleksii","uk_title":"Патерни саморефлексії","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I...","web_edition":"complete","cover":"pending_english","epub":"pending"},
-    {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Gospel According to Macarius","chunks":"6/6","structure":"foreword + prologue + 25 chapters + afterword","source":"6/6 persisted","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"}
+    {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","translation_chunks":"3/3","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"paterny-samorefleksii","uk_title":"Патерни саморефлексії","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Patterns of Self-Reflection","source_chunks":"8/8","translation_chunks":"8/8","structure":"author introduction + 49 texts","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I...","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Gospel According to Macarius","source_chunks":"6/6","translation_chunks":"6/6","structure":"foreword + prologue + 25 chapters + afterword","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"}
   ],
   "verified_release_groups": {
-    "english_shell": {
-      "status": "present_in_staging",
-      "routes": ["en/","en/books/","en/books/new/","en/books/free/","en/about/","en/blog/","en/announcements/","en/music/"]
-    },
+    "english_shell": {"status":"present_in_staging","routes":["en/","en/books/","en/books/new/","en/books/free/","en/about/","en/blog/","en/announcements/","en/music/"]},
     "ty-i-ia": {"status":"complete_beta","copies":["workspace","staging"]},
     "pishchynka-solya": {"status":"complete_beta","copies":["workspace","staging"]},
-    "vidmova-avansom": {"status":"complete_beta","chunks":"3/3","copies":["workspace","staging"],"readback":"ok"},
-    "transfer": {"status":"complete_beta","chunks":"6/6","source_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
-    "yevanheliie-vid-makariia": {"status":"complete_beta","chunks":"6/6","source_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
-    "bezimenni": {
+    "vidmova-avansom": {"status":"complete_beta","translation_chunks":"3/3","copies":["workspace","staging"],"readback":"ok"},
+    "transfer": {"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
+    "yevanheliie-vid-makariia": {"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
+    "bezimenni": {"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
+    "paterny-samorefleksii": {"status":"complete_beta","source_chunks":"8/8","translation_chunks":"8/8","copies":["workspace","staging"],"readback":"ok"},
+    "mamo-zhyty": {
       "status":"complete_beta",
-      "english_title":"The Nameless",
-      "source_chunks":"6/6",
-      "translation_chunks":"6/6",
+      "english_title":"Mom, I Want to Live!",
+      "source_chunks":"7/7",
+      "translation_chunks":"7/7",
       "copies":["workspace","staging"],
       "readback":"ok",
-      "release_files": [
-        {"path":"en/books/bezimenni/index.html","github_blob":"a607d16101416f1e57b4477b2dc13ac5edd9e9ce"},
-        {"path":"en/books/bezimenni/read/index.html","github_blob":"a585fc3c51918491b481813c0a29684db3dafdf5"},
-        {"path":"en/books/bezimenni/read/text/index.html","github_blob":"a53d1248037ccea57fc2cba428529e5ee94dfbd2"},
-        {"path":"en/books/bezimenni/read/text/part-001.txt","github_blob":"c2627266b35cc6952a081f8f84f49ddc0afe6611"},
-        {"path":"en/books/bezimenni/read/text/part-002.txt","github_blob":"ab20a3bb67e12f0d90abde0fe4033aef061befdd"},
-        {"path":"en/books/bezimenni/read/text/part-003.txt","github_blob":"b2fc6929a0f3c8bf89cb1b977c2cd4cd03fcc51e"},
-        {"path":"en/books/bezimenni/read/text/part-004.txt","github_blob":"69a3cb90b0a718d700ea49631ef3b2700bedb62f"},
-        {"path":"en/books/bezimenni/read/text/part-005.txt","github_blob":"1aeb63fa6f66b796c8795b64663d3a8ea5735b07"},
-        {"path":"en/books/bezimenni/read/text/part-006.txt","github_blob":"4e161cfddd00b453ba79d6384413d9d9fcd21cc9"}
-      ],
-      "source_paths": [
-        "source/bezimenni/uk-001.txt",
-        "source/bezimenni/uk-002.txt",
-        "source/bezimenni/uk-003.txt",
-        "source/bezimenni/uk-004.txt",
-        "source/bezimenni/uk-005.txt",
-        "source/bezimenni/uk-006.txt"
-      ]
+      "release_files": {
+        "landing":{"path":"en/books/mamo-zhyty/index.html","github_blob":"80cfc24c367171809b387a802ec30d1dbd56caf6"},
+        "reader":{"path":"en/books/mamo-zhyty/read/index.html","github_blob":"aae1700c57c69c036c224cce1d2adc1805eb86ce"},
+        "text_index":{"path":"en/books/mamo-zhyty/read/text/index.html","github_blob":"6f868766e2707143340e05ac4328490832020d77"},
+        "part_001":"45226da36fe36a1d7de441ae05618b8a71a26478",
+        "part_002":"5a04c1c96cd07d63bc7676315637ec86e47feeeb",
+        "part_003":"003d58b394750f513cceff49b0fda98ecc0cf703",
+        "part_004":"aef244b694e76d95719716f7fd44c01eb0547094",
+        "part_005":"6ecb62fb020116bdc3af74b177f14a3610f2edfc",
+        "part_006":"1c14052d0dbdcea7f42d29ca83d23ab77c8dfaa3",
+        "part_007":"988ca7cad1ec1cef3def104dad95f87505b18ffc"
+      }
     }
   },
   "counts": {
     "completed_uk_works_target": 19,
-    "complete_english_beta_web_editions": 6,
+    "complete_english_beta_web_editions": 8,
     "excluded_unfinished": 1,
-    "remaining_completed_works_to_translate": 13
+    "remaining_completed_works_to_translate": 11
   },
   "next": {
     "rule": "Persist canonical Ukrainian source in WORKSPACE before translation.",
-    "title": "Patterns of Self-Reflection",
-    "slug": "paterny-samorefleksii"
+    "title": "The Sculptor",
+    "uk_title": "Скульптор",
+    "slug": "skulptor"
   }
 }
