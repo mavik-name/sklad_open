@@ -1,0 +1,1 @@
+Every needed R188 file must be copied to warehouse workspace immediately.
