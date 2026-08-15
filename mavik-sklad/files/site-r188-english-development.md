@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 / NATIVE ENGLISH DEVELOPMENT JOURNAL
 
-Updated: 15.08.2026 18:53 +03:00
+Updated: 15.08.2026 19:00 +03:00
 Base: canonical **R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`**, SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
 
 STATUS: **WORK IN PROGRESS. NOT CANONICAL.** Do not deploy/declare as final until complete checks and direct user approval.
@@ -15,6 +15,7 @@ STATUS: **WORK IN PROGRESS. NOT CANONICAL.** Do not deploy/declare as final unti
 - Translate literature as literature: preserve plot, facts, voice, rhythm, humour, subtext and character; avoid literal Ukrainian calques; do not invent plot/details.
 - English editions require **English covers**, not Ukrainian-title covers.
 - Boss gets a separate top-level **English** management area.
+- **Only completed Ukrainian works may enter the English translation/publication pipeline.** Unfinished works remain subject to editing and therefore are excluded until completed.
 
 ## Recovery status of architecture
 
@@ -37,12 +38,6 @@ Reported architecture included:
 - English EPUB generation path;
 - English blog publishing and rebuild-all.
 
-## Working English titles
-
-Social; Mom, I Want to Live!; The Nameless; The Sculptor; UNIVERSE; The Devil’s Advocate; The Patient; The Loop; The Light-Bringer; Olena; Letters to the Colonel; Three Novels Nobody Reads; The Man Without an Account; How Vitko Fought the Russians; Rejection in Advance; Transfer; Solya, the Grain of Sand Who Dreamed of a Skyscraper; Patterns of Self-Reflection; You and I; The Gospel According to Macarius.
-
-Titles remain working literary titles until final English editorial approval.
-
 ## Full literary translations reported completed in the previous R188 working session
 
 The previous session reported full translations/readers for nine works. Their physical English artifacts were not found after session loss; preserve the status as history, but do not claim current on-disk availability until recovered or rebuilt.
@@ -57,41 +52,41 @@ The previous session reported full translations/readers for nine works. Their ph
 8. **Mom, I Want to Live!** — 26 chapters + afterword; about 15,801 English words; native beta reader reported.
 9. **The Man Without an Account** — 5 chapters + author’s afterword; about 22,961 English words; native beta reader reported.
 
-## Current translation — Social
+## Social — archived work, excluded from R188 release
 
-Source: canonical R187 Ukrainian `Соціальна.docx`.
+`Social` / `Соціальна` is an unfinished Ukrainian work. The user explicitly decided it should **not** be translated further now because the source will still be edited.
 
-Recovered historical progress:
-- Chapters **1–7 were translated** in the lost previous session.
-- Chapter 1 was reported at about 1,959 English words.
-- Physical English files for Chapters 1–7 were not recovered.
+Preserved work:
+- Chapters 1–7 were reported translated in a previous session, but their physical files were not recovered.
+- Chapters 8–10 are physically stored at `mavik-sklad/files/r188-social-en-ch08-10.md`.
+- Chapters 11–13 are physically stored at `mavik-sklad/files/r188-social-en-ch11-13.md`.
 
-Physically preserved recovery work:
+Status of these files:
+- archive of work already performed;
+- do not delete;
+- do not continue from Chapter 14;
+- do not put into `/en/` public content;
+- do not put into R188 staging;
+- do not generate English EPUB from them;
+- resume only after the Ukrainian work is completed and the user explicitly requests continuation.
 
-### Chapters 8–10
-- Saved: `mavik-sklad/files/r188-social-en-ch08-10.md`
-- English word count: **2,972**.
-- GitHub save/readback verified.
-- Literary working translation / beta; not final-edited or EPUB-packaged.
+## Completed-works-only rule
 
-### Chapters 11–13
-- Saved: `mavik-sklad/files/r188-social-en-ch11-13.md`
-- GitHub save/readback verified.
-- Literary working translation / beta; not final-edited or EPUB-packaged.
-- Chapter 12 preserves the central ambiguity: internal budget reallocation was technically possible but required donor approval and would effectively cancel/restart the already committed family programme; management chose to keep the approved event and seek partner/private funding for the medical cases.
-- Chapter 13 identifies **folder 04 as the heroine’s daughter**, amount **1,000,000 UAH**.
-- The archive records only `Forwarded to partners` / `Awaiting response`; the heroine knows the outcome the archive never received.
+Before starting any new English book translation:
+1. verify the Ukrainian work is completed/final enough for publication;
+2. if unfinished, skip it and move to another completed work;
+3. partial old translation may be preserved separately, but not treated as release content.
 
-**NEXT CONTINUATION POINT: Chapter 14.**
+## Staging
 
-Translation constraints for `Social`:
-- preserve restrained emotional delivery;
-- preserve authentic NGO/fund/bureaucratic register;
-- preserve the distinction between moral parasitism and actual criminality;
-- do not invent corruption or embezzlement absent from the source;
-- do not turn the fund into a cartoon villain;
-- keep personal loss as an emotional undercurrent rather than explanatory commentary;
-- preserve short hard beats rather than smoothing them into exposition.
+Future-release staging folder:
+`mavik-sklad/builds/R188-EN-STAGING/`
+
+Rules:
+- every actual file intended for R188 gets copied into staging at its final ZIP-relative path;
+- final R188 ZIP is built from staging, not from an unsaved local worktree;
+- `STAGING-MANIFEST.txt` must match staging tree and `.mavik-release.json`;
+- unfinished-work drafts, including `Social`, stay outside staging.
 
 ## Covers
 
@@ -103,9 +98,10 @@ Final English EPUB validation remains pending. Before R188 release, create actua
 
 ## Remaining major work
 
-- continue `Social` from Chapter 14 and persist each batch immediately;
+- identify the next completed Ukrainian title not yet translated;
 - reconstruct/preserve missing artifacts for the nine previously completed English works;
 - reconstruct native `/en/` architecture and Boss English implementation from canonical R187;
+- copy actual future-release files continuously into staging;
 - create/adapt English covers;
 - final English editorial pass per completed book;
 - produce and validate English EPUB per final book;
@@ -123,8 +119,9 @@ Final English EPUB validation remains pending. Before R188 release, create actua
 Before continuing R188 in any later chat/session, read in this order:
 1. `mavik-sklad/files/START-HERE-SITE.txt`
 2. `mavik-sklad/releases/CANON.md`
-3. `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
-4. this file `site-r188-english-development.md`
-5. the physically saved translation batches `r188-social-en-*.md`.
+3. `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
+4. `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
+5. this file `site-r188-english-development.md`
+6. `mavik-sklad/builds/R188-EN-STAGING/STAGING-MANIFEST.txt`.
 
-After every meaningful work block, update latest checkpoint, journal and mirror and store the real artifact. A progress note is not a substitute for the translation/code/cover/EPUB/ZIP itself.
+After every meaningful work block, update checkpoint, journal and mirror and store the real artifact. A progress note is not a substitute for the translation/code/cover/EPUB/ZIP itself.
