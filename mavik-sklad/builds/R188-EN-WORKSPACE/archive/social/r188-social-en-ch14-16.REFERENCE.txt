@@ -1,0 +1,20 @@
+R188 ARCHIVE-ONLY REFERENCE — SOCIAL CHAPTERS 14–16
+Created: 15.08.2026
+
+Actual preserved artifact:
+- repository path: mavik-sklad/files/r188-social-en-ch14-16.md
+- blob SHA: 434d7ba575d595f578d2362285d43a64dc86b716
+- creation commit: 1cfafd812db4fef7f082eee39305c48109f9eb6f
+- GitHub readback verified.
+
+STATUS: ARCHIVE ONLY.
+Reason: latest R188 hard content rule allows English translation/publication only for COMPLETED Ukrainian works. `Social` / `Соціальна` is unfinished.
+
+DO NOT:
+- copy this translation into R188-EN-STAGING;
+- publish it under /en/;
+- generate a release EPUB from it;
+- count it as an R188 completed English edition;
+- continue with Chapter 17 unless the user later confirms the Ukrainian work is complete and explicitly resumes translation.
+
+This reference satisfies the persistent-workspace rule while the actual text remains physically preserved at the repository path above.
