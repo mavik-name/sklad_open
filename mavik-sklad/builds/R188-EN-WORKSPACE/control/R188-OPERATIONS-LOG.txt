@@ -31,3 +31,12 @@ Started: 15.08.2026 19:06 +03:00
 21:51 — The Nameless English block 5/6 translated and persisted to WORKSPACE + STAGING; staging readback passed.
 21:54 — The Nameless English block 6/6 (chapter 13 + afterword) translated and persisted to WORKSPACE + STAGING; staging readback passed. Translation complete 6/6.
 21:57 — The Nameless landing page, six-part web reader and text-entry page persisted to WORKSPACE + STAGING. GitHub staging readback confirmed landing, reader, text index and all six text parts. The Nameless is now a complete English beta web edition; English cover and EPUB remain pending before final status.
+22:00 — Patterns of Self-Reflection source block 1/8 and English block 1/8 confirmed in WORKSPACE; English block copied to STAGING and read back successfully.
+22:02 — Patterns of Self-Reflection source + English block 2/8 persisted; WORKSPACE + STAGING readback passed.
+22:04 — Patterns of Self-Reflection source + English block 3/8 persisted; WORKSPACE + STAGING readback passed.
+22:06 — Patterns of Self-Reflection source + English block 4/8 persisted; WORKSPACE + STAGING readback passed.
+22:08 — Patterns of Self-Reflection source + English block 5/8 persisted; WORKSPACE + STAGING readback passed.
+22:10 — Patterns of Self-Reflection source + English block 6/8 persisted; WORKSPACE + STAGING readback passed.
+22:12 — Patterns of Self-Reflection source + English block 7/8 persisted; WORKSPACE + STAGING readback passed.
+22:15 — Patterns of Self-Reflection source + English block 8/8 persisted; final translation complete 8/8, covering author introduction + 49 texts.
+22:17 — Patterns of Self-Reflection landing page, eight-part reader and text-entry page persisted to WORKSPACE + STAGING. GitHub readback confirmed landing plus text index and all eight text parts. Book is now complete English beta web edition #7/19; English cover adaptation and validated EPUB remain pending.
