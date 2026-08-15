@@ -1,0 +1,18 @@
+R188 ENGLISH — BOOK COMPLETION JOURNAL ENTRY
+Time: 15.08.2026 23:16 +03:00
+Book: Mom, I Want to Live! (`mamo-zhyty`)
+Canonical Ukrainian source: R187, 26 chapters, 15,291 words.
+Controlled source blocks: 7/7 persisted under WORKSPACE/source/mamo-zhyty/ (chapters 1–4 / 5–8 / 9–12 / 13–16 / 17–20 / 21–23 / 24–26 + afterword).
+English translation blocks: 7/7 persisted to WORKSPACE + STAGING.
+Release web files persisted to WORKSPACE + STAGING:
+- en/books/mamo-zhyty/index.html
+- en/books/mamo-zhyty/read/index.html
+- en/books/mamo-zhyty/read/text/index.html
+- en/books/mamo-zhyty/read/text/part-001.txt through part-007.txt
+Verification:
+- STAGING text directory readback confirmed index.html + all 7 part files.
+- STAGING landing readback passed; blob SHA 80cfc24c367171809b387a802ec30d1dbd56caf6.
+- STAGING reader readback passed; blob SHA aae1700c57c69c036c224cce1d2adc1805eb86ce; reader references all 7 text parts.
+Status: translated_beta / complete English web edition #8 of 19 eligible completed works.
+Pending before final publication status: English cover adaptation + validated English EPUB + global R188 release audits.
+Next: determine next eligible completed work from ledger/catalog; do not translate unfinished Social.
