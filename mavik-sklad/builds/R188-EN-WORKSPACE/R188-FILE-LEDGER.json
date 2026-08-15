@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T20:38:00+03:00",
+  "updated_at": "2026-08-15T20:52:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -36,7 +36,7 @@
     {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"yak-vitko-z-moskaliamy-voiuvav","uk_title":"Як Вітько з москалями воював","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","chapters":"3/3"},
-    {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"queued"},
+    {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","chunks":"6/6"},
     {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper"},
     {"slug":"paterny-samorefleksii","uk_title":"Патерни саморефлексії","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I..."},
@@ -64,6 +64,21 @@
     {"path":"en/books/vidmova-avansom/read/text/index.html","role":"release","status":"current","size":912,"sha256":"7c78f8fe69ef7217088b768437c66b74a213384f65b51b834c51d56ab0ff03b9","copies":["workspace","staging","local"]},
     {"path":"en/books/vidmova-avansom/read/text/part-001.txt","role":"release","status":"current","size":7911,"sha256":"5710c08dd65615621975373c65d3a0f992c738eb92996faaab942b3ef9bacc7e","copies":["workspace","staging","local"]},
     {"path":"en/books/vidmova-avansom/read/text/part-002.txt","role":"release","status":"current","size":8577,"sha256":"fc0c93997e36ad5005b973adcfffd7e682dd6bbdf1c89886f045a69a0194c780","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/read/text/part-003.txt","role":"release","status":"current","size":10267,"sha256":"c12dbb7e88c3607048d2f2d95aa13fa194d30d452da2c93635d661246ebd779f","copies":["workspace","staging","local"]}
+    {"path":"en/books/vidmova-avansom/read/text/part-003.txt","role":"release","status":"current","size":10267,"sha256":"c12dbb7e88c3607048d2f2d95aa13fa194d30d452da2c93635d661246ebd779f","copies":["workspace","staging","local"]},
+    {"path":"en/books/transfer/index.html","role":"release","status":"current","size":2235,"github_blob":"6cfefa60b32208e1f0c8585d3f51d7bafe38fa8b","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/index.html","role":"release","status":"current","size":2137,"github_blob":"5fe5d908420d58b9f12987aaef58976ba1969600","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/index.html","role":"release","status":"current","size":925,"github_blob":"6b743de0744ecf36b70c89c833998dbf6ab888d1","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/part-001.txt","role":"release","status":"current","size":8753,"github_blob":"3c32acd52de4ea6c0bd39eeab8198327de553a9e","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/part-002.txt","role":"release","status":"current","size":9411,"github_blob":"31d9019d3d1ce7df306b1c1e8fe4367df771ee11","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/part-003.txt","role":"release","status":"current","size":6863,"github_blob":"ac863744c7a9d378de367bda6997971ae3cb60e5","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/part-004.txt","role":"release","status":"current","size":9397,"github_blob":"d976f26ab96ba10cc4c1dd90ec8ccac64fd4e0b8","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/part-005.txt","role":"release","status":"current","size":6104,"github_blob":"0855c44049d964bd5c78664e4add26e580d85c2e","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/transfer/read/text/part-006.txt","role":"release","status":"current","size":7464,"github_blob":"0768568e00798a45b9352140583c6b7bfae9ebd8","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"source/transfer/uk-001.txt","role":"workspace-source","status":"current","copies":["workspace"]},
+    {"path":"source/transfer/uk-002.txt","role":"workspace-source","status":"current","copies":["workspace"]},
+    {"path":"source/transfer/uk-003.txt","role":"workspace-source","status":"current","copies":["workspace"]},
+    {"path":"source/transfer/uk-004.txt","role":"workspace-source","status":"current","copies":["workspace"]},
+    {"path":"source/transfer/uk-005.txt","role":"workspace-source","status":"current","copies":["workspace"]},
+    {"path":"source/transfer/uk-006.txt","role":"workspace-source","status":"current","copies":["workspace"]}
   ]
 }
