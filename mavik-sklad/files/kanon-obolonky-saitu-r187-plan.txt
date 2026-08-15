@@ -2,62 +2,48 @@ MAVIK.NAME — КАНДИДАТ КАНОНІЧНОЇ ОБОЛОНКИ / R187 SIT
 Дата: 15.08.2026
 
 31. ВІДОКРЕМЛЕННЯ ОБОЛОНКИ ВІД КОНТЕНТУ — ВИКОНАНО / ПЕРЕВІРЕНО СТАТИЧНО
-- Джерело: надана користувачем повна R186, SHA-256 d834149658ea6071f9de221c165b15ac020a935b6b7718927762a7e3dff97929. R186 містить 498 файлів; ZIP integrity PASS.
+- Джерело: R186 candidate, SHA-256 d834149658ea6071f9de221c165b15ac020a935b6b7718927762a7e3dff97929.
 - Сформовано content-free SITE CORE: дизайн, CSS/JS, іконки, навігація, Boss/адмінка, шаблони, генератори, reader framework, закладки, реакції, поширення, «Помилка», підтримка автора, SEO/службова логіка, .htaccess, service worker, manifest/config/state-defaults, системні маршрути та порожні стани.
-- CONTENT вилучено: конкретні books/<slug>/ і тексти читанок; EPUB; конкретні обкладинки; blog posts/images; announcement slugs; конкретні genre/theme collections; музичні треки/збірки та інше редакторське наповнення.
+- CONTENT вилучено: конкретні books/<slug>/ і тексти читанок; EPUB; конкретні обкладинки; blog posts/images; announcement slugs; конкретні genre/theme collections; музичне наповнення та інше редакторське наповнення.
 - Збережено системні маршрути /books/, /books/new/, /books/free/, /announcements/, /blog/, /music/, /music/reading/, /discover/, /genres/, /themes/, /about/ та службові endpoints.
-- State defaults порожні; runtime _site-state у ZIP відсутній.
-- book-focus.php при порожній бібліотеці повертає {"book":null}; book-order.php — {"order":[]}.
-- Додавання/редагування лише CONTENT не змінює номер оболонки. Зміна CSS/JS, шаблону, генератора, меню, reader UI, Boss або системної логіки — це нова версія оболонки.
+- State defaults очищено від конкретного контенту; runtime у ZIP відсутній.
+- Додавання/редагування лише CONTENT надалі не змінює номер оболонки. Зміна CSS/JS, шаблону, генератора, меню, reader UI, Boss або системної логіки — це нова версія оболонки.
 
 32. DESIGN / USABILITY КАНОН, ПЕРЕНЕСЕНИЙ З R186 — ЗБЕРЕЖЕНО
-- Desktop-аудіопромо/окремі входи в спеціальний audio-режим відсутні; звичайна читанка є єдиною веб-читанкою для очей і Chrome Read Aloud.
-- Окремі фізичні /read/audio/ не генеруються; legacy URL перенаправляється на звичайну читанку.
+- Звичайна читанка є єдиною веб-читанкою для очей і Chrome Read Aloud; окремі фізичні /read/audio/ не є частиною shell-архітектури.
 - Мобільна читанка зберігає півмісяць як перемикач теми; додатковий «Назад» у header відсутній; «Зміст» працює як toggle.
-- Канонічний mobile dock читанки: Помилка → Будиночок → ← → Закладка → → → Нота → Кава. Пошуку в dock немає; будиночок веде на сторінку поточної книги.
-- Book landing: «Динамік» видалено; share — окремий центральний елемент; публічна реакція — «Сподобалось»; EPUB generator fixes з R186 збережені.
-- Boss: верх Головна | Блог | Книги | Музика | Вийти; підвкладки Блогу й Книг збережені; «Редагувати книгу» відкривається нижнім drawer.
-- «Пригостити кавою»: два актуальні Privat24 QR поруч, старих текстових реквізитів/старого qrP24 немає; мобільне збільшення QR збережене.
-- Мобільний анонс і його wrapping-hardening збережені в шаблоні/оболонці.
+- Канонічний mobile dock: Помилка → Будиночок → ← → Закладка → → → Нота → Кава. Пошуку в dock немає; будиночок веде на сторінку поточної книги.
+- Book landing template: «Динамік» видалено; share — окремий центральний елемент; публічна реакція — «Сподобалось».
+- Boss і шаблони/генератори збережені як частина CORE.
+- Підтримка автора та два актуальні Privat24 QR збережені як функція оболонки.
 
-33. МОБІЛЬНА «КАВА» — ФІНАЛЬНИЙ КАНОН ВИКОНАНО СТАТИЧНО / ПОТРЕБУЄ REAL-MOBILE VISUAL TEST
-- На mobile видимою є тільки золота піктограма чашки. Жодного видимого wrapper-кола, кільця, рамки, фону, тіні чи pseudo-ring.
-- assets/icons/coffee.svg містить тільки glyph чашки; circle/ellipse = 0.
-- 40×40 зона натискання збережена невидимою, щоб не погіршувати touch usability.
-- floating-controls.css mobile overrides прибирають border/radius/background/shadow для .mavik-global-ding, .reader-floating-ding, .floating-ding, .ding-small і їх pseudo-elements.
-- site-shell.css робить те саме для .mavik-site-ding на вузьких екранах.
-- reader-mobile-dock.css робить .reader-mobile-coffee-btn bare-glyph без видимого wrapper.
-- Desktop coffee shortcut не змінювався цим mobile-каноном.
+33. МОБІЛЬНА «КАВА» — ВИКОНАНО СТАТИЧНО / ПОТРЕБУЄ REAL-MOBILE VISUAL TEST
+- На mobile кава відображається як glyph без додаткового видимого wrapper-кола/кільця/рамки/фону/тіні.
+- Touch target збережено, декоративні круги прибрано CSS-overrides у floating-controls.css, site-shell.css і reader-mobile-dock.css.
+- Desktop coffee цим правилом не змінюється.
 
-34. ПУБЛІЧНЕ МЕНЮ / ЄДИНА БІБЛІОТЕКА — ВИКОНАНО / ПЕРЕВІРЕНО СТАТИЧНО / ПОТРЕБУЄ REAL-MOBILE TOUCH TEST
+34. ПУБЛІЧНЕ МЕНЮ / ЄДИНА БІБЛІОТЕКА — ВИКОНАНО СТАТИЧНО / ПОТРЕБУЄ REAL-MOBILE TOUCH TEST
 - Mobile: 01 Анонси → 02 Книги → 03 Музика → 04 Блог → 05 Автор → 06 Вхід/Адмінка.
 - Desktop: Анонси → Книги → Музика → Блог → Автор → Вхід/Адмінка.
 - Анонси → /announcements/; Книги → /books/; окремий пункт «Читати» прибрано.
-- Перед видаленням /#books стару секцію порівняно з /books/.
-- На /books/ збережено корисне: читання на сайті, пам’ять місця/закладки, музичний режим, EPUB для завершених релізів, «Читати там, де зручно», пошук, жанрові фільтри та discovery-навігацію.
-- /#books після перенесення видалено; id="books", href="/#books", BOSS_HOME_BOOKS і bossHomeBookOrder у runtime shell відсутні.
-- Boss формує книжковий каталог тільки на /books/. «Книга у фокусі» в hero головної лишається окремою функцією.
-- На головній відновлено .mobile-menu-inner зі штатними span-маркерами 01–05; account bridge додає 06 Вхід/Адмінка.
+- У shell каталог /books/ є єдиним бібліотечним маршрутом; контент накладається окремо.
 
-35. ФІНАЛЬНИЙ ТЕХНІЧНИЙ КОНТРОЛЬ КАНДИДАТА R187 — ПЕРЕВІРЕНО СТАТИЧНО
-- Файлів: 107; конкретних book dirs: 0; EPUB: 0; concrete blog dirs: 0; concrete announcement dirs: 0; cover/blog content media: 0; runtime: 0.
-- Public HTML: 16; local href/src broken: 0.
-- SEO duplicate titles/descriptions/canonicals: 0/0/0; JSON-LD parse errors: 0; sitemap core URLs: 14, локальні маршрути існують.
+35. ФІНАЛЬНИЙ ТЕХНІЧНИЙ КОНТРОЛЬ R187 — ПЕРЕВІРЕНО СТАТИЧНО
+- Файлів у ZIP: 105.
+- Конкретних book dirs: 0; EPUB: 0; concrete blog dirs: 0; concrete announcement dirs: 0; cover/blog content media: 0.
+- Public local href/src broken: 0.
 - PHP lint: 21/21, BAD 0.
-- JavaScript node --check: 15/15, BAD 0.
-- JSON/XML: валідні.
-- Boss empty-state render: 19 представлень, fatal/warning/parse errors = 0; тест на окремій копії, runtime до ZIP не потрапив.
-- Local PHP smoke: основні публічні маршрути й book-focus/order/account-status — HTTP 200.
-- ZIP: 107 унікальних файлів; nested ZIP 0; EPUB 0; runtime 0; unzip -t PASS.
+- JavaScript node --check: 14/14, BAD 0.
+- JSON/XML parse: BAD 0.
+- Release manifest: release=187, release_type=site-core-shell, base_release=186; managed/actual exact.
+- ZIP integrity: unzip -t PASS.
 
-36. R187 SITE CORE / ОБОЛОНКА — ФІНАЛЬНИЙ КАНДИДАТ
+36. R187 SITE CORE / ОБОЛОНКА — КАНДИДАТ
 - Файл: 187 Оболонка_Сайт_ОК.zip
 - Release type: site-core-shell
 - Source release: R186
-- Source SHA-256: d834149658ea6071f9de221c165b15ac020a935b6b7718927762a7e3dff97929
-- Canonical ancestor: R184
-- Файлів: 107
-- Розмір: 1,264,773 bytes
-- SHA-256: a1c21f256f579b3aff57ba25bf34621481dbc2265ac2dd8316e59ca8b5335561
+- Файлів: 105
+- Розмір: 1,291,602 bytes
+- SHA-256: 401ec216ec63565603ad42ff55f3e8fd2adf7e7b9ffafd4f806f895309790869
 - unzip -t: PASS
-- Статус: КАНДИДАТ. НЕ позначати канонічною до прямого підтвердження користувача після реальної mobile/browser перевірки.
+- Статус: КАНДИДАТ. НЕ канонічна до прямого підтвердження користувача після реальної mobile/browser перевірки.
