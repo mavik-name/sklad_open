@@ -16,41 +16,49 @@ Desktop має ту саму змістову послідовність без 
 
 ПЕРЕД ВІДМОВОЮ ВІД /#books ВИКОНАНО ОБОВ’ЯЗКОВЕ ПОРІВНЯННЯ З /books/
 - Стару головну секцію /#books порівняно з канонічною сторінкою /books/.
-- Зі старої секції збережено й перенесено на /books/ усе корисне, що не повинно втратитися: читання на сайті, пам’ять місця читання/закладки, музичний режим, інформацію про EPUB для завершених релізів, блок «Читати там, де зручно» та discovery-навігацію.
-- У shell-рівні discovery-навігація веде лише на системні маршрути, які існують без контенту: /books/new/, /books/free/, /discover/, /genres/, /themes/, /music/reading/, /announcements/.
-- Конкретні genre collection pages на кшталт /genres/mistyka/ не повертаються в SITE CORE, бо це CONTENT-шар.
+- На /books/ збережено все корисне, що не повинно втратитися: читання на сайті, пам’ять місця читання/закладки, музичний режим, EPUB для завершених релізів, блок «Читати там, де зручно», пошук, жанрові фільтри та discovery-навігацію.
+- Discovery-навігація shell-рівня веде лише на системні маршрути, що існують без контенту: /books/new/, /books/free/, /discover/, /genres/, /themes/, /music/reading/, /announcements/.
+- Конкретні genre/theme collection pages і книжкові картки не входять у SITE CORE, бо це CONTENT.
 
 ПІСЛЯ ПЕРЕНЕСЕННЯ /#books ВИДАЛЕНО ЯК ДУБЛЬ
-- Фізичну секцію id="books" з головної сторінки прибрано.
-- Посилань href="/#books" у shell немає.
-- Старі BOSS_HOME_BOOKS markers та bossHomeBookOrder видалено.
-- Boss більше не генерує другий каталог книжкових карток на головній сторінці: каталог формується лише на /books/.
-- «Книга у фокусі» у верхньому hero головної лишається окремою функцією Boss і не є дублем каталогу.
+- Фізичну секцію id="books" з головної прибрано.
+- href="/#books" у runtime shell немає.
+- BOSS_HOME_BOOKS і bossHomeBookOrder видалені.
+- Boss формує каталог книжок тільки на /books/.
+- «Книга у фокусі» у hero головної лишається окремою функцією і не є дублем каталогу.
+
+МОБІЛЬНЕ МЕНЮ ГОЛОВНОЇ — ВИПРАВЛЕНО
+- На головній збережено внутрішній контейнер .mobile-menu-inner.
+- Маркери 01–05 використовують штатні span, тому стилі не ламаються.
+- Account bridge коректно додає 06 Вхід або 06 Адмінка після перевірки /account/status.php.
 
 /books/ ПІСЛЯ ПЕРЕНЕСЕННЯ
-- /books/ є єдиною канонічною сторінкою бібліотеки.
-- Збережено повноцінний shell каталогу: grid карток, пошук, жанрові фільтри, лічильник результатів, empty-state та BOSS_BOOKS/BOSS_BOOK_ORDER regions.
-- Порожній SITE CORE не містить конкретних книг, але після додавання через Boss або content-overlay каталог одразу має штатну структуру й стилі.
+- /books/ — єдина канонічна сторінка бібліотеки.
+- Збережено повноцінний shell каталогу: grid карток, пошук, жанрові фільтри, лічильник результатів, empty-state, BOSS_BOOKS і BOSS_BOOK_ORDER regions.
+- Порожня оболонка не містить конкретних книг, але після додавання через Boss або content-overlay каталог одразу має штатну структуру й стилі.
+- Користувацький текст не містить технічних пояснень про внутрішній /#books; сторінка описує реальні можливості бібліотеки.
 
-ПЕРЕВІРКА ВИПРАВЛЕНОЇ ПОРОЖНЬОЇ R187
-- public menu audit: усі shell/header шаблони мають правильний порядок; bad = 0.
-- href /#books = 0; окремий menu-item «Читати» = 0.
-- public local href/src broken = 0.
+ПЕРЕВІРКА ФІНАЛЬНОГО КАНДИДАТА R187
+- public HTML: 16.
+- canonical menu audit: BAD 0.
+- href /#books = 0 у runtime shell; BOSS_HOME_BOOKS = 0; id="books" на головній = 0.
+- public local href/src: broken 0.
+- SEO duplicate title/description/canonical: 0/0/0; JSON-LD errors 0.
 - PHP lint: 21/21, BAD 0.
-- JavaScript node --check: BAD 0; inline scripts: BAD 0.
+- JavaScript node --check: 15/15, BAD 0.
 - JSON/XML: BAD 0.
-- Local PHP server smoke: /, /announcements/, /books/, /books/new/, /books/free/, /discover/, /genres/, /themes/, /blog/, /music/, /music/reading/, /about/, /copyright/, /privacy/, book-focus/order/account-status — HTTP 200.
-- Контент у SITE CORE: concrete book dirs 0; EPUB 0; cover media 0; blog media 0.
+- Boss empty-state render: 19 представлень, fatal/warning/parse errors = 0.
+- Local PHP smoke: /, /announcements/, /books/, /books/new/, /books/free/, /discover/, /genres/, /themes/, /blog/, /music/, /music/reading/, /about/, /copyright/, /privacy/, /book-focus.php, /book-order.php, /account/status.php — HTTP 200.
+- book-focus.php → {"book":null}; book-order.php → {"order":[]}.
+- Контент у SITE CORE: concrete book dirs 0; EPUB 0; cover media 0; blog media 0; concrete blog/announcement dirs 0.
 
-ОКРЕМО ПРО ОБОЛОНКУ
-- R187 лишається CONTENT-FREE SITE CORE: дизайн, CSS/JS, іконки, меню, читанка, Boss, генератори, SEO/службова логіка, підтримка автора та системні маршрути — це ОБОЛОНКА; конкретні книги, читанки, EPUB, обкладинки, блогові статті/ілюстрації, анонси, музичне наповнення та наголоси в конкретних текстах — CONTENT.
-- Масове наголошування творів у R187 SITE CORE не входить.
-
-Виправлений локальний кандидат R187 після повного виконання пункту 30:
+ФІНАЛЬНИЙ ЛОКАЛЬНИЙ КАНДИДАТ R187 ПІСЛЯ ВСІХ DESIGN/USABILITY ПРАВОК
 - файл: 187 Оболонка_Сайт_ОК.zip
+- source: надана користувачем R186, SHA-256 d834149658ea6071f9de221c165b15ac020a935b6b7718927762a7e3dff97929
 - файлів: 107
-- розмір: 1,264,348 bytes
-- SHA-256: 2b60514131b25ba0dac17ddb88498f1a860bf97d4ce0ab7efad00e9898edbd0d
+- розмір: 1,264,773 bytes
+- SHA-256: a1c21f256f579b3aff57ba25bf34621481dbc2265ac2dd8316e59ca8b5335561
+- runtime: 0; nested ZIP: 0; EPUB: 0
 - unzip -t: PASS.
 
-Примітка: binary ZIP, який уже лежить у GitHub-складі під старим SHA-256, цим текстовим GitHub-конектором замінити неможливо. Не вважати старий binary на складі виправленою версією; актуальний виправлений кандидат — ZIP із SHA-256, наведеним вище, виданий користувачеві окремо.
+Статус: КАНДИДАТ. Не вважати канонічним до прямого підтвердження користувача після перевірки на реальному телефоні/браузері.
