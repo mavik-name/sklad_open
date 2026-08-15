@@ -43,3 +43,4 @@ Started: 15.08.2026 19:06 +03:00
 22:22 — Mom, I Want to Live! exact R187 source identified: 26 chapters, 15,291 words. Split into 7 controlled blocks strictly on chapter boundaries: 1–4 / 5–8 / 9–12 / 13–16 / 17–20 / 21–23 / 24–26.
 22:25 — Mom, I Want to Live! source block 1/7 (chapters 1–4) persisted under WORKSPACE/source/mamo-zhyty/uk-001.txt; English block 1/7 persisted to WORKSPACE + STAGING; staging readback passed.
 22:32 — Mom, I Want to Live! source block 2/7 (chapters 5–8) persisted under WORKSPACE/source/mamo-zhyty/uk-002.txt; English block 2/7 persisted to WORKSPACE + STAGING; staging readback passed.
+22:39 — Mom, I Want to Live! source block 3/7 (chapters 9–12) persisted under WORKSPACE/source/mamo-zhyty/uk-003.txt; English block 3/7 persisted to WORKSPACE + STAGING; staging readback passed.
