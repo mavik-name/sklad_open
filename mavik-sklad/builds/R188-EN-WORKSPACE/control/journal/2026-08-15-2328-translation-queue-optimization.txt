@@ -1,0 +1,17 @@
+R188 ENGLISH — TRANSLATION QUEUE DECISION
+Time: 15.08.2026 23:28 +03:00
+Reason: maximize completed English catalog quickly while preserving all work.
+Remaining queued source sizes from exact canonical R187 full.txt files:
+- skulptor: 138,164 words
+- universe: 68,944
+- advokat-dyiavola: 108,462
+- patsiient: 96,982
+- petlia: 86,054
+- toi-shcho-nese-svitlo: 41,372
+- olena: 62,766
+- lysty-polkovnyku: 52,406
+- try-romany-yaki-nikhto-ne-chytaie: 30,905
+- liudyna-bez-akaunta: 18,840
+- yak-vitko-z-moskaliamy-voiuvav: 33,499
+Decision: process shorter completed works first instead of blocking R188 on 138k-word The Sculptor. The Sculptor structure analysis is preserved in journal entry 2026-08-15-2324-skulptor-structure.txt; no English translation block was started, so no translation is being abandoned or lost.
+Next: liudyna-bez-akaunta → The Man Without an Account.
