@@ -8,3 +8,9 @@ Started: 15.08.2026 19:06 +03:00
 19:08 — Recorded exact canonical R187 identity in WORKSPACE/control/BASE-SOURCE.txt. Began first insurance copy batch.
 19:09 — Completed tree-copy batch into R188-EN-WORKSPACE. Copied control canons/checkpoints/R187 passport/staging manifest plus archived Social source and preserved English batches.
 19:10 — Verified WORKSPACE directory by GitHub readback. archive/social contains r188-social-en-ch08-10.md, r188-social-en-ch11-13.md, Соціальна.docx, and socialna-kanonichni-zamitky.txt. These remain archive-only and are excluded from STAGING.
+20:30 — Verified local R188 English worktree still contains 24 physical English files. Began persistent recovery of all surviving English files into GitHub WORKSPACE/STAGING.
+20:31 — Confirmed native English shell files and completed beta editions You and I... and Solya are physically present in warehouse storage.
+20:32 — Rejection in Advance chapter 1 persisted to WORKSPACE and STAGING.
+20:33 — Rejection in Advance chapter 2 persisted to WORKSPACE and STAGING.
+20:35 — Rejection in Advance chapter 3 recovered from WORKSPACE after interrupted turn, copied to STAGING, and read back successfully; blob SHA c056fd31f9b28ad89b5f01b4f13ad56e81e3b486.
+20:36 — Rejection in Advance landing page, web reader, and text entry page persisted to both WORKSPACE and STAGING. English web edition now has all 3/3 chapters and complete navigation shell.
