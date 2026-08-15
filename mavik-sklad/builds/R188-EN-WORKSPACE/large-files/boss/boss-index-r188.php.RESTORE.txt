@@ -1,0 +1,10 @@
+R188 Boss English dashboard backup
+Original release path: boss/index.php
+Original size: 234087 bytes
+Original SHA-256: e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8
+Compressed exact copy: boss-index-r188.php.gz
+Compressed size: 55577 bytes
+Compressed SHA-256: f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22
+Restore: gzip -dc boss-index-r188.php.gz > boss/index.php
+Validation performed before backup: php -l PASS.
+Feature: new top-level Boss tab `English`; dashboard shows eligible final books and real Reader/Cover/EPUB presence under native /en/.
