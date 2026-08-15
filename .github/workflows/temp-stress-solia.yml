@@ -1,0 +1,65 @@
+name: TEMP stress Sola
+
+on:
+  push:
+    paths:
+      - '.github/workflows/temp-stress-solia.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  stress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install lightweight Ukrainian stress dictionary
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --no-deps ukrainian-word-stress
+          python -m pip install marisa-trie beautifulsoup4 requests
+      - name: Stress the existing Sola reader article
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup, NavigableString
+          from ukrainian_word_stress import Stressifier, StressSymbol, Disambiguation
+
+          url='https://mavik.name/books/pishchynka-solya/read/'
+          r=requests.get(url,timeout=30)
+          r.raise_for_status()
+          soup=BeautifulSoup(r.text,'html.parser')
+          article=soup.find('article',id='reader')
+          if article is None:
+              raise SystemExit('reader article not found')
+
+          stressify=Stressifier(
+              stress_symbol=StressSymbol.CombiningAcuteAccent,
+              disambiguation=Disambiguation.Dictionary,
+              on_ambiguity='skip',
+          )
+          for node in list(article.descendants):
+              if not isinstance(node,NavigableString):
+                  continue
+              if node.parent and node.parent.name in {'script','style'}:
+                  continue
+              raw=str(node)
+              if raw.strip():
+                  node.replace_with(stressify(raw))
+
+          out=Path('mavik-sklad/tmp/solia-stressed-article.html')
+          out.parent.mkdir(parents=True,exist_ok=True)
+          out.write_text(article.decode_contents(),encoding='utf-8')
+          print('written',out,'chars',len(out.read_text(encoding='utf-8')))
+          PY
+      - name: Commit generated stressed article
+        run: |
+          git config user.name 'MaVik temporary stress bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add mavik-sklad/tmp/solia-stressed-article.html
+          git commit -m 'TEMP generate stressed Sola article' || exit 0
+          git push
