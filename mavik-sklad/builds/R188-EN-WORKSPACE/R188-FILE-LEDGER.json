@@ -1,7 +1,7 @@
 {
-  "schema": 1,
+  "schema": 2,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T21:08:00+03:00",
+  "updated_at": "2026-08-15T21:58:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -18,12 +18,17 @@
     "completed_works_only": true,
     "every_process_file_must_be_persisted": true,
     "staging_contains_release_files_only": true,
-    "next_file_only_after_readback": true
+    "next_file_only_after_readback": true,
+    "unfinished_social_is_archive_only": true
+  },
+  "history": {
+    "previous_detailed_ledger_blob_sha": "d468b08926ba8c47c1d75d979bb242829bbc5dd5",
+    "note": "The previous per-file ledger remains recoverable in Git history. Schema 2 records current release groups more compactly so it can be updated after every completed work without losing continuity."
   },
   "books": [
     {"slug":"sotsialna","uk_title":"Соціальна","publication_mode":"beta","english_pipeline":"excluded_unfinished"},
     {"slug":"mamo-zhyty","uk_title":"Мамо, жити!","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"bezimenni","uk_title":"Безіменні","publication_mode":"final","english_pipeline":"queued"},
+    {"slug":"bezimenni","uk_title":"Безіменні","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Nameless","chunks":"6/6","source":"6/6 persisted","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
     {"slug":"skulptor","uk_title":"Скульптор","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"universe","uk_title":"UNIVERSE","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"advokat-dyiavola","uk_title":"Адвокат Диявола","publication_mode":"final","english_pipeline":"queued"},
@@ -35,65 +40,60 @@
     {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"yak-vitko-z-moskaliamy-voiuvav","uk_title":"Як Вітько з москалями воював","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","chapters":"3/3"},
-    {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","chunks":"6/6"},
-    {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper"},
+    {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","chunks":"3/3","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","chunks":"6/6","source":"6/6 persisted","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
+    {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper","web_edition":"complete","cover":"pending_english","epub":"pending"},
     {"slug":"paterny-samorefleksii","uk_title":"Патерни саморефлексії","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I..."},
-    {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Gospel According to Macarius","chunks":"6/6","structure":"foreword + prologue + 25 chapters + afterword"}
+    {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I...","web_edition":"complete","cover":"pending_english","epub":"pending"},
+    {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Gospel According to Macarius","chunks":"6/6","structure":"foreword + prologue + 25 chapters + afterword","source":"6/6 persisted","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"}
   ],
-  "files": [
-    {"path":"control/BASE-SOURCE.txt","role":"workspace","status":"current","copies":["github-workspace"]},
-    {"path":"R188-FILE-LEDGER.json","role":"workspace","status":"current","copies":["github-work-branch"]},
-    {"path":"en/index.html","role":"release","status":"current","size":6649,"sha256":"100c26f32ce19f633b4117077d9ff4393e559c7115f85e808a1750d46c14db18","copies":["workspace","staging","local"]},
-    {"path":"en/books/index.html","role":"release","status":"current","size":6228,"sha256":"17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf","copies":["workspace","staging","local"]},
-    {"path":"en/books/ty-i-ia/index.html","role":"release","status":"current","size":2104,"sha256":"fbde3dae7ccc86860e355b9f359d84e9039d04d491e5c69fe97cb1215cef81da","copies":["workspace","staging","local"]},
-    {"path":"en/books/ty-i-ia/read/index.html","role":"release","status":"current","size":2657,"sha256":"30d68654fe2d172ce123621787249a6db794d38553ae78a0b721656b336a25d6","copies":["workspace","staging","local"]},
-    {"path":"en/books/ty-i-ia/read/text/index.html","role":"release","status":"current","size":1327,"sha256":"95f48b9668a7ebc141deed9ca3ab2005b305ff060e2e8aca5fc09f5b77f94e4d","copies":["workspace","staging","local"]},
-    {"path":"en/books/ty-i-ia/read/text/full.txt","role":"release","status":"current","size":1265,"sha256":"c7ae6c558ceb2c8747955ce48a257a83c4d66225b9eda479bad0b7b95292430b","copies":["workspace","staging","local"]},
-    {"path":"en/books/ty-i-ia/read/text/part-001.txt","role":"release","status":"current","size":980,"sha256":"6bdcecb00fa9bc0b3fae688cc818f1ecc5c6eb46c562bd6fc9dcfced9f800b07","copies":["workspace","staging","local"]},
-    {"path":"en/books/pishchynka-solya/index.html","role":"release","status":"current","size":2309,"sha256":"d39aca36fe35f9519f6919de9ee0f1c953703f282333d36358818493504b15b9","copies":["workspace","staging","local"]},
-    {"path":"en/books/pishchynka-solya/read/index.html","role":"release","status":"current","size":2241,"copies":["workspace","staging"]},
-    {"path":"en/books/pishchynka-solya/read/text/full.txt","role":"workspace-backup","status":"current","size":23037,"sha256":"8b63b2eb71570bedfd3d5079bd674e4ef40242d3d4c52e0cb9eb7411ad89c742","copies":["workspace","local"]},
-    {"path":"en/books/pishchynka-solya/read/text/part-001.txt","role":"release","status":"current","size":5679,"sha256":"9d121a3f3b14849492f3d145c5547327246e066d1edbbe3e983271682f032fbb","copies":["workspace","staging","local"]},
-    {"path":"en/books/pishchynka-solya/read/text/part-002.txt","role":"release","status":"current","size":5520,"sha256":"8f9df81e7882e4298ec50f1017de9b6cef2f4545ef020d6a84f8c003e37c8cce","copies":["workspace","staging","local"]},
-    {"path":"en/books/pishchynka-solya/read/text/part-003.txt","role":"release","status":"current","size":5910,"sha256":"fa63a588b609c3fee6bf3dd456bb6fa8fd1911188ee71c491b9d27af577a84e7","copies":["workspace","staging","local"]},
-    {"path":"en/books/pishchynka-solya/read/text/part-004.txt","role":"release","status":"current","size":5925,"sha256":"37c60e55b37086d064e6a9a50d75d84e521201a949f587db907a8c97cf59a87f","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/index.html","role":"release","status":"current","size":2189,"sha256":"bdee7b5902f9bf85390d9a13780d74fb8395972368e7324c92698eb0a5df7d90","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/read/index.html","role":"release","status":"current","size":2156,"sha256":"d238b2ce7365a8f4a474602d0bc543059e0e2434f4dd7c12a0b0aeaf6fb2060e","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/read/text/index.html","role":"release","status":"current","size":912,"sha256":"7c78f8fe69ef7217088b768437c66b74a213384f65b51b834c51d56ab0ff03b9","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/read/text/part-001.txt","role":"release","status":"current","size":7911,"sha256":"5710c08dd65615621975373c65d3a0f992c738eb92996faaab942b3ef9bacc7e","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/read/text/part-002.txt","role":"release","status":"current","size":8577,"sha256":"fc0c93997e36ad5005b973adcfffd7e682dd6bbdf1c89886f045a69a0194c780","copies":["workspace","staging","local"]},
-    {"path":"en/books/vidmova-avansom/read/text/part-003.txt","role":"release","status":"current","size":10267,"sha256":"c12dbb7e88c3607048d2f2d95aa13fa194d30d452da2c93635d661246ebd779f","copies":["workspace","staging","local"]},
-    {"path":"en/books/transfer/index.html","role":"release","status":"current","size":2235,"github_blob":"6cfefa60b32208e1f0c8585d3f51d7bafe38fa8b","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/index.html","role":"release","status":"current","size":2137,"github_blob":"5fe5d908420d58b9f12987aaef58976ba1969600","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/index.html","role":"release","status":"current","size":925,"github_blob":"6b743de0744ecf36b70c89c833998dbf6ab888d1","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/part-001.txt","role":"release","status":"current","size":8753,"github_blob":"3c32acd52de4ea6c0bd39eeab8198327de553a9e","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/part-002.txt","role":"release","status":"current","size":9411,"github_blob":"31d9019d3d1ce7df306b1c1e8fe4367df771ee11","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/part-003.txt","role":"release","status":"current","size":6863,"github_blob":"ac863744c7a9d378de367bda6997971ae3cb60e5","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/part-004.txt","role":"release","status":"current","size":9397,"github_blob":"d976f26ab96ba10cc4c1dd90ec8ccac64fd4e0b8","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/part-005.txt","role":"release","status":"current","size":6104,"github_blob":"0855c44049d964bd5c78664e4add26e580d85c2e","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/transfer/read/text/part-006.txt","role":"release","status":"current","size":7464,"github_blob":"0768568e00798a45b9352140583c6b7bfae9ebd8","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"source/transfer/uk-001.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"source/transfer/uk-002.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"source/transfer/uk-003.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"source/transfer/uk-004.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"source/transfer/uk-005.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"source/transfer/uk-006.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"en/books/yevanheliie-vid-makariia/index.html","role":"release","status":"current","size":2352,"github_blob":"c695141ef09560999e034b949602efaabb59f715","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/index.html","role":"release","status":"current","size":2305,"github_blob":"30c4e0e0431fc6d819003e6cf0e62bbab9861700","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/index.html","role":"release","status":"current","size":956,"github_blob":"b72fe02a7ec02fea184da726829ebd972299dd87","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-001.txt","role":"release","status":"current","size":9962,"github_blob":"7a15f45532eba34808c64c11dcb4dc1c3b600f53","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-002.txt","role":"release","status":"current","size":8944,"github_blob":"3af0cc92a704c8b4fde83aa841a3cfdcc843855f","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-003.txt","role":"release","status":"current","size":8464,"github_blob":"cd4bc56e83ede37ca7c2fc9ecba9b437aa2a07db","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-004.txt","role":"release","status":"current","size":9442,"github_blob":"d5006ddbff6a1c79521dc301bfddadcca452baa4","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-005.txt","role":"release","status":"current","size":8559,"github_blob":"ba3bd39307054ab2f66b4c87d0cdccd156437f96","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-006.txt","role":"release","status":"current","size":8698,"github_blob":"be0035834731f8369dde38c6d040fc22f92c455f","copies":["workspace","staging"],"readback":"ok"},
-    {"path":"source/yevanheliie-vid-makariia/uk-001.txt","role":"workspace-source","status":"current","size":13093,"github_blob":"4786620420d75247630c90834ccfb94db27a8702","copies":["workspace"],"readback":"ok"},
-    {"path":"source/yevanheliie-vid-makariia/uk-002.txt","role":"workspace-source","status":"current","size":10831,"github_blob":"882fb346b772b0d40488d15d3896561867be1e22","copies":["workspace"],"readback":"ok"},
-    {"path":"source/yevanheliie-vid-makariia/uk-003.txt","role":"workspace-source","status":"current","size":10793,"github_blob":"9cbc45e52bd7f26493f11ba19757974dcb8a3e1f","copies":["workspace"],"readback":"ok"},
-    {"path":"source/yevanheliie-vid-makariia/uk-004.txt","role":"workspace-source","status":"current","size":11023,"github_blob":"4f5108ec928e861704c89ba2b1fcf39cdd8b4084","copies":["workspace"],"readback":"ok"},
-    {"path":"source/yevanheliie-vid-makariia/uk-005.txt","role":"workspace-source","status":"current","size":10008,"github_blob":"eddbf87c06da96260ed5d797334cee5aee0e19b0","copies":["workspace"],"readback":"ok"},
-    {"path":"source/yevanheliie-vid-makariia/uk-006.txt","role":"workspace-source","status":"current","size":10692,"github_blob":"b246059c98d3dd1af8954b565548870b91f170f7","copies":["workspace"],"readback":"ok"}
-  ]
+  "verified_release_groups": {
+    "english_shell": {
+      "status": "present_in_staging",
+      "routes": ["en/","en/books/","en/books/new/","en/books/free/","en/about/","en/blog/","en/announcements/","en/music/"]
+    },
+    "ty-i-ia": {"status":"complete_beta","copies":["workspace","staging"]},
+    "pishchynka-solya": {"status":"complete_beta","copies":["workspace","staging"]},
+    "vidmova-avansom": {"status":"complete_beta","chunks":"3/3","copies":["workspace","staging"],"readback":"ok"},
+    "transfer": {"status":"complete_beta","chunks":"6/6","source_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
+    "yevanheliie-vid-makariia": {"status":"complete_beta","chunks":"6/6","source_chunks":"6/6","copies":["workspace","staging"],"readback":"ok"},
+    "bezimenni": {
+      "status":"complete_beta",
+      "english_title":"The Nameless",
+      "source_chunks":"6/6",
+      "translation_chunks":"6/6",
+      "copies":["workspace","staging"],
+      "readback":"ok",
+      "release_files": [
+        {"path":"en/books/bezimenni/index.html","github_blob":"a607d16101416f1e57b4477b2dc13ac5edd9e9ce"},
+        {"path":"en/books/bezimenni/read/index.html","github_blob":"a585fc3c51918491b481813c0a29684db3dafdf5"},
+        {"path":"en/books/bezimenni/read/text/index.html","github_blob":"a53d1248037ccea57fc2cba428529e5ee94dfbd2"},
+        {"path":"en/books/bezimenni/read/text/part-001.txt","github_blob":"c2627266b35cc6952a081f8f84f49ddc0afe6611"},
+        {"path":"en/books/bezimenni/read/text/part-002.txt","github_blob":"ab20a3bb67e12f0d90abde0fe4033aef061befdd"},
+        {"path":"en/books/bezimenni/read/text/part-003.txt","github_blob":"b2fc6929a0f3c8bf89cb1b977c2cd4cd03fcc51e"},
+        {"path":"en/books/bezimenni/read/text/part-004.txt","github_blob":"69a3cb90b0a718d700ea49631ef3b2700bedb62f"},
+        {"path":"en/books/bezimenni/read/text/part-005.txt","github_blob":"1aeb63fa6f66b796c8795b64663d3a8ea5735b07"},
+        {"path":"en/books/bezimenni/read/text/part-006.txt","github_blob":"4e161cfddd00b453ba79d6384413d9d9fcd21cc9"}
+      ],
+      "source_paths": [
+        "source/bezimenni/uk-001.txt",
+        "source/bezimenni/uk-002.txt",
+        "source/bezimenni/uk-003.txt",
+        "source/bezimenni/uk-004.txt",
+        "source/bezimenni/uk-005.txt",
+        "source/bezimenni/uk-006.txt"
+      ]
+    }
+  },
+  "counts": {
+    "completed_uk_works_target": 19,
+    "complete_english_beta_web_editions": 6,
+    "excluded_unfinished": 1,
+    "remaining_completed_works_to_translate": 13
+  },
+  "next": {
+    "rule": "Persist canonical Ukrainian source in WORKSPACE before translation.",
+    "title": "Patterns of Self-Reflection",
+    "slug": "paterny-samorefleksii"
+  }
 }
