@@ -16,4 +16,8 @@ Started: 15.08.2026 19:06 +03:00
 20:36 — Rejection in Advance landing page, web reader, and text entry page persisted to both WORKSPACE and STAGING. English web edition now has all 3/3 chapters and complete navigation shell.
 20:40 — Transfer source text split into six controlled chunks from canonical R187 source. Chunk 1 source saved in WORKSPACE/source/transfer/uk-001.txt; English chunk 1 saved in WORKSPACE and STAGING.
 20:42 — Transfer chunk 2 source and English translation saved in WORKSPACE; English chunk 2 duplicated to STAGING.
-20:44 — Transfer chunk 3 source and English translation saved in WORKSPACE; English chunk 3 duplicated to STAGING. Transfer progress is now 3/6 chunks physically preserved in both release storage layers.
+20:44 — Transfer chunk 3 source and English translation saved in WORKSPACE; English chunk 3 duplicated to STAGING.
+20:46 — Transfer chunk 4 source and English translation saved in WORKSPACE; English chunk 4 duplicated to STAGING.
+20:48 — Transfer chunk 5 source and English translation saved in WORKSPACE; English chunk 5 duplicated to STAGING.
+20:50 — Transfer chunk 6 source and English translation saved in WORKSPACE; English chunk 6 duplicated to STAGING. Translation complete 6/6.
+20:52 — Transfer landing page, six-part web reader and text-entry page persisted to WORKSPACE and STAGING. GitHub readback confirmed the staging landing and reader tree. Transfer is now a complete English beta web edition; English cover and EPUB remain pending before final status.
