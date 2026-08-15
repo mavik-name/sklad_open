@@ -1,0 +1,9 @@
+R188 ENGLISH — INTERMEDIATE JOURNAL ENTRY
+Time: 15.08.2026 22:56 +03:00
+Work: Mom, I Want to Live!
+Result: block 5/7 complete (chapters 17–20).
+Source: WORKSPACE/source/mamo-zhyty/uk-005.txt
+English WORKSPACE: WORKSPACE/site/en/books/mamo-zhyty/read/text/part-005.txt
+English STAGING: STAGING/en/books/mamo-zhyty/read/text/part-005.txt
+Verification: STAGING readback passed; blob SHA 6ecb62fb020116bdc3af74b177f14a3610f2edfc.
+Next: block 6/7, chapters 21–23.
