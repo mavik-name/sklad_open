@@ -1,0 +1,148 @@
+# Solya, the Grain of Sand Who Dreamed of a Skyscraper
+## Working literary translation — Part 3 of 4
+
+“I wanted to be up there,” she thought. “Not merely beside the skyscraper. Not merely looking at it from below. I wanted to become part of it.”
+
+One morning, Mr Engineer came to the site.
+
+He was tall and slim, with attentive eyes and glasses that had a hairline crack across one lens. He carried a set of plans in his hands and a pencil in his pocket — a pencil he was forever losing and then finding again.
+
+Mr Engineer walked slowly. He watched where he stepped. He looked closely at the walls, the beams, the wet concrete, the crane at work.
+
+The foreman walked beside him.
+
+“We need to move faster,” the foreman said. “The schedule is pressing us.”
+
+Mr Engineer stopped and looked at the building.
+
+“Faster isn’t always better,” he said. “Especially when you’re building upward.”
+
+“But it’s only another floor.”
+
+“There are no ‘only’ floors,” said the Engineer. “And there are no little things. A great building stands on things that seem small.”
+
+Solya heard those words.
+
+They sank into her the way a drop of water sinks into dry sand.
+
+“A great building stands on things that seem small.”
+
+She repeated the words to herself several times.
+
+Solya had always believed that small things became important only when they were lifted high. But Mr Engineer had said something different. He was not talking about height. He was talking about precision. About being in the right place. About how even the smallest thing mattered if it was where it needed to be.
+
+But Solya was not yet ready to accept that completely.
+
+She still wanted to go up.
+
+That day, the Engineer was due to take the construction lift to the top floor. He walked past the sand pile, studying the plans. Suddenly his boot caught on a piece of reinforcing bar.
+
+“Careful!” the foreman called.
+
+The Engineer kept his balance, but for an instant his foot slid very close to Solya.
+
+This was her chance.
+
+Solya did not stop to think. She rolled forward, slipped beneath the edge of the sole, and became wedged in a tiny crack between the heel and the rubber.
+
+The boot lifted.
+
+Solya went with it.
+
+The construction lift creaked and shuddered as it slowly climbed. To the people inside, it was an ordinary ride. To Solya, it was a road to the sky.
+
+The floors passed one after another.
+
+Fifth.
+
+Tenth.
+
+Fifteenth.
+
+Twentieth.
+
+Solya could barely breathe, though grains of sand do not breathe.
+
+“Now,” she thought. “Now I really will become part of the skyscraper. I’ll be up high. They’ll mix me into the concrete. I’ll stay there forever.”
+
+The lift stopped.
+
+The doors opened.
+
+The Engineer stepped onto the top floor of the unfinished structure.
+
+Solya saw the city from above.
+
+It was enormous.
+
+The streets far below looked like thin grey ribbons. Cars moved along them like shiny beetles. People were almost invisible. In the distance, a river gleamed between the buildings. Other skyscrapers stood all around like silent giants made of glass and stone. And the clouds drifted so close that Solya thought that, if she had a hand, she could have reached out and touched them.
+
+“I made it,” she whispered. “I really made it.”
+
+Wind moved between the steel beams. It was stronger up here than below and smelled of the city, rain, and height.
+
+Solya tried to wriggle free of the crack in the sole.
+
+She couldn’t.
+
+She gathered every bit of her tiny strength.
+
+Still she couldn’t.
+
+The rubber held her fast.
+
+The Engineer walked across the top floor, bending over connections, checking levels, speaking with the workers.
+
+“This needs reinforcing,” he said. “And here, don’t rush. Remember: height does not forgive carelessness with small things.”
+
+Solya heard him, but the words tasted bitter.
+
+She was high above the ground.
+
+She could see the clouds.
+
+She had come almost all the way to her dream.
+
+And she could not stay.
+
+“So this can happen too,” she thought. “You can reach your dream and still not get what you wanted.”
+
+The thought hurt.
+
+And yet, at the same time, something else appeared inside her. Something quiet. It was not joy, but it did not feel like defeat either.
+
+She looked down at the city, then up at the clouds, then at the unfinished walls.
+
+And suddenly she understood: the whole skyscraper was made from countless things no one noticed one by one. Sand, stones, water, cement, steel rods, screws, lines on drawings, careful movements of hands, good decisions, words spoken at the right moment.
+
+Not one of those things was a skyscraper by itself.
+
+But without them there would be no skyscraper.
+
+“Something great is held up by small things,” Solya remembered.
+
+And for the first time she wondered:
+
+“Maybe being important doesn’t have to mean being high up. Maybe you become important when you find the place where you belong.”
+
+But where was her place?
+
+She did not know.
+
+The Engineer finished his inspection and went back to the lift. The journey down was quiet. Solya no longer kept repeating that she would become part of the skyscraper. She simply held everything she had seen inside herself.
+
+The city from above.
+
+Clouds close enough to touch.
+
+The Engineer’s words.
+
+And the bitter understanding that a dream can take you not where you asked to go, but where there is something you need to understand.
+
+Several days passed.
+
+Construction continued. Mr Engineer kept coming back to the site, checking the plans, speaking with the workers, sometimes getting angry, sometimes smiling, but always noticing the things everyone else walked past without a thought.
+
+And Solya remained in the crack in his boot.
+
+She saw the construction from below and from above. She watched mistakes being corrected before they became dangerous. She saw how one tiny inaccuracy could change a great undertaking. She saw people argue over little things — and then saw those very little things save an entire floor.
