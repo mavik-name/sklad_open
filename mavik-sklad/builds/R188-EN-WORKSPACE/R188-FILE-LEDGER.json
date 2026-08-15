@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T19:22:00+03:00",
+  "updated_at": "2026-08-15T19:25:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -39,13 +39,18 @@
     {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"paterny-samorefleksii","uk_title":"Патерни саморефлексії","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"queued"},
+    {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I..."},
     {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"queued"}
   ],
   "files": [
     {"path":"control/BASE-SOURCE.txt","role":"workspace","status":"current","copies":["github-workspace"],"note":"canonical base identity record; runtime availability is session-dependent"},
     {"path":"R188-FILE-LEDGER.json","role":"workspace","status":"current","copies":["github-work-branch"],"note":"this registry"},
     {"path":"en/index.html","role":"release","status":"current","size":6649,"sha256":"100c26f32ce19f633b4117077d9ff4393e559c7115f85e808a1750d46c14db18","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/index.html","mavik-sklad/builds/R188-EN-STAGING/en/index.html","local:/mnt/data/r188_work/en/index.html"],"readback":"ok","github_blob":"73e8a3915b88f97c0d798a870f0a9d6c9adc3a23"},
-    {"path":"en/books/index.html","role":"release","status":"current","size":6228,"sha256":"17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/index.html","mavik-sklad/builds/R188-EN-STAGING/en/books/index.html","local:/mnt/data/r188_work/en/books/index.html"],"readback":"ok","github_blob":"46185212a8eafe4d8fe4bd745fcb02a96877d638"}
+    {"path":"en/books/index.html","role":"release","status":"current","size":6228,"sha256":"17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/index.html","mavik-sklad/builds/R188-EN-STAGING/en/books/index.html","local:/mnt/data/r188_work/en/books/index.html"],"readback":"ok","github_blob":"46185212a8eafe4d8fe4bd745fcb02a96877d638"},
+    {"path":"en/books/ty-i-ia/index.html","role":"release","status":"current","size":2104,"sha256":"fbde3dae7ccc86860e355b9f359d84e9039d04d491e5c69fe97cb1215cef81da","copies":["workspace","staging","local"],"readback":"ok","github_blob":"4f618cfe9998b981ea106bd5f8c4756c9a1f1835"},
+    {"path":"en/books/ty-i-ia/read/index.html","role":"release","status":"current","size":2657,"sha256":"30d68654fe2d172ce123621787249a6db794d38553ae78a0b721656b336a25d6","copies":["workspace","staging","local"],"readback":"ok","github_blob":"bea043f357f4b77a8a415426ff50af7cfe7b8463"},
+    {"path":"en/books/ty-i-ia/read/text/index.html","role":"release","status":"current","size":1327,"sha256":"95f48b9668a7ebc141deed9ca3ab2005b305ff060e2e8aca5fc09f5b77f94e4d","copies":["workspace","staging","local"],"readback":"ok","github_blob":"72baa308f687093e8638cdbd363ba225b98664c8"},
+    {"path":"en/books/ty-i-ia/read/text/full.txt","role":"release","status":"current","size":1265,"sha256":"c7ae6c558ceb2c8747955ce48a257a83c4d66225b9eda479bad0b7b95292430b","copies":["workspace","staging","local"],"readback":"ok","github_blob":"eddac5c7949fb8112d69f6aed79086ba3048908b"},
+    {"path":"en/books/ty-i-ia/read/text/part-001.txt","role":"release","status":"current","size":980,"sha256":"6bdcecb00fa9bc0b3fae688cc818f1ecc5c6eb46c562bd6fc9dcfced9f800b07","copies":["workspace","staging","local"],"readback":"ok","github_blob":"426c6a341868c248767df15797b72dac1fc31308"}
   ]
 }
