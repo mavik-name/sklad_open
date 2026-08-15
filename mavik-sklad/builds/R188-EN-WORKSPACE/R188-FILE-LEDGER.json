@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T19:19:00+03:00",
+  "updated_at": "2026-08-15T19:22:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -43,9 +43,9 @@
     {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"queued"}
   ],
   "files": [
-    {"path":"control/BASE-SOURCE.txt","role":"workspace","status":"current","copies":["github-workspace"],"note":"canonical base identity; source ZIP present in active runtime"},
+    {"path":"control/BASE-SOURCE.txt","role":"workspace","status":"current","copies":["github-workspace"],"note":"canonical base identity record; runtime availability is session-dependent"},
     {"path":"R188-FILE-LEDGER.json","role":"workspace","status":"current","copies":["github-work-branch"],"note":"this registry"},
     {"path":"en/index.html","role":"release","status":"current","size":6649,"sha256":"100c26f32ce19f633b4117077d9ff4393e559c7115f85e808a1750d46c14db18","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/index.html","mavik-sklad/builds/R188-EN-STAGING/en/index.html","local:/mnt/data/r188_work/en/index.html"],"readback":"ok","github_blob":"73e8a3915b88f97c0d798a870f0a9d6c9adc3a23"},
-    {"path":"en/books/index.html","role":"release","status":"local_ready","size":6228,"sha256":"17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf","copies":["local:/mnt/data/r188_work/en/books/index.html"],"readback":"pending"}
+    {"path":"en/books/index.html","role":"release","status":"current","size":6228,"sha256":"17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/index.html","mavik-sklad/builds/R188-EN-STAGING/en/books/index.html","local:/mnt/data/r188_work/en/books/index.html"],"readback":"ok","github_blob":"46185212a8eafe4d8fe4bd745fcb02a96877d638"}
   ]
 }
