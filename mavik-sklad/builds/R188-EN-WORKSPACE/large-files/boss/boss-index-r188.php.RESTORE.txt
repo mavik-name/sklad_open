@@ -1,10 +1,31 @@
-R188 Boss English dashboard backup
+R188 Boss English dashboard — exact chunked backup
+
 Original release path: boss/index.php
 Original size: 234087 bytes
 Original SHA-256: e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8
-Compressed exact copy: boss-index-r188.php.gz
+Validation before backup: php -l PASS
+
+Compressed exact source: boss-index-r188.php.gz
 Compressed size: 55577 bytes
 Compressed SHA-256: f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22
-Restore: gzip -dc boss-index-r188.php.gz > boss/index.php
-Validation performed before backup: php -l PASS.
-Feature: new top-level Boss tab `English`; dashboard shows eligible final books and real Reader/Cover/EPUB presence under native /en/.
+
+Stored as six binary chunks because a single connector upload was truncated:
+part-00 10000 bytes sha256 36e3f212122b3053df15d2c2ced440410c4f3eb40e1860b545c1eb9e1b6c9747 git-blob 8602ee9ca5a1526c079c3198b996913b2319f837
+part-01 10000 bytes sha256 1ad54976650bc7ce1c517d32fd86dceaa14246ffc92c1a1089ab3f5d3f90409e git-blob 746cf14052c480f5147ee2767d132ed78f339d92
+part-02 10000 bytes sha256 fcd4d7bd5aa30b0c85ab510cf609323c05534f993730af0224620e032424d866 git-blob e16b0c03aabed8b37ac5fb40d36cff3bf8c853a4
+part-03 10000 bytes sha256 020525cf53a5a89f0364be32a88aa093d9f8ac875fb6e43659b29809dc140e43 git-blob 1c42049837b11d53ba8c42ed30cb984447cb2c56
+part-04 10000 bytes sha256 b0945dd237f047d4639059bc53d247ecfb8b377ae7060553323839094611bd66 git-blob c7a61210619a1b3f79dad4b9d474a4331c667f73
+part-05 5577 bytes sha256 ddf93936a0c0d967c3a3de83391a37b9894951a9c95d1ad8b4e93762adf1bc9d git-blob 142e9bf0dbee4d715e4f05a493b9aece0edc640e
+
+Restore:
+cat boss-index-r188.php.gz.part-00 boss-index-r188.php.gz.part-01 boss-index-r188.php.gz.part-02 boss-index-r188.php.gz.part-03 boss-index-r188.php.gz.part-04 boss-index-r188.php.gz.part-05 > boss-index-r188.php.gz
+sha256sum boss-index-r188.php.gz
+# must equal f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22
+gzip -t boss-index-r188.php.gz
+gzip -dc boss-index-r188.php.gz > index.php
+sha256sum index.php
+# must equal e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8
+
+Feature preserved: top-level Boss English tab; English dashboard shows eligible completed books and actual Reader/Cover/EPUB state under native /en/.
+
+IMPORTANT: the earlier single file boss-index-r188.php.gz (15009 bytes) was truncated and is invalid. It must not be used.
