@@ -1,34 +1,28 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 19:39 +03:00**
+Updated: **15.08.2026 20:53 +03:00**
 Status: WORK IN PROGRESS / NOT CANONICAL
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`, SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
 
-Hard rules: native `/en/`; direct `UA ↔ EN`; no Google Translate as English edition; Ukrainian R187 intact; only completed Ukrainian works; `Social` archive-only; mandatory WORKSPACE/STAGING/ledger/readback cycle.
+Hard rules: native `/en/`; direct `UA ↔ EN`; no Google Translate as English edition; Ukrainian R187 intact; only completed Ukrainian works; `Social` archive-only; every used/created file persisted; WORKSPACE → STAGING → ledger → readback → journal/checkpoint before next step.
 
-Work branch: `r188-english-work`.
+Development branch: `r188-english-work`.
 WORKSPACE: `mavik-sklad/builds/R188-EN-WORKSPACE/`.
 STAGING: `mavik-sklad/builds/R188-EN-STAGING/`.
+Ledger: `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`.
+Operations log: `mavik-sklad/builds/R188-EN-WORKSPACE/control/R188-OPERATIONS-LOG.txt`.
 
-11 verified release files:
-- `/en/index.html`
-- `/en/books/index.html`
-- `/en/about/index.html`
-- `/en/blog/index.html`
-- `/en/announcements/index.html`
-- `/en/music/index.html`
-- `/en/books/ty-i-ia/index.html`
-- `/en/books/ty-i-ia/read/index.html`
-- `/en/books/ty-i-ia/read/text/index.html`
-- `/en/books/ty-i-ia/read/text/full.txt`
-- `/en/books/ty-i-ia/read/text/part-001.txt`
+Physically preserved complete English beta web editions:
+1. `You and I...`
+2. `Solya, the Grain of Sand Who Dreamed of a Skyscraper`
+3. `Rejection in Advance` — 3/3
+4. `Transfer` — 6/6; all six Ukrainian source chunks also preserved in WORKSPACE/source/transfer; staging readback passed.
 
-All are physically in WORKSPACE + STAGING with readback `ok`; ledger and staging manifest synchronized.
-`You and I...` is physically reconstructed native English beta from verified canonical R187.
-English top navigation now has physical Home, Books, Music, Blog, Author and Announcements routes.
+All four remain beta until English covers and validated EPUBs are completed.
 
-Current limitation: exact R187 was verified in a previous runtime but is not mounted now; remaining canonical book sources are absent from WORKSPACE; File Library retrieval and public binary reader/EPUB fetch are currently unavailable. No new book/Boss/legal reconstruction until exact source is physically accessible.
+English shell/routes are physically present in staging. Do not blindly recreate existing files; inspect staging first.
 
-Historical recovery lead: `C:\Users\user\Downloads\mavik-name-en-20260815-0548.zip`.
+Separate Boss `English` code still must be physically reconstructed/persisted and tested before release.
 
-NEXT: continue from physical branch/ledger; do not redo verified files; persist canonical source into WORKSPACE before the next completed-book translation.
+NEXT: `Євангеліє від Макарія` / `The Gospel According to Macarius`.
+Before translating, persist the exact Ukrainian R187 source in `R188-EN-WORKSPACE/source/yevanheliie-vid-makariia/`, then save every translated chunk immediately to WORKSPACE + STAGING.
