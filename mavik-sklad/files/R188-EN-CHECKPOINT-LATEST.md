@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 18:53 +03:00**
+Updated: **15.08.2026 19:00 +03:00**
 Purpose: authoritative handoff point for the next ChatGPT session working on the native English edition.
 
 ## CANONICAL BASE
@@ -25,6 +25,13 @@ Purpose: authoritative handoff point for the next ChatGPT session working on the
 - Final English publication requires validated English EPUBs.
 - Boss must have a separate top-level `English` management area.
 
+## NEW HARD CONTENT RULE — COMPLETED WORKS ONLY
+
+- **Only completed Ukrainian works are eligible for English translation/publication in R188.**
+- Unfinished works remain subject to Ukrainian editing and therefore MUST NOT be translated further for release, published under `/en/`, staged, EPUB-packaged, or counted as completed English editions.
+- Before starting a new English book translation, verify that the Ukrainian work is completed/final enough for publication.
+- If partial English work already exists for an unfinished title, preserve it as an archive of work performed, but do not continue it until the Ukrainian source is completed.
+
 ## RECOVERY NOTE
 
 The previous R188 working tree was not physically preserved after the earlier chat/session. Its architecture and completed-translation status survive in the journal/checkpoints, but do not treat the missing `/en/` code/readers/manuscripts as currently present on disk. Rebuild/package them from canonical R187 when preparing the actual R188 candidate.
@@ -41,49 +48,41 @@ The previous R188 working tree was not physically preserved after the earlier ch
 8. **Mom, I Want to Live!** — 26 chapters + afterword, about 15,801 English words, native beta reader reported.
 9. **The Man Without an Account** — 5 chapters + author’s afterword, about 22,961 English words, native beta reader reported.
 
-Physical recovery/reconstruction of those missing English artifacts remains required.
+Physical recovery/reconstruction of those missing English artifacts remains required before staging.
 
-## CURRENT ACTIVE TRANSLATION — SOCIAL
+## SOCIAL — ARCHIVED, NOT ACTIVE
 
-Source: canonical R187 `Соціальна.docx`.
+`Social` / `Соціальна` is an **unfinished Ukrainian work** and is therefore removed from the active English translation queue.
 
-Historical progress from previous session:
-- Chapters **1–7 translated**.
-- Chapter 1: about 1,959 English words.
-- The physical English files for Chapters 1–7 were not recovered.
+Work already performed is preserved and must NOT be discarded:
+- Previous-session Chapters 1–7 were reported translated, but their physical English files were not recovered.
+- Chapters 8–10 are physically stored at `mavik-sklad/files/r188-social-en-ch08-10.md`.
+- Chapters 11–13 are physically stored at `mavik-sklad/files/r188-social-en-ch11-13.md`.
+- These files are **archive-only**.
+- They are NOT R188 staging files, NOT public English content, and NOT candidates for EPUB/publication while the Ukrainian work is unfinished.
+- Do not continue from Chapter 14 unless the user later confirms the Ukrainian book has been completed and requests resumption.
 
-New persisted work:
-- **Chapters 8–10** reconstructed from canonical R187 and physically saved at `mavik-sklad/files/r188-social-en-ch08-10.md`.
-- Chapters 8–10: **2,972 English words**.
-- **Chapters 11–13** translated from the canonical source and physically saved at `mavik-sklad/files/r188-social-en-ch11-13.md`.
-- GitHub readback of both saved batches verified.
+## CURRENT NEXT STEP
 
-Key continuity preserved in Chapters 11–13:
-- the foundation is not rewritten as criminal or cartoonishly evil;
-- the internal record shows that budget reallocation was technically possible but would have required donor approval and cancellation/restart of an already committed family programme;
-- management chose to keep the approved programme and search for partner/private money for the medical cases;
-- Chapter 13 identifies folder 04 as the heroine’s daughter, amount **1,000,000 UAH**;
-- the archive ends with `Forwarded to partners / Awaiting response`, while the heroine already knows the real outcome.
+Do **not** continue `Social`.
 
-**NEXT CONTINUATION POINT: CHAPTER 14.**
+Next R188 work should:
+1. identify the next **completed** Ukrainian title not yet translated;
+2. continue/reconstruct the native `/en/` architecture and Boss English area from canonical R187;
+3. continuously copy every actual R188 release file into `mavik-sklad/builds/R188-EN-STAGING/`.
 
-Do not restart from Chapter 1 unless explicitly requested. Continue forward from Chapter 14; preserve each new batch as a real warehouse file immediately.
+## STAGING RULE
 
-Translation constraints for `Social`:
-- restrained emotional delivery;
-- authentic NGO/fund/bureaucratic register;
-- preserve moral ambiguity and the distinction between moral parasitism and actual criminality;
-- no invented corruption/embezzlement;
-- no cartoon villain fund;
-- personal loss stays an undercurrent;
-- short hard beats remain short rather than being explained.
+- Release staging folder: `mavik-sklad/builds/R188-EN-STAGING/`.
+- A file is not considered part of the future R188 release until its current copy exists in staging at the same relative path it will use in the ZIP, except a documented binary upload limitation.
+- Final R188 ZIP must be assembled from staging, not from a transient local working directory.
+- `Social` partial translation files are explicitly excluded from staging.
 
 ## MAJOR REMAINING WORK
 
-- continue Social from Chapter 14;
-- physically save each batch;
-- reconstruct/preserve the lost completed English manuscripts/readers;
+- physically reconstruct/preserve the nine previously completed English manuscripts/readers;
 - reconstruct native `/en/` architecture and Boss English management from canonical R187;
+- translate only remaining COMPLETED works;
 - English covers;
 - final English editorial passes;
 - validated English EPUBs;
@@ -102,6 +101,7 @@ After every meaningful work block:
 2. Update `mavik-sklad/files/site-r188-english-development.md`.
 3. Mirror the checkpoint to `mavik-sklad/text/R188-EN-CHECKPOINT-LATEST.md`.
 4. Store the actual translation/code/cover/EPUB/ZIP artifact — a checkpoint description alone is not enough.
-5. On major milestones, create a timestamped checkpoint snapshot.
+5. Copy every actual future release artifact into `mavik-sklad/builds/R188-EN-STAGING/`.
+6. On major milestones, create a timestamped checkpoint snapshot.
 
 This file is the authoritative continuation point unless a newer timestamped checkpoint explicitly supersedes it.
