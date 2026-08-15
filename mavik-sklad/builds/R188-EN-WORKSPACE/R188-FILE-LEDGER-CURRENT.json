@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "updated_at": "2026-08-15T19:55:00+03:00",
+  "base_release": 187,
+  "base_sha256": "daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21",
+  "branch": "r188-english-work",
+  "workspace": "mavik-sklad/builds/R188-EN-WORKSPACE/",
+  "staging": "mavik-sklad/builds/R188-EN-STAGING/",
+  "verified_release_file_count": 24,
+  "translated_books_persisted": [
+    {"slug":"ty-i-ia","title":"You and I...","status":"beta"},
+    {"slug":"pishchynka-solya","title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper","status":"beta","english_words":3972}
+  ],
+  "excluded": [{"slug":"sotsialna","reason":"unfinished Ukrainian source"}],
+  "boss_english": {
+    "implemented": true,
+    "php_lint": "PASS",
+    "original_sha256": "e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8",
+    "backup_sha256_gzip": "f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22",
+    "backup_parts": 6,
+    "readback": "OK",
+    "staging": "pending reassembly"
+  },
+  "next": "Rejection in Advance",
+  "hard_rule": "No next artifact until the current artifact is persisted, staged if release-bound, and read back."
+}
