@@ -1,0 +1,13 @@
+R188 ENGLISH WORKSPACE — CANONICAL SOURCE
+
+Base release: R187
+Canonical file: 187 КАНОН_Сайт_ОК_daf4fd24.zip
+SHA-256: daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21
+Size: 47,727,892 bytes
+Type: full-site-release
+Manifest: release=187; base_release=186; managed_files=498
+Validation: BOSS_ARCHIVE_VALIDATE_OK; unzip PASS; PHP/JS/EPUB checks recorded in R187 passport.
+
+R188 must be reconstructed only from this exact canonical base.
+
+Binary storage note: the exact canonical ZIP is available in the current active runtime, but a verified physical copy under this GitHub workspace has not yet been established. Until such upload is verified, this file is an identity record, not a claim that the binary ZIP is stored here.
