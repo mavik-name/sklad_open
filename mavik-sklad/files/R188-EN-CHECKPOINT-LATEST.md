@@ -1,14 +1,15 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 19:31 +03:00**
+Updated: **15.08.2026 19:34 +03:00**
 Purpose: authoritative handoff point for the next session.
 
 ## CANONICAL BASE
 - R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 - SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
 - size `47,727,892` bytes
-- canonical R187 was physically mounted and verified during the 19:26 recovery session, unpacked to `/mnt/data/r188_work`, 498 files, valid R187 manifest;
-- that transient runtime path is NOT guaranteed to exist in a later session — rely on the persistent work branch/ledger and remount exact R187 when source access is needed.
+- exact R187 was physically mounted and verified during the earlier 19:26 recovery runtime: 498 files, valid manifest, SHA matched canon;
+- **current runtime does not contain `/mnt/data/r188_work` or the R187 ZIP**;
+- no persistent direct download/workspace token for the exact R187 ZIP or the old R188 working ZIP was recovered from project history;
 - R188 remains WORK IN PROGRESS / NOT CANONICAL.
 
 ## HARD RULES
@@ -18,49 +19,59 @@ Purpose: authoritative handoff point for the next session.
 - separate Boss `English` area required;
 - English covers required;
 - final English EPUBs must be generated and validated;
-- translate only completed Ukrainian works;
-- `Social` is unfinished and excluded from R188 release work;
-- every created/used file must be persisted immediately.
+- only completed Ukrainian works may be translated/published;
+- `Social` is unfinished and archive-only;
+- every artifact must complete the persistence cycle before the next one begins.
 
-## PERSISTENCE SYSTEM — ACTIVE
+## PERSISTENCE SYSTEM
 - work branch: `r188-english-work`;
 - WORKSPACE: `mavik-sklad/builds/R188-EN-WORKSPACE/`;
 - STAGING: `mavik-sklad/builds/R188-EN-STAGING/`;
-- fallback if GitHub write fails: server `/_site-state/r188-workspace/`;
-- file registry: `R188-EN-WORKSPACE/R188-FILE-LEDGER.json`;
-- staging manifest: `R188-EN-STAGING/STAGING-MANIFEST.txt`;
+- ledger: `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`;
+- staging manifest: `mavik-sklad/builds/R188-EN-STAGING/STAGING-MANIFEST.txt`;
 - operations log: `mavik-sklad/files/R188-OPERATIONS-LOG.txt`.
 
 Mandatory cycle:
-`create file → persist to WORKSPACE → persist to STAGING if release-bound → ledger → readback → journal/report → next file`.
+`create → WORKSPACE → STAGING if release-bound → ledger/hash → GitHub readback → journal/checkpoint → next artifact`.
 
-## CURRENT REAL R188 RELEASE FILES — 9 VERIFIED
-All files below are physically stored in WORKSPACE + STAGING and have readback `ok` in the ledger.
+## CURRENT REAL R188 RELEASE FILES — 10 VERIFIED
+All are physically stored in WORKSPACE + STAGING and have GitHub readback `ok`.
 
 1. `/en/index.html`
 2. `/en/books/index.html`
 3. `/en/about/index.html`
 4. `/en/blog/index.html`
-5. `/en/books/ty-i-ia/index.html`
-6. `/en/books/ty-i-ia/read/index.html`
-7. `/en/books/ty-i-ia/read/text/index.html`
-8. `/en/books/ty-i-ia/read/text/full.txt`
-9. `/en/books/ty-i-ia/read/text/part-001.txt`
+5. `/en/announcements/index.html`
+6. `/en/books/ty-i-ia/index.html`
+7. `/en/books/ty-i-ia/read/index.html`
+8. `/en/books/ty-i-ia/read/text/index.html`
+9. `/en/books/ty-i-ia/read/text/full.txt`
+10. `/en/books/ty-i-ia/read/text/part-001.txt`
 
-Current staging manifest has been synchronized with these 9 files and their hashes/blobs.
+The staging manifest and ledger are synchronized to these 10 files.
 
 ### You and I...
-Full native English beta edition reconstructed from canonical R187 and marked `translated_beta` in ledger. Do not retranslate/reconstruct it unless editorial revision is explicitly required.
+Full native English beta edition reconstructed from verified canonical R187. Status in ledger: `translated_beta`. Do not rebuild/retranslate unless editorial revision is explicitly required.
 
-### Author page
-`/en/about/index.html` is native English, not machine translation. It uses current canonical/public facts: 19 completed works and 73 MaVik_AI tracks.
+### Structural pages
+- `/en/about/` — native English author page; current facts include 19 completed works and 73 MaVik_AI tracks.
+- `/en/blog/` — native English empty-state; Ukrainian posts are not exposed as automatic translations.
+- `/en/announcements/` — native English empty-state; only edited English announcements will be published there.
 
-### Blog index
-`/en/blog/index.html` is a native English empty-state. It intentionally does NOT expose Ukrainian posts as machine-translated English; posts enter it only after edited English publication.
+## SOURCE AVAILABILITY — CURRENT LIMIT
+The WORKSPACE tree contains no canonical source copies for the remaining completed books.
+Current File Library retrieval returns `RetrievalClientResponseError`.
+The public `mavik.name` book landing is reachable, but reader/EPUB binary retrieval failed through the available runtime channels, and the local container has no DNS access.
 
-## LOST PREVIOUS WORK — STATUS
-Nine English translations had been reported completed in the lost previous worktree. One is now physically reconstructed and safe: **You and I...**.
-Still requiring recovery/reconstruction before release:
+Therefore: **do not start a new book translation/reconstruction until exact canonical R187 source becomes physically accessible again.** This is a source-integrity rule, not a change of plan.
+
+Historical recovery lead remains:
+`C:\Users\user\Downloads\mavik-name-en-20260815-0548.zip`
+If this unfinished old R188 working ZIP is ever recovered, inspect it before duplicating the eight still-missing historical English translations.
+
+## LOST PREVIOUS ENGLISH WORK
+One of the previously reported nine full English translations is now safe: **You and I...**.
+Still requiring physical recovery/reconstruction:
 - Mom, I Want to Live!
 - The Nameless
 - The Man Without an Account
@@ -72,24 +83,15 @@ Still requiring recovery/reconstruction before release:
 
 Ten other completed Ukrainian titles still require first English translation.
 
-Historical recovery lead:
-`C:\Users\user\Downloads\mavik-name-en-20260815-0548.zip`
-If recovered, inspect before duplicating work.
-
 ## SOCIAL
-Unfinished; archive only. Do not translate further, stage, publish or EPUB-package until Ukrainian original is completed and user explicitly resumes it.
+Unfinished. Partial English material remains archive-only. Do not continue, stage, publish or EPUB-package it until the Ukrainian original is complete and the user explicitly resumes it.
 
 ## NEXT CONTINUATION POINT
-- Continue from work branch `r188-english-work`, never from memory.
-- Do not redo the 9 verified release files above.
-- System pages that do not require missing manuscript source may be built under the mandatory cycle.
-- For any new/reconstructed book translation, remount/verify exact canonical R187 source first.
-- Next book must be a completed Ukrainian title only.
+1. Continue from `r188-english-work`, never from chat memory.
+2. Do not redo the 10 verified release files.
+3. If exact canonical R187 becomes available, persist needed source files into WORKSPACE before translating the next completed book.
+4. Boss English and legal pages also wait for exact canonical source, not approximations.
+5. Safe structural work may continue only where it does not falsify or degrade existing R187 functionality.
 
 ## MANDATORY CHECKPOINT PROTOCOL
-After each meaningful block:
-1. update this file;
-2. update `site-r188-english-development.md`;
-3. mirror to `mavik-sklad/text/R188-EN-CHECKPOINT-LATEST.md`;
-4. update operations log, ledger and staging manifest;
-5. store real artifacts in WORKSPACE and release files in STAGING.
+After every meaningful block update checkpoint, journal, mirror, operations log, ledger/staging manifest as applicable, and preserve the real files.
