@@ -14,3 +14,6 @@ Started: 15.08.2026 19:06 +03:00
 20:33 — Rejection in Advance chapter 2 persisted to WORKSPACE and STAGING.
 20:35 — Rejection in Advance chapter 3 recovered from WORKSPACE after interrupted turn, copied to STAGING, and read back successfully; blob SHA c056fd31f9b28ad89b5f01b4f13ad56e81e3b486.
 20:36 — Rejection in Advance landing page, web reader, and text entry page persisted to both WORKSPACE and STAGING. English web edition now has all 3/3 chapters and complete navigation shell.
+20:40 — Transfer source text split into six controlled chunks from canonical R187 source. Chunk 1 source saved in WORKSPACE/source/transfer/uk-001.txt; English chunk 1 saved in WORKSPACE and STAGING.
+20:42 — Transfer chunk 2 source and English translation saved in WORKSPACE; English chunk 2 duplicated to STAGING.
+20:44 — Transfer chunk 3 source and English translation saved in WORKSPACE; English chunk 3 duplicated to STAGING. Transfer progress is now 3/6 chunks physically preserved in both release storage layers.
