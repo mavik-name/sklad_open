@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T20:52:00+03:00",
+  "updated_at": "2026-08-15T21:08:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -40,7 +40,7 @@
     {"slug":"pishchynka-solya","uk_title":"Піщинка Соля, що мріяла про хмарочос","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Solya, the Grain of Sand Who Dreamed of a Skyscraper"},
     {"slug":"paterny-samorefleksii","uk_title":"Патерни саморефлексії","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"ty-i-ia","uk_title":"Ти і Я...","publication_mode":"final","english_pipeline":"translated_beta","english_title":"You and I..."},
-    {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"queued"}
+    {"slug":"yevanheliie-vid-makariia","uk_title":"Євангеліє від Макарія","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Gospel According to Macarius","chunks":"6/6","structure":"foreword + prologue + 25 chapters + afterword"}
   ],
   "files": [
     {"path":"control/BASE-SOURCE.txt","role":"workspace","status":"current","copies":["github-workspace"]},
@@ -79,6 +79,21 @@
     {"path":"source/transfer/uk-003.txt","role":"workspace-source","status":"current","copies":["workspace"]},
     {"path":"source/transfer/uk-004.txt","role":"workspace-source","status":"current","copies":["workspace"]},
     {"path":"source/transfer/uk-005.txt","role":"workspace-source","status":"current","copies":["workspace"]},
-    {"path":"source/transfer/uk-006.txt","role":"workspace-source","status":"current","copies":["workspace"]}
+    {"path":"source/transfer/uk-006.txt","role":"workspace-source","status":"current","copies":["workspace"]},
+    {"path":"en/books/yevanheliie-vid-makariia/index.html","role":"release","status":"current","size":2352,"github_blob":"c695141ef09560999e034b949602efaabb59f715","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/index.html","role":"release","status":"current","size":2305,"github_blob":"30c4e0e0431fc6d819003e6cf0e62bbab9861700","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/index.html","role":"release","status":"current","size":956,"github_blob":"b72fe02a7ec02fea184da726829ebd972299dd87","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-001.txt","role":"release","status":"current","size":9962,"github_blob":"7a15f45532eba34808c64c11dcb4dc1c3b600f53","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-002.txt","role":"release","status":"current","size":8944,"github_blob":"3af0cc92a704c8b4fde83aa841a3cfdcc843855f","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-003.txt","role":"release","status":"current","size":8464,"github_blob":"cd4bc56e83ede37ca7c2fc9ecba9b437aa2a07db","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-004.txt","role":"release","status":"current","size":9442,"github_blob":"d5006ddbff6a1c79521dc301bfddadcca452baa4","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-005.txt","role":"release","status":"current","size":8559,"github_blob":"ba3bd39307054ab2f66b4c87d0cdccd156437f96","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"en/books/yevanheliie-vid-makariia/read/text/part-006.txt","role":"release","status":"current","size":8698,"github_blob":"be0035834731f8369dde38c6d040fc22f92c455f","copies":["workspace","staging"],"readback":"ok"},
+    {"path":"source/yevanheliie-vid-makariia/uk-001.txt","role":"workspace-source","status":"current","size":13093,"github_blob":"4786620420d75247630c90834ccfb94db27a8702","copies":["workspace"],"readback":"ok"},
+    {"path":"source/yevanheliie-vid-makariia/uk-002.txt","role":"workspace-source","status":"current","size":10831,"github_blob":"882fb346b772b0d40488d15d3896561867be1e22","copies":["workspace"],"readback":"ok"},
+    {"path":"source/yevanheliie-vid-makariia/uk-003.txt","role":"workspace-source","status":"current","size":10793,"github_blob":"9cbc45e52bd7f26493f11ba19757974dcb8a3e1f","copies":["workspace"],"readback":"ok"},
+    {"path":"source/yevanheliie-vid-makariia/uk-004.txt","role":"workspace-source","status":"current","size":11023,"github_blob":"4f5108ec928e861704c89ba2b1fcf39cdd8b4084","copies":["workspace"],"readback":"ok"},
+    {"path":"source/yevanheliie-vid-makariia/uk-005.txt","role":"workspace-source","status":"current","size":10008,"github_blob":"eddbf87c06da96260ed5d797334cee5aee0e19b0","copies":["workspace"],"readback":"ok"},
+    {"path":"source/yevanheliie-vid-makariia/uk-006.txt","role":"workspace-source","status":"current","size":10692,"github_blob":"b246059c98d3dd1af8954b565548870b91f170f7","copies":["workspace"],"readback":"ok"}
   ]
 }
