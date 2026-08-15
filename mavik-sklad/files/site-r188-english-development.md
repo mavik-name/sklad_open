@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 / NATIVE ENGLISH DEVELOPMENT JOURNAL
 
-Updated: 15.08.2026 19:39 +03:00
+Updated: 15.08.2026 20:53 +03:00
 Base: canonical R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`, SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
 Status: **WORK IN PROGRESS / NOT CANONICAL**.
 
@@ -11,38 +11,70 @@ Native `/en/`; direct `UA ↔ EN`; Ukrainian R187 remains intact; no automatic t
 Work branch `r188-english-work`.
 WORKSPACE `mavik-sklad/builds/R188-EN-WORKSPACE/`.
 STAGING `mavik-sklad/builds/R188-EN-STAGING/`.
-Ledger `R188-EN-WORKSPACE/R188-FILE-LEDGER.json`.
-Hard cycle: create → WORKSPACE → STAGING → ledger/hash → readback → checkpoint → next.
+Ledger `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`.
+Operations log `mavik-sklad/builds/R188-EN-WORKSPACE/control/R188-OPERATIONS-LOG.txt`.
+Hard cycle: source → WORKSPACE → translation/code → WORKSPACE → STAGING for release files → ledger → readback → journal/checkpoint → next.
+Every file needed or created in the process must be persistently copied to the warehouse. Server fallback `/_site-state/r188-workspace/` is only a fallback and must not be claimed unless actually written.
 
-## Current physical release state — 11 files
-All are in WORKSPACE + STAGING with readback `ok`, and ledger/manifest are synchronized:
-- `/en/index.html`
-- `/en/books/index.html`
-- `/en/about/index.html`
-- `/en/blog/index.html`
-- `/en/announcements/index.html`
-- `/en/music/index.html`
-- `/en/books/ty-i-ia/index.html`
-- `/en/books/ty-i-ia/read/index.html`
-- `/en/books/ty-i-ia/read/text/index.html`
-- `/en/books/ty-i-ia/read/text/full.txt`
-- `/en/books/ty-i-ia/read/text/part-001.txt`
+## Canonical source recovery
+The exact R187 ZIP was revalidated in the active 15.08.2026 session: SHA matched canonical, 498 files, valid manifest (`release=187`, `base_release=186`, `managed_files` array). It was unpacked for current reconstruction. Source used for translation must nevertheless be copied into WORKSPACE before translation so later sessions do not depend on runtime state.
 
-`You and I...` is reconstructed as native English beta from verified canonical R187.
+## Physical English shell
+Native English shell/routes physically exist in the `r188-english-work` staging tree, including `/en/`, Books, New, Free, About, Blog, Announcements, Music, and supporting English assets. Existing staging files must be inspected before replacement; do not rebuild blindly.
 
-Structural state:
-- Home, Books, Music, Blog, Author and Announcements now have physical native-English routes.
-- Blog/Announcements are explicit edited-English-only empty states.
-- Music is a native English gateway to the full working R187 music library until the exact English player/catalogue is reconstructed; it does not claim the player is already ported.
+## Physically preserved complete English beta editions
 
-## Current source access
-Exact R187 was mounted and verified in an earlier recovery runtime (498 files, valid manifest, matching SHA), but that runtime worktree is not available now. Remaining canonical book sources are not stored in WORKSPACE. File Library retrieval currently errors, live reader/EPUB binary retrieval failed through available channels, and no reusable direct-download token for exact R187/old R188 ZIP was recovered from project history.
+### 1. You and I...
+- slug `ty-i-ia`;
+- full native English beta reader physically in WORKSPACE + STAGING;
+- landing/reader/text files preserved.
 
-Therefore new book translation/reconstruction, Boss English reconstruction and exact legal-page translation are paused until exact canonical source is physically accessible. Safe structural work that does not falsify/degrade R187 may continue.
+### 2. Solya, the Grain of Sand Who Dreamed of a Skyscraper
+- slug `pishchynka-solya`;
+- full English translation physically preserved;
+- 4 release text parts in WORKSPACE + STAGING;
+- full-text insurance copy in WORKSPACE;
+- landing and reader physically preserved.
 
-Historical recovery lead: `C:\Users\user\Downloads\mavik-name-en-20260815-0548.zip`.
+### 3. Rejection in Advance
+- slug `vidmova-avansom`;
+- full translation 3/3;
+- all three chapter files in WORKSPACE + STAGING;
+- landing + reader + text page in both storage layers;
+- chapter 3 was explicitly recovered/read back after an interrupted turn, so the book is not dependent on chat memory.
 
-Eight historical full English translations remain to be physically recovered/reconstructed; ten completed Ukrainian works still require first translation.
+### 4. Transfer
+- slug `transfer`;
+- full translation 6/6 completed in the active reliable persistence cycle;
+- every Ukrainian source chunk saved under `R188-EN-WORKSPACE/source/transfer/uk-001.txt` through `uk-006.txt`;
+- every English chunk saved immediately in WORKSPACE + STAGING;
+- landing + six-part reader + text page saved in WORKSPACE + STAGING;
+- staging readback confirmed the assembled landing, reader tree and all six text parts;
+- ledger marks `translated_beta`.
 
-## Next
-Continue only from `r188-english-work` and its ledger. Do not redo the 11 verified files. Once exact R187 source becomes accessible, copy the needed source into WORKSPACE before translating the next completed book.
+These four books are **beta**, not final, because English-language covers and validated English EPUBs are still pending.
+
+## Unfinished Social
+`Social` / `Соціальна` is not in the R188 English publication pipeline until the Ukrainian work is completed. Existing partial English work is retained only in WORKSPACE/archive and must not enter STAGING.
+
+## Boss English
+A separate top-level Boss `English` management area is a hard user requirement. Earlier sessions described an implementation, but the actual code was not reliably preserved. Do not claim this part complete until physical files are reconstructed from canonical R187, saved to WORKSPACE/STAGING as appropriate, and tested.
+
+## Remaining major work
+- translate remaining completed Ukrainian books with source-first persistence;
+- create/adapt English covers for every English edition;
+- generate and validate English EPUBs;
+- reconstruct/persist/test Boss English management;
+- translate/publish English blog and announcements;
+- SEO/hreflang/sitemap/service worker/local-reference audit;
+- PHP/JS/JSON/XML/EPUB checks;
+- exact R188 manifest and Boss archive validator;
+- full R188 candidate ZIP;
+- no canonicalization without direct user approval.
+
+## Next exact continuation point
+Next completed book: **`Євангеліє від Макарія` → `The Gospel According to Macarius`**.
+
+Before translating, copy its exact Ukrainian R187 source into:
+`mavik-sklad/builds/R188-EN-WORKSPACE/source/yevanheliie-vid-makariia/`
+Then translate in controlled chunks, saving every English chunk immediately to WORKSPACE + STAGING and logging each milestone.
