@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/temp-stress-solia.yml'
+      - 'mavik-sklad/tmp/trigger-stress-solia.txt'
 
 permissions:
   contents: write
