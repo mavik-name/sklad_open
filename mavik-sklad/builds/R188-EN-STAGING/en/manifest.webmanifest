@@ -1,0 +1,11 @@
+{
+  "name": "MaVik — English Edition",
+  "short_name": "MaVik EN",
+  "start_url": "/en/",
+  "scope": "/en/",
+  "display": "standalone",
+  "background_color": "#09090a",
+  "theme_color": "#09090a",
+  "lang": "en",
+  "description": "Native English edition of mavik.name."
+}
