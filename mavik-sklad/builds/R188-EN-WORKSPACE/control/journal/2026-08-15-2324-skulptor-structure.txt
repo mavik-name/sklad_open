@@ -1,0 +1,8 @@
+R188 ENGLISH — INTERMEDIATE JOURNAL ENTRY
+Time: 15.08.2026 23:24 +03:00
+Work: The Sculptor (`skulptor`).
+Canonical R187 source inspected: 47 chapters + afterword, approximately 138,150 Ukrainian words.
+Safe translation plan: 28 controlled source blocks, split only at chapter/afterword boundaries, target <= 6,500 words per block.
+Local split manifest created with SHA-256 for every block. Persistent rule: each block is copied to WORKSPACE/source/skulptor/ before its translation begins; translated block then goes immediately to WORKSPACE + STAGING + readback + journal.
+Block 1/28: Chapter 1, 5,775 words, SHA-256 8eaeae79edfeb537682ed56e524e2995bb468eb4228f6d66fdb185ecf03d5ce0.
+Next: persist source block 1/28 and translate Chapter 1.
