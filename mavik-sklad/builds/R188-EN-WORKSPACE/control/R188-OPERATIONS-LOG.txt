@@ -41,6 +41,14 @@ Started: 15.08.2026 19:06 +03:00
 22:15 — Patterns of Self-Reflection source + English block 8/8 persisted; final translation complete 8/8, covering author introduction + 49 texts.
 22:17 — Patterns of Self-Reflection landing page, eight-part reader and text-entry page persisted to WORKSPACE + STAGING. GitHub readback confirmed landing plus text index and all eight text parts. Book is now complete English beta web edition #7/19; English cover adaptation and validated EPUB remain pending.
 22:22 — Mom, I Want to Live! exact R187 source identified: 26 chapters, 15,291 words. Split into 7 controlled blocks strictly on chapter boundaries: 1–4 / 5–8 / 9–12 / 13–16 / 17–20 / 21–23 / 24–26.
-22:25 — Mom, I Want to Live! source block 1/7 (chapters 1–4) persisted under WORKSPACE/source/mamo-zhyty/uk-001.txt; English block 1/7 persisted to WORKSPACE + STAGING; staging readback passed.
-22:32 — Mom, I Want to Live! source block 2/7 (chapters 5–8) persisted under WORKSPACE/source/mamo-zhyty/uk-002.txt; English block 2/7 persisted to WORKSPACE + STAGING; staging readback passed.
-22:39 — Mom, I Want to Live! source block 3/7 (chapters 9–12) persisted under WORKSPACE/source/mamo-zhyty/uk-003.txt; English block 3/7 persisted to WORKSPACE + STAGING; staging readback passed.
+22:25 — Mom, I Want to Live! source block 1/7 persisted; English block 1/7 persisted to WORKSPACE + STAGING; readback passed.
+22:32 — Mom, I Want to Live! source block 2/7 persisted; English block 2/7 persisted to WORKSPACE + STAGING; readback passed.
+22:39 — Mom, I Want to Live! source block 3/7 persisted; English block 3/7 persisted to WORKSPACE + STAGING; readback passed.
+SESSION LATER — Mom, I Want to Live! blocks 4/7, 5/7, 6/7 and 7/7 were each persisted with source + English WORKSPACE + STAGING; immutable journal entries exist for each. Final 7/7 includes chapters 24–26 + afterword.
+SESSION LATER — Mom, I Want to Live! landing + reader + text page assembled and persisted. Staging audit confirmed text index + all seven parts; landing and reader fetched successfully. Book became complete English beta web edition #8/19.
+SESSION LATER — Ledger upgraded to schema 3 and synchronized to 8/19 complete beta editions.
+SESSION LATER — The Sculptor exact canonical R187 source inspected: 47 chapters + afterword, ~138,164 words. Safe 28-block plan created and preserved in `control/journal/2026-08-15-2324-skulptor-structure.txt`. No English translation block was started. `WORKSPACE/source/skulptor/uk-001.txt` was checked and is NOT present; do not assume Sculptor source persistence.
+SESSION LATER — Queue optimized to process shorter completed works before The Sculptor. Decision preserved in `control/journal/2026-08-15-2328-translation-queue-optimization.txt`.
+SESSION LATER — Current active work changed to `Людина без акаунта` / `The Man Without an Account`: canonical structure 5 chapters + author's afterword, ~18,840 words; planned as 6 blocks.
+SESSION END — `WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt` (Chapter 1 exact canonical R187 source) physically persisted and confirmed by GitHub readback; blob SHA `46a215b96cd2c2591baaa4dbaeedef67ea12d687`. English block 1/6 is NOT persisted and must be considered NOT STARTED.
+SESSION END — Full authoritative handoff written to `control/journal/2026-08-15-SESSION-END-HANDOFF.txt`. Tomorrow resume exactly from The Man Without an Account → translate Chapter 1 using persisted uk-001.txt → save to WORKSPACE + STAGING → readback → journal → source 2/6.
