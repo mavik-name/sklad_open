@@ -1,7 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 18:48 +03:00**
-Purpose: authoritative handoff point for the next ChatGPT session working on the native English edition.
+Updated: **15.08.2026 18:53 +03:00**
 
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`, SHA-256 `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
 R188 English: WORK IN PROGRESS / NOT CANONICAL.
@@ -16,7 +15,9 @@ Hard decisions:
 - validated English EPUBs required;
 - separate top-level English area in Boss.
 
-Completed full English translations in active R188 work:
+Recovery note: the previous R188 working tree was not physically preserved. Its architecture and nine completed-translation statuses survive only as project history until the actual artifacts are recovered/rebuilt.
+
+Previously reported full English translations:
 1. You and I
 2. Solya, the Grain of Sand Who Dreamed of a Skyscraper
 3. Rejection in Advance
@@ -28,13 +29,18 @@ Completed full English translations in active R188 work:
 9. The Man Without an Account (5 chapters + author’s afterword, ~22,961 words)
 
 CURRENT ACTIVE TRANSLATION: Social.
-- Chapters 1–7 translated.
-- NEXT CONTINUATION POINT: Chapter 8.
-- Do not restart from Chapter 1 unless explicitly requested.
+- Previous-session Chapters 1–7 translated, but physical English files were not recovered.
+- Chapters 8–10 have now been reconstructed from canonical R187 and physically stored at `mavik-sklad/files/r188-social-en-ch08-10.md`.
+- Chapters 8–10 word count: **2,972 English words**.
+- GitHub readback verified.
+- **NEXT CONTINUATION POINT: Chapter 11.**
+
+Translation constraints: restrained emotional delivery; authentic NGO/fund register; preserve moral ambiguity; no invented criminality or cartoon villainy; preserve short hard beats.
 
 Major remaining work:
-- continue Social from Chapter 8;
-- translate remaining books;
+- continue Social from Chapter 11 and physically save each batch;
+- reconstruct/preserve lost English manuscripts/readers;
+- reconstruct native `/en/` architecture and Boss English management from canonical R187;
 - English covers;
 - final English editorial passes;
 - validated English EPUBs;
@@ -47,5 +53,4 @@ Major remaining work:
 - no canonicalization without direct user approval.
 
 MANDATORY CHECKPOINT CANON:
-Read `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`.
-After every meaningful work block, update latest checkpoint, journal, mirror and preserve actual created artifacts. A checkpoint description is not a substitute for storing the real translation/code/cover/EPUB/ZIP file.
+After every meaningful work block, update latest checkpoint, journal and mirror, and preserve the actual created artifact. A checkpoint description is not a substitute for the real translation/code/cover/EPUB/ZIP file.
