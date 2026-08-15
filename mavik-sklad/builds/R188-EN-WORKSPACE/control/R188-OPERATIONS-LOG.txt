@@ -21,11 +21,8 @@ Started: 15.08.2026 19:06 +03:00
 20:48 — Transfer chunk 5 source and English translation saved in WORKSPACE; English chunk 5 duplicated to STAGING.
 20:50 — Transfer chunk 6 source and English translation saved in WORKSPACE; English chunk 6 duplicated to STAGING. Translation complete 6/6.
 20:52 — Transfer landing page, six-part web reader and text-entry page persisted to WORKSPACE and STAGING. GitHub readback confirmed the staging landing and reader tree. Transfer is now a complete English beta web edition; English cover and EPUB remain pending before final status.
-20:54 — Gospel According to Macarius canonical R187 source split on chapter boundaries into six controlled chunks (8,161 source words total). All six Ukrainian chunks persisted under WORKSPACE/source/yevanheliie-vid-makariia/ and directory readback confirmed all 6/6 before translation began.
-20:56 — Gospel English chunk 1 persisted to WORKSPACE + STAGING: foreword, prologue, chapters 1–4.
-20:58 — Gospel English chunk 2 persisted to WORKSPACE + STAGING: chapters 5–9.
-21:00 — Gospel English chunk 3 persisted to WORKSPACE + STAGING: chapters 10–13.
-21:02 — Gospel English chunk 4 persisted to WORKSPACE + STAGING: chapters 14–18.
-21:04 — Gospel English chunk 5 persisted to WORKSPACE + STAGING: chapters 19–22.
-21:06 — Gospel English chunk 6 persisted to WORKSPACE + STAGING: chapters 23–25 + afterword. Full literary translation complete 6/6.
-21:08 — Gospel landing, six-part native web reader and text page persisted to WORKSPACE + STAGING. Staging readback confirmed text index and all six English text parts. Edition status: translated_beta; English cover + EPUB still pending.
+21:09 — The Gospel According to Macarius complete: 6/6 English blocks covering foreword, prologue, 25 chapters and afterword; 6/6 canonical Ukrainian source blocks persisted; landing, reader and text page persisted to WORKSPACE + STAGING; staging readback passed; ledger updated.
+21:28 — The Nameless canonical R187 source split into 6 blocks strictly on chapter boundaries.
+21:31 — The Nameless source blocks 1–6 persisted in WORKSPACE/source/bezimenni/ and verified by GitHub directory readback.
+21:35 — The Nameless English block 1/6 translated and persisted to WORKSPACE + STAGING; staging readback passed.
+21:39 — The Nameless English block 2/6 translated; prepared as one Git blob for atomic WORKSPACE + STAGING placement.
