@@ -1,0 +1,5 @@
+R188 WORKSPACE COPY BATCH 01
+Time: 15.08.2026 19:08 +03:00
+Purpose: first persistent insurance batch of control/source/archive files already present in the warehouse.
+
+This marker is written before the batch copy so a later session can see where copying started even if a subsequent operation is interrupted.
