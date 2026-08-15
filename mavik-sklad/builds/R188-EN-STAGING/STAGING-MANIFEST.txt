@@ -1,5 +1,5 @@
 R188 ENGLISH STAGING MANIFEST
-Updated: 15.08.2026 19:34 +03:00
+Updated: 15.08.2026 19:38 +03:00
 Status: WORK IN PROGRESS / NOT CANONICAL
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 Base SHA-256: daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21
@@ -7,84 +7,38 @@ Work branch: `r188-english-work`
 
 RULE:
 - Every actual file intended for R188 must have a current copy under `mavik-sklad/builds/R188-EN-STAGING/` at the same relative path it will use in the ZIP.
-- This manifest is updated whenever staged files are added/replaced/deleted.
 - Final packaging must reconcile staging tree <-> manifest <-> `R188-FILE-LEDGER.json` <-> `.mavik-release.json`.
-- A checkpoint description does not substitute for staging the real file.
-- Binary exception allowed only when GitHub upload is technically impossible; record exact permanent location + size + SHA-256 here.
-- FINAL R188 ZIP MUST BE ASSEMBLED FROM THIS STAGING TREE RECONCILED WITH EXACT CANONICAL R187, NOT FROM AN UNSAVED LOCAL WORKING DIRECTORY.
+- FINAL R188 ZIP MUST BE ASSEMBLED FROM THIS STAGING TREE RECONCILED WITH EXACT CANONICAL R187.
+- Only completed Ukrainian works may enter English book publication; `Social` is excluded/archive-only.
 
-CONTENT ELIGIBILITY RULE:
-- Only COMPLETED Ukrainian works may be translated/published as English books in R188.
-- Unfinished works are excluded because the Ukrainian source remains subject to editing.
-- Partial English work on an unfinished title may be archived as work already performed, but MUST NOT be staged, published, EPUB-packaged, or counted as an R188 release book until the Ukrainian work is completed.
-- `Social` / `Соціальна` is unfinished and EXCLUDED from staging.
+CURRENT VERIFIED STAGED RELEASE FILES — 11
 
-CURRENT VERIFIED STAGED RELEASE FILES — 10
+1. `en/index.html` — SHA-256 `100c26f32ce19f633b4117077d9ff4393e559c7115f85e808a1750d46c14db18` — blob `73e8a3915b88f97c0d798a870f0a9d6c9adc3a23` — readback OK
+2. `en/books/index.html` — SHA-256 `17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf` — blob `46185212a8eafe4d8fe4bd745fcb02a96877d638` — readback OK
+3. `en/about/index.html` — SHA-256 `8038249f0cc92dfbaa435d23214c5ddd69accf9d467aeb546774e8458944ec6e` — blob `aa3f6ed0b5f4ddcbcdd469f686f46d604a35d7ca` — readback OK
+4. `en/blog/index.html` — SHA-256 `446dd77cddb7ebb06f1fcc44c81c4e7d2d6d48dc84a903d57a8aca58a0940531` — blob `39790682a0fd2b8649457363fd4cd81257147e30` — readback OK
+5. `en/announcements/index.html` — SHA-256 `00a2960690b769d3aee2ee306108807493123374db4aea2a574bda30af0b0c74` — blob `764a687bc9c68c7e65dacc0b1cd47612c9df787c` — readback OK
+6. `en/music/index.html` — SHA-256 `4ba002af3fcdcb6589d5cd094dad521ee42d16757617f286d0acefcb90dea4b4` — blob `c2d219f7b709767bfc40ea4a1cbd6b68b7b817d1` — readback OK
+7. `en/books/ty-i-ia/index.html` — SHA-256 `fbde3dae7ccc86860e355b9f359d84e9039d04d491e5c69fe97cb1215cef81da` — blob `4f618cfe9998b981ea106bd5f8c4756c9a1f1835` — readback OK
+8. `en/books/ty-i-ia/read/index.html` — SHA-256 `30d68654fe2d172ce123621787249a6db794d38553ae78a0b721656b336a25d6` — blob `bea043f357f4b77a8a415426ff50af7cfe7b8463` — readback OK
+9. `en/books/ty-i-ia/read/text/index.html` — SHA-256 `95f48b9668a7ebc141deed9ca3ab2005b305ff060e2e8aca5fc09f5b77f94e4d` — blob `72baa308f687093e8638cdbd363ba225b98664c8` — readback OK
+10. `en/books/ty-i-ia/read/text/full.txt` — SHA-256 `c7ae6c558ceb2c8747955ce48a257a83c4d66225b9eda479bad0b7b95292430b` — blob `eddac5c7949fb8112d69f6aed79086ba3048908b` — readback OK
+11. `en/books/ty-i-ia/read/text/part-001.txt` — SHA-256 `6bdcecb00fa9bc0b3fae688cc818f1ecc5c6eb46c562bd6fc9dcfced9f800b07` — blob `426c6a341868c248767df15797b72dac1fc31308` — readback OK
 
-1. `en/index.html`
-   SHA-256 `100c26f32ce19f633b4117077d9ff4393e559c7115f85e808a1750d46c14db18`
-   Git blob `73e8a3915b88f97c0d798a870f0a9d6c9adc3a23` · readback OK
-
-2. `en/books/index.html`
-   SHA-256 `17c68d0771b0c90b4e6bfcb8ef4a2f20096e45e43ed148640ceb786435daebbf`
-   Git blob `46185212a8eafe4d8fe4bd745fcb02a96877d638` · readback OK
-
-3. `en/about/index.html`
-   SHA-256 `8038249f0cc92dfbaa435d23214c5ddd69accf9d467aeb546774e8458944ec6e`
-   Git blob `aa3f6ed0b5f4ddcbcdd469f686f46d604a35d7ca` · readback OK
-
-4. `en/blog/index.html`
-   SHA-256 `446dd77cddb7ebb06f1fcc44c81c4e7d2d6d48dc84a903d57a8aca58a0940531`
-   Git blob `39790682a0fd2b8649457363fd4cd81257147e30` · readback OK
-
-5. `en/announcements/index.html`
-   SHA-256 `00a2960690b769d3aee2ee306108807493123374db4aea2a574bda30af0b0c74`
-   Git blob `764a687bc9c68c7e65dacc0b1cd47612c9df787c` · readback OK
-
-6. `en/books/ty-i-ia/index.html`
-   SHA-256 `fbde3dae7ccc86860e355b9f359d84e9039d04d491e5c69fe97cb1215cef81da`
-   Git blob `4f618cfe9998b981ea106bd5f8c4756c9a1f1835` · readback OK
-
-7. `en/books/ty-i-ia/read/index.html`
-   SHA-256 `30d68654fe2d172ce123621787249a6db794d38553ae78a0b721656b336a25d6`
-   Git blob `bea043f357f4b77a8a415426ff50af7cfe7b8463` · readback OK
-
-8. `en/books/ty-i-ia/read/text/index.html`
-   SHA-256 `95f48b9668a7ebc141deed9ca3ab2005b305ff060e2e8aca5fc09f5b77f94e4d`
-   Git blob `72baa308f687093e8638cdbd363ba225b98664c8` · readback OK
-
-9. `en/books/ty-i-ia/read/text/full.txt`
-   SHA-256 `c7ae6c558ceb2c8747955ce48a257a83c4d66225b9eda479bad0b7b95292430b`
-   Git blob `eddac5c7949fb8112d69f6aed79086ba3048908b` · readback OK
-
-10. `en/books/ty-i-ia/read/text/part-001.txt`
-    SHA-256 `6bdcecb00fa9bc0b3fae688cc818f1ecc5c6eb46c562bd6fc9dcfced9f800b07`
-    Git blob `426c6a341868c248767df15797b72dac1fc31308` · readback OK
+ROUTE STATE:
+- English top navigation now has physical release routes for Home, Books, Music, Blog, Author and Announcements.
+- `en/music/index.html` is intentionally a gateway to the full working R187 music library until the native English player/catalogue is reconstructed from exact canonical source; it does not pretend the English player is complete.
 
 BOOK STATE:
-- `You and I...` is physically reconstructed as a native English beta reader in staging.
-- 8 other historical full English translations remain to be physically recovered/reconstructed.
+- `You and I...` is physically reconstructed as native English beta.
+- 8 historical full English translations remain to be recovered/reconstructed.
 - 10 completed Ukrainian works remain to be translated.
 
-NOT STAGED:
-- all partial `Social` English files — ARCHIVE ONLY;
-- missing/lost previous R188 artifacts until physically recovered;
-- English covers not yet produced/verified;
-- English EPUBs not yet generated/validated;
-- legal pages not yet translated from exact canonical source;
-- Boss English code not yet reconstructed against exact canonical full R187.
+SOURCE AVAILABILITY:
+- exact R187 was verified in a previous runtime but is not mounted in the current runtime;
+- remaining canonical book sources are not stored in WORKSPACE;
+- File Library retrieval currently errors and public EPUB/reader binary retrieval failed through available channels;
+- no new book/Boss/legal reconstruction until exact canonical source is physically available.
 
-SOURCE AVAILABILITY NOTE:
-- Exact canonical R187 was verified in a previous recovery runtime, but `/mnt/data/r188_work` is not mounted in the current runtime.
-- WORKSPACE tree currently does not contain source copies for the remaining completed books.
-- Current File Library retrieval is failing; live-site EPUB/reader binary retrieval also failed through the available runtime channels.
-- Therefore no new book translation should start until exact source becomes physically accessible again.
-
-AUTHORITATIVE FILE REGISTRY:
+AUTHORITATIVE REGISTRY:
 `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`
-
-LATEST CHECKPOINT:
-`mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
-
-MANDATORY CANON:
-`mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
