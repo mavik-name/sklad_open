@@ -30,15 +30,16 @@ Previously reported full English translations:
 
 CURRENT ACTIVE TRANSLATION: Social.
 - Previous-session Chapters 1–7 translated, but physical English files were not recovered.
-- Chapters 8–10 have now been reconstructed from canonical R187 and physically stored at `mavik-sklad/files/r188-social-en-ch08-10.md`.
-- Chapters 8–10 word count: **2,972 English words**.
-- GitHub readback verified.
-- **NEXT CONTINUATION POINT: Chapter 11.**
+- Chapters 8–10 physically stored at `mavik-sklad/files/r188-social-en-ch08-10.md` (2,972 English words).
+- Chapters 11–13 physically stored at `mavik-sklad/files/r188-social-en-ch11-13.md`.
+- Both batches have been read back from GitHub after save.
+- Chapter 13 identifies folder 04 as the heroine’s daughter, 1,000,000 UAH; archive status remains `Forwarded to partners / Awaiting response`.
+- **NEXT CONTINUATION POINT: Chapter 14.**
 
 Translation constraints: restrained emotional delivery; authentic NGO/fund register; preserve moral ambiguity; no invented criminality or cartoon villainy; preserve short hard beats.
 
 Major remaining work:
-- continue Social from Chapter 11 and physically save each batch;
+- continue Social from Chapter 14 and physically save each batch;
 - reconstruct/preserve lost English manuscripts/readers;
 - reconstruct native `/en/` architecture and Boss English management from canonical R187;
 - English covers;
