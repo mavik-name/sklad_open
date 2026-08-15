@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15T19:34:00+03:00",
+  "updated_at": "2026-08-15T19:38:00+03:00",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -50,6 +50,7 @@
     {"path":"en/about/index.html","role":"release","status":"current","size":4726,"sha256":"8038249f0cc92dfbaa435d23214c5ddd69accf9d467aeb546774e8458944ec6e","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/about/index.html","mavik-sklad/builds/R188-EN-STAGING/en/about/index.html"],"readback":"ok","github_blob":"aa3f6ed0b5f4ddcbcdd469f686f46d604a35d7ca"},
     {"path":"en/blog/index.html","role":"release","status":"current","size":3325,"sha256":"446dd77cddb7ebb06f1fcc44c81c4e7d2d6d48dc84a903d57a8aca58a0940531","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/blog/index.html","mavik-sklad/builds/R188-EN-STAGING/en/blog/index.html"],"readback":"ok","github_blob":"39790682a0fd2b8649457363fd4cd81257147e30"},
     {"path":"en/announcements/index.html","role":"release","status":"current","size":3426,"sha256":"00a2960690b769d3aee2ee306108807493123374db4aea2a574bda30af0b0c74","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/announcements/index.html","mavik-sklad/builds/R188-EN-STAGING/en/announcements/index.html"],"readback":"ok","github_blob":"764a687bc9c68c7e65dacc0b1cd47612c9df787c"},
+    {"path":"en/music/index.html","role":"release","status":"current","size":3609,"sha256":"4ba002af3fcdcb6589d5cd094dad521ee42d16757617f286d0acefcb90dea4b4","copies":["mavik-sklad/builds/R188-EN-WORKSPACE/site/en/music/index.html","mavik-sklad/builds/R188-EN-STAGING/en/music/index.html"],"readback":"ok","github_blob":"c2d219f7b709767bfc40ea4a1cbd6b68b7b817d1"},
     {"path":"en/books/ty-i-ia/index.html","role":"release","status":"current","size":2104,"sha256":"fbde3dae7ccc86860e355b9f359d84e9039d04d491e5c69fe97cb1215cef81da","copies":["workspace","staging","local"],"readback":"ok","github_blob":"4f618cfe9998b981ea106bd5f8c4756c9a1f1835"},
     {"path":"en/books/ty-i-ia/read/index.html","role":"release","status":"current","size":2657,"sha256":"30d68654fe2d172ce123621787249a6db794d38553ae78a0b721656b336a25d6","copies":["workspace","staging","local"],"readback":"ok","github_blob":"bea043f357f4b77a8a415426ff50af7cfe7b8463"},
     {"path":"en/books/ty-i-ia/read/text/index.html","role":"release","status":"current","size":1327,"sha256":"95f48b9668a7ebc141deed9ca3ab2005b305ff060e2e8aca5fc09f5b77f94e4d","copies":["workspace","staging","local"],"readback":"ok","github_blob":"72baa308f687093e8638cdbd363ba225b98664c8"},
