@@ -53,14 +53,21 @@ Historical progress from previous session:
 - The physical English files for Chapters 1–7 were not recovered.
 
 New persisted work:
-- **Chapters 8–10 translated/reconstructed from canonical R187 and physically saved.**
-- Artifact: `mavik-sklad/files/r188-social-en-ch08-10.md`
-- Word count: **2,972 English words**.
-- Save/readback on GitHub verified.
+- **Chapters 8–10** reconstructed from canonical R187 and physically saved at `mavik-sklad/files/r188-social-en-ch08-10.md`.
+- Chapters 8–10: **2,972 English words**.
+- **Chapters 11–13** translated from the canonical source and physically saved at `mavik-sklad/files/r188-social-en-ch11-13.md`.
+- GitHub readback of both saved batches verified.
 
-**NEXT CONTINUATION POINT: CHAPTER 11.**
+Key continuity preserved in Chapters 11–13:
+- the foundation is not rewritten as criminal or cartoonishly evil;
+- the internal record shows that budget reallocation was technically possible but would have required donor approval and cancellation/restart of an already committed family programme;
+- management chose to keep the approved programme and search for partner/private money for the medical cases;
+- Chapter 13 identifies folder 04 as the heroine’s daughter, amount **1,000,000 UAH**;
+- the archive ends with `Forwarded to partners / Awaiting response`, while the heroine already knows the real outcome.
 
-Do not restart from Chapter 1 unless explicitly requested. Continue forward from Chapter 11; preserve each new batch as a real warehouse file immediately.
+**NEXT CONTINUATION POINT: CHAPTER 14.**
+
+Do not restart from Chapter 1 unless explicitly requested. Continue forward from Chapter 14; preserve each new batch as a real warehouse file immediately.
 
 Translation constraints for `Social`:
 - restrained emotional delivery;
@@ -73,7 +80,7 @@ Translation constraints for `Social`:
 
 ## MAJOR REMAINING WORK
 
-- continue Social from Chapter 11;
+- continue Social from Chapter 14;
 - physically save each batch;
 - reconstruct/preserve the lost completed English manuscripts/readers;
 - reconstruct native `/en/` architecture and Boss English management from canonical R187;
