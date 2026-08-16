@@ -1,0 +1,46 @@
+name: R188 export STAGING overlay
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/r188-export-staging.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r188-english-work
+          fetch-depth: 1
+      - name: Package exact STAGING overlay
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC='mavik-sklad/builds/R188-EN-STAGING'
+          test -d "$SRC/en"
+          test -f "$SRC/boss/index.php"
+          mkdir -p "$RUNNER_TEMP/r188-export"
+          (
+            cd "$SRC"
+            find . -type f -print0 | sort -z | xargs -0 sha256sum > "$RUNNER_TEMP/r188-export/STAGING-SHA256.txt"
+            zip -q -r "$RUNNER_TEMP/r188-export/R188-EN-STAGING-OVERLAY.zip" .
+          )
+          unzip -t "$RUNNER_TEMP/r188-export/R188-EN-STAGING-OVERLAY.zip"
+          sha256sum "$RUNNER_TEMP/r188-export/R188-EN-STAGING-OVERLAY.zip" | tee "$RUNNER_TEMP/r188-export/R188-EN-STAGING-OVERLAY.zip.sha256"
+          echo "overlay_files=$(find "$SRC" -type f | wc -l)"
+          echo "overlay_bytes=$(du -sb "$SRC" | cut -f1)"
+      - name: Upload overlay artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: r188-en-staging-overlay
+          path: |
+            ${{ runner.temp }}/r188-export/R188-EN-STAGING-OVERLAY.zip
+            ${{ runner.temp }}/r188-export/R188-EN-STAGING-OVERLAY.zip.sha256
+            ${{ runner.temp }}/r188-export/STAGING-SHA256.txt
+          if-no-files-found: error
+          retention-days: 1
