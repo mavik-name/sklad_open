@@ -1,0 +1,33 @@
+R188 ENGLISH — THREE NOVELS NOBODY READS — BLOCK 002
+Date: 16.08.2026
+Status: source persisted / English translated / WORKSPACE + STAGING readback PASS
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- exact section: `Розділ 2. Цифровий оракул`
+- exact end: `Радше такою, за яку доведеться сісти й відповісти.`
+- next heading excluded: `Розділ 3. Анотація на сімсот знаків`
+- source path: `source/try-romany-yaki-nikhto-ne-chytaie/uk-002.txt`
+- source commit: `aba7983c2852f365ae87cbb70a7919ca29ba69c4`
+- source blob SHA: `89f8cf295e1ec7a7155bcc09c93da64556c5e768`
+- source readback: PASS
+
+ENGLISH
+- heading: `CHAPTER 2. THE DIGITAL ORACLE`
+- WORKSPACE: `site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-002.txt`
+- WORKSPACE commit: `04c811ab0e4882966836fd19c6dd5e97bc1b4bc2`
+- STAGING: `en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-002.txt`
+- staging commit: `39cd2f57c538f71333c3e7eba2e9449ceb699fc1`
+- matching blob SHA: `de6f4890a83f8c35ab581d8fb3338e5de2a92df9`
+- final readback: PASS
+
+CURRENT BOOK PROGRESS
+- verified global structure: 15 numbered sections + author's afterword
+- source persisted: Sections 1–2
+- English persisted: Sections 1–2
+- WORKSPACE/STAGING match: PASS for parts 001–002
+
+NEXT
+- retrieve exact August Section 3 through the heading for Section 4;
+- persist `uk-003.txt` only after exact boundary verification;
+- continue source-first translation cycle.
