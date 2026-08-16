@@ -1,0 +1,1 @@
+The exact English book directories are now being restored from archival Git tree SHAs. This marker exists so a future session can distinguish physically recovered translations from translation status claims.
