@@ -1,0 +1,54 @@
+R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — WEB SHELL COMPLETE
+Date: 16.08.2026
+Status: complete English beta web edition / WORKSPACE + STAGING readback PASS
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+BOOK
+- Ukrainian: `Людина без акаунта`
+- English: `The Man Without an Account`
+- slug: `liudyna-bez-akaunta`
+- source/translation blocks: 6/6 COMPLETE
+
+WORKSPACE WEB SHELL
+1. Landing:
+   `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/index.html`
+   blob SHA: `00a49bd1092de36d70ee7f6db906ff6c5ffe2faa`
+   commit: `2eeba8abdb7132e019e3aba230a793c5ba0898f5`
+2. Reader:
+   `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/index.html`
+   blob SHA: `575a5e95976906f2ced7fa5a6fc3e5832dffb22f`
+   commit: `0f32b88b20d64ab6b6969087d7444cbdd0987ee7`
+3. Clean text entry:
+   `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/index.html`
+   blob SHA: `68d68d4548346ff52d08f7828352421822c1d62d`
+   commit: `c73243d77a9bdc40e3e8c6f7b291977e668f8380`
+
+STAGING WEB SHELL
+- landing blob SHA: `00a49bd1092de36d70ee7f6db906ff6c5ffe2faa`
+- reader blob SHA: `575a5e95976906f2ced7fa5a6fc3e5832dffb22f`
+- clean text entry blob SHA: `68d68d4548346ff52d08f7828352421822c1d62d`
+- atomic staging commit: `cdbcb4e7ccd9412a13f26378848e951252d71ed5`
+- WORKSPACE/STAGING hashes match for all three shell files: PASS
+
+CONTENT / ROUTING
+- canonical EN landing: `/en/books/liudyna-bez-akaunta/`
+- EN reader: `/en/books/liudyna-bez-akaunta/read/`
+- EN clean text entry: `/en/books/liudyna-bez-akaunta/read/text/`
+- UA hreflang points to `/books/liudyna-bez-akaunta/` and `/books/liudyna-bez-akaunta/read/`
+- cover path: `/assets/covers/library/liudyna-bez-akaunta.jpg`
+- reader and text-entry both load exactly `part-001.txt` through `part-006.txt`
+
+TRANSLATION BODY HASHES
+- part-001: `ec51115f74b55fc441f3957ed675c45e9830aa3a`
+- part-002: `d15dc0c530a8883f41a579f1e5fb8505ee9a1323`
+- part-003: `2b929ced487f4d04efe39161748f6524567f633a`
+- part-004: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
+- part-005: `691eb6f2a53ada2053594c6a6a6c0b2d4decfb07`
+- part-006: `bba5760b5d708e243a9e68ba765dfb08609ec625`
+
+PROMOTION
+- `The Man Without an Account` is now complete English beta web edition #9 of 19.
+- status remains `translated_beta`: English cover adaptation and validated English EPUB pending before final publication status.
+
+NEXT QUEUE
+- `Три романи, які ніхто не читає` / slug `try-romany-yaki-nikhto-ne-chytaie` (~30,905 Ukrainian words) is next by shorter-first queue.
