@@ -1,0 +1,37 @@
+R188 ENGLISH — EXACT BOSS RESTORE
+Date: 2026-08-16
+Status: PASS
+
+Target:
+mavik-sklad/builds/R188-EN-STAGING/boss/index.php
+
+GitHub Actions run:
+31951658610 — SUCCESS
+Job: 95175920064 — SUCCESS
+Restore commit produced by runner:
+2f8326e (R188: restore exact validated Boss English into STAGING)
+
+Authoritative restore chain:
+1. Six stored Git binary parts were concatenated in exact filename order.
+2. Combined gzip size: 55,577 bytes — PASS.
+3. Combined gzip SHA-256: f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22 — PASS.
+4. gzip -t — PASS.
+5. Restored PHP size: 234,087 bytes — PASS.
+6. Restored PHP SHA-256: e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8 — PASS.
+7. php -l — PASS, no syntax errors.
+
+Actual SHA-256 values of stored binary parts measured by GitHub runner:
+part-00  3817a9b6937ef9911329862573a8e45d4b00bd3f42203e8b9e131bc6e3a4f3e6  size 10000
+part-01  d1f4362ee1342a302c678659334485b2f1a4734c5a2876b036ecc4e4512bb952  size 10000
+part-02  ff2c8234e9663db01956e1158fe17c9340919ea0c7dd4702d749600bd4580812  size 10000
+part-03  2a5ced5c058ec21a31b36f2e97d8e408b6057f41c7ddeded4e0770b722c8fc8e  size 10000
+part-04  ee4849a260d42dd0e58b0059d499b08c5079da7b7f8a4077b6c1fa87590dd694  size 10000
+part-05  4845fe134b588ab99fc368b378757189436620eeb95db8202548c0af054d571d  size 5577
+
+Important correction:
+Historical per-part SHA-256 values written during the earlier backup session were stale/incorrect. The Git blob identities and sizes were stable, and the decisive combined compressed SHA plus restored PHP SHA both match the original verified implementation exactly. Therefore the backup itself is valid and the exact Boss English file is now physically present in STAGING.
+
+Cleanup:
+Temporary main-branch launcher removed after success.
+Temporary work-branch one-shot workflow removed after success.
+Do not reconstruct Boss from memory; use the restored STAGING file / exact SHA above.
