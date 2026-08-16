@@ -1,0 +1,27 @@
+# MaVik — Viktor Makarchuk — English Edition
+
+> Native English edition of mavik.name: books, essays and music. Public content is available without authentication.
+
+## Main pages
+- https://mavik.name/en/
+- https://mavik.name/en/books/
+- https://mavik.name/en/blog/
+- https://mavik.name/en/music/
+- https://mavik.name/en/about/
+
+## English books currently available in beta web form
+- Mom, I Want to Live! — https://mavik.name/en/books/mamo-zhyty/
+- The Nameless — https://mavik.name/en/books/bezimenni/
+- The Man Without an Account — https://mavik.name/en/books/liudyna-bez-akaunta/
+- Patterns of Self-Reflection — https://mavik.name/en/books/paterny-samorefleksii/
+- Solya, the Grain of Sand Who Dreamed of a Skyscraper — https://mavik.name/en/books/pishchynka-solya/
+- Transfer — https://mavik.name/en/books/transfer/
+- You and I... — https://mavik.name/en/books/ty-i-ia/
+- Rejection in Advance — https://mavik.name/en/books/vidmova-avansom/
+- The Gospel According to Macarius — https://mavik.name/en/books/yevanheliie-vid-makariia/
+
+## Structural English routes
+The remaining completed Ukrainian works already have stable /en/ routes. Those temporary preparation pages are intentionally noindex until the native English text replaces them.
+
+## Language counterparts
+English pages use /en/. Ukrainian originals use the same route without the /en prefix.

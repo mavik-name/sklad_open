@@ -1,11 +1,26 @@
 {
-  "name": "MaVik — English Edition",
+  "id": "/en/",
+  "name": "MaVik — Viktor Makarchuk — English Edition",
   "short_name": "MaVik EN",
+  "description": "The native English edition of Viktor Makarchuk's books, essays and music.",
+  "lang": "en",
+  "dir": "ltr",
   "start_url": "/en/",
   "scope": "/en/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#09090a",
   "theme_color": "#09090a",
-  "lang": "en",
-  "description": "Native English edition of mavik.name."
+  "orientation": "any",
+  "categories": ["books", "music", "entertainment", "lifestyle"],
+  "icons": [
+    {"src":"/assets/app/mavik-icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/assets/app/mavik-icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/assets/app/mavik-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ],
+  "shortcuts": [
+    {"name":"Books","short_name":"Books","description":"MaVik English library","url":"/en/books/","icons":[{"src":"/assets/app/mavik-icon-192.png","sizes":"192x192"}]},
+    {"name":"Blog","short_name":"Blog","description":"MaVik English blog","url":"/en/blog/","icons":[{"src":"/assets/app/mavik-icon-192.png","sizes":"192x192"}]},
+    {"name":"Music","short_name":"Music","description":"Music by MaVik_AI","url":"/en/music/","icons":[{"src":"/assets/app/mavik-icon-192.png","sizes":"192x192"}]}
+  ]
 }

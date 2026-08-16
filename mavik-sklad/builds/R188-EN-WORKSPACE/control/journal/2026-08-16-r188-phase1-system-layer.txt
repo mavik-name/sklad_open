@@ -1,0 +1,13 @@
+R188 ENGLISH PHASE 1 — SYSTEM LAYER PASS
+Date: 2026-08-16
+Parent route-parity commit: 818e6749b12be267b9a196ca6983a49aa1652a70
+
+Added/updated in STAGING:
+- /en/404.html — native English noindex 404 page.
+- /en/.htaccess — local ErrorDocument 404 /en/404.html and DirectoryIndex.
+- /en/manifest.webmanifest — full English PWA identity, icons and shortcuts.
+- /en/sw.js — English-scope network-first service worker with /en/ fallback.
+- /en/account/index.html — English owner-access bridge to the existing secure account endpoint.
+- /en/llms.txt — machine-readable English content map with current beta titles and structural-route policy.
+
+Ukrainian R187 files remain untouched. Final root sitemap/robots/hreflang reconciliation remains for the later integration pass.
