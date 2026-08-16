@@ -1,7 +1,7 @@
 # «ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА» — PROJECT START HERE / CANON
 
 Updated: 2026-08-16
-Status: **UKRAINIAN WORK COMPLETED / PUBLISHED ON MAVIK.NAME / ENGLISH TRANSLATION ACTIVE**
+Status: **UKRAINIAN WORK COMPLETED / PUBLISHED ON MAVIK.NAME / ENGLISH TRANSLATION TEXT COMPLETED**
 
 ## READ FIRST
 
@@ -82,33 +82,37 @@ Approved cover direction:
 
 The work is present in the Ukrainian mavik.name library under canonical R192 site architecture.
 
-## ENGLISH TRANSLATION
+## ENGLISH TRANSLATION — COMPLETE TEXT
 
-Translation workspace:
+Translation workspace / current authoritative physical English set:
 `mavik-sklad/translations/en/work/evakuatsiia/`
 
-Current saved English progress:
-1. Pixel — complete
-2. Beard — complete
-3. Doc — complete
-4. Shorty / Ukrainian call sign `Малий` — complete
-5. Cashier — complete
-6. Mongol — complete
-7. Philosopher — complete
+Complete and physically saved:
+1. Pixel
+2. Beard
+3. Doc
+4. Shorty / Ukrainian call sign `Малий`
+5. Cashier
+6. Mongol
+7. Philosopher
+8. Ghost
 
-NEXT EXACT POINT:
-- translate Story 8 — **Ghost**;
-- then perform whole-book parity/terminology/call-sign/profanity/continuity pass against the current Ukrainian manuscript;
-- only then mark the English book complete.
+Completion checkpoint:
+`mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
 
 English working title currently used in files:
 *Evacuation, or On the Road to the Stabilization Point*
 
-Treat that as a working translation title until final whole-book pass; do not silently invent a different final English title.
+Whole-book consistency/source pass completed for story boundaries, call signs, terminology, profanity register, route/time continuity, 1+7 count, 13:06/12:17 logic and final reveal/ending.
+
+Important: the latest full edited Ukrainian manuscript is authoritative for Story 8. An older standalone Story-8 file contained additional ending material that was later cut. That cut material must NOT be restored into the English version unless the author explicitly restores it to the Ukrainian canon.
+
+The English text is complete, but it remains physically under the work folder until completed-book/site packaging is actually performed. Do not claim otherwise.
 
 ## NEW-BRANCH RULE
 
 - Ukrainian book: completed; do not continue it with a ninth story unless explicitly ordered.
 - Ukrainian revision: first retrieve the actual latest edited DOCX.
-- English work: resume from Story 8 Ghost, not from the beginning.
+- English translation: do NOT restart; use the eight saved English story files.
+- Reopen English prose only for a discovered parity problem, an explicit Ukrainian revision, final English literary/title decision, or site packaging.
 - Preserve the 1+7 rescue count and 12:17 reveal logic absolutely unless the author explicitly changes the canon.
