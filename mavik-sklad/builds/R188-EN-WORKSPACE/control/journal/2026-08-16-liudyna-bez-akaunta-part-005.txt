@@ -1,0 +1,48 @@
+R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — PART 005
+Date: 16.08.2026
+Status: completed translation block / authoritative August source / persisted / readback passed
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-005.txt`
+- Chapter 5 `Де моя рука`
+- authoritative source: August 08.08.2026 `Людина без акаунта.docx`
+- source blob SHA: `0add59882f940aff45a6f5284429aa21e63458ec`
+- source commit: `0ebcca2fbd99af7e289567ca13f015b54d4e4d21`
+- exact ending `Бо дім ще спав.` confirmed; author's afterword excluded and reserved for block 6/6.
+
+ENGLISH TRANSLATION
+- title: `Де моя рука` → `WHERE IS MY HAND?`
+- key dialect/sexual wordplay preserved through `puss` / `pussy`: the older woman's regional word for face becomes Mahmoud's obscene misunderstanding.
+- local resort bus `стодола` → `barn`, explained in context.
+- `Діагноз без рецепта — це інтелектуальна форма злорадства` → `A diagnosis without a prescription is an intellectual form of gloating.`
+- `Світ потребує перекладачів між болями` → `It needs translators between kinds of pain.`
+- previous English continuity preserved: `Not Here for a Political Briefing`, `The Soul as a Watermark`, British spelling conventions.
+
+PERSISTED RELEASE FILES
+WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-005.txt`
+- commit: `0e7d83fc2e8889706b5419beb51ba753874fb792`
+STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-005.txt`
+- commit: `6ce50920fc5da0cb2a6e5638b9c2742704b1c691`
+
+READBACK
+- WORKSPACE blob SHA: `691eb6f2a53ada2053594c6a6a6c0b2d4decfb07`
+- STAGING blob SHA: `691eb6f2a53ada2053594c6a6a6c0b2d4decfb07`
+- hashes match: PASS
+- exact ending `Because the house was still asleep.`: PASS
+
+CURRENT BOOK STATE
+- source persisted: 5/6
+- translated: 5/6
+- WORKSPACE/STAGING readback: PASS through block 5
+- next: author's afterword, block 6/6
+
+NEXT
+- extract exact author's afterword from latest August source
+- persist as `source/liudyna-bez-akaunta/uk-006.txt`
+- translate to `part-006.txt`
+- persist WORKSPACE + STAGING
+- read back both copies
+- journal completion and advance book to complete English beta status
