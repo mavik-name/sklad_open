@@ -1,0 +1,34 @@
+R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — PART 001
+Date: 16.08.2026
+Status: completed translation block / persisted / readback passed
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt`
+- exact canonical R187 Chapter 1 source
+- source blob SHA: `46a215b96cd2c2591baaa4dbaeedef67ea12d687`
+
+ENGLISH TRANSLATION
+- book: `Людина без акаунта` → `The Man Without an Account`
+- slug: `liudyna-bez-akaunta`
+- block: 1/6
+- content: Chapter 1, complete
+
+PERSISTED RELEASE FILES
+WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-001.txt`
+STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-001.txt`
+
+READBACK
+- WORKSPACE blob SHA: `ec51115f74b55fc441f3957ed675c45e9830aa3a`
+- STAGING blob SHA: `ec51115f74b55fc441f3957ed675c45e9830aa3a`
+- hashes match: PASS
+
+NEXT
+- persist exact canonical R187 Chapter 2 as `source/liudyna-bez-akaunta/uk-002.txt`
+- read back source
+- translate Chapter 2 to English as part-002.txt
+- persist WORKSPACE + STAGING
+- read back both copies
+- journal result
