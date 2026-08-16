@@ -1,0 +1,11 @@
+R188 — КАНОНІЧНА КОМАНДА ДЛЯ СТАРТУ З БУДЬ-ЯКОЇ НОВОЇ ГІЛКИ / ЧАТУ
+
+Скопіюй і надішли дослівно:
+
+Продовжуй R188 з останнього checkpoint/handoff на дальньому складі. Спочатку прочитай `mavik-sklad/files/R188-EN-HANDOFF-LATEST.md`, `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md` і `mavik-sklad/files/R188-EN-WORK-ORDER-CANON.md`, звір актуальну гілку `r188-english-work`, не переробляй уже завершене й одразу продовжуй з першої незавершеної дії. Усі нові результати одразу фіксуй у WORKSPACE/STAGING, журналі, checkpoint і handoff на дальньому складі.
+
+Коротка команда, якщо хочеться зовсім стисло:
+
+Продовжуй R188 з checkpoint на дальньому складі за каноном START-HERE.
+
+Файл START-HERE є лише покажчиком. Джерелом фактичного поточного стану завжди є R188-EN-HANDOFF-LATEST.md + R188-EN-CHECKPOINT-LATEST.md.
