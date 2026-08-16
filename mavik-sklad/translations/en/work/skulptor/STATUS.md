@@ -41,63 +41,57 @@ Important: the last line was restored after source re-check. Do not drop it agai
 
 ### CHAPTER 2 — ACTIVE
 
-Four consecutive physical files saved:
+Five consecutive physical files saved:
 
-#### `chapter-02-part-01.txt`
-Covers:
-- Marta wakes before the alarm after the Lucas encounter;
-- Serhii's message about Nazar's first night;
-- the meaning of `okay` in a child-safety case;
-- Marta takes the flashlight/batteries/hat;
-- arrival at the rehabilitation center;
-- Olena's update about Nazar's sleepless night and fear of the stepfather;
-- aid handoff;
-- ends on Marta feeling lighter and judging that feeling unprofessional.
+1. `chapter-02-part-01.txt`
+   - Marta wakes after the Lucas encounter;
+   - Serhii's update on Nazar's first night;
+   - aid package and arrival at the rehabilitation center;
+   - Olena's safety update and aid handoff.
 
-#### `chapter-02-part-02.txt`
-Covers:
-- Olena's rule that the aid will be issued through the center, not as a personal gift;
-- lobby rules, especially `ask for help if you're scared`;
-- clay activity setup;
-- `Clay heals?` / `No. It just doesn't interrupt.`;
-- Lucas revealed as a six-month volunteer;
-- Marta verifies his formal basis and supervision;
-- ends with the realization that Lucas had been at the center before Marta, Nazar and yesterday's question.
+2. `chapter-02-part-02.txt`
+   - center rules and clay activity;
+   - `Clay heals?` / `No. It just doesn't interrupt.`;
+   - Lucas revealed as a six-month supervised volunteer.
 
-#### `chapter-02-part-03.txt`
-Covers:
-- Nazar enters the clay room by choice and chooses a seat with sight of the door;
-- clay is cold, then takes warmth from hands;
-- `A hole has a shape too.`;
-- Serhii leaves to check the car battery and warns Marta not to get carried away by either the boy or the volunteer;
-- forty-minute clay session;
-- children shape cat/knife-fish/dragon-mountain;
-- Nazar repeatedly makes and crushes a square;
-- Lucas's non-intrusive way of working with children;
-- ends on: `She did not want to accept anything from Lucas.`
+3. `chapter-02-part-03.txt`
+   - Nazar enters by choice and sits where he can see the door;
+   - `A hole has a shape too.`;
+   - Serhii leaves to check the battery and warns Marta not to get carried away;
+   - first forty minutes of clay work;
+   - ends on `She did not want to accept anything from Lucas.`
 
-#### `chapter-02-part-04.txt`
-Covers:
-- Marta recognizes children are less tense around Lucas because he does not squeeze anything out of them;
-- Nazar asks to make a clay flashlight;
-- `Almost everything made by living hands is a little crooked.`;
-- Nazar almost smiles;
-- clay flashlight with a small opening: `You can't see it. But it's there.`;
-- Marta's armor/work reflection;
-- direct Marta–Lucas exchange after the activity;
-- Lucas gives his surname: **Martyn**;
-- confirms he collected workshop materials from Viktoriia's fund;
-- ends on:
-  `No.`
-  `Marta had not asked.`
+4. `chapter-02-part-04.txt`
+   - children are visibly less tense around Lucas;
+   - Nazar makes a crooked clay flashlight;
+   - `You can't see it. But it's there.`;
+   - Marta questions Lucas directly;
+   - Lucas gives his surname: **Martyn**;
+   - confirms connection to Viktoriia Andriivna's fund;
+   - ends on `No. Marta had not asked.`
 
-## NEXT EXACT SOURCE POINT
+5. `chapter-02-part-05.txt`
+   - Marta realizes Lucas was already woven into her life through the fund/center/children;
+   - Lucas: people often cannot handle complete answers;
+   - Olena's office: Nazar remains at the center pending family assessment;
+   - Nazar's reactions are recorded as reasons not to close their eyes, without premature conclusions about beatings;
+   - Lucas's volunteer documents and surname Martyn are verified;
+   - Olena distinguishes Marta's duty to suspect from her own duty not to discard people for being strange;
+   - Lucas's help to Nazar is framed precisely: not rescue, but one hour without fear;
+   - Marta learns about the 19:00 fund meeting and immediately receives her mother's invitation;
+   - Marta confronts Lucas in the corridor;
+   - `Every adult leads a child toward something. The only question is whether they leave the child room to refuse.`;
+   - ends on:
+     `See you tonight.`
+     `I haven't said I'm coming.`
+     `But you will.`
 
-Continue immediately from:
+## NEXT EXACT POINT
 
-`Вона просто вирішила, що вчорашня поява Лукаса була окремою подією.`
+Continue immediately AFTER the source line:
+`— Але будете.`
 
-Then the source establishes that Lucas was already woven into Marta's space through her mother's fund, the center, the children and clay; Marta questions why he did not say so yesterday.
+The next Ukrainian paragraph has not yet been retrieved into the active source window. Do not invent or bridge it from memory. Retrieve the next contiguous source passage from `Скульптор.docx` first, then continue Chapter 2.
 
 Do not restart Chapter 1 or Chapter 2 and do not repeat any saved part.
 
