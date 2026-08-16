@@ -62,8 +62,11 @@ Then:
 Physical workspace:
 `mavik-sklad/translations/en/`
 
-Current exact continuation at this checkpoint:
-`Евакуація, або Дорогою до стабіка` → Story 8 `Ghost` → whole-book parity pass.
+Current exact continuation:
+- `Евакуація, або Дорогою до стабіка` English translation text is COMPLETE: all eight stories saved, final Story 8 aligned to the latest edited Ukrainian manuscript;
+- completion checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`;
+- next translation target: `Скульптор` → *The Sculptor*;
+- first verify located `Скульптор.docx` against current R192 Ukrainian source before translating.
 
 ============================================================
 РОМАН «СОЦІАЛЬНА»
@@ -122,7 +125,8 @@ Status:
 - Ghost + 7 rescued soldiers = 8 total;
 - 12:17 hard reveal logic;
 - latest edited Ukrainian manuscript in File Library;
-- English continuation: Story 8 Ghost.
+- English translation text complete: all eight stories physically saved;
+- English completion checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`.
 
 ============================================================
 НФ ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
