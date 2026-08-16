@@ -1,0 +1,49 @@
+R188 ENGLISH — `ТРИ РОМАНИ, ЯКІ НІХТО НЕ ЧИТАЄ` — STRUCTURE / BLOCK PLAN
+Date: 16.08.2026
+Status: August canonical source opened / exact global structure verified / dynamic chapter-boundary translation plan
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+AUTHORITATIVE SOURCE
+- `Три романи, які ніхто не читає.docx`
+- CreatedAt / ModifiedAt: 2026-08-08T10:24:22Z
+- 177 parsed pages in File Library view
+- older June 23 copies explicitly excluded
+
+VERIFIED GLOBAL STRUCTURE
+- 15 numbered sections in the August DOCX
+- author's afterword follows section 15
+- heading convention in the authoritative document: `Розділ N. ...`
+- final numbered section: `Розділ 15. Не фінал`
+- afterword: `Післяслово. Не остаточна версія`
+
+VERIFIED TITLES SO FAR
+1. `Розділ 1. Три романи, які ніхто не читає`
+2. `Розділ 2. Цифровий оракул`
+3. `Розділ 3. Анотація на сімсот знаків`
+15. `Розділ 15. Не фінал`
+Afterword: `Післяслово. Не остаточна версія`
+
+Additional titles seen in older/navigation material may be used only as search anchors and MUST be reverified in the August DOCX before persistence: sections 4–14.
+
+BLOCKING DECISION
+- Do NOT force a predetermined fixed number of translation blocks.
+- Use true August chapter/section boundaries only.
+- Balance block size dynamically after reading actual section lengths.
+- Section 1 alone occupies parsed pages 1–7 and is therefore BLOCK 001 by itself.
+- Section 2 begins exactly on parsed page 8 with `Розділ 2. Цифровий оракул`.
+- Do not combine Sections 1+2 merely to meet an earlier provisional 8-block estimate.
+
+BLOCK 001 — EXACT BOUNDARY
+Start: `Розділ 1. Три романи, які ніхто не читає`
+End: `І не попросить взаємності.`
+Next heading, NOT INCLUDED: `Розділ 2. Цифровий оракул`
+Source pages: 1–7 of authoritative 177-page parsed DOCX view.
+
+NEXT
+1. Persist exact Section 1 to `source/try-romany-yaki-nikhto-ne-chytaie/uk-001.txt`.
+2. Read back source.
+3. Translate Section 1 as `CHAPTER 1. THREE NOVELS NOBODY READS` under English title `Three Novels Nobody Reads`.
+4. Persist English `part-001.txt` to WORKSPACE + STAGING.
+5. Read back and compare hashes.
+6. Journal block 001 and update ledger/checkpoint.
+7. Retrieve exact end of Section 2 before creating block 002.
