@@ -1,0 +1,39 @@
+R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — PART 002
+Date: 16.08.2026
+Status: completed translation block / persisted / readback passed
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-002.txt`
+- exact Chapter 2 source reconstructed and verified against latest 08.08.2026 `Людина без акаунта.docx`
+- source blob SHA: `1b86b5915801266c4d7c80d3a0d4894e2d69f2ac`
+
+ENGLISH TRANSLATION
+- book: `Людина без акаунта` → `The Man Without an Account`
+- slug: `liudyna-bez-akaunta`
+- block: 2/6
+- content: Chapter 2 `Сім лайків і три боти` → `Seven Likes and Three Bots`, complete
+
+PERSISTED RELEASE FILES
+WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-002.txt`
+STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-002.txt`
+
+READBACK
+- WORKSPACE blob SHA: `d15dc0c530a8883f41a579f1e5fb8505ee9a1323`
+- STAGING blob SHA: `d15dc0c530a8883f41a579f1e5fb8505ee9a1323`
+- hashes match: PASS
+
+CURRENT BOOK STATE
+- source persisted: 2/6
+- translated: 2/6
+- next: Chapter 3
+
+NEXT
+- extract exact Chapter 3 from latest August source
+- persist as `source/liudyna-bez-akaunta/uk-003.txt`
+- translate to English as `part-003.txt`
+- persist WORKSPACE + STAGING
+- read back both copies
+- journal result
