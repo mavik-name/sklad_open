@@ -24,44 +24,54 @@ Working English title: *Evacuation, or On the Road to the Stabilization Point*
 Authoritative physical translation set currently remains under:
 `mavik-sklad/translations/en/work/evakuatsiia/`
 
-All eight stories are physically saved:
-1. Story 1 — Pixel
-2. Story 2 — Beard
-3. Story 3 — Doc
-4. Story 4 — Shorty
-5. Story 5 — Cashier
-6. Story 6 — Mongol
-7. Story 7 — Philosopher
-8. Story 8 — Ghost
+All eight stories are physically saved.
 
 Completion checkpoint:
 `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
 
-Whole-book consistency/source pass completed for story boundaries, call signs, terminology, profanity register, route/time continuity, 1+7 count, 13:06/12:17 logic and final reveal/ending.
-
-Important source correction: Story 8 was aligned to the latest full edited Ukrainian manuscript. Older standalone Story-8 material that had later been cut from the Ukrainian book is NOT part of the final English translation.
+Whole-book consistency/source pass completed. Story 8 was aligned to the latest full edited Ukrainian manuscript; older standalone Story-8 material that had later been cut is not part of the final English translation.
 
 The translation text is complete. Do not claim it has been copied into the completed `books/` site-tree until packaging/import is physically performed.
+
+## ACTIVE — The Sculptor
+
+Ukrainian title: `Скульптор`
+English working title: *The Sculptor*
+
+Working folder:
+`mavik-sklad/translations/en/work/skulptor/`
+
+Source checkpoint:
+`mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
+
+Work status:
+`mavik-sklad/translations/en/work/skulptor/STATUS.md`
+
+Working source:
+`Скульптор.docx` from File Library.
+
+Verified source facts:
+- author/title page present;
+- genre: `містично психологічний трилер`;
+- 2026, Львів;
+- 887 parsed pages;
+- Chapter 1: `Бруд на дитячих руках`.
+
+No newer exact manuscript duplicate was found in File Library search. A full current R192 Ukrainian book-text artifact was not available to this branch, so this DOCX is the working prose source unless a newer approved source appears.
+
+Physically saved English progress:
+- `chapter-01-part-01.txt`
+
+NEXT EXACT POINT:
+continue Chapter 1 from the Ukrainian sentence:
+`Сергій усе записав.`
+
+Do not restart the chapter. The saved batch already covers the store/Nazar/batteries sequence, the home visit, first apartment inspection, and food check through the freezer image.
 
 ## Partial recovered work
 
 - Three Novels Nobody Reads — Sections 1–8 only, physically preserved under `mavik-sklad/translations/en/partial/`.
 - Social — archival partial batches only; not public/complete while the Ukrainian source is unfinished.
-
-## NEXT EXACT POINT — The Sculptor
-
-Next queue item:
-**Скульптор → The Sculptor**
-
-A File Library manuscript named `Скульптор.docx` has been located.
-
-Before translating:
-1. retrieve/read `Скульптор.docx`;
-2. verify it against the current R192 Ukrainian book/source where possible;
-3. if they differ, establish the current approved source;
-4. only then start English translation.
-
-Do not translate from a review document, old mockup, or stale site copy.
 
 ## Still to finish after The Sculptor
 
@@ -82,6 +92,7 @@ Read before continuing:
 2. `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 3. `mavik-sklad/files/EN-SOURCE-POLICY.md`
 4. this file
-5. active source manuscript / saved translation files
+5. `mavik-sklad/translations/en/work/skulptor/STATUS.md`
+6. active source manuscript / saved translation files
 
 Old R188 English site checkpoints/workspaces are archival only and must not override current R192 content/source policy.
