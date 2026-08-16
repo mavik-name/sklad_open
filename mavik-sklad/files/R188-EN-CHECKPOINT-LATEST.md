@@ -1,50 +1,58 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **16.08.2026 — SHELL-FIRST STRATEGY / native English site package before content fill**
+Updated: **16.08.2026 — DEPLOYABLE BASE FIRST / CONTENT OVERLAYS AFTER**
 Status: **WORK IN PROGRESS / NOT CANONICAL**
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
 
-## USER DIRECTIVE — CURRENT EXECUTION ORDER
-Build the **complete native English version of the whole R187 site package FIRST**, then fill it with translated literary/editorial content.
+## CURRENT USER DIRECTIVE
+Do **not** wait for all English books/content before making the release.
 
-### PHASE A — COMPLETE ENGLISH SITE PACKAGE FIRST
-- full native `/en/` route structure and UI parity with R187;
-- navigation, reader, account bridge, music, reactions, support, About, Blog, Announcements, Books, Discover, Genres, Themes, legal/privacy/copyright, 404/system routes;
-- direct UA ↔ EN navigation;
-- exact saved Boss `English` implementation restored and validated;
-- English SEO/system layer: canonical, hreflang, sitemap, robots, manifest, service worker/cache and local-link audit;
-- no dead `/en/` routes: untranslated content gets proper English `Translation in progress` / `English edition in preparation` pages instead of 404;
-- structurally coherent R188 English package before content completion.
+### PHASE A — R188 BASE RELEASE
+Build a complete native-English R188 full-site ZIP that is already safe to upload through Boss and use on the live site.
+Required before release candidate:
+- complete `/en/` site/system structure;
+- route/UI parity where appropriate with R187;
+- no dead English routes; untranslated content gets proper English status pages;
+- direct UA ↔ EN;
+- exact Boss English restore and validation;
+- English SEO/system layer;
+- correct manifest/managed files;
+- PHP/JS/JSON/XML/link checks;
+- Boss archive validator;
+- ZIP integrity/readback.
 
-### PHASE B — CONTENT FILL
-- replace placeholders with finished literary translations;
-- translate Blog/Announcements/About editorial content where needed;
-- English cover adaptations;
-- validated English EPUBs;
-- final content/readback/link checks.
+Already completed English web editions may be included in base R188. Missing covers/EPUBs/content do not block the base release, but no dead buttons/links are allowed.
 
-### PHASE C — FULL R188 RELEASE
-- reconcile canonical R187 + complete English structural layer + completed English content;
-- PHP/JS/JSON/XML/EPUB checks;
-- real Boss archive validator;
-- exact `.mavik-release.json managed_files`;
-- deterministic full numbered R188 ZIP + integrity/readback;
-- no canonicalization without explicit user approval.
+### PHASE B — CONTENT OVERLAYS AFTER R188 IS INSTALLED
+Add English content with lightweight overlay ZIPs:
+- one book at a time;
+- several books as a set;
+- Blog/Announcements/About batches;
+- English cover + EPUB + web text;
+- translation corrections/metadata.
+
+Suggested naming:
+`R188-EN-CONTENT-001-<slug>.zip`
+`R188-EN-CONTENT-SET-001.zip`
+
+Content overlays are not new full structural releases and must not overwrite runtime data.
+
+### PHASE C — OPTIONAL CONSOLIDATION
+Later, if useful, consolidate base R188 + accepted overlays into a newer full numbered release. This is not required for each content update.
 
 ## SOURCE AUTHORITY
-The user directly uploaded canonical R187 on 16.08.2026.
-Local file: `187 КАНОН_Сайт_ОК_daf4fd24(2).zip`
-Verified SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21` — exact match to recorded canonical R187.
-The archive passed ZIP integrity testing and has been extracted locally.
-Primary source order now:
-1. canonical R187 extracted files;
-2. live mavik.name / canonical reader / EPUB as secondary verification;
-3. final warehouse source documents;
-4. File Library only as emergency fallback.
+User uploaded canonical R187 on 16.08.2026.
+Verified SHA-256 exact match: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`.
+Archive integrity passed and canonical R187 is extracted locally.
+Source priority:
+1. extracted canonical R187;
+2. live mavik.name / canonical reader / EPUB for verification;
+3. final warehouse documents;
+4. File Library only emergency fallback.
 
-## CURRENT PRESERVED CONTENT STATE
-Do NOT redo these nine complete English beta web editions:
+## PRESERVED ENGLISH CONTENT
+Do not redo nine complete beta web editions:
 1. You and I...
 2. Solya, the Grain of Sand Who Dreamed of a Skyscraper
 3. Rejection in Advance
@@ -55,54 +63,30 @@ Do NOT redo these nine complete English beta web editions:
 8. Mom, I Want to Live!
 9. The Man Without an Account
 
-Active tenth book: `Three Novels Nobody Reads`.
-Sections 1–8 are already translated, staged and read back.
-Section 9 exact R187 boundary is now available directly from canonical `full.txt`; literary translation becomes secondary until Phase A structure is completed.
+Active tenth book `Three Novels Nobody Reads`: Sections 1–8 translated/staged/read back. Exact Section 9 source is available from canonical R187, but further literary translation is secondary until base R188 is deployable.
 
-## PUBLIC ENGLISH CORE ALREADY PRESENT
-Native English core physically exists in STAGING for:
-- `/en/`
-- `/en/books/`
-- `/en/books/new/`
-- `/en/books/free/`
-- `/en/about/`
-- `/en/blog/`
-- `/en/announcements/`
-- `/en/music/`
-- `/en/discover/`
-- `/en/genres/`
-- `/en/themes/`
-- `/en/manifest.webmanifest`
-- `assets/app/en-site.css`
-
-Known defect to eliminate in Phase A: catalogue links can point to untranslated book routes. These must become real English placeholder routes, never 404s.
+## ENGLISH CORE ALREADY PRESENT IN STAGING
+`/en/`, `/en/books/`, `/en/books/new/`, `/en/books/free/`, `/en/about/`, `/en/blog/`, `/en/announcements/`, `/en/music/`, `/en/discover/`, `/en/genres/`, `/en/themes/`, `/en/manifest.webmanifest`, `assets/app/en-site.css`.
 
 ## BOSS ENGLISH
-Exact validated R188 Boss implementation is preserved as six-part compressed backup under `WORKSPACE/large-files/boss/`.
-Target: `boss/index.php`
-Original size: `234087` bytes
-Original SHA-256: `e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8`
-Compressed SHA-256: `f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22`
-Prior PHP lint: PASS.
-STAGING exact restore is a Phase A priority. Never rewrite Boss from memory and never use the old truncated gzip.
-
-## STORAGE
-Branch: `r188-english-work`
-WORKSPACE: `mavik-sklad/builds/R188-EN-WORKSPACE/`
-STAGING: `mavik-sklad/builds/R188-EN-STAGING/`
-Ledger: `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`
-Journal: `mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/`
-Live handoff: `mavik-sklad/files/R188-EN-HANDOFF-LATEST.md`
-Strategy journal: `control/journal/2026-08-16-r188-shell-first-strategy.txt`
+Exact saved implementation under `WORKSPACE/large-files/boss/` as six gzip parts.
+Target `boss/index.php`.
+Original size `234087` bytes.
+SHA-256 `e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8`.
+Compressed SHA-256 `f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22`.
+Prior PHP lint PASS.
+Exact restore is a Phase A priority.
 
 ## NEXT EXACT ACTION
-Continue Phase A from canonical R187:
-1. inventory R187 public/system routes against current `/en/` STAGING routes;
-2. identify every missing English counterpart;
-3. create real English routes/placeholders for all missing public content paths so there are no dead links;
-4. restore exact Boss English into STAGING;
-5. complete route/UI/system parity and SEO plumbing;
-6. only then return to bulk literary/content filling.
+1. Inventory canonical R187 routes/files against current English STAGING.
+2. Complete missing `/en/` routes/placeholders.
+3. Restore exact Boss English.
+4. Finish direct UA↔EN and SEO/system plumbing.
+5. Build and validate the first full deployable R188 ZIP.
+6. After R188 is approved/installed, resume translations as content overlays.
 
-## PROGRESS REPORTING RULE
-Use one stable whole-R188 denominator from now on. Do not change progress methodology between updates.
+## PROGRESS REPORTING
+Maintain two separate percentages:
+- `R188 BASE RELEASE` — deployable site/system readiness;
+- `EN CONTENT` — translations/covers/EPUB readiness.
+Never merge them into one number without explicitly explaining the weighting.
