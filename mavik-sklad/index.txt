@@ -26,7 +26,9 @@ ENGLISH CONTENT
 - source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
 - status: `mavik-sklad/translations/en/STATUS.md`
 - physical workspace: `mavik-sklad/translations/en/`
-- exact current continuation: Evacuation Story 8 Ghost
+- Evacuation English text: COMPLETE, 8 stories physically saved under `translations/en/work/evakuatsiia/`
+- Evacuation completion checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
+- exact current continuation: `Скульптор` → *The Sculptor*; verify located `Скульптор.docx` against current R192 Ukrainian source before translation
 
 СОЦІАЛЬНА
 - start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
@@ -51,7 +53,7 @@ ENGLISH CONTENT
 - Ukrainian povist completed/published
 - Ghost + 7 = 8; 12:17 hard reveal logic
 - latest edited Ukrainian manuscript is in File Library
-- English Stories 1–7 saved in GitHub; Story 8 Ghost next
+- English translation text complete; final Story 8 aligned to latest edited Ukrainian source
 
 НФ ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
 - start: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
