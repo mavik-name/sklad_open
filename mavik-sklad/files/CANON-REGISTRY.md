@@ -84,11 +84,15 @@ Physical workspace:
 `mavik-sklad/files/R188-EN-SOURCE-POLICY.md` is a historical pointer only.
 Old R188 English site architecture is never current authority; only already translated content may be recovered from it.
 
-Current exact active translation point:
-- `Евакуація, або Дорогою до стабіка`
-- English Stories 1–7 physically saved
-- next: Story 8 `Ghost`
-- then whole-book parity/terminology/continuity pass
+Current translation state:
+- `Евакуація, або Дорогою до стабіка` — English translation text complete, all 8 stories physically saved under `mavik-sklad/translations/en/work/evakuatsiia/`;
+- completion checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`;
+- final Story 8 aligned to the latest full edited Ukrainian manuscript; cut material from an older standalone Story-8 source is not canonical English content;
+- completed-book/site packaging for Evacuation has NOT yet been physically performed.
+
+Current exact next translation point:
+- `Скульптор` → *The Sculptor*;
+- first retrieve/read the located File Library `Скульптор.docx` and verify it against current R192 Ukrainian source before translating.
 
 ## 4. «СОЦІАЛЬНА» — ACTIVE
 
@@ -140,7 +144,7 @@ Approved manuscript is in File Library:
 
 Possible Kyiv/fifth-founder Book-II direction is **concept-only**, with identity/mechanism/final answer intentionally open.
 
-## 7. «ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА» — ACTIVE COMPLETED UA / EN IN PROGRESS
+## 7. «ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА» — ACTIVE COMPLETED UA / EN TEXT COMPLETE
 
 Project start:
 `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
@@ -150,12 +154,13 @@ Status:
 - hard structure: Ghost + 7 rescued soldiers = 8 total;
 - watch/reveal time 12:17;
 - eight stories: Pixel, Beard, Doc, Малий, Касир, Монгол, Філософ, Ghost;
-- English translation active, exact next point = Story 8 Ghost.
+- English translation text complete, all 8 stories physically saved;
+- English completion checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`.
 
 Latest verified edited Ukrainian source is in File Library:
 `Евакуація_після_редактури.docx`
 
-Do not add a ninth story or alter 1+7/12:17 logic without explicit author decision.
+Do not add a ninth story, restore cut older Story-8 material, or alter 1+7/12:17 logic without explicit author decision.
 
 ## 8. НФ РОМАН-ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ — CONCEPT ONLY
 
