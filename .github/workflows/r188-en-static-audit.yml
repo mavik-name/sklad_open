@@ -47,6 +47,8 @@ jobs:
                   return (p/'index.html').is_file() or (p/'index.php').is_file()
               return p.is_file() or (p/'index.html').is_file() or (p/'index.php').is_file()
 
+          indexable_catalogues={'en/index.html','en/books/index.html'}
+
           for f in html_files:
               text=f.read_text('utf-8',errors='replace')
               rel=f.relative_to(stage).as_posix()
@@ -71,7 +73,9 @@ jobs:
                   'catalogue interface is still being rebuilt',
                   'no english announcements published yet',
               )
-              if any(x in low for x in prep_markers):
+              # Home and Books are legitimate indexable catalogues that may mention
+              # preparation status on individual cards; do not classify the whole page as a placeholder.
+              if rel not in indexable_catalogues and any(x in low for x in prep_markers):
                   if not re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.I):
                       errors.append(f'PREP_WITHOUT_NOINDEX {rel}')
 
