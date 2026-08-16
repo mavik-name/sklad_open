@@ -1,0 +1,69 @@
+R188 / THREE NOVELS NOBODY READS / SECTION 008
+Date: 2026-08-16
+Status: COMPLETE / SOURCE + WORKSPACE + STAGING / READBACK PASS
+
+Authoritative Ukrainian source:
+Три романи, які ніхто не читає.docx
+Authoritative file date: 2026-08-08T10:24:22Z
+Older June copies are non-authoritative and were used only as search scaffolds.
+
+Section:
+Розділ 8. Шість місяців тиші
+English heading:
+CHAPTER 8. SIX MONTHS OF SILENCE
+
+Exact boundary:
+Starts with: Розділ 8. Шість місяців тиші
+Ends with: Він вирішив дати їй ніч.
+Next heading excluded: Розділ 9. Четвертий роман
+
+SOURCE
+Path: mavik-sklad/builds/R188-EN-WORKSPACE/source/try-romany-yaki-nikhto-ne-chytaie/uk-008.txt
+Blob SHA: bddf40f4032b2331c1de4918bda5f1b5080645f3
+Commit: efb37a5dd947c154fc0c3c8b51af226b8171683c
+
+ENGLISH WORKSPACE
+Path: mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-008.txt
+Blob SHA: 03dd6f794be8d868b45ee0e43cc4e8a67af89bd5
+Commit: c74cc2a39e982f89b38671e37952b271372c541e
+
+STAGING
+Path: mavik-sklad/builds/R188-EN-STAGING/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-008.txt
+Blob SHA: 03dd6f794be8d868b45ee0e43cc4e8a67af89bd5
+Commit: b594d6ab7e03a4dbd3a8ae793eb8cede87e553a5
+Readback: PASS / matching blob SHA
+
+AUGUST-VS-JUNE RECONCILIATION — DO NOT RESTORE OLD TEXT
+1. August panic-editor sentence begins `Десь глибоко...`; old scaffold had an extra `Бо`.
+2. August ChatGPT answer to waiting-period question is one compact sentence listing: new text / author presence / market / future submission materials / not fixating on waiting. The older expanded seven-line list is NOT canonical.
+3. August skeleton questionnaire omits the old standalone `Антагоністична сила: ...` line. Canonical lines after `Чого хоче` are `Що йому заважає` then `Внутрішня брехня героя`.
+4. August artist/craftsman reflection ends at `Ремісник питав: “Де саме читач загубився?”` and goes directly to `Артур відкрив ChatGPT.` The old extra artist/template + craftsman/template paragraphs are NOT canonical.
+5. August structure transition is: after the tape-measure / too-much-soul line, `Але після анотації... структура вже не виглядала ворогом. Вона виглядала неприємним, але корисним інструментом. Як стоматолог.`
+
+Key translation choices:
+- `офіційно оформлена тиша` -> `silence in official form`
+- inbox/well metaphor retained
+- `диспетчерська його надій` -> `control room for his hopes`
+- `логіст духовності` -> `logistics manager for spirituality`
+- `розпакування експертності` -> `unpacking your expertise`; zipper-language joke retained
+- `цифровий Буддо` -> `digital Buddha`
+- railway-platform/destiny image retained
+- `Роман_4_кістяк` -> `Novel_4_skeleton`
+- skeleton/body/spine motif retained
+- courtroom/workshop line retained
+- artist vs craftsman cadence retained without restoring deleted June text
+- `Шаблон — це не текст. Це спортзал для тексту.` -> `A template is not the text. It’s a gym for the text.`
+- little dog by the door retained
+- `тиша майстерні` -> `workshop silence`
+- final `Шаблон — це полігон. Голос — це те, що виживає після тренування.` -> `A template is a training ground. Voice is what survives the training.`
+
+BOOK PROGRESS AFTER THIS BLOCK
+Sections complete: 8/15
+Author's afterword: pending
+Web shell: pending until text substantially/fully complete
+Cover: pending English adaptation
+EPUB: pending
+
+NEXT EXACT ACTION
+Extract exact August Section 9: Розділ 9. Четвертий роман.
+First establish exact Section 10 heading/boundary from authoritative August DOCX, then persist uk-009.txt, translate, stage same blob, readback, journal, ledger/checkpoint/handoff.
