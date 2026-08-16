@@ -1,49 +1,28 @@
-MAVIK.NAME — КАНДИДАТ КАНОНІЧНОЇ ОБОЛОНКИ / R187 SITE CORE
-Дата: 15.08.2026
+MAVIK.NAME — R187 SITE CORE PLAN
 
-31. ВІДОКРЕМЛЕННЯ ОБОЛОНКИ ВІД КОНТЕНТУ — ВИКОНАНО / ПЕРЕВІРЕНО СТАТИЧНО
-- Джерело: R186 candidate, SHA-256 d834149658ea6071f9de221c165b15ac020a935b6b7718927762a7e3dff97929.
-- Сформовано content-free SITE CORE: дизайн, CSS/JS, іконки, навігація, Boss/адмінка, шаблони, генератори, reader framework, закладки, реакції, поширення, «Помилка», підтримка автора, SEO/службова логіка, .htaccess, service worker, manifest/config/state-defaults, системні маршрути та порожні стани.
-- CONTENT вилучено: конкретні books/<slug>/ і тексти читанок; EPUB; конкретні обкладинки; blog posts/images; announcement slugs; конкретні genre/theme collections; музичне наповнення та інше редакторське наповнення.
-- Збережено системні маршрути /books/, /books/new/, /books/free/, /announcements/, /blog/, /music/, /music/reading/, /discover/, /genres/, /themes/, /about/ та службові endpoints.
-- State defaults очищено від конкретного контенту; runtime у ZIP відсутній.
-- Додавання/редагування лише CONTENT надалі не змінює номер оболонки. Зміна CSS/JS, шаблону, генератора, меню, reader UI, Boss або системної логіки — це нова версія оболонки.
+STATUS: **HISTORICAL / DO NOT USE AS CURRENT CANON**
 
-32. DESIGN / USABILITY КАНОН, ПЕРЕНЕСЕНИЙ З R186 — ЗБЕРЕЖЕНО
-- Звичайна читанка є єдиною веб-читанкою для очей і Chrome Read Aloud; окремі фізичні /read/audio/ не є частиною shell-архітектури.
-- Мобільна читанка зберігає півмісяць як перемикач теми; додатковий «Назад» у header відсутній; «Зміст» працює як toggle.
-- Канонічний mobile dock: Помилка → Будиночок → ← → Закладка → → → Нота → Кава. Пошуку в dock немає; будиночок веде на сторінку поточної книги.
-- Book landing template: «Динамік» видалено; share — окремий центральний елемент; публічна реакція — «Сподобалось».
-- Boss і шаблони/генератори збережені як частина CORE.
-- Підтримка автора та два актуальні Privat24 QR збережені як функція оболонки.
+This document is preserved only as the historical plan that led to R187 and later multilingual work.
 
-33. МОБІЛЬНА «КАВА» — ВИКОНАНО СТАТИЧНО / ПОТРЕБУЄ REAL-MOBILE VISUAL TEST
-- На mobile кава відображається як glyph без додаткового видимого wrapper-кола/кільця/рамки/фону/тіні.
-- Touch target збережено, декоративні круги прибрано CSS-overrides у floating-controls.css, site-shell.css і reader-mobile-dock.css.
-- Desktop coffee цим правилом не змінюється.
+Current site authority is:
+1. `mavik-sklad/START-HERE.txt`
+2. `mavik-sklad/files/START-HERE-SITE.txt`
+3. `mavik-sklad/releases/CANON.md`
+4. `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
 
-34. ПУБЛІЧНЕ МЕНЮ / ЄДИНА БІБЛІОТЕКА — ВИКОНАНО СТАТИЧНО / ПОТРЕБУЄ REAL-MOBILE TOUCH TEST
-- Mobile: 01 Анонси → 02 Книги → 03 Музика → 04 Блог → 05 Автор → 06 Вхід/Адмінка.
-- Desktop: Анонси → Книги → Музика → Блог → Автор → Вхід/Адмінка.
-- Анонси → /announcements/; Книги → /books/; окремий пункт «Читати» прибрано.
-- У shell каталог /books/ є єдиним бібліотечним маршрутом; контент накладається окремо.
+Current canonical structural/functional base: **R192**.
 
-35. ФІНАЛЬНИЙ ТЕХНІЧНИЙ КОНТРОЛЬ R187 — ПЕРЕВІРЕНО СТАТИЧНО
-- Файлів у ZIP: 105.
-- Конкретних book dirs: 0; EPUB: 0; concrete blog dirs: 0; concrete announcement dirs: 0; cover/blog content media: 0.
-- Public local href/src broken: 0.
-- PHP lint: 21/21, BAD 0.
-- JavaScript node --check: 14/14, BAD 0.
-- JSON/XML parse: BAD 0.
-- Release manifest: release=187, release_type=site-core-shell, base_release=186; managed/actual exact.
-- ZIP integrity: unzip -t PASS.
+Do not start new site work from the old R187 content-free shell model, old R186/R184 references, old R187 release metadata, or old English-site separation logic.
 
-36. R187 SITE CORE / ОБОЛОНКА — КАНДИДАТ
-- Файл: 187 Оболонка_Сайт_ОК.zip
-- Release type: site-core-shell
-- Source release: R186
-- Файлів: 105
-- Розмір: 1,291,602 bytes
-- SHA-256: 401ec216ec63565603ad42ff55f3e8fd2adf7e7b9ffafd4f806f895309790869
-- unzip -t: PASS
-- Статус: КАНДИДАТ. НЕ канонічна до прямого підтвердження користувача після реальної mobile/browser перевірки.
+Historical notes retained from R187:
+- it introduced the idea of separating shell/core concerns from editorial content;
+- old reader/header/mobile-dock decisions later evolved into the current R192 multilingual core;
+- old R187 validation numbers and candidate ZIP metadata are historical evidence only.
+
+For current reader-header behavior use:
+`mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
+
+For current book-page behavior use:
+`mavik-sklad/files/kanon-storinky-knyhy.txt`
+
+This file must never override R192 or a newer user-approved canon.
