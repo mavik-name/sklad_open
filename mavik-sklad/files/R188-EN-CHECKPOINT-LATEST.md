@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 4/6**
+Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 4/6 (August canonical correction applied)**
 Status: **WORK IN PROGRESS / NOT CANONICAL**
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
@@ -69,19 +69,25 @@ English WORKSPACE + STAGING: `part-003.txt`
 - `SEW OR RIP`
 - SHA: `2b929ced487f4d04efe39161748f6524567f633a`
 
-### Block 4/6 — COMPLETE
+### Block 4/6 — COMPLETE / CORRECTED TO AUGUST CANON
 Source: `source/liudyna-bez-akaunta/uk-004.txt`
 - `Душа як водяний знак`
-- source SHA: `4b40790be1f58981afbe1c202d4fcbafcadcba69`
-- retrieval note: File Library became unstable during extraction; this process-source file is reconstructed from exact August excerpts plus verified matching copies. Start, AI rules, reader discussion, LitFox exchange, four-view passage, exact ending and Chapter 5 boundary were checked. It is not claimed as a byte-for-byte DOCX extraction.
+- authoritative source: `Людина без акаунта.docx`, 08.08.2026;
+- source SHA: `87a688f4472c728936b0b111e33f3e81bc4229d1`
+- source correction commit: `b07e0f4f6f9180e8930b3d274fda69230ff77bef`
+- previous shortened reconstruction was detected and replaced after direct August-source verification.
 English WORKSPACE:
 - `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-004.txt`
+- commit: `230f1433abf886c9119c592591ee7e59998ae041`
 English STAGING:
 - `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-004.txt`
+- commit: `1640722f159f5e3929a979d4aa58e5a613671795`
 - `THE SOUL AS A WATERMARK`
-- matching SHA: `842658c5b394852fa044818b17010f70cace2f37`
+- matching WORKSPACE/STAGING SHA: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
+- readback: PASS, including canonical middle sections and exact ending `It would be complicity.`
 Journal:
 - `control/journal/2026-08-16-liudyna-bez-akaunta-part-004.txt`
+- corrected journal commit: `ce88ac0a5c6c5a1341c5d843b19f3ab50570ee1b`
 
 ## EXACT STOP POINT
 - current book source: **4/6 persisted**;
