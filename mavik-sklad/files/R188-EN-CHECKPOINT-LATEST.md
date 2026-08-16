@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 — SESSION END**
+Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 2/6**
 Status: **WORK IN PROGRESS / NOT CANONICAL**
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
@@ -22,7 +22,7 @@ SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
 - ledger: `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`
 - operations log: `mavik-sklad/builds/R188-EN-WORKSPACE/control/R188-OPERATIONS-LOG.txt`
 - immutable journal: `mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/`
-- authoritative session-end handoff: `mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/2026-08-15-SESSION-END-HANDOFF.txt`
+- prior session handoff: `mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/2026-08-15-SESSION-END-HANDOFF.txt`
 
 ## COMPLETE ENGLISH BETA WEB EDITIONS — 8/19
 1. You and I...
@@ -40,10 +40,7 @@ All eight remain `translated_beta`: English cover adaptation and validated EPUB 
 - canonical R187 source inspected: 47 chapters + afterword, ~138,164 words;
 - safe 28-block structure preserved in `control/journal/2026-08-15-2324-skulptor-structure.txt`;
 - translation deliberately deferred by shorter-first queue optimization;
-- no English block started;
-- `WORKSPACE/source/skulptor/uk-001.txt` was checked and is **NOT present**. Do not assume it is persisted.
-
-Queue decision: `control/journal/2026-08-15-2328-translation-queue-optimization.txt`.
+- no English block started.
 
 ## CURRENT ACTIVE WORK
 **`Людина без акаунта` → `The Man Without an Account` (`liudyna-bez-akaunta`)**
@@ -51,25 +48,44 @@ Queue decision: `control/journal/2026-08-15-2328-translation-queue-optimization.
 Canonical structure: **5 chapters + author's afterword, ~18,840 words**.
 Planned split: **6 blocks**.
 
-Physically persisted:
+### Block 1/6 — COMPLETE
+Source:
 - `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt`
-- exact canonical R187 Chapter 1 source
-- GitHub readback confirmed
-- blob SHA: `46a215b96cd2c2591baaa4dbaeedef67ea12d687`
+- source blob SHA: `46a215b96cd2c2591baaa4dbaeedef67ea12d687`
+English WORKSPACE + STAGING:
+- `part-001.txt`
+- matching blob SHA: `ec51115f74b55fc441f3957ed675c45e9830aa3a`
+Journal:
+- `control/journal/2026-08-16-liudyna-bez-akaunta-part-001.txt`
+
+### Block 2/6 — COMPLETE
+Source:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-002.txt`
+- Chapter 2 `Сім лайків і три боти`
+- source blob SHA: `1b86b5915801266c4d7c80d3a0d4894e2d69f2ac`
+English WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-002.txt`
+English STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-002.txt`
+- title: `CHAPTER 2. SEVEN LIKES AND THREE BOTS`
+- matching blob SHA: `d15dc0c530a8883f41a579f1e5fb8505ee9a1323`
+Journal:
+- `control/journal/2026-08-16-liudyna-bez-akaunta-part-002.txt`
 
 ## EXACT STOP POINT
-- source block **1/6 persisted**;
-- English translation **0/6 persisted**;
-- English Chapter 1 must be considered **NOT STARTED** for continuation purposes.
+- current book source: **2/6 persisted**;
+- current book English translation: **2/6 persisted**;
+- WORKSPACE/STAGING readback for blocks 1–2: **PASS**;
+- next block: **Chapter 3 / 3 of 6**.
 
-## FIRST ACTION NEXT SESSION
-1. Read `START-HERE-SITE.txt`, `releases/CANON.md`, checkpoint canon, this file and `2026-08-15-SESSION-END-HANDOFF.txt`.
-2. Fetch `WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt`.
-3. Translate Chapter 1.
-4. Persist English `part-001.txt` to WORKSPACE + STAGING.
-5. Read back both copies.
-6. Journal result.
-7. Continue source 2/6 → translation 2/6.
+## FIRST ACTION ON RESUME
+1. Open latest August source `Людина без акаунта.docx`.
+2. Extract exact Chapter 3 to `WORKSPACE/source/liudyna-bez-akaunta/uk-003.txt`.
+3. Read back source.
+4. Translate Chapter 3 to `part-003.txt`.
+5. Persist WORKSPACE + STAGING.
+6. Read back and compare blob SHA.
+7. Journal and update this checkpoint.
 
 ## STILL REQUIRED BEFORE R188 RELEASE
 - remaining 11 completed works;
@@ -83,4 +99,4 @@ Physically persisted:
 - full R188 candidate ZIP;
 - explicit user approval before canonicalization.
 
-Do not redo the 8 complete beta editions. Resume exactly from `The Man Without an Account`, Chapter 1 translation.
+Do not redo completed beta editions or blocks 1–2 of `The Man Without an Account`.
