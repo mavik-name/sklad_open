@@ -1,0 +1,40 @@
+R188 ENGLISH — THREE NOVELS NOBODY READS — BLOCK 004
+Date: 16.08.2026
+Status: source persisted / English translated / WORKSPACE + STAGING readback PASS
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- exact section: `Розділ 4. Синопсис, або Як поховати роман на трьох сторінках`
+- authoritative source: August 08.08.2026 DOCX
+- exact final lines: `І написав перше слово: “Вітаю.”`
+- next heading excluded: `Розділ 5. Лист видавцю`
+- source path: `source/try-romany-yaki-nikhto-ne-chytaie/uk-004.txt`
+- source commit: `644e7e72b2b778daa9955ebd914d278da0df23de`
+- source blob SHA: `1ddbd32d94a1d93fec00f73aedff73de4ba90245`
+- source readback: PASS
+
+ENGLISH
+- heading: `CHAPTER 4. THE SYNOPSIS, OR HOW TO BURY A NOVEL IN THREE PAGES`
+- WORKSPACE: `site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-004.txt`
+- WORKSPACE commit: `ee0f8e0db28b51ec113572d0e51a41f2c7f08292`
+- STAGING: `en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-004.txt`
+- staging commit: `60e1b507e71ad9dd3735125bc46d887e68bc5b4c`
+- matching WORKSPACE/STAGING blob SHA: `4e11ae561fe20b51a9118400c5d0f9d3887fed04`
+- final readback: PASS (`Hello.` present)
+
+TRANSLATION NOTES
+- `сюжетна несподіванка` rendered naturally as `plot twist`;
+- `ОСББ` cultural joke rendered as `a block with no functioning residents’ association` rather than leaving an unexplained Ukrainian acronym;
+- `салат ... з вибачень` preserved as `a salad ... assembled out of apologies`;
+- `метафізичний туман` → `metaphysical fog`;
+- tender/jacket motif retained in final line.
+
+CURRENT BOOK PROGRESS
+- verified structure: 15 numbered sections + author's afterword
+- source persisted: Sections 1–4
+- English persisted/staged: Sections 1–4
+- readback PASS through Section 4
+
+NEXT
+- exact August `Розділ 5. Лист видавцю` through Section 6 heading;
+- persist `uk-005.txt`, translate/stage `part-005.txt`, readback and journal.
