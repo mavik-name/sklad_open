@@ -1,0 +1,1 @@
+Exact archival tree objects are reused by SHA; no translation text is rewritten during recovery.
