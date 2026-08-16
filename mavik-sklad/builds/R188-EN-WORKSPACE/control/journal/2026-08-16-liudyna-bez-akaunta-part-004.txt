@@ -1,38 +1,46 @@
 R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — PART 004
 Date: 16.08.2026
-Status: completed translation block / persisted / readback passed
+Status: completed translation block / corrected to authoritative August source / persisted / readback passed
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 
 SOURCE
 - `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-004.txt`
 - Chapter 4 `Душа як водяний знак`
-- latest authoritative source: August 08.08.2026 `Людина без акаунта.docx`
-- retrieval note: File Library retrieval became unstable during extraction; Chapter 4 was reconstructed from exact August control excerpts plus previously verified/public matching copies. Start, AI-rule section, reader comment, LitFox exchange, four-view passage, exact ending, and Chapter 5 boundary were independently checked. Do NOT describe this source file as a byte-for-byte DOCX extraction.
-- source blob SHA: `4b40790be1f58981afbe1c202d4fcbafcadcba69`
+- authoritative source: August 08.08.2026 `Людина без акаунта.docx`
+- the pre-existing uk-004 reconstruction was found to contain a shortened/non-canonical middle section; it was replaced after direct verification against the August DOCX.
+- source blob SHA: `87a688f4472c728936b0b111e33f3e81bc4229d1`
+- source correction commit: `b07e0f4f6f9180e8930b3d274fda69230ff77bef`
+- exact Chapter 5 boundary confirmed; Chapter 5 is not included in this block.
 
 ENGLISH TRANSLATION
 - book: `Людина без акаунта` → `The Man Without an Account`
 - slug: `liudyna-bez-akaunta`
 - block: 4/6
 - title: `Душа як водяний знак` → `The Soul as a Watermark`
-- content: Chapter 4, complete
-- AI/reader distrust vocabulary preserved; `Олюднити` rendered as `Humanise`; sewing/ripping callbacks to Chapter 3 retained
+- the pre-existing English part-004 was based on the shortened reconstruction and was replaced in full.
+- key terminology: `Олюднити` → `Humanise`; `халтура` → `hackwork`; `посвідчення прокурора` → `prosecutor's badge`; `душа як сертифікат походження` → `soul as a certificate of origin`.
+- Chapter 3 callback preserved exactly: `I'm going to rip through every one of them`.
+- responsibility axis preserved: the boundary is where responsibility disappears, not where a tool appears.
 
 PERSISTED RELEASE FILES
 WORKSPACE:
 - `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-004.txt`
+- commit: `230f1433abf886c9119c592591ee7e59998ae041`
 STAGING:
 - `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-004.txt`
+- commit: `1640722f159f5e3929a979d4aa58e5a613671795`
 
 READBACK
-- WORKSPACE blob SHA: `842658c5b394852fa044818b17010f70cace2f37`
-- STAGING blob SHA: `842658c5b394852fa044818b17010f70cace2f37`
+- WORKSPACE blob SHA: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
+- STAGING blob SHA: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
 - hashes match: PASS
-- staging tail readback reached exact Chapter 4 ending `It would be complicity.`: PASS
+- checked canonical middle anchors including `He opened the reply box.`, LitFox/hackwork, author responsibility, distrust, and the four-view passage: PASS
+- exact ending `It would be complicity.`: PASS
 
 CURRENT BOOK STATE
 - source persisted: 4/6
 - translated: 4/6
+- WORKSPACE/STAGING readback: PASS through block 4
 - next: Chapter 5 `Де моя рука`
 
 NEXT
@@ -41,4 +49,4 @@ NEXT
 - translate to English as `part-005.txt`
 - persist WORKSPACE + STAGING
 - read back both copies
-- journal result
+- journal result and advance checkpoint
