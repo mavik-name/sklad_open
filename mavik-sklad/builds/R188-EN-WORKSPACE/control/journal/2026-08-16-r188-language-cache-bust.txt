@@ -1,0 +1,23 @@
+R188 ASSEMBLY — LANGUAGE CACHE-BUST STEP
+Date: 2026-08-16
+Canonical source: extracted exact R187.
+
+Problem:
+R187 contains 101 files/templates referencing both `mavik-language.js?v=184` and `mavik-language.css?v=184`. R188 replaces those assets with the native UA↔EN implementation. Leaving the old query version risks clients reusing the old Google Translate asset from HTTP/browser cache.
+
+Deterministic solution:
+`WORKSPACE/tools/r188_cache_bust.py`
+Run against the full assembled R187 copy before final validation/ZIP.
+It replaces:
+- `mavik-language.js?v=184` -> `mavik-language.js?v=188`
+- `mavik-language.css?v=184` -> `mavik-language.css?v=188`
+Then rescans the entire tree and exits non-zero if any old reference remains.
+
+Local full-copy test on canonical R187:
+- files changed: 101
+- remaining JS v184 refs: 0
+- remaining CSS v184 refs: 0
+- files containing JS v188 after patch: 101
+- files containing CSS v188 after patch: 101
+
+This is an assembly transformation only. Canonical R187 remains untouched.
