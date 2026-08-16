@@ -71,20 +71,33 @@ Chapter 1 — COMPLETE in five files:
 
 The final Chapter-1 line `And the doors open on their own.` was restored after source parity re-check and must remain.
 
-Chapter 2 — ACTIVE, three files physically saved:
+Chapter 2 — ACTIVE, five files physically saved:
 - `chapter-02-part-01.txt`
 - `chapter-02-part-02.txt`
 - `chapter-02-part-03.txt`
+- `chapter-02-part-04.txt`
+- `chapter-02-part-05.txt`
 
-Current translated Chapter-2 material covers Marta's morning after meeting Lucas, Nazar's first night in the center, aid handoff, clay-room rules, Lucas's six-month volunteer status, Nazar entering the clay activity, Serhii leaving to check the battery, and the first forty minutes of the clay session.
+Current Chapter-2 translation now includes:
+- Marta's morning after meeting Lucas;
+- Nazar's first night and return to the center context;
+- aid handoff and clay-room activity;
+- Lucas's six-month supervised volunteer status;
+- Nazar's clay flashlight and `light you can't see`;
+- Lucas's surname **Martyn** and connection to Viktoriia Andriivna's fund;
+- Olena's safety/family assessment for Nazar;
+- verification of Lucas's volunteer documents;
+- the 19:00 fund meeting announcement and Marta's immediate invitation from her mother;
+- Marta–Lucas corridor confrontation ending on:
+  `See you tonight.`
+  `I haven't said I'm coming.`
+  `But you will.`
 
 NEXT EXACT POINT:
-continue from:
-`Але чим довше дивилася, тим важче було не бачити: діти поруч із ним не напружувалися так, як напружувалися біля більшості дорослих.`
+continue immediately after the Ukrainian source line:
+`— Але будете.`
 
-The next immediate beat is Nazar asking whether he can make a flashlight from clay.
-
-Do not restart or repeat the saved material.
+Before translating further, retrieve the next contiguous paragraph from `Скульптор.docx`. Do not bridge the missing source from memory or inference.
 
 ## Partial recovered work
 
