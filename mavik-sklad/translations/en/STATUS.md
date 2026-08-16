@@ -44,7 +44,7 @@ Working folder:
 Source checkpoint:
 `mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
 
-Work status:
+Detailed work status:
 `mavik-sklad/translations/en/work/skulptor/STATUS.md`
 
 Working source:
@@ -55,18 +55,36 @@ Verified source facts:
 - genre: `містично психологічний трилер`;
 - 2026, Львів;
 - 887 parsed pages;
-- Chapter 1: `Бруд на дитячих руках`.
+- Chapter 1: `Бруд на дитячих руках`;
+- Chapter 2: `Глина`.
 
 No newer exact manuscript duplicate was found in File Library search. A full current R192 Ukrainian book-text artifact was not available to this branch, so this DOCX is the working prose source unless a newer approved source appears.
 
-Physically saved English progress:
+### Physically saved English progress
+
+Chapter 1 — COMPLETE in five files:
 - `chapter-01-part-01.txt`
+- `chapter-01-part-02.txt`
+- `chapter-01-part-03.txt`
+- `chapter-01-part-04.txt`
+- `chapter-01-part-05.txt`
+
+The final Chapter-1 line `And the doors open on their own.` was restored after source parity re-check and must remain.
+
+Chapter 2 — ACTIVE, three files physically saved:
+- `chapter-02-part-01.txt`
+- `chapter-02-part-02.txt`
+- `chapter-02-part-03.txt`
+
+Current translated Chapter-2 material covers Marta's morning after meeting Lucas, Nazar's first night in the center, aid handoff, clay-room rules, Lucas's six-month volunteer status, Nazar entering the clay activity, Serhii leaving to check the battery, and the first forty minutes of the clay session.
 
 NEXT EXACT POINT:
-continue Chapter 1 from the Ukrainian sentence:
-`Сергій усе записав.`
+continue from:
+`Але чим довше дивилася, тим важче було не бачити: діти поруч із ним не напружувалися так, як напружувалися біля більшості дорослих.`
 
-Do not restart the chapter. The saved batch already covers the store/Nazar/batteries sequence, the home visit, first apartment inspection, and food check through the freezer image.
+The next immediate beat is Nazar asking whether he can make a flashlight from clay.
+
+Do not restart or repeat the saved material.
 
 ## Partial recovered work
 
