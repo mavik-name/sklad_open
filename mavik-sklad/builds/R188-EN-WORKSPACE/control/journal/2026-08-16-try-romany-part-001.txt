@@ -1,0 +1,40 @@
+R188 ENGLISH — THREE NOVELS NOBODY READS — BLOCK 001
+Date: 16.08.2026
+Status: source persisted / English translated / WORKSPACE + STAGING readback PASS
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+BOOK
+- Ukrainian: `Три романи, які ніхто не читає`
+- English: `Three Novels Nobody Reads`
+- slug: `try-romany-yaki-nikhto-ne-chytaie`
+- authoritative source: August DOCX dated 08.08.2026
+
+SOURCE BLOCK 001
+- exact section: `Розділ 1. Три романи, які ніхто не читає`
+- exact end: `І не попросить взаємності.`
+- next heading excluded: `Розділ 2. Цифровий оракул`
+- source path: `mavik-sklad/builds/R188-EN-WORKSPACE/source/try-romany-yaki-nikhto-ne-chytaie/uk-001.txt`
+- source commit: `f9046a043def6c0eefbaf43590249e213f542379`
+- source blob SHA: `fc24b7eff3c32423162ac470cc2c542776c62103`
+- source readback: PASS
+
+ENGLISH BLOCK 001
+- heading: `CHAPTER 1. THREE NOVELS NOBODY READS`
+- WORKSPACE path: `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-001.txt`
+- WORKSPACE commit: `bbdc7a7c5079f4b4a9159085d711b44dba0098c7`
+- STAGING path: `mavik-sklad/builds/R188-EN-STAGING/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-001.txt`
+- staging commit: `35b735724af274eb90185a5c9fea9919a85bf6ae`
+- matching WORKSPACE/STAGING blob SHA: `583876095944af4054c2337fba91003abe7171e0`
+- readback: PASS
+
+TRANSLATION NOTES
+- authorial irony and short-line rhythm preserved;
+- `атмосферно` retained as `atmospheric` because the repeated empty compliment is part of the book's comic axis;
+- platform reciprocity / visibility economy preserved;
+- `літературного обміну речовин` rendered as `literary metabolism` to preserve the deliberately absurd metaphor;
+- Kyiv / Reels / usernames retained as culturally and contextually direct references.
+
+NEXT
+- retrieve exact complete Section 2 from the August DOCX through the boundary `Розділ 3. Анотація на сімсот знаків`;
+- persist `uk-002.txt` only after full boundary verification;
+- continue dynamic chapter-boundary block plan.
