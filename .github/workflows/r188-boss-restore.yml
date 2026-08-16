@@ -1,0 +1,60 @@
+name: R188 exact Boss restore
+
+on:
+  push:
+    branches: [r188-english-work]
+    paths:
+      - '.github/workflows/r188-boss-restore.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  restore-boss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout work branch
+        uses: actions/checkout@v4
+        with:
+          ref: r188-english-work
+          fetch-depth: 0
+
+      - name: Restore and validate exact Boss English file
+        shell: bash
+        run: |
+          set -euo pipefail
+          D='mavik-sklad/builds/R188-EN-WORKSPACE/large-files/boss'
+          OUT='mavik-sklad/builds/R188-EN-STAGING/boss/index.php'
+          TMP="$RUNNER_TEMP/boss-index-r188.php.gz"
+
+          echo '36e3f212122b3053df15d2c2ced440410c4f3eb40e1860b545c1eb9e1b6c9747  '"$D"'/boss-index-r188.php.gz.part-00' | sha256sum -c -
+          echo '1ad54976650bc7ce1c517d32fd86dceaa14246ffc92c1a1089ab3f5d3f90409e  '"$D"'/boss-index-r188.php.gz.part-01' | sha256sum -c -
+          echo 'fcd4d7bd5aa30b0c85ab510cf609323c05534f993730af0224620e032424d866  '"$D"'/boss-index-r188.php.gz.part-02' | sha256sum -c -
+          echo '020525cf53a5a89f0364be32a88aa093d9f8ac875fb6e43659b29809dc140e43  '"$D"'/boss-index-r188.php.gz.part-03' | sha256sum -c -
+          echo 'b0945dd237f047d4639059bc53d247ecfb8b377ae7060553323839094611bd66  '"$D"'/boss-index-r188.php.gz.part-04' | sha256sum -c -
+          echo 'ddf93936a0c0d967c3a3de83391a37b9894951a9c95d1ad8b4e93762adf1bc9d  '"$D"'/boss-index-r188.php.gz.part-05' | sha256sum -c -
+
+          cat "$D"/boss-index-r188.php.gz.part-0{0,1,2,3,4,5} > "$TMP"
+          test "$(stat -c%s "$TMP")" = '55577'
+          echo 'f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22  '"$TMP" | sha256sum -c -
+          gzip -t "$TMP"
+
+          mkdir -p "$(dirname "$OUT")"
+          gzip -dc "$TMP" > "$OUT"
+          test "$(stat -c%s "$OUT")" = '234087'
+          echo 'e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8  '"$OUT" | sha256sum -c -
+          php -l "$OUT"
+
+      - name: Commit restored Boss file
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add mavik-sklad/builds/R188-EN-STAGING/boss/index.php
+          if git diff --cached --quiet; then
+            echo 'Exact Boss file already staged; nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'R188: restore exact validated Boss English into STAGING'
+          git push origin HEAD:r188-english-work
