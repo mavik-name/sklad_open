@@ -1,0 +1,21 @@
+R188 ENGLISH PHASE 1 — NATIVE LANGUAGE SWITCH
+Date: 2026-08-16
+
+Replaced the R187 Google Translate / translate.goog language logic in the R188 overlay with a native two-language UA ↔ EN switch.
+
+Rules:
+- supported languages in R188 selector: Ukrainian and English only;
+- no Google Translate proxy;
+- no automatic browser-language redirect;
+- Ukrainian route -> same native route under /en/;
+- English route -> same Ukrainian route with /en removed;
+- unfinished /books/sotsialna has no English publication and maps to /en/books/ instead;
+- query string and hash are preserved;
+- existing desktop/mobile/reader UI mounting classes are retained;
+- reader language grid changed from three columns to two.
+
+JS local syntax validation: node --check PASS.
+Local JS SHA-256: f872bbe3e43f3cacfcec4048c81a5c6a0bd71e615eba0cf61a391c65beb6b1f1.
+Local CSS SHA-256: 9f984cd38b4a552cbcb3537f25ba7e769418d42b0732fcca498caa4984310b78.
+
+This overlay replaces assets/app/mavik-language.js and assets/app/mavik-language.css only in R188; canonical R187 is unchanged.
