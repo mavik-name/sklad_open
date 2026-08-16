@@ -1,7 +1,7 @@
 {
   "schema": 4,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-16-after-liudyna-bez-akaunta",
+  "updated_at": "2026-08-16-full-site-assembly-try-romany-section-3",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -35,7 +35,7 @@
     {"slug":"toi-shcho-nese-svitlo","uk_title":"Той, що несе світло","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"olena","uk_title":"Олена","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"lysty-polkovnyku","uk_title":"Листи полковнику","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"source_verification","source_words":30905,"authoritative_source":"Три романи, які ніхто не читає.docx","authoritative_source_date":"2026-08-08T10:24:22Z"},
+    {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"in_progress","english_title":"Three Novels Nobody Reads","source_words":30905,"authoritative_source":"Три романи, які ніхто не читає.docx","authoritative_source_date":"2026-08-08T10:24:22Z","structure":"15 numbered sections + author's afterword","blocking":"dynamic true-section boundaries","source_sections":"3/15 + afterword pending","translation_sections":"3/15 + afterword pending","web_edition":"incomplete","source_sha":{"001":"fc24b7eff3c32423162ac470cc2c542776c62103","002":"89f8cf295e1ec7a7155bcc09c93da64556c5e768","003":"015d1ddd940d98f5287f0f8659850dcbe873d0e0"},"translation_sha":{"001":"583876095944af4054c2337fba91003abe7171e0","002":"de6f4890a83f8c35ab581d8fb3338e5de2a92df9","003":"2ee11bf6bbf2ec2a9368133da4465a1874ebf729"},"readback":"ok_through_section_3","journals":["control/journal/2026-08-16-try-romany-structure.txt","control/journal/2026-08-16-try-romany-part-001.txt","control/journal/2026-08-16-try-romany-part-002.txt","control/journal/2026-08-16-try-romany-part-003.txt"],"cover":"pending_english","epub":"pending"},
     {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Man Without an Account","source_words":18840,"structure":"5 chapters + author's afterword","planned_blocks":6,"source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending","shell":{"landing_sha":"00a49bd1092de36d70ee7f6db906ff6c5ffe2faa","reader_sha":"575a5e95976906f2ced7fa5a6fc3e5832dffb22f","text_entry_sha":"68d68d4548346ff52d08f7828352421822c1d62d"}},
     {"slug":"yak-vitko-z-moskaliamy-voiuvav","uk_title":"Як Вітько з москалями воював","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","translation_chunks":"3/3","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
@@ -60,6 +60,7 @@
   "counts": {
     "completed_uk_works_target": 19,
     "complete_english_beta_web_editions": 9,
+    "in_progress_english_books": 1,
     "excluded_unfinished": 1,
     "remaining_completed_works_not_complete_in_english": 10
   },
@@ -67,11 +68,12 @@
     "strategy":"shorter completed works first",
     "journal":"control/journal/2026-08-15-2328-translation-queue-optimization.txt"
   },
-  "session_end_handoff":"control/journal/2026-08-15-SESSION-END-HANDOFF.txt",
+  "full_site_assembly_audit":"control/journal/2026-08-16-full-site-assembly-audit.txt",
   "next": {
-    "title":"Три романи, які ніхто не читає",
+    "title":"Three Novels Nobody Reads",
+    "uk_title":"Три романи, які ніхто не читає",
     "slug":"try-romany-yaki-nikhto-ne-chytaie",
-    "source_status":"latest matching DOCX identified as 2026-08-08T10:24:22Z; older 2026-06-23 copies excluded",
-    "exact_action":"Extract exact August heading inventory and safe source blocks before any English translation."
+    "progress":"Sections 1-3 persisted in source + English WORKSPACE + STAGING; readback PASS",
+    "exact_action":"Extract exact August Section 4 `Синопсис, або Як поховати роман на трьох сторінках` through Section 5 boundary, persist source, translate, stage, readback and journal."
   }
 }
