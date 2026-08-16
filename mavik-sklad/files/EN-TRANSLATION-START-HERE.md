@@ -51,6 +51,34 @@ The following nine complete English translations were recovered from the archiva
 
 Do NOT translate these again before a parity check proves the Ukrainian source changed materially.
 
+## COMPLETED TRANSLATION TEXT — EVACUATION
+
+Ukrainian title:
+`Евакуація, або Дорогою до стабіка`
+
+Working English title:
+*Evacuation, or On the Road to the Stabilization Point*
+
+Current authoritative physical English set:
+`mavik-sklad/translations/en/work/evakuatsiia/`
+
+All eight English stories are physically saved and the whole-book consistency/source pass is complete:
+1. `story-01-pixel.txt`
+2. `story-02-beard.txt`
+3. `story-03-doc.txt`
+4. `story-04-shorty.txt`
+5. `story-05-cashier.txt`
+6. `story-06-mongol.txt`
+7. `story-07-philosopher.txt`
+8. `story-08-ghost.txt`
+
+Completion checkpoint:
+`mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
+
+Do NOT restart this translation. Story 8 was specifically corrected to the latest full edited Ukrainian manuscript after an older standalone Story-8 source was found to contain material later cut from the book.
+
+The English text is complete but has not yet been physically packaged/copied into the completed `books/` site-tree. Do not claim that packaging is done until it actually is.
+
 ## PHYSICALLY RECOVERED PARTIAL WORK
 
 `Three Novels Nobody Reads` — Sections 1–8 are physically preserved under:
@@ -60,34 +88,26 @@ Do not redo Sections 1–8. Continue from the first genuinely untranslated secti
 
 `Social` — partial English batches remain archive-only until the Ukrainian original is complete.
 
-## ACTIVE BOOK RIGHT NOW — EVACUATION
+## ACTIVE NEXT TARGET — THE SCULPTOR
 
 Ukrainian title:
-`Евакуація, або Дорогою до стабіка`
+`Скульптор`
 
-Working English title:
-*Evacuation, or On the Road to the Stabilization Point*
+English working title:
+*The Sculptor*
 
-Current work folder:
-`mavik-sklad/translations/en/work/evakuatsiia/`
-
-Physically saved and complete in English:
-1. `story-01-pixel.txt`
-2. `story-02-beard.txt`
-3. `story-03-doc.txt`
-4. `story-04-shorty.txt`
-5. `story-05-cashier.txt`
-6. `story-06-mongol.txt`
-7. `story-07-philosopher.txt`
+A File Library source named `Скульптор.docx` has been located.
 
 NEXT EXACT POINT:
-- translate Story 8 — `Ghost`;
-- then perform whole-book consistency pass: names/call signs, terminology, profanity register, repeated phrases, route continuity, ending logic;
-- only after that mark the whole book complete and move/copy it into the completed `books/` area.
+1. retrieve/read `Скульптор.docx`;
+2. verify it against the current R192 Ukrainian book/source where possible;
+3. if the texts differ, establish which is the latest approved source before translating;
+4. only then begin English translation from the verified source.
 
-## STILL NEED TRANSLATION AFTER EVACUATION
+Do not use an old site mockup, review/critique document, or unrelated text containing the word `Скульптор` as the source.
 
-- `Скульптор` → *The Sculptor*
+## STILL NEED TRANSLATION AFTER THE SCULPTOR
+
 - `UNIVERSE` → *UNIVERSE*
 - `Адвокат Диявола` → *The Devil’s Advocate*
 - `Пацієнт` → *The Patient*
