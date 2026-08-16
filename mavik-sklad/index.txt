@@ -1,14 +1,42 @@
-MaVik workspace · GitHub mirror
-Updated: 2026-08-13T11:43:18+03:00
-Repository: https://github.com/mavik-name/sklad_open/tree/main/mavik-sklad
+MAVIK WORKSPACE / ДАЛЬНІЙ СКЛАД — CURRENT INDEX
+Updated: 2026-08-16
+Repository: mavik-name/sklad_open
 
-Technic_Files.txt
-FILE: https://raw.githubusercontent.com/mavik-name/sklad_open/main/mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt
-TEXT: https://raw.githubusercontent.com/mavik-name/sklad_open/main/mavik-sklad/text/technic-files--8f66396249b19de717d81870.txt
-PROJECT: Загальне
+FIRST FILE FOR EVERY NEW CHAT BRANCH:
+`mavik-sklad/START-HERE.txt`
 
-Golovnyi_kanon_dlya_napysannya_na_redaguvannya_tekstiv_ta_rozmov.txt
-FILE: https://raw.githubusercontent.com/mavik-name/sklad_open/main/mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt
-TEXT: https://raw.githubusercontent.com/mavik-name/sklad_open/main/mavik-sklad/text/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt
-PROJECT: Загальне
+AUTHORITATIVE CANON REGISTRY:
+`mavik-sklad/files/CANON-REGISTRY.md`
 
+UNIVERSAL CANONS
+- writing/editing: `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
+- technical fiction control: `mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`
+- persistent storage/checkpoints: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
+
+SITE MAVIK.NAME
+- start: `mavik-sklad/files/START-HERE-SITE.txt`
+- release canon: `mavik-sklad/releases/CANON.md`
+- current checkpoint: `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
+- current structural/functional base: R192
+- reader-header canon: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
+- book-page canon: `mavik-sklad/files/kanon-storinky-knyhy.txt`
+
+ENGLISH CONTENT
+- start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
+- source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
+- status: `mavik-sklad/translations/en/STATUS.md`
+- physical workspace: `mavik-sklad/translations/en/`
+
+СОЦІАЛЬНА
+- start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
+- canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
+- plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
+- persistent manuscript: `mavik-sklad/files/Соціальна.docx`
+
+HISTORY / ARCHIVE
+- `mavik-sklad/builds/R188-*` = archive/recovery only
+- old R187/R188/R189/R190/R191 site candidates/passports/checkpoints never override R192
+- old R188-English site architecture never overrides active English translation files
+- `mavik-sklad/text/` is a mirror; `files/` is authoritative if a mirror diverges
+
+For any other named creative project not listed in CANON-REGISTRY: search for its real warehouse files first; do not reconstruct its canon from chat memory. If no persistent project START-HERE exists, create/restore one from verified source material before substantial new work.
