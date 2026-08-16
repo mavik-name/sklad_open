@@ -41,7 +41,7 @@ Important: the last line was restored after source re-check. Do not drop it agai
 
 ### CHAPTER 2 — ACTIVE
 
-Three consecutive physical files saved:
+Four consecutive physical files saved:
 
 #### `chapter-02-part-01.txt`
 Covers:
@@ -66,33 +66,40 @@ Covers:
 
 #### `chapter-02-part-03.txt`
 Covers:
-- `And that did not make Marta feel calmer. Quite the opposite.`;
-- Nazar enters the clay room by choice;
-- he chooses a seat with sight of the door;
+- Nazar enters the clay room by choice and chooses a seat with sight of the door;
 - clay is cold, then takes warmth from hands;
 - `A hole has a shape too.`;
-- Serhii leaves to check the car battery against theft reports and warns Marta not to get carried away by either the boy or the volunteer;
+- Serhii leaves to check the car battery and warns Marta not to get carried away by either the boy or the volunteer;
 - forty-minute clay session;
 - children shape cat/knife-fish/dragon-mountain;
 - Nazar repeatedly makes and crushes a square;
 - Lucas's non-intrusive way of working with children;
+- ends on: `She did not want to accept anything from Lucas.`
+
+#### `chapter-02-part-04.txt`
+Covers:
+- Marta recognizes children are less tense around Lucas because he does not squeeze anything out of them;
+- Nazar asks to make a clay flashlight;
+- `Almost everything made by living hands is a little crooked.`;
+- Nazar almost smiles;
+- clay flashlight with a small opening: `You can't see it. But it's there.`;
+- Marta's armor/work reflection;
+- direct Marta–Lucas exchange after the activity;
+- Lucas gives his surname: **Martyn**;
+- confirms he collected workshop materials from Viktoriia's fund;
 - ends on:
-  `She did not want to accept anything from Lucas.`
+  `No.`
+  `Marta had not asked.`
 
 ## NEXT EXACT SOURCE POINT
 
-Continue immediately from the next Ukrainian paragraph:
+Continue immediately from:
 
-`Але чим довше дивилася, тим важче було не бачити: діти поруч із ним не напружувалися так, як напружувалися біля більшості дорослих.`
+`Вона просто вирішила, що вчорашня поява Лукаса була окремою подією.`
 
-Then:
-`Не тому, що він був добрий. Марта не була готова назвати його добрим.`
-`Скоріше тому, що він нічого з них не витискав.`
-`Принаймні поки.`
+Then the source establishes that Lucas was already woven into Marta's space through her mother's fund, the center, the children and clay; Marta questions why he did not say so yesterday.
 
-The next immediate beat is Nazar asking whether he can make a flashlight from clay.
-
-Do not restart Chapter 1 or Chapter 2 and do not repeat any of the saved parts.
+Do not restart Chapter 1 or Chapter 2 and do not repeat any saved part.
 
 ## CONSISTENCY LOCKS
 
@@ -102,9 +109,11 @@ Current English decisions:
 - Сергій Кравець → Serhii Kravets
 - Назар → Nazar
 - Вікторія → Viktoriia
+- Вікторія Андріївна → Viktoriia Andriivna
 - Олена Руденко → Olena Rudenko
 - Андрій → Andrii
 - Лукас → Lucas
+- Лукас Мартин → Lucas Martyn
 - `служба у справах дітей` → child services / child welfare service according to sentence context, without replacing the Ukrainian institution with a US/UK agency
 - `відділок` → station / police station according to context
 - `райвідділ` → district station according to context
