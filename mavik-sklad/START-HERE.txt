@@ -10,110 +10,161 @@ MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
 
 ПОРЯДОК ПРІОРИТЕТУ
 1. Цей master START-HERE.
-2. `mavik-sklad/files/CANON-REGISTRY.md` — реєстр того, які канони зараз активні, а які історичні.
+2. `mavik-sklad/files/CANON-REGISTRY.md`.
 3. START-HERE активного конкретного проєкту.
 4. Канон/канонічні замітки конкретного проєкту.
-5. Актуальний checkpoint/STATUS активного напряму.
+5. Актуальний checkpoint/STATUS.
 6. Реальний актуальний рукопис/код/артефакт.
-7. Загальний канон людського письма.
-8. Універсальний технічний канон художнього тексту.
-9. Історичні журнали/старі релізи — лише для довідки, НІКОЛИ не як стартова база, якщо існує новіший канон.
+7. Загальні universal canons.
+8. Історичні журнали/старі релізи — лише для довідки.
 
 ============================================================
-ЗАГАЛЬНІ ОБОВ'ЯЗКОВІ КАНОНИ
+UNIVERSAL CANONS
 ============================================================
 
-A. ЛЮДСЬКЕ ПИСЬМО / РЕДАКТУРА
+Людське письмо / редактура:
 `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
 
-B. ТЕХНІЧНИЙ КОНТРОЛЬ ХУДОЖНЬОГО ТЕКСТУ
+Технічний контроль художнього тексту:
 `mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`
-Це універсальний канон; старі вузькі версії не використовувати як загальний технічний авторитет.
 
-C. ПОСТІЙНЕ ЗБЕРЕЖЕННЯ / CHECKPOINTS
+Постійне збереження/checkpoints:
 `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
 
 ============================================================
-САЙТ MAVIK.NAME
+SITE MAVIK.NAME
 ============================================================
 
-Починати з:
+Start:
 `mavik-sklad/files/START-HERE-SITE.txt`
 
-Далі:
+Canon:
 `mavik-sklad/releases/CANON.md`
 `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
 
-Поточна structural/functional база: **R192**.
-R187/R188/R189/R190/R191 та старі candidate/site-development документи — історія.
+Current structural/functional base: **R192**.
 
-Вузькі active site-canons:
+Narrow site canons:
 `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
 `mavik-sklad/files/kanon-storinky-knyhy.txt`
 
 ============================================================
-АНГЛІЙСЬКИЙ КОНТЕНТ MAVIK.NAME
+ENGLISH CONTENT MAVIK.NAME
 ============================================================
 
-Починати з:
+Start:
 `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 
-Далі:
+Then:
 `mavik-sklad/files/EN-SOURCE-POLICY.md`
 `mavik-sklad/translations/en/STATUS.md`
 
-Реальні переклади:
+Physical workspace:
 `mavik-sklad/translations/en/`
 
-Стара R188 English site-архітектура — лише архів для відновлення вже перекладеного контенту, не активна база.
+Current exact continuation at this checkpoint:
+`Евакуація, або Дорогою до стабіка` → Story 8 `Ghost` → whole-book parity pass.
 
 ============================================================
 РОМАН «СОЦІАЛЬНА»
 ============================================================
 
-Починати з:
+Start:
 `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 
-Далі:
+Canon/plan:
 `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
-`mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
-`mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`
+`mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 
-Persistent manuscript:
+Persistent manuscript physically in GitHub:
 `mavik-sklad/files/Соціальна.docx`
 
-Не писати наступну главу автоматично, якщо START-HERE вимагає спершу авторського рішення/плану.
+Do not automatically write Chapter 17. Verify the actual manuscript against the 16-chapter checkpoint first.
 
 ============================================================
-ІНШІ ТВОРЧІ ПРОЄКТИ
+«ВСЕСВІТ 25»
 ============================================================
 
-Під час аудиту current `main` не виявлено окремих project START-HERE/CANON для всіх інших назв творів.
-Тому для будь-якого іншого проєкту:
-1. спочатку шукати його реальні файли на складі;
-2. не реконструювати канон лише з пам'яті чату;
-3. якщо persistent START-HERE/канон відсутній — перед суттєвою новою роботою створити його з перевірених джерел.
+Start/current persistent overlay:
+`mavik-sklad/files/START-HERE-VSESVIT-25.md`
+
+Status:
+- trilogy canon active;
+- Book I `Макар` completed;
+- Book II `Арон`, Book III `Деймон` retain approved direction.
+
+Full canon/manuscript binaries are in File Library; do not pretend they are GitHub files. Retrieve actual source before prose editing.
 
 ============================================================
-ІСТОРИЧНІ / ДУБЛЬОВАНІ ФАЙЛИ
+«КОД ЛЕГЕНДИ»
 ============================================================
 
-Каталоги `mavik-sklad/builds/R188-*`, старі `R18x-*` checkpoints, старі release passports та site-plans є архівними, якщо реєстр не вказує інше.
+Start:
+`mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
 
-`mavik-sklad/text/` — текстове дзеркало. Якщо копія відрізняється від `mavik-sklad/files/`, авторитет має `files/`, доки дзеркало не синхронізовано.
+Status:
+- Book I completed;
+- manuscript sent to publisher FOR REVIEW;
+- site placement announcements, canonical book page `/books/kod-lehendy/`;
+- possible Kyiv/fifth-founder sequel is concept-only, with key answers still open.
 
-Ніколи не обирати старіший файл тільки тому, що в його назві є CANON/KANON.
+Approved manuscript is in File Library; retrieve actual DOCX before textual editing.
 
 ============================================================
-ПЕРЕД ВИДАЧЕЮ РЕЗУЛЬТАТУ
+«ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА»
 ============================================================
 
-- перевірити, що робота виконана від актуального канону;
-- не вигадувати відсутні дані;
-- зберегти реальний створений артефакт;
-- зробити checkpoint/status після суттєвого блоку;
-- записати точну точку продовження;
-- не називати кандидат каноном без прямого підтвердження користувача.
+Start:
+`mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
 
-Коротка формула:
-MASTER START → CANON REGISTRY → PROJECT START → PROJECT CANON → STATUS/ARTIFACT → WORK → SAVE → CHECKPOINT.
+Status:
+- Ukrainian povist completed/published;
+- Ghost + 7 rescued soldiers = 8 total;
+- 12:17 hard reveal logic;
+- latest edited Ukrainian manuscript in File Library;
+- English continuation: Story 8 Ghost.
+
+============================================================
+НФ ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
+============================================================
+
+Start:
+`mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
+
+Status:
+- concept only;
+- no manuscript/title/character bible yet;
+- do not silently close open questions.
+
+============================================================
+UNLISTED PROJECTS
+============================================================
+
+For any other named creative project:
+1. search warehouse + File Library for actual source;
+2. do not reconstruct a canon only from chat memory;
+3. if persistent START-HERE is absent, create/restore it from verified material before substantial work.
+
+============================================================
+HISTORY / ARCHIVE
+============================================================
+
+`mavik-sklad/builds/R188-*`, old R18x site checkpoints/passports/candidates, old R188-English architecture and old site plans are archival unless `CANON-REGISTRY.md` explicitly says otherwise.
+
+`mavik-sklad/text/` is a mirror. If it diverges from `mavik-sklad/files/`, `files/` is authority until resynchronized.
+
+Never choose an older file merely because its filename contains CANON/KANON.
+
+============================================================
+BEFORE FINISHING WORK
+============================================================
+
+- verify current authority;
+- do not invent missing facts;
+- save the actual artifact;
+- update checkpoint/status after substantive work;
+- record exact continuation point;
+- never call a candidate canonical without explicit user approval.
+
+FORMULA:
+MASTER START → CANON REGISTRY → PROJECT START → PROJECT CANON/STATUS → ACTUAL SOURCE → WORK → SAVE → CHECKPOINT.
