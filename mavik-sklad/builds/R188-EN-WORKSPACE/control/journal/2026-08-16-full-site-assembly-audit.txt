@@ -1,0 +1,136 @@
+MAVIK.NAME — R188 NATIVE ENGLISH — FULL-SITE ASSEMBLY AUDIT
+Date: 16.08.2026
+Status: WORK IN PROGRESS / NOT CANONICAL
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+Base SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
+Branch: `r188-english-work`
+
+PURPOSE
+User explicitly ordered assembly of the FULL native English site, not isolated book translations. R188 work therefore runs as parallel release workstreams: public English shell, all completed books, Boss English management, English covers, English EPUBs, content/SEO/system routes, validation and final full ZIP.
+
+1. PUBLIC ENGLISH SHELL — PHYSICALLY PRESENT IN STAGING
+Verified in recursive staging tree:
+- `en/index.html`
+- `en/books/index.html`
+- `en/books/new/index.html`
+- `en/books/free/index.html`
+- `en/about/index.html`
+- `en/blog/index.html`
+- `en/announcements/index.html`
+- `en/music/index.html`
+- `en/discover/index.html`
+- `en/genres/index.html`
+- `en/themes/index.html`
+- `en/manifest.webmanifest`
+- `assets/app/en-site.css`
+
+This means the native `/en/` public contour exists physically and must be completed/audited rather than rebuilt blindly.
+
+2. BOOK TRANSLATION STATE
+Complete English beta web editions: 9/19 before current book.
+Complete beta titles:
+1. You and I...
+2. Solya, the Grain of Sand Who Dreamed of a Skyscraper
+3. Rejection in Advance
+4. Transfer
+5. The Gospel According to Macarius
+6. The Nameless
+7. Patterns of Self-Reflection
+8. Mom, I Want to Live!
+9. The Man Without an Account
+
+Active tenth title:
+- `Три романи, які ніхто не читає` → `Three Novels Nobody Reads`
+- authoritative source: 08.08.2026 DOCX
+- Section 1 / English block 001 is now persisted in WORKSPACE + STAGING and readback passed.
+
+Remaining untranslated completed works after current active title:
+- `yak-vitko-z-moskaliamy-voiuvav`
+- `toi-shcho-nese-svitlo`
+- `lysty-polkovnyku`
+- `olena`
+- `universe`
+- `petlia`
+- `patsiient`
+- `advokat-dyiavola`
+- `skulptor`
+
+`Social` remains unfinished and archive-only.
+
+3. ENGLISH BOOK CATALOGUE — IMPORTANT RELEASE DEFECT
+`en/books/index.html` already contains cards/links for all 19 target books, including the ten works that were not yet physically complete in English at the time of this audit.
+Therefore the current catalogue is a DEVELOPMENT catalogue and contains release-bound dead links until those routes are completed.
+Do not call the public English library release-ready until every listed book route exists and passes link/readback checks.
+
+4. BOSS ENGLISH — IMPLEMENTED BACKUP EXISTS, STAGING MISSING
+Recursive staging audit found no `boss/index.php` under `R188-EN-STAGING`.
+However WORKSPACE contains an exact six-part compressed backup of the previously implemented R188 Boss file with English management area.
+Restore metadata:
+- final release path: `boss/index.php`
+- original size: 234087 bytes
+- original SHA-256: `e9223e2820227c23adb8d716590e5bc4bd9ba12b926cba3bae30fd7d90b9d0d8`
+- PHP lint before backup: PASS
+- gzip size: 55577 bytes
+- gzip SHA-256: `f940e8027dc018bf9f573cee6016e21a856d12c93b62003abd29fa388300ec22`
+- six validated binary chunks, 10000/10000/10000/10000/10000/5577 bytes
+- restore instruction: `large-files/boss/boss-index-r188.php.RESTORE.txt`
+- old single truncated gzip must NEVER be used.
+
+Current connector can read the binary chunks as base64 but does not directly decompress/concatenate them into a repository file. Before rewriting anything, continue searching for a physical copy of the original PHP or a deterministic safe restore path. The exact backup remains authoritative; Boss must not be reimplemented from memory.
+
+5. STAGING REGISTRIES — STALE
+The following control files predate the current physical state and MUST NOT be trusted as current counts:
+- `R188-EN-STAGING/STAGING-MANIFEST-CURRENT.txt` (old 24-file / 2-book-era snapshot)
+- `R188-EN-STAGING/STAGING-MANIFEST.txt` (older 11-file snapshot)
+- `R188-EN-WORKSPACE/R188-FILE-LEDGER-CURRENT.json` (schema 1 / 2-book-era snapshot)
+
+Authoritative current registry is:
+- `R188-EN-WORKSPACE/R188-FILE-LEDGER.json` (schema 4, 9 complete beta editions before active book)
+- main checkpoint `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
+
+Action: refresh/deprecate stale registry aliases so all continuation points agree.
+
+6. COVERS — NOT FINAL
+Current English catalogue largely reuses Ukrainian/source cover image paths.
+Hard product rule remains: each English edition needs an English-language cover adaptation before final publication status.
+No beta translation should be promoted to final solely because its web text is complete.
+
+7. EPUB — NOT FINAL
+Validated English EPUBs remain required for all completed English editions.
+This is a separate production pass after/alongside web translation and cover adaptation.
+Final EPUB checks must include ZIP/CRC/container/OPF/nav/manifest validation and route/download checks.
+
+8. SEO / SYSTEM / CACHE — REQUIRED BEFORE CANDIDATE
+Must audit/update at minimum:
+- canonical + hreflang UA/EN pairs
+- sitemap inclusion of actual English public routes only
+- robots policy
+- manifest/service-worker/cache assets and English route caching
+- no dead `/en/` links
+- no local/dev references
+- English metadata / JSON-LD where applicable
+- English blog/announcement content completeness
+- legal/system routes as applicable to native English navigation
+
+9. FINAL R188 PACKAGING RULE
+Final candidate is NOT an English-only overlay archive.
+Produce a full numbered R188 site ZIP through deterministic canonical R187 + reconciled R188 STAGING overlay.
+Before issue:
+- staging/manifest/ledger reconciliation
+- exact `.mavik-release.json managed_files`
+- real Boss archive validator
+- PHP lint
+- JS checks
+- JSON/XML checks
+- EPUB validation
+- ZIP integrity
+- dead-link/local-ref audit
+- full candidate readback
+- explicit user approval before R188 can become canonical.
+
+CURRENT PRIORITY ORDER
+A. Continue all remaining literary translations source-first while public shell already exists.
+B. Restore/stage exact Boss English implementation from authoritative backup.
+C. Complete English cover + EPUB production.
+D. Audit/complete Blog, Announcements, About, Music, Discover/Genres/Themes and system/SEO routes.
+E. Reconcile STAGING and build/test full R188 candidate ZIP.
