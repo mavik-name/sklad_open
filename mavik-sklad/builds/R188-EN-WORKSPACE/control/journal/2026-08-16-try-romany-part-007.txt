@@ -1,0 +1,75 @@
+R188 / THREE NOVELS NOBODY READS / SECTION 007
+Date: 2026-08-16
+Status: COMPLETE / SOURCE + WORKSPACE + STAGING / READBACK PASS
+
+Authoritative Ukrainian source:
+Три романи, які ніхто не читає.docx
+Authoritative file date: 2026-08-08T10:24:22Z
+Older June copies are non-authoritative and were not used as source text.
+
+Section:
+Розділ 7. Читацька ніч
+English heading:
+CHAPTER 7. READING NIGHT
+
+Exact boundary:
+Starts with: Розділ 7. Читацька ніч
+Ends with: Як і Артур.
+Next heading excluded: Розділ 8. Шість місяців тиші
+
+SOURCE
+Path: mavik-sklad/builds/R188-EN-WORKSPACE/source/try-romany-yaki-nikhto-ne-chytaie/uk-007.txt
+Blob SHA: d46af97ad096eb0ee4e597c70e0253094cc7c805
+Commit: 0db2bd30cd6491052c6a60a1a50d1306a0554595
+
+ENGLISH WORKSPACE
+Path: mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-007.txt
+Blob SHA: 41e6d58a1b9d57e90a927c6daf3885ea5f0575ab
+Commit: f372596d59c1608f5407424b5f505bd42da2cc9f
+
+STAGING
+Path: mavik-sklad/builds/R188-EN-STAGING/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-007.txt
+Blob SHA: 41e6d58a1b9d57e90a927c6daf3885ea5f0575ab
+Commit: 77a789a904b8856218116900de2c131618b9de77
+Readback: PASS / matching blob SHA
+
+August-vs-June corrections explicitly enforced:
+- omitted old June sentence after the kitchen counter about trying to understand what was happening;
+- omitted old June standalone `Сама.` between `До нього.` and `Уночі.`;
+- omitted old June `Оля читала далі.` after `Він замовк.`;
+- used August `очевидний висновок`, not old `цілком очевидний висновок`;
+- omitted old June extended paragraph after `Вони читали далі.` about the night turning into work; August proceeds directly to `Оля іноді сперечалася.`
+
+Key literary choices preserved:
+- `ти сервіруєш паніку` -> `you’re serving the panic`;
+- “Literature” folder / occupying the whole continent joke;
+- reader's smile as a signal from space;
+- hottest object in room being a Word file;
+- corpse/atmosphere metaphor;
+- emergency literary ambulance;
+- reader not owing a hundred-page line of credit;
+- ego's internal applause;
+- writers' sanatorium;
+- bachelor emergency reserve;
+- woman-as-man-with-hair joke;
+- literature and biceps;
+- praise is sugar / reading is bread;
+- happiness is badly structured;
+- wallpaper/gallery;
+- old sofa where trauma once sat;
+- intimacy in DOCX format;
+- editorial spiciness and sleep-deprivation aftertaste;
+- `Saw what’s inside you.`;
+- philosophical flashlight;
+- final `He had been read ... For real ... Now it had to work. Just like Artur.`
+
+BOOK PROGRESS AFTER THIS BLOCK
+Sections complete: 7/15
+Author's afterword: pending
+Web shell: pending until text substantially/fully complete
+Cover: pending English adaptation
+EPUB: pending
+
+NEXT EXACT ACTION
+Extract exact August Section 8: Розділ 8. Шість місяців тиші.
+First establish exact Section 9 heading/boundary from the authoritative 2026-08-08 DOCX, then persist uk-008.txt, translate, stage same blob, readback, journal, ledger/checkpoint/handoff.
