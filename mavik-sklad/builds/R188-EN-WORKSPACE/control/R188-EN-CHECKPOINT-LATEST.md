@@ -1,107 +1,119 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **15.08.2026 19:00 +03:00**
-Purpose: authoritative handoff point for the next ChatGPT session working on the native English edition.
+Updated: **16.08.2026 — `The Man Without an Account` COMPLETE / 9 of 19 English beta web editions**
+Status: **WORK IN PROGRESS / NOT CANONICAL**
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
 
-## CANONICAL BASE
+## HARD RULES
+- native `/en/`, direct `UA ↔ EN`, no Google Translate as English edition;
+- Ukrainian R187 remains intact;
+- separate Boss `English` area required before release;
+- only completed Ukrainian works enter translation/publication;
+- `Social` is unfinished and archive-only;
+- English cover adaptations + validated EPUBs required before final status;
+- mandatory persistence cycle: `source → WORKSPACE → translation/code → WORKSPACE → STAGING if release → readback → journal/ledger/checkpoint → next`;
+- every process file is persisted; every intermediate result is journaled.
 
-- Canonical Ukrainian full site: **R187**
-- File: `187 КАНОН_Сайт_ОК_daf4fd24.zip`
-- SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
-- Status: **CANONICAL**, directly approved by the user.
-- R188 English work is based on this R187.
-- R188 is **WORK IN PROGRESS / NOT CANONICAL**.
+## STORAGE
+- branch: `r188-english-work`
+- WORKSPACE: `mavik-sklad/builds/R188-EN-WORKSPACE/`
+- STAGING: `mavik-sklad/builds/R188-EN-STAGING/`
+- ledger: `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`
+- operations log: `mavik-sklad/builds/R188-EN-WORKSPACE/control/R188-OPERATIONS-LOG.txt`
+- immutable journal: `mavik-sklad/builds/R188-EN-WORKSPACE/control/journal/`
 
-## HARD PRODUCT DECISIONS
+## COMPLETE ENGLISH BETA WEB EDITIONS — 9/19
+1. You and I...
+2. Solya, the Grain of Sand Who Dreamed of a Skyscraper
+3. Rejection in Advance — 3/3
+4. Transfer — 6/6 + source 6/6
+5. The Gospel According to Macarius — 6/6, foreword + prologue + 25 chapters + afterword
+6. The Nameless — 6/6, 13 chapters + afterword
+7. Patterns of Self-Reflection — 8/8, author introduction + 49 texts
+8. Mom, I Want to Live! — 7/7, 26 chapters + afterword; landing + reader + text page; staging readback passed
+9. The Man Without an Account — 6/6, 5 chapters + author's afterword; landing + reader + clean text page; staging readback passed
 
-- Build a real native English edition under `/en/`.
-- Do not use Google Translate as the English edition.
-- Ukrainian R187 remains intact as the Ukrainian edition.
-- Public language switching becomes direct native `UA ↔ EN`.
-- When `/en/` is complete, remove automatic translator widgets/multilingual selectors from the Ukrainian public UI.
-- User has no official English translations; ChatGPT is responsible for literary translation.
-- Translate as literature: preserve plot, facts, character, voice, rhythm, humour and subtext; avoid literal Ukrainian calques; do not invent scenes/details.
-- Every English book requires an English-language cover.
-- Final English publication requires validated English EPUBs.
-- Boss must have a separate top-level `English` management area.
+All nine remain `translated_beta`: English cover adaptation and validated English EPUB pending.
 
-## NEW HARD CONTENT RULE — COMPLETED WORKS ONLY
+## JUST COMPLETED — THE MAN WITHOUT AN ACCOUNT
+Ukrainian: `Людина без акаунта`
+English: `The Man Without an Account`
+Slug: `liudyna-bez-akaunta`
+Canonical structure: **5 chapters + author's afterword = 6 blocks**.
 
-- **Only completed Ukrainian works are eligible for English translation/publication in R188.**
-- Unfinished works remain subject to Ukrainian editing and therefore MUST NOT be translated further for release, published under `/en/`, staged, EPUB-packaged, or counted as completed English editions.
-- Before starting a new English book translation, verify that the Ukrainian work is completed/final enough for publication.
-- If partial English work already exists for an unfinished title, preserve it as an archive of work performed, but do not continue it until the Ukrainian source is completed.
+### Translation body — 6/6 COMPLETE
+- part-001 SHA: `ec51115f74b55fc441f3957ed675c45e9830aa3a`
+- part-002 SHA: `d15dc0c530a8883f41a579f1e5fb8505ee9a1323`
+- part-003 SHA: `2b929ced487f4d04efe39161748f6524567f633a`
+- part-004 SHA: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
+- part-005 SHA: `691eb6f2a53ada2053594c6a6a6c0b2d4decfb07`
+- part-006 SHA: `bba5760b5d708e243a9e68ba765dfb08609ec625`
+- all six parts persisted in WORKSPACE + STAGING and read back successfully.
 
-## RECOVERY NOTE
+### August-source corrections
+- source authority: `Людина без акаунта.docx`, 08.08.2026;
+- block 4 was corrected after detecting an earlier shortened reconstruction;
+- block 4 source SHA: `87a688f4472c728936b0b111e33f3e81bc4229d1`;
+- block 5 source SHA: `0add59882f940aff45a6f5284429aa21e63458ec`;
+- block 6 source SHA: `4fc347f4485a5539dc29e77991568b70ce4ef303`;
+- exact afterword ending preserved: `Бо де моя рука — і де ваша впевненість, що все так просто?`
 
-The previous R188 working tree was not physically preserved after the earlier chat/session. Its architecture and completed-translation status survive in the journal/checkpoints, but do not treat the missing `/en/` code/readers/manuscripts as currently present on disk. Rebuild/package them from canonical R187 when preparing the actual R188 candidate.
+### English web shell — COMPLETE
+WORKSPACE + STAGING identical:
+- landing `index.html` SHA: `00a49bd1092de36d70ee7f6db906ff6c5ffe2faa`
+- reader `read/index.html` SHA: `575a5e95976906f2ced7fa5a6fc3e5832dffb22f`
+- clean text entry `read/text/index.html` SHA: `68d68d4548346ff52d08f7828352421822c1d62d`
+- atomic staging shell commit: `cdbcb4e7ccd9412a13f26378848e951252d71ed5`
+- reader/text entry load exactly `part-001.txt` through `part-006.txt`;
+- cover path used: `/assets/covers/library/liudyna-bez-akaunta.jpg`;
+- shell readback: PASS.
 
-## FULL ENGLISH TRANSLATIONS REPORTED COMPLETED IN PREVIOUS R188 WORK
+Journals:
+- `control/journal/2026-08-16-liudyna-bez-akaunta-part-006.txt`
+- `control/journal/2026-08-16-liudyna-bez-akaunta-web-shell-complete.txt`
 
-1. **You and I** — full translation, native beta reader reported.
-2. **Solya, the Grain of Sand Who Dreamed of a Skyscraper** — full translation, native beta reader reported.
-3. **Rejection in Advance** — full literary translation, native beta reader reported.
-4. **Transfer** — full literary translation, about 8,161 English words, native beta reader reported.
-5. **The Gospel According to Macarius** — preface + prologue + 25 chapters + afterword, native beta reader reported.
-6. **The Nameless** — 13 chapters + afterword, about 12,786 English words, native beta reader reported.
-7. **Patterns of Self-Reflection** — introduction + 49 texts, about 14,554 English words, native beta reader reported.
-8. **Mom, I Want to Live!** — 26 chapters + afterword, about 15,801 English words, native beta reader reported.
-9. **The Man Without an Account** — 5 chapters + author’s afterword, about 22,961 English words, native beta reader reported.
+## THE SCULPTOR
+- canonical R187 source inspected: 47 chapters + afterword, ~138,164 words;
+- safe 28-block structure preserved in `control/journal/2026-08-15-2324-skulptor-structure.txt`;
+- translation deliberately deferred by shorter-first queue optimization;
+- no English block started.
 
-Physical recovery/reconstruction of those missing English artifacts remains required before staging.
+## NEXT ACTIVE WORK
+**`Три романи, які ніхто не читає` → English edition TBD (`try-romany-yaki-nikhto-ne-chytaie`)**
+Approximate Ukrainian size: **30,905 words**.
+Verified latest matching source: `Три романи, які ніхто не читає.docx`, **08.08.2026 10:24:22Z**. Older 23.06.2026 copies are excluded.
+Exact heading inventory still requires extraction from that August DOCX before translation; do not infer it from old website navigation.
 
-## SOCIAL — ARCHIVED, NOT ACTIVE
+### FIRST ACTION ON RESUME / CONTINUE
+1. Extract exact heading inventory from the August DOCX.
+2. Choose safe chapter-boundary translation blocks.
+3. Persist structure journal.
+4. Extract first exact source block to WORKSPACE.
+5. Translate, persist WORKSPACE + STAGING, read back, journal, checkpoint.
 
-`Social` / `Соціальна` is an **unfinished Ukrainian work** and is therefore removed from the active English translation queue.
+## REMAINING SHORTER-FIRST QUEUE — 10 WORKS
+1. `try-romany-yaki-nikhto-ne-chytaie` ~30,905
+2. `yak-vitko-z-moskaliamy-voiuvav` ~33,499
+3. `toi-shcho-nese-svitlo` ~41,372
+4. `lysty-polkovnyku` ~52,406
+5. `olena` ~62,766
+6. `universe` ~68,944
+7. `petlia` ~86,054
+8. `patsiient` ~96,982
+9. `advokat-dyiavola` ~108,462
+10. `skulptor` ~138,164
 
-Work already performed is preserved and must NOT be discarded:
-- Previous-session Chapters 1–7 were reported translated, but their physical English files were not recovered.
-- Chapters 8–10 are physically stored at `mavik-sklad/files/r188-social-en-ch08-10.md`.
-- Chapters 11–13 are physically stored at `mavik-sklad/files/r188-social-en-ch11-13.md`.
-- These files are **archive-only**.
-- They are NOT R188 staging files, NOT public English content, and NOT candidates for EPUB/publication while the Ukrainian work is unfinished.
-- Do not continue from Chapter 14 unless the user later confirms the Ukrainian book has been completed and requests resumption.
-
-## CURRENT NEXT STEP
-
-Do **not** continue `Social`.
-
-Next R188 work should:
-1. identify the next **completed** Ukrainian title not yet translated;
-2. continue/reconstruct the native `/en/` architecture and Boss English area from canonical R187;
-3. continuously copy every actual R188 release file into `mavik-sklad/builds/R188-EN-STAGING/`.
-
-## STAGING RULE
-
-- Release staging folder: `mavik-sklad/builds/R188-EN-STAGING/`.
-- A file is not considered part of the future R188 release until its current copy exists in staging at the same relative path it will use in the ZIP, except a documented binary upload limitation.
-- Final R188 ZIP must be assembled from staging, not from a transient local working directory.
-- `Social` partial translation files are explicitly excluded from staging.
-
-## MAJOR REMAINING WORK
-
-- physically reconstruct/preserve the nine previously completed English manuscripts/readers;
-- reconstruct native `/en/` architecture and Boss English management from canonical R187;
-- translate only remaining COMPLETED works;
-- English covers;
-- final English editorial passes;
+## STILL REQUIRED BEFORE R188 RELEASE
+- remaining completed works;
+- English cover adaptations;
 - validated English EPUBs;
-- English blog and announcements;
-- SEO/hreflang/sitemap;
-- service-worker/cache and local-ref audit;
+- separate Boss `English` management;
+- English blog/announcements;
+- SEO/hreflang/sitemap/service worker/link audit;
 - PHP/JS/JSON/XML/EPUB checks;
-- exact R188 manifest and Boss validator;
-- full R188 candidate;
-- no canonicalization without direct user approval.
+- exact R188 manifest + Boss validator;
+- full R188 candidate ZIP;
+- explicit user approval before canonicalization.
 
-## CHECKPOINT PROTOCOL — MANDATORY
-
-After every meaningful work block:
-1. Update this file `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`.
-2. Update `mavik-sklad/files/site-r188-english-development.md`.
-3. Mirror the checkpoint to `mavik-sklad/text/R188-EN-CHECKPOINT-LATEST.md`.
-4. Store the actual translation/code/cover/EPUB/ZIP artifact — a checkpoint description alone is not enough.
-5. Copy every actual future release artifact into `mavik-sklad/builds/R188-EN-STAGING/`.
-6. On major milestones, create a timestamped checkpoint snapshot.
-
-This file is the authoritative continuation point unless a newer timestamped checkpoint explicitly supersedes it.
+Do not redo the nine completed beta editions or any blocks of `The Man Without an Account`.
