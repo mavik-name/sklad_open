@@ -22,9 +22,10 @@ Source checkpoint:
 
 ## SAVED ENGLISH PROGRESS
 
-`chapter-01-part-01.txt`
+Three consecutive Chapter-1 batches are physically saved:
 
-Saved translation covers the opening sequence of Chapter 1:
+### `chapter-01-part-01.txt`
+Covers:
 - store / Nazar and the batteries;
 - Marta and Serhii's initial response;
 - trip to Nazar's home;
@@ -34,13 +35,42 @@ Saved translation covers the opening sequence of Chapter 1:
 - food check;
 - stops after the freezer image: dumplings frozen together into one white stone.
 
+### `chapter-01-part-02.txt`
+Covers:
+- Serhii documents the apartment conditions;
+- child-services call and removal from home for safety assessment;
+- station paperwork and the `cold ash` conversation;
+- Nazar asks for his flashlight and the correct batteries;
+- Olena Rudenko's safety decision and temporary placement;
+- Marta's call from Viktoriia and church arrival;
+- flashlight/batteries found through the church aid stock;
+- first introduction of Pastor Andrii;
+- stops after: Marta had loved Andrii's hands since childhood.
+
+### `chapter-01-part-03.txt`
+Covers:
+- Andrii's hands / childhood memory;
+- his `if God had given me a son` line and Marta's internal response;
+- moving the aid boxes;
+- Marta's changing relationship to her father's pastoral way of hearing pain;
+- soup in the church kitchen;
+- discussion of her juvenile-police work;
+- Marta challenges Andrii with his own preaching about loving those who suffer;
+- investigator's-eye / becoming-hard exchange;
+- stops on Marta's answer to `Then what?`:
+  `A flashlight.`
+
 ## NEXT EXACT SOURCE POINT
 
-Continue immediately from the next Ukrainian sentence:
+Continue immediately from:
 
-`Сергій усе записав.`
+`Андрій не зрозумів.`
 
-Then continue Chapter 1 without restarting or retranslating the saved opening.
+Then:
+`— Що?`
+`— Мені потрібен ліхтарик для хлопчика. І батарейки.`
+
+Do not restart Chapter 1 or repeat any of the three saved batches.
 
 ## CONSISTENCY LOCKS
 
@@ -51,13 +81,16 @@ Current English decisions:
 - Назар → Nazar
 - Вікторія → Viktoriia
 - Олена Руденко → Olena Rudenko
+- Андрій → Andrii
 - `служба у справах дітей` → child services / child welfare service according to sentence context, without replacing the Ukrainian institution with a US/UK agency
 - `відділок` → station / police station according to context
+- `ювенальна` / juvenile-police work → translate descriptively without importing a foreign agency title
 
 Style:
 - preserve clipped observational narration;
 - keep institutional language dry where the source is dry;
 - keep short paragraph rhythm;
+- preserve religious/family language without over-explaining it;
 - do not explain what the source leaves implicit;
 - do not Americanize the social-services/police setting;
 - do not AI-polish the prose.
