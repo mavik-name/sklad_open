@@ -1,0 +1,41 @@
+R188 ENGLISH — THREE NOVELS NOBODY READS — BLOCK 005
+Date: 16.08.2026
+Status: source persisted / English translated / WORKSPACE + STAGING readback PASS
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- exact section: `Розділ 5. Лист видавцю`
+- authoritative source: August 08.08.2026 DOCX
+- exact final lines: `“Не помер.”` / `“Поки що.”`
+- next heading excluded: `Розділ 6. Бар, де всі щось пишуть`
+- source path: `source/try-romany-yaki-nikhto-ne-chytaie/uk-005.txt`
+- source commit: `56d4d334b221bfa1d81dfbd87f6dba6acbc256c5`
+- source blob SHA: `1db97d07b4c37da2a518a0d5cc00c1a93441cb5f`
+- source readback: PASS
+
+ENGLISH
+- heading: `CHAPTER 5. THE LETTER TO A PUBLISHER`
+- WORKSPACE: `site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-005.txt`
+- WORKSPACE commit: `1cc36e9859bf9479c543eda2b6d86c6975b6fdb5`
+- STAGING: `en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-005.txt`
+- staging commit: `06cbc5e962a580247ca8e81994b5851d0a0290e6`
+- matching WORKSPACE/STAGING blob SHA: `9954d248c43d8cf571a720a387436a9d9acdbef1`
+- final readback: PASS (`Didn’t die.` / `Not yet.` present)
+
+TRANSLATION NOTES
+- `анотація` remains `blurb`; `синопсис` remains `synopsis`;
+- `наклад` → `print run`;
+- `комівояжер з багажником літератури` → `a travelling salesman with a boot full of literature`;
+- `мрія офіційно перейшла в Excel` → `the dream has officially moved into Excel`;
+- comic publisher/social-media/self-publishing axis preserved without explanatory padding;
+- British-oriented spelling/register retained where applicable.
+
+CURRENT BOOK PROGRESS
+- verified structure: 15 numbered sections + author's afterword
+- source persisted: Sections 1–5
+- English persisted/staged: Sections 1–5
+- readback PASS through Section 5
+
+NEXT
+- exact August `Розділ 6. Бар, де всі щось пишуть` through Section 7 heading;
+- persist `uk-006.txt`, translate/stage `part-006.txt`, readback and journal.
