@@ -1,0 +1,5 @@
+const CACHE='mavik-shell-r188';
+const FALLBACK=['/','/en/','/favicon.ico','/assets/app/mavik-icon-192.png','/assets/app/mavik-icon-512.png'];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(c=>c.addAll(FALLBACK)).then(()=>self.skipWaiting()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('mavik-shell-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
+self.addEventListener('fetch',event=>{const req=event.request;if(req.method!=='GET')return;const url=new URL(req.url);if(url.origin!==location.origin)return;if(url.pathname.startsWith('/assets/music/')||url.pathname.endsWith('.mp3'))return;event.respondWith(fetch(req).then(resp=>{if(resp&&resp.ok){const copy=resp.clone();caches.open(CACHE).then(c=>c.put(req,copy));}return resp;}).catch(()=>caches.match(req).then(r=>r||(req.mode==='navigate'?caches.match(url.pathname.startsWith('/en/')?'/en/':'/'):Response.error()))));});

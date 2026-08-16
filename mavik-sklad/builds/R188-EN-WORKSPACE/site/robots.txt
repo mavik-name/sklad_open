@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /maintenance/
+Disallow: /_site-admin/
+Disallow: /boss/
+Disallow: /account/
+Disallow: /stats/
+Disallow: /analytics/
+Disallow: /reactions/
+
+Sitemap: https://mavik.name/sitemap.xml
+Sitemap: https://mavik.name/sitemap-en.xml
+
+# Machine-readable public content maps:
+# https://mavik.name/llms.txt
+# https://mavik.name/en/llms.txt

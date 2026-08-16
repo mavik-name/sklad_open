@@ -1,0 +1,12 @@
+R188 ENGLISH PHASE 1 — ROOT SEO/CACHE PASS
+Date: 2026-08-16
+Parent native-language commit: ff298331c4297f2feb9d745bce59584599407a27
+
+Added root-level English discovery/cache plumbing to the R188 overlay:
+- `/sitemap-en.xml` contains only currently indexable native-English routes: English home, Books, Author and the nine completed beta English book landing pages. Temporary status routes are deliberately excluded.
+- `robots.txt` keeps the canonical Ukrainian sitemap and adds `https://mavik.name/sitemap-en.xml`; also points machines to `/en/llms.txt`.
+- root `sw.js` cache namespace bumped to `mavik-shell-r188`; fallback includes both `/` and `/en/` and chooses the matching language home for failed navigation.
+
+The English sitemap includes reciprocal EN/UK alternate links at sitemap level for every listed English route.
+Temporary translation/status pages remain noindex and must not enter the English sitemap until replaced by final content.
+Root Ukrainian sitemap is preserved unchanged; R188 uses the dedicated English sitemap alongside it.
