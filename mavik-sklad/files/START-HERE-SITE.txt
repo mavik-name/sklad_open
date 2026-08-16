@@ -1,45 +1,50 @@
 MAVIK.NAME — START HERE / ОБОВ’ЯЗКОВИЙ СТАРТОВИЙ ПРОТОКОЛ
-Оновлено: 16.08.2026 21:41 +03:00
+Оновлено: 16.08.2026
 Статус: ОБОВ’ЯЗКОВО ЧИТАТИ ПЕРЕД БУДЬ-ЯКОЮ РОБОТОЮ ІЗ САЙТОМ
 
-============================================================
-НАКАЗ ДЛЯ CHATGPT / БУДЬ-ЯКОЇ НОВОЇ ГІЛКИ ПРОЄКТУ
-============================================================
+ПЕРЕД БУДЬ-ЯКОЮ ДІЄЮ З MAVIK.NAME:
 
-ПЕРЕД БУДЬ-ЯКОЮ ВІДПОВІДДЮ АБО ДІЄЮ, ЯКА СТОСУЄТЬСЯ MAVIK.NAME:
+1. Прочитати `mavik-sklad/START-HERE.txt`.
+2. Прочитати цей файл повністю.
+3. Прочитати `mavik-sklad/releases/CANON.md`.
+4. Прочитати `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`.
+5. Прочитати `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`.
+6. Якщо правка стосується mobile reader header — прочитати `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`.
+7. Якщо правка стосується сторінки книги — прочитати `mavik-sklad/files/kanon-storinky-knyhy.txt`.
+8. Якщо робота стосується English content — прочитати `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`, `mavik-sklad/files/EN-SOURCE-POLICY.md` і `mavik-sklad/translations/en/STATUS.md`.
+9. НЕ покладатися на пам’ять чату, якщо вона суперечить дальньому складу.
+10. НЕ питати користувача повторно про вже зафіксовані рішення.
+11. НЕ починати structural/functional правки від R187/R188/R189/R190/R191.
+12. Після кожного суттєвого блоку зробити checkpoint.
+13. Перед завершенням сесії/переходом у нову гілку зробити фінальний checkpoint.
 
-1. Прочитати цей файл повністю.
-2. Прочитати `mavik-sklad/releases/CANON.md`.
-3. Прочитати `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`.
-4. Прочитати `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`.
-5. Для англійського контенту прочитати `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`.
-6. НЕ покладатися на пам’ять чату, якщо вона суперечить дальньому складу.
-7. НЕ питати користувача повторно про вже зафіксовані рішення.
-8. НЕ починати нові structural/functional правки від R188, R189, R190 або R191.
-9. Після кожного суттєвого блоку роботи зробити checkpoint.
-10. Перед завершенням сесії зробити фінальний checkpoint.
-
-Нова гілка = нова розмова, АЛЕ НЕ новий стан проєкту.
+Нова гілка = нова розмова, але НЕ новий стан проєкту.
 
 ============================================================
 ПОТОЧНА КАНОНІЧНА БАЗА
 ============================================================
 
-КАНОНІЧНИЙ РЕЛІЗ:
-- R192
-- multipart full-site release
-- `192 Збірка_Сайт_MULTILANG_PART-1.zip`
-  SHA-256: `2dbe799249e833eb5f9980f862bc02117ffafbfae0bc052b57fe9740467784b8`
-  size: 27,168,114 bytes
-- `192 Збірка_Сайт_MULTILANG_PART-2.zip`
-  SHA-256: `daf69e57df27ada7f1d5bb38416c298195fe8225b1e996e368872338b8d9759a`
-  size: 23,379,542 bytes
-- managed files: 603
-- release manifest SHA-256: `2baa602e6d542f2aa443d8af2abe922e3817555f1a480c5c1fb77a1f50f60620`
-- multipart set id: `r192-2baa602e6d542f2a`
-- status: КАНОН, встановлений через Boss і прямо затверджений користувачем 16.08.2026 о 21:41 +03:00.
+КАНОНІЧНИЙ РЕЛІЗ: **R192**
+Тип: multipart full-site release.
 
-Усі наступні структурні та функціональні зміни робити ВИКЛЮЧНО від R192, доки користувач прямо не затвердить новіший канон.
+`192 Збірка_Сайт_MULTILANG_PART-1.zip`
+- SHA-256: `2dbe799249e833eb5f9980f862bc02117ffafbfae0bc052b57fe9740467784b8`
+- size: 27,168,114 bytes
+
+`192 Збірка_Сайт_MULTILANG_PART-2.zip`
+- SHA-256: `daf69e57df27ada7f1d5bb38416c298195fe8225b1e996e368872338b8d9759a`
+- size: 23,379,542 bytes
+
+Release manifest:
+- release: 192
+- base_release: 191
+- managed files: 603
+- manifest SHA-256: `2baa602e6d542f2aa443d8af2abe922e3817555f1a480c5c1fb77a1f50f60620`
+- multipart set id: `r192-2baa602e6d542f2a`
+
+Статус: КАНОН, встановлений через Boss і прямо затверджений користувачем 16.08.2026.
+
+Усі наступні structural/functional зміни сайту робити ВИКЛЮЧНО від R192, доки користувач прямо не затвердить новіший канон.
 
 ============================================================
 АРХІТЕКТУРНИЙ КАНОН
@@ -48,37 +53,39 @@ MAVIK.NAME — START HERE / ОБОВ’ЯЗКОВИЙ СТАРТОВИЙ ПРО�
 - один багатомовний core;
 - одна Boss-адмінка;
 - одна модель даних;
-- мови підключаються language packs/config;
+- language packs/config, не окремі копії сайту;
 - українська — коренева версія без префікса;
 - інші мови — префікси типу `/en/`;
 - жодного Google Translate / translator UI / translator fallback;
-- explicit/manual language selection має пріоритет над saved/browser language;
-- browser autodetect працює лише як fallback;
-- native language buttons залишаються для ручного вибору;
+- explicit URL / ручний вибір мови має пріоритет над saved/browser language;
+- browser autodetect лише fallback;
+- нативні мовні кнопки лишаються для ручного вибору;
 - меню та сторінки підтримують drag & drop;
 - кількість книг на головній задається окремо для desktop і mobile;
-- універсальна кнопка `← Назад / Back` є в полі внутрішніх сторінок, не в меню;
+- універсальна `← Назад / Back` є в полі внутрішніх сторінок, не в головному меню;
+- чисту text-only сторінку для Chrome Read Aloud не засмічувати UI;
 - великі повні релізи використовують multipart ZIP deploy через Boss.
 
 ============================================================
 КНИГИ / АНОНСИ
 ============================================================
 
-- книга завжди залишається одним book object і однією book page;
+Книга завжди залишається одним book object і однією book page.
+
 - placement/status визначає лише показ у `Книги` або `Анонси`;
-- announcement не має окремого механізму сторінки;
+- announcement не має окремого рендерера сторінки;
 - повернення `announcement → books` не створює книгу/обкладинку/опис заново.
 
 `Код легенди`:
-- канонічна сторінка `/books/kod-lehendy/`;
-- поточний placement: announcements;
+- canonical page: `/books/kod-lehendy/`;
+- current placement: `announcements`;
 - рукопис передано у видавництво НА РОЗГЛЯД;
 - не називати прийнятим або виданим без прямої зміни статусу користувачем;
 - legacy `/announcements/kod-lehendy/` редиректить на book page.
 
 `Евакуація, або Дорогою до стабіка`:
 - є в українській бібліотеці;
-- є в черзі англійського перекладу.
+- англійський переклад ведеться окремо у translation workspace.
 
 ============================================================
 КАВА / INTERNATIONAL SUPPORT
@@ -88,27 +95,41 @@ MAVIK.NAME — START HERE / ОБОВ’ЯЗКОВИЙ СТАРТОВИЙ ПРО�
 - у неукраїнських версіях Privat24/українські QR не показувати;
 - international support provider-agnostic;
 - public config: `assets/app/international-support.json`;
-- у канонічному R192 `enabled=false`, тому порожній блок не показується;
-- коли користувач надасть дані західної системи, внести їх МАЛИМ DATA/CONFIG PATCH без перебудови core;
-- використовувати лише public HTTPS links/copyable values;
+- у R192 `enabled=false`, тому порожній блок не показується;
+- західну систему підтримки додавати малим data/config patch без перебудови core;
 - secret API keys/tokens у public config не класти.
 
 ============================================================
 БЕЗПЕКА / СТАН / DEPLOY
 ============================================================
 
-- `/_site-state/` — живий захищений стан; не включати до release ZIP і не перезаписувати deploy.
-- Owner/Boss security не послаблювати.
+- `/_site-state/` — живий захищений стан; не включати до release ZIP і не перезаписувати штатним deploy;
+- Owner/Boss security не послаблювати;
 - multipart підтримує 1→2 та 2→1;
 - deploy починається тільки після всіх частин;
 - backup створюється;
 - state зберігається;
-- staging після успіху очищується.
+- staging після успішного deploy очищується.
+
+============================================================
+ЩО Є ІСТОРІЄЮ, А НЕ АКТИВНИМ КАНОНОМ
+============================================================
+
+НЕ використовувати як стартову базу:
+- `mavik-sklad/files/kanon-obolonky-saitu-r187-plan.txt`;
+- R187/R188 site passports/canons;
+- R189/R190/R191 candidate checkpoints;
+- старі R188 English site-development/workspace/staging notes;
+- `site-r188-english-development.md`;
+- старі `site-zminy-*`, якщо питання не про історію конкретної правки.
+
+Вони можуть бути корисні лише для реконструкції історії. Актуальну поведінку визначають R192 + цей START-HERE + вузькі актуальні canons.
 
 ============================================================
 ПЕРЕВІРКА КАНОНІЧНОЇ R192
 ============================================================
 
+Перед канонізацією було зафіксовано:
 - PHP 25/25 PASS;
 - JavaScript 16/16 PASS;
 - JSON 14/14 PASS;
@@ -116,7 +137,7 @@ MAVIK.NAME — START HERE / ОБОВ’ЯЗКОВИЙ СТАРТОВИЙ ПРО�
 - EPUB CRC 20/20 PASS;
 - public refs: 4,654 checked, broken 0;
 - `/en/` static Privat24/payment QR refs: 0;
-- support disabled smoke PASS;
+- support-disabled smoke PASS;
 - future support patch smoke PASS;
 - multipart integrity PASS;
 - deploy 1→2 PASS;
@@ -131,11 +152,4 @@ MAVIK.NAME — START HERE / ОБОВ’ЯЗКОВИЙ СТАРТОВИЙ ПРО�
 `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
 
 Формула:
-РОБОТА → КОПІЯ/ФІКСАЦІЯ АРТЕФАКТІВ → ЖУРНАЛ/CHECKPOINT → ЗВІТ КОРИСТУВАЧУ → ПРОДОВЖЕННЯ.
-
-Якщо binary неможливо фізично покласти на GitHub через доступний connector:
-- записати точне ім’я;
-- size;
-- SHA-256;
-- реальне місце збереження;
-- не стверджувати, що binary фізично є на GitHub.
+START-HERE → КАНОН → АКТУАЛЬНИЙ СТАН → РОБОТА → ЗБЕРЕЖЕННЯ → CHECKPOINT → ЗВІТ → ПРОДОВЖЕННЯ.
