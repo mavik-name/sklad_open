@@ -17,7 +17,7 @@ SITE MAVIK.NAME
 - start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release canon: `mavik-sklad/releases/CANON.md`
 - current checkpoint: `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
-- current structural/functional base: R192
+- structural/functional base: R192
 - reader-header canon: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
 - book-page canon: `mavik-sklad/files/kanon-storinky-knyhy.txt`
 
@@ -26,17 +26,42 @@ ENGLISH CONTENT
 - source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
 - status: `mavik-sklad/translations/en/STATUS.md`
 - physical workspace: `mavik-sklad/translations/en/`
+- exact current continuation: Evacuation Story 8 Ghost
 
 СОЦІАЛЬНА
 - start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 - canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
-- persistent manuscript: `mavik-sklad/files/Соціальна.docx`
+- persistent GitHub manuscript: `mavik-sklad/files/Соціальна.docx`
+- current written checkpoint: 16 chapters; no automatic Chapter 17
+
+ВСЕСВІТ 25
+- start/current overlay: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
+- trilogy active; Book I Макар completed
+- full canon + Book-I manuscript are File Library binaries, not claimed as GitHub files
+
+КОД ЛЕГЕНДИ
+- start: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
+- Book I completed; manuscript at publisher for review
+- sequel Kyiv/fifth-founder direction = concept only
+- approved manuscript is in File Library
+
+ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА
+- start: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
+- Ukrainian povist completed/published
+- Ghost + 7 = 8; 12:17 hard reveal logic
+- latest edited Ukrainian manuscript is in File Library
+- English Stories 1–7 saved in GitHub; Story 8 Ghost next
+
+НФ ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
+- start: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
+- concept only; no manuscript/title/character bible yet
+- open questions must remain open until author decision
 
 HISTORY / ARCHIVE
 - `mavik-sklad/builds/R188-*` = archive/recovery only
 - old R187/R188/R189/R190/R191 site candidates/passports/checkpoints never override R192
 - old R188-English site architecture never overrides active English translation files
-- `mavik-sklad/text/` is a mirror; `files/` is authoritative if a mirror diverges
+- `mavik-sklad/text/` is a mirror; `files/` is authority if a mirror diverges
 
-For any other named creative project not listed in CANON-REGISTRY: search for its real warehouse files first; do not reconstruct its canon from chat memory. If no persistent project START-HERE exists, create/restore one from verified source material before substantial new work.
+For any other named project not listed above: search warehouse + File Library first; do not reconstruct its canon from chat memory. If no persistent project START-HERE exists, create/restore one from verified source material before substantial new work.
