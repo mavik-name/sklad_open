@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 4/6 (August canonical correction applied)**
+Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 5/6**
 Status: **WORK IN PROGRESS / NOT CANONICAL**
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
@@ -74,34 +74,44 @@ Source: `source/liudyna-bez-akaunta/uk-004.txt`
 - `Душа як водяний знак`
 - authoritative source: `Людина без акаунта.docx`, 08.08.2026;
 - source SHA: `87a688f4472c728936b0b111e33f3e81bc4229d1`
-- source correction commit: `b07e0f4f6f9180e8930b3d274fda69230ff77bef`
-- previous shortened reconstruction was detected and replaced after direct August-source verification.
-English WORKSPACE:
-- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-004.txt`
-- commit: `230f1433abf886c9119c592591ee7e59998ae041`
-English STAGING:
-- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-004.txt`
-- commit: `1640722f159f5e3929a979d4aa58e5a613671795`
+English WORKSPACE + STAGING: `part-004.txt`
 - `THE SOUL AS A WATERMARK`
-- matching WORKSPACE/STAGING SHA: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
-- readback: PASS, including canonical middle sections and exact ending `It would be complicity.`
+- matching SHA: `e1048e2675fc6cef9d2287e4443039315d21a5ca`
+- readback: PASS.
+
+### Block 5/6 — COMPLETE
+Source: `source/liudyna-bez-akaunta/uk-005.txt`
+- `Де моя рука`
+- authoritative source: `Людина без акаунта.docx`, 08.08.2026;
+- source SHA: `0add59882f940aff45a6f5284429aa21e63458ec`
+- source commit: `0ebcca2fbd99af7e289567ca13f015b54d4e4d21`
+English WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-005.txt`
+- commit: `0e7d83fc2e8889706b5419beb51ba753874fb792`
+English STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-005.txt`
+- commit: `6ce50920fc5da0cb2a6e5638b9c2742704b1c691`
+- `WHERE IS MY HAND?`
+- matching WORKSPACE/STAGING SHA: `691eb6f2a53ada2053594c6a6a6c0b2d4decfb07`
+- key `puss / pussy` dialect wordplay preserved;
+- exact ending `Because the house was still asleep.` readback: PASS.
 Journal:
-- `control/journal/2026-08-16-liudyna-bez-akaunta-part-004.txt`
-- corrected journal commit: `ce88ac0a5c6c5a1341c5d843b19f3ab50570ee1b`
+- `control/journal/2026-08-16-liudyna-bez-akaunta-part-005.txt`
+- journal commit: `8bffd929f08aad1b7d5fefc6ed27a0489994de3e`
 
 ## EXACT STOP POINT
-- current book source: **4/6 persisted**;
-- current book English translation: **4/6 persisted**;
-- WORKSPACE/STAGING readback for blocks 1–4: **PASS**;
-- next block: **Chapter 5 `Де моя рука` / 5 of 6**.
+- current book source: **5/6 persisted**;
+- current book English translation: **5/6 persisted**;
+- WORKSPACE/STAGING readback for blocks 1–5: **PASS**;
+- next block: **author's afterword / 6 of 6**.
 
 ## FIRST ACTION ON RESUME
-1. Extract/check exact Chapter 5 from latest August source `Людина без акаунта.docx`.
-2. Persist `WORKSPACE/source/liudyna-bez-akaunta/uk-005.txt`.
-3. Translate Chapter 5 to `part-005.txt`.
+1. Extract/check exact author's afterword from latest August source `Людина без акаунта.docx`.
+2. Persist `WORKSPACE/source/liudyna-bez-akaunta/uk-006.txt`.
+3. Translate afterword to `part-006.txt`.
 4. Persist WORKSPACE + STAGING.
 5. Read back, compare SHA, journal result.
-6. Continue immediately to author's afterword 6/6.
+6. Mark `The Man Without an Account` complete English beta web edition and advance queue.
 
 ## STILL REQUIRED BEFORE R188 RELEASE
 - remaining completed works;
@@ -115,4 +125,4 @@ Journal:
 - full R188 candidate ZIP;
 - explicit user approval before canonicalization.
 
-Do not redo completed beta editions or blocks 1–4 of `The Man Without an Account`.
+Do not redo completed beta editions or blocks 1–5 of `The Man Without an Account`.
