@@ -1,7 +1,7 @@
 {
   "schema": 4,
   "project": "mavik.name R188 native English",
-  "updated_at": "2026-08-15-session-end",
+  "updated_at": "2026-08-16-after-liudyna-bez-akaunta",
   "canonical_base": {
     "release": 187,
     "file": "187 КАНОН_Сайт_ОК_daf4fd24.zip",
@@ -35,8 +35,8 @@
     {"slug":"toi-shcho-nese-svitlo","uk_title":"Той, що несе світло","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"olena","uk_title":"Олена","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"lysty-polkovnyku","uk_title":"Листи полковнику","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"queued"},
-    {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"in_progress","english_title":"The Man Without an Account","source_words":18840,"structure":"5 chapters + author's afterword","planned_blocks":6,"source_chunks":"1/6 persisted","translation_chunks":"0/6","current_source_path":"source/liudyna-bez-akaunta/uk-001.txt","current_source_blob":"46a215b96cd2c2591baaa4dbaeedef67ea12d687","current_translation_persisted":false,"exact_next":"translate Chapter 1 from persisted uk-001.txt, save to WORKSPACE + STAGING, readback, journal"},
+    {"slug":"try-romany-yaki-nikhto-ne-chytaie","uk_title":"Три романи, які ніхто не читає","publication_mode":"final","english_pipeline":"source_verification","source_words":30905,"authoritative_source":"Три романи, які ніхто не читає.docx","authoritative_source_date":"2026-08-08T10:24:22Z"},
+    {"slug":"liudyna-bez-akaunta","uk_title":"Людина без акаунта","publication_mode":"final","english_pipeline":"translated_beta","english_title":"The Man Without an Account","source_words":18840,"structure":"5 chapters + author's afterword","planned_blocks":6,"source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending","shell":{"landing_sha":"00a49bd1092de36d70ee7f6db906ff6c5ffe2faa","reader_sha":"575a5e95976906f2ced7fa5a6fc3e5832dffb22f","text_entry_sha":"68d68d4548346ff52d08f7828352421822c1d62d"}},
     {"slug":"yak-vitko-z-moskaliamy-voiuvav","uk_title":"Як Вітько з москалями воював","publication_mode":"final","english_pipeline":"queued"},
     {"slug":"vidmova-avansom","uk_title":"Відмова авансом","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Rejection in Advance","translation_chunks":"3/3","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
     {"slug":"transfer","uk_title":"Трансфер","publication_mode":"final","english_pipeline":"translated_beta","english_title":"Transfer","source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok","cover":"pending_english","epub":"pending"},
@@ -54,13 +54,14 @@
     "yevanheliie-vid-makariia":{"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6"},
     "bezimenni":{"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6"},
     "paterny-samorefleksii":{"status":"complete_beta","source_chunks":"8/8","translation_chunks":"8/8"},
-    "mamo-zhyty":{"status":"complete_beta","source_chunks":"7/7","translation_chunks":"7/7","readback":"ok"}
+    "mamo-zhyty":{"status":"complete_beta","source_chunks":"7/7","translation_chunks":"7/7","readback":"ok"},
+    "liudyna-bez-akaunta":{"status":"complete_beta","source_chunks":"6/6","translation_chunks":"6/6","web_edition":"complete","readback":"ok"}
   },
   "counts": {
     "completed_uk_works_target": 19,
-    "complete_english_beta_web_editions": 8,
+    "complete_english_beta_web_editions": 9,
     "excluded_unfinished": 1,
-    "remaining_completed_works_not_complete_in_english": 11
+    "remaining_completed_works_not_complete_in_english": 10
   },
   "queue_decision": {
     "strategy":"shorter completed works first",
@@ -68,11 +69,9 @@
   },
   "session_end_handoff":"control/journal/2026-08-15-SESSION-END-HANDOFF.txt",
   "next": {
-    "title":"The Man Without an Account",
-    "uk_title":"Людина без акаунта",
-    "slug":"liudyna-bez-akaunta",
-    "source_block":"1/6 already persisted",
-    "translation_block":"0/6 persisted",
-    "exact_action":"Translate Chapter 1 from WORKSPACE/source/liudyna-bez-akaunta/uk-001.txt, persist English part-001 to WORKSPACE + STAGING, readback, journal, then continue source 2/6."
+    "title":"Три романи, які ніхто не читає",
+    "slug":"try-romany-yaki-nikhto-ne-chytaie",
+    "source_status":"latest matching DOCX identified as 2026-08-08T10:24:22Z; older 2026-06-23 copies excluded",
+    "exact_action":"Extract exact August heading inventory and safe source blocks before any English translation."
   }
 }
