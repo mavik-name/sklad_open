@@ -1,25 +1,19 @@
-# MAVIK.NAME — R187 КАНОН
+# R187 CANON — HISTORICAL RELEASE RECORD
 
-Дата канонізації: 15.08.2026
+Status: **HISTORICAL / SUPERSEDED**
 
-Канонічний файл: `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+R187 was an earlier canonical site release. It is retained only as a historical release record.
 
-SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
-Розмір: `47,727,892` байти.
-Тип: повна збірка сайту.
-Base release: R186.
+Current release authority:
+`mavik-sklad/releases/CANON.md`
 
-Статус: **КАНОНІЧНА БАЗА**, прямо затверджена користувачем.
+Current canonical structural/functional base: **R192**.
 
-Ключові фінальні рішення:
-- mobile menu: `01 Книги → 02 Музика → 03 Блог → 04 Автор → 05 Анонси → 06 Вхід/Адмінка`;
-- desktop menu: `Книги → Музика → Блог → Автор → Анонси → Вхід/Адмінка`;
-- `Книги` → `/books/`, `Анонси` → `/announcements/`, окремий `Читати` прибрано;
-- книжковий блок на головній збережено; внутрішній anchor `#home-books`;
-- mobile «Кава» на головній: одна кругла чорна іконка, золота обвідка, золота чашка, без другого кільця;
-- «Піщинка Соля»: тестові U+0301-наголоси видалено;
-- повний контент R186 збережено;
-- manifest: release 187, base_release 186, managed_files 498;
-- `BOSS_ARCHIVE_VALIDATE_OK`, PHP 21/21, JS 15/15, EPUB 19/19 CRC clean, `unzip -t` PASS.
+For new site work read:
+1. `mavik-sklad/START-HERE.txt`
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. `mavik-sklad/files/START-HERE-SITE.txt`
+4. `mavik-sklad/releases/CANON.md`
+5. `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
 
-Історичний план `R187 SITE CORE / ОБОЛОНКА` скасовано як робочу модель. Поточний канон — саме повна R187.
+The original R187 canon remains available in Git history for historical reconstruction only.
