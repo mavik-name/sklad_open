@@ -1,41 +1,9 @@
-# MAVIK.NAME — R188 ENGLISH STAGING
+# R188 ENGLISH STAGING — ARCHIVE
 
-Purpose: persistent mirror of **every file that will enter the future R188 full release**.
+Historical staging only. Do not deploy or continue current work from this directory.
 
-Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
-SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
-R188 status: WORK IN PROGRESS / NOT CANONICAL.
+Current site canon: **R192**.
+Current English content workspace: `mavik-sklad/translations/en/`.
+Current start chain: `mavik-sklad/START-HERE.txt` → `mavik-sklad/files/CANON-REGISTRY.md` → `mavik-sklad/files/EN-TRANSLATION-START-HERE.md` → `mavik-sklad/files/EN-SOURCE-POLICY.md` → `mavik-sklad/translations/en/STATUS.md`.
 
-## HARD RULE
-
-The directory tree under `mavik-sklad/builds/R188-EN-STAGING/` must mirror the final R188 ZIP paths.
-
-Examples:
-- final `/en/index.html` -> `mavik-sklad/builds/R188-EN-STAGING/en/index.html`
-- final `/assets/app/en-site.css` -> `mavik-sklad/builds/R188-EN-STAGING/assets/app/en-site.css`
-- final Boss file -> same relative Boss path under this staging root
-- final English cover -> same relative `images/covers/en/...` path under this staging root
-- final English EPUB -> same relative downloads path under this staging root
-
-A file is **not considered safely included in R188** until its current copy exists in this staging tree, or a documented technical binary exception exists in `STAGING-MANIFEST.txt` with exact permanent location, size and SHA-256.
-
-## PACKAGING RULE
-
-The final R188 candidate must be assembled from this staging tree, or through an explicitly documented deterministic base-R187 + staging-overlay procedure. Never package from an untracked temporary session folder.
-
-Before packaging:
-1. reconcile staging tree against `STAGING-MANIFEST.txt`;
-2. verify no required staged path is missing;
-3. verify there are no untracked release files outside the manifest;
-4. generate the exact `.mavik-release.json managed_files` list;
-5. validate through the real Boss deploy validator;
-6. run ZIP integrity / PHP / JS / JSON/XML / EPUB checks.
-
-## CHECKPOINT RULE
-
-After every meaningful work block, copy the changed release files into this staging tree **before or together with** updating the R188 checkpoint.
-
-The checkpoint is documentation; this staging directory is the persistent file copy.
-
-Mandatory canon: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`.
-Latest handoff: `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`.
+This directory remains only as historical evidence/recovery source for files created during the old R188 English work.
