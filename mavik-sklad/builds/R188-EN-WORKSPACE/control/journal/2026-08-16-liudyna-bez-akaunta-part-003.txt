@@ -1,0 +1,45 @@
+R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — PART 003
+Date: 16.08.2026
+Status: completed translation block / persisted / readback passed
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-003.txt`
+- Chapter 3 `Шити чи пороти`
+- latest August canonical source checked against `Людина без акаунта.docx` (08.08.2026) at chapter start, Mahmoud/taxi/atelier scene, rewrite scene, wife scene, and exact Chapter 4 boundary
+- source blob SHA: `6a2ed8a55b400960c54386dfd3af01b72e6eb85d`
+
+ENGLISH TRANSLATION
+- book: `Людина без акаунта` → `The Man Without an Account`
+- slug: `liudyna-bez-akaunta`
+- block: 3/6
+- title: `Шити чи пороти` → `Sew or Rip`
+- content: Chapter 3, complete
+- Soviet `політінформація` rendered as `political briefing`; Mahmoud's deliberately distorted Russophone speech rendered as concise broken English while preserving meaning and comic register
+- sewing/ripping lexical axis preserved through the chapter
+
+PERSISTED RELEASE FILES
+WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-003.txt`
+STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-003.txt`
+
+READBACK
+- WORKSPACE blob SHA: `2b929ced487f4d04efe39161748f6524567f633a`
+- STAGING blob SHA: `2b929ced487f4d04efe39161748f6524567f633a`
+- hashes match: PASS
+- staging tail readback reached the exact end of Chapter 3: PASS
+
+CURRENT BOOK STATE
+- source persisted: 3/6
+- translated: 3/6
+- next: Chapter 4 `Душа як водяний знак`
+
+NEXT
+- extract exact Chapter 4 from latest August source
+- persist as `source/liudyna-bez-akaunta/uk-004.txt`
+- read back source
+- translate Chapter 4 to English as `part-004.txt`
+- persist WORKSPACE + STAGING
+- read back both copies
+- journal result
