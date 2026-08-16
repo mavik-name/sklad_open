@@ -1,31 +1,38 @@
-# R188 ENGLISH — SOURCE POLICY
+# ENGLISH TRANSLATION — SOURCE POLICY
 
-Updated: 16.08.2026
-
-Purpose: avoid dependence on unstable File Library retrieval while preserving exact Ukrainian source fidelity for the native English edition.
+Updated: 2026-08-16
+Purpose: preserve exact Ukrainian source fidelity for English literary translation.
 
 ## SOURCE PRIORITY
-1. Canonical R187 site files / extracted contents of `187 КАНОН_Сайт_ОК_daf4fd24.zip` when directly available.
-2. Live `https://mavik.name/` public book files/routes (reader text and downloadable EPUB), after confirming they correspond to the canonical Ukrainian publication and have no post-R187 content override that changes the text.
-3. Authoritative manuscript/source documents in the remote warehouse, preferring the latest approved/final file (for `Три романи, які ніхто не читає`: DOCX dated 08.08.2026).
-4. File Library retrieval only as a fallback/search aid, never as the sole authority when it is unstable.
-5. Older drafts/copies may be used only as search scaffolding. They may never silently overwrite newer/canonical wording.
 
-## ACTIVE BOOK RULE
-For `Три романи, які ніхто не читає`:
-- completed Sections 1–8 remain frozen as already source-persisted, translated, staged and read back;
-- from Section 9 onward, prefer canonical R187/live-site text over File Library where direct extraction is possible;
-- if live site and manuscript differ, compare against R187 canonical publication state and record the decision in the section journal;
-- preserve exact section boundaries from the published/canonical text;
-- every source block is persisted in WORKSPACE before translation.
+1. Canonical R188 MULTILANG CORE / its published Ukrainian text.
+2. Live `mavik.name` Ukrainian reader/EPUB after confirming it matches the canonical publication.
+3. Latest approved/final manuscript in the remote warehouse.
+4. File Library only as a fallback/search aid.
+5. Older drafts only as search scaffolding; never silently replace newer canonical wording.
 
-## LIVE-SITE OBSERVATION
-The live book landing page for `try-romany-yaki-nikhto-ne-chytaie` exposes the full book as free reading and provides a downloadable EPUB. These channels are valid source candidates for exact published Ukrainian text.
+## TRANSLATION RULES
+
+- Translate only from the latest approved Ukrainian text.
+- Preserve section/chapter boundaries unless the author explicitly changes them.
+- Do not retranslate completed English material until existing artifacts have been checked.
+- Persist meaningful translation batches on the warehouse as soon as they are completed.
+- Partial translation of an unfinished Ukrainian work is archive-only until the Ukrainian original is complete.
+
+## ACTIVE PARTIAL WORK
+
+### `Three Novels Nobody Reads`
+Sections 1–8 were previously recorded as translated. Verify and reuse those artifacts before translating them again. Continue from the first genuinely untranslated section using canonical R188/live Ukrainian text.
+
+### `Social`
+Partial English batches are preserved as translation archive only while the Ukrainian work remains unfinished.
 
 ## CONTINUITY
-New branches must read this file together with:
-- `mavik-sklad/files/R188-EN-HANDOFF-LATEST.md`
-- `mavik-sklad/files/R188-EN-CHECKPOINT-LATEST.md`
-- `mavik-sklad/builds/R188-EN-WORKSPACE/R188-FILE-LEDGER.json`
 
-Do not stop translation work merely because File Library returns `RetrievalClientResponseError`; switch source channel according to this policy.
+For English content work read first:
+- `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`;
+- this file;
+- `mavik-sklad/builds/R188-EN-WORKSPACE/control/COMPLETED-TITLE-QUEUE.txt` if still present;
+- actual saved translation batches.
+
+Do not use old R188-English site checkpoints, staging manifests, Boss notes or route plans as translation authority.
