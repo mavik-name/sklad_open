@@ -1,0 +1,18 @@
+R188 ENGLISH PHASE 1 ROUTE PARITY
+Date: 2026-08-16
+Canonical base: R187 SHA-256 daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21
+Execution mode: full English shell first, content fill second.
+
+This commit adds structural English placeholders only where a final English page does not yet exist. Existing translated pages are preserved unchanged.
+
+Book shells added: 10 titles x landing/read/text-index = 30 routes.
+Blog article shells added: 8 routes.
+Announcement article shells added: 1 route.
+Genre shells added: 8 routes.
+Theme shells added: 4 routes.
+System leaf shells added: 5 routes.
+Total potential English 404s closed in this pass: 56.
+
+Unfinished Ukrainian title excluded from English publication: books/sotsialna.
+
+All placeholder pages use robots=noindex,follow and link back to the Ukrainian counterpart. They are temporary structural states and must be replaced by final native English content/metadata during Phase B.
