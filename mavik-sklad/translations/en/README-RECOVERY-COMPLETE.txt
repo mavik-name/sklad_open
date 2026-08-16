@@ -1,0 +1,1 @@
+Next commit attaches recovered archival book trees by SHA.
