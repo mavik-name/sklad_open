@@ -1,0 +1,46 @@
+R188 ENGLISH — `ТРИ РОМАНИ, ЯКІ НІХТО НЕ ЧИТАЄ` — SOURCE VERIFICATION
+Date: 16.08.2026
+Status: authoritative source identified / structure extraction pending / translation NOT started
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+TARGET
+- Ukrainian title: `Три романи, які ніхто не читає`
+- slug: `try-romany-yaki-nikhto-ne-chytaie`
+- approximate Ukrainian size from queue analysis: ~30,905 words
+- next item under shorter-first translation strategy
+
+AUTHORITATIVE SOURCE
+- exact latest matching source file: `Три романи, які ніхто не читає.docx`
+- CreatedAt: `2026-08-08T10:24:22Z`
+- ModifiedAt: `2026-08-08T10:24:22Z`
+- older matching copies dated `2026-06-23T18:00:47Z` and `2026-06-23T17:51:31Z` are explicitly NON-AUTHORITATIVE and must not be used for R188 translation
+
+VERIFIED AUGUST DOCUMENT START
+- title: `Три романи, які ніхто не читає`
+- author: `Макарчук Віктор · MaVik`
+- genre marker: `повість`
+- first structural heading: `Розділ 1. Три романи, які ніхто не читає`
+- first body sentence begins: `Артурові було тридцять три роки.`
+
+STRUCTURE WARNING
+- an older/site navigation view shows later labels in `Глава N. ...` form, but this must be treated only as a cross-check, not canonical structure;
+- the actual August DOCX visibly begins with `Розділ 1`, so exact headings/boundaries must be extracted from the August DOCX itself before any translation block is created;
+- do NOT normalize `Розділ`/`Глава` based on old navigation;
+- do NOT translate from the June copies simply because their text may look similar.
+
+RETRIEVAL STATE
+- File Library search service returned a transient technical error during exact structure extraction in this session;
+- source identity/date and document start were independently recovered, but full heading inventory was not returned by the available snippet;
+- therefore no source block and no English block are being fabricated from partial retrieval.
+
+NEXT SAFE ACTION
+1. Retrieve/open the August 08.08.2026 DOCX in full.
+2. Extract exact heading inventory in document order.
+3. Determine safe block plan at true chapter/section boundaries, target manageable translation blocks.
+4. Persist structure journal.
+5. Persist exact block 001 source under `source/try-romany-yaki-nikhto-ne-chytaie/uk-001.txt`.
+6. Read back source before translation.
+7. Translate block 001, persist WORKSPACE + STAGING, read back and journal.
+
+INVARIANT
+Translation status for this work remains `0 blocks started` until the exact August heading/boundary extraction is complete.
