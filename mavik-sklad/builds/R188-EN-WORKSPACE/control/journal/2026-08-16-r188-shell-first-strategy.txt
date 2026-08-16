@@ -1,0 +1,46 @@
+R188 / STRATEGY CHANGE — SHELL FIRST
+Date: 2026-08-16
+Status: ACTIVE USER-DIRECTED WORK ORDER
+
+User decision:
+Build the complete English version of the R187 site package FIRST as a coherent native-English site, then fill it with translated literary/editorial content.
+
+New execution order:
+PHASE A — COMPLETE ENGLISH SITE PACKAGE / STRUCTURE FIRST
+1. Mirror every public R187 route into the English architecture where an English counterpart is appropriate.
+2. Preserve all site functionality: navigation, reader, account bridge, music, reactions, support, legal/privacy/copyright, discover/genres/themes, announcements, blog, books, 404/system routes, service worker/manifest/SEO plumbing.
+3. Finish the native English UI and route parity.
+4. Restore exact saved Boss English implementation into STAGING and validate it.
+5. Ensure UA ↔ EN direct navigation works.
+6. No dead English routes: untranslated content pages must exist and show a proper English `Translation in progress` / `English edition in preparation` state rather than 404.
+7. Complete English canonical/hreflang/sitemap/robots/manifest/service-worker/cache/system routing design.
+8. Produce a structurally complete English R188 package candidate before literary filling is considered complete.
+
+PHASE B — CONTENT FILL
+1. Replace placeholders with finished literary English translations.
+2. Translate Blog / Announcements / About editorial content as applicable.
+3. Adapt English covers.
+4. Build and validate English EPUBs.
+5. Final content/readback/link validation.
+
+PHASE C — FINAL FULL R188 RELEASE
+1. Reconcile canonical R187 + English structural layer + completed content.
+2. Validate PHP/JS/JSON/XML/EPUB, Boss archive validator, managed_files, ZIP integrity.
+3. Build full numbered R188 ZIP.
+4. No canonicalization without explicit user approval.
+
+SOURCE AUTHORITY
+The user uploaded canonical R187 directly in chat on 2026-08-16:
+`187 КАНОН_Сайт_ОК_daf4fd24(2).zip`
+Verified SHA-256:
+`daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
+This matches the recorded canonical R187 exactly.
+Local extracted copy contains 499 files / 117 directories and is now the primary structural/source authority for R188 assembly.
+
+CURRENT CONTENT STATE IS PRESERVED
+- 9 complete English beta web editions remain valid work and must not be redone.
+- Active tenth book `Three Novels Nobody Reads` has Sections 1–8 translated/staged/read back.
+- Literary translation work pauses as the primary stream while Phase A structural parity is completed; existing content remains in place.
+
+PROGRESS REPORTING RULE
+From this point, percentage estimates should use one stable whole-R188 scale. Do not change denominator/method between updates.
