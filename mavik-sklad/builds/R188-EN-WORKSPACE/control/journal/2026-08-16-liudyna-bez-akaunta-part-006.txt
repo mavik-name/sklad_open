@@ -1,0 +1,46 @@
+R188 ENGLISH — THE MAN WITHOUT AN ACCOUNT — PART 006 / BOOK TRANSLATION COMPLETE
+Date: 16.08.2026
+Status: completed translation block / authoritative August source / persisted / readback passed
+Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
+
+SOURCE
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-006.txt`
+- heading: `Післяслово від автора`
+- authoritative source: August 08.08.2026 `Людина без акаунта.docx`
+- complete afterword reconstructed only from August-file retrieval; older June copies were not used as authority
+- source blob SHA: `4fc347f4485a5539dc29e77991568b70ce4ef303`
+- source commit: `c8e6d87bda6ede4345a9e3fd7f8c9db45afc9b05`
+- exact final sentence confirmed in source: `Бо де моя рука — і де ваша впевненість, що все так просто?`
+
+ENGLISH TRANSLATION
+- heading: `AUTHOR'S AFTERWORD`
+- thermometer / disease / treatment axis preserved
+- author/reader rights and responsibility axis preserved
+- ironic AI simplification paragraph preserved
+- `нюховий контроль на душу` → `soul-sniffing test`
+- exact final sense preserved: `Because where is my hand — and where is your certainty that it is all so simple?`
+
+PERSISTED RELEASE FILES
+WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-006.txt`
+- commit: `e9be4430e91e0d4da202fe0ae94519a458febe3f`
+STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-006.txt`
+- commit: `ecc3557aa80045fdba033495337bbfce3a3e099a`
+
+READBACK
+- WORKSPACE blob SHA: `bba5760b5d708e243a9e68ba765dfb08609ec625`
+- STAGING blob SHA: `bba5760b5d708e243a9e68ba765dfb08609ec625`
+- hashes match: PASS
+- exact final sentence present in both: PASS
+
+CURRENT BOOK STATE
+- source persisted: 6/6
+- English translation persisted: 6/6
+- WORKSPACE/STAGING translation readback: PASS through block 6
+- translation body of `The Man Without an Account` is COMPLETE
+
+NEXT
+- verify/complete English book landing, reader and text-entry shell for `liudyna-bez-akaunta`
+- if shell readback passes, promote book to complete English beta web edition #9
+- update live checkpoint and continue shorter-first queue
