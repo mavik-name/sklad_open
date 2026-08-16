@@ -1,65 +1,16 @@
-# MAVIK.NAME — R188 MULTILANG CORE — CANONICAL CHECKPOINT
+# R188 MULTILANG CANON CHECKPOINT — HISTORICAL
 
-Дата канонізації: 2026-08-16 18:39 +03:00
-Статус: **КАНОНІЧНА БАЗА — прямо затверджена користувачем**
+Status: **HISTORICAL / SUPERSEDED BY R192**
 
-## Канонічний реліз
+R188 was a real earlier canonical release, but it is no longer the starting base for current site work.
 
-- Release: **R188**
-- Файл: `188 Збірка_Сайт_MULTILANG_CORE.zip`
-- SHA-256: `83988d928bffcb0d133b0ae712cd4dc0b2792222d5e2a1e29601546210ecd053`
-- Розмір: `54,496,973` байти
-- Тип: повний сайт / `full-site-release`
-- Managed files: **532**
-- База розробки: надана користувачем R187 v1 `187 КАНОН_Сайт_ОК_daf4fd24_v1.zip`
+Current authority:
+1. `mavik-sklad/START-HERE.txt`
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. `mavik-sklad/files/START-HERE-SITE.txt`
+4. `mavik-sklad/releases/CANON.md`
+5. `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
 
-## Архітектурний канон
+Current structural/functional base: **R192**.
 
-R188 — **єдине багатомовне ядро**, а не окрема англійська копія сайту.
-
-- один core;
-- одна Boss-адмінка;
-- одна модель даних;
-- мови підключаються конфігурацією і мовними пакетами;
-- стартово активні `uk` та `en`;
-- третя, четверта та наступні мови додаються без окремої копії коду;
-- українська версія зберігає чинні URL;
-- інші мови можуть використовувати мовні префікси, наприклад `/en/`;
-- машинний Google Translate не є частиною канону.
-
-## Boss
-
-Новий core включає керування статичними сторінками, меню, зображеннями/каталогами, мовами та успадкованими інструментами книг, блогу, анонсів, музики, фокусів, реакцій, повідомлень читачів, стану сайту, deploy і робочих файлів.
-
-Адмін може працювати з потрібною мовною версією. На головній передбачене керування кількістю книг перед переходом до `Всі книги`.
-
-## Безпека та deploy
-
-- багатомовність не змінює окремий контур авторизації та захисту Boss;
-- живий `/_site-state/` не входить до release ZIP і не перезаписується штатним deploy;
-- механізм оновлення залишається стандартним через Boss.
-
-## Перевірка
-
-Перед видачею користувачеві зафіксовано:
-- PHP: 24/24 PASS;
-- JavaScript: 15/15 PASS;
-- EPUB: 20/20;
-- биті публічні внутрішні посилання: 0;
-- усі 510 файлів R187 v1 збережені;
-- додано 22 core-файли;
-- managed files: 532;
-- Boss ZIP validator: PASS;
-- smoke deploy R187 → R188: PASS;
-- `/_site-state/` при deploy збережено;
-- тест третьої мови: PASS.
-
-## Подальша робота
-
-Відтепер усі структурні та функціональні зміни mavik.name виконувати **виключно від R188 MULTILANG CORE**, доки користувач прямо не затвердить новішу канонічну повну збірку.
-
-Стара модель `R188 English` як окремий English-core є архівною. Її матеріали можна використовувати лише як джерело вже виконаних перекладів, але не як структурну базу.
-
-Наступний етап: наповнення англійського мовного шару контентом у межах нового багатомовного core.
-
-Якщо canonical ZIP фізично відсутній у GitHub-складі, не стверджувати протилежне. Канонічний файл ідентифікується ім’ям, розміром і SHA-256 вище.
+The full original R188 checkpoint remains recoverable in Git history. Use it only when reconstructing historical R188 behavior, never as the base for a new release unless the user explicitly orders a historical rollback.
