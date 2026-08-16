@@ -1,0 +1,113 @@
+name: R188 English static audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/r188-en-static-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r188-english-work
+          fetch-depth: 1
+      - name: Audit native English routes and indexing rules
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from urllib.parse import urlsplit, urljoin
+          import re, sys
+
+          stage=Path('mavik-sklad/builds/R188-EN-STAGING')
+          en=stage/'en'
+          errors=[]
+          checked_links=0
+          html_files=sorted(en.rglob('*.html'))
+
+          class P(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.refs=[]
+              def handle_starttag(self, tag, attrs):
+                  d=dict(attrs)
+                  for k in ('href','src'):
+                      if k in d and d[k]: self.refs.append((tag,k,d[k]))
+
+          def target_exists(path):
+              rel=path.lstrip('/')
+              p=stage/rel
+              if path.endswith('/'):
+                  return (p/'index.html').is_file() or (p/'index.php').is_file()
+              return p.is_file() or (p/'index.html').is_file() or (p/'index.php').is_file()
+
+          for f in html_files:
+              text=f.read_text('utf-8',errors='replace')
+              rel=f.relative_to(stage).as_posix()
+              public='/' + rel
+              if public.endswith('/index.html'): public=public[:-10]
+              parser=P(); parser.feed(text)
+              base='https://mavik.name'+public
+              for tag,k,raw in parser.refs:
+                  raw=raw.strip()
+                  if not raw or raw.startswith(('#','mailto:','tel:','data:','javascript:')): continue
+                  u=urlsplit(urljoin(base,raw))
+                  if u.netloc and u.netloc!='mavik.name': continue
+                  if not u.path.startswith('/en/'): continue
+                  checked_links+=1
+                  if not target_exists(u.path): errors.append(f'DEAD_EN_LINK {rel}: {raw} -> {u.path}')
+
+              low=text.lower()
+              prep_markers=(
+                  'english edition in preparation',
+                  'english translation in progress',
+                  'english posts are being prepared',
+                  'catalogue interface is still being rebuilt',
+                  'no english announcements published yet',
+              )
+              if any(x in low for x in prep_markers):
+                  if not re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.I):
+                      errors.append(f'PREP_WITHOUT_NOINDEX {rel}')
+
+          all_stage='\n'.join(p.read_text('utf-8',errors='replace') for p in stage.rglob('*') if p.is_file() and p.suffix.lower() in {'.html','.js','.css','.txt','.xml','.php'})
+          if 'translate.goog' in all_stage or 'translate.googleapis.com' in all_stage:
+              errors.append('MACHINE_TRANSLATION_REFERENCE remains in STAGING')
+
+          if (en/'books'/'sotsialna').exists(): errors.append('UNFINISHED_SOCIAL_HAS_EN_ROUTE')
+
+          book_slugs=['mamo-zhyty','bezimenni','skulptor','universe','advokat-dyiavola','patsiient','petlia','toi-shcho-nese-svitlo','olena','lysty-polkovnyku','try-romany-yaki-nikhto-ne-chytaie','liudyna-bez-akaunta','yak-vitko-z-moskaliamy-voiuvav','vidmova-avansom','transfer','pishchynka-solya','paterny-samorefleksii','ty-i-ia','yevanheliie-vid-makariia']
+          for slug in book_slugs:
+              if not (en/'books'/slug/'index.html').is_file(): errors.append('MISSING_BOOK_ROUTE '+slug)
+
+          sm=stage/'sitemap-en.xml'
+          if not sm.is_file(): errors.append('MISSING_SITEMAP_EN')
+          else:
+              st=sm.read_text('utf-8')
+              urls=re.findall(r'<loc>https://mavik\.name([^<]+)</loc>',st)
+              for path in urls:
+                  if not target_exists(path): errors.append('SITEMAP_DEAD '+path)
+                  p=stage/path.lstrip('/')/'index.html' if path.endswith('/') else stage/path.lstrip('/')
+                  if p.is_file() and re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex',p.read_text('utf-8',errors='replace'),re.I):
+                      errors.append('SITEMAP_CONTAINS_NOINDEX '+path)
+
+          lang=stage/'assets'/'app'/'mavik-language.js'
+          if not lang.is_file(): errors.append('MISSING_NATIVE_LANGUAGE_JS')
+          else:
+              t=lang.read_text('utf-8')
+              if "LANGS=['uk','en']" not in t: errors.append('LANGUAGE_SET_NOT_UA_EN')
+              if 'translate.goog' in t: errors.append('TRANSLATE_GOOG_IN_NATIVE_LANGUAGE_JS')
+
+          print(f'HTML files audited: {len(html_files)}')
+          print(f'English internal refs checked: {checked_links}')
+          print(f'Book routes present: {sum((en/"books"/s/"index.html").is_file() for s in book_slugs)}/19')
+          print(f'Errors: {len(errors)}')
+          for e in errors: print('ERROR',e)
+          if errors: sys.exit(1)
+          print('R188_EN_STATIC_AUDIT_OK')
+          PY
