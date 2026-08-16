@@ -1,0 +1,58 @@
+R188 / THREE NOVELS NOBODY READS / SECTION 006
+Date: 2026-08-16
+Status: COMPLETE / SOURCE + WORKSPACE + STAGING / READBACK PASS
+
+Authoritative Ukrainian source:
+Три романи, які ніхто не читає.docx
+Authoritative file date: 2026-08-08T10:24:22Z
+Older June copies are non-authoritative and were not used as source text.
+
+Section:
+Розділ 6. Бар, де всі щось пишуть
+English heading:
+CHAPTER 6. THE BAR WHERE EVERYONE WRITES SOMETHING
+
+Exact boundary:
+Starts with: Розділ 6. Бар, де всі щось пишуть
+Ends with: І в ньому — роман, який цієї ночі вперше мав шанс не залишитися сам.
+Next heading excluded: Розділ 7. Читацька ніч
+
+SOURCE
+Path: mavik-sklad/builds/R188-EN-WORKSPACE/source/try-romany-yaki-nikhto-ne-chytaie/uk-006.txt
+Blob SHA: 9736390e85515837b40706187a07490147efa29b
+Commit: c55b0d47188552830045c9c6de9953af9b456476
+
+ENGLISH WORKSPACE
+Path: mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-006.txt
+Blob SHA: dea320a70c099713c9d8bab4da58eaddc89a8b93
+Commit: a4820aefd419ea84b5dc74dd9d3b9a0036d5399f
+
+STAGING
+Path: mavik-sklad/builds/R188-EN-STAGING/en/books/try-romany-yaki-nikhto-ne-chytaie/read/text/part-006.txt
+Blob SHA: dea320a70c099713c9d8bab4da58eaddc89a8b93
+Commit: c5e673ed61c61341dbd4e729ef95df90b9fabf78
+Readback: PASS / matching blob SHA
+
+Key literary choices preserved:
+- Редакторська правка -> Editorial Revision
+- no-padding editorial joke retained
+- самвидав -> self-publishing
+- купив мрію гуртом, продаєш поштучно -> buy the dream wholesale, sell it retail
+- visibility vs noise distinction retained
+- неоподатковуваними метафорами -> tax-free metaphors
+- disciplined fog / marches in formation retained
+- spiritual evacuation mode retained
+- TikTok / coffee-shop obituary joke retained
+- internal symphony orchestra of hurt feelings retained
+- romantic/editorial ambiguity in taxi/lift/final laptop beat retained
+
+BOOK PROGRESS AFTER THIS BLOCK
+Sections complete: 6/15
+Author's afterword: pending
+Web shell for this active book: pending until book text is substantially/fully complete
+Cover: pending English adaptation
+EPUB: pending
+
+NEXT EXACT ACTION
+Extract exact August Section 7: Розділ 7. Читацька ніч.
+First establish the exact next heading / Section 8 boundary from the authoritative 2026-08-08 DOCX, then persist uk-007.txt, translate, stage same blob, read back, journal, ledger/checkpoint/handoff.
