@@ -1,0 +1,1 @@
+Recovered translation directories are copied from immutable Git tree objects on the archival `r188-english-work` branch. This preserves the exact old English files without retranslating or rewriting them. The active publication source remains canonical R192; recovered text must still be parity-checked against current Ukrainian R192 before public deployment.
