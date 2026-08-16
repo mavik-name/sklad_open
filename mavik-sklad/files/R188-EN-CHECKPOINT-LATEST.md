@@ -1,6 +1,6 @@
 # MAVIK.NAME — R188 ENGLISH CHECKPOINT — LATEST
 
-Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 2/6**
+Updated: **16.08.2026 — LIVE CHECKPOINT AFTER `The Man Without an Account` 3/6**
 Status: **WORK IN PROGRESS / NOT CANONICAL**
 Canonical base: R187 `187 КАНОН_Сайт_ОК_daf4fd24.zip`
 SHA-256: `daf4fd2415b6eb790f145172873cb95fbba3947a83f4a7bfbe0b81a01bdb4e21`
@@ -63,26 +63,38 @@ Source:
 - `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-002.txt`
 - Chapter 2 `Сім лайків і три боти`
 - source blob SHA: `1b86b5915801266c4d7c80d3a0d4894e2d69f2ac`
-English WORKSPACE:
-- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-002.txt`
-English STAGING:
-- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-002.txt`
+English WORKSPACE + STAGING:
+- `part-002.txt`
 - title: `CHAPTER 2. SEVEN LIKES AND THREE BOTS`
 - matching blob SHA: `d15dc0c530a8883f41a579f1e5fb8505ee9a1323`
 Journal:
 - `control/journal/2026-08-16-liudyna-bez-akaunta-part-002.txt`
 
+### Block 3/6 — COMPLETE
+Source:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/source/liudyna-bez-akaunta/uk-003.txt`
+- Chapter 3 `Шити чи пороти`
+- source blob SHA: `6a2ed8a55b400960c54386dfd3af01b72e6eb85d`
+English WORKSPACE:
+- `mavik-sklad/builds/R188-EN-WORKSPACE/site/en/books/liudyna-bez-akaunta/read/text/part-003.txt`
+English STAGING:
+- `mavik-sklad/builds/R188-EN-STAGING/en/books/liudyna-bez-akaunta/read/text/part-003.txt`
+- title: `CHAPTER 3. SEW OR RIP`
+- matching blob SHA: `2b929ced487f4d04efe39161748f6524567f633a`
+Journal:
+- `control/journal/2026-08-16-liudyna-bez-akaunta-part-003.txt`
+
 ## EXACT STOP POINT
-- current book source: **2/6 persisted**;
-- current book English translation: **2/6 persisted**;
-- WORKSPACE/STAGING readback for blocks 1–2: **PASS**;
-- next block: **Chapter 3 / 3 of 6**.
+- current book source: **3/6 persisted**;
+- current book English translation: **3/6 persisted**;
+- WORKSPACE/STAGING readback for blocks 1–3: **PASS**;
+- next block: **Chapter 4 `Душа як водяний знак` / 4 of 6**.
 
 ## FIRST ACTION ON RESUME
 1. Open latest August source `Людина без акаунта.docx`.
-2. Extract exact Chapter 3 to `WORKSPACE/source/liudyna-bez-akaunta/uk-003.txt`.
+2. Extract exact Chapter 4 to `WORKSPACE/source/liudyna-bez-akaunta/uk-004.txt`.
 3. Read back source.
-4. Translate Chapter 3 to `part-003.txt`.
+4. Translate Chapter 4 to `part-004.txt`.
 5. Persist WORKSPACE + STAGING.
 6. Read back and compare blob SHA.
 7. Journal and update this checkpoint.
@@ -99,4 +111,4 @@ Journal:
 - full R188 candidate ZIP;
 - explicit user approval before canonicalization.
 
-Do not redo completed beta editions or blocks 1–2 of `The Man Without an Account`.
+Do not redo completed beta editions or blocks 1–3 of `The Man Without an Account`.
