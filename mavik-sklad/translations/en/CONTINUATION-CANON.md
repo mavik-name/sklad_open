@@ -16,15 +16,15 @@ Source: `Скульптор.docx` from File Library unless a newer explicitly ap
 - Chapter 1 COMPLETE: parts 01–05.
 - Chapter 2 COMPLETE: parts 01–06.
 - Chapter 3 COMPLETE: parts 01–09.
-- Chapter 4. The Guide ACTIVE: parts 01–07 physically saved on `main` and safety branch.
+- Chapter 4. The Guide ACTIVE: parts 01–14 physically saved on `main` and safety branch.
 
-Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-04-part-07.txt`.
+Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-04-part-14.txt` and it has been read back from `main`.
 
 ## EXACT CONTINUATION
 Continue immediately AFTER:
-`— Добре. Скину на службову пошту. Але одразу кажу: у нас по ньому все було нормально.`
+`Навіть якщо Вікторія скаже, що звучить жорстко.`
 
-Next output: `chapter-04-part-08.txt`.
+Next output: `chapter-04-part-15.txt`.
 Retrieve next contiguous source from `Скульптор.docx`; no inference, bridging, restarting or repetition.
 
 ## RECOVERY LAYERS
