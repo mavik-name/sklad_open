@@ -16,12 +16,12 @@ For new joint fiction projects, read the human-writing canon and the shared crea
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R203-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R203**
+- Current canonical checkpoint: `mavik-sklad/files/R204-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R204**
 
-R1–R202 are obsolete as structural/functional site bases.
+R1–R203 are trash/obsolete as structural/functional site bases and must not be used as working context.
 
-### HARD CODE FREEZE AFTER R203
+### HARD CODE FREEZE AFTER R204
 
 Routine site work is **PATCH/OVERLAY ONLY, WITH NO CODE CHANGES**.
 
@@ -31,21 +31,24 @@ Forbidden without a new explicit user decision: any PHP/JS/CSS change; Boss/temp
 
 Never create a new CORE release on your own. A content patch must never modify code silently.
 
-Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R203 mechanisms.
+Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R204 mechanisms.
 
-R203 protected behavior:
+R204 protected behavior:
 - mobile-only MaVik install flow;
-- mobile-only audio reader;
-- desktop has no audio-reader UI, no `▶ Слухати` CTA and no MaVik install UI;
-- one central audio control;
-- tap-to-start reading from the selected text position;
-- Screen Wake Lock throughout listen mode, including pause;
-- QR donation code expands only inside the donation block, without separate frame/modal;
+- desktop has no MaVik install UI;
+- desktop has no audio-reader UI and no `▶ Слухати` CTA;
+- mobile `Читати` is text-only and does not initialize the audio module;
+- mobile `Слухати` uses explicit `?listen=1`; only then the audio reader starts;
+- central audio control is `▶ Слухати ↔ ⏸ Пауза`;
+- tap-to-start and Screen Wake Lock remain active in listen mode;
+- QR donation code expands only inside the donation block, without separate frame/modal/fullscreen;
 - literal iframe/frame/frameset markup absent;
 - Boss book editor is inline, not a fixed frame/drawer;
 - book order is saved server-side and reflected in live manifest/public rebuild;
 - announcement reason is editable per book;
 - mobile menu has no numbering.
+
+Cleanup rule: all site release ZIPs before R204 are removed from `/Сайт`; only the two R204 parts remain. Historical Git commits may exist but are not active state.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
 - mobile reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
@@ -100,9 +103,9 @@ English translation remains blocked by `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, **R203 is the authoritative frozen CORE base**.
-3. After R203, routine site work is patch/overlay only and may not modify code.
-4. Any future CODE/CORE change requires a new explicit user decision that overrides the R203 freeze.
+2. For the site, **R204 is the authoritative frozen CORE base**.
+3. After R204, routine site work is patch/overlay only and may not modify code.
+4. Any future CODE/CORE change requires a new explicit user decision that overrides the R204 freeze.
 5. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
 6. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
 7. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
