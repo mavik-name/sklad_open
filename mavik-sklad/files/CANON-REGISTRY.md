@@ -20,7 +20,7 @@ R1–R194 are obsolete and must not be used as working or canonical site bases.
 
 Main site-construction canon: every Boss content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and the internal SEO auditor.
 
-Known next-release cleanup: mobile owner/admin link in R195 is visually numbered `99` by a hardcoded UI marker. Replace with a dynamic sequence number in the next release while keeping the owner link last.
+Known next-release cleanup: R195 mobile menu contains visual numbers `01–05` and owner/admin marker `99`. Per explicit user decision, remove **all mobile-menu numbering** in the next release; keep labels and ordering unchanged.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
 - mobile reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
