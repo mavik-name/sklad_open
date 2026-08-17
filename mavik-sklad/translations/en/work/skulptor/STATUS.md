@@ -9,15 +9,15 @@ Source: `Скульптор.docx` from File Library.
 - Chapter 1 COMPLETE: 01–05.
 - Chapter 2 COMPLETE: 01–06.
 - Chapter 3 COMPLETE: 01–09.
-- Chapter 4. The Guide ACTIVE: 01–07 saved on this branch.
+- Chapter 4. The Guide ACTIVE: 01–14 saved on this branch.
 
-Latest file: `chapter-04-part-07.txt`.
+Latest file: `chapter-04-part-14.txt`.
 
 ## EXACT CONTINUATION
 Continue after:
-`— Добре. Скину на службову пошту. Але одразу кажу: у нас по ньому все було нормально.`
+`Навіть якщо Вікторія скаже, що звучить жорстко.`
 
-Next output: `chapter-04-part-08.txt`. Retrieve next contiguous source from `Скульптор.docx`; do not infer, restart or repeat.
+Next output: `chapter-04-part-15.txt`. Retrieve next contiguous source from `Скульптор.docx`; do not infer, restart or repeat.
 
 Locks: Marta; Serhii Kravets; Nazar; Viktoriia; Olena Rudenko; Andrii; Petro; Kateryna; Lucas Martyn. Preserve Ukrainian institutional context, clipped observational voice, short paragraph rhythm and ambiguity. No Americanization or AI-polish.
 
