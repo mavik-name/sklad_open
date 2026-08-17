@@ -25,4 +25,17 @@ Integrity:
 - PHP lint: PASS `boss/index.php`, `_site-admin/seo-tools.php`.
 - JavaScript syntax: PASS `assets/app/mavik-language.js`.
 
-Do not call R194 canonical until the user explicitly approves it. If approved, update `START-HERE-SITE.txt`, `releases/CANON.md`, master START-HERE and registry accordingly.
+## English translation continuity
+
+R194 is only a site candidate and does **not** supersede English translation continuity.
+
+For any English-content work, always use:
+- `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+- `mavik-sklad/translations/en/STATUS.md`
+- safety branch `backup/english-translations-2026-08-17`
+
+Protected state includes 9 complete English books, complete 8-story Evacuation, Three Novels Sections 1–8, Social Chapters 8–16, and active Sculptor progress through Chapter 2 Part 5. Sculptor continues after `— Але будете.`.
+
+Do not delete/ignore translation files because of historical R-prefixes, and do not declare translation loss without checking all recovery layers.
+
+Do not call R194 canonical until the user explicitly approves it. If approved, update `START-HERE-SITE.txt`, `releases/CANON.md`, master START-HERE and registry accordingly, while preserving the independent English continuation canon.
