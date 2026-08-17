@@ -1,1 +1,16 @@
-Exact directory trees are recovered from branch r188-english-work; see ../RECOVERY-MAP.md.
+RECOVERED ENGLISH BOOK SOURCE POINTER
+Updated: 2026-08-17
+Canonical site/core: R193
+
+The nine complete English book directory trees in this folder were recovered exactly from immutable Git tree objects originally found on archival branch `r188-english-work`.
+
+Authoritative recovery map:
+`mavik-sklad/translations/en/RECOVERY-MAP.md`
+
+Authoritative continuation canon:
+`mavik-sklad/translations/en/CONTINUATION-CANON.md`
+
+Safety branch:
+`backup/english-translations-2026-08-17`
+
+Do not retranslate these books before checking whether the current Ukrainian source materially changed. Do not treat the old source branch name as evidence that the translation content is obsolete.
