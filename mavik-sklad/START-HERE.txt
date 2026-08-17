@@ -23,15 +23,16 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Canon: `mavik-sklad/releases/CANON.md`
-- Current checkpoint: `mavik-sklad/files/R200-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R200**
-- R1–R199 не використовувати як робочу або канонічну CORE-базу.
-- **HARD CODE FREEZE:** після R200 будь-яке звичайне наповнення сайту — лише PATCH/OVERLAY БЕЗ ЗМІНИ КОДУ.
+- Current checkpoint: `mavik-sklad/files/R203-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R203**
+- R1–R202 не використовувати як робочу або канонічну CORE-базу.
+- **HARD CODE FREEZE:** після R203 будь-яке звичайне наповнення сайту — лише PATCH/OVERLAY БЕЗ ЗМІНИ КОДУ.
 - Не змінювати PHP/JS/CSS, Boss, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, не робити рефакторинг/оптимізацію CORE без нового прямого дозволу автора.
 - Не створювати новий CORE-реліз самостійно.
-- Дозволені patch-и: книги, переклади, EPUB, обкладинки, зображення, музика/медіа, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts — без зміни механізмів R200.
-- Головний site-канон синхронізації лишається: контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно й у межах чинного R200.
-- R200: mobile-only PWA install flow; mobile-only audio reader з однією кнопкою `▶ Читати ↔ ⏸ Пауза`, tap-to-start і Screen Wake Lock; desktop без audio-reader UI і без MaVik install UI; mobile menu без нумерації.
+- Дозволені patch-и: книги, переклади, EPUB, обкладинки, зображення, музика/медіа, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts — без зміни механізмів R203.
+- Головний site-канон синхронізації лишається: контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно й у межах чинного R203.
+- R203: mobile-only PWA install flow; mobile-only audio reader; desktop без audio-reader UI, без `▶ Слухати` на book landing і без MaVik install UI; QR донату без окремого frame/modal; book editor inline; порядок книг server-backed; причина анонсу редагована; mobile menu без нумерації.
+- У `/Сайт` старі ZIP до R203 видалені. Канонічна повна збірка — R203.
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
@@ -73,8 +74,8 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для сайту чинний CORE-канон — **R200**.
-3. Після R200 звичайна робота — patch/overlay only, без змін коду.
+2. Для сайту чинний CORE-канон — **R203**.
+3. Після R203 звичайна робота — patch/overlay only, без змін коду.
 4. Будь-яка майбутня CODE/CORE-зміна потребує нового прямого рішення користувача, яке явно скасовує або послаблює freeze.
 5. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
 6. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
