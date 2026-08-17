@@ -10,17 +10,17 @@ Safety branch: `backup/english-translations-2026-08-17`
 - Chapter 1 — COMPLETE: parts 01–05.
 - Chapter 2. Clay — COMPLETE: parts 01–06.
 - Chapter 3. Fund Meeting — COMPLETE: parts 01–09.
-- Chapter 4. The Guide — ACTIVE: parts 01–07.
+- Chapter 4. The Guide — ACTIVE: parts 01–14.
 
-All Chapter 3 parts 06–09 and Chapter 4 parts 01–07 are physically saved on both `main` and the safety branch. Chapter 4 Part 01 was source-corrected to include: `We’re already in a novel. Just not a crime novel.`
+All Chapter 4 parts 01–14 are physically saved on both `main` and the safety branch. `chapter-04-part-14.txt` has been read back from `main`.
 
-Latest saved file: `chapter-04-part-07.txt`.
+Important source correction retained in Part 01: `We’re already in a novel. Just not a crime novel.`
 
 ## EXACT CONTINUATION
 Continue immediately AFTER Ukrainian source sentence:
-`— Добре. Скину на службову пошту. Але одразу кажу: у нас по ньому все було нормально.`
+`Навіть якщо Вікторія скаже, що звучить жорстко.`
 
-Next output: `chapter-04-part-08.txt`.
+Next output: `chapter-04-part-15.txt`.
 Retrieve the next contiguous Ukrainian passage from `Скульптор.docx`; no inference, bridging, restart or repetition.
 
 ## LOCKS
