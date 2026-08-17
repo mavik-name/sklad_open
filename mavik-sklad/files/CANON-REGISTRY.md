@@ -29,20 +29,31 @@ Narrow active canons that are not release snapshots may remain in force when rel
 ## English content MAVIK.NAME
 
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
+- **Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`**
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
-- **Authoritative continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`**
+- Authoritative continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 - Current exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
 - Dedicated safety branch: `backup/english-translations-2026-08-17`
 
-Protected physical translation state:
-- nine complete English books under `translations/en/books/`;
-- Evacuation complete: eight stories under `translations/en/work/evakuatsiia/`;
-- Three Novels Nobody Reads: Sections 1–8 under `translations/en/partial/`;
-- Social: Chapters 8–16 in protected archive files;
-- The Sculptor active: Chapter 1 parts 1–5 complete; Chapter 2 parts 1–5 saved; exact continuation after source line `— Але будете.`.
+### HARD TRANSLATION SOURCE RULE
+The ONLY authoritative source for new English book translation text is the canonical Ukrainian text actually published on mavik.name.
 
-English-translation content is preserved even if an individual working filename was created during an older site-release phase. A historical release prefix does not make translation content obsolete.
+No English sentence may be created from chat/model memory, File Library manuscripts, warehouse manuscripts, old site copies, summaries/checkpoints, old English text or guessed continuation. No additions, bridges, clarifications or invented prose.
+
+If the canonical site text cannot be retrieved, translation stops.
+
+### Existing English recovery content
+Recovered/saved English files remain protected content, but they are not automatically publication-canonical until checked against the current Ukrainian site publication.
+
+`The Sculptor` is currently **QUARANTINED / UNVERIFIED AGAINST SITE / NOT FOR PUBLICATION**. At the hard-canon interruption:
+- `main` had files through `chapter-05-part-26.txt`;
+- safety branch had files through `chapter-05-part-25.txt`;
+- Part 26 was intentionally not mirrored after the user interruption.
+
+Do not continue with a new part. First audit against the canonical Ukrainian `Скульптор` publication on mavik.name from the start or from the earliest independently site-verified point.
+
+English translation content survives historical release prefixes, but recovery never overrides site-source parity.
 
 Before declaring translation loss, search all layers listed in `translations/en/CONTINUATION-CANON.md`.
 
@@ -60,12 +71,12 @@ Before declaring translation loss, search all layers listed in `translations/en/
 - Евакуація: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
 - Generation-ship concept: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
 
-For textual work, always verify the actual latest manuscript/artifact before editing or translating.
+For English translation, the published-site hard source canon overrides manuscript-source rules. For other textual work, always verify the actual latest approved manuscript/artifact before editing.
 
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
 2. For the site, R195 is authoritative until a newer release is explicitly approved.
-3. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative unless explicitly superseded.
-4. Actual latest approved manuscript/source artifact wins over older notes for prose content.
+3. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
+4. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
 5. Historical release/checkpoint documents never override a newer approved canon; historical translation trees may still be searched for recovery of already-created content.
