@@ -23,16 +23,18 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Canon: `mavik-sklad/releases/CANON.md`
-- Current checkpoint: `mavik-sklad/files/R204-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R204**
-- R1–R203 = сміття для активного site CORE context; не використовувати як робочу або канонічну базу.
-- **HARD CODE FREEZE:** після R204 будь-яке звичайне наповнення сайту — лише PATCH/OVERLAY БЕЗ ЗМІНИ КОДУ.
-- Не змінювати PHP/JS/CSS, Boss, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, не робити рефакторинг/оптимізацію CORE без нового прямого дозволу автора.
+- Current checkpoint: `mavik-sklad/files/R210-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R210**
+- R1–R209 не використовувати як active site CORE context.
+- R207 — попередній канон; R208/R209 — неканонічні кандидати, поглинуті R210.
+- **HARD CODE FREEZE:** після R210 будь-яке звичайне наповнення сайту — лише PATCH/OVERLAY БЕЗ ЗМІНИ КОДУ.
+- Не змінювати PHP/JS/CSS, Boss, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, maintenance architecture, locale routing; не робити refactoring/optimization CORE без нового прямого дозволу автора.
 - Не створювати новий CORE-реліз самостійно.
-- Дозволені patch-и: книги, переклади, EPUB, обкладинки, зображення, музика/медіа, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts — без зміни механізмів R204.
-- Головний site-канон синхронізації лишається: контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно й у межах чинного R204.
-- R204: mobile PWA install flow; desktop без install UI; desktop без audio-reader UI і без `▶ Слухати`; mobile `Читати` = text-only без audio init; mobile `Слухати` = explicit `?listen=1`; центральна кнопка `▶ Слухати ↔ ⏸ Пауза`; QR без окремого frame/modal/fullscreen; book editor inline; порядок книг server-backed; причина анонсу редагована; mobile menu без нумерації.
-- У `/Сайт` лишаються тільки дві частини R204. Усе до R204 видалене з active site-release складу.
+- Дозволені patch-и: книги, переклади, EPUB, обкладинки, зображення, музика/медіа, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts — без зміни механізмів R210.
+- Головний site-канон синхронізації: контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно й у межах чинного R210.
+- R210 protected behavior включає R207 reader/PWA/EPUB/overlay behavior плюс drag&drop `Сторінки`, інтегровану пошту IMAP/SMTP з TLS fallback, compact page-builder index, grouped Boss tiles, редаговану `/about/`, порожній focus-state без `Скульптор` fallback.
+- Maintenance у R210 тільки один глобальний; locale-separated maintenance заборонений без нового прямого рішення автора.
+- Канонічні binary R210 постійно збережені у File Library `/Сайт/`.
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
@@ -74,10 +76,10 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для сайту чинний CORE-канон — **R204**.
-3. Після R204 звичайна робота — patch/overlay only, без змін коду.
+2. Для сайту чинний CORE-канон — **R210**.
+3. Після R210 звичайна робота — patch/overlay only, без змін коду.
 4. Будь-яка майбутня CODE/CORE-зміна потребує нового прямого рішення користувача, яке явно скасовує або послаблює freeze.
 5. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
 6. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
 7. Для «Соціальної» `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` прямо забороняє English-переклад до нового дозволу автора.
-8. Історичні site releases/checkpoint-и до R204 не відновлювати як архітектурну базу.
+8. Історичні site releases/checkpoint-и до R210 не відновлювати як активну архітектурну базу.
