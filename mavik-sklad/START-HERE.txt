@@ -49,7 +49,7 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Стан на момент жорсткого канону: `main` має файли до `chapter-05-part-26.txt`; safety branch — до `chapter-05-part-25.txt`; Part 26 навмисно не дублювався після переривання користувачем.
 - НЕ продовжувати новою частиною. Спершу підняти канонічний текст зі сторінки сайту й провести parity-аудит від початку книги або від найранішої незалежно підтвердженої site-source точки.
 
-Вже збережений English-контент не видаляти лише через старий номер релізу в назві. Він лишається recovery-контентом, але перед публікацією повинен збігатися з актуальним українським текстом на сайті.
+Вже збережений English-контент інших книг не видаляти лише через старий номер релізу в назві. Він лишається recovery-контентом, але перед публікацією повинен збігатися з актуальним українським текстом на сайті.
 Перед заявою про втрату перекладу перевірити `main`, safety branch, Git history/tree SHA, старі translation-workspaces як read-only recovery source і File Library.
 
 РОМАН «СОЦІАЛЬНА»
@@ -57,7 +57,9 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - Plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 - Manuscript: `mavik-sklad/files/Соціальна.docx`
-- Англійський архівний контент не видаляти лише через історичний R-префікс.
+- **English STOP canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`**
+- «Соціальну» НЕ ПЕРЕКЛАДАТИ англійською, доки автор окремо не скаже, що українська книга завершена/зафіксована і її можна перекладати.
+- Старі English-фрагменти розділів 8–16 видалені з `main` і safety branch 17.08.2026 за прямим рішенням автора. Не відновлювати їх для перекладу.
 
 «ВСЕСВІТ 25»
 - Start/current overlay: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
@@ -80,4 +82,5 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 2. Для сайту чинний канон — R195.
 3. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
 4. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
-5. Історичні релізи/checkpoint-и не відновлювати як архітектурну базу без прямого запиту, але використовувати для recovery перекладеного контенту, якщо потрібно.
+5. Для «Соціальної» `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` прямо забороняє English-переклад до нового дозволу автора.
+6. Історичні релізи/checkpoint-и не відновлювати як архітектурну базу без прямого запиту, але використовувати для recovery перекладеного контенту, якщо це не суперечить прямому рішенню автора про видалення/заборону відновлення.
