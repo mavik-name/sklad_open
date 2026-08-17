@@ -9,12 +9,28 @@ This direction concerns English content inside the single multilingual core. It 
 ## READ FIRST IN A NEW BRANCH
 
 1. `mavik-sklad/START-HERE.txt`
-2. this file
-3. `mavik-sklad/files/EN-SOURCE-POLICY.md`
-4. `mavik-sklad/translations/en/STATUS.md`
-5. actual saved files of the active translation
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. this file
+4. `mavik-sklad/files/EN-SOURCE-POLICY.md`
+5. **`mavik-sklad/translations/en/CONTINUATION-CANON.md`**
+6. `mavik-sklad/translations/en/STATUS.md`
+7. active-book STATUS/checkpoint
+8. actual saved files of the active translation and the authoritative Ukrainian source
 
-Do not restart from old pre-R193 site checkpoints/workspaces. Those are obsolete and must not override current translation work.
+Do not restart from old pre-R193 site checkpoints/workspaces. Those are obsolete as site architecture and must not override current translation work.
+
+Historical translation branches/workspaces MAY be searched as read-only recovery sources for already-created translation content.
+
+## HARD PRESERVATION RULE
+
+Translation text is CONTENT, not a site release. A file does not become obsolete merely because its path or filename contains `r188`, `r192`, or another old release number.
+
+Before declaring any translation lost, search:
+1. current `main` translation/content tree;
+2. safety branch `backup/english-translations-2026-08-17`;
+3. Git commit history and immutable tree/blob SHAs;
+4. historical translation workspaces/branches as recovery-only sources;
+5. File Library for current manuscript binaries.
 
 ## ARCHITECTURE RULE
 
@@ -62,7 +78,7 @@ Working English title:
 Current authoritative physical English set:
 `mavik-sklad/translations/en/work/evakuatsiia/`
 
-All eight English stories are physically saved and the whole-book consistency/source pass is complete:
+All eight English stories are physically saved:
 1. `story-01-pixel.txt`
 2. `story-02-beard.txt`
 3. `story-03-doc.txt`
@@ -79,14 +95,21 @@ Do NOT restart this translation. The English text is complete but has not yet be
 
 ## PHYSICALLY RECOVERED PARTIAL WORK
 
-`Three Novels Nobody Reads` — Sections 1–8 are physically preserved under:
+### Three Novels Nobody Reads
+Sections 1–8 are physically preserved under:
 `mavik-sklad/translations/en/partial/try-romany-yaki-nikhto-ne-chytaie-sections-1-8/`
 
 Do not redo Sections 1–8. Continue from the first genuinely untranslated section after checking current Ukrainian parity.
 
-`Social` — partial English batches remain archive-only until the Ukrainian original is complete.
+### Social / Соціальна
+Protected English content batches:
+- `mavik-sklad/files/r188-social-en-ch08-10.md`
+- `mavik-sklad/files/r188-social-en-ch11-13.md`
+- `mavik-sklad/files/r188-social-en-ch14-16.md`
 
-## ACTIVE NEXT TARGET — THE SCULPTOR
+These are archive-only while the Ukrainian original is unfinished, but they are CONTENT and must not be deleted because of the historical `r188` prefix.
+
+## ACTIVE TARGET — THE SCULPTOR
 
 Ukrainian title:
 `Скульптор`
@@ -94,15 +117,23 @@ Ukrainian title:
 English working title:
 *The Sculptor*
 
-A File Library source named `Скульптор.docx` has been located.
+Working directory:
+`mavik-sklad/translations/en/work/skulptor/`
 
-NEXT EXACT POINT:
-1. retrieve/read `Скульптор.docx`;
-2. verify it against the current R193 Ukrainian source where possible;
-3. if the texts differ, establish which is the latest approved source before translating;
-4. only then continue English translation from the verified source.
+Detailed status:
+`mavik-sklad/translations/en/work/skulptor/STATUS.md`
 
-Do not use an old site mockup, review/critique document, or unrelated text containing the word `Скульптор` as the source.
+Working source:
+`Скульптор.docx` from File Library, unless a newer explicitly approved source is found.
+
+Physically saved progress:
+- Chapter 1 — COMPLETE: `chapter-01-part-01.txt` through `chapter-01-part-05.txt`.
+- Chapter 2 — ACTIVE: `chapter-02-part-01.txt` through `chapter-02-part-05.txt`.
+
+**NEXT EXACT POINT:** continue immediately after the Ukrainian source line:
+`— Але будете.`
+
+The next Ukrainian paragraph has not yet been retrieved into the active source window. Retrieve the next contiguous passage from `Скульптор.docx` first. Do not infer, bridge, restart, or repeat saved text.
 
 ## STILL NEED TRANSLATION AFTER THE SCULPTOR
 
@@ -126,11 +157,14 @@ Use `mavik-sklad/files/EN-SOURCE-POLICY.md` as authority. In short:
 3. latest approved manuscript when it is explicitly newer/authoritative;
 4. older copies only for comparison/recovery.
 
-## TRANSLATION STYLE
+## TRANSLATION STYLE AND PERSISTENCE
 
 - preserve voice, rhythm, roughness and profanity level;
 - do not AI-polish;
 - do not invent details for fluency;
 - preserve story/chapter boundaries unless explicitly changed;
 - save meaningful batches immediately to the remote warehouse;
-- after 2–4 sections/stories or another substantial block, update STATUS/checkpoint.
+- read back saved files;
+- after every meaningful block update `STATUS.md` and the active-book status;
+- if the global continuation point changes materially, update `translations/en/CONTINUATION-CANON.md`;
+- never leave irreplaceable translation text only in chat/session memory.
