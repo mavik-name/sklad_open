@@ -1,9 +1,0 @@
-ARCHIVE ONLY — DO NOT USE AS A CURRENT START POINT.
-
-Current master start: `mavik-sklad/START-HERE.txt`
-Current English start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-Current English source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
-Current status: `mavik-sklad/translations/en/STATUS.md`
-Current site canon: R192.
-
-This R188 workspace may be searched only to recover already-created translation content.
