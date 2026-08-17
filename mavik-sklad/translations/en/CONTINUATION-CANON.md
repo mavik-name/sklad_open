@@ -17,15 +17,15 @@ Source: `Скульптор.docx` from File Library unless a newer explicitly ap
 - Chapter 2 COMPLETE: parts 01–06.
 - Chapter 3 COMPLETE: parts 01–09.
 - Chapter 4. The Guide COMPLETE: parts 01–38.
-- Chapter 5. The Witness ACTIVE: parts 01–07 physically saved on `main` and safety branch.
+- Chapter 5. The Witness ACTIVE: parts 01–15 physically saved on `main` and safety branch.
 
-Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-05-part-07.txt`.
+Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-05-part-15.txt`.
 
 ## EXACT CONTINUATION
 Continue immediately AFTER:
-`Не роздруківку з телефону.`
+`Він нічого не порушив.`
 
-Next output: `chapter-05-part-08.txt`.
+Next output: `chapter-05-part-16.txt`.
 Retrieve next contiguous source from `Скульптор.docx`; no inference, bridging, restarting or repetition.
 
 ## RECOVERY LAYERS
