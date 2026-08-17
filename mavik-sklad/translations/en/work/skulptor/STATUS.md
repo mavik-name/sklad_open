@@ -10,110 +10,85 @@ Safety branch: `backup/english-translations-2026-08-17`
 
 `Скульптор.docx` from File Library.
 
-Source facts verified:
-- author title page: ВІКТОР МАКАРЧУК
+Verified source facts:
+- author: ВІКТОР МАКАРЧУК
 - title: СКУЛЬПТОР
-- genre line: містично психологічний трилер
+- genre: містично психологічний трилер
 - 2026, Львів
 - parsed length: 887 pages
-- Chapter 1: `Бруд на дитячих руках`
-- Chapter 2: `Глина`
 
-No newer exact `Скульптор.docx` duplicate was found during the previous File Library search. The DOCX is the working prose source unless a newer explicitly approved source appears.
-
-Source checkpoint:
-`mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
+Use this DOCX unless a newer explicitly approved source appears. Never reconstruct missing Ukrainian prose from chat memory.
 
 ## SAVED ENGLISH PROGRESS
 
-### CHAPTER 1 — COMPLETE
+### Chapter 1 — COMPLETE
 
-Five consecutive physical files:
-1. `chapter-01-part-01.txt`
-2. `chapter-01-part-02.txt`
-3. `chapter-01-part-03.txt`
-4. `chapter-01-part-04.txt`
-5. `chapter-01-part-05.txt`
+Five physical files:
+- `chapter-01-part-01.txt`
+- `chapter-01-part-02.txt`
+- `chapter-01-part-03.txt`
+- `chapter-01-part-04.txt`
+- `chapter-01-part-05.txt`
 
-Chapter 1 ends with the source-parity-corrected lines:
-`That night Marta did not yet know that some people do not enter your life through a door.`
-`They ask a question.`
-`And the doors open on their own.`
+Locked final line: `And the doors open on their own.`
 
-Important: the last line was restored after source re-check. Do not drop it again.
+### Chapter 2. Clay — COMPLETE
 
-### CHAPTER 2 — ACTIVE
+Six physical files:
+- `chapter-02-part-01.txt`
+- `chapter-02-part-02.txt`
+- `chapter-02-part-03.txt`
+- `chapter-02-part-04.txt`
+- `chapter-02-part-05.txt`
+- `chapter-02-part-06.txt`
 
-Five consecutive physical files saved:
+Part 06 was physically saved on 2026-08-17 and read back from GitHub. It begins immediately after the former checkpoint `— Але будете.` and carries the source through the end of Chapter 2.
 
-1. `chapter-02-part-01.txt`
-   - Marta wakes after the Lucas encounter;
-   - Serhii's update on Nazar's first night;
-   - aid package and arrival at the rehabilitation center;
-   - Olena's safety update and aid handoff.
+Key final sequence preserved:
+- Lucas says Marta can argue with a request but not with a need;
+- he calls her Marta; she corrects him to Lieutenant Koval;
+- Serhii confirms the battery is almost certainly stolen and the stepfather is implicated;
+- Nazar is safe for the day;
+- Marta recognizes that Lucas is a vetted volunteer on paper;
+- Chapter 2 ends on the thought that some people do not lie, and that is exactly why it is harder not to believe them.
 
-2. `chapter-02-part-02.txt`
-   - center rules and clay activity;
-   - `Clay heals?` / `No. It just doesn't interrupt.`;
-   - Lucas revealed as a six-month supervised volunteer.
+### Chapter 3. Fund Meeting — ACTIVE
 
-3. `chapter-02-part-03.txt`
-   - Nazar enters by choice and sits where he can see the door;
-   - `A hole has a shape too.`;
-   - Serhii leaves to check the battery and warns Marta not to get carried away;
-   - first forty minutes of clay work;
-   - ends on `She did not want to accept anything from Lucas.`
+Physical file saved:
+- `chapter-03-part-01.txt`
 
-4. `chapter-02-part-04.txt`
-   - children are visibly less tense around Lucas;
-   - Nazar makes a crooked clay flashlight;
-   - `You can't see it. But it's there.`;
-   - Marta questions Lucas directly;
-   - Lucas gives his surname: **Martyn**;
-   - confirms connection to Viktoriia Andriivna's fund;
-   - ends on `No. Marta had not asked.`
-
-5. `chapter-02-part-05.txt`
-   - Marta realizes Lucas was already woven into her life through the fund/center/children;
-   - Lucas: people often cannot handle complete answers;
-   - Olena's office: Nazar remains at the center pending family assessment;
-   - Nazar's reactions are recorded as reasons not to close their eyes, without premature conclusions about beatings;
-   - Lucas's volunteer documents and surname Martyn are verified;
-   - Olena distinguishes Marta's duty to suspect from her own duty not to discard people for being strange;
-   - Lucas's help to Nazar is framed precisely: not rescue, but one hour without fear;
-   - Marta learns about the 19:00 fund meeting and immediately receives her mother's invitation;
-   - Marta confronts Lucas in the corridor;
-   - `Every adult leads a child toward something. The only question is whether they leave the child room to refuse.`;
-   - ends on:
-     `See you tonight.`
-     `I haven't said I'm coming.`
-     `But you will.`
+Part 01 covers:
+- 19:00 at the church/fund;
+- tables rearranged into a U, lists/forms/clothes/tea and flip chart;
+- Marta arrives out of uniform but remains in an investigative mode;
+- Viktoriia, Andrii, Deacon Petro, Kateryna and Lucas are present;
+- Marta notices Lucas holding the marker because it means he has already been given a role/tool;
+- Viktoriia frames Marta's presence as needed by the fund, not merely by her mother;
+- meeting begins around expansion of the center workshop program;
+- the program needs regular presence rather than one-off `arrived / distributed / photographed / left` charity;
+- Petro jokes that he thought he was invited because he is handsome; Kateryna answers that he came to the wrong room;
+- Lucas almost smiles, `like someone who had allowed himself a brief pause without stepping out of his role.`
 
 ## NEXT EXACT POINT
 
-Continue immediately AFTER the source line:
-`— Але будете.`
+Continue immediately AFTER the Ukrainian source sentence:
 
-The next Ukrainian paragraph has not yet been retrieved into the active source window. Do not invent or bridge it from memory. Retrieve the next contiguous source passage from `Скульптор.docx` first, then continue Chapter 2.
+`Як людина, яка дозволила собі коротку паузу, але не вийшла з ролі.`
 
-Do not restart Chapter 1 or Chapter 2 and do not repeat any saved part.
+This sentence is the exact last source sentence translated into `chapter-03-part-01.txt`.
 
-## NEW-BRANCH RECOVERY RULE
+Before translating further:
+1. retrieve the next contiguous Ukrainian passage from `Скульптор.docx`;
+2. verify continuity from the sentence above;
+3. save the next English batch as `chapter-03-part-02.txt`;
+4. read it back from GitHub;
+5. mirror it to `backup/english-translations-2026-08-17`;
+6. update this file, central `STATUS.md`, and `CONTINUATION-CANON.md`.
 
-Before continuing in any new chat branch, read:
-1. `mavik-sklad/START-HERE.txt`
-2. `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-3. `mavik-sklad/files/EN-SOURCE-POLICY.md`
-4. `mavik-sklad/translations/en/CONTINUATION-CANON.md`
-5. `mavik-sklad/translations/en/STATUS.md`
-6. this file
-7. the actual saved Chapter 1/2 files and next source passage
-
-If current files appear missing, do not restart translation. Search `main`, safety branch, Git history/tree/blob SHAs, historical translation workspaces as recovery-only sources, and File Library first.
+Do not restart Chapters 1–2. Do not repeat Chapter 3 Part 01. Do not bridge missing source by inference.
 
 ## CONSISTENCY LOCKS
 
-Current English decisions:
 - Скульптор → *The Sculptor*
 - Марта → Marta
 - Сергій Кравець → Serhii Kravets
@@ -122,33 +97,35 @@ Current English decisions:
 - Вікторія Андріївна → Viktoriia Andriivna
 - Олена Руденко → Olena Rudenko
 - Андрій → Andrii
+- Петро → Petro
+- Катерина → Kateryna
 - Лукас → Lucas
 - Лукас Мартин → Lucas Martyn
-- `служба у справах дітей` → child services / child welfare service according to sentence context, without replacing the Ukrainian institution with a US/UK agency
+- `служба у справах дітей` → child services / child welfare service according to context, without substituting a foreign institution
 - `відділок` → station / police station according to context
-- `райвідділ` → district station according to context
-- `ювенальна` / juvenile-police work → translate descriptively without importing a foreign agency title
+- `райвідділ` → district station
+- juvenile-police work → translate descriptively; do not import US/UK agency titles
 
-Style:
+Style lock:
 - preserve clipped observational narration;
 - keep institutional language dry where the source is dry;
 - keep short paragraph rhythm;
-- preserve religious/family language without over-explaining it;
+- preserve religious/family language without over-explaining;
 - preserve child-level bodily/detail observations;
 - do not explain what the source leaves implicit;
-- do not Americanize the social-services/police setting;
-- do not AI-polish the prose.
+- do not Americanize the setting;
+- do not AI-polish.
 
-## PREVIOUS COMPLETED BOOK
+## RECOVERY RULE
 
-Evacuation English translation text is complete and checkpointed at:
-`mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`.
+If anything appears missing, search before retranslating:
+1. current `main`;
+2. `backup/english-translations-2026-08-17`;
+3. Git commit/tree/blob history;
+4. historical translation workspaces as recovery-only sources;
+5. File Library for source manuscripts.
 
 ## CHECKPOINT DUTY
 
-After every meaningful new translation batch:
-- save physical text;
-- read it back;
-- update this file;
-- update `mavik-sklad/translations/en/STATUS.md`;
-- update `CONTINUATION-CANON.md` if the global continuation point materially changes.
+After every meaningful translation batch:
+physical save → readback → backup mirror → active STATUS → central STATUS → continuation canon → exact next source marker.
