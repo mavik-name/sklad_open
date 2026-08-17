@@ -2,71 +2,71 @@
 
 ## Поточна канонічна база
 
-**R207 — єдина чинна структурно-функціональна CORE-база сайту.**
+**R210 — єдина чинна структурно-функціональна CORE-база сайту.**
 
-Затверджено користувачем: **2026-08-17**.
+Затверджено користувачем: **2026-08-17** після живої перевірки на Cityhost.
 
 Канонічний checkpoint:
-`mavik-sklad/files/R207-CANON-CHECKPOINT.md`
+`mavik-sklad/files/R210-CANON-CHECKPOINT.md`
 
-R1–R206 не використовувати як робочу або канонічну структурно-функціональну базу. R204 лишається лише історичною чистою базою, від якої зібрано R207. R205/R206 — перехідні/експериментальні й не є каноном.
+R1–R209 не використовувати як робочу або канонічну structural/functional базу. R207 — попередній канон. R208/R209 — неканонічні кандидати, поглинуті R210.
 
-## Файли R207
+## Файли R210
 
-- `207 Збірка_Сайт_CLEAN-CORE_PART-1.zip`
-- `207 Збірка_Сайт_CLEAN-CORE_PART-2.zip`
+- `210 Збірка_Сайт_PAGE-BUILDER-IMAP_PART-1.zip`
+- `210 Збірка_Сайт_PAGE-BUILDER-IMAP_PART-2.zip`
+- `210 Збірка_Сайт_PAGE-BUILDER-IMAP_bundle.zip` — архівний контейнер.
+
+Постійне збереження: File Library `/Сайт/`.
 
 Release manifest SHA-256:
-`eb53a78be448fd8dfc797a8b024aa0d7972722dd5b7b9f72470b317c9a1e872e`
+`5fba1abf760b80f77f1bbbd15a0a2c2a61c7cd2d087c50555601fcd5c77b8d28`
 
 ZIP SHA-256:
-- PART-1: `cbdaf8b204c8ec4fbc6cf92fa46d433204393e3c4fee2dcf79b7dbf80f4b44dc`
-- PART-2: `975ebc0b179df6ff3f200b4cac86144b5624994094703973ae1b17f6468e3d50`
+- PART-1: `2f4af9aa82aff5560257aee6e33bbc3ca91a3c61cdc119c660dcb667998b49cd`
+- PART-2: `0e52f6bb0241528818d6f35d116253892105e4e76a3c891b98673e9c83b56e66`
+- bundle: `cb6d2938a0195b124aa3926dba3ae2a3fcd003dfd60ac46465968ea32d18fe15`
 
-Multipart set id: `r207-eb53a78be448fd8d`.
-Build timestamp: `2026-08-17T20:40:00+03:00`.
-Managed files: `611`.
+Multipart set id: `r210-5fba1abf760b80f7`.
+Managed files: `618`.
 
-## Захищена поведінка R207
+## Захищена поведінка R210
 
-R207 успадковує стабільну поведінку R204 і додає тільки затверджені виправлення:
+R210 включає й захищає:
 
-- mobile: PWA install flow доступний;
-- desktop: MaVik install UI не ініціалізується;
-- desktop: немає audio-reader UI і немає `▶ Слухати` на book landing;
-- mobile `Читати` = лише текстова читалка, без ініціалізації аудіомодуля;
-- mobile `Слухати` = явний `?listen=1`, і лише тоді активується аудіочиталка;
-- центральна аудіокнопка: `▶ Слухати ↔ ⏸ Пауза`;
-- tap-to-start і Screen Wake Lock у listen mode збережені;
-- QR донату збільшується лише в межах самого блоку, без окремого frame/modal/fullscreen;
-- Boss-редагування книги — inline-блок;
-- порядок книг зберігається server-side і відбивається в live manifest/public rebuild;
-- причина перебування книги в «Анонсах» редагується окремо для кожної книги;
-- мобільне меню без нумерації;
-- `/_site-state/` не перезаписується штатним deploy/patch;
-- додавання книги rollback-safe;
-- режими `Завершена · створити EPUB` та `Бета · без EPUB`;
-- EPUB створюється через дозволену site-state temp-папку, без системного `/tmp`;
-- постійний реєстр власних жанрів;
-- штатна підтримка безпечних малих overlay-патчів через Boss;
-- прямий URL має пріоритет над збереженою мовною перевагою: `/` не перекидається самовільно на `/en/`.
+- mobile PWA install flow; desktop без MaVik install UI;
+- desktop без audio-reader UI і без `▶ Слухати`; mobile `Читати` = text-only; mobile `Слухати` = explicit `?listen=1`;
+- центральну аудіокнопку `▶ Слухати ↔ ⏸ Пауза`;
+- rollback-safe book creation;
+- режими `Завершена · створити EPUB` / `Бета · без EPUB`;
+- EPUB temp лише в `/_site-state/tmp/`;
+- постійний registry жанрів;
+- safe overlay-patch support;
+- direct URL priority over stored language preference;
+- логічне групування плиток Boss;
+- drag&drop-конструктор ключових системних сторінок із preview та rollback попередньої версії;
+- компактний список сторінок конструктора без обрізання назв;
+- інтегрований поштовий клієнт Boss з IMAP/SMTP;
+- автоматичний fallback з PHP IMAP на вбудований TLS IMAP через `stream_socket_client`;
+- захищене server-only зберігання поштового пароля поза релізом/експортом state;
+- порожній стан книги у фокусі без hard-coded fallback `Скульптор`;
+- виправлене desktop-вирівнювання action-блоку в `Анонсах`;
+- погоджену сторінку `Автор` і редагування системних сторінок через Boss.
 
 ## Maintenance — жорстке правило
 
-У R207 **немає розділення maintenance за локалями**.
+У R210 **один глобальний maintenance mode**.
 
-Не використовувати і не відновлювати:
+Не використовувати і не відновлювати без нового прямого рішення автора:
 - окремий UA maintenance;
 - окремий EN maintenance;
 - `.maintenance-uk-on`;
 - `.maintenance-en-on`;
-- `maintenance/index.php` як мовну 503-логіку.
+- `maintenance/index.php` як locale-specific 503 logic.
 
-Maintenance — один глобальний режим для всього сайту.
+## ЖОРСТКИЙ КАНОН ПІСЛЯ R210 — CODE/CORE FREEZE
 
-## ЖОРСТКИЙ КАНОН ПІСЛЯ R207 — CODE/CORE FREEZE
-
-Після канонізації R207 подальша звичайна робота із сайтом виконується **лише PATCH/OVERLAY БЕЗ ЗМІНИ CORE-КОДУ R207**.
+Після канонізації R210 звичайна робота із сайтом виконується **лише PATCH/OVERLAY БЕЗ ЗМІНИ CORE-КОДУ R210**.
 
 Не змінювати без нового прямого рішення користувача:
 - PHP;
@@ -75,11 +75,10 @@ Maintenance — один глобальний режим для всього с�
 - Boss/deployer;
 - templates/rendering architecture;
 - PWA/service worker/manifest logic;
-- navigation engine;
-- SEO/indexing engine;
+- navigation/SEO/indexing engine;
 - maintenance architecture;
 - locale routing;
-- будь-який інший CORE-код, рефакторинг чи приховану оптимізацію.
+- будь-який інший CORE-код, refactoring чи hidden optimization.
 
 Дозволені PATCH/OVERLAY:
 - книги та переклади;
@@ -88,15 +87,15 @@ Maintenance — один глобальний режим для всього с�
 - музика/медіа;
 - блог і контентні сторінки;
 - контентні дані/метадані;
-- generated public/SEO artifacts, які створюються чинними механізмами R207 без зміни їхнього коду.
+- generated public/SEO artifacts, які створюються чинними механізмами R210 без зміни їхнього коду.
 
 ## Головний канон синхронізації
 
-Контентні зміни через Boss або patch мають лишати узгодженими public state і search state, де релевантно: navigation/internal links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор. Це робиться чинними можливостями R207, без модифікації CORE.
+Контентні зміни через Boss або patch мають лишати узгодженими public state і search state, де релевантно: navigation/internal links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор. Це робиться чинними можливостями R210, без модифікації CORE.
 
 ## English
 
-English-контент доставляти штатними overlay-патчами R207. Не змінювати locale routing і не створювати окремий maintenance для `/en/`.
+English-контент доставляти штатними overlay-патчами R210. Не змінювати locale routing і не створювати окремий maintenance для `/en/`.
 
 Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на `mavik.name`. Ніяких домислів чи доданого тексту.
 
@@ -104,6 +103,6 @@ English-контент доставляти штатними overlay-патча�
 
 ## Робоче правило
 
-**Будь-яке нове наповнення стартує від R207 і доставляється тільки PATCH/OVERLAY без змін CORE-коду.**
+**Будь-яке нове наповнення стартує від R210 і доставляється тільки PATCH/OVERLAY без змін CORE-коду.**
 
-R207 не перепаковувати, не рефакторити й не «покращувати» як CORE без нового прямого дозволу користувача.
+R210 не перепаковувати, не refactor-ити й не «покращувати» як CORE без нового прямого дозволу користувача.
