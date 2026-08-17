@@ -1,5 +1,5 @@
 MAVIK — ЖОРСТКИЙ КАНОН ПОСТІЙНОГО ЗБЕРЕЖЕННЯ РОБОТИ
-Оновлено: 16.08.2026
+Оновлено: 17.08.2026
 Статус: КАНОН / ОБОВ'ЯЗКОВО ДО ВИКОНАННЯ
 
 ЦЕ ПРАВИЛО ДІЄ ДЛЯ ВСІХ ПРОЄКТІВ І НАПРЯМІВ, ЯКІ ВЕДУТЬСЯ ЧЕРЕЗ ДАЛЬНІЙ СКЛАД `mavik-name/sklad_open`, ДОКИ КОРИСТУВАЧ ПРЯМО ЙОГО НЕ ЗМІНИТЬ.
@@ -56,41 +56,66 @@ MAVIK — ЖОРСТКИЙ КАНОН ПОСТІЙНОГО ЗБЕРЕЖЕННЯ 
 - master: `mavik-sklad/START-HERE.txt`;
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`;
 - release canon: `mavik-sklad/releases/CANON.md`;
-- поточна structural/functional база: R192, доки користувач прямо не затвердить новішу;
+- поточна structural/functional база: **R193**, доки користувач прямо не затвердить новішу;
+- R1–R192 не використовувати як site working/canonical base;
 - `/_site-state/` не перезаписувати штатним deploy;
 - кандидат не називати каноном без прямого «ОК» користувача.
 
 8. ДЛЯ ENGLISH CONTENT:
 - `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`;
 - `mavik-sklad/files/EN-SOURCE-POLICY.md`;
+- **`mavik-sklad/translations/en/CONTINUATION-CANON.md`**;
 - `mavik-sklad/translations/en/STATUS.md`;
-- реальні переклади зберігати у `mavik-sklad/translations/en/`;
-- старі R188 English workspace/staging використовувати лише як архівне джерело для відновлення вже готового контенту, не як активну архітектурну базу.
+- реальні переклади зберігати у `mavik-sklad/translations/en/` або в прямо зафіксованих protected content paths;
+- safety branch: `backup/english-translations-2026-08-17`;
+- старі English workspace/staging використовувати лише як архівне джерело для відновлення вже готового контенту, не як активну архітектурну базу;
+- старий номер релізу в назві (`r188`, `r192` тощо) НЕ робить translation-content файл сміттям.
 
-9. ДЛЯ ХУДОЖНЬОГО ТЕКСТУ:
+Поточний контрольний ENGLISH стан, який має пережити будь-яку нову гілку:
+- 9 повних англійських книжок фізично під `translations/en/books/`;
+- «Евакуація» — 8/8 історій фізично під `translations/en/work/evakuatsiia/`;
+- «Три романи, які ніхто не читає» — секції 1–8 під `translations/en/partial/`;
+- «Соціальна» — розділи 8–16 у трьох `mavik-sklad/files/r188-social-en-*.md` файлах;
+- активний «Скульптор»: глава 1 parts 1–5 COMPLETE; глава 2 parts 1–5 SAVED; продовжувати після `— Але будете.` після отримання наступного суцільного фрагмента `Скульптор.docx`.
+
+9. ПЕРЕД ЗАЯВОЮ «РОБОТУ ВТРАЧЕНО»:
+обов'язково перевірити всі доступні persistent recovery layers:
+- current `main` tree;
+- dedicated safety/backup branch;
+- Git commit history;
+- immutable tree/blob SHA;
+- historical translation branches/workspaces як read-only recovery source;
+- File Library;
+- інші прямо зафіксовані місця резервного збереження.
+Перевірка однієї папки не є достатньою підставою для висновку про втрату.
+
+10. ДЛЯ ХУДОЖНЬОГО ТЕКСТУ:
 Перед новим написанням/редактурою завжди звіряти:
 - project START-HERE / project canon;
 - `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`;
 - `mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`;
 - актуальний рукопис/написані глави.
 
-10. ПЕРЕД ЗАВЕРШЕННЯМ СЕСІЇ або переходом у нову гілку — обов'язково зробити фінальний checkpoint, навіть якщо останній блок невеликий.
+11. ПЕРЕД ЗАВЕРШЕННЯМ СЕСІЇ або переходом у нову гілку — обов'язково зробити фінальний checkpoint, навіть якщо останній блок невеликий.
 
-11. ЗАБОРОНЕНО:
+12. ЗАБОРОНЕНО:
 - стартувати з пам'яті чату, якщо на складі є актуальний START-HERE/checkpoint;
 - змушувати користувача повторювати вже зафіксовані рішення;
 - брати старіший CANON/KANON лише через назву файла;
-- використовувати R187/R188/R189/R190/R191 як актуальну базу сайту після канонізації R192;
-- використовувати стару R188-English site-архітектуру як поточну;
+- використовувати R1–R192 як актуальну базу сайту після канонізації R193;
+- використовувати стару English site-архітектуру як поточну;
+- видаляти/ігнорувати translation content лише через історичний R-prefix;
 - залишати критично важливі результати тільки локально;
-- перезаписувати канон незатвердженим кандидатом.
+- перезаписувати канон незатвердженим кандидатом;
+- оголошувати роботу втраченою без повного recovery search.
 
-12. Якщо два файли суперечать один одному:
+13. Якщо два файли суперечать один одному:
 - master START-HERE маршрутизує до активного проєкту;
 - project START-HERE і найновіший прямо затверджений project canon мають пріоритет над історичними notes/checkpoints;
+- для English continuity авторитетний `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
 - у парах `mavik-sklad/files/` та `mavik-sklad/text/` авторитетним є `files/`, якщо master START-HERE прямо не встановив інше.
 
 КОРОТКА ФОРМУЛА:
-START-HERE → КАНОН → АКТУАЛЬНИЙ СТАН → РОБОТА → ЗБЕРЕЖЕННЯ АРТЕФАКТУ → CHECKPOINT → ЗВІТ → ПРОДОВЖЕННЯ.
+START-HERE → КАНОН → АКТУАЛЬНИЙ СТАН → РОБОТА → ЗБЕРЕЖЕННЯ АРТЕФАКТУ → READBACK → CHECKPOINT → РЕЗЕРВ → ЗВІТ → ПРОДОВЖЕННЯ.
 
 ЦЕ КАНОН. ВИКОНАННЯ ОБОВ'ЯЗКОВЕ.
