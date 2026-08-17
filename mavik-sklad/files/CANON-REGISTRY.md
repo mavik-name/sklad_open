@@ -13,27 +13,31 @@ Status: **AUTHORITATIVE INDEX**
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R198-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R198**
+- Current canonical checkpoint: `mavik-sklad/files/R200-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R200**
 
-R1–R197 are obsolete as structural/functional site bases.
+R1–R199 are obsolete as structural/functional site bases.
 
-### HARD CORE FREEZE AFTER R198
+### HARD CODE FREEZE AFTER R200
 
-Routine site filling is **PATCH/OVERLAY ONLY, with no CORE intervention**.
+Routine site work is **PATCH/OVERLAY ONLY, WITH NO CODE CHANGES**.
 
-Content patches may add/update content, books, translations, EPUBs, covers, images, music, blog/static content, content data and required generated public/SEO artifacts. They must not rewrite R198 PHP/JS/CSS core logic, Boss functionality, templates, PWA/service-worker logic or architecture.
+Allowed content patches: books, translations, EPUBs, covers, images, music/media, blog/static content, content data/metadata, and generated public/SEO artifacts produced without changing CORE mechanisms.
 
-If a genuine CORE change is needed, it is a separate full candidate release based on R198 and requires separate explicit user approval. Never smuggle a CORE change into a content patch.
+Forbidden without a new explicit user decision: any PHP/JS/CSS change; Boss/template changes; PWA/service-worker/manifest logic changes; navigation/SEO engine changes; refactoring, optimization or any other CORE modification.
 
-Main site synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and the internal SEO auditor.
+Never create a new CORE release on your own. A content patch must never modify code silently.
 
-R198 protected UI/behavior includes:
-- installable PWA;
-- mobile menu without numbering;
+Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R200 mechanisms.
+
+R200 protected behavior:
+- mobile-only MaVik install flow;
+- mobile-only audio reader;
 - one central listen control `▶ Читати ↔ ⏸ Пауза`;
 - tap-to-start reading from the selected text position;
-- Screen Wake Lock throughout listen mode, including pause.
+- Screen Wake Lock throughout listen mode, including pause;
+- desktop has no audio-reader UI and no MaVik install UI;
+- mobile menu has no numbering.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
 - mobile reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
@@ -83,9 +87,10 @@ English translation content survives historical release prefixes only as a gener
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, **R198 is the authoritative frozen CORE base**.
-3. Routine site content updates are patch/overlay only and may not modify CORE.
-4. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
-5. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
-6. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
-7. Historical release/checkpoint documents never override a newer approved canon.
+2. For the site, **R200 is the authoritative frozen CORE base**.
+3. After R200, routine site work is patch/overlay only and may not modify code.
+4. Any future CODE/CORE change requires a new explicit user decision that overrides the R200 freeze.
+5. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
+6. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
+7. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
+8. Historical release/checkpoint documents never override a newer approved canon.
