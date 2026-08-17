@@ -2,22 +2,29 @@ MAVIK.NAME — START HERE
 Оновлено: 17.08.2026
 
 ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R210.
+АКТИВНИЙ АВТОРОМ ДОЗВОЛЕНИЙ КАНДИДАТ: R210A.
 
 Перед будь-якою роботою із сайтом:
 
 1. Прочитати `mavik-sklad/releases/CANON.md`.
 2. Прочитати `mavik-sklad/files/R210-CANON-CHECKPOINT.md`.
-3. Не використовувати R1–R209 як робочу або канонічну structural/functional базу.
-4. ГОЛОВНЕ ПРАВИЛО ПІСЛЯ R210: працювати тільки контентними PATCH/OVERLAY-пакетами БЕЗ ЗМІНИ CORE-КОДУ.
-5. НЕ змінювати PHP/JS/CSS, Boss/deployer, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, maintenance architecture, locale routing або інший CORE-код R210.
-6. НЕ робити refactoring, optimization чи «покращення» ядра самостійно.
-7. Дозволені patch-и: книги/переклади, EPUB, обкладинки, ілюстрації, музика, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts, якщо вони створюються чинними механізмами R210 без зміни CORE.
-8. Будь-яка зміна ядра можлива лише після нового прямого рішення користувача.
-9. ГОЛОВНИЙ КАНОН СИНХРОНІЗАЦІЇ: контентна зміна має лишати узгодженими public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — де релевантно й у межах чинних можливостей R210.
-10. `/_site-state/` не перезаписувати штатним deploy/patch.
-11. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+3. Якщо робота стосується поточної архітектурної ревізії сторінок — ОБОВ’ЯЗКОВО прочитати `mavik-sklad/files/R210A-CANDIDATE-CHECKPOINT.md`.
+4. Не використовувати R1–R209 як робочу або канонічну structural/functional базу.
+5. R210 лишається каноном, доки автор не перевірить і прямо не затвердить R210A.
+6. Загальний freeze R210 діє; єдиний прямо дозволений зараз CORE-відступ — R210A, який реалізує затверджене автором правило ordinary pages.
+7. Після завершення/перевірки цього кандидата знову працювати тільки контентними PATCH/OVERLAY-пакетами БЕЗ ЗМІНИ CORE-КОДУ, якщо автор окремо не дозволить інше.
+8. `/_site-state/` не перезаписувати штатним deploy/patch.
+9. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
-R210 protected behavior:
+АРХІТЕКТУРНЕ ПРАВИЛО СТОРІНОК — ПРЯМО ЗАТВЕРДЖЕНО АВТОРОМ:
+- у CORE лишаються тільки сторінки/маршрути, де є невіддільна функціональна автоматична частина сайту;
+- усі інформаційні сторінки, що не є частиною каркаса, є ЗВИЧАЙНИМИ CONTENT PAGES;
+- їхні текст, фото, композиція та мовні версії редагуються через Boss і не повинні вимагати нової CORE-збірки;
+- це правило однаково діє для української, English та всіх майбутніх міжнародних мовних версій;
+- R210A реалізує це для `Автор`, `Приватність`, `Права`, `Платформи`;
+- у system drag&drop builder R210A лишаються тільки `Книги`, `Що почитати`, `Анонси`, `Теми`.
+
+R210 protected behavior, яке R210A має повністю успадкувати:
 - mobile: PWA install flow `Встановити MaVik`;
 - desktop: MaVik install UI не ініціалізується;
 - desktop: немає audio-reader UI і немає `▶ Слухати` на сторінках книг;
@@ -37,12 +44,19 @@ R210 protected behavior:
 - safe Boss overlay patches;
 - direct URL priority over stored language preference;
 - логічно згруповані Boss tiles;
-- `Boss → Сторінки` має drag&drop-конструктор ключових системних сторінок з preview і відновленням попередньої версії;
 - compact page-builder index без обрізання назв;
 - `Boss → Пошта` має IMAP/SMTP-клієнт із PHP-IMAP або built-in TLS-IMAP fallback;
 - mail credentials server-only, не входять у release/state export;
-- порожній focus-state без hard-coded `Скульптор` fallback;
-- `/about/` містить погоджений авторський текст і редагується через Boss.
+- порожній focus-state без hard-coded `Скульптор` fallback.
+
+R210A candidate додатково:
+- `/about/` — ordinary multilingual page; український погоджений текст збережено;
+- портрет автора вставлений у body ліворуч із обтіканням; mobile — фото над текстом;
+- `/privacy/`, `/copyright/`, `/platformy/` — ordinary multilingual pages;
+- ordinary page editor підтримує фото ліворуч/праворуч/по центру;
+- future locales отримують locale-поля тієї самої ordinary page model;
+- generic locale generator не перезаписує ordinary managed pages;
+- існуючий locale `.htaccess` не перезаписується генератором.
 
 MAINTENANCE — ЖОРСТКИЙ КАНОН:
 - тільки ОДИН global maintenance для всього сайту;
@@ -50,11 +64,16 @@ MAINTENANCE — ЖОРСТКИЙ КАНОН:
 - НЕ робити окремий EN maintenance;
 - не відновлювати `.maintenance-uk-on`, `.maintenance-en-on` або `maintenance/index.php` як locale-specific 503 logic.
 
+ГОЛОВНИЙ КАНОН СИНХРОНІЗАЦІЇ:
+Контентна зміна має лишати узгодженими public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — де релевантно й у межах чинних можливостей канонічної/затвердженої архітектури.
+
 ОЧИЩЕННЯ / ІСТОРІЯ:
 - R1–R209 не використовувати як active CORE context;
 - R207 — попередній канон;
 - R208/R209 — неканонічні кандидати, поглинуті R210;
-- єдина чинна робоча база — R210.
+- R210 — чинний канон до затвердження R210A;
+- R210A — буквена ревізія R210, а не R211;
+- R210 binary видаляти з active `/Сайт/` лише ПІСЛЯ прямої канонізації R210A.
 
 ENGLISH CONTENT
 Перед English-роботою ОБОВ’ЯЗКОВО прочитати:
@@ -64,10 +83,6 @@ ENGLISH CONTENT
 - `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
 - `mavik-sklad/translations/en/STATUS.md`.
 
-English-контент доставляти через штатні overlay-патчі R210, без зміни locale routing і без окремого maintenance для `/en/`.
-
 Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на mavik.name. Якщо exact site-source недоступний — переклад зупинити, не домислювати.
 
 Для `Соціальна` діє STOP-канон `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`: не перекладати англійською до нового прямого дозволу автора.
-
-R210 — єдиний чинний site CORE canon. Після R210 — PATCH/OVERLAY ONLY, NO CORE CODE CHANGES.
