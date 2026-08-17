@@ -24,9 +24,17 @@ Continuation authority: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 - Preserve chapter/section boundaries, voice, register, rhythm, profanity level and deliberate roughness.
 - If the next canonical site passage cannot be retrieved, stop at the last verified site-source point. Do not improvise.
 
+## PROJECT EXCLUSION — SOCIAL / СОЦІАЛЬНА
+
+`Соціальна` is unfinished and actively edited. **Do not translate it into English at all** until the author explicitly says the Ukrainian book is finished/fixed and may be translated.
+
+Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
+
+The old English Social files for chapters 8–16 were intentionally deleted from both `main` and `backup/english-translations-2026-08-17` on 2026-08-17. They are not recovery input for translation work and must not be restored unless the author explicitly changes this decision.
+
 ## EXISTING ENGLISH FILES
 
-Existing English files are protected recovery artifacts, but they are not automatically canonical merely because they exist.
+Existing English files for non-excluded books are protected recovery artifacts, but they are not automatically canonical merely because they exist.
 
 For `The Sculptor`, all currently saved English work is **UNVERIFIED / NOT FOR PUBLICATION** until checked line-by-line against the canonical Ukrainian text published on mavik.name. Do not continue from an unverified English file as if it were source truth.
 
@@ -43,16 +51,18 @@ For every translation block:
 
 ## CONTENT SURVIVES RELEASE OBSOLESCENCE
 
-Old site release numbers do not invalidate translation content. A file named with `r188`, `r192`, etc. may still be useful recovery content, but it remains subject to site-source parity verification before publication.
+Old site release numbers do not invalidate translation content by themselves. A file named with `r188`, `r192`, etc. may still be useful recovery content, but it remains subject to site-source parity verification before publication.
 
-Before declaring translation work lost, search:
+**Exception:** an explicit author deletion/exclusion overrides this preservation rule. `Соціальна` English is currently such an exception.
+
+Before declaring other translation work lost, search:
 1. current `main`;
 2. `backup/english-translations-2026-08-17`;
 3. Git history/tree/blob SHAs;
 4. historical translation workspaces/branches as read-only recovery sources;
 5. File Library.
 
-Recovery does not override the hard source canon: recovered English must still be checked against the published Ukrainian site text.
+Recovery does not override the hard source canon or a project-specific author exclusion.
 
 ## ACTIVE ARCHIVE
 
