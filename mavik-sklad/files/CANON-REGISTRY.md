@@ -6,8 +6,11 @@ Status: **AUTHORITATIVE INDEX**
 ## Universal
 
 - Human-writing canon: `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
+- **Shared creative working notebook / lessons from completed «Соціальна»: `mavik-sklad/files/00-ROBOCHYI-ZAPYSNYK-SPILNOHO-PYSMENNYA.md`**
 - Technical fiction canon: `mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`
 - Persistent checkpoint/storage rules: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
+
+For new joint fiction projects, read the human-writing canon and the shared creative working notebook before drafting. The notebook transfers writing discipline and diagnostic principles, not the voice/style/plot devices of any specific book.
 
 ## Site MAVIK.NAME
 
@@ -74,13 +77,18 @@ English translation content survives historical release prefixes only as a gener
 
 ## Social / Соціальна
 
-- Project start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
+- Project start/history: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
-- Review plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
+- Historical review plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 - Persistent manuscript: `mavik-sklad/files/Соціальна.docx`
 - **English stop canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`**
 
-`Соціальна` is unfinished and actively edited. Do not translate it into English until the author explicitly permits it.
+**«Соціальна. Книга перша» is COMPLETED / AUTHOR-CLOSED as of 2026-08-17.**
+Do not resume structural or stylistic editing unless the author explicitly reopens the book or gives a concrete correction. Historical active checkpoints do not override this completed status.
+
+The completed book is one of the foundations for the universal shared creative working notebook, but its specific voice, motifs, NGO subject matter, character architecture and plot devices must not be mechanically copied into other books.
+
+English translation remains blocked by `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` until the author explicitly permits it.
 
 ## Other active creative projects
 
@@ -98,4 +106,5 @@ English translation content survives historical release prefixes only as a gener
 5. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
 6. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
 7. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
-8. Historical release/checkpoint documents never override a newer approved canon.
+8. For completed «Соціальна. Книга перша», the author-closed status of 2026-08-17 overrides older active/unfinished checkpoints.
+9. Historical release/checkpoint documents never override a newer approved canon.
