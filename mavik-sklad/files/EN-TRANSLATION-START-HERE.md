@@ -1,8 +1,8 @@
 # MAVIK.NAME — ENGLISH CONTENT TRANSLATION — START HERE
 
-Updated: 2026-08-16
+Updated: 2026-08-17
 Status: **ACTIVE TRANSLATION WORK ONLY**
-Canonical site/core source: **R192**
+Canonical site/core source: **R193**
 
 This direction concerns English content inside the single multilingual core. It is NOT a separate English site.
 
@@ -14,7 +14,7 @@ This direction concerns English content inside the single multilingual core. It 
 4. `mavik-sklad/translations/en/STATUS.md`
 5. actual saved files of the active translation
 
-Do not restart from old R188 English site checkpoints/workspaces. Those are archival only.
+Do not restart from old pre-R193 site checkpoints/workspaces. Those are obsolete and must not override current translation work.
 
 ## ARCHITECTURE RULE
 
@@ -36,7 +36,7 @@ Everything public in Ukrainian must be able to exist in English in the same stru
 
 ## PHYSICALLY RECOVERED COMPLETE ENGLISH BOOKS
 
-The following nine complete English translations were recovered from the archival R188-English branch and physically copied into:
+The following nine complete English translations are physically stored under:
 `mavik-sklad/translations/en/books/`
 
 1. `mamo-zhyty` — *Mom, I Want to Live!*
@@ -75,9 +75,7 @@ All eight English stories are physically saved and the whole-book consistency/so
 Completion checkpoint:
 `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
 
-Do NOT restart this translation. Story 8 was specifically corrected to the latest full edited Ukrainian manuscript after an older standalone Story-8 source was found to contain material later cut from the book.
-
-The English text is complete but has not yet been physically packaged/copied into the completed `books/` site-tree. Do not claim that packaging is done until it actually is.
+Do NOT restart this translation. The English text is complete but has not yet been physically packaged/copied into the completed `books/` site-tree. Do not claim that packaging is done until it actually is.
 
 ## PHYSICALLY RECOVERED PARTIAL WORK
 
@@ -100,9 +98,9 @@ A File Library source named `Скульптор.docx` has been located.
 
 NEXT EXACT POINT:
 1. retrieve/read `Скульптор.docx`;
-2. verify it against the current R192 Ukrainian book/source where possible;
+2. verify it against the current R193 Ukrainian source where possible;
 3. if the texts differ, establish which is the latest approved source before translating;
-4. only then begin English translation from the verified source.
+4. only then continue English translation from the verified source.
 
 Do not use an old site mockup, review/critique document, or unrelated text containing the word `Скульптор` as the source.
 
@@ -118,12 +116,12 @@ Do not use an old site mockup, review/critique document, or unrelated text conta
 - `Три романи, які ніхто не читає` → complete remaining sections after Section 8
 - `Як Вітько з москалями воював` → *How Vitko Fought the Russians*
 
-`Код легенди` is currently an announcement/book object whose manuscript was sent to a publisher **for review**. Do not treat it as a published book until the user changes its status.
+`Код легенди` remains an announcement/book object whose manuscript was sent to a publisher **for review**. Do not treat it as published until the user changes its status.
 
 ## SOURCE PRIORITY
 
 Use `mavik-sklad/files/EN-SOURCE-POLICY.md` as authority. In short:
-1. current approved/canonical R192 Ukrainian content;
+1. current approved/canonical R193 Ukrainian content;
 2. live mavik.name if confirmed equivalent;
 3. latest approved manuscript when it is explicitly newer/authoritative;
 4. older copies only for comparison/recovery.
