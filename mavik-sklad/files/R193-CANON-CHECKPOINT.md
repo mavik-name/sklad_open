@@ -4,7 +4,7 @@ Status: **CANONICAL**.
 
 Approved by the user on 2026-08-17.
 
-Previous releases R1–R192 are obsolete and must not be used as working or canonical bases.
+Previous releases R1–R192 are obsolete and must not be used as working or canonical site bases.
 
 ## R193 scope
 
@@ -40,8 +40,30 @@ ZIP SHA-256:
 - `/books/free/` contains `evakuatsiia-abo-dorohoiu-do-stabika`: **PASS**
 - `/books/free/` structured ItemList `numberOfItems`: **20**
 
+## English translation continuity — protected separately from release history
+
+Authoritative continuation canon:
+`mavik-sklad/translations/en/CONTINUATION-CANON.md`
+
+Current status:
+`mavik-sklad/translations/en/STATUS.md`
+
+Safety branch:
+`backup/english-translations-2026-08-17`
+
+Protected physical state as of 2026-08-17:
+- 9 complete recovered English books under `mavik-sklad/translations/en/books/`;
+- Evacuation translation COMPLETE: 8 story files under `mavik-sklad/translations/en/work/evakuatsiia/`;
+- Three Novels Nobody Reads: Sections 1–8 under `mavik-sklad/translations/en/partial/`;
+- Social: Chapters 8–16 in three `mavik-sklad/files/r188-social-en-*.md` files;
+- The Sculptor: Chapter 1 parts 1–5 COMPLETE; Chapter 2 parts 1–5 SAVED; continue after source line `— Але будете.`.
+
+Translation content is not obsolete because its filename/path contains an earlier release number. Never delete or retranslate it solely for that reason.
+
+Before declaring any translation lost, search current main content, safety branch, Git history/tree SHAs, historical translation workspaces as recovery-only sources, and File Library.
+
 ## Working rule
 
-All structural and functional changes must start from **R193 only** until the user explicitly approves a newer canonical release.
+All structural and functional site changes must start from **R193 only** until the user explicitly approves a newer canonical release.
 
-English-translation content and translation working files are not obsolete merely because their filenames refer to an earlier development phase; preserve them while translation work is active.
+English-translation content and translation working files are governed by `translations/en/CONTINUATION-CANON.md` and remain protected independently of old site-release numbering.
