@@ -3,22 +3,21 @@
 Updated: 2026-08-17
 Status: **ACTIVE TRANSLATION / SAFETY-BRANCH COPY**
 Canonical site/core: **R193**
-Branch: `backup/english-translations-2026-08-17`
-
-Source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
+Source: `Скульптор.docx` from File Library.
 
 ## PHYSICAL PROGRESS
-- Chapter 1 COMPLETE: parts 01–05.
-- Chapter 2. Clay COMPLETE: parts 01–06.
-- Chapter 3. Fund Meeting ACTIVE: parts 01–05 saved on this branch.
+- Chapter 1 COMPLETE: 01–05.
+- Chapter 2 COMPLETE: 01–06.
+- Chapter 3 COMPLETE: 01–09.
+- Chapter 4. The Guide ACTIVE: 01–07 saved on this branch.
 
-Latest file: `chapter-03-part-05.txt`.
+Latest file: `chapter-04-part-07.txt`.
 
 ## EXACT CONTINUATION
 Continue after:
-`— Я мама.`
+`— Добре. Скину на службову пошту. Але одразу кажу: у нас по ньому все було нормально.`
 
-Next output: `chapter-03-part-06.txt`. Retrieve next contiguous source from `Скульптор.docx`; do not infer, restart or repeat.
+Next output: `chapter-04-part-08.txt`. Retrieve next contiguous source from `Скульптор.docx`; do not infer, restart or repeat.
 
 Locks: Marta; Serhii Kravets; Nazar; Viktoriia; Olena Rudenko; Andrii; Petro; Kateryna; Lucas Martyn. Preserve Ukrainian institutional context, clipped observational voice, short paragraph rhythm and ambiguity. No Americanization or AI-polish.
 
