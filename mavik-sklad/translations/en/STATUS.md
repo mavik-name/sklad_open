@@ -6,34 +6,31 @@ Canonical site/core: **R193**
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Safety branch: `backup/english-translations-2026-08-17`
 
-## Protected completed/partial English content
-- Nine complete recovered books under `mavik-sklad/translations/en/books/`.
-- Evacuation: eight stories complete under `mavik-sklad/translations/en/work/evakuatsiia/`.
-- Three Novels Nobody Reads: Sections 1–8 under `mavik-sklad/translations/en/partial/`.
-- Social / Соціальна: protected archive-only English batches ch08–16 under `mavik-sklad/files/`.
+## Protected content
+- Nine complete recovered English books.
+- Evacuation: complete, 8 stories.
+- Three Novels Nobody Reads: Sections 1–8 protected partial.
+- Social / Соціальна: protected archive-only English ch08–16.
 
-Translation content survives obsolete site-release numbering. Before declaring work lost search `main`, safety branch, Git history/tree/blob, recovery-only historical translation workspaces, and File Library.
+Translation content survives obsolete site-release numbering. Search all recovery layers before declaring anything lost.
 
 ## ACTIVE — The Sculptor
 Source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
 Folder: `mavik-sklad/translations/en/work/skulptor/`.
-Detailed status: `mavik-sklad/translations/en/work/skulptor/STATUS.md`.
 
-- Chapter 1: COMPLETE, parts 01–05.
-- Chapter 2. Clay: COMPLETE, parts 01–06.
-- Chapter 3. Fund Meeting: ACTIVE, parts 01–03 saved.
+- Chapter 1 COMPLETE: parts 01–05.
+- Chapter 2. Clay COMPLETE: parts 01–06.
+- Chapter 3. Fund Meeting ACTIVE: parts 01–04 saved, mirrored and read back.
 
-`chapter-03-part-03.txt` is physically saved on `main` and `backup/english-translations-2026-08-17`, and read back from `main`.
+Latest file: `chapter-03-part-04.txt`.
 
-**NEXT EXACT SOURCE POINT:** continue after:
-`Збори тривали майже годину.`
-
-Next file: `chapter-03-part-04.txt`. Retrieve the next contiguous Ukrainian source from `Скульптор.docx` before translating; do not infer or repeat.
+**NEXT EXACT SOURCE POINT:** after `Принципово.`
+Next file: `chapter-03-part-05.txt`.
+Retrieve next contiguous source from `Скульптор.docx`; no inference or repetition.
 
 ## Remaining queue after The Sculptor
 UNIVERSE; The Devil’s Advocate; The Patient; The Loop; The Light-Bringer; Olena; Letters to the Colonel; remaining Three Novels Nobody Reads; How Vitko Fought the Russians.
 
-## New-branch protocol
-Read master START-HERE → canon registry → English start/source policy → continuation canon → this STATUS → active-book STATUS → actual saved files/source.
-
-Every meaningful batch: source → translate → save → readback → backup mirror → active STATUS → central STATUS → continuation canon → exact next marker.
+## Continuity protocol
+Master START-HERE → canon registry → English start/source policy → continuation canon → central STATUS → active-book STATUS → saved files/source.
+Every meaningful batch: source → translate → save → readback → backup mirror → statuses/canon → exact marker.
