@@ -1,7 +1,8 @@
 # «ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА» — PROJECT START HERE / CANON
 
-Updated: 2026-08-16
+Updated: 2026-08-17
 Status: **UKRAINIAN WORK COMPLETED / PUBLISHED ON MAVIK.NAME / ENGLISH TRANSLATION TEXT COMPLETED**
+Canonical site/core: **R193**
 
 ## READ FIRST
 
@@ -10,7 +11,9 @@ Status: **UKRAINIAN WORK COMPLETED / PUBLISHED ON MAVIK.NAME / ENGLISH TRANSLATI
 3. this file
 4. universal human-writing canon
 5. universal technical fiction canon
-6. current English status if translation work is requested
+6. if English work is requested: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+7. `mavik-sklad/translations/en/STATUS.md`
+8. completion checkpoint `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
 
 ## PRIMARY UKRAINIAN SOURCE
 
@@ -80,9 +83,12 @@ Approved cover direction:
 
 ## SITE STATUS
 
-The work is present in the Ukrainian mavik.name library under canonical R192 site architecture.
+The work is present in the Ukrainian mavik.name library under canonical **R193** site/core authority.
 
 ## ENGLISH TRANSLATION — COMPLETE TEXT
+
+Authoritative English continuity:
+`mavik-sklad/translations/en/CONTINUATION-CANON.md`
 
 Translation workspace / current authoritative physical English set:
 `mavik-sklad/translations/en/work/evakuatsiia/`
@@ -109,10 +115,15 @@ Important: the latest full edited Ukrainian manuscript is authoritative for Stor
 
 The English text is complete, but it remains physically under the work folder until completed-book/site packaging is actually performed. Do not claim otherwise.
 
-## NEW-BRANCH RULE
+Safety branch protecting the current English translation state:
+`backup/english-translations-2026-08-17`
+
+## NEW-BRANCH / RECOVERY RULE
 
 - Ukrainian book: completed; do not continue it with a ninth story unless explicitly ordered.
 - Ukrainian revision: first retrieve the actual latest edited DOCX.
 - English translation: do NOT restart; use the eight saved English story files.
 - Reopen English prose only for a discovered parity problem, an explicit Ukrainian revision, final English literary/title decision, or site packaging.
 - Preserve the 1+7 rescue count and 12:17 reveal logic absolutely unless the author explicitly changes the canon.
+- Before declaring English files lost, search current main, `backup/english-translations-2026-08-17`, Git history/tree/blob SHAs, historical translation workspaces as recovery-only sources, and File Library.
+- An old release number in a translation-content path/name never makes the content disposable.
