@@ -9,8 +9,7 @@
 
 Після живої перевірки R210D автор встановив остаточне правило: **усі публічні сторінки без винятків мають користуватися однією стабільною дизайн-системою**, а статичний informational CMS у Boss треба прибрати як непотрібне ускладнення.
 
-R210E тому не продовжує латати окремі сторінки. Вона спрощує архітектуру:
-
+R210E спрощує архітектуру:
 - один global public shell;
 - одна font-family по всьому сайту;
 - лише три breakpoint-и;
@@ -34,13 +33,11 @@ R210E тому не продовжує латати окремі сторінк�
 ### Breakpoint-и
 
 Тільки три режими:
-
 - mobile: `<= 767 px`;
 - tablet / вузький desktop: `768–1099 px`;
 - desktop: `>= 1100 px`.
 
 Основний shell:
-
 - desktop max-width: **1120 px**;
 - tablet max-width: **920 px**;
 - mobile max-width: **620 px**;
@@ -49,7 +46,6 @@ R210E тому не продовжує латати окремі сторінк�
 Великі монітори не розтягують композицію — додається лише бокове повітря.
 
 Фіксований shared `h1`:
-
 - desktop: **64 px**;
 - tablet: **52 px**;
 - mobile: **42 px**.
@@ -61,7 +57,6 @@ Core typography не використовує fluid `clamp()` для основ�
 Global system підключено до всіх **180/180** публічних HTML у збірці та до Boss-шаблонів генерації нових сторінок.
 
 Охоплено, зокрема:
-
 - головну;
 - блог-список і всі blog articles;
 - Автор;
@@ -84,7 +79,6 @@ Global system підключено до всіх **180/180** публічних 
 Для desktop/tablet увімкнено стабільний scrollbar gutter, а зображення/author portrait мають стабільні розміри/aspect-ratio, щоб їх завантаження не пересувало текст.
 
 Контрольні позиції на тестових сторінках `Автор / Книги / Анонси / Музика / Права`:
-
 - 1440 px: shell 1120, Back Y=153, h1=64;
 - 900 px: shared Back Y=141, h1=52;
 - 390 px: shared Back Y=111, h1=42.
@@ -94,24 +88,14 @@ Global system підключено до всіх **180/180** публічних 
 ## Footer
 
 Footer уніфіковано по всьому публічному сайту.
-
 Copyright row починається рівно **10 px нижче верхньої межі footer** у всіх трьох breakpoint-ах.
-
 Контрольний render: desktop/tablet/mobile = **10 px / 10 px / 10 px**.
 
 ## Статичні сторінки: CMS прибрано
 
 За прямим рішенням автора універсальне редагування інформаційних сторінок через Boss більше не потрібне.
 
-Із Boss прибрано ordinary/static page editor і його зайву інфраструктуру. Сторінки:
-
-- Автор;
-- Права;
-- Приватність;
-- Платформи;
-- їх міжнародні аналоги
-
-є простими release HTML-файлами на shared global template. Їх текст/фото надалі змінюються малим ZIP-overlay/патчем, без окремого CMS.
+Із Boss прибрано ordinary/static page editor і його зайву інфраструктуру. Сторінки Автор / Права / Приватність / Платформи та їх міжнародні аналоги є простими release HTML-файлами на shared global template. Їх текст/фото надалі змінюються малим ZIP-overlay/патчем, без окремого CMS.
 
 `_site-admin/state-defaults/static-pages.json` видалено. Legacy `pages`, `sections` і `static_pages_seed_version` одноразово очищаються з `site-core.json`, не зачіпаючи функціональні настройки.
 
@@ -120,7 +104,6 @@ Copyright row починається рівно **10 px нижче верхнь�
 ## Boss / адмінка
 
 Boss спрощено після видалення static CMS:
-
 - менше технічних плиток і зайвих редакторів;
 - у `Сторінках` лишається функціональний каркас і швидкі посилання на static pages;
 - додано компактний smart status strip: release / site status / `Статика: патчі` / `CORE: функціональні сторінки`;
@@ -133,26 +116,44 @@ Boss спрощено після видалення static CMS:
 
 R210E спеціально придатна для чистого розгортання. Старі `/boss/` та `/_site-admin/` **не треба зберігати** — у R210E є свіжі копії.
 
-Перед ручним очищенням FTP обов'язково зберегти, якщо існують:
+### Перед очищенням FTP ОБОВ'ЯЗКОВО залишити/скопіювати
 
+Якщо існують:
 - `/_site-state/` — **ОБОВ'ЯЗКОВО**: owner auth, пароль/пошта, налаштування, state, deploy history;
 - `/analytics/data/`;
 - `/reactions/data/`;
 - `/assets/music/user/`;
 - `/assets/music/user-covers/`;
-- `/assets/blog/user/`.
+- `/assets/blog/user/`;
+- `.well-known/`, якщо її створив хостинг/пошукові/SSL-служби і її немає у release.
 
 Якщо на сервері є вручну завантажені зображення, яких немає в release, їх треба окремо скопіювати перед очищенням. Known canonical `/images/blog/`, `/images/covers/`, `/images/author/` уже є в R210E.
 
-Deployer R210E захищає `_site-state`, analytics/reactions data, user music, user music covers і Boss-uploaded blog images від видалення/перезапису як release-managed data.
+### Що можна видалити перед FTP-завантаженням
+
+Після резервної копії перелічених runtime-data можна видалити **все інше в document root/public_html**, включно зі старими:
+- `/boss/`;
+- `/_site-admin/`;
+- усі публічні HTML/PHP/CSS/JS;
+- старі locale-папки;
+- старі release/manifest/service-worker файли;
+- старі копії статичних сторінок і залишки попередніх renderer-ів.
+
+Після цього розпакувати **FTP-FULL** у корінь сайту, не перезаписуючи збережені runtime/data папки.
+
+Deployer R210E також захищає `_site-state`, analytics/reactions data, user music, user music covers і Boss-uploaded blog images від видалення/перезапису як release-managed data.
 
 ## Файли R210E
 
-- `210E Збірка_Сайт_CLEAN-GLOBAL_PART-1.zip`
-- `210E Збірка_Сайт_CLEAN-GLOBAL_PART-2.zip`
-- `210E Збірка_Сайт_CLEAN-GLOBAL_bundle.zip`
+Для Boss/deployer:
+- `210E Збірка_Сайт_CLEAN-GLOBAL_PART-1.zip`;
+- `210E Збірка_Сайт_CLEAN-GLOBAL_PART-2.zip`;
+- `210E Збірка_Сайт_CLEAN-GLOBAL_bundle.zip` — архівний контейнер.
 
-Постійне збереження: **File Library `/Сайт/`** — усі три binary R210E завантажені окремо.
+Для ручного FTP-clean deploy:
+- `210E Збірка_Сайт_CLEAN-GLOBAL_FTP-FULL.zip` — **готове повне дерево сайту**, без multipart-обгортки.
+
+Постійне збереження: **File Library `/Сайт/`** — усі binary R210E завантажені окремо.
 
 Внутрішній numeric release: `210`
 Display label: `210E`
@@ -163,16 +164,16 @@ Multipart set id: `r210e-d4ba49380809f481`
 Full release manifest SHA-256: `d4ba49380809f4816b6979c9dade4c5352e874f797dbbea534334a0366c9cfce`
 
 ZIP SHA-256:
-
-- PART 1: `06771b43eae8dd0a0a37fe0a858eb5abab2e41a51244a181bfaaa668c48cd8af`
-- PART 2: `ab53bc5e0654cbb748ba39db83f23f1e48296f44b92ddb6ec006979f63d7cf7f`
-- bundle: `f48aecdc59af9d7c48daf6cf27c091d4d41ffa2c75608c993452f7050ca333d8`
+- PART 1: `06771b43eae8dd0a0a37fe0a858eb5abab2e41a51244a181bfaaa668c48cd8af`;
+- PART 2: `ab53bc5e0654cbb748ba39db83f23f1e48296f44b92ddb6ec006979f63d7cf7f`;
+- bundle: `f48aecdc59af9d7c48daf6cf27c091d4d41ffa2c75608c993452f7050ca333d8`;
+- FTP-FULL: `e1678048f7a7f91fccac86ab1d43ad5037398f6de80a5fa7f9beb185a352a501`.
 
 Розміри:
-
 - PART 1: `26,639,846` bytes;
 - PART 2: `24,117,270` bytes;
-- bundle: `50,757,490` bytes.
+- bundle: `50,757,490` bytes;
+- FTP-FULL: близько `49 MiB`.
 
 ## Перевірки
 
@@ -192,7 +193,5 @@ ZIP SHA-256:
 ## Канонізація
 
 До живого встановлення та прямого `ОК` автора **R210 залишається канонічним CORE**.
-
 R210E — актуальний кандидат. R210A/B/C/D вважати попередніми/заміненими кандидатами.
-
 Після прямого підтвердження автора окремо виконати канонізацію та очищення старих binary/checkpoint references.
