@@ -13,12 +13,12 @@ Status: **AUTHORITATIVE INDEX**
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R200-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R200**
+- Current canonical checkpoint: `mavik-sklad/files/R203-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R203**
 
-R1–R199 are obsolete as structural/functional site bases.
+R1–R202 are obsolete as structural/functional site bases.
 
-### HARD CODE FREEZE AFTER R200
+### HARD CODE FREEZE AFTER R203
 
 Routine site work is **PATCH/OVERLAY ONLY, WITH NO CODE CHANGES**.
 
@@ -28,15 +28,20 @@ Forbidden without a new explicit user decision: any PHP/JS/CSS change; Boss/temp
 
 Never create a new CORE release on your own. A content patch must never modify code silently.
 
-Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R200 mechanisms.
+Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R203 mechanisms.
 
-R200 protected behavior:
+R203 protected behavior:
 - mobile-only MaVik install flow;
 - mobile-only audio reader;
-- one central listen control `▶ Читати ↔ ⏸ Пауза`;
+- desktop has no audio-reader UI, no `▶ Слухати` CTA and no MaVik install UI;
+- one central audio control;
 - tap-to-start reading from the selected text position;
 - Screen Wake Lock throughout listen mode, including pause;
-- desktop has no audio-reader UI and no MaVik install UI;
+- QR donation code expands only inside the donation block, without separate frame/modal;
+- literal iframe/frame/frameset markup absent;
+- Boss book editor is inline, not a fixed frame/drawer;
+- book order is saved server-side and reflected in live manifest/public rebuild;
+- announcement reason is editable per book;
 - mobile menu has no numbering.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
@@ -87,9 +92,9 @@ English translation content survives historical release prefixes only as a gener
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, **R200 is the authoritative frozen CORE base**.
-3. After R200, routine site work is patch/overlay only and may not modify code.
-4. Any future CODE/CORE change requires a new explicit user decision that overrides the R200 freeze.
+2. For the site, **R203 is the authoritative frozen CORE base**.
+3. After R203, routine site work is patch/overlay only and may not modify code.
+4. Any future CODE/CORE change requires a new explicit user decision that overrides the R203 freeze.
 5. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
 6. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
 7. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
