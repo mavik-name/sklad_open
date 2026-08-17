@@ -1,53 +1,60 @@
 MAVIK.NAME — START HERE
 Оновлено: 17.08.2026
 
-ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R207.
+ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R210.
 
 Перед будь-якою роботою із сайтом:
 
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R207-CANON-CHECKPOINT.md`.
-3. Не використовувати R1–R206 як робочу або канонічну структурно-функціональну базу.
-4. ГОЛОВНЕ ПРАВИЛО ПІСЛЯ R207: працювати тільки контентними PATCH/OVERLAY-пакетами БЕЗ ЗМІНИ CORE-КОДУ.
-5. НЕ змінювати PHP/JS/CSS, Boss/deployer, шаблони, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, maintenance architecture, locale routing або інший CORE-код R207.
-6. НЕ робити рефакторинг, оптимізацію чи «покращення» ядра самостійно.
-7. Дозволені patch-и: книги/переклади, EPUB, обкладинки, ілюстрації, музика, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts, якщо вони створюються чинними механізмами R207 без зміни CORE.
+2. Прочитати `mavik-sklad/files/R210-CANON-CHECKPOINT.md`.
+3. Не використовувати R1–R209 як робочу або канонічну structural/functional базу.
+4. ГОЛОВНЕ ПРАВИЛО ПІСЛЯ R210: працювати тільки контентними PATCH/OVERLAY-пакетами БЕЗ ЗМІНИ CORE-КОДУ.
+5. НЕ змінювати PHP/JS/CSS, Boss/deployer, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, maintenance architecture, locale routing або інший CORE-код R210.
+6. НЕ робити refactoring, optimization чи «покращення» ядра самостійно.
+7. Дозволені patch-и: книги/переклади, EPUB, обкладинки, ілюстрації, музика, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts, якщо вони створюються чинними механізмами R210 без зміни CORE.
 8. Будь-яка зміна ядра можлива лише після нового прямого рішення користувача.
-9. ГОЛОВНИЙ КАНОН СИНХРОНІЗАЦІЇ: контентна зміна має лишати узгодженими public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — де релевантно й у межах чинних можливостей R207.
+9. ГОЛОВНИЙ КАНОН СИНХРОНІЗАЦІЇ: контентна зміна має лишати узгодженими public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — де релевантно й у межах чинних можливостей R210.
 10. `/_site-state/` не перезаписувати штатним deploy/patch.
 11. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
-R207 protected behavior:
+R210 protected behavior:
 - mobile: PWA install flow `Встановити MaVik`;
 - desktop: MaVik install UI не ініціалізується;
 - desktop: немає audio-reader UI і немає `▶ Слухати` на сторінках книг;
 - mobile `Читати` = тільки текст, аудіомодуль не ініціалізується;
 - mobile `Слухати` = `?listen=1`, і тільки тоді запускається аудіочиталка;
-- центральна аудіокнопка `▶ Слухати ↔ ⏸ Пауза`;
+- central audio control `▶ Слухати ↔ ⏸ Пауза`;
 - tap-to-start і Screen Wake Lock у listen mode;
-- QR донату збільшується лише до ширини свого блоку, без окремого frame/modal/fullscreen;
-- Boss-редагування книги — inline-блок;
-- порядок книг зберігається server-side й відбивається в live manifest/public rebuild;
-- причина перебування книги в «Анонсах» редагується в Boss;
+- QR донату збільшується лише до ширини свого блоку;
+- Boss book editor — inline;
+- порядок книг server-side;
+- причина анонсу редагована;
 - мобільне меню без нумерації;
-- додавання книги rollback-safe;
+- rollback-safe book creation;
 - `Завершена · створити EPUB` / `Бета · без EPUB`;
-- EPUB temp — тільки всередині дозволеного site-state, без системного `/tmp`;
-- постійний реєстр власних жанрів;
-- Boss підтримує безпечні малі overlay-патчі;
-- прямий URL має пріоритет над збереженою мовною перевагою.
+- EPUB temp тільки в `/_site-state/tmp/`;
+- persistent custom genre registry;
+- safe Boss overlay patches;
+- direct URL priority over stored language preference;
+- логічно згруповані Boss tiles;
+- `Boss → Сторінки` має drag&drop-конструктор ключових системних сторінок з preview і відновленням попередньої версії;
+- compact page-builder index без обрізання назв;
+- `Boss → Пошта` має IMAP/SMTP-клієнт із PHP-IMAP або built-in TLS-IMAP fallback;
+- mail credentials server-only, не входять у release/state export;
+- порожній focus-state без hard-coded `Скульптор` fallback;
+- `/about/` містить погоджений авторський текст і редагується через Boss.
 
 MAINTENANCE — ЖОРСТКИЙ КАНОН:
-- тільки ОДИН глобальний maintenance для всього сайту;
+- тільки ОДИН global maintenance для всього сайту;
 - НЕ робити окремий UA maintenance;
 - НЕ робити окремий EN maintenance;
-- не відновлювати `.maintenance-uk-on`, `.maintenance-en-on` або `maintenance/index.php` як мовну 503-логіку.
+- не відновлювати `.maintenance-uk-on`, `.maintenance-en-on` або `maintenance/index.php` як locale-specific 503 logic.
 
 ОЧИЩЕННЯ / ІСТОРІЯ:
-- R1–R206 не використовувати як active CORE context;
-- R204 — лише історична чиста база, від якої зібрано R207;
-- R205/R206 — неканонічні перехідні/експериментальні збірки;
-- єдина чинна робоча база — R207.
+- R1–R209 не використовувати як active CORE context;
+- R207 — попередній канон;
+- R208/R209 — неканонічні кандидати, поглинуті R210;
+- єдина чинна робоча база — R210.
 
 ENGLISH CONTENT
 Перед English-роботою ОБОВ’ЯЗКОВО прочитати:
@@ -57,10 +64,10 @@ ENGLISH CONTENT
 - `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
 - `mavik-sklad/translations/en/STATUS.md`.
 
-English-контент доставляти через штатні overlay-патчі R207, без зміни locale routing і без окремого maintenance для `/en/`.
+English-контент доставляти через штатні overlay-патчі R210, без зміни locale routing і без окремого maintenance для `/en/`.
 
 Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на mavik.name. Якщо exact site-source недоступний — переклад зупинити, не домислювати.
 
 Для `Соціальна` діє STOP-канон `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`: не перекладати англійською до нового прямого дозволу автора.
 
-R207 — єдиний чинний site CORE canon. Після R207 — PATCH/OVERLAY ONLY, NO CORE CODE CHANGES.
+R210 — єдиний чинний site CORE canon. Після R210 — PATCH/OVERLAY ONLY, NO CORE CODE CHANGES.
