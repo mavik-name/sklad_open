@@ -10,14 +10,15 @@ Protected set: nine complete recovered English books; Evacuation complete; Three
 - Chapter 1 COMPLETE: 01–05.
 - Chapter 2 COMPLETE: 01–06.
 - Chapter 3 COMPLETE: 01–09.
-- Chapter 4. The Guide ACTIVE: 01–27 physically saved on this branch.
+- Chapter 4. The Guide COMPLETE: 01–38.
+- Chapter 5. The Witness ACTIVE: 01–15 physically saved on this branch.
 
-Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-04-part-27.txt`.
+Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-05-part-15.txt`.
 
 ## EXACT CONTINUATION
 After:
-`І це збило її сильніше, ніж заперечення.`
+`Він нічого не порушив.`
 
-Next file: `chapter-04-part-28.txt`. Retrieve next contiguous source from `Скульптор.docx`; no inference or repetition.
+Next file: `chapter-05-part-16.txt`. Retrieve next contiguous source from `Скульптор.docx`; no inference or repetition.
 
 This branch is recovery-only, not current site architecture. Recover translation content selectively before retranslating. Also search Git history/tree/blob and File Library.
