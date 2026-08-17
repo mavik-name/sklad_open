@@ -2,37 +2,35 @@
 
 Updated: 2026-08-17
 Status: **AUTHORITATIVE CONTINUATION CANON**
-Canonical site/core: **R193**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Safety branch: `backup/english-translations-2026-08-17`
 
-Translation text is protected CONTENT and survives obsolete release numbering.
+## OVERRIDING SOURCE RULE
+For all English book translation, the ONLY authoritative source is the canonical Ukrainian text actually published on mavik.name. No sentence may be generated from File Library manuscripts, warehouse copies, chat memory, summaries, old English files or guessed continuation.
 
-## Protected English set
-Nine complete recovered books; Evacuation complete (8 stories); Three Novels Nobody Reads Sections 1–8 protected partial; Social / Соціальна ch08–16 protected archive-only.
+If the site source cannot be retrieved, translation stops. No bridges, additions or reconstruction.
+
+## EXISTING ENGLISH CONTENT
+Existing files remain protected recovery artifacts, but they are not automatically canonical. Publication requires parity with the current Ukrainian site text.
 
 ## ACTIVE — THE SCULPTOR
-Source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
+All currently saved English `The Sculptor` files are now **UNVERIFIED / QUARANTINED / NOT FOR PUBLICATION** pending line-by-line verification against the canonical Ukrainian publication on mavik.name.
 
-- Chapter 1 COMPLETE: parts 01–05.
-- Chapter 2 COMPLETE: parts 01–06.
-- Chapter 3 COMPLETE: parts 01–09.
-- Chapter 4. The Guide COMPLETE: parts 01–38.
-- Chapter 5. The Witness ACTIVE: parts 01–15 physically saved on `main` and safety branch.
+Physical state when this hard canon was imposed:
+- `main`: through `chapter-05-part-26.txt`.
+- safety branch: through `chapter-05-part-25.txt`.
+- Part 26 is intentionally not mirrored because the hard canon interrupted the workflow immediately after the `main` write.
 
-Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-05-part-15.txt`.
-
-## EXACT CONTINUATION
-Continue immediately AFTER:
-`Він нічого не порушив.`
-
-Next output: `chapter-05-part-16.txt`.
-Retrieve next contiguous source from `Скульптор.docx`; no inference, bridging, restarting or repetition.
+## NEXT CONTINUATION
+Do NOT continue from Part 26.
+Retrieve the canonical site publication and audit from the beginning of `Скульптор` or from the earliest independently site-verified point. Only text verified against the site may be retained as canonical English.
 
 ## RECOVERY LAYERS
-`main` → `backup/english-translations-2026-08-17` → Git commit/tree/blob → historical translation workspaces recovery-only → File Library.
+`main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library.
+Recovery layers preserve work; they do not override the canonical site text.
 
 ## PERSISTENCE
-Every meaningful batch: source → translate → main save → readback → backup mirror → active STATUS → central STATUS → continuation canon → exact next marker.
+For each valid block: canonical site source → translation only → save → readback → exact site-source marker → backup mirror → statuses.
 
 ## QUEUE AFTER THE SCULPTOR
 UNIVERSE; The Devil’s Advocate; The Patient; The Loop; The Light-Bringer; Olena; Letters to the Colonel; remaining Three Novels Nobody Reads; How Vitko Fought the Russians.
