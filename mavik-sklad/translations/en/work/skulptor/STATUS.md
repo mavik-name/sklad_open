@@ -3,35 +3,31 @@
 Updated: 2026-08-17
 Status: **ACTIVE TRANSLATION / SAFETY-BRANCH COPY**
 Canonical site/core: **R193**
-Main continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Branch: `backup/english-translations-2026-08-17`
 
 ## SOURCE
-`Скульптор.docx` from File Library, unless a newer explicitly approved source appears.
+`Скульптор.docx` from File Library unless a newer explicitly approved source appears.
 
-## PHYSICAL PROGRESS ON THIS BRANCH
+## PHYSICAL PROGRESS
 
-### Chapter 1 — COMPLETE
-`chapter-01-part-01.txt` through `chapter-01-part-05.txt`.
+- Chapter 1 — COMPLETE, parts 01–05.
+- Chapter 2. Clay — COMPLETE, parts 01–06.
+- Chapter 3. Fund Meeting — ACTIVE:
+  - `chapter-03-part-01.txt`
+  - `chapter-03-part-02.txt`
 
-### Chapter 2. Clay — COMPLETE
-`chapter-02-part-01.txt` through `chapter-02-part-06.txt`.
-
-### Chapter 3. Fund Meeting — ACTIVE
-Saved:
-`chapter-03-part-01.txt`.
+Latest part includes Marta’s safety rules; no children’s faces as proof of charity; Lucas’s `materials / rhythm / boundaries`; and his line that he helps children make things while watching where adults try to make something out of them.
 
 ## EXACT CONTINUATION
 
-Continue immediately after Ukrainian source sentence:
-`Як людина, яка дозволила собі коротку паузу, але не вийшла з ролі.`
+Continue after:
+`Саме тому вона вдарила сильніше.`
 
-Retrieve the next contiguous passage from `Скульптор.docx`. Next output: `chapter-03-part-02.txt`.
-
-Do not infer missing source, restart previous chapters, or repeat saved parts.
+Next file: `chapter-03-part-03.txt`.
+Retrieve next contiguous source from `Скульптор.docx`; do not infer, restart, or repeat saved text.
 
 ## LOCKS
-Marta; Serhii Kravets; Nazar; Viktoriia; Olena Rudenko; Andrii; Petro; Kateryna; Lucas Martyn. Preserve Ukrainian institutional context, clipped observational voice, short paragraph rhythm, and source ambiguity. Do not Americanize or AI-polish.
+Marta; Serhii Kravets; Nazar; Viktoriia; Olena Rudenko; Andrii; Petro; Kateryna; Lucas Martyn. Preserve Ukrainian institutional context, clipped observational voice, short paragraph rhythm and ambiguity. Do not Americanize or AI-polish.
 
 ## RECOVERY
-If `main` is damaged, this branch is a direct physical recovery source for the translation files. Also use Git history/tree/blob SHAs and File Library before retranslating anything.
+If `main` is damaged, use this branch as a physical recovery source before retranslating. Also search Git history/tree/blob and File Library.
