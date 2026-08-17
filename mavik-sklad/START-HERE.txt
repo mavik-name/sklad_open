@@ -23,14 +23,15 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Canon: `mavik-sklad/releases/CANON.md`
-- Current checkpoint: `mavik-sklad/files/R198-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R198**
-- R1–R197 не використовувати як робочу або канонічну CORE-базу.
-- **CORE FREEZE:** після R198 звичайне наповнення сайту — лише PATCH/OVERLAY без втручання в CORE.
-- Контентні patch-и можуть містити книги, переклади, EPUB, обкладинки, зображення, музику, блог/контентні сторінки, контентні дані та потрібні generated SEO/public artifacts, але не PHP/JS/CSS CORE, Boss, шаблони, PWA/service worker чи архітектуру.
-- Якщо справді потрібна зміна CORE — окрема структурно-функціональна задача, окремий повний кандидат від R198 та окреме пряме затвердження автора.
-- Головний site-канон синхронізації лишається: будь-яка контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно.
-- R198 має PWA, мобільне меню без нумерації, одну центральну кнопку `▶ Читати ↔ ⏸ Пауза`, tap-to-start та Screen Wake Lock у listen mode, включно з паузою.
+- Current checkpoint: `mavik-sklad/files/R200-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R200**
+- R1–R199 не використовувати як робочу або канонічну CORE-базу.
+- **HARD CODE FREEZE:** після R200 будь-яке звичайне наповнення сайту — лише PATCH/OVERLAY БЕЗ ЗМІНИ КОДУ.
+- Не змінювати PHP/JS/CSS, Boss, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, не робити рефакторинг/оптимізацію CORE без нового прямого дозволу автора.
+- Не створювати новий CORE-реліз самостійно.
+- Дозволені patch-и: книги, переклади, EPUB, обкладинки, зображення, музика/медіа, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts — без зміни механізмів R200.
+- Головний site-канон синхронізації лишається: контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно й у межах чинного R200.
+- R200: mobile-only PWA install flow; mobile-only audio reader з однією кнопкою `▶ Читати ↔ ⏸ Пауза`, tap-to-start і Screen Wake Lock; desktop без audio-reader UI і без MaVik install UI; mobile menu без нумерації.
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
@@ -72,9 +73,10 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для сайту чинний CORE-канон — **R198**.
-3. Після R198 звичайне наповнення — patch/overlay only, без CORE-змін.
-4. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
-5. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
-6. Для «Соціальної» `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` прямо забороняє English-переклад до нового дозволу автора.
-7. Історичні релізи/checkpoint-и не відновлювати як архітектурну базу без прямого запиту.
+2. Для сайту чинний CORE-канон — **R200**.
+3. Після R200 звичайна робота — patch/overlay only, без змін коду.
+4. Будь-яка майбутня CODE/CORE-зміна потребує нового прямого рішення користувача, яке явно скасовує або послаблює freeze.
+5. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
+6. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
+7. Для «Соціальної» `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` прямо забороняє English-переклад до нового дозволу автора.
+8. Історичні релізи/checkpoint-и не відновлювати як архітектурну базу без прямого запиту.
