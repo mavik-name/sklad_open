@@ -13,14 +13,27 @@ Status: **AUTHORITATIVE INDEX**
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R195-CANON-CHECKPOINT.md`
-- Current structural/functional base: **R195**
+- Current canonical checkpoint: `mavik-sklad/files/R198-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R198**
 
-R1–R194 are obsolete and must not be used as working or canonical site bases.
+R1–R197 are obsolete as structural/functional site bases.
 
-Main site-construction canon: every Boss content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and the internal SEO auditor.
+### HARD CORE FREEZE AFTER R198
 
-Known next-release cleanup: R195 mobile menu contains visual numbers `01–05` and owner/admin marker `99`. Per explicit user decision, remove **all mobile-menu numbering** in the next release; keep labels and ordering unchanged.
+Routine site filling is **PATCH/OVERLAY ONLY, with no CORE intervention**.
+
+Content patches may add/update content, books, translations, EPUBs, covers, images, music, blog/static content, content data and required generated public/SEO artifacts. They must not rewrite R198 PHP/JS/CSS core logic, Boss functionality, templates, PWA/service-worker logic or architecture.
+
+If a genuine CORE change is needed, it is a separate full candidate release based on R198 and requires separate explicit user approval. Never smuggle a CORE change into a content patch.
+
+Main site synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and the internal SEO auditor.
+
+R198 protected UI/behavior includes:
+- installable PWA;
+- mobile menu without numbering;
+- one central listen control `▶ Читати ↔ ⏸ Пауза`;
+- tap-to-start reading from the selected text position;
+- Screen Wake Lock throughout listen mode, including pause.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
 - mobile reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
@@ -46,16 +59,9 @@ If the canonical site text cannot be retrieved, translation stops.
 ### Existing English recovery content
 Recovered/saved English files remain protected content, but they are not automatically publication-canonical until checked against the current Ukrainian site publication.
 
-`The Sculptor` is currently **QUARANTINED / UNVERIFIED AGAINST SITE / NOT FOR PUBLICATION**. At the hard-canon interruption:
-- `main` had files through `chapter-05-part-26.txt`;
-- safety branch had files through `chapter-05-part-25.txt`;
-- Part 26 was intentionally not mirrored after the user interruption.
-
-Do not continue with a new part. First audit against the canonical Ukrainian `Скульптор` publication on mavik.name from the start or from the earliest independently site-verified point.
+`The Sculptor` remains QUARANTINED / UNVERIFIED AGAINST SITE / NOT FOR PUBLICATION until site-source parity is established.
 
 English translation content survives historical release prefixes only as a general rule; an explicit author deletion/exclusion overrides recovery preservation.
-
-Before declaring translation loss, search all layers listed in `translations/en/CONTINUATION-CANON.md`, except content explicitly excluded by the author.
 
 ## Social / Соціальна
 
@@ -65,9 +71,7 @@ Before declaring translation loss, search all layers listed in `translations/en/
 - Persistent manuscript: `mavik-sklad/files/Соціальна.docx`
 - **English stop canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`**
 
-`Соціальна` is unfinished and actively edited. **Do not translate it into English** until the author explicitly says the Ukrainian book is finished/fixed and may be translated.
-
-Old English Social files for chapters 8–16 were deleted from `main` and `backup/english-translations-2026-08-17` on 2026-08-17 by explicit author decision. Do not restore them for translation work.
+`Соціальна` is unfinished and actively edited. Do not translate it into English until the author explicitly permits it.
 
 ## Other active creative projects
 
@@ -76,13 +80,12 @@ Old English Social files for chapters 8–16 were deleted from `main` and `backu
 - Евакуація: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
 - Generation-ship concept: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
 
-For English translation, the published-site hard source canon overrides manuscript-source rules. For other textual work, always verify the actual latest approved manuscript/artifact before editing.
-
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, R195 is authoritative until a newer release is explicitly approved.
-3. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
-4. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
-5. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` explicitly blocks English translation until a new author decision.
-6. Historical release/checkpoint documents never override a newer approved canon; historical translation trees may be searched for recovery only when not explicitly excluded by the author.
+2. For the site, **R198 is the authoritative frozen CORE base**.
+3. Routine site content updates are patch/overlay only and may not modify CORE.
+4. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
+5. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
+6. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
+7. Historical release/checkpoint documents never override a newer approved canon.
