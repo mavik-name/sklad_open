@@ -1,5 +1,5 @@
 MAVIK WORKSPACE / ДАЛЬНІЙ СКЛАД — CURRENT INDEX
-Updated: 2026-08-16
+Updated: 2026-08-17
 Repository: mavik-name/sklad_open
 
 FIRST FILE FOR EVERY NEW CHAT BRANCH:
@@ -16,19 +16,27 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release canon: `mavik-sklad/releases/CANON.md`
-- current checkpoint: `mavik-sklad/files/R192-MULTILANG-CANON-CHECKPOINT.md`
-- structural/functional base: R192
+- current checkpoint: `mavik-sklad/files/R193-CANON-CHECKPOINT.md`
+- structural/functional base: **R193**
+- R1–R192 are obsolete as site working/canonical bases
 - reader-header canon: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
 - book-page canon: `mavik-sklad/files/kanon-storinky-knyhy.txt`
 
-ENGLISH CONTENT
+ENGLISH CONTENT — CONTINUATION MUST SURVIVE ANY BRANCH
 - start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 - source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
+- authoritative continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 - status: `mavik-sklad/translations/en/STATUS.md`
 - physical workspace: `mavik-sklad/translations/en/`
-- Evacuation English text: COMPLETE, 8 stories physically saved under `translations/en/work/evakuatsiia/`
-- Evacuation completion checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
-- exact current continuation: `Скульптор` → *The Sculptor*; verify located `Скульптор.docx` against current R192 Ukrainian source before translation
+- safety branch: `backup/english-translations-2026-08-17`
+- 9 complete recovered English books are under `translations/en/books/`
+- Evacuation English text: COMPLETE, 8 stories under `translations/en/work/evakuatsiia/`
+- Three Novels Nobody Reads: Sections 1–8 preserved under `translations/en/partial/`
+- Social: Chapters 8–16 preserved in three `mavik-sklad/files/r188-social-en-*.md` content files; historical `r188` prefix does NOT make them disposable
+- active continuation: `Скульптор` → *The Sculptor*
+- Sculptor physical state: Chapter 1 parts 1–5 COMPLETE; Chapter 2 parts 1–5 SAVED
+- exact next point: after Ukrainian source line `— Але будете.`; retrieve next contiguous source passage from `Скульптор.docx` before translating
+- before declaring any translation lost, search main translation tree, safety branch, Git history/tree SHAs, historical translation workspaces as recovery-only sources, and File Library
 
 СОЦІАЛЬНА
 - start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
@@ -53,7 +61,7 @@ ENGLISH CONTENT
 - Ukrainian povist completed/published
 - Ghost + 7 = 8; 12:17 hard reveal logic
 - latest edited Ukrainian manuscript is in File Library
-- English translation text complete; final Story 8 aligned to latest edited Ukrainian source
+- English translation text complete; all 8 physical English story files saved
 
 НФ ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
 - start: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
@@ -61,9 +69,9 @@ ENGLISH CONTENT
 - open questions must remain open until author decision
 
 HISTORY / ARCHIVE
-- `mavik-sklad/builds/R188-*` = archive/recovery only
-- old R187/R188/R189/R190/R191 site candidates/passports/checkpoints never override R192
-- old R188-English site architecture never overrides active English translation files
+- old R1–R192 site releases/checkpoints/workspaces never override R193
+- old English site architecture never overrides current English translation files
+- historical English workspaces/branches may be searched as READ-ONLY recovery sources for already translated content
 - `mavik-sklad/text/` is a mirror; `files/` is authority if a mirror diverges
 
 For any other named project not listed above: search warehouse + File Library first; do not reconstruct its canon from chat memory. If no persistent project START-HERE exists, create/restore one from verified source material before substantial new work.
