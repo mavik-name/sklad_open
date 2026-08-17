@@ -1,7 +1,10 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
-Updated: 2026-08-16
+Updated: 2026-08-17
 Status: **ACTIVE TRANSLATION**
+Canonical site/core: **R193**
+Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+Safety branch: `backup/english-translations-2026-08-17`
 
 ## WORKING SOURCE
 
@@ -16,7 +19,7 @@ Source facts verified:
 - Chapter 1: `Бруд на дитячих руках`
 - Chapter 2: `Глина`
 
-No newer exact `Скульптор.docx` duplicate was found during File Library search. A full current R192 book-text artifact was not available in the warehouse search, so the DOCX is the working prose source unless a newer approved source appears.
+No newer exact `Скульптор.docx` duplicate was found during the previous File Library search. The DOCX is the working prose source unless a newer explicitly approved source appears.
 
 Source checkpoint:
 `mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
@@ -95,6 +98,19 @@ The next Ukrainian paragraph has not yet been retrieved into the active source w
 
 Do not restart Chapter 1 or Chapter 2 and do not repeat any saved part.
 
+## NEW-BRANCH RECOVERY RULE
+
+Before continuing in any new chat branch, read:
+1. `mavik-sklad/START-HERE.txt`
+2. `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
+3. `mavik-sklad/files/EN-SOURCE-POLICY.md`
+4. `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+5. `mavik-sklad/translations/en/STATUS.md`
+6. this file
+7. the actual saved Chapter 1/2 files and next source passage
+
+If current files appear missing, do not restart translation. Search `main`, safety branch, Git history/tree/blob SHAs, historical translation workspaces as recovery-only sources, and File Library first.
+
 ## CONSISTENCY LOCKS
 
 Current English decisions:
@@ -127,3 +143,12 @@ Style:
 
 Evacuation English translation text is complete and checkpointed at:
 `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`.
+
+## CHECKPOINT DUTY
+
+After every meaningful new translation batch:
+- save physical text;
+- read it back;
+- update this file;
+- update `mavik-sklad/translations/en/STATUS.md`;
+- update `CONTINUATION-CANON.md` if the global continuation point materially changes.
