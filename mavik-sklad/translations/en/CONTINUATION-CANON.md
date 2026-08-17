@@ -5,24 +5,26 @@ Status: **AUTHORITATIVE CONTINUATION CANON**
 Canonical site/core: **R193**
 Safety branch: `backup/english-translations-2026-08-17`
 
-Translation text is protected CONTENT and survives obsolete release numbering. Never declare work lost after checking one location.
+Translation text is protected CONTENT and survives obsolete release numbering.
 
 ## Protected English set
 Nine complete recovered books; Evacuation complete (8 stories); Three Novels Nobody Reads Sections 1–8 protected partial; Social / Соціальна ch08–16 protected archive-only.
 
 ## ACTIVE — THE SCULPTOR
 Source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
-Working folder: `mavik-sklad/translations/en/work/skulptor/`.
 
 - Chapter 1 COMPLETE: parts 01–05.
-- Chapter 2. Clay COMPLETE: parts 01–06.
-- Chapter 3. Fund Meeting ACTIVE: parts 01–05 physically saved on `main` and safety branch; latest part read back.
+- Chapter 2 COMPLETE: parts 01–06.
+- Chapter 3 COMPLETE: parts 01–09.
+- Chapter 4. The Guide ACTIVE: parts 01–07 physically saved on `main` and safety branch.
+
+Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-04-part-07.txt`.
 
 ## EXACT CONTINUATION
 Continue immediately AFTER:
-`— Я мама.`
+`— Добре. Скину на службову пошту. Але одразу кажу: у нас по ньому все було нормально.`
 
-Next output: `chapter-03-part-06.txt`.
+Next output: `chapter-04-part-08.txt`.
 Retrieve next contiguous source from `Скульптор.docx`; no inference, bridging, restarting or repetition.
 
 ## RECOVERY LAYERS
