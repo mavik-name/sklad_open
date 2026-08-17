@@ -57,11 +57,7 @@ Every mutation in Boss must be propagated consistently to the public site and se
 
 ## Known next-release cleanup
 
-`assets/app/site-shell.js` in R195 hardcodes mobile owner/admin menu marker `99`:
-
-`marker.textContent='99'`
-
-This is only a visual sentinel used to keep the owner/admin item obviously last; it is not a release number. In the next release replace it with the real dynamic menu sequence number (currently `06`) while keeping the owner/admin item last.
+R195 contains mobile-menu visual numbering `01–05` plus a hardcoded owner/admin marker `99`. By the user's explicit follow-up decision, the next release must **remove all mobile-menu numbering completely**, not replace `99` with another number. Labels and ordering remain unchanged.
 
 ## Continuation rule
 
