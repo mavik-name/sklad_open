@@ -1,25 +1,17 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
 Updated: 2026-08-17
-Status: **ACTIVE TRANSLATION / SAFETY-BRANCH COPY**
-Canonical site/core: **R193**
-Source: `Скульптор.docx` from File Library.
+Status: **QUARANTINED / SAFETY-BRANCH COPY / SITE-SOURCE AUDIT REQUIRED**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` on `main`.
 
-## PHYSICAL PROGRESS
-- Chapter 1 COMPLETE: 01–05.
-- Chapter 2 COMPLETE: 01–06.
-- Chapter 3 COMPLETE: 01–09.
-- Chapter 4. The Guide COMPLETE: 01–38.
-- Chapter 5. The Witness ACTIVE: 01–15 saved on this branch.
+## HARD RULE
+Only the canonical Ukrainian `Скульптор` text actually published on mavik.name may be used to create English translation. No manuscript, chat memory, old English file, summary or guessed continuation may generate new text. No additions.
 
-Latest file: `chapter-05-part-15.txt`.
+## PHYSICAL STATE ON THIS BRANCH
+English files exist through `chapter-05-part-25.txt`.
+They are protected recovery artifacts but are **UNVERIFIED / NOT FOR PUBLICATION** until line-by-line checked against the canonical Ukrainian site publication.
 
-## EXACT CONTINUATION
-Continue after:
-`Він нічого не порушив.`
+`chapter-05-part-26.txt` was deliberately NOT mirrored after the hard-canon interruption.
 
-Next output: `chapter-05-part-16.txt`. Retrieve next contiguous source from `Скульптор.docx`; do not infer, restart or repeat.
-
-Locks: Marta; Serhii Kravets; Nazar; Viktoriia; Olena Rudenko; Andrii; Petro; Kateryna; Lucas Martyn; Lucas Andriiovych Martyn; Yakiv Levytskyi; Luka Myron; Sofia. Preserve Ukrainian institutional context, clipped observational voice, short paragraph rhythm and ambiguity. No Americanization or AI-polish.
-
-If `main` is damaged, use this branch before retranslating; also search Git history/tree/blob and File Library.
+## NEXT VALID ACTION
+Retrieve the canonical mavik.name publication and audit from the start of the book or from the earliest independently site-verified point. If site source cannot be retrieved, stop. Do not improvise.
