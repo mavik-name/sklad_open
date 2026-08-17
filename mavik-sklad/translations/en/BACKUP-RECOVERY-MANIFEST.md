@@ -4,21 +4,16 @@ Branch: `backup/english-translations-2026-08-17`
 Updated: 2026-08-17
 Purpose: independent persistent recovery copy of English translation content.
 
-Protected set: nine complete recovered English books; Evacuation complete; Three Novels Nobody Reads Sections 1–8; Social / Соціальна protected ch08–16; active The Sculptor.
+## HARD SOURCE OVERRIDE
+The ONLY authoritative source for English book translation is the canonical Ukrainian text actually published on mavik.name. Recovery files may not be used to invent or reconstruct missing source text.
 
 ## THE SCULPTOR
-- Chapter 1 COMPLETE: 01–05.
-- Chapter 2 COMPLETE: 01–06.
-- Chapter 3 COMPLETE: 01–09.
-- Chapter 4. The Guide COMPLETE: 01–38.
-- Chapter 5. The Witness ACTIVE: 01–15 physically saved on this branch.
+This branch contains English `The Sculptor` files through `chapter-05-part-25.txt`.
+They are **UNVERIFIED AGAINST THE CANONICAL SITE PUBLICATION / NOT FOR PUBLICATION** until line-by-line audited against mavik.name.
 
-Latest file: `mavik-sklad/translations/en/work/skulptor/chapter-05-part-15.txt`.
+`chapter-05-part-26.txt` exists only on `main` because the hard-canon interruption occurred immediately after that write; it was intentionally not mirrored.
 
-## EXACT CONTINUATION
-After:
-`Він нічого не порушив.`
+## RECOVERY USE
+Use this branch to preserve and compare existing work only. Canonical validity comes only from parity with the published Ukrainian site text.
 
-Next file: `chapter-05-part-16.txt`. Retrieve next contiguous source from `Скульптор.docx`; no inference or repetition.
-
-This branch is recovery-only, not current site architecture. Recover translation content selectively before retranslating. Also search Git history/tree/blob and File Library.
+If the site source cannot be retrieved, stop translation. Never improvise.
