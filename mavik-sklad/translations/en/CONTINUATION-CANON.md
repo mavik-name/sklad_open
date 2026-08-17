@@ -5,14 +5,10 @@ Status: **AUTHORITATIVE CONTINUATION CANON**
 Canonical site/core: **R193**
 Safety branch: `backup/english-translations-2026-08-17`
 
-## HARD RULE
-Translation text is CONTENT and survives obsolete site-release numbering. Never declare work lost after checking only one location.
+Translation text is protected CONTENT and survives obsolete release numbering. Never declare work lost after checking one location.
 
-## CURRENT PROTECTED ENGLISH CONTENT
-- Nine complete recovered English books under `mavik-sklad/translations/en/books/`.
-- Evacuation complete, eight stories.
-- Three Novels Nobody Reads, Sections 1–8 protected partial.
-- Social / Соціальна, protected archive-only English ch08–16.
+## Protected English set
+Nine complete recovered books; Evacuation complete (8 stories); Three Novels Nobody Reads Sections 1–8 partial; Social / Соціальна ch08–16 protected archive-only.
 
 ## ACTIVE — THE SCULPTOR
 Source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
@@ -20,26 +16,20 @@ Working folder: `mavik-sklad/translations/en/work/skulptor/`.
 
 - Chapter 1 COMPLETE: parts 01–05.
 - Chapter 2. Clay COMPLETE: parts 01–06.
-- Chapter 3. Fund Meeting ACTIVE: parts 01–03 saved.
+- Chapter 3. Fund Meeting ACTIVE: parts 01–04 physically saved on `main` and safety branch; latest part read back.
 
-`chapter-03-part-03.txt` is physically saved on `main`, mirrored to the safety branch, and read back. It ends after Lucas’s faith exchange (`I remember more than I believe`) and Marta’s realization that her father is drawn to people who can speak precisely about pain.
-
-## EXACT CONTINUATION POINT
+## EXACT CONTINUATION
 Continue immediately AFTER:
-`Збори тривали майже годину.`
+`Принципово.`
 
-Next output: `chapter-03-part-04.txt`.
-Retrieve the next contiguous source passage from `Скульптор.docx` first. No inference, bridging, restarting, or repetition.
+Next output: `chapter-03-part-05.txt`.
+Retrieve next contiguous source from `Скульптор.docx`; no inference, bridging, restarting or repetition.
 
 ## RECOVERY LAYERS
-1. `main`.
-2. `backup/english-translations-2026-08-17`.
-3. Git commit/tree/blob history.
-4. Historical translation workspaces as read-only recovery sources.
-5. File Library.
+`main` → `backup/english-translations-2026-08-17` → Git commit/tree/blob → historical translation workspaces recovery-only → File Library.
 
-## PERSISTENCE RULE
-Every meaningful batch: source → translate → save to main → readback → mirror to safety branch → active STATUS → central STATUS → this canon → exact next source marker.
+## PERSISTENCE
+Every meaningful batch: source → translate → main save → readback → backup mirror → active STATUS → central STATUS → continuation canon → exact next marker.
 
-## REMAINING QUEUE AFTER THE SCULPTOR
+## QUEUE AFTER THE SCULPTOR
 UNIVERSE; The Devil’s Advocate; The Patient; The Loop; The Light-Bringer; Olena; Letters to the Colonel; remaining Three Novels Nobody Reads; How Vitko Fought the Russians.
