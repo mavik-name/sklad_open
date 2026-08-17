@@ -19,6 +19,8 @@
 - `210A Збірка_Сайт_STATIC-PAGES_PART-2.zip`
 - `210A Збірка_Сайт_STATIC-PAGES_bundle.zip` — архівний контейнер; у Boss як реліз завантажуються PART-1 та PART-2.
 
+Постійне збереження binary: **File Library `/Сайт/`** — усі три файли R210A фізично завантажені туди 2026-08-17. R210 binary поки не видалені, бо R210A ще кандидат.
+
 Внутрішній numeric release: `210` — збережено для сумісності з чинним deployer.
 Display label: `210A`.
 Revision: `A`.
