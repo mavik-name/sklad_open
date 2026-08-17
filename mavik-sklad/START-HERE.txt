@@ -27,7 +27,7 @@ SITE MAVIK.NAME
 - Current structural/functional base: **R195**
 - R1–R194 не використовувати як робочу або канонічну базу.
 - Головний site-канон: будь-яка зміна через Boss має синхронізувати публічний стан і SEO-стан — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно.
-- Відомий дрібний борг R195: мобільний owner/admin-пункт має жорсткий візуальний номер `99`; у наступному релізі замінити на динамічний порядковий номер, лишивши пункт останнім.
+- Відомий дрібний борг R195: у мобільному меню є `01–05` та owner/admin `99`; у наступному релізі прибрати всю нумерацію повністю, лишивши порядок і назви пунктів.
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
