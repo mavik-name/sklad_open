@@ -53,9 +53,9 @@ Recovered/saved English files remain protected content, but they are not automat
 
 Do not continue with a new part. First audit against the canonical Ukrainian `Скульптор` publication on mavik.name from the start or from the earliest independently site-verified point.
 
-English translation content survives historical release prefixes, but recovery never overrides site-source parity.
+English translation content survives historical release prefixes only as a general rule; an explicit author deletion/exclusion overrides recovery preservation.
 
-Before declaring translation loss, search all layers listed in `translations/en/CONTINUATION-CANON.md`.
+Before declaring translation loss, search all layers listed in `translations/en/CONTINUATION-CANON.md`, except content explicitly excluded by the author.
 
 ## Social / Соціальна
 
@@ -63,6 +63,11 @@ Before declaring translation loss, search all layers listed in `translations/en/
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - Review plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 - Persistent manuscript: `mavik-sklad/files/Соціальна.docx`
+- **English stop canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`**
+
+`Соціальна` is unfinished and actively edited. **Do not translate it into English** until the author explicitly says the Ukrainian book is finished/fixed and may be translated.
+
+Old English Social files for chapters 8–16 were deleted from `main` and `backup/english-translations-2026-08-17` on 2026-08-17 by explicit author decision. Do not restore them for translation work.
 
 ## Other active creative projects
 
@@ -79,4 +84,5 @@ For English translation, the published-site hard source canon overrides manuscri
 2. For the site, R195 is authoritative until a newer release is explicitly approved.
 3. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
 4. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
-5. Historical release/checkpoint documents never override a newer approved canon; historical translation trees may still be searched for recovery of already-created content.
+5. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` explicitly blocks English translation until a new author decision.
+6. Historical release/checkpoint documents never override a newer approved canon; historical translation trees may be searched for recovery only when not explicitly excluded by the author.
