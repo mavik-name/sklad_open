@@ -5,119 +5,61 @@ Status: **AUTHORITATIVE CONTINUATION CANON**
 Canonical site/core base: **R193**
 Safety branch: `backup/english-translations-2026-08-17`
 
-This file is the single continuity authority for English-content translation work.
-
 ## HARD RULE
 
-Site release numbers and translation-content preservation are separate concerns.
+Site release numbers and translation-content preservation are separate concerns. Translation text is CONTENT and survives obsolete release numbering. Never declare translation work lost after checking only one directory.
 
-- R1–R192 are obsolete as site structural/functional bases.
-- R193 is the current canonical site/core base.
-- Translation text is CONTENT and survives obsolete release numbering.
-- An old prefix such as `r188` is never by itself a reason to delete or ignore translation content.
-- Never declare translation work lost after checking only one directory.
+## REQUIRED READ ORDER
 
-## REQUIRED READ ORDER IN A NEW BRANCH
-
-1. `mavik-sklad/START-HERE.txt`
-2. `mavik-sklad/files/CANON-REGISTRY.md`
-3. `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-4. `mavik-sklad/files/EN-SOURCE-POLICY.md`
-5. this file
-6. `mavik-sklad/translations/en/STATUS.md`
-7. active-book STATUS
-8. actual saved translation files
-9. current authoritative Ukrainian source
+`mavik-sklad/START-HERE.txt` → `files/CANON-REGISTRY.md` → English START/SOURCE policy → this canon → central `translations/en/STATUS.md` → active-book STATUS → actual saved files → authoritative Ukrainian source.
 
 ## CURRENT PHYSICAL ENGLISH CONTENT
 
-### Nine complete recovered books
-Under `mavik-sklad/translations/en/books/`:
-1. `mamo-zhyty` — *Mom, I Want to Live!*
-2. `bezimenni` — *The Nameless*
-3. `liudyna-bez-akaunta` — *The Man Without an Account*
-4. `vidmova-avansom` — *Rejection in Advance*
-5. `transfer` — *Transfer*
-6. `pishchynka-solya` — *Solya, the Grain of Sand Who Dreamed of a Skyscraper*
-7. `paterny-samorefleksii` — *Patterns of Self-Reflection*
-8. `ty-i-ia` — *You and I*
-9. `yevanheliie-vid-makariia` — *The Gospel According to Macarius*
+- Nine complete recovered books under `mavik-sklad/translations/en/books/`.
+- Evacuation complete: eight stories under `mavik-sklad/translations/en/work/evakuatsiia/`.
+- Three Novels Nobody Reads: Sections 1–8 protected under `mavik-sklad/translations/en/partial/`.
+- Social / Соціальна: protected archive-only English batches ch08–16 under `mavik-sklad/files/`.
 
-### Evacuation — COMPLETE
-Eight story files under `mavik-sklad/translations/en/work/evakuatsiia/`.
-Checkpoint: `mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`.
+## ACTIVE — THE SCULPTOR
 
-### Three Novels Nobody Reads — PARTIAL
-Sections 1–8 under `mavik-sklad/translations/en/partial/try-romany-yaki-nikhto-ne-chytaie-sections-1-8/`.
+Source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
+Folder: `mavik-sklad/translations/en/work/skulptor/`.
 
-### Social / Соціальна — PARTIAL / ARCHIVE-ONLY
-Protected English content:
-- `mavik-sklad/files/r188-social-en-ch08-10.md`
-- `mavik-sklad/files/r188-social-en-ch11-13.md`
-- `mavik-sklad/files/r188-social-en-ch14-16.md`
+- Chapter 1: COMPLETE, parts 01–05.
+- Chapter 2. Clay: COMPLETE, parts 01–06.
+- Chapter 3. Fund Meeting: ACTIVE.
+  - `chapter-03-part-01.txt` SAVED.
+  - `chapter-03-part-02.txt` SAVED + READ BACK.
 
-## ACTIVE WORK — THE SCULPTOR
+Latest Chapter 3 batch preserves Marta’s safety rules, the debate over using children’s faces in donor reporting, Lucas’s `materials / rhythm / boundaries`, and his answer about helping children make things while watching where adults try to make something out of them.
 
-Working source: `Скульптор.docx` from File Library unless a newer explicitly approved source appears.
-Working directory: `mavik-sklad/translations/en/work/skulptor/`
-Detailed status: `mavik-sklad/translations/en/work/skulptor/STATUS.md`
-
-### Chapter 1 — COMPLETE
-`chapter-01-part-01.txt` through `chapter-01-part-05.txt`.
-
-### Chapter 2. Clay — COMPLETE
-`chapter-02-part-01.txt` through `chapter-02-part-06.txt`.
-
-Part 06 was created and read back on 2026-08-17 and completes the chapter.
-
-### Chapter 3. Fund Meeting — ACTIVE
-Saved:
-- `chapter-03-part-01.txt`
-
-Both latest files (`chapter-02-part-06.txt`, `chapter-03-part-01.txt`) are mirrored to the safety branch.
+The latest translation files are mirrored to `backup/english-translations-2026-08-17`.
 
 ## EXACT CONTINUATION POINT
 
-Continue immediately AFTER the Ukrainian source sentence:
+Continue immediately AFTER:
+`Саме тому вона вдарила сильніше.`
 
-`Як людина, яка дозволила собі коротку паузу, але не вийшла з ролі.`
+This is the exact last Ukrainian source sentence translated in `chapter-03-part-02.txt`.
 
-This is the exact final source sentence already translated in `chapter-03-part-01.txt`.
+Next file: `chapter-03-part-03.txt`.
+Retrieve the next contiguous source passage from `Скульптор.docx` first. No inference, bridging, restarting, or repetition.
 
-Before continuing, retrieve the next contiguous Ukrainian passage from `Скульптор.docx`. Do not infer, bridge, restart, or repeat material.
+## RECOVERY LAYERS
 
-Next output filename: `chapter-03-part-02.txt`.
-
-## REMAINING QUEUE AFTER THE SCULPTOR
-
-- UNIVERSE
-- The Devil’s Advocate
-- The Patient
-- The Loop
-- The Light-Bringer
-- Olena
-- Letters to the Colonel
-- Three Novels Nobody Reads — remaining sections after Section 8
-- How Vitko Fought the Russians
-
-## RECOVERY LAYERS — SEARCH ALL BEFORE DECLARING LOSS
-
-1. Current `main` translation tree and protected `files/` content.
+1. Current `main` tree.
 2. `backup/english-translations-2026-08-17`.
-3. Git commit history and immutable tree/blob SHAs.
+3. Git commit/tree/blob history.
 4. Historical translation workspaces as read-only recovery sources.
-5. File Library for current/authoritative manuscript binaries.
+5. File Library for source manuscripts.
 
-## PERSISTENCE RULE FOR EVERY FUTURE BATCH
+## PERSISTENCE RULE
 
-source → translate → save actual text to `main` → read back → mirror same text to safety branch → update active-book STATUS → update central STATUS → update this canon → record exact next source marker.
+Every meaningful batch:
+source → translate → save to `main` → read back → mirror to safety branch → update active STATUS → central STATUS → this canon → record exact next source marker.
 
 Never leave irreplaceable translation text only in chat or temporary runtime.
 
-## CONFLICT RULE
+## REMAINING QUEUE AFTER THE SCULPTOR
 
-- Latest explicit user-approved canon wins.
-- R193 governs site/core structure until explicitly replaced.
-- This file governs English-translation continuity unless explicitly superseded.
-- Actual saved translation files and latest authoritative Ukrainian manuscript govern prose content.
-- Historical release documents can recover files but cannot override current authority.
+UNIVERSE; The Devil’s Advocate; The Patient; The Loop; The Light-Bringer; Olena; Letters to the Colonel; remaining Three Novels Nobody Reads; How Vitko Fought the Russians.
