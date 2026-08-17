@@ -16,39 +16,51 @@ For new joint fiction projects, read the human-writing canon and the shared crea
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R204-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R204**
+- Current canonical checkpoint: `mavik-sklad/files/R207-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R207**
 
-R1–R203 are trash/obsolete as structural/functional site bases and must not be used as working context.
+R1–R206 are obsolete as active structural/functional site bases and must not be used as working context. R204 remains only the historical clean base from which R207 was rebuilt. R205/R206 are non-canonical transitional/experimental releases.
 
-### HARD CODE FREEZE AFTER R204
+### HARD CODE/CORE FREEZE AFTER R207
 
-Routine site work is **PATCH/OVERLAY ONLY, WITH NO CODE CHANGES**.
+Routine site work is **PATCH/OVERLAY ONLY, WITH NO CORE CODE CHANGES**.
 
-Allowed content patches: books, translations, EPUBs, covers, images, music/media, blog/static content, content data/metadata, and generated public/SEO artifacts produced without changing CORE mechanisms.
+Allowed content patches: books, translations, EPUBs, covers, images, music/media, blog/static content, content data/metadata, and generated public/SEO artifacts produced by existing R207 mechanisms.
 
-Forbidden without a new explicit user decision: any PHP/JS/CSS change; Boss/template changes; PWA/service-worker/manifest logic changes; navigation/SEO engine changes; refactoring, optimization or any other CORE modification.
+Forbidden without a new explicit user decision: any PHP/JS/CSS change; Boss/deployer/template changes; PWA/service-worker/manifest logic changes; navigation/SEO engine changes; maintenance architecture changes; locale routing changes; refactoring, optimization or any other CORE modification.
 
 Never create a new CORE release on your own. A content patch must never modify code silently.
 
-Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R204 mechanisms.
+Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R207 mechanisms.
 
-R204 protected behavior:
+R207 protected behavior includes:
 - mobile-only MaVik install flow;
 - desktop has no MaVik install UI;
 - desktop has no audio-reader UI and no `▶ Слухати` CTA;
 - mobile `Читати` is text-only and does not initialize the audio module;
-- mobile `Слухати` uses explicit `?listen=1`; only then the audio reader starts;
+- mobile `Слухати` uses explicit `?listen=1`;
 - central audio control is `▶ Слухати ↔ ⏸ Пауза`;
-- tap-to-start and Screen Wake Lock remain active in listen mode;
-- QR donation code expands only inside the donation block, without separate frame/modal/fullscreen;
-- literal iframe/frame/frameset markup absent;
-- Boss book editor is inline, not a fixed frame/drawer;
-- book order is saved server-side and reflected in live manifest/public rebuild;
+- Boss book editor is inline;
+- book order is server-backed;
 - announcement reason is editable per book;
-- mobile menu has no numbering.
+- mobile menu has no numbering;
+- rollback-safe book creation;
+- explicit `Завершена · створити EPUB` and `Бета · без EPUB` modes;
+- EPUB creation uses allowed `/_site-state/tmp/` instead of system `/tmp`;
+- persistent custom genre registry;
+- safe Boss overlay-patch support;
+- direct URL wins over stored language preference; `/` must not force-redirect to `/en/`.
 
-Cleanup rule: all site release ZIPs before R204 are removed from `/Сайт`; only the two R204 parts remain. Historical Git commits may exist but are not active state.
+### MAINTENANCE HARD RULE
+
+R207 has **one global maintenance mode only**.
+
+Do not restore or recreate:
+- separate UA maintenance;
+- separate EN maintenance;
+- `.maintenance-uk-on`;
+- `.maintenance-en-on`;
+- `maintenance/index.php` as locale-specific 503 logic.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
 - mobile reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
@@ -63,6 +75,8 @@ Narrow active canons that are not release snapshots may remain in force when rel
 - Current exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
 - Dedicated safety branch: `backup/english-translations-2026-08-17`
+
+English content is to be delivered through R207 overlay patches without modifying locale routing and without separate EN maintenance.
 
 ### HARD TRANSLATION SOURCE RULE
 The ONLY authoritative source for new English book translation text is the canonical Ukrainian text actually published on mavik.name.
@@ -87,9 +101,7 @@ English translation content survives historical release prefixes only as a gener
 - **English stop canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`**
 
 **«Соціальна. Книга перша» is COMPLETED / AUTHOR-CLOSED as of 2026-08-17.**
-Do not resume structural or stylistic editing unless the author explicitly reopens the book or gives a concrete correction. Historical active checkpoints do not override this completed status.
-
-The completed book is one of the foundations for the universal shared creative working notebook, but its specific voice, motifs, NGO subject matter, character architecture and plot devices must not be mechanically copied into other books.
+Do not resume structural or stylistic editing unless the author explicitly reopens the book or gives a concrete correction.
 
 English translation remains blocked by `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` until the author explicitly permits it.
 
@@ -103,11 +115,11 @@ English translation remains blocked by `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, **R204 is the authoritative frozen CORE base**.
-3. After R204, routine site work is patch/overlay only and may not modify code.
-4. Any future CODE/CORE change requires a new explicit user decision that overrides the R204 freeze.
-5. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
-6. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
-7. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
-8. For completed «Соціальна. Книга перша», the author-closed status of 2026-08-17 overrides older active/unfinished checkpoints.
+2. For the site, **R207 is the authoritative frozen CORE base**.
+3. After R207, routine site work is patch/overlay only and may not modify CORE code.
+4. Any future CODE/CORE change requires a new explicit user decision.
+5. R207 maintenance is global-only; locale-separated maintenance is forbidden unless the author explicitly reopens that design.
+6. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
+7. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
+8. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
 9. Historical release/checkpoint documents never override a newer approved canon.
