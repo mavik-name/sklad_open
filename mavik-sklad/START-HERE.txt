@@ -31,17 +31,26 @@ SITE MAVIK.NAME
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
+- **Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`**
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
-- **Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`**
+- Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 - Exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
 - Safety branch: `backup/english-translations-2026-08-17`
-- Поточна активна робота: `Скульптор` → *The Sculptor*.
-- Точна точка продовження «Скульптора»: після українського рядка `— Але будете.`; перед продовженням витягнути наступний суцільний фрагмент із `Скульптор.docx`.
-- Фізично збережено: 9 повних англійських книжок; повну «Евакуацію» (8 історій); «Три романи...» секції 1–8; «Соціальну» розділи 8–16; «Скульптор» — глава 1 повністю та 5 частин глави 2.
-- Уже збережені переклади не переробляти без перевірки parity з актуальним українським джерелом.
-- Файл перекладу НЕ стає сміттям через старий номер релізу в назві. Контент зберігається незалежно від R-номера.
-- Перед заявою про втрату перекладу перевірити `main`, safety branch, Git history/tree SHA, старі translation-workspaces як read-only recovery source і File Library.
+
+ЖОРСТКИЙ КАНОН ДЖЕРЕЛА ДЛЯ ПЕРЕКЛАДУ КНИГ:
+- єдине джерело нового англійського тексту — канонічний український текст, фактично опублікований на сторінках `mavik.name`;
+- НЕ перекладати з File Library DOCX, рукописів дальнього складу, пам’яті чату/моделі, старих English-файлів, summary/checkpoint або здогадуваного продовження;
+- жодних власних доданих описів, діалогів, пояснень, зв’язок, «містків» чи реконструкції пропущеного;
+- якщо точний фрагмент із `mavik.name` недоступний — переклад ЗУПИНИТИ, а не домислювати.
+
+Поточна активна робота: `Скульптор` → *The Sculptor*.
+- Усі наявні English-файли `Скульптора` зараз **QUARANTINED / UNVERIFIED AGAINST SITE / NOT FOR PUBLICATION** до рядок-у-рядок звірки з українською читанкою на `mavik.name`.
+- Стан на момент жорсткого канону: `main` має файли до `chapter-05-part-26.txt`; safety branch — до `chapter-05-part-25.txt`; Part 26 навмисно не дублювався після переривання користувачем.
+- НЕ продовжувати новою частиною. Спершу підняти канонічний текст зі сторінки сайту й провести parity-аудит від початку книги або від найранішої незалежно підтвердженої site-source точки.
+
+Вже збережений English-контент не видаляти лише через старий номер релізу в назві. Він лишається recovery-контентом, але перед публікацією повинен збігатися з актуальним українським текстом на сайті.
+Перед заявою про втрату перекладу перевірити `main`, safety branch, Git history/tree SHA, старі translation-workspaces як read-only recovery source і File Library.
 
 РОМАН «СОЦІАЛЬНА»
 - Start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
@@ -60,7 +69,7 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 
 «ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА»
 - Start: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
-- English translation complete under `mavik-sklad/translations/en/work/evakuatsiia/` — усі 8 фізичних текстів збережені.
+- English translation збережений під `mavik-sklad/translations/en/work/evakuatsiia/`, але за новим hard source canon перед публікацією потрібна parity-перевірка з українською публікацією на `mavik.name`.
 
 НФ РОМАН-ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
 - Start: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
@@ -69,6 +78,6 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
 2. Для сайту чинний канон — R195.
-3. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`.
-4. Реальний останній затверджений рукопис/артефакт має пріоритет над старими нотатками.
+3. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
+4. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
 5. Історичні релізи/checkpoint-и не відновлювати як архітектурну базу без прямого запиту, але використовувати для recovery перекладеного контенту, якщо потрібно.
