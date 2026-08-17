@@ -23,9 +23,11 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Canon: `mavik-sklad/releases/CANON.md`
-- Current checkpoint: `mavik-sklad/files/R193-CANON-CHECKPOINT.md`
-- Current structural/functional base: **R193**
-- R1–R192 не використовувати як робочу або канонічну базу.
+- Current checkpoint: `mavik-sklad/files/R195-CANON-CHECKPOINT.md`
+- Current structural/functional base: **R195**
+- R1–R194 не використовувати як робочу або канонічну базу.
+- Головний site-канон: будь-яка зміна через Boss має синхронізувати публічний стан і SEO-стан — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно.
+- Відомий дрібний борг R195: мобільний owner/admin-пункт має жорсткий візуальний номер `99`; у наступному релізі замінити на динамічний порядковий номер, лишивши пункт останнім.
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
@@ -46,7 +48,7 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - Plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 - Manuscript: `mavik-sklad/files/Соціальна.docx`
-- Англійський архівний контент: `r188-social-en-ch08-10.md`, `r188-social-en-ch11-13.md`, `r188-social-en-ch14-16.md`; префікс `r188` історичний, файли НЕ видаляти як релізне сміття.
+- Англійський архівний контент не видаляти лише через історичний R-префікс.
 
 «ВСЕСВІТ 25»
 - Start/current overlay: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
@@ -66,7 +68,7 @@ ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для сайту чинний канон — R193.
+2. Для сайту чинний канон — R195.
 3. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`.
 4. Реальний останній затверджений рукопис/артефакт має пріоритет над старими нотатками.
 5. Історичні релізи/checkpoint-и не відновлювати як архітектурну базу без прямого запиту, але використовувати для recovery перекладеного контенту, якщо потрібно.
