@@ -16,24 +16,24 @@ For new joint fiction projects, read the human-writing canon and the shared crea
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R207-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R207**
+- Current canonical checkpoint: `mavik-sklad/files/R210-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R210**
 
-R1–R206 are obsolete as active structural/functional site bases and must not be used as working context. R204 remains only the historical clean base from which R207 was rebuilt. R205/R206 are non-canonical transitional/experimental releases.
+R1–R209 are obsolete as active structural/functional site bases and must not be used as working context. R207 is the previous canon; R208/R209 were non-canonical candidates absorbed into R210.
 
-### HARD CODE/CORE FREEZE AFTER R207
+### HARD CODE/CORE FREEZE AFTER R210
 
 Routine site work is **PATCH/OVERLAY ONLY, WITH NO CORE CODE CHANGES**.
 
-Allowed content patches: books, translations, EPUBs, covers, images, music/media, blog/static content, content data/metadata, and generated public/SEO artifacts produced by existing R207 mechanisms.
+Allowed content patches: books, translations, EPUBs, covers, images, music/media, blog/static content, content data/metadata, and generated public/SEO artifacts produced by existing R210 mechanisms.
 
 Forbidden without a new explicit user decision: any PHP/JS/CSS change; Boss/deployer/template changes; PWA/service-worker/manifest logic changes; navigation/SEO engine changes; maintenance architecture changes; locale routing changes; refactoring, optimization or any other CORE modification.
 
 Never create a new CORE release on your own. A content patch must never modify code silently.
 
-Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R207 mechanisms.
+Main synchronization canon remains active: every content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and internal SEO audit using the existing R210 mechanisms.
 
-R207 protected behavior includes:
+R210 protected behavior includes:
 - mobile-only MaVik install flow;
 - desktop has no MaVik install UI;
 - desktop has no audio-reader UI and no `▶ Слухати` CTA;
@@ -49,11 +49,18 @@ R207 protected behavior includes:
 - EPUB creation uses allowed `/_site-state/tmp/` instead of system `/tmp`;
 - persistent custom genre registry;
 - safe Boss overlay-patch support;
-- direct URL wins over stored language preference; `/` must not force-redirect to `/en/`.
+- direct URL wins over stored language preference; `/` must not force-redirect to `/en/`;
+- Boss tiles are logically grouped;
+- key system pages have drag&drop editing with preview and previous-version rollback;
+- page-builder index uses compact non-clipping layout;
+- Boss has integrated IMAP/SMTP mail with PHP-IMAP or built-in TLS-IMAP fallback;
+- mail credentials remain server-only and outside release/state export;
+- no hard-coded `Скульптор` fallback for an empty focus slot;
+- `/about/` contains the approved author text and system pages are editable through Boss.
 
 ### MAINTENANCE HARD RULE
 
-R207 has **one global maintenance mode only**.
+R210 has **one global maintenance mode only**.
 
 Do not restore or recreate:
 - separate UA maintenance;
@@ -76,7 +83,7 @@ Narrow active canons that are not release snapshots may remain in force when rel
 - Physical workspace: `mavik-sklad/translations/en/`
 - Dedicated safety branch: `backup/english-translations-2026-08-17`
 
-English content is to be delivered through R207 overlay patches without modifying locale routing and without separate EN maintenance.
+English content is to be delivered through R210 overlay patches without modifying locale routing and without separate EN maintenance.
 
 ### HARD TRANSLATION SOURCE RULE
 The ONLY authoritative source for new English book translation text is the canonical Ukrainian text actually published on mavik.name.
@@ -115,10 +122,10 @@ English translation remains blocked by `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, **R207 is the authoritative frozen CORE base**.
-3. After R207, routine site work is patch/overlay only and may not modify CORE code.
+2. For the site, **R210 is the authoritative frozen CORE base**.
+3. After R210, routine site work is patch/overlay only and may not modify CORE code.
 4. Any future CODE/CORE change requires a new explicit user decision.
-5. R207 maintenance is global-only; locale-separated maintenance is forbidden unless the author explicitly reopens that design.
+5. R210 maintenance is global-only; locale-separated maintenance is forbidden unless the author explicitly reopens that design.
 6. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is the highest source authority.
 7. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative subject to the hard source canon.
 8. For `Соціальна`, `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` blocks English translation until a new author decision.
