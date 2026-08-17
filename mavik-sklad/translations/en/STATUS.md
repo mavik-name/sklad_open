@@ -16,14 +16,14 @@ Folder: `mavik-sklad/translations/en/work/skulptor/`.
 - Chapter 2 COMPLETE: 01–06.
 - Chapter 3 COMPLETE: 01–09.
 - Chapter 4 COMPLETE: 01–38.
-- Chapter 5 ACTIVE: 01–07 saved on `main` and safety branch.
+- Chapter 5 ACTIVE: 01–15 saved on `main` and safety branch.
 
-Latest physical file: `chapter-05-part-07.txt`.
+Latest physical file: `chapter-05-part-15.txt`.
 
 **NEXT EXACT SOURCE POINT:** after:
-`Не роздруківку з телефону.`
+`Він нічого не порушив.`
 
-Next file: `chapter-05-part-08.txt`. Retrieve contiguous source from `Скульптор.docx`; no inference/repetition.
+Next file: `chapter-05-part-16.txt`. Retrieve contiguous source from `Скульптор.docx`; no inference/repetition.
 
 ## Recovery
 Search `main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library before declaring loss.
