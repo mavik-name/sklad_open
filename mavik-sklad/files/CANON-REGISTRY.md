@@ -13,10 +13,14 @@ Status: **AUTHORITATIVE INDEX**
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R193-CANON-CHECKPOINT.md`
-- Current structural/functional base: **R193**
+- Current canonical checkpoint: `mavik-sklad/files/R195-CANON-CHECKPOINT.md`
+- Current structural/functional base: **R195**
 
-R1–R192 are obsolete and must not be used as working or canonical site bases.
+R1–R194 are obsolete and must not be used as working or canonical site bases.
+
+Main site-construction canon: every Boss content-state mutation must stay synchronized with public navigation/internal links and, where applicable, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow and the internal SEO auditor.
+
+Known next-release cleanup: mobile owner/admin link in R195 is visually numbered `99` by a hardcoded UI marker. Replace with a dynamic sequence number in the next release while keeping the owner link last.
 
 Narrow active canons that are not release snapshots may remain in force when relevant:
 - mobile reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
@@ -35,12 +39,12 @@ Protected physical translation state:
 - nine complete English books under `translations/en/books/`;
 - Evacuation complete: eight stories under `translations/en/work/evakuatsiia/`;
 - Three Novels Nobody Reads: Sections 1–8 under `translations/en/partial/`;
-- Social: Chapters 8–16 in three protected `mavik-sklad/files/r188-social-en-*.md` files;
+- Social: Chapters 8–16 in protected archive files;
 - The Sculptor active: Chapter 1 parts 1–5 complete; Chapter 2 parts 1–5 saved; exact continuation after source line `— Але будете.`.
 
-English-translation content is preserved even if an individual working filename was created during an older site-release phase. A historical `r188` or other old release prefix does not make a translation-content file obsolete.
+English-translation content is preserved even if an individual working filename was created during an older site-release phase. A historical release prefix does not make translation content obsolete.
 
-Before declaring translation loss, search all layers listed in `translations/en/CONTINUATION-CANON.md`: current main tree, safety branch, Git history/tree SHAs, historical translation workspaces as recovery-only sources, and File Library.
+Before declaring translation loss, search all layers listed in `translations/en/CONTINUATION-CANON.md`.
 
 ## Social / Соціальна
 
@@ -48,7 +52,6 @@ Before declaring translation loss, search all layers listed in `translations/en/
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - Review plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 - Persistent manuscript: `mavik-sklad/files/Соціальна.docx`
-- Protected partial English archive: `r188-social-en-ch08-10.md`, `r188-social-en-ch11-13.md`, `r188-social-en-ch14-16.md`.
 
 ## Other active creative projects
 
@@ -62,7 +65,7 @@ For textual work, always verify the actual latest manuscript/artifact before edi
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, R193 is authoritative until a newer release is explicitly approved.
+2. For the site, R195 is authoritative until a newer release is explicitly approved.
 3. For English translation continuity, `translations/en/CONTINUATION-CANON.md` is authoritative unless explicitly superseded.
 4. Actual latest approved manuscript/source artifact wins over older notes for prose content.
 5. Historical release/checkpoint documents never override a newer approved canon; historical translation trees may still be searched for recovery of already-created content.
