@@ -1,25 +1,27 @@
 MAVIK.NAME — START HERE
 Оновлено: 17.08.2026
 
-ПОТОЧНА КАНОНІЧНА БАЗА: R193.
+ПОТОЧНА КАНОНІЧНА БАЗА: R195.
 
 Перед будь-якою структурною або функціональною роботою із сайтом:
 
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R193-CANON-CHECKPOINT.md`.
+2. Прочитати `mavik-sklad/files/R195-CANON-CHECKPOINT.md`.
 3. Якщо робота стосується English content — ОБОВ’ЯЗКОВО прочитати:
    - `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`;
    - `mavik-sklad/files/EN-SOURCE-POLICY.md`;
    - `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
    - `mavik-sklad/translations/en/STATUS.md`;
    - status/checkpoint активного твору.
-4. Не використовувати R1–R192 як робочу або канонічну структурно-функціональну базу.
+4. Не використовувати R1–R194 як робочу або канонічну структурно-функціональну базу.
 5. Не відновлювати старі checkpoint-и, журнали чи release-паспорти як активну архітектуру, якщо користувач прямо не просить історичний аналіз.
 6. Старі translation branches/workspaces дозволено використовувати як READ-ONLY recovery source для вже створеного контенту.
-7. Наступний структурно-функціональний реліз будувати тільки від R193, доки користувач прямо не затвердить новішу базу.
+7. Наступний структурно-функціональний реліз будувати тільки від R195, доки користувач прямо не затвердить новішу базу.
 8. Контентні файли, що перебувають у роботі з перекладу англійською, зберігати незалежно від старих номерів етапів у назвах.
-9. Не видаляти translation content лише через префікс `r188`/інший старий R-номер.
+9. Не видаляти translation content лише через старий R-префікс.
 10. Перед заявою, що переклад втрачено, перевірити `main`, `backup/english-translations-2026-08-17`, Git history/tree SHA, історичні translation-workspaces як recovery-only та File Library.
+11. ГОЛОВНИЙ КАНОН КОНСТРУЮВАННЯ: будь-яка зміна через Boss повинна синхронізувати публічний стан і SEO-стан: navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — залежно від типу об’єкта.
+12. Відомий борг R195: мобільний owner/admin пункт має візуальний номер `99`; у наступному релізі замінити на динамічний порядковий номер, не змінюючи його останню позицію.
 
 ПОТОЧНА ТОЧКА ENGLISH WORK
 - 9 повних англійських книжок фізично збережені.
@@ -31,4 +33,4 @@ MAVIK.NAME — START HERE
 
 Нова гілка = нова розмова, але не новий стан проєкту.
 
-R193 — єдиний чинний site canon до прямого затвердження користувачем новішої збірки. English continuity окремо захищена `translations/en/CONTINUATION-CANON.md`.
+R195 — єдиний чинний site canon до прямого затвердження користувачем новішої збірки. English continuity окремо захищена `translations/en/CONTINUATION-CANON.md`.
