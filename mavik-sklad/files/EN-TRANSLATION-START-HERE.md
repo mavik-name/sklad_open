@@ -28,12 +28,19 @@ Forbidden as translation sources:
 
 No invented text. No added descriptions, dialogue, explanations, connective passages or clarifications. If the site text cannot be retrieved, stop.
 
+## SOCIAL / СОЦІАЛЬНА — EXCLUDED
+`Соціальна` is an unfinished, actively edited book. **Do not translate it into English at all** until the author explicitly says the Ukrainian book is finished/fixed and gives permission to translate it.
+
+Hard rule: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
+
+Old English Social files for chapters 8–16 were deleted from both `main` and `backup/english-translations-2026-08-17` on 2026-08-17. Do not restore them for translation work, parity checking or publication.
+
 ## RECOVERY VS CANON
-Existing English files are protected recovery artifacts, not automatic publication canon. Before publication they must match the canonical Ukrainian site text.
+Existing English files for other books are protected recovery artifacts, not automatic publication canon. Before publication they must match the canonical Ukrainian site text.
 
-Old release prefixes (`r188`, `r192`, etc.) do not make translation content disposable, but they also do not prove it is current.
+Old release prefixes (`r188`, `r192`, etc.) do not by themselves make translation content disposable, but explicit author deletion/exclusion such as Social overrides that general preservation rule.
 
-Before declaring work lost, search `main`, the safety branch, Git history/tree/blob, historical translation workspaces and File Library. Recovery never overrides the site-source hard canon.
+Before declaring other work lost, search `main`, the safety branch, Git history/tree/blob, historical translation workspaces and File Library. Recovery never overrides the site-source hard canon.
 
 ## CURRENT TARGET — THE SCULPTOR
 Working directory:
@@ -52,7 +59,7 @@ Physical state at the hard-canon interruption:
 Do NOT continue with a new part. First retrieve the canonical Ukrainian `Скульптор` reader from mavik.name and audit from the beginning of the book or from the earliest independently site-verified point. Retain only English wording justified by the exact published Ukrainian source.
 
 ## OTHER PROTECTED ENGLISH CONTENT
-Nine recovered English books, Evacuation, Three Novels Nobody Reads partial work and Social partial work remain preserved. They are recovery assets and require site-source parity before being treated as publication-ready under the new hard canon.
+Nine recovered English books, Evacuation and Three Novels Nobody Reads partial work remain preserved. They are recovery assets and require site-source parity before being treated as publication-ready under the hard canon.
 
 ## PERSISTENCE
 Every valid block:
