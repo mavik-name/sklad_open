@@ -1,5 +1,5 @@
 MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
-Оновлено: 17.08.2026
+Оновлено: 18.08.2026
 Статус: ГОЛОВНИЙ МАРШРУТИЗАТОР ДЛЯ НОВОЇ ГІЛКИ
 
 ГОЛОВНЕ ПРАВИЛО
@@ -10,10 +10,10 @@ MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
 1. Цей master START-HERE.
 2. `mavik-sklad/files/CANON-REGISTRY.md`.
 3. START-HERE активного конкретного проєкту.
-4. Канон/канонічні замітки конкретного проєкту.
+4. Канон конкретного проєкту.
 5. Актуальний checkpoint/STATUS.
-6. Реальний актуальний рукопис/код/артефакт.
-7. Загальні universal canons.
+6. Реальний актуальний артефакт, але лише в межах правил джерела конкретного проєкту.
+7. Universal canons.
 
 UNIVERSAL CANONS
 - Людське письмо / редактура: `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
@@ -22,64 +22,62 @@ UNIVERSAL CANONS
 
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
-- Canon: `mavik-sklad/releases/CANON.md`
-- Current checkpoint: `mavik-sklad/files/R210-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R210**
-- R1–R209 не використовувати як active site CORE context.
-- R207 — попередній канон; R208/R209 — неканонічні кандидати, поглинуті R210.
-- **HARD CODE FREEZE:** після R210 будь-яке звичайне наповнення сайту — лише PATCH/OVERLAY БЕЗ ЗМІНИ КОДУ.
-- Не змінювати PHP/JS/CSS, Boss, templates, PWA/service worker/manifest logic, navigation engine, SEO/indexing engine, maintenance architecture, locale routing; не робити refactoring/optimization CORE без нового прямого дозволу автора.
-- Не створювати новий CORE-реліз самостійно.
-- Дозволені patch-и: книги, переклади, EPUB, обкладинки, зображення, музика/медіа, блог/контентні сторінки, контентні дані/метадані та generated public/SEO artifacts — без зміни механізмів R210.
-- Головний site-канон синхронізації: контентна зміна має узгоджувати public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор, де релевантно й у межах чинного R210.
-- R210 protected behavior включає R207 reader/PWA/EPUB/overlay behavior плюс drag&drop `Сторінки`, інтегровану пошту IMAP/SMTP з TLS fallback, compact page-builder index, grouped Boss tiles, редаговану `/about/`, порожній focus-state без `Скульптор` fallback.
-- Maintenance у R210 тільки один глобальний; locale-separated maintenance заборонений без нового прямого рішення автора.
-- Канонічні binary R210 постійно збережені у File Library `/Сайт/`.
+- Release authority: `mavik-sklad/releases/CANON.md`
+- Current checkpoint: `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R210G**
+- R1–R210F не використовувати як active site CORE context.
+- `mavik-sklad/files/R211-WIP-CHECKPOINT.md` — WIP, НЕ КАНОН.
+- Routine content work після R210G: PATCH/OVERLAY ONLY, без прихованих PHP/JS/CSS/Boss/template/PWA/navigation/SEO/refactor змін.
+- `/_site-state/` не перезаписувати штатним deploy/patch.
+- Новий CORE-реліз стає каноном лише після завершення, живої перевірки та прямого затвердження автором.
 
 ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-- **Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`**
+- Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
 - Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 - Exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
 - Safety branch: `backup/english-translations-2026-08-17`
 
-ЖОРСТКИЙ КАНОН ДЖЕРЕЛА ДЛЯ ПЕРЕКЛАДУ КНИГ:
-- єдине джерело нового англійського тексту — канонічний український текст, фактично опублікований на сторінках `mavik.name`;
-- НЕ перекладати з File Library DOCX, рукописів дальнього складу, пам’яті чату/моделі, старих English-файлів, summary/checkpoint або здогадуваного продовження;
-- жодних власних доданих описів, діалогів, пояснень, зв’язок, «містків» чи реконструкції пропущеного;
-- якщо точний фрагмент із `mavik.name` недоступний — переклад ЗУПИНИТИ, а не домислювати.
+ЖОРСТКИЙ КАНОН ДЖЕРЕЛА ДЛЯ ПЕРЕКЛАДУ КНИГ
+- Єдине джерело нового або verified англійського тексту — точний український текст, фактично опублікований на `mavik.name`.
+- Site-generated `/books/<slug>/read/text/` дозволений лише якщо файл фізично отримано й підтверджено, що це той самий опублікований текст.
+- НЕ генерувати переклад із File Library DOCX, рукописів складу, release ZIP, пам’яті чату/моделі, старих English-файлів, summary/checkpoint або здогадуваного продовження.
+- Якщо точний фрагмент `mavik.name` недоступний — verified-переклад ЗУПИНИТИ, а не домислювати.
 
-`The Sculptor` — QUARANTINED / UNVERIFIED AGAINST SITE / NOT FOR PUBLICATION до parity-аудиту з канонічною українською публікацією.
+THE SCULPTOR / СКУЛЬПТОР — ПОТОЧНИЙ СТАН
+- Canonical source: `https://mavik.name/books/skulptor/read/`
+- Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
+- Глава 1 verified: reader lines 26–1231.
+- Глава 2 verified: lines 1232–2040.
+- Глава 3 verified: lines 2041–2878.
+- Наступна канонічна точка: Глава 4 `Пам’ятка`, heading line 2879; narrative starts line 2881 `Пам’ятка мала вміститися на одну сторінку.`
+- Поточний live-reader source transport недоступний через наявний fetch path. Це blocker джерела, а не втрата роботи.
+- Chapter 4 recovery parts 01–38 механічно проаудитовані; карта: `CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
+- Chapter 5 recovery parts 01–26 механічно проаудитовані; part 26 збережений на main і safety; part 27 відсутній; карта: `CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
+- Recovery-файли не є verified і не можуть пересунути канонічну точку без site-parity.
 
 РОМАН «СОЦІАЛЬНА»
 - Start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
-- Plan: `mavik-sklad/files/SOCIALNA-PLAN-AFTER-REVIEWS-2026-08-16.md`
 - Manuscript: `mavik-sklad/files/Соціальна.docx`
-- **English STOP canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`**
-- «Соціальну» НЕ ПЕРЕКЛАДАТИ англійською до нового прямого дозволу автора.
+- English STOP canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`
+- Українська Книга перша завершена.
+- English-переклад усе ще ЗАБОРОНЕНИЙ до нового прямого дозволу автора.
 
-«ВСЕСВІТ 25»
-- Start/current overlay: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
-
-«КОД ЛЕГЕНДИ»
-- Start: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
-- Рукопис передано видавництву на розгляд; не називати виданим/прийнятим без прямої зміни статусу користувачем.
-
-«ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА»
-- Start: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
-
-НФ РОМАН-ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
-- Start: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
+ІНШІ АКТИВНІ ПРОЄКТИ
+- Всесвіт 25: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
+- Код легенди: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
+- Евакуація: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
+- НФ роман-притча про поколіннєвий корабель: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
+- Статусна: `mavik-sklad/files/STATUSNA/START-HERE.md`
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для сайту чинний CORE-канон — **R210**.
-3. Після R210 звичайна робота — patch/overlay only, без змін коду.
-4. Будь-яка майбутня CODE/CORE-зміна потребує нового прямого рішення користувача, яке явно скасовує або послаблює freeze.
-5. Для джерела English-перекладу книг найвищий пріоритет має `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
-6. Для English translation continuity чинний `translations/en/CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
-7. Для «Соціальної» `SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md` прямо забороняє English-переклад до нового дозволу автора.
-8. Історичні site releases/checkpoint-и до R210 не відновлювати як активну архітектурну базу.
+2. Для site CORE чинний канон — **R210G**.
+3. R211 — WIP, не канон.
+4. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
+5. Для English continuity чинний `CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
+6. Для «Соціальної» English STOP діє до нового прямого дозволу автора.
+7. Історичні release/checkpoint документи не можуть відновити старішу базу або старі правила поверх новішого канону.
