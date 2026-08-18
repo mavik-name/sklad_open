@@ -7,6 +7,7 @@ Canonical source: `https://mavik.name/books/skulptor/read/`
 Safety branch: `backup/english-translations-2026-08-17`
 Detailed verified status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 Source checkpoint: `mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
+Chapter 4 recovery structural audit: `mavik-sklad/translations/en/work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`
 
 ## HARD RULE
 Only the canonical Ukrainian text actually published on mavik.name may generate English translation. No manuscript, old English file, chat/model memory, summary or reconstruction may generate new text. No additions.
@@ -19,6 +20,11 @@ Older English files directly under `work/skulptor/` remain recovery artifacts, n
 Current recovery inventory relevant to continuation:
 - Chapter 4: old `chapter-04-part-01.txt` through `chapter-04-part-38.txt` exist on main;
 - Chapter 5: old recovery continues beyond Chapter 4, but remains unverified.
+
+All 38 old Chapter 4 parts were mechanically inspected on 2026-08-18. Recovery-only findings are recorded in `CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
+Known recovery boundary findings:
+- definite duplicate across parts 09/10: `Serhii was silent.`;
+- probable overlap across parts 21/22 around `Second.` — must be confirmed against the site source.
 
 Do NOT move any Chapter 4 recovery file into `verified/` merely because it exists.
 
@@ -35,9 +41,7 @@ Chapter 3 audit corrected two old boundary duplicates: `I’m a mother...` acros
 Every completed verified file was saved, read back and mirrored to the safety branch.
 
 ## CURRENT BLOCKER — 2026-08-18
-The live reader currently fails through the available external fetch path. Attempts to reach the canonical reader return a fetch/cache failure, and direct guessed text endpoints cannot be used as substitutes unless physically retrieved and proven to be the site-generated published text.
-
-This is a source-transport blocker only. The translation work is not lost.
+The live reader currently fails through the available external fetch path. Attempts through both the browser fetch path and a separate file-download path failed. This is a source-transport blocker only. The translation work is not lost.
 
 Per hard canon, do NOT fall back to File Library, old recovery English or reconstruction while the canonical site source is unavailable.
 
