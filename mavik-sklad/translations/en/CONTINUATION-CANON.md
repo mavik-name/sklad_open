@@ -8,7 +8,7 @@ Safety branch: `backup/english-translations-2026-08-17`
 ## OVERRIDING SOURCE RULE
 For all English book translation, the ONLY authoritative prose source is the canonical Ukrainian text actually published on mavik.name, or its physically retrieved and demonstrably identical site-generated reader-text representation.
 
-No sentence may be generated from File Library manuscripts, warehouse copies, release ZIPs, chat memory, summaries, old English files or guessed continuation.
+No sentence may be generated from File Library manuscripts, warehouse copies, release ZIPs, recovery English files, chat memory, summaries, checkpoints or guessed continuation.
 
 If the site source cannot be retrieved, verified translation stops. No bridges, additions or reconstruction.
 
@@ -17,7 +17,7 @@ The Ukrainian book is completed, but the existing project-specific English STOP 
 
 Hard project rule: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
-Deleted old Social English files must not be restored unless the author explicitly changes that decision.
+English Social material intentionally deleted under the STOP decision must not be restored unless the author explicitly changes that decision.
 
 ## EXISTING ENGLISH CONTENT
 Existing files for other books remain protected recovery artifacts unless and until they pass parity with the current Ukrainian site publication.
@@ -46,25 +46,45 @@ Resume site parity at:
 
 Current live-reader retrieval is blocked through the available fetch transport. Until the exact Ukrainian Chapter 4 source is physically retrievable, do not create verified Chapter 4 prose.
 
-## RECOVERY PREPARATION
+## RECOVERY PREPARATION — CHAPTER 4
 Chapter 4 quarantine:
 - old parts 01–38 mechanically inspected;
-- definite recovery duplicate 09/10: `Serhii was silent.`;
-- probable recovery overlap 21/22 around `Second.`;
-- map: `work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
+- full non-canonical manuscript-comparison triage completed;
+- recovery chunking duplicate 09→10 confirmed relative to manuscript: repeated `Serhii was silent.`;
+- recovery chunking duplicate 21→22 confirmed relative to manuscript: repeated start of `Second. Don’t give...`;
+- no other obvious exact boundary duplicate or gross scene/event reordering found in retrieved manuscript spans.
 
+Maps:
+- `work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`;
+- `work/skulptor/CHAPTER-04-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
+
+These findings remain non-canonical until confirmed against mavik.name.
+
+## RECOVERY PREPARATION — CHAPTER 5
 Chapter 5 quarantine:
-- old parts 01–26 mechanically inspected;
+- stored parts 01–26 mechanically inspected and covered by full non-canonical manuscript triage;
 - no obvious exact sentence boundary duplicate found;
+- short parts 12, 14, 19 and 22 are supported as contiguous fragments rather than obvious duplicate files;
 - part 26 is preserved on main and safety branch;
-- part 27 is absent on main and safety branch;
-- part 26 is NOT evidence that canonical Chapter 5 is complete;
-- map: `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
+- part 27 exists on neither current branch;
+- the old manuscript continues immediately after part 26, so the stored recovery is definitely truncated inside Chapter 5 relative to the manuscript.
+
+Git-history recovery check:
+- translation commits exist sequentially through Chapter 5 Part 26;
+- final old prose commit: `c0864252b8998cc053f2e508743edf7be821921e` — 2026-08-17 14:02:25 +03:00;
+- no translation commit for Part 27 was found;
+- site-only hard-source canon followed at 2026-08-17 14:03:55 +03:00 in commit `20ccb74b2d1899137be439f545d36b58568ffff3`.
+
+Therefore there is **no hidden Part 27 to recover**. Do not create missing English from the known manuscript continuation.
+
+Maps:
+- `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`;
+- `work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
 
 None of these recovery observations advance the canonical translation point.
 
 ## RECOVERY LAYERS
-`main` → `backup/english-translations-2026-08-17` → Git history/tree/blob → historical translation workspaces recovery-only → File Library.
+`main` → `backup/english-translations-2026-08-17` → Git history/tree/blob → translation recovery workspaces → File Library.
 
 Recovery preserves work; it never overrides the canonical site source.
 
