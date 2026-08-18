@@ -1,16 +1,16 @@
 MAVIK.NAME — ЖОРСТКИЙ КАНОН ШАПКИ МОБІЛЬНОЇ ЕКРАННОЇ ЧИТАНКИ
 Оновлено: 18.08.2026
-Статус: АКТУАЛЬНИЙ ВУЗЬКИЙ КАНОН R212
+Статус: АКТУАЛЬНИЙ ВУЗЬКИЙ КАНОН R213
 
 Перед зміною цього компонента читати:
 - `mavik-sklad/START-HERE.txt`;
 - `mavik-sklad/files/START-HERE-SITE.txt`;
 - `mavik-sklad/releases/CANON.md`;
-- `mavik-sklad/files/R212-CANON-CHECKPOINT.md`;
+- `mavik-sklad/files/R213-CANON-CHECKPOINT.md`;
 - цей файл.
 
 1. БАЗОВИЙ КАНОН
-- Поточна structural/functional база сайту — R212.
+- Поточна structural/functional база сайту — R213.
 - Шапка звичайної мобільної екранної читанки зберігає чинну компактну структуру, компонування і функції.
 - Не перебудовувати шапку без окремого прямого рішення користувача.
 
