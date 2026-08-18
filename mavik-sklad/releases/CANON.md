@@ -1,42 +1,51 @@
 # Канон збірок MAVIK.NAME
 
-## Поточна канонічна база
+Оновлено: 2026-08-18
 
-**R210G — єдина чинна structural/functional CORE-база сайту.**
+## Єдина чинна канонічна база
 
-Затверджено автором: **2026-08-18** після живої перевірки.
+**R212 — єдина чинна structural/functional CORE-база сайту.**
 
 Канонічний checkpoint:
-`mavik-sklad/files/R210G-CANON-CHECKPOINT.md`
+`mavik-sklad/files/R212-CANON-CHECKPOINT.md`
 
-R1–R210F не використовувати як робочу або канонічну CORE-базу. R211 є WIP і не стає каноном без нового прямого затвердження автора.
+## Канонічний binary
 
-## Канонічний binary R210G
+- `212 Збірка_Сайт_ОК.zip`
+- `212 Збірка_Сайт_ОК_PART1.zip`
+- `212 Збірка_Сайт_ОК_PART2.zip`
 
-- `210G Збірка_Сайт_MENU-BACK-TIGHT_FTP-FULL.zip`
-- еквівалентна повторно завантажена копія: `210G Збірка_(1).zip`
-- FTP-FULL SHA-256: `eebcbefaa6683078dd1744b790e42a6526f6db4520a6e344e5e774d9946a672c`
-- managed files: 627
-- ZIP CRC: OK
+Manifest SHA-256:
+`a3261b7e127653097e23d014c7b3d0c8414c534457265a7f3be68990481801cf`
 
-## Робочий режим після R210G
+Set id:
+`r212-a3261b7e12765309`
 
-Routine content work — PATCH/OVERLAY ONLY, без прихованих PHP/JS/CSS/Boss/template/PWA/navigation/SEO/refactor змін CORE.
+FULL SHA-256:
+`694cd5c247a047c71bf9ccaaa61336a5cfd41cb91016d4a9c85af29d8580b390`
 
-`/_site-state/` не перезаписувати штатним deploy/patch.
+PART1 SHA-256:
+`2fb8ab725be66842c4086e3fd5e203f94cd8969d003e5c26fb5da7c3ab24c635`
 
-Новий CORE-реліз не створювати й не канонізувати автоматично.
+PART2 SHA-256:
+`74ddd17d354798e81dce5b695058b7c6f8e7e7a57707ca915e0409de300bafc9`
 
-## English content
+Managed files: **646**.
 
-English-контент є content/overlay роботою поверх R210G.
+Перевірки: PHP 35/35 OK; JSON OK; manifest 646/646; FULL/PART CRC OK; multipart union 646/646.
 
-Єдине джерело нового або verified English-тексту книги — точний український текст, фактично опублікований на `mavik.name`. Manuscript/DOCX, release ZIP, старі English-файли, summary/checkpoint і пам’ять чату не можуть генерувати переклад.
+## Робоче правило
 
-`Скульптор`: Глави 1–3 site-verified; наступна точка — Глава 4 `Пам’ятка`, recorded heading line 2879 / narrative line 2881. Recovery-файли Глав 4–5 залишаються quarantine до site-parity.
+Будь-яка наступна structural/functional робота стартує **тільки від R212**.
 
-`Соціальна`: українська Книга перша завершена, але English STOP діє до нового прямого дозволу автора.
+Routine content work — PATCH/OVERLAY поверх R212 без прихованої зміни CORE.
 
-## Головне правило
+Нормальний новий блог — content-only ZIP через Boss.
 
-**Будь-яка нова structural/functional робота стартує тільки від R210G.** Історичні release/checkpoint документи не можуть відкотити чинний канон.
+`/_site-state/` — protected live state і не перезаписується штатним deploy/patch.
+
+Root IndexNow/Bing verification key `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected SEO identity file.
+
+SIMPLE FIRST, privacy-media canon та public-blog editorial canon є обов’язковими.
+
+Будь-який майбутній реліз стає каноном лише після окремого прямого затвердження автора.
