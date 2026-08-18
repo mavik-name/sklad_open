@@ -25,10 +25,10 @@ Forbidden as translation sources:
 - File Library manuscripts;
 - warehouse manuscripts;
 - release ZIPs as prose authority;
-- cached site copies;
+- cached or reconstructed prose that cannot be demonstrated to be the canonical publication;
 - existing English translations as a source of new prose;
 - summaries/status/checkpoints;
-- guessed or reconstructed continuation.
+- guessed continuation.
 
 No invented text. No added descriptions, dialogue, explanations, connective passages or clarifications. If the site text cannot be retrieved, stop verified translation at the last site-verified point.
 
@@ -44,7 +44,7 @@ Existing English files for other books are protected recovery artifacts, not aut
 
 A version-like prefix in a translation-content filename does not by itself define site-core authority. Translation content remains subordinate to the site-source hard canon.
 
-Before declaring non-excluded work lost, search current translation storage, dedicated safety/recovery paths, Git recovery data where needed, and File Library.
+Before declaring non-excluded work lost, search current translation storage, safety/recovery paths, Git history/tree/blob data, and File Library.
 
 ## CURRENT TARGET — THE SCULPTOR
 Working directory:
@@ -68,22 +68,35 @@ Chapter 4 `Глава 4. Пам’ятка`:
 
 The live reader is currently not retrievable through the available fetch path. That is a source-transport blocker, not loss of work. Do not switch to DOCX or recovery English to bypass it.
 
-### QUARANTINED RECOVERY PREPARATION
-Chapter 4 recovery:
-- parts 01–38 physically inspected;
-- definite boundary duplicate 09/10: `Serhii was silent.`;
-- probable 21/22 overlap around `Second.`;
-- map: `mavik-sklad/translations/en/work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
+### CHAPTER 4 — QUARANTINED RECOVERY PREPARATION COMPLETE
+- recovery parts 01–38 mechanically inspected;
+- full non-canonical manuscript triage completed;
+- 09→10 confirmed recovery chunking duplicate relative to manuscript: repeated `Serhii was silent.`;
+- 21→22 confirmed recovery chunking duplicate relative to manuscript: repeated start of `Second. Don’t give...`;
+- no other obvious exact boundary duplicate or gross scene/event reordering found in retrieved manuscript spans;
+- structural map: `mavik-sklad/translations/en/work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`;
+- non-canonical heuristic: `mavik-sklad/translations/en/work/skulptor/CHAPTER-04-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
 
-Chapter 5 recovery:
-- preserved through `chapter-05-part-26.txt` in recovery storage;
-- all stored parts 01–26 mechanically inspected;
-- no obvious exact sentence boundary duplication found;
-- part 26 is only the last recovered fragment and is NOT proof that Chapter 5 is complete;
-- `chapter-05-part-27.txt` does not exist in current recovery storage;
-- map: `mavik-sklad/translations/en/work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
+These facts do not authorize verified edits until confirmed against mavik.name.
 
-Do not create any `verified/chapter-04-*` or `verified/chapter-05-*` file until the corresponding exact Ukrainian site passage is physically retrieved.
+### CHAPTER 5 — STORED RECOVERY 01–26 FULLY TRIAGED, DEFINITELY TRUNCATED
+- recovery parts 01–26 mechanically inspected and covered by non-canonical manuscript triage;
+- no obvious exact sentence boundary duplicate found across stored 01–26;
+- short parts 12, 14, 19 and 22 are supported as contiguous fragments rather than obvious duplicates;
+- `chapter-05-part-26.txt` is preserved on both main and safety;
+- `chapter-05-part-27.txt` exists on neither branch;
+- the old manuscript continues immediately after the end of part 26, proving the stored recovery is truncated inside Chapter 5 relative to the manuscript;
+- Git history contains translation commits sequentially through Part 26 and no translation commit for Part 27;
+- final old prose commit: `c0864252b8998cc053f2e508743edf7be821921e` — Part 26 — 2026-08-17 14:02:25 +03:00;
+- site-only hard-source canon followed at 14:03:55 +03:00 in commit `20ccb74b2d1899137be439f545d36b58568ffff3`.
+
+Therefore there is **no hidden Part 27 to recover**. Do not create it from the manuscript. Missing continuation may only be translated from the exact published site passage after Chapter 4 parity is complete.
+
+Chapter 5 structural map:
+`mavik-sklad/translations/en/work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`
+
+Chapter 5 non-canonical heuristic:
+`mavik-sklad/translations/en/work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`
 
 ## OTHER PROTECTED ENGLISH CONTENT
 Recovered English books, completed Evacuation translation text, and partial Three Novels Nobody Reads work remain preserved as recovery assets. Their publication readiness still requires parity with the canonical Ukrainian site publication.
@@ -101,6 +114,6 @@ Recovered English books, completed Evacuation translation text, and partial Thre
 
 ## PERSISTENCE
 Every valid block:
-canonical mavik.name source → translate only that source → physical save → readback → exact site marker → recovery mirror → status update.
+canonical mavik.name source → translate only that source → physical save → readback → exact site marker → safety mirror → status update.
 
 Never leave critical work only in chat/session memory.
