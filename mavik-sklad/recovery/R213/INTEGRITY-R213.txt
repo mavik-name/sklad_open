@@ -10,6 +10,14 @@ Manifest SHA-256: 8c1f963df1e1a6831942eb01fb26eec7eba6ea1195a180f8e1ce5c3fea2134
 Set id: r213-8c1f963df1e1a683
 Managed files: 646
 
+Portable backup copy:
+213 Збірка_Сайт_КАНОН_BACKUP.zip
+SHA-256: 05ba73d3a7d9d20041a141d497c78491841887fc9315c091a13f907cbf00f4ee
+
+Portable technical documentation:
+R213_CANON_TECHDOCS_BACKUP.zip
+SHA-256: a37d22797a592562a8463f5fade170f8064ed5cbf23551e34b0b83190c37d8b0
+
 Verified:
 - FULL ZIP CRC: OK
 - PART1 ZIP CRC: OK
