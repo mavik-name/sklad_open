@@ -1,18 +1,30 @@
 MAVIK.NAME — START HERE
-Оновлено: 17.08.2026
+Оновлено: 18.08.2026
 
-ПОТОЧНА КАНОНІЧНА БАЗА: R193.
+ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R210G.
+R211: WIP, НЕ КАНОН.
 
-Перед будь-якою структурною або функціональною роботою із сайтом:
-
+Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R193-CANON-CHECKPOINT.md`.
-3. Якщо робота стосується English content — прочитати `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`, `mavik-sklad/files/EN-SOURCE-POLICY.md` і актуальний status перекладу.
-4. Не використовувати R1–R192 як робочу або канонічну базу.
-5. Не відновлювати старі checkpoint-и, журнали чи release-паспорти, якщо користувач прямо не просить історичний аналіз.
-6. Наступний структурно-функціональний реліз будувати тільки від R193.
-7. Контентні файли, що перебувають у роботі з перекладу англійською, зберігати незалежно від старих номерів етапів у назвах.
+2. Прочитати `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`.
+3. Прочитати `mavik-sklad/files/CANON-REGISTRY.md`.
+4. Не використовувати R1–R210F як active structural/functional base.
+5. Routine content work після R210G — PATCH/OVERLAY ONLY, без прихованих CORE-змін.
+6. `/_site-state/` не перезаписувати штатним deploy/patch.
+7. Нова гілка = нова розмова, але не новий стан проєкту.
 
-Нова гілка = нова розмова, але не новий стан проєкту.
+R210G прямо затверджений автором 18.08.2026 після живої перевірки. Новіша structural/functional версія стає каноном лише після окремого прямого затвердження автора.
 
-R193 — єдиний чинний канон до прямого затвердження користувачем новішої збірки.
+ENGLISH CONTENT
+Перед English-роботою обов’язково читати:
+- `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`;
+- `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`;
+- `mavik-sklad/files/EN-SOURCE-POLICY.md`;
+- `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
+- `mavik-sklad/translations/en/STATUS.md`.
+
+Єдине джерело нового або verified English-тексту книги — точний український текст, фактично опублікований на mavik.name. DOCX, рукописи, release ZIP, старі English-файли та пам’ять чату можуть бути лише recovery/comparison матеріалом.
+
+`Скульптор`: Глави 1–3 site-verified; наступна канонічна точка — Глава 4 `Пам’ятка`, recorded heading line 2879, narrative line 2881. Якщо exact site-source недоступний — verified-переклад зупинити.
+
+`Соціальна`: українська Книга перша завершена, але English STOP діє до нового прямого дозволу автора.
