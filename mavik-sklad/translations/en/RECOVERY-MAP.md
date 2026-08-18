@@ -1,7 +1,7 @@
 # ENGLISH TRANSLATION RECOVERY MAP
 
 Updated: 2026-08-18
-Canonical structural/functional site core: **R210G**
+Canonical structural/functional site core: **R212**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Current status: `mavik-sklad/translations/en/STATUS.md`
@@ -13,7 +13,7 @@ Do not conclude that non-excluded translation work is lost after checking one lo
 1. current `main`;
 2. safety branch;
 3. Git history/tree/blob objects;
-4. historical translation workspaces as read-only recovery sources;
+4. translation recovery workspaces as read-only recovery sources;
 5. File Library.
 
 Recovery preserves existing work but NEVER overrides the hard site-source canon. Recovered English text cannot generate new translation prose and is not publication-canonical until parity with the Ukrainian text actually published on mavik.name.
@@ -47,7 +47,7 @@ On 2026-08-18 all nine complete book tree SHAs and the partial tree were confirm
 
 ## Evacuation
 Location: `mavik-sklad/translations/en/work/evakuatsiia/`
-All eight English story files are physically saved. Their blob SHAs were confirmed identical between `main` and safety on 2026-08-18. See the integrity audit.
+All eight English story files are physically saved. Their blob SHAs were confirmed identical between `main` and safety on 2026-08-18. Publication parity with the site remains a separate requirement.
 
 ## The Sculptor
 Location: `mavik-sklad/translations/en/work/skulptor/`
@@ -58,16 +58,39 @@ Site-verified:
 - Chapter 2 — reader lines 1232–2040;
 - Chapter 3 — reader lines 2041–2878.
 
-Chapter 4 parts 01–38 and Chapter 5 parts 01–26 are quarantine/recovery only. Mechanical audits exist for both chapters.
-
 Exact next canonical point remains Chapter 4 `Пам’ятка`, heading recorded line 2879; narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-Do not continue from `Скульптор.docx`, old English recovery or inferred continuation. If the canonical site source cannot be physically retrieved, verified translation stops.
+### Chapter 4 recovery
+Parts 01–38 are quarantine/recovery only. Mechanical and non-canonical manuscript triage are complete.
+- 09→10 old chunking duplicate confirmed relative to manuscript: `Serhii was silent.`
+- 21→22 old chunking duplicate confirmed relative to manuscript: start of `Second. Don’t give...`
+
+Maps:
+- `work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`
+- `work/skulptor/CHAPTER-04-MANUSCRIPT-COMPARISON-HEURISTIC.md`
+
+### Chapter 5 recovery
+Stored Parts 01–26 are quarantine/recovery only. Mechanical and non-canonical manuscript triage are complete.
+- no obvious exact stored-boundary duplicate found;
+- Part 26 is mirrored on main and safety;
+- Part 27 exists on neither current branch;
+- old manuscript continues after Part 26, proving the stored recovery is truncated relative to that manuscript;
+- Git history contains translation commits sequentially through Part 26 and no translation commit for Part 27;
+- final prose commit: `c0864252b8998cc053f2e508743edf7be821921e` — Part 26 — 2026-08-17 14:02:25 +03:00;
+- hard site-only source canon followed at 14:03:55 +03:00 in `20ccb74b2d1899137be439f545d36b58568ffff3`.
+
+Therefore there is no hidden Part 27 to recover. Do not create missing English from the manuscript.
+
+Maps:
+- `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`
+- `work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`
+
+Do not continue verified prose from `Скульптор.docx`, recovery English or inferred continuation. If the canonical site source cannot be physically retrieved, verified translation stops.
 
 ## Social / Соціальна — EXPLICIT EXCEPTION
 The Ukrainian book is completed, but English translation remains blocked by the project-specific STOP canon until new explicit author permission.
 
-Old English Social Chapters 8–16 were intentionally deleted from `main` and safety on 2026-08-17 by explicit author decision. They are NOT protected recovery input for current translation work and must NOT be restored unless the author explicitly reverses that decision.
+English Social material intentionally deleted under that decision is NOT protected recovery input for current translation work and must NOT be restored unless the author explicitly reverses the decision.
 
 Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
