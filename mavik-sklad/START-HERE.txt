@@ -23,14 +23,14 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Canon checkpoint: `mavik-sklad/files/R212-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R212**
-- Recovery duplicate: `mavik-sklad/recovery/R212/START-HERE-R212.md`
-- Technical recovery: `mavik-sklad/recovery/R212/TECHNICAL-RECOVERY-R212.md`
-- Integrity record: `mavik-sklad/recovery/R212/INTEGRITY-R212.txt`
+- Canon checkpoint: `mavik-sklad/files/R213-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R213**
+- Recovery duplicate: `mavik-sklad/recovery/R213/START-HERE-R213.md`
+- Technical recovery: `mavik-sklad/recovery/R213/TECHNICAL-RECOVERY-R213.md`
+- Integrity record: `mavik-sklad/recovery/R213/INTEGRITY-R213.txt`
 - `/_site-state/` не перезаписувати штатним deploy/patch.
 - SIMPLE FIRST, privacy-media, public-blog editorial та protected-SEO rules — обов’язкові.
-- Будь-яка наступна structural/functional робота стартує тільки від R212.
+- Будь-яка наступна structural/functional робота стартує тільки від R213.
 
 ENGLISH CONTENT MAVIK.NAME
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
@@ -59,7 +59,7 @@ ENGLISH CONTENT MAVIK.NAME
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для site CORE чинний канон — **R212**.
+2. Для site CORE чинний канон — **R213**.
 3. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
 4. Для English continuity чинний `CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
 5. Для «Соціальної» English STOP діє до нового прямого дозволу автора.
