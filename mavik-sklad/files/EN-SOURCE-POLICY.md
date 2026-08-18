@@ -2,7 +2,7 @@
 
 Updated: 2026-08-18
 Status: **ACTIVE / AUTHORITATIVE SOURCE POLICY**
-Current structural-functional site core: **R212**
+Current structural-functional site core: **R213**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation authority: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 
