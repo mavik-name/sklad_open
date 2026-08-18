@@ -17,40 +17,22 @@ The existing project-specific STOP remains in force until the author explicitly 
 Nine recovered English books, Evacuation, and the partial Three Novels Nobody Reads remain protected recovery artifacts. Publication readiness requires parity with the canonical Ukrainian site publication.
 
 ## ACTIVE — THE SCULPTOR
-Canonical source:
-`https://mavik.name/books/skulptor/read/`
-
-Old files directly under `mavik-sklad/translations/en/work/skulptor/` remain quarantined recovery artifacts. Their old physical extent is preserved for recovery, but they are not publication canon.
-
-Verified work now lives under:
-`mavik-sklad/translations/en/work/skulptor/verified/`
+Canonical source: `https://mavik.name/books/skulptor/read/`
+Old files directly under `mavik-sklad/translations/en/work/skulptor/` remain quarantined recovery artifacts, not publication canon.
+Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
+Detailed status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
 ### VERIFIED
-Chapter 1 `Бруд на дитячих руках` is fully audited against the canonical site reader, lines 26–1231.
-Five contiguous verified files are saved, read back and mirrored to the safety branch:
-- `chapter-01-part-01.txt`
-- `chapter-01-part-02.txt`
-- `chapter-01-part-03.txt`
-- `chapter-01-part-04.txt`
-- `chapter-01-part-05.txt`
+- Chapter 1 `Бруд на дитячих руках`: reader lines 26–1231, complete.
+- Chapter 2 `Глина`: reader lines 1232–2040, complete.
 
-Corrections found during the audit:
-- excluded non-site `Lviv · 2026` metadata;
-- did not carry forward the incorrect old `mystical psychological thriller` genre label;
-- removed the unsupported narrative sentence `The walls were light-colored but slightly cracked.` because it has no sentence in the canonical Ukrainian publication.
-
-Detailed audit status:
-`mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
+The old Chapter 2 recovery translation stopped at reader line 1964 (`— Але будете.`). The previously untranslated canonical ending, lines 1966–2040, is now translated directly from mavik.name as `verified/chapter-02-part-06.txt`, read back and mirrored.
 
 ## NEXT VALID ACTION
-Continue site-source audit with Chapter 2 `Глина`.
-Exact next source marker:
-- reader line 1232: `Глава 2. Глина`;
-- narrative starts at line 1234: `Марта прокинулася раніше будильника.`
+Chapter 3 `Збори фонду`.
+Exact site marker: heading line 2041; narrative starts line 2043 `О дев’ятнадцятій церква вже не виглядала як притулок після дощу.`
 
-Do NOT continue from old `chapter-05-part-26.txt` or create `chapter-05-part-27.txt` until the verified audit reaches that point.
-
-If the canonical site source cannot be retrieved, stop translation. Never improvise.
+Do not continue from old chapter-05 recovery files until the verified audit reaches that point. If canonical site source cannot be retrieved, stop; never improvise.
 
 ## RECOVERY
 Search `main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library before declaring non-excluded work lost. Recovery never overrides the published-site source rule.
