@@ -35,7 +35,7 @@ No other obvious exact boundary duplicate or gross event reordering/addition was
 
 These findings do not authorize edits to `verified/` until checked against the site.
 
-## CHAPTER 5 — FULL RECOVERY TRIAGE 01–26 COMPLETE, NOT VERIFIED
+## CHAPTER 5 — FULL STORED RECOVERY TRIAGE 01–26 COMPLETE, NOT VERIFIED
 Stored recovery parts 01–26 were mechanically inspected and then covered by a full non-canonical manuscript-comparison triage.
 
 Findings:
@@ -45,12 +45,21 @@ Findings:
 - no gross scene/event reordering was found in retrieved manuscript spans;
 - `part-26` exists on both main and safety;
 - `part-27` exists on neither branch;
-- critically, the old manuscript continues immediately after the end of `part-26`, so the stored recovery is **definitely truncated inside Chapter 5 relative to the old manuscript**.
+- the old manuscript continues immediately after the end of `part-26`, so stored recovery is definitely truncated inside Chapter 5 relative to the old manuscript.
 
-Do not create part 27 from the manuscript. The missing continuation may only be translated after the exact corresponding Ukrainian site passage is physically retrieved and Chapter 4 site parity is complete.
+### Git-history recovery result
+Historical translation commits exist sequentially for Chapter 5 Parts 1–26. The final prose commit is:
+`c0864252b8998cc053f2e508743edf7be821921e` — `Translate The Sculptor Chapter 5 Part 26` — 2026-08-17 14:02:25 +03:00.
+
+There is no translation commit for Part 27. The site-only hard-source canon followed at 14:03:55 +03:00 in commit:
+`20ccb74b2d1899137be439f545d36b58568ffff3` — `Add hard canon: translate only from published mavik.name Ukrainian text`.
+
+Therefore **there is no hidden historical Part 27 to recover**. The old translation stopped at Part 26 immediately before the hard-source rule took effect.
+
+Do not create Part 27 from the manuscript. Missing continuation may only be translated after the corresponding Ukrainian site passage is physically retrieved and Chapter 4 site parity is complete.
 
 ## CURRENT SOURCE-TRANSPORT BLOCKER
-The canonical live reader and generated text route are not physically retrievable through the available fetch path at present. Recent web retrieval returned an internal service error and direct HTTP access failed DNS resolution.
+The canonical live reader and generated text route are not physically retrievable through the available fetch path at present. The site homepage is intermittently available, but the Sculptor book/reader route continues to fail with cache/transport errors; direct HTTP access also failed DNS resolution.
 
 This is a transport blocker only. It is not permission to use `Скульптор.docx` or any other fallback prose source.
 
@@ -62,6 +71,6 @@ Chapter 4 `Глава 4. Пам’ятка`:
 When source retrieval works:
 site text → line-by-line Chapter 4 parity → resolve 09→10 and 21→22 from the site → save only justified English under `verified/` → read back → record markers → mirror → update statuses.
 
-Only after Chapter 4 is complete may Chapter 5 site parity begin. When site parity reaches the end of stored part 26, retrieve the exact next Ukrainian site passage before creating any new English continuation.
+Only after Chapter 4 is complete may Chapter 5 site parity begin. When site parity reaches the end of stored Part 26, retrieve the exact next Ukrainian site passage before creating any new English continuation.
 
 Until then, last canonical verified point remains end of Chapter 3, reader line 2878.
