@@ -1,23 +1,21 @@
 MAVIK.NAME — START HERE
 Оновлено: 18.08.2026
 
-ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R210.
-АКТИВНИЙ КАНДИДАТ ДЛЯ ЖИВОЇ ПЕРЕВІРКИ: R210G.
+ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R210G.
+ПОТОЧНА РОБОЧА НАСТУПНА ВЕРСІЯ: R211 (WIP, НЕ КАНОН).
 
-ВАЖЛИВО: R210G — буквена кандидатна ревізія R210, НЕ канон і НЕ R211. Канон змінюється тільки після прямого підтвердження автора.
+ВАЖЛИВО: R210G прямо канонізований автором 18.08.2026. R1–R210F не використовувати як робочу або канонічну structural/functional базу. R211 стає каноном тільки після завершення, живої перевірки та окремого прямого підтвердження автора.
 
 Перед будь-якою роботою із сайтом:
 
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R210-CANON-CHECKPOINT.md`.
-3. Для поточного стану ОБОВ’ЯЗКОВО прочитати `mavik-sklad/files/R210G-CANDIDATE-CHECKPOINT.md`.
-4. Не використовувати R1–R209 як робочу або канонічну structural/functional базу.
-5. R210 лишається каноном, доки автор після живої перевірки прямо не затвердить новішу буквенную ревізію.
-6. `/_site-state/` не перезаписувати штатним deploy/patch.
-7. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
-8. Якщо live встановлено R210F — R210G можна накласти FTP-патчем `210G ПАТЧ_FTP_поверх_R210F.zip`; для чистого розгортання використовувати R210G FTP-FULL.
+2. Прочитати `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`.
+3. Якщо робота стосується наступного релізу — прочитати `mavik-sklad/files/R211-WIP-CHECKPOINT.md`.
+4. Не використовувати R1–R210F як active CORE context.
+5. `/_site-state/` не перезаписувати штатним deploy/patch.
+6. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
-ПОТОЧНА ПУБЛІЧНА АРХІТЕКТУРА R210E/F/G:
+ПОТОЧНА ПУБЛІЧНА АРХІТЕКТУРА R210G:
 - один global public shell і одна система геометрії;
 - один font-family на public: `Georgia, 'Times New Roman', serif`;
 - лише три breakpoint-режими: mobile `<=767`, tablet `768–1099`, desktop `>=1100`;
@@ -25,39 +23,32 @@ MAVIK.NAME — START HERE
 - ordinary/static text card max 960 px;
 - заголовок h1: 64 / 52 / 42 px;
 - інформаційні сторінки `Автор`, `Приватність`, `Права`, `Платформи` та international equivalents — прості release HTML, НЕ окремий CMS/editor у Boss;
-- майбутні зміни таких static pages робити малими ZIP overlay/patch, якщо не змінюється CORE-логіка;
 - у Boss лишаються функціональні редактори: книги, блог, музика, анонси, functional page-builder, меню, мови, медіа, SEO, пошта тощо.
 
 R210G — ПОТОЧНІ ВІЗУАЛЬНІ ПРАВИЛА:
-- `Назад` більше не стоїть окремо над/під контентом;
 - `Назад` = ПЕРШИЙ пункт меню на внутрішній сторінці;
 - `Назад` має compact pill-плашку в стилі `Адмінка`;
 - старі `mavik-backbar-top/bottom` не монтуються і приховані;
-- після перенесення `Назад` верхній відступ внутрішніх сторінок зменшено на 50%: desktop 61 px, tablet 53 px, mobile 44 px;
-- `Автор`: вступ `MaVik / Віктор Макарчук · MaVik / Письменництво...` у власній верхній плашці, основний текст — у другій; у вступній плашці є додаткове повітря зверху;
-- homepage `У фокусі`: один card, badge `У фокусі` на card, обкладинка видима ПОВНІСТЮ (`contain`), без плаваючої чорної картки, що перекриває CTA;
+- верхній відступ внутрішніх сторінок: desktop 61 px, tablet 53 px, mobile 44 px;
+- `Автор`: вступ у власній верхній плашці, основний текст — у другій;
+- homepage `У фокусі`: один card, badge `У фокусі`, обкладинка `contain`;
 - mobile `Анонси`: обкладинка не ховається;
 - mobile меню: збільшений читабельний шрифт;
 - desktop active menu item — золотий;
 - усі `Рекомендувати...` у public UI скорочені до `Поділитись`;
-- `Пригостити кавою`: суми у власних плашках на desktop і mobile;
-- desktop coffee: БЕЗ зовнішнього frame/overlay — одна центральна плашка на 100dvh, border/radius/shadow зовні відсутні;
-- QR збільшуються тільки в межах свого coffee block, без окремого fullscreen.
+- `Пригостити кавою`: суми у власних плашках; desktop без зовнішнього frame/overlay; QR збільшуються тільки в межах coffee block.
 
 МУЗИКА:
-- після короткого live-збою відтворення самостійно відновилося; це вважається ймовірною серверною/мережевою проблемою, а не підтвердженим багом плеєра;
-- R210G НЕ змінює playback-код;
-- `assets/app/music-library.js` і `music-data.php` у R210G байт-у-байт однакові з R210F/R210E;
+- R210G не змінює playback-код від R210F/R210E;
+- `assets/app/music-library.js` і `music-data.php` збережені;
 - MP3 не видаляти, не переміщати і не пакувати в точкові visual patches без окремої потреби.
 
-R210 protected behavior, яке всі буквені ревізії мають повністю успадковувати:
+ЗАХИЩЕНА ПОВЕДІНКА R210G:
 - mobile-only PWA install flow `Встановити MaVik`;
-- desktop: MaVik install UI не ініціалізується;
-- desktop: немає audio-reader UI і немає `▶ Слухати` на сторінках книг;
-- mobile `Читати` = тільки текст, аудіомодуль не ініціалізується;
-- mobile `Слухати` = `?listen=1`, і тільки тоді запускається аудіочиталка;
+- desktop: без install UI і без audio-reader UI;
+- mobile `Читати` = тільки текст;
+- mobile `Слухати` = `?listen=1`;
 - central audio control `▶ Слухати ↔ ⏸ Пауза`;
-- tap-to-start і Screen Wake Lock у listen mode;
 - Boss book editor — inline;
 - порядок книг server-side;
 - причина анонсу редагована;
@@ -69,14 +60,24 @@ R210 protected behavior, яке всі буквені ревізії мають 
 - safe Boss overlay patches;
 - direct URL priority over stored language preference;
 - логічно згруповані Boss tiles;
-- compact page-builder index без обрізання назв;
-- `Boss → Пошта` має IMAP/SMTP-клієнт із PHP-IMAP або built-in TLS-IMAP fallback;
-- mail credentials server-only, не входять у release/state export;
-- unread-mail beacon у Boss: load + 60s + visibility return; 0 прихований;
+- compact page-builder index;
+- `Boss → Пошта` має IMAP/SMTP із PHP-IMAP або built-in TLS-IMAP fallback;
+- mail credentials server-only;
+- unread-mail beacon у Boss;
 - порожній focus-state без hard-coded `Скульптор` fallback;
 - один global maintenance mode;
 - `/_site-state/` зберігається при deploy;
-- English translation of `Соціальна` ЗАБОРОНЕНИЙ до нового прямого дозволу автора.
+- English translation of `Соціальна` заборонений до нового прямого дозволу автора.
+
+БЛОГ — ЖОРСТКИЙ КАНОН ПУБЛІКАЦІЇ:
+- звичайне додавання нового блогу = **CONTENT-ONLY ZIP PATCH ЧЕРЕЗ BOSS**;
+- асистент створює текст/контент і, за потреби, ілюстрацію, пакує їх у штатний Boss-compatible patch;
+- користувач завантажує patch через Boss;
+- blog patch не змінює PHP/JS/CSS, Boss/deployer, templates, routing, PWA, maintenance або SEO engine;
+- не використовувати для штатної публікації блогу FTP, файловий менеджер, ручне копіювання в корінь, окремий `PATCH-*.php` installer або `?apply=1`;
+- окремий CORE-реліз заради блогу не створювати;
+- повторне застосування patch не повинно створювати дублікати й не повинно перезаписувати новіший live-content;
+- ручний FTP/PHP installer — тільки аварійний recovery за окремим прямим рішенням автора.
 
 MAINTENANCE — ЖОРСТКИЙ КАНОН:
 - тільки ОДИН global maintenance для всього сайту;
@@ -85,15 +86,13 @@ MAINTENANCE — ЖОРСТКИЙ КАНОН:
 - не відновлювати `.maintenance-uk-on`, `.maintenance-en-on` або locale-specific 503 logic.
 
 ГОЛОВНИЙ КАНОН СИНХРОНІЗАЦІЇ:
-Контентна зміна має лишати узгодженими public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — де релевантно й у межах чинних можливостей канонічної/затвердженої архітектури.
+Контентна зміна має лишати узгодженими public state і search state — navigation/internal links, sitemap, noindex/robots, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор — де релевантно й у межах чинної архітектури.
 
 ОЧИЩЕННЯ / ІСТОРІЯ:
-- R1–R209 не використовувати як active CORE context;
-- R210 — чинний канон;
-- R210A–R210F — попередні буквені кандидати/ітерації, не канон;
-- R210E був live-встановлений як clean global candidate і став базою для F/G visual corrections;
-- R210G — поточний кандидат для живої перевірки;
-- R210 binary видаляти з active `/Сайт/` лише ПІСЛЯ прямої канонізації новішої збірки.
+- R1–R210F не використовувати як active CORE context;
+- R210G — чинний канон;
+- R211 — поточна робоча наступна версія, не канон до прямого підтвердження автора;
+- R210H як назва робочої буквеної ревізії скасована рішенням автора; її задачі перенесені в R211.
 
 ENGLISH CONTENT
 Перед English-роботою ОБОВ’ЯЗКОВО прочитати:
