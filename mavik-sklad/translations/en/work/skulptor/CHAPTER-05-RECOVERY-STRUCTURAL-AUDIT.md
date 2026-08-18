@@ -15,9 +15,27 @@ Neither file validates canonical translation accuracy or may be used to create v
 All currently available old Chapter 5 recovery files were physically read:
 `chapter-05-part-01.txt` through `chapter-05-part-26.txt`.
 
-The sequence 01–26 is physically present on `main`; part 26 is also mirrored to the safety branch. Direct path checks found no `chapter-05-part-27.txt` on either branch.
+The sequence 01–26 is physically present; part 26 is mirrored to the safety branch. Direct path checks found no `chapter-05-part-27.txt` on either branch.
 
 Legacy wrappers such as `THE SCULPTOR`, author line, `Chapter 5. The Witness`, and `Part XX` remain recovery metadata only and are not assumed canonical.
+
+## GIT-HISTORY RECOVERY CHECK
+Git commit history was searched specifically for Chapter 5 translation parts and for `part-27`.
+
+The historical translation sequence contains explicit commits for Chapter 5 Parts 1 through 26. The last translation-prose commit is:
+- `c0864252b8998cc053f2e508743edf7be821921e` — `Translate The Sculptor Chapter 5 Part 26` — 2026-08-17 14:02:25 +03:00.
+
+Its diff creates exactly `chapter-05-part-26.txt` and ends at Nazar's message `I’m not ready to be good yet.`
+
+No historical commit `Translate The Sculptor Chapter 5 Part 27` was found. A search for `part-27` returns only later audit/checkpoint records documenting its absence, not a translation commit.
+
+The site-only hard source canon was committed immediately afterward:
+- `20ccb74b2d1899137be439f545d36b58568ffff3` — `Add hard canon: translate only from published mavik.name Ukrainian text` — 2026-08-17 14:03:55 +03:00.
+
+Therefore the preserved history supports the following recovery conclusion:
+**Part 26 was the last old translation fragment actually created before the site-only hard-source stop. There is no hidden Part 27 to recover from Git history.**
+
+This does not authorize translating the missing continuation from the manuscript.
 
 ## BOUNDARY CHECK RESULTS
 No obvious exact sentence duplication was found across stored boundaries 01→02 through 25→26.
@@ -38,7 +56,7 @@ Therefore the current recovery sequence 01–26 is **definitely incomplete relat
 This is a recovery fact only. The manuscript may not be used to generate the missing English continuation.
 
 ## FULL NON-CANONICAL TRIAGE STATUS
-A separate manuscript-comparison heuristic now covers the full stored recovery sequence 01–26 in broad scene/event continuity:
+A separate manuscript-comparison heuristic covers the full stored recovery sequence 01–26 in broad scene/event continuity:
 - 01–06: opening, callback, second call, city-library invitation and arrival;
 - 07–10: Yakiv and November 2004 photograph / Luka Myron;
 - 11–17: Sofia, formal rules, fragments/strength, fear serving, Luka Myron documents;
