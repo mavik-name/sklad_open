@@ -55,22 +55,31 @@ These findings do NOT authorize edits to `verified/` until confirmed against the
 
 ### CHAPTER 5 — FULL STORED RECOVERY TRIAGE 01–26 COMPLETE, NOT SITE-VERIFIED
 - quarantine parts 01–26 mechanically inspected;
-- full stored 01–26 sequence also covered by non-canonical manuscript-comparison triage;
+- full stored 01–26 sequence covered by non-canonical manuscript-comparison triage;
 - no obvious exact sentence boundary duplicate found across stored 01→26 sequence;
 - short parts 12, 14, 19 and 22 are supported as contiguous fragments rather than obvious duplicates;
 - no gross scene/event reordering found in retrieved manuscript spans;
 - `part-26` exists on both main and safety;
 - `part-27` exists on neither branch;
-- old manuscript continues immediately after the end of part 26, so stored recovery is **definitely truncated inside Chapter 5 relative to the manuscript**;
-- structural audit: `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`;
-- full non-canonical manuscript heuristic: `work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
+- old manuscript continues immediately after part 26, so stored recovery is definitely truncated inside Chapter 5 relative to the manuscript.
 
-The manuscript continuation after part 26 is known only as a recovery fact. It must NOT be translated into part 27. Missing English may only be created from the exact published site continuation after Chapter 4 parity is complete.
+Git-history recovery check:
+- historical translation commits exist sequentially through Chapter 5 Part 26;
+- final prose commit: `c0864252b8998cc053f2e508743edf7be821921e` — `Translate The Sculptor Chapter 5 Part 26` — 2026-08-17 14:02:25 +03:00;
+- no historical translation commit for Part 27 was found;
+- site-only hard source canon followed at 2026-08-17 14:03:55 +03:00 in commit `20ccb74b2d1899137be439f545d36b58568ffff3`.
+
+Therefore **there is no hidden Part 27 to recover from Git history**. The old translation stopped at Part 26 immediately before the hard-source stop.
+
+Structural audit: `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
+Full non-canonical manuscript heuristic: `work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
+
+The known manuscript continuation after part 26 must NOT be translated into a new English part. Missing English may only be created from the exact published site continuation after Chapter 4 parity is complete.
 
 ## CURRENT SOURCE-TRANSPORT BLOCKER
-The canonical reader is currently not physically retrievable through the available tools. The latest web retrieval attempt returned an internal service error, and direct HTTP access failed DNS resolution.
+The canonical reader is currently not physically retrievable through the available tools. The site homepage is intermittently retrievable, but the Sculptor book/reader route continues to fail with cache/transport errors; direct HTTP access also failed DNS resolution.
 
-File Library exposes the old manuscript for recovery comparison, but the manuscript remains forbidden as translation source. No usable canonical R210G reader snapshot has been retrieved.
+File Library exposes the old manuscript for recovery comparison, but the manuscript remains forbidden as translation source. No usable canonical R210G reader snapshot has been retrieved from the warehouse or release directories.
 
 ## EXACT NEXT CANONICAL ACTION
 Chapter 4 `Глава 4. Пам’ятка`:
@@ -79,7 +88,7 @@ Chapter 4 `Глава 4. Пам’ятка`:
 
 When source retrieval works: retrieve exact site text → line-by-line Chapter 4 parity → resolve 09→10 and 21→22 from site → save only site-justified English under `verified/` → read back → record markers → mirror → update statuses/canon.
 
-After Chapter 4 is fully verified, Chapter 5 site parity starts from its exact site heading. When parity reaches the end of stored part 26, retrieve the exact next Ukrainian site passage before creating any new English continuation.
+After Chapter 4 is fully verified, Chapter 5 site parity starts from its exact site heading. When parity reaches the end of stored Part 26, retrieve the exact next Ukrainian site passage before creating any new English continuation.
 
 Last canonical verified point remains end of Chapter 3, reader line 2878.
 
