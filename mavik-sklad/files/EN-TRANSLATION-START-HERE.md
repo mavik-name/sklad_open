@@ -2,18 +2,18 @@
 
 Updated: 2026-08-18
 Status: **ACTIVE TRANSLATION WORK / AUTHORITATIVE ENTRY POINT**
-Current structural-functional site core: **R210G**
+Current structural-functional site core: **R212**
 
 ## READ FIRST IN A NEW BRANCH
 1. `mavik-sklad/START-HERE.txt`
 2. `mavik-sklad/files/CANON-REGISTRY.md`
 3. this file
-4. **`mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`**
+4. `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 5. `mavik-sklad/files/EN-SOURCE-POLICY.md`
 6. `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 7. `mavik-sklad/translations/en/STATUS.md`
 8. active-book STATUS/checkpoint
-9. the canonical Ukrainian publication on mavik.name
+9. canonical Ukrainian publication on mavik.name
 
 ## HARD SOURCE CANON
 For English book translation, the ONLY source of new or verified English prose is the canonical Ukrainian text actually published on mavik.name.
@@ -25,26 +25,26 @@ Forbidden as translation sources:
 - File Library manuscripts;
 - warehouse manuscripts;
 - release ZIPs as prose authority;
-- old site copies;
-- old English translations;
+- cached site copies;
+- existing English translations as a source of new prose;
 - summaries/status/checkpoints;
 - guessed or reconstructed continuation.
 
 No invented text. No added descriptions, dialogue, explanations, connective passages or clarifications. If the site text cannot be retrieved, stop verified translation at the last site-verified point.
 
 ## SOCIAL / СОЦІАЛЬНА — EXCLUDED
-The Ukrainian book is completed, but the existing project-specific **NO ENGLISH TRANSLATION / STOP** remains active until the author explicitly permits English translation.
+The Ukrainian book is completed, but the project-specific **NO ENGLISH TRANSLATION / STOP** remains active until the author explicitly permits English translation.
 
 Hard rule: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
-Old deleted English Social files must not be restored unless the author explicitly changes that decision.
+Deleted English Social material must not be restored unless the author explicitly changes that decision.
 
 ## RECOVERY VS CANON
 Existing English files for other books are protected recovery artifacts, not automatic publication canon. Before publication they must match the canonical Ukrainian site text.
 
-Old release prefixes do not by themselves make translation content disposable, but they never override the site-source hard canon.
+A version-like prefix in a translation-content filename does not by itself define site-core authority. Translation content remains subordinate to the site-source hard canon.
 
-Before declaring non-excluded work lost, search `main`, the safety branch, Git history/tree/blob, historical translation workspaces and File Library.
+Before declaring non-excluded work lost, search current translation storage, dedicated safety/recovery paths, Git recovery data where needed, and File Library.
 
 ## CURRENT TARGET — THE SCULPTOR
 Working directory:
@@ -66,27 +66,27 @@ Chapter 4 `Глава 4. Пам’ятка`:
 - heading recorded at reader line 2879;
 - narrative begins recorded line 2881: `Пам’ятка мала вміститися на одну сторінку.`
 
-The live reader is currently not retrievable through the available fetch path. That is a source-transport blocker, not loss of work. Do not switch to DOCX or old English to bypass it.
+The live reader is currently not retrievable through the available fetch path. That is a source-transport blocker, not loss of work. Do not switch to DOCX or recovery English to bypass it.
 
 ### QUARANTINED RECOVERY PREPARATION
-Chapter 4 old recovery:
+Chapter 4 recovery:
 - parts 01–38 physically inspected;
 - definite boundary duplicate 09/10: `Serhii was silent.`;
 - probable 21/22 overlap around `Second.`;
 - map: `mavik-sklad/translations/en/work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
 
-Chapter 5 old recovery:
-- currently preserved through `chapter-05-part-26.txt` on **both main and safety branch**;
+Chapter 5 recovery:
+- preserved through `chapter-05-part-26.txt` in recovery storage;
 - all stored parts 01–26 mechanically inspected;
 - no obvious exact sentence boundary duplication found;
 - part 26 is only the last recovered fragment and is NOT proof that Chapter 5 is complete;
-- `chapter-05-part-27.txt` does not exist on main or safety branch;
+- `chapter-05-part-27.txt` does not exist in current recovery storage;
 - map: `mavik-sklad/translations/en/work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
 
 Do not create any `verified/chapter-04-*` or `verified/chapter-05-*` file until the corresponding exact Ukrainian site passage is physically retrieved.
 
 ## OTHER PROTECTED ENGLISH CONTENT
-Nine recovered English books, completed Evacuation translation text, and partial Three Novels Nobody Reads work remain preserved as recovery assets. Their publication readiness still requires parity with the canonical Ukrainian site publication.
+Recovered English books, completed Evacuation translation text, and partial Three Novels Nobody Reads work remain preserved as recovery assets. Their publication readiness still requires parity with the canonical Ukrainian site publication.
 
 ## QUEUE AFTER THE SCULPTOR
 - `UNIVERSE`
@@ -101,6 +101,6 @@ Nine recovered English books, completed Evacuation translation text, and partial
 
 ## PERSISTENCE
 Every valid block:
-canonical mavik.name source → translate only that source → physical save → readback → exact site marker → safety mirror → status update.
+canonical mavik.name source → translate only that source → physical save → readback → exact site marker → recovery mirror → status update.
 
 Never leave critical work only in chat/session memory.
