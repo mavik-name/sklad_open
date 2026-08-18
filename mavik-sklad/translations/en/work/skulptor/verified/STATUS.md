@@ -1,7 +1,7 @@
 # THE SCULPTOR — SITE-VERIFIED ENGLISH AUDIT
 
 Updated: 2026-08-18
-Status: ACTIVE — CHAPTERS 1–3 VERIFIED
+Status: ACTIVE — CHAPTERS 1–3 VERIFIED / WAITING FOR CANONICAL CHAPTER 4 SOURCE
 Canonical source: https://mavik.name/books/skulptor/read/
 Hard source canon: mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md
 Safety branch: backup/english-translations-2026-08-17
@@ -36,6 +36,16 @@ Corrections discovered during Chapter 3 audit:
 
 Older files outside `verified/` remain quarantined recovery artifacts and are not publication canon.
 
+## CHAPTER 4 RECOVERY — NOT VERIFIED
+Old recovery contains Chapter 4 parts 01–38 outside `verified/`. They are preserved for comparison only. None is canonical merely because it exists.
+
+No `verified/chapter-04-*` file may be created until its exact Ukrainian source is physically retrieved from the canonical site publication.
+
+## CURRENT SOURCE CONDITION — 2026-08-18
+The canonical live reader is temporarily unavailable through the current external fetch path. The hard source canon therefore requires a stop at the last verified point rather than fallback to a manuscript or old translation.
+
 ## NEXT
 Chapter 4 `Пам’ятка`.
 Next canonical site marker: reader line 2879 heading; narrative begins line 2881: `Пам’ятка мала вміститися на одну сторінку.`
+
+Once the site source is retrievable, resume from exactly this marker and audit old Chapter 4 recovery against the site line by line.
