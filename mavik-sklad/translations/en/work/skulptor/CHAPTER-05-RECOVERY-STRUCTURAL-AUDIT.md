@@ -22,6 +22,12 @@ This does **not** establish that Chapter 5 itself is complete. `part-26` is only
 
 Every old file contains legacy wrapper/header text such as `THE SCULPTOR`, author line, `Chapter 5. The Witness`, and `Part XX`. These wrappers are recovery metadata only and are not assumed to exist in the canonical site publication.
 
+## MIRROR / ABSENCE CHECK
+- `chapter-05-part-26.txt` is now physically present on both `main` and `backup/english-translations-2026-08-17` as quarantined recovery material.
+- Direct path check for `chapter-05-part-27.txt` returns no file on `main`.
+- Direct path check for `chapter-05-part-27.txt` returns no file on the safety branch.
+- Therefore the current physically preserved recovery sequence ends at part 26. This statement is about stored recovery inventory only, not about the canonical end of Chapter 5.
+
 ## BOUNDARY CHECK RESULTS
 No obvious exact sentence duplication was found across the stored part boundaries 01→02 through 25→26 during this mechanical read-through.
 
