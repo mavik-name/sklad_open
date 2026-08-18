@@ -1,13 +1,13 @@
 RECOVERED ENGLISH BOOK SOURCE POINTER
 Updated: 2026-08-18
-Canonical structural/functional site core: R210G
+Canonical structural/functional site core: R212
 Hard English source canon: mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md
 
 The nine complete English book directory trees in this folder were recovered from immutable Git tree objects originally found on archival branch r188-english-work.
 
 These recovered English trees are protected recovery assets. They are NOT automatically publication-canonical merely because they are complete or mirrored.
 
-Before publication or any new translation based on them, compare against the canonical Ukrainian text actually published on mavik.name. Old English files, manuscripts, DOCX/TXT, warehouse copies and historical releases may not generate new translation prose.
+Before publication or any new translation based on them, compare against the canonical Ukrainian text actually published on mavik.name. Recovery English files, manuscripts, DOCX/TXT, warehouse copies and historical releases may not generate new translation prose.
 
 Authoritative recovery map:
 mavik-sklad/translations/en/RECOVERY-MAP.md
