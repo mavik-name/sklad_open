@@ -1,52 +1,43 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
 Updated: 2026-08-18
-Status: **SITE-SOURCE AUDIT ACTIVE — CHAPTER 1 VERIFIED**
+Status: **SITE-SOURCE AUDIT ACTIVE — CHAPTERS 1–2 VERIFIED**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Canonical source: `https://mavik.name/books/skulptor/read/`
 Safety branch: `backup/english-translations-2026-08-17`
-Verified audit status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
+Detailed verified status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
 ## HARD RULE
-The ONLY authoritative source for English translation is the canonical Ukrainian `Скульптор` text actually published on mavik.name.
-
-Do not translate from File Library manuscripts, warehouse manuscripts, chat/model memory, previous English files, summaries/checkpoints or guessed continuation. No invented or added text.
+Only the canonical Ukrainian text actually published on mavik.name may generate English translation. No manuscript, old English file, chat/model memory, summary or reconstruction may generate new text. No additions.
 
 ## QUARANTINED RECOVERY FILES
-The older English files directly under `work/skulptor/` remain recovery artifacts and are NOT publication canon merely because they exist.
-
-Physical pre-audit recovery state remains:
-- `main`: through `chapter-05-part-26.txt`;
-- safety branch: through `chapter-05-part-25.txt`;
-- old Part 26 remains intentionally absent from the safety branch.
-
-Do not deploy or continue from these old files without site verification.
+Older English files directly under `work/skulptor/` remain recovery artifacts, not publication canon. Pre-audit physical state remains preserved: main through old `chapter-05-part-26.txt`; safety branch through old `chapter-05-part-25.txt`.
 
 ## VERIFIED LAYER
-Verified files live under:
-`mavik-sklad/translations/en/work/skulptor/verified/`
+Location: `mavik-sklad/translations/en/work/skulptor/verified/`
 
-### Completed
-Chapter 1 `Бруд на дитячих руках` has been audited against the canonical site reader from line 26 through line 1231 and saved as five contiguous verified files:
-- `chapter-01-part-01.txt`
-- `chapter-01-part-02.txt`
-- `chapter-01-part-03.txt`
-- `chapter-01-part-04.txt`
-- `chapter-01-part-05.txt`
+### Chapter 1 — VERIFIED
+Reader lines 26–1231. Five contiguous verified files saved/read back/mirrored.
+Audit removed unsupported old metadata and one unsupported narrative sentence. See detailed verified status.
 
-All five were saved to `main`, read back, and mirrored to the safety branch.
+### Chapter 2 `Глина` — VERIFIED AND COMPLETE
+Reader lines 1232–2040.
+Verified files:
+- `chapter-02-part-01.txt`
+- `chapter-02-part-02.txt`
+- `chapter-02-part-03a.txt`
+- `chapter-02-part-03b.txt`
+- `chapter-02-part-04.txt`
+- `chapter-02-part-05.txt`
+- `chapter-02-part-06.txt`
 
-Corrections discovered during Chapter 1 audit include:
-- non-site `Lviv · 2026` metadata excluded from verified content;
-- incorrect old genre label `mystical psychological thriller` not carried forward;
-- unsupported sentence `The walls were light-colored but slightly cracked.` removed because it has no canonical Ukrainian source sentence.
+The old recovered translation stopped at reader line 1964 (`— Але будете.` / `But you will.`). The missing canonical ending, reader lines 1966–2040, was newly translated directly from the site into `chapter-02-part-06.txt`, read back and mirrored.
 
 ## NEXT VALID ACTION
-Continue with Chapter 2 `Глина` from the canonical site reader.
-Exact next source marker:
-- heading: reader line 1232 `Глава 2. Глина`;
-- first narrative sentence: reader line 1234 `Марта прокинулася раніше будильника.`
+Continue with Chapter 3 `Збори фонду`.
+Exact next site marker:
+- heading: reader line 2041 `Глава 3. Збори фонду`;
+- narrative begins line 2043: `О дев’ятнадцятій церква вже не виглядала як притулок після дощу.`
 
-For every block: retrieve site source → translate/retain only justified text → save to `verified/` → read back → record site marker → mirror to safety branch → update status.
-
-If the site source becomes unavailable, STOP. Do not improvise.
+Workflow: retrieve site source → translate/retain only justified text → save under `verified/` → read back → record marker → mirror → update statuses.
+If site source becomes unavailable, STOP. Do not improvise.
