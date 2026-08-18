@@ -4,43 +4,50 @@ Updated: 2026-08-18
 Status: **RECOVERY-ONLY / NOT SITE-VERIFIED / NOT FOR PUBLICATION**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Canonical source when retrievable: `https://mavik.name/books/skulptor/read/`
+Manuscript triage: `mavik-sklad/translations/en/work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`
 
 ## PURPOSE
-This file records only mechanical observations about the quarantined old English Chapter 5 recovery files while the canonical mavik.name source is unavailable through the current retrieval path.
+This file records mechanical observations about the quarantined old English Chapter 5 recovery files. A separate non-canonical manuscript heuristic is used only to localize recovery defects while the canonical mavik.name reader is inaccessible.
 
-It does NOT validate translation accuracy, completeness, wording, chapter title, chapter boundaries, chronology, or any sentence against the Ukrainian publication.
-
-Nothing in this audit may be used to promote old files into `verified/` without line-by-line comparison with the canonical site text.
+Neither file validates canonical translation accuracy or may be used to create verified prose without line-by-line site parity.
 
 ## INVENTORY CHECK
 All currently available old Chapter 5 recovery files were physically read:
 `chapter-05-part-01.txt` through `chapter-05-part-26.txt`.
 
-The recovery sequence 01–26 is physically present and mechanically continuous as stored.
+The sequence 01–26 is physically present on `main`; part 26 is also mirrored to the safety branch. Direct path checks found no `chapter-05-part-27.txt` on either branch.
 
-This does **not** establish that Chapter 5 itself is complete. `part-26` is only the last recovered/previously translated fragment currently present. Do not infer or generate `part-27` from memory, manuscript, old English context, or narrative expectation.
-
-Every old file contains legacy wrapper/header text such as `THE SCULPTOR`, author line, `Chapter 5. The Witness`, and `Part XX`. These wrappers are recovery metadata only and are not assumed to exist in the canonical site publication.
-
-## MIRROR / ABSENCE CHECK
-- `chapter-05-part-26.txt` is now physically present on both `main` and `backup/english-translations-2026-08-17` as quarantined recovery material.
-- Direct path check for `chapter-05-part-27.txt` returns no file on `main`.
-- Direct path check for `chapter-05-part-27.txt` returns no file on the safety branch.
-- Therefore the current physically preserved recovery sequence ends at part 26. This statement is about stored recovery inventory only, not about the canonical end of Chapter 5.
+Legacy wrappers such as `THE SCULPTOR`, author line, `Chapter 5. The Witness`, and `Part XX` remain recovery metadata only and are not assumed canonical.
 
 ## BOUNDARY CHECK RESULTS
-No obvious exact sentence duplication was found across the stored part boundaries 01→02 through 25→26 during this mechanical read-through.
+No obvious exact sentence duplication was found across stored boundaries 01→02 through 25→26.
 
-Several very short files — notably parts 12, 14, 19 and 22 — were checked against their immediate neighbors and read as mechanically continuous fragments rather than obvious repeated boundary text.
+Very short parts 12, 14, 19 and 22 were checked with their neighbors. The later manuscript triage supports them as contiguous fragments of the sequence rather than obvious accidental duplicate files.
 
-This result proves only that no simple exact duplicate was visible at the stored boundaries. It does **not** prove:
-- that a clause or paragraph is missing;
-- that a sentence was paraphrased or added;
-- that a subtle overlap exists;
-- that names, wording, title or chronology match the site;
-- that part 26 reaches the canonical end of Chapter 5.
+No new exact boundary duplicate comparable to the Chapter 4 09→10 or 21→22 defects was found in Chapter 5 parts 01–26.
 
-All of those require direct comparison with the published Ukrainian site text.
+This does not prove sentence-level accuracy, absence of subtle overlap, or site parity.
+
+## IMPORTANT — STORED RECOVERY IS DEFINITELY TRUNCATED RELATIVE TO OLD MANUSCRIPT
+The stored English recovery ends in `chapter-05-part-26.txt` immediately after Olena's message that Nazar refused to meet his mother and said he was not ready to be good yet.
+
+The physically retrieved old manuscript continues immediately after that point: Marta rereads the message, shows it to Serhii, they discuss it, Yakiv continues and signs his statement, and the chapter proceeds further.
+
+Therefore the current recovery sequence 01–26 is **definitely incomplete relative to the old manuscript**. Part 26 is not a valid recovery chapter-end marker.
+
+This is a recovery fact only. The manuscript may not be used to generate the missing English continuation.
+
+## FULL NON-CANONICAL TRIAGE STATUS
+A separate manuscript-comparison heuristic now covers the full stored recovery sequence 01–26 in broad scene/event continuity:
+- 01–06: opening, callback, second call, city-library invitation and arrival;
+- 07–10: Yakiv and November 2004 photograph / Luka Myron;
+- 11–17: Sofia, formal rules, fragments/strength, fear serving, Luka Myron documents;
+- 18–22: 2012 encounter under `Lev`, witness line, photograph evidence handling;
+- 23–26: purification/stone, Yakiv statement, ordinary city, Nazar message.
+
+No gross scene/event reordering or new exact boundary duplicate was found in the retrieved manuscript spans.
+
+Again: this is triage, not verification.
 
 ## CANONICAL POSITION REMAINS UNCHANGED
 The verified audit has **not reached Chapter 5**.
@@ -53,14 +60,14 @@ Chapter 4 must be fully site-verified before Chapter 5 can be promoted or contin
 
 ## FUTURE SITE-PARITY ORDER
 When canonical site retrieval works again:
-1. resume at Chapter 4 from the recorded site marker;
-2. finish Chapter 4 line-by-line parity and save only justified text under `verified/`;
-3. determine the exact canonical Chapter 5 heading/start from the site itself;
-4. compare `chapter-05-part-01.txt` forward only against that site text;
-5. treat all legacy wrappers as non-canonical unless physically present on the site;
-6. detect omissions, additions, paraphrases and subtle overlaps, not only exact duplicates;
-7. never continue beyond `chapter-05-part-26.txt` until the exact next Ukrainian site passage is physically retrieved;
-8. save verified text, read back, record site markers, mirror to the safety branch.
+1. resume at Chapter 4 from recorded line 2879/2881;
+2. finish Chapter 4 site parity and save only justified text under `verified/`;
+3. determine Chapter 5's exact site heading/start and compare recovery 01–26 line by line;
+4. do not assume legacy wrappers are site text;
+5. after the exact site passage corresponding to the end of part 26 is reached, retrieve the site's next contiguous Ukrainian text;
+6. only then translate the missing continuation into new verified English;
+7. never reconstruct a part 27 from the old manuscript;
+8. read back, record site markers, mirror to safety, update statuses.
 
 ## HARD STOP
-While the canonical site source cannot be physically retrieved, do not create `verified/chapter-05-*` files and do not translate or reconstruct any missing continuation from File Library, warehouse manuscripts, old English recovery, chat/model memory, summaries, or inference.
+While the canonical site source cannot be physically retrieved, do not create `verified/chapter-05-*` files and do not create `chapter-05-part-27.txt` from File Library, warehouse manuscripts, old English recovery, memory, summaries, or inference.
