@@ -3,7 +3,7 @@
 Original completion date: 2026-08-16
 Canon alignment update: 2026-08-18
 Status: **ENGLISH TEXT COMPLETE AS PHYSICAL RECOVERY SET / HISTORICAL MANUSCRIPT CONSISTENCY PASS COMPLETE / NOT YET SITE-PARITY CERTIFIED UNDER CURRENT HARD CANON**
-Canonical structural/functional site core: **R210G**
+Canonical structural/functional site core: **R212**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Current status: `mavik-sklad/translations/en/STATUS.md`
@@ -13,7 +13,7 @@ Safety branch: `backup/english-translations-2026-08-17`
 ## CURRENT SOURCE AUTHORITY
 For any new verification, correction or publication-readiness decision, the ONLY authoritative source is the canonical Ukrainian text actually published on mavik.name, or a physically retrieved site-generated reader-text representation demonstrated to be the same publication.
 
-Do NOT generate or retranslate English prose from DOCX/TXT manuscripts, File Library copies, warehouse manuscripts, old English files, historical release copies, summaries or memory.
+Do NOT generate or retranslate English prose from DOCX/TXT manuscripts, File Library copies, warehouse manuscripts, recovery English files, historical release copies, summaries or memory.
 
 If the canonical published Ukrainian source cannot be physically retrieved, site-parity work stops.
 
@@ -89,7 +89,7 @@ Exact next canonical point:
 - heading recorded line 2879;
 - narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-Do NOT continue `The Sculptor` from `Скульптор.docx` or old English recovery files. Resume only from physically retrieved canonical site text.
+Do NOT continue `The Sculptor` from `Скульптор.docx` or recovery English files. Resume only from physically retrieved canonical site text.
 
 ## NEW-BRANCH RULE
 Do not restart Evacuation translation. Preserve these eight files and their exact SHAs.
