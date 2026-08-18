@@ -1,7 +1,7 @@
 # MAVIK.NAME — ACTIVE ENGLISH TRANSLATION ARCHIVE
 
 Updated: 2026-08-18
-Canonical structural/functional site core: **R210G**
+Canonical structural/functional site core: **R212**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Current status: `mavik-sklad/translations/en/STATUS.md`
@@ -13,7 +13,7 @@ This directory stores English content translation/recovery assets. It is not a s
 ## HARD SOURCE RULE
 For new or verified English book prose, the ONLY authoritative source is the canonical Ukrainian text actually published on mavik.name, or a physically retrieved site-generated reader-text representation demonstrated to be the same publication.
 
-Do NOT generate translation prose from File Library manuscripts, DOCX/TXT files, warehouse manuscripts, old English files, historical release ZIPs, chat/model memory, summaries, checkpoints or guessed continuation.
+Do NOT generate translation prose from File Library manuscripts, DOCX/TXT files, warehouse manuscripts, recovery English files, release ZIPs, chat/model memory, summaries, checkpoints or guessed continuation.
 
 If the canonical site text cannot be physically retrieved, verified translation stops. Recovery inspection may continue only as explicitly non-canonical preparation.
 
@@ -38,7 +38,7 @@ On 2026-08-18, storage integrity was checked: all nine recovered book trees, all
 ## SOCIAL / СОЦІАЛЬНА
 The Ukrainian book is completed, but the separate English STOP canon remains active until the author explicitly permits English translation.
 
-Old English Social files for Chapters 8–16 were intentionally deleted on 2026-08-17. Do NOT restore or use them for translation work unless the author explicitly changes that decision.
+English Social files intentionally deleted under the STOP decision must not be restored or used for translation work unless the author explicitly changes that decision.
 
 Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
@@ -51,14 +51,17 @@ Site-verified:
 - Chapter 2 — reader lines 1232–2040;
 - Chapter 3 — reader lines 2041–2878.
 
-Chapter 4 and Chapter 5 old English files remain quarantined recovery material only.
-
 Exact next canonical point:
 - Chapter 4 `Глава 4. Пам’ятка`;
 - heading recorded line 2879;
 - narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-Do NOT continue from `Скульптор.docx` or from old Chapter 4/5 English files. Resume verified translation only after physically retrieving the exact canonical Ukrainian site passage.
+### Recovery preparation only
+Chapter 4 parts 01–38 have completed mechanical + non-canonical manuscript triage. Two old chunking duplicates are confirmed relative to manuscript at 09→10 and 21→22. They still require site confirmation before verified correction.
+
+Chapter 5 stored recovery parts 01–26 have completed mechanical + non-canonical manuscript triage. Recovery is definitely truncated after part 26 relative to the old manuscript. Git history contains translation commits through Part 26 and no Part 27 translation commit; the site-only hard-source canon followed immediately after Part 26.
+
+Do NOT continue from `Скульптор.docx`, recovery English, or known manuscript continuation. Resume verified translation only after physically retrieving the exact canonical Ukrainian site passage.
 
 ## NEW BRANCH READ ORDER
 1. `mavik-sklad/START-HERE.txt`
