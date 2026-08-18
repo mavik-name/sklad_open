@@ -3,16 +3,18 @@ MAVIK.NAME — START HERE
 Статус: АКТИВНИЙ SITE START
 
 ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R213.
+ПОТОЧНИЙ КАНДИДАТ: R214 — SEO / CLEANUP, НЕ КАНОН.
 
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
 2. Прочитати `mavik-sklad/files/R213-CANON-CHECKPOINT.md`.
-3. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
-4. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
-5. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
-6. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-7. Не перезаписувати `/_site-state/` штатним deploy/patch.
-8. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+3. Якщо продовжується робота з поточним кандидатом — прочитати `mavik-sklad/files/R214-WIP-CHECKPOINT.md`.
+4. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
+5. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
+6. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
+7. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
+8. Не перезаписувати `/_site-state/` штатним deploy/patch.
+9. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
 SIMPLE FIRST — ЖОРСТКИЙ КАНОН
 - Робити швидко, якісно і максимально просто.
@@ -40,6 +42,7 @@ SIMPLE FIRST — ЖОРСТКИЙ КАНОН
 - У редагуванні книги статус можна змінювати в обидва боки.
 - `Опис для анонсу` — редаговане поле.
 - Обкладинка анонсу береться з книги.
+- Canonical book page є публічною незалежно від placement, тому всі публічні book pages повинні входити в sitemap.
 
 CONTACT / MAIL
 - Public `Контакт / Contact` працює в global public shell.
@@ -73,6 +76,7 @@ SEO / ANALYTICS
 - Books state/public/meta/JSON-LD/sitemap синхронізуються з актуального стану.
 - `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing key.
 - Контентні зміни мають лишати узгодженими public state і search state: links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та SEO self-test — де релевантно.
+- R214 candidate додає одноразовий full sitemap refresh через IndexNow і Bing (якщо Bing key уже є), плюс dead-URL notification для вилученого legacy blog URL.
 
 MAINTENANCE
 - Один global maintenance mode для всього сайту.
@@ -87,4 +91,4 @@ ENGLISH CONTENT
 
 Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на mavik.name. Якщо exact site-source недоступний — переклад зупинити, не домислювати.
 
-Будь-яка нова structural/functional робота стартує тільки від R213.
+Будь-яка нова structural/functional робота стартує тільки від R213. R214 лишається кандидатом до прямого затвердження автора.
