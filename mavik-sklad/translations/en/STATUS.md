@@ -5,6 +5,7 @@ Status: **AUTHORITATIVE CURRENT STATUS**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Safety branch: `backup/english-translations-2026-08-17`
+Recovery integrity audit: `mavik-sklad/translations/en/RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`
 
 ## HARD SOURCE RULE
 The ONLY source for new or verified English book prose is the canonical Ukrainian text actually published on mavik.name, or a physically retrieved site-generated reader-text representation demonstrated to be the same publication.
@@ -20,6 +21,14 @@ The Ukrainian book is completed, but the existing project-specific English STOP 
 
 ## PROTECTED RECOVERY CONTENT
 Nine recovered English books, completed Evacuation English text, and partial Three Novels Nobody Reads work remain protected recovery assets. Publication readiness still requires parity with the canonical Ukrainian site publication.
+
+Physical mirror integrity was checked on 2026-08-18 and recorded in `RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`:
+- 9/9 recovered complete book directory trees have identical tree SHAs on `main` and safety;
+- 8/8 Evacuation story files have identical blob SHAs on both branches;
+- `Three Novels Nobody Reads` partial Sections 1–8 has the same tree SHA on both branches;
+- `books/RECOVERY-SOURCE.txt` was synchronized to the current R210G/site-only source policy on both branches.
+
+This proves storage identity only, not site parity.
 
 ## ACTIVE — THE SCULPTOR
 Canonical source: `https://mavik.name/books/skulptor/read/`
@@ -52,7 +61,9 @@ Chapter 5:
 Recovery preparation never advances the canonical verified point.
 
 ## CURRENT BLOCKER — 2026-08-18
-The canonical live reader currently fails through the available external fetch path. Direct reader fetch, site-generated text route attempts and search-index discovery did not physically retrieve the Chapter 4 source.
+The canonical live reader currently fails through the available external fetch path. Direct reader fetch, site-generated text route attempts, direct HTTP/DNS access and search-index discovery did not physically retrieve the Chapter 4 source.
+
+A File Library search for the canonical R210G release ZIP/site snapshot did not surface a usable archive containing the reader text. The only located Chapter 4 prose source was the old `Скульптор.docx`, which remains forbidden as a translation source under the hard canon.
 
 This is a source-transport blocker, not lost translation content and not permission to use another prose source.
 
