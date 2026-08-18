@@ -16,9 +16,9 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release canon: `mavik-sklad/releases/CANON.md`
-- current checkpoint: `mavik-sklad/files/R212-CANON-CHECKPOINT.md`
-- structural/functional base: **R212**
-- recovery mirror: `mavik-sklad/recovery/R212/`
+- current checkpoint: `mavik-sklad/files/R213-CANON-CHECKPOINT.md`
+- structural/functional base: **R213**
+- recovery mirror: `mavik-sklad/recovery/R213/`
 - reader-header canon: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
 - book-page canon: `mavik-sklad/files/kanon-storinky-knyhy.txt`
 - SIMPLE FIRST, privacy-media, public-blog editorial and protected-SEO rules are mandatory
