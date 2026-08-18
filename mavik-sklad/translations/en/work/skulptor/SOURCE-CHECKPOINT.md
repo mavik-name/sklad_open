@@ -1,74 +1,88 @@
 # THE SCULPTOR — ENGLISH TRANSLATION SOURCE CHECKPOINT
 
-Date: 2026-08-16
-Status: **ACTIVE / SOURCE LOCATED / TRANSLATION STARTED**
+Updated: 2026-08-18
+Status: **ACTIVE / SITE-ONLY HARD SOURCE CANON**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Safety branch: `backup/english-translations-2026-08-17`
 
-## SOURCE LOCATED
+## OVERRIDING SOURCE RULE
 
-File Library source:
-`Скульптор.docx`
+The ONLY authoritative source for English translation is the canonical Ukrainian text actually published on mavik.name.
 
-Verified title page:
-- ВІКТОР МАКАРЧУК
-- СКУЛЬПТОР
-- містично психологічний трилер
-- 2026
-- Львів
+Canonical reader:
+`https://mavik.name/books/skulptor/read/`
 
-The parsed File Library copy contains 887 pages. It begins with:
-`Глава 1. Бруд на дитячих руках`.
+A site-generated text representation may be used only when it is demonstrably the same published text.
 
-This is the only exact `Скульптор.docx` manuscript located in the File Library search during this handoff. No newer duplicate manuscript was found.
+Forbidden as translation sources:
+- File Library `Скульптор.docx`;
+- warehouse manuscripts;
+- chat/model memory;
+- old English translation files;
+- summaries/checkpoints;
+- guessed or reconstructed continuation.
 
-## R192 PARITY LIMIT
+The previous instructions in older versions of this file that allowed `Скульптор.docx` as the working prose source are **SUPERSEDED AND INVALID**. They must never be used to resume translation.
 
-The current R192 release authority is known, but the full R192 site ZIP/book text is not physically present in the GitHub warehouse/File Library search results available to this branch. Only release notes/old site mockup material surfaced.
+If the exact canonical site passage cannot be physically retrieved, translation stops at the last verified site-source point. No fallback to the manuscript. No improvisation.
 
-Therefore:
-- do NOT use the old site mockup as prose source;
-- do NOT use review files that merely discuss `Скульптор`;
-- use `Скульптор.docx` as the working translation source unless a newer approved source is found;
-- if a current R192 full Ukrainian book text becomes available and differs materially, stop and reconcile before continuing.
+## VERIFIED SITE-SOURCE PROGRESS
 
-## ENGLISH WORKING TITLE / GENRE
+Verified English lives only under:
+`mavik-sklad/translations/en/work/skulptor/verified/`
 
-Working title: **The Sculptor**
+- Chapter 1 `Бруд на дитячих руках` — fully site-verified, reader lines 26–1231.
+- Chapter 2 `Глина` — fully site-verified, reader lines 1232–2040.
+- Chapter 3 `Збори фонду` — fully site-verified, reader lines 2041–2878.
 
-Working genre line:
-**mystical psychological thriller**
+Detailed verified map:
+`mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
-Do not finalize marketing wording until the full translation/title pass.
+## QUARANTINED RECOVERY CONTENT
 
-## TRANSLATION RULES
+Old files directly under `work/skulptor/` are comparison/recovery artifacts only. They are NOT publication canon and may not generate new English text.
 
-Mandatory:
+Physical recovery inventory includes:
+- Chapter 4: `chapter-04-part-01.txt` through `chapter-04-part-38.txt`;
+- Chapter 5: recovery files on the safety branch remain comparison-only and may differ physically from main.
+
+These files may be retained only where a line-by-line audit against the canonical site publication justifies them.
+
+## EXACT NEXT POINT
+
+Next canonical source point:
+- Chapter 4: `Глава 4. Пам’ятка`;
+- reader line 2879;
+- first narrative line: `Пам’ятка мала вміститися на одну сторінку.`
+
+Next valid action:
+1. physically retrieve the exact Chapter 4 passage from the canonical mavik.name publication;
+2. audit old `chapter-04-part-01.txt` onward against that site text;
+3. create files under `verified/` only for text justified by the site source;
+4. read back every saved block;
+5. mirror every verified block to the safety branch;
+6. update statuses after each meaningful batch.
+
+## CURRENT FETCH CONDITION — 2026-08-18
+
+At the latest continuation attempt, the external fetch path for the live reader returned a cache/fetch failure. This is a transport/tool limitation, not permission to use another prose source.
+
+Until the canonical site passage is physically retrievable, the verified translation remains intentionally stopped after Chapter 3.
+
+## TRANSLATION QUALITY RULES
+
+When the site source is available:
+- translate only retrieved source text;
 - preserve Marta's clipped observational voice;
-- preserve institutional/procedural language without making it sound like American police fiction;
-- preserve the contrast between dry protocol language and bodily/child-level detail;
-- preserve Ukrainian social-service context rather than silently substituting US/UK institutions;
-- preserve short paragraph rhythm and pauses;
-- do not add explanations or therapeutic jargon not present in source;
-- do not soften the text's language or moral ambiguity;
-- transliterate names consistently.
+- preserve Ukrainian institutional/social-service context rather than silently substituting foreign institutions;
+- preserve short paragraph rhythm and deliberate pauses;
+- do not add explanations, descriptions, dialogue, therapeutic jargon, connective passages or clarification not present in the source;
+- do not soften language or moral ambiguity;
+- keep established transliterations consistent: Marta, Serhii Kravets, Nazar, Olena Rudenko, Viktoriia, Viktoriia Andriivna, Andrii, Lucas Martyn.
 
-Initial names/terms:
-- Марта → Marta
-- Сергій Кравець → Serhii Kravets
-- Назар → Nazar
-- Олена Руденко → Olena Rudenko
-- Вікторія → Viktoriia
-- служба у справах дітей → child services / child welfare service according to context, without pretending it is a foreign agency
-- відділок → station / police station according to context
+## RECOVERY
 
-## PHYSICAL WORK FOLDER
+Before declaring non-excluded work lost, search:
+`main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library.
 
-`mavik-sklad/translations/en/work/skulptor/`
-
-Initial batch strategy: save Chapter 1 in consecutive parts if needed rather than producing one enormous unsaved translation block.
-
-## EXACT CONTINUATION
-
-Translation begins at:
-`Глава 1. Бруд на дитячих руках`
-
-First saved batch should cover the opening police/store/home sequence from the authoritative manuscript, then continue without restarting.
+Recovery preserves work. It never overrides the published-site source rule.
