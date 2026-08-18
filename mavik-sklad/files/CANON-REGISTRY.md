@@ -14,11 +14,22 @@ Status: **AUTHORITATIVE INDEX**
 
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
+- Simple-first working canon: `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
 - Current canonical checkpoint: `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`
 - Current structural/functional CORE base: **R210G**
 - Current next-release work: `mavik-sklad/files/R211-WIP-CHECKPOINT.md` — **WIP, NOT CANON**
 
 R1–R210F are obsolete as active structural/functional site bases. R210G is the only current canonical CORE base. R211 may replace it only after completion, live verification and a new explicit author approval.
+
+### SIMPLE FIRST — HARD WORKING CANON
+
+For every new site task, first propose and implement the **simplest effective solution that fully solves the requested need**.
+
+Do not add extra dropdowns, previews, modes, duplicated controls, new subsystems or workflows unless the simpler solution cannot meet a concrete requirement or creates a real technical risk.
+
+If two options are equally effective, choose the one that is easier to understand, test, maintain and roll back.
+
+Mandatory control question before implementation: **Can this be done more simply without losing functionality or reliability?** If yes, use the simpler solution.
 
 ### HARD CODE/CORE FREEZE AFTER R210G
 
@@ -114,11 +125,12 @@ The ONLY authoritative source for new English book translation text is the canon
 ## Conflict rule
 
 1. Latest explicit user-approved canon wins.
-2. For the site, **R210G is the authoritative CORE base** until a newer release is explicitly approved.
-3. R211 is WIP only until explicit approval.
-4. Routine content work is patch/overlay only and may not silently modify CORE.
-5. Routine blog publication specifically uses **content-only ZIP through Boss**.
-6. Any future CODE/CORE change requires a new explicit user decision.
-7. R210G maintenance is global-only.
-8. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is highest authority.
-9. Historical release/checkpoint documents never override a newer approved canon.
+2. For site work, the `SIMPLE-FIRST-WORKING-CANON.md` principle applies before selecting implementation complexity.
+3. For the site, **R210G is the authoritative CORE base** until a newer release is explicitly approved.
+4. R211 is WIP only until explicit approval.
+5. Routine content work is patch/overlay only and may not silently modify CORE.
+6. Routine blog publication specifically uses **content-only ZIP through Boss**.
+7. Any future CODE/CORE change requires a new explicit user decision.
+8. R210G maintenance is global-only.
+9. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is highest authority.
+10. Historical release/checkpoint documents never override a newer approved canon.
