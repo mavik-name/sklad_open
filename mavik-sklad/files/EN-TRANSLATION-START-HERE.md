@@ -2,7 +2,7 @@
 
 Updated: 2026-08-18
 Status: **ACTIVE TRANSLATION WORK / AUTHORITATIVE ENTRY POINT**
-Current structural-functional site core: **R212**
+Current structural-functional site core: **R213**
 
 ## READ FIRST IN A NEW BRANCH
 1. `mavik-sklad/START-HERE.txt`
