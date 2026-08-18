@@ -4,41 +4,41 @@
 
 ## Єдина чинна канонічна база
 
-**R212 — єдина чинна structural/functional CORE-база сайту.**
+**R213 — єдина чинна structural/functional CORE-база сайту.**
 
 Канонічний checkpoint:
-`mavik-sklad/files/R212-CANON-CHECKPOINT.md`
+`mavik-sklad/files/R213-CANON-CHECKPOINT.md`
 
 ## Канонічний binary
 
-- `212 Збірка_Сайт_ОК.zip`
-- `212 Збірка_Сайт_ОК_PART1.zip`
-- `212 Збірка_Сайт_ОК_PART2.zip`
+- `213 Збірка_Сайт_ОК.zip`
+- `213 Збірка_Сайт_ОК_PART1.zip`
+- `213 Збірка_Сайт_ОК_PART2.zip`
 
 Manifest SHA-256:
-`a3261b7e127653097e23d014c7b3d0c8414c534457265a7f3be68990481801cf`
+`8c1f963df1e1a6831942eb01fb26eec7eba6ea1195a180f8e1ce5c3fea2134d1`
 
 Set id:
-`r212-a3261b7e12765309`
+`r213-8c1f963df1e1a683`
 
 FULL SHA-256:
-`694cd5c247a047c71bf9ccaaa61336a5cfd41cb91016d4a9c85af29d8580b390`
+`05ba73d3a7d9d20041a141d497c78491841887fc9315c091a13f907cbf00f4ee`
 
 PART1 SHA-256:
-`2fb8ab725be66842c4086e3fd5e203f94cd8969d003e5c26fb5da7c3ab24c635`
+`ab3106e8deab2abbacd8d0d198060d6b78c76e022bb34ced813761207b5d7c7d`
 
 PART2 SHA-256:
-`74ddd17d354798e81dce5b695058b7c6f8e7e7a57707ca915e0409de300bafc9`
+`2033f034425246666e87cba3ff0e12aff514260c620914f9d1a464b5a24a9546`
 
 Managed files: **646**.
 
-Перевірки: PHP 35/35 OK; JSON OK; manifest 646/646; FULL/PART CRC OK; multipart union 646/646.
+Перевірки: PHP 35/35 OK; JSON OK; manifest 646/646; FULL/PART CRC OK; multipart coverage 646/646.
 
 ## Робоче правило
 
-Будь-яка наступна structural/functional робота стартує **тільки від R212**.
+Будь-яка наступна structural/functional робота стартує **тільки від R213**.
 
-Routine content work — PATCH/OVERLAY поверх R212 без прихованої зміни CORE.
+Routine content work — PATCH/OVERLAY поверх R213 без прихованої зміни CORE.
 
 Нормальний новий блог — content-only ZIP через Boss.
 
