@@ -1,58 +1,70 @@
 # THE SCULPTOR — SITE-VERIFIED ENGLISH AUDIT
 
 Updated: 2026-08-18
-Status: ACTIVE — CHAPTER 1 VERIFIED
+Status: ACTIVE — CHAPTERS 1–2 VERIFIED
 Canonical source: https://mavik.name/books/skulptor/read/
 Hard source canon: mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md
 Safety branch: backup/english-translations-2026-08-17
 
-## VERIFIED BLOCKS
+## VERIFIED — CHAPTER 1
+Canonical Ukrainian reader range: lines 26–1231.
+Verified files:
+- `chapter-01-part-01.txt`
+- `chapter-01-part-02.txt`
+- `chapter-01-part-03.txt`
+- `chapter-01-part-04.txt`
+- `chapter-01-part-05.txt`
 
-### Chapter 1 — Part 01
-File: `verified/chapter-01-part-01.txt`
-Canonical Ukrainian source marker: reader lines 26–376, from `Глава 1. Бруд на дитячих руках` through `У морозилці лежали пельмені, злиплі в один білий камінь.`
-Verification date: 2026-08-18
-State: saved to main, read back, mirrored to safety branch.
+Corrections found during Chapter 1 audit:
+- excluded non-site `Lviv · 2026` metadata;
+- did not carry forward incorrect old `mystical psychological thriller` label;
+- removed unsupported sentence `The walls were light-colored but slightly cracked.` because no corresponding canonical Ukrainian sentence exists.
 
-Corrections relative to quarantined recovery file:
-- removed non-site `Lviv · 2026` metadata from the verified layer;
-- did not carry forward the incorrect `mystical psychological thriller` label;
-- verified layer begins directly at the canonical Chapter 1 heading and contains only translation justified by the retrieved site passage.
+## VERIFIED — CHAPTER 2 `Глина`
+Canonical Ukrainian reader range: lines 1232–2040.
 
-### Chapter 1 — Part 02
-File: `verified/chapter-01-part-02.txt`
-Canonical Ukrainian source marker: reader lines 378–752, from `Сергій усе записав.` through `Марта любила ці руки з дитинства.`
-Verification date: 2026-08-18
-State: saved to main, read back, mirrored to safety branch.
-No unsupported narrative additions were carried into the verified layer.
+### Part 01
+File: `verified/chapter-02-part-01.txt`
+Site marker: lines 1232–1356, heading `Глава 2. Глина` through `І це було непрофесійно.`
+State: saved, read back, mirrored.
 
-### Chapter 1 — Part 03
-File: `verified/chapter-01-part-03.txt`
-Canonical Ukrainian source marker: reader line 752 continuation through line 934, from `Вони підкидали її вгору, коли вона була малою.` through `Ліхтарик.`
-Verification date: 2026-08-18
-State: saved to main, read back, mirrored to safety branch.
-Correction relative to quarantined recovery file:
-- removed the unsupported sentence `The walls were light-colored but slightly cracked.` because no corresponding sentence exists in the canonical site publication.
+### Part 02
+File: `verified/chapter-02-part-02.txt`
+Site marker: lines 1358–1458, `Олена помітила, але нічого не сказала.` through `До вчорашнього питання.`
+State: saved, read back, mirrored.
 
-### Chapter 1 — Part 04
-File: `verified/chapter-01-part-04.txt`
-Canonical Ukrainian source marker: reader lines 936–1184, from `Андрій не зрозумів.` through `І ваше — не діагноз.`
-Verification date: 2026-08-18
-State: saved to main, read back, mirrored to safety branch.
-No unsupported narrative additions were carried into the verified layer.
+### Part 03a
+File: `verified/chapter-02-part-03a.txt`
+Site marker: lines 1460–1565, `І від цього ставало не спокійніше, а навпаки.` through `Він вийшов.`
+State: saved, read back, mirrored.
+Note: physically split because the GitHub connector rejected the larger single write; no content was omitted.
 
-### Chapter 1 — Part 05
-File: `verified/chapter-01-part-05.txt`
-Canonical Ukrainian source marker: reader lines 1185–1231, from `Вона відчинила машину, поклала пакет на пасажирське сидіння, але не сіла.` through `І двері самі відчиняються.`
-Verification date: 2026-08-18
-State: saved to main, read back, mirrored to safety branch.
-No unsupported narrative additions were carried into the verified layer.
+### Part 03b
+File: `verified/chapter-02-part-03b.txt`
+Site marker: lines 1567–1597, `Марта залишилася.` through `Вона не хотіла приймати від Лукаса нічого.`
+State: saved, read back, mirrored.
 
-## CHAPTER 1 RESULT
-Canonical Ukrainian reader range audited: lines 26–1231.
-Chapter 1 English verified layer is complete in five contiguous files.
-The older files outside `verified/` remain quarantined recovery artifacts and are not publication canon.
+### Part 04
+File: `verified/chapter-02-part-04.txt`
+Site marker: lines 1598–1730, `Але чим довше дивилася...` through `Марта не питала.`
+State: saved, read back, mirrored.
+
+### Part 05
+File: `verified/chapter-02-part-05.txt`
+Site marker: lines 1732–1964, `Вона просто вирішила...` through `— Але будете.`
+State: saved, read back, mirrored.
+This was the end of the old recovered English translation for Chapter 2.
+
+### Part 06 — NEW TRANSLATION FROM CANONICAL SITE SOURCE
+File: `verified/chapter-02-part-06.txt`
+Site marker: lines 1966–2040, `— Ви надто впевнені.` through `Саме тому їм важче не вірити.`
+State: translated directly from mavik.name, saved, read back, one natural-English wording correction made without changing meaning, read back again, mirrored.
+
+## CHAPTER 2 RESULT
+Chapter 2 is now complete in the verified layer. The old recovery translation had stopped at reader line 1964; lines 1966–2040 are newly translated strictly from the canonical published Ukrainian text.
+
+Older files outside `verified/` remain quarantined recovery artifacts and are not publication canon.
 
 ## NEXT
-Chapter 2. `Глина`.
-Next canonical site marker: reader line 1232 heading, narrative begins line 1234: `Марта прокинулася раніше будильника.`
+Chapter 3 `Збори фонду`.
+Next canonical site marker: reader line 2041 heading; narrative begins line 2043: `О дев’ятнадцятій церква вже не виглядала як притулок після дощу.`
