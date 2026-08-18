@@ -1,136 +1,58 @@
-# MAVIK.NAME — ENGLISH CONTENT TRANSLATION — START HERE
+# MAVIK.NAME — ENGLISH TRANSLATION — START HERE
 
-Updated: 2026-08-17
-Status: **ACTIVE TRANSLATION WORK ONLY**
-Canonical site/core source: **R193**
+Updated: 2026-08-18
+Status: **AUTHORITATIVE RECOVERY ENTRY POINT**
+Current structural-functional core: **R210G**
 
-This direction concerns English content inside the single multilingual core. It is NOT a separate English site.
-
-## READ FIRST IN A NEW BRANCH
-
+## READ ORDER
 1. `mavik-sklad/START-HERE.txt`
-2. this file
-3. `mavik-sklad/files/EN-SOURCE-POLICY.md`
-4. `mavik-sklad/translations/en/STATUS.md`
-5. actual saved files of the active translation
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. this file
+4. `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+5. `mavik-sklad/files/EN-SOURCE-POLICY.md`
+6. `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+7. `mavik-sklad/translations/en/STATUS.md`
+8. active-book STATUS
+9. canonical Ukrainian publication on mavik.name
 
-Do not restart from old pre-R193 site checkpoints/workspaces. Those are obsolete and must not override current translation work.
+## HARD SOURCE RULE
+The ONLY source that may generate new or verified English prose is the exact Ukrainian text actually published on mavik.name.
 
-## ARCHITECTURE RULE
+A site-generated `/books/<slug>/read/text/` file may be used only when physically retrieved and shown to represent the same published reader text.
 
-- one shared multilingual core;
-- English content lives under the language/content layer of that core;
-- same principle for future `es`, `de`, `pl`, etc.;
-- no Google Translate or automatic translator as the canonical content source;
-- source text must be the latest authoritative Ukrainian content.
+Manuscripts, DOCX files, release archives, old English files, summaries, checkpoints and chat/model memory are recovery/comparison material only. They cannot generate translation prose.
 
-## CONTENT PARITY
+If the canonical site passage cannot be retrieved, stop verified translation. Never reconstruct missing text.
 
-Everything public in Ukrainian must be able to exist in English in the same structure:
-- books;
-- blog posts;
-- announcements;
-- static pages;
-- copyright/legal/privacy/service texts;
-- menu/content labels.
+## SOCIAL / СОЦІАЛЬНА
+The Ukrainian book is completed, but the project-specific NO-ENGLISH-TRANSLATION STOP remains active until the author explicitly permits English translation.
 
-## PHYSICALLY RECOVERED COMPLETE ENGLISH BOOKS
+## ACTIVE TARGET — СКУЛЬПТОР
+Canonical source: `https://mavik.name/books/skulptor/read/`
+Working directory: `mavik-sklad/translations/en/work/skulptor/`
+Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
 
-The following nine complete English translations are physically stored under:
-`mavik-sklad/translations/en/books/`
+Site-verified:
+- Chapter 1 — reader lines 26–1231;
+- Chapter 2 — reader lines 1232–2040;
+- Chapter 3 — reader lines 2041–2878.
 
-1. `mamo-zhyty` — *Mom, I Want to Live!*
-2. `bezimenni` — *The Nameless*
-3. `liudyna-bez-akaunta` — *The Man Without an Account*
-4. `vidmova-avansom` — *Rejection in Advance*
-5. `transfer` — *Transfer*
-6. `pishchynka-solya` — *Solya, the Grain of Sand Who Dreamed of a Skyscraper*
-7. `paterny-samorefleksii` — *Patterns of Self-Reflection*
-8. `ty-i-ia` — *You and I*
-9. `yevanheliie-vid-makariia` — *The Gospel According to Macarius*
+Exact next canonical point:
+- Chapter 4 `Глава 4. Пам’ятка`;
+- heading recorded at line 2879;
+- narrative begins recorded line 2881: `Пам’ятка мала вміститися на одну сторінку.`
 
-Do NOT translate these again before a parity check proves the Ukrainian source changed materially.
+Current source transport is blocked. Do not bypass this with `Скульптор.docx` or old English recovery.
 
-## COMPLETED TRANSLATION TEXT — EVACUATION
+Recovery preparation only:
+- Chapter 4 parts 01–38 inspected; see `CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`;
+- Chapter 5 parts 01–26 inspected; see `CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`;
+- Chapter 5 part 26 is preserved on both main and this safety branch;
+- no part 27 exists on main or this safety branch.
 
-Ukrainian title:
-`Евакуація, або Дорогою до стабіка`
+None of those recovery files become verified until checked line-by-line against mavik.name.
 
-Working English title:
-*Evacuation, or On the Road to the Stabilization Point*
+## PERSISTENCE
+For every valid site-source block: retrieve source → translate only that source → save → read back → record site marker → mirror to safety branch → update status.
 
-Current authoritative physical English set:
-`mavik-sklad/translations/en/work/evakuatsiia/`
-
-All eight English stories are physically saved and the whole-book consistency/source pass is complete:
-1. `story-01-pixel.txt`
-2. `story-02-beard.txt`
-3. `story-03-doc.txt`
-4. `story-04-shorty.txt`
-5. `story-05-cashier.txt`
-6. `story-06-mongol.txt`
-7. `story-07-philosopher.txt`
-8. `story-08-ghost.txt`
-
-Completion checkpoint:
-`mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
-
-Do NOT restart this translation. The English text is complete but has not yet been physically packaged/copied into the completed `books/` site-tree. Do not claim that packaging is done until it actually is.
-
-## PHYSICALLY RECOVERED PARTIAL WORK
-
-`Three Novels Nobody Reads` — Sections 1–8 are physically preserved under:
-`mavik-sklad/translations/en/partial/try-romany-yaki-nikhto-ne-chytaie-sections-1-8/`
-
-Do not redo Sections 1–8. Continue from the first genuinely untranslated section after checking current Ukrainian parity.
-
-`Social` — partial English batches remain archive-only until the Ukrainian original is complete.
-
-## ACTIVE NEXT TARGET — THE SCULPTOR
-
-Ukrainian title:
-`Скульптор`
-
-English working title:
-*The Sculptor*
-
-A File Library source named `Скульптор.docx` has been located.
-
-NEXT EXACT POINT:
-1. retrieve/read `Скульптор.docx`;
-2. verify it against the current R193 Ukrainian source where possible;
-3. if the texts differ, establish which is the latest approved source before translating;
-4. only then continue English translation from the verified source.
-
-Do not use an old site mockup, review/critique document, or unrelated text containing the word `Скульптор` as the source.
-
-## STILL NEED TRANSLATION AFTER THE SCULPTOR
-
-- `UNIVERSE` → *UNIVERSE*
-- `Адвокат Диявола` → *The Devil’s Advocate*
-- `Пацієнт` → *The Patient*
-- `Петля` → *The Loop*
-- `Той, що несе світло` → *The Light-Bringer*
-- `Олена` → *Olena*
-- `Листи полковнику` → *Letters to the Colonel*
-- `Три романи, які ніхто не читає` → complete remaining sections after Section 8
-- `Як Вітько з москалями воював` → *How Vitko Fought the Russians*
-
-`Код легенди` remains an announcement/book object whose manuscript was sent to a publisher **for review**. Do not treat it as published until the user changes its status.
-
-## SOURCE PRIORITY
-
-Use `mavik-sklad/files/EN-SOURCE-POLICY.md` as authority. In short:
-1. current approved/canonical R193 Ukrainian content;
-2. live mavik.name if confirmed equivalent;
-3. latest approved manuscript when it is explicitly newer/authoritative;
-4. older copies only for comparison/recovery.
-
-## TRANSLATION STYLE
-
-- preserve voice, rhythm, roughness and profanity level;
-- do not AI-polish;
-- do not invent details for fluency;
-- preserve story/chapter boundaries unless explicitly changed;
-- save meaningful batches immediately to the remote warehouse;
-- after 2–4 sections/stories or another substantial block, update STATUS/checkpoint.
+Never leave critical progress only in chat memory.
