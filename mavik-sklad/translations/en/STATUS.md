@@ -18,19 +18,20 @@ Nine recovered English books, Evacuation, and the partial Three Novels Nobody Re
 
 ## ACTIVE — THE SCULPTOR
 Canonical source: `https://mavik.name/books/skulptor/read/`
-Old files directly under `mavik-sklad/translations/en/work/skulptor/` remain quarantined recovery artifacts, not publication canon.
+Old files under `work/skulptor/` remain quarantined recovery artifacts, not publication canon.
 Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
 Detailed status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
 ### VERIFIED
-- Chapter 1 `Бруд на дитячих руках`: reader lines 26–1231, complete.
-- Chapter 2 `Глина`: reader lines 1232–2040, complete.
+- Chapter 1 `Бруд на дитячих руках`: lines 26–1231, complete.
+- Chapter 2 `Глина`: lines 1232–2040, complete; missing old tail 1966–2040 newly translated from site.
+- Chapter 3 `Збори фонду`: lines 2041–2878, complete.
 
-The old Chapter 2 recovery translation stopped at reader line 1964 (`— Але будете.`). The previously untranslated canonical ending, lines 1966–2040, is now translated directly from mavik.name as `verified/chapter-02-part-06.txt`, read back and mirrored.
+Chapter 3 audit removed two old boundary duplications: `I’m a mother...` and `Nothing mystical`. Verified English now contains each canonical sentence once.
 
 ## NEXT VALID ACTION
-Chapter 3 `Збори фонду`.
-Exact site marker: heading line 2041; narrative starts line 2043 `О дев’ятнадцятій церква вже не виглядала як притулок після дощу.`
+Chapter 4 `Пам’ятка`.
+Exact site marker: heading line 2879; narrative starts line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
 Do not continue from old chapter-05 recovery files until the verified audit reaches that point. If canonical site source cannot be retrieved, stop; never improvise.
 
