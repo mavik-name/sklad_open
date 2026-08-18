@@ -1,17 +1,17 @@
-# R210G — candidate checkpoint
+# R210G — historical candidate checkpoint
 
 Дата: 2026-08-18
-Статус: **КАНДИДАТ, НЕ КАНОН**. Канонічний CORE лишається **R210** до прямого затвердження автора після живої перевірки.
+Статус: **КАНОНІЗОВАНО 2026-08-18**. Цей файл лишається історичним записом кандидатної стадії. Поточний авторитетний checkpoint: `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`.
 
-## Що входить
+## Що входило в кандидат
 
 - `Назад` перенесено з контенту в меню й зроблено першим пунктом; оформлення — окрема pill-плашка в стилі `Адмінка`.
 - Верхній відступ внутрішніх сторінок зменшено на 50% від R210F: desktop `122→61`, tablet `106→53`, mobile `88→44` px.
 - `Автор`: вступна плашка має симетричне внутрішнє повітря зверху/знизу.
 - `Пригостити кавою` desktop: плашка вміщується у viewport з 5 px повітря зверху/знизу, без вертикального scrollbar; відкритий QR не перевищує межі плашки.
 - Успадковано R210F: `У фокусі`, mobile-анонси, mobile-меню, дві плашки `Автор`, desktop active gold, `Поділитись`.
-- Boss → Книги: додано **`Видалити` / `Видалити книгу`**. Перед дією є confirm. Видаляються сторінка книги, читанка та EPUB; обкладинка в медіатеці лишається. При видаленні очищаються focus і запис книги з live order.
-- Музичний playback-код не змінено: `assets/app/music-library.js` і `music-data.php` байт-у-байт однакові з R210F.
+- Boss → Книги: додано `Видалити / Видалити книгу` з confirm; видаляються сторінка книги, читанка та EPUB; обкладинка в медіатеці лишається; focus і live order очищаються.
+- Музичний playback-код не змінено від R210F.
 
 ## Контроль
 
@@ -21,9 +21,6 @@
 - Multipart merge: **627/627**, missing 0, mismatch 0, extras 0.
 - Patch validation: missing 0, mismatch 0.
 - ZIP CRC: OK.
-- Book delete handler/UI/confirm/focus cleanup/order cleanup: OK.
-- Coffee no-scroll + QR bounded: OK.
-- Author symmetric padding: OK.
 
 ## Release integrity
 
@@ -35,12 +32,4 @@
 - FTP-FULL SHA256: `eebcbefaa6683078dd1744b790e42a6526f6db4520a6e344e5e774d9946a672c`
 - patch-over-R210F SHA256: `4230f0ad328b77cd9c01e16968c265bcff06d5a0c70d0f17c18dd99e944064bb`
 
-## File Library `/Сайт/`
-
-- `210G ПАТЧ_FTP_поверх_R210F.zip`
-- `210G Збірка_Сайт_MENU-BACK-TIGHT_FTP-FULL.zip`
-- `210G Збірка_Сайт_MENU-BACK-TIGHT_PART-1.zip`
-- `210G Збірка_Сайт_MENU-BACK-TIGHT_PART-2.zip`
-- `210G Збірка_Сайт_MENU-BACK-TIGHT_bundle.zip`
-
-Якщо на live уже стоїть R210F — достатньо накласти `210G ПАТЧ_FTP_поверх_R210F.zip` із заміною файлів.
+Канонічний статус і робочі правила дивитися тільки в `R210G-CANON-CHECKPOINT.md` та `mavik-sklad/releases/CANON.md`.
