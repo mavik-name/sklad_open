@@ -1,17 +1,26 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
 Updated: 2026-08-18
-Status: **SITE-SOURCE AUDIT ACTIVE — CHAPTERS 1–3 VERIFIED**
+Status: **SITE-SOURCE AUDIT ACTIVE — CHAPTERS 1–3 VERIFIED / CHAPTER 4 SOURCE FETCH BLOCKED**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Canonical source: `https://mavik.name/books/skulptor/read/`
 Safety branch: `backup/english-translations-2026-08-17`
 Detailed verified status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
+Source checkpoint: `mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
 
 ## HARD RULE
 Only the canonical Ukrainian text actually published on mavik.name may generate English translation. No manuscript, old English file, chat/model memory, summary or reconstruction may generate new text. No additions.
 
+The old instruction that allowed File Library `Скульптор.docx` as a translation source has been explicitly superseded in `SOURCE-CHECKPOINT.md` and must not be used.
+
 ## QUARANTINED RECOVERY FILES
-Older English files directly under `work/skulptor/` remain recovery artifacts, not publication canon. Their old physical state stays preserved for recovery only.
+Older English files directly under `work/skulptor/` remain recovery artifacts, not publication canon.
+
+Current recovery inventory relevant to continuation:
+- Chapter 4: old `chapter-04-part-01.txt` through `chapter-04-part-38.txt` exist on main;
+- Chapter 5: old recovery continues beyond Chapter 4, but remains unverified.
+
+Do NOT move any Chapter 4 recovery file into `verified/` merely because it exists.
 
 ## VERIFIED LAYER
 `mavik-sklad/translations/en/work/skulptor/verified/`
@@ -25,11 +34,20 @@ Chapter 3 audit corrected two old boundary duplicates: `I’m a mother...` acros
 
 Every completed verified file was saved, read back and mirrored to the safety branch.
 
+## CURRENT BLOCKER — 2026-08-18
+The live reader currently fails through the available external fetch path. Attempts to reach the canonical reader return a fetch/cache failure, and direct guessed text endpoints cannot be used as substitutes unless physically retrieved and proven to be the site-generated published text.
+
+This is a source-transport blocker only. The translation work is not lost.
+
+Per hard canon, do NOT fall back to File Library, old recovery English or reconstruction while the canonical site source is unavailable.
+
 ## NEXT VALID ACTION
 Chapter 4 `Пам’ятка`.
 Exact next site marker:
 - heading line 2879 `Глава 4. Пам’ятка`;
 - narrative starts line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-Workflow: retrieve site source → translate/retain only justified text → save under `verified/` → read back → record marker → mirror → update statuses.
-If site source becomes unavailable, STOP. Do not improvise.
+Workflow once the site source is retrievable:
+site source → audit/translate only justified text → save under `verified/` → read back → record marker → mirror → update statuses.
+
+Until then, the last canonical verified point remains the end of Chapter 3, reader line 2878.
