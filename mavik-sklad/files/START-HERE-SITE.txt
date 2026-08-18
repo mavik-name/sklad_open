@@ -3,16 +3,18 @@ MAVIK.NAME — START HERE
 Статус: АКТИВНИЙ SITE START
 
 ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R212.
+ПОТОЧНИЙ НАСТУПНИЙ КАНДИДАТ: R213 — НЕ КАНОН.
 
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
 2. Прочитати `mavik-sklad/files/R212-CANON-CHECKPOINT.md`.
-3. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
-4. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
-5. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
-6. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-7. Не перезаписувати `/_site-state/` штатним deploy/patch.
-8. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+3. Якщо продовжується поточна робота після R212 — прочитати `mavik-sklad/files/R213-WIP-CHECKPOINT.md`.
+4. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
+5. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
+6. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
+7. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
+8. Не перезаписувати `/_site-state/` штатним deploy/patch.
+9. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
 SIMPLE FIRST — ЖОРСТКИЙ КАНОН
 - Робити швидко, якісно і максимально просто.
@@ -31,6 +33,8 @@ SIMPLE FIRST — ЖОРСТКИЙ КАНОН
 - Виняток — музика, де згадка ШІ допустима як чесний опис аранжування/виконання.
 - Нормальна публікація нового блогу = CONTENT-ONLY ZIP PATCH ЧЕРЕЗ BOSS.
 - Без FTP, standalone PHP installer, `?apply=1` і без нового CORE-релізу лише заради блогу.
+- R213 виправляє синхронізацію головної: великий пост «У фокусі» і три малі картки беруться з одного актуального списку блогу.
+- R213 фізично прибирає вилучений старий пост про ШІ та застарілі blog-images; старий URL відразу повертає 410 Gone.
 
 КНИГИ / АНОНСИ
 - При додаванні книги автор обирає `Бібліотека` або `Анонси`.
@@ -85,4 +89,4 @@ ENGLISH CONTENT
 
 Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на mavik.name. Якщо exact site-source недоступний — переклад зупинити, не домислювати.
 
-Будь-яка наступна structural/functional робота по сайту стартує ТІЛЬКИ від R212.
+Будь-яка нова structural/functional робота стартує від R212, доки R213 не буде прямо затверджено каноном. Поточну незавершену роботу R213 продовжувати тільки з `R213-WIP-CHECKPOINT.md`.
