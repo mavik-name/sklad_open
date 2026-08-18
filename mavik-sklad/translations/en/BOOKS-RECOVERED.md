@@ -2,7 +2,7 @@
 
 Updated: 2026-08-18
 Status: **VERIFIED PHYSICAL INVENTORY / NOT SITE-PARITY CERTIFICATION**
-Canonical structural/functional site core: **R210G**
+Canonical structural/functional site core: **R212**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Integrity audit: `mavik-sklad/translations/en/RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`
@@ -29,19 +29,24 @@ Partial recovered work:
 
 Other protected translation work:
 - `Evacuation` — all 8 English story files physically saved under `mavik-sklad/translations/en/work/evakuatsiia/`; all 8 blob SHAs match across both branches.
-- `The Sculptor` — site-verified Chapters 1–3 under `work/skulptor/verified/`; Chapter 4 and Chapter 5 old English files remain quarantine/recovery only.
+- `The Sculptor` — site-verified Chapters 1–3 under `work/skulptor/verified/`; Chapter 4 and Chapter 5 English files outside `verified/` remain quarantine/recovery only.
 
 Exact next canonical `The Sculptor` point:
 - Chapter 4 `Глава 4. Пам’ятка`;
 - heading recorded line 2879;
 - narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-Do NOT continue `The Sculptor` from `Скульптор.docx`, old English recovery files, manuscript copies or inferred continuation. Verified translation resumes only from physically retrieved canonical Ukrainian site text.
+Recovery preparation:
+- Chapter 4 Parts 01–38 fully triaged; old chunking duplicates at 09→10 and 21→22 require final site confirmation.
+- Chapter 5 stored Parts 01–26 fully triaged; recovery is definitely truncated after Part 26 relative to the manuscript.
+- Git history contains translation commits through Chapter 5 Part 26 and no Part 27 translation commit.
+
+Do NOT continue `The Sculptor` from `Скульптор.docx`, recovery English files, manuscript copies or inferred continuation. Verified translation resumes only from physically retrieved canonical Ukrainian site text.
 
 ## Social / Соціальна — explicit exception
 The Ukrainian book is completed, but English translation remains blocked until new explicit author permission.
 
-Old English Social Chapters 8–16 were intentionally deleted from `main` and safety on 2026-08-17. They are NOT protected current recovery content and must NOT be restored unless the author explicitly reverses that decision.
+English Social material intentionally deleted under the STOP decision is NOT protected current recovery content and must NOT be restored unless the author explicitly reverses that decision.
 
 Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
