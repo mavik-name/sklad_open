@@ -1,0 +1,43 @@
+MAVIK.NAME R212 — CANON INTEGRITY
+Date: 2026-08-18
+Status: CANON
+
+FULL: 212 Збірка_Сайт_ОК.zip
+FULL SHA-256: 694cd5c247a047c71bf9ccaaa61336a5cfd41cb91016d4a9c85af29d8580b390
+
+PART1: 212 Збірка_Сайт_ОК_PART1.zip
+PART1 SHA-256: 2fb8ab725be66842c4086e3fd5e203f94cd8969d003e5c26fb5da7c3ab24c635
+
+PART2: 212 Збірка_Сайт_ОК_PART2.zip
+PART2 SHA-256: 74ddd17d354798e81dce5b695058b7c6f8e7e7a57707ca915e0409de300bafc9
+
+Manifest SHA-256: a3261b7e127653097e23d014c7b3d0c8414c534457265a7f3be68990481801cf
+Set ID: r212-a3261b7e12765309
+Managed files: 646
+
+Checks:
+PHP lint 35/35 OK
+JSON OK
+Manifest 646/646
+FULL CRC OK
+PART1/PART2 CRC OK
+Multipart union 646/646
+
+Local canonical duplicate in active artifact runtime:
+212 Збірка_Сайт_КАНОН_BACKUP.zip
+SHA-256: 694cd5c247a047c71bf9ccaaa61336a5cfd41cb91016d4a9c85af29d8580b390
+Identical to canonical FULL.
+
+Portable technical documentation backup:
+R212_CANON_TECHDOCS_BACKUP.zip
+SHA-256: 146060ec895547ec6420c705828066b3b666b090e73de195af470862f3aebd09
+
+Persistent technical recovery documentation is duplicated in:
+- mavik-sklad/files/R212-CANON-CHECKPOINT.md
+- mavik-sklad/releases/CANON.md
+- mavik-sklad/files/START-HERE-SITE.txt
+- mavik-sklad/recovery/R212/START-HERE-R212.md
+- mavik-sklad/recovery/R212/TECHNICAL-RECOVERY-R212.md
+- mavik-sklad/recovery/R212/INTEGRITY-R212.txt
+
+IMPORTANT: the GitHub connector available in this session writes UTF-8 text files but does not upload arbitrary binary ZIP content. Therefore the repository stores canonical identity, hashes, technical recovery documents and exact artifact names; it does not falsely claim that the 53 MB ZIP binary is physically stored in GitHub.
