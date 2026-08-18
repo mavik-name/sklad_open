@@ -1,17 +1,52 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
-Updated: 2026-08-17
-Status: **QUARANTINED / SAFETY-BRANCH COPY / SITE-SOURCE AUDIT REQUIRED**
-Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` on `main`.
+Updated: 2026-08-18
+Status: **SITE-SOURCE AUDIT ACTIVE — CHAPTER 1 VERIFIED**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Canonical source: `https://mavik.name/books/skulptor/read/`
+Safety branch: `backup/english-translations-2026-08-17`
+Verified audit status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
 ## HARD RULE
-Only the canonical Ukrainian `Скульптор` text actually published on mavik.name may be used to create English translation. No manuscript, chat memory, old English file, summary or guessed continuation may generate new text. No additions.
+The ONLY authoritative source for English translation is the canonical Ukrainian `Скульптор` text actually published on mavik.name.
 
-## PHYSICAL STATE ON THIS BRANCH
-English files exist through `chapter-05-part-25.txt`.
-They are protected recovery artifacts but are **UNVERIFIED / NOT FOR PUBLICATION** until line-by-line checked against the canonical Ukrainian site publication.
+Do not translate from File Library manuscripts, warehouse manuscripts, chat/model memory, previous English files, summaries/checkpoints or guessed continuation. No invented or added text.
 
-`chapter-05-part-26.txt` was deliberately NOT mirrored after the hard-canon interruption.
+## QUARANTINED RECOVERY FILES
+The older English files directly under `work/skulptor/` remain recovery artifacts and are NOT publication canon merely because they exist.
+
+Physical pre-audit recovery state remains:
+- `main`: through `chapter-05-part-26.txt`;
+- safety branch: through `chapter-05-part-25.txt`;
+- old Part 26 remains intentionally absent from the safety branch.
+
+Do not deploy or continue from these old files without site verification.
+
+## VERIFIED LAYER
+Verified files live under:
+`mavik-sklad/translations/en/work/skulptor/verified/`
+
+### Completed
+Chapter 1 `Бруд на дитячих руках` has been audited against the canonical site reader from line 26 through line 1231 and saved as five contiguous verified files:
+- `chapter-01-part-01.txt`
+- `chapter-01-part-02.txt`
+- `chapter-01-part-03.txt`
+- `chapter-01-part-04.txt`
+- `chapter-01-part-05.txt`
+
+All five were saved to `main`, read back, and mirrored to the safety branch.
+
+Corrections discovered during Chapter 1 audit include:
+- non-site `Lviv · 2026` metadata excluded from verified content;
+- incorrect old genre label `mystical psychological thriller` not carried forward;
+- unsupported sentence `The walls were light-colored but slightly cracked.` removed because it has no canonical Ukrainian source sentence.
 
 ## NEXT VALID ACTION
-Retrieve the canonical mavik.name publication and audit from the start of the book or from the earliest independently site-verified point. If site source cannot be retrieved, stop. Do not improvise.
+Continue with Chapter 2 `Глина` from the canonical site reader.
+Exact next source marker:
+- heading: reader line 1232 `Глава 2. Глина`;
+- first narrative sentence: reader line 1234 `Марта прокинулася раніше будильника.`
+
+For every block: retrieve site source → translate/retain only justified text → save to `verified/` → read back → record site marker → mirror to safety branch → update status.
+
+If the site source becomes unavailable, STOP. Do not improvise.
