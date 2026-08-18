@@ -17,65 +17,67 @@ For every valid block: retrieve exact site passage → translate/retain only jus
 If the canonical site passage cannot be physically retrieved, verified translation stops at the last verified point.
 
 ## EXCLUDED — SOCIAL / СОЦІАЛЬНА
-The Ukrainian book is completed, but the existing project-specific English STOP remains in force until the author explicitly permits translation. Do not restore intentionally deleted old Social English files unless that decision changes.
+The Ukrainian book is completed, but the project-specific English STOP remains in force until explicit author permission to translate. Intentionally deleted old Social English files must not be restored unless that decision changes.
 
 ## PROTECTED RECOVERY CONTENT
-Nine recovered English books, completed Evacuation English text, and partial Three Novels Nobody Reads work remain protected recovery assets. Publication readiness still requires parity with the canonical Ukrainian site publication.
+Nine recovered English books, the complete eight-file Evacuation English recovery set, and partial Three Novels Nobody Reads Sections 1–8 remain protected recovery assets.
 
-Physical mirror integrity was checked on 2026-08-18 and recorded in `RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`:
-- 9/9 recovered complete book directory trees have identical tree SHAs on `main` and safety;
-- 8/8 Evacuation story files have identical blob SHAs on both branches;
-- `Three Novels Nobody Reads` partial Sections 1–8 has the same tree SHA on both branches;
-- `books/RECOVERY-SOURCE.txt` was synchronized to the current R210G/site-only source policy on both branches.
+Physical mirror integrity was checked on 2026-08-18:
+- 9/9 recovered complete book trees match `main` ↔ safety by tree SHA;
+- 8/8 Evacuation story files match by blob SHA;
+- Three Novels Sections 1–8 partial tree matches;
+- current recovery source/control pointers are synchronized.
 
-This proves storage identity only, not site parity.
+This proves storage integrity only, not site parity.
 
 ## ACTIVE — THE SCULPTOR
 Canonical source: `https://mavik.name/books/skulptor/read/`
 Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
 Detailed status: `mavik-sklad/translations/en/work/skulptor/STATUS.md`
-Source checkpoint: `mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
 
 ### SITE-VERIFIED
 - Chapter 1 `Бруд на дитячих руках`: reader lines 26–1231.
-- Chapter 2 `Глина`: reader lines 1232–2040; old recovery gap 1966–2040 was translated directly from site.
+- Chapter 2 `Глина`: reader lines 1232–2040; old recovery gap 1966–2040 translated directly from site.
 - Chapter 3 `Збори фонду`: reader lines 2041–2878.
 
-Chapter 3 parity removed two old recovery boundary duplications: `I’m a mother...` and `Nothing mystical`.
+Chapter 3 parity removed old recovery duplicates `I’m a mother...` and `Nothing mystical`.
 
-### RECOVERY PREPARATION — NOT VERIFIED
-Chapter 4:
+### CHAPTER 4 — FULL RECOVERY TRIAGE COMPLETE, NOT SITE-VERIFIED
 - quarantine parts 01–38 mechanically inspected;
-- definite 09/10 duplicate `Serhii was silent.`;
-- probable 21/22 overlap around `Second.`;
-- audit map: `work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
+- all 38 parts also covered by a separate non-canonical old-manuscript comparison heuristic;
+- 09→10 confirmed old chunking duplicate relative to manuscript: repeated `Serhii was silent.`;
+- 21→22 confirmed old chunking duplicate relative to manuscript: repeated start of `Second. Don’t give...`;
+- no additional obvious exact boundary duplicate or gross scene/event reordering was found in physically retrieved manuscript spans;
+- structural audit: `work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`;
+- manuscript heuristic: `work/skulptor/CHAPTER-04-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
 
-Chapter 5:
+These findings do NOT authorize edits to `verified/` until confirmed against the published site text.
+
+### CHAPTER 5 — RECOVERY PREPARATION, NOT SITE-VERIFIED
 - quarantine parts 01–26 mechanically inspected;
-- no obvious exact sentence boundary duplication found;
-- part 26 preserved on both main and safety branch;
-- part 27 absent on both main and safety branch;
+- no obvious exact sentence boundary duplicate found in stored 01–26 sequence;
+- `part-26` exists on both main and safety;
+- `part-27` exists on neither branch;
 - part 26 is NOT evidence that canonical Chapter 5 is complete;
-- audit map: `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
+- partial non-canonical manuscript triage physically confirmed the Chapter 5 opening/parts 01–02 and the Yakiv/2004-photo block around parts 07–10 without obvious gross drift in those retrieved spans;
+- structural audit: `work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`;
+- partial manuscript heuristic: `work/skulptor/CHAPTER-05-MANUSCRIPT-COMPARISON-HEURISTIC.md`.
 
-Recovery preparation never advances the canonical verified point.
+Do not begin Chapter 5 site parity or generate part 27 before Chapter 4 is site-verified and the exact next site passage is retrieved.
 
-## CURRENT BLOCKER — 2026-08-18
-The canonical live reader currently fails through the available external fetch path. Direct reader fetch, site-generated text route attempts, direct HTTP/DNS access and search-index discovery did not physically retrieve the Chapter 4 source.
+## CURRENT SOURCE-TRANSPORT BLOCKER
+The site root and `/books/` library are currently retrievable and confirm `Скульптор` as a listed full Ukrainian work, but the book page/reader route itself continues to fail through the available fetch cache. Direct reader attempts, generated-text route attempts and direct download attempts have not physically retrieved Chapter 4.
 
-A File Library search for the canonical R210G release ZIP/site snapshot did not surface a usable archive containing the reader text. The only located Chapter 4 prose source was the old `Скульптор.docx`, which remains forbidden as a translation source under the hard canon.
+File Library currently exposes the old manuscript for recovery comparison but not a usable canonical R210G reader snapshot. The manuscript remains forbidden as translation source.
 
-This is a source-transport blocker, not lost translation content and not permission to use another prose source.
+## EXACT NEXT CANONICAL ACTION
+Chapter 4 `Глава 4. Пам’ятка`:
+- heading recorded reader line 2879;
+- narrative starts recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-## NEXT VALID ACTION
-Chapter 4 `Пам’ятка`.
-Exact recorded site marker:
-- heading line 2879 `Глава 4. Пам’ятка`;
-- narrative starts line 2881 `Пам’ятка мала вміститися на одну сторінку.`
+When source retrieval works: retrieve exact site text → line-by-line Chapter 4 parity → resolve 09→10 and 21→22 from site → save only site-justified English under `verified/` → read back → record markers → mirror → update statuses/canon.
 
-When source retrieval works: audit Chapter 4 line by line → retain/translate only site-justified text → save under `verified/` → read back → record marker → mirror → update statuses/canon.
-
-Do not begin Chapter 5 parity and do not generate part 27 until Chapter 4 is fully site-verified and the exact next Ukrainian site passage is physically retrieved.
+Last canonical verified point remains end of Chapter 3, reader line 2878.
 
 ## RECOVERY ORDER
 `main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library.
