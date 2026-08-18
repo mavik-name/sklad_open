@@ -1,70 +1,41 @@
 # THE SCULPTOR — SITE-VERIFIED ENGLISH AUDIT
 
 Updated: 2026-08-18
-Status: ACTIVE — CHAPTERS 1–2 VERIFIED
+Status: ACTIVE — CHAPTERS 1–3 VERIFIED
 Canonical source: https://mavik.name/books/skulptor/read/
 Hard source canon: mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md
 Safety branch: backup/english-translations-2026-08-17
 
 ## VERIFIED — CHAPTER 1
-Canonical Ukrainian reader range: lines 26–1231.
-Verified files:
-- `chapter-01-part-01.txt`
-- `chapter-01-part-02.txt`
-- `chapter-01-part-03.txt`
-- `chapter-01-part-04.txt`
-- `chapter-01-part-05.txt`
-
-Corrections found during Chapter 1 audit:
-- excluded non-site `Lviv · 2026` metadata;
-- did not carry forward incorrect old `mystical psychological thriller` label;
-- removed unsupported sentence `The walls were light-colored but slightly cracked.` because no corresponding canonical Ukrainian sentence exists.
+Canonical reader range: lines 26–1231. Complete in five verified files.
+Corrections from old recovery: unsupported `Lviv · 2026`, incorrect genre label, and unsupported narrative sentence about light-colored cracked walls excluded.
 
 ## VERIFIED — CHAPTER 2 `Глина`
-Canonical Ukrainian reader range: lines 1232–2040.
+Canonical reader range: lines 1232–2040. Complete.
+Files: parts 01, 02, 03a, 03b, 04, 05, 06.
+Old recovery stopped at line 1964; lines 1966–2040 were newly translated directly from mavik.name as part 06.
 
-### Part 01
-File: `verified/chapter-02-part-01.txt`
-Site marker: lines 1232–1356, heading `Глава 2. Глина` through `І це було непрофесійно.`
-State: saved, read back, mirrored.
+## VERIFIED — CHAPTER 3 `Збори фонду`
+Canonical reader range: lines 2041–2878. Complete.
+Verified files:
+- `chapter-03-part-01.txt` — lines 2041–2106
+- `chapter-03-part-02.txt` — lines 2108–2209
+- `chapter-03-part-03.txt` — lines 2211–2310
+- `chapter-03-part-04.txt` — lines 2312–2398
+- `chapter-03-part-05.txt` — lines 2400–2524
+- `chapter-03-part-06.txt` — lines 2526–2656
+- `chapter-03-part-07.txt` — lines 2658 through the first two sentences of line 2704
+- `chapter-03-part-08.txt` — continuation of line 2704 through line 2827
+- `chapter-03-part-09.txt` — lines 2829–2878
 
-### Part 02
-File: `verified/chapter-02-part-02.txt`
-Site marker: lines 1358–1458, `Олена помітила, але нічого не сказала.` through `До вчорашнього питання.`
-State: saved, read back, mirrored.
+All Chapter 3 verified files were saved to main, read back, and mirrored to the safety branch.
 
-### Part 03a
-File: `verified/chapter-02-part-03a.txt`
-Site marker: lines 1460–1565, `І від цього ставало не спокійніше, а навпаки.` through `Він вийшов.`
-State: saved, read back, mirrored.
-Note: physically split because the GitHub connector rejected the larger single write; no content was omitted.
-
-### Part 03b
-File: `verified/chapter-02-part-03b.txt`
-Site marker: lines 1567–1597, `Марта залишилася.` through `Вона не хотіла приймати від Лукаса нічого.`
-State: saved, read back, mirrored.
-
-### Part 04
-File: `verified/chapter-02-part-04.txt`
-Site marker: lines 1598–1730, `Але чим довше дивилася...` through `Марта не питала.`
-State: saved, read back, mirrored.
-
-### Part 05
-File: `verified/chapter-02-part-05.txt`
-Site marker: lines 1732–1964, `Вона просто вирішила...` through `— Але будете.`
-State: saved, read back, mirrored.
-This was the end of the old recovered English translation for Chapter 2.
-
-### Part 06 — NEW TRANSLATION FROM CANONICAL SITE SOURCE
-File: `verified/chapter-02-part-06.txt`
-Site marker: lines 1966–2040, `— Ви надто впевнені.` through `Саме тому їм важче не вірити.`
-State: translated directly from mavik.name, saved, read back, one natural-English wording correction made without changing meaning, read back again, mirrored.
-
-## CHAPTER 2 RESULT
-Chapter 2 is now complete in the verified layer. The old recovery translation had stopped at reader line 1964; lines 1966–2040 are newly translated strictly from the canonical published Ukrainian text.
+Corrections discovered during Chapter 3 audit:
+1. Old parts 05/06 duplicated the beginning `I’m a mother...`; verified boundary now contains the canonical sentence once.
+2. Old parts 07/08 duplicated `Nothing mystical`; verified boundary now translates canonical line 2704 once, without repetition.
 
 Older files outside `verified/` remain quarantined recovery artifacts and are not publication canon.
 
 ## NEXT
-Chapter 3 `Збори фонду`.
-Next canonical site marker: reader line 2041 heading; narrative begins line 2043: `О дев’ятнадцятій церква вже не виглядала як притулок після дощу.`
+Chapter 4 `Пам’ятка`.
+Next canonical site marker: reader line 2879 heading; narrative begins line 2881: `Пам’ятка мала вміститися на одну сторінку.`
