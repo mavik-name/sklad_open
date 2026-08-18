@@ -1,12 +1,12 @@
 MAVIK.NAME — ЖОРСТКИЙ КАНОН СТОРІНКИ КНИГИ
 Оновлено: 18.08.2026
-Статус: АКТУАЛЬНИЙ ВУЗЬКИЙ КАНОН R212
+Статус: АКТУАЛЬНИЙ ВУЗЬКИЙ КАНОН R213
 
 Перед зміною сторінки книги читати:
 - `mavik-sklad/START-HERE.txt`;
 - `mavik-sklad/files/START-HERE-SITE.txt`;
 - `mavik-sklad/releases/CANON.md`;
-- `mavik-sklad/files/R212-CANON-CHECKPOINT.md`;
+- `mavik-sklad/files/R213-CANON-CHECKPOINT.md`;
 - цей файл.
 
 1. ОДНА КНИГА = ОДНА СТОРІНКА
