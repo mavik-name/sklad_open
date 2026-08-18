@@ -1,102 +1,59 @@
 # English translation status
 
-Updated: 2026-08-17
-Canonical Ukrainian site/core: **R193**.
+Updated: 2026-08-18
+Status: **AUTHORITATIVE CURRENT STATUS**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Safety branch: `backup/english-translations-2026-08-17`
 
-## Complete and physically recovered
+## HARD SOURCE RULE
+The ONLY source for new English translation is the canonical Ukrainian text actually published on mavik.name. File Library manuscripts, warehouse manuscripts, chat/model memory, summaries, checkpoints and old English files may not generate new translation text.
 
-Located under `mavik-sklad/translations/en/books/`:
+For every valid block: retrieve exact site passage → translate/retain only justified text → save physically → read back → record exact site marker → mirror to safety branch → update status.
 
-- Mom, I Want to Live!
-- The Nameless
-- The Man Without an Account
-- Rejection in Advance
-- Transfer
-- Solya, the Grain of Sand Who Dreamed of a Skyscraper
-- Patterns of Self-Reflection
-- You and I
-- The Gospel According to Macarius
+## EXCLUDED — SOCIAL / СОЦІАЛЬНА
+The existing project-specific STOP remains in force until the author explicitly changes it. Do not restore the intentionally deleted old English Social files.
 
-## Evacuation — translation text complete
+## PROTECTED RECOVERY CONTENT
+Nine recovered English books, Evacuation, and the partial Three Novels Nobody Reads remain protected recovery artifacts. Publication readiness requires parity with the canonical Ukrainian site publication.
 
-Working English title: *Evacuation, or On the Road to the Stabilization Point*
+## ACTIVE — THE SCULPTOR
+Canonical source:
+`https://mavik.name/books/skulptor/read/`
 
-Authoritative physical translation set:
-`mavik-sklad/translations/en/work/evakuatsiia/`
+Old files directly under `mavik-sklad/translations/en/work/skulptor/` remain quarantined recovery artifacts. Their old physical extent is preserved for recovery, but they are not publication canon.
 
-All eight stories are physically saved.
+Verified work now lives under:
+`mavik-sklad/translations/en/work/skulptor/verified/`
 
-Completion checkpoint:
-`mavik-sklad/translations/en/EVAKUATSIIA-COMPLETE-CHECKPOINT-2026-08-16.md`
-
-The translation text is complete. Do not claim it has been copied into the completed `books/` site-tree until packaging/import is physically performed.
-
-## ACTIVE — The Sculptor
-
-Ukrainian title: `Скульптор`
-English working title: *The Sculptor*
-
-Working folder:
-`mavik-sklad/translations/en/work/skulptor/`
-
-Source checkpoint:
-`mavik-sklad/translations/en/work/skulptor/SOURCE-CHECKPOINT.md`
-
-Detailed work status:
-`mavik-sklad/translations/en/work/skulptor/STATUS.md`
-
-Working source:
-`Скульптор.docx` from File Library.
-
-### Physically saved English progress
-
-Chapter 1 — COMPLETE in five files:
+### VERIFIED
+Chapter 1 `Бруд на дитячих руках` is fully audited against the canonical site reader, lines 26–1231.
+Five contiguous verified files are saved, read back and mirrored to the safety branch:
 - `chapter-01-part-01.txt`
 - `chapter-01-part-02.txt`
 - `chapter-01-part-03.txt`
 - `chapter-01-part-04.txt`
 - `chapter-01-part-05.txt`
 
-The final Chapter-1 line `And the doors open on their own.` must remain.
+Corrections found during the audit:
+- excluded non-site `Lviv · 2026` metadata;
+- did not carry forward the incorrect old `mystical psychological thriller` genre label;
+- removed the unsupported narrative sentence `The walls were light-colored but slightly cracked.` because it has no sentence in the canonical Ukrainian publication.
 
-Chapter 2 — ACTIVE, five files physically saved:
-- `chapter-02-part-01.txt`
-- `chapter-02-part-02.txt`
-- `chapter-02-part-03.txt`
-- `chapter-02-part-04.txt`
-- `chapter-02-part-05.txt`
+Detailed audit status:
+`mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
-NEXT EXACT POINT:
-continue immediately after the Ukrainian source line:
-`— Але будете.`
+## NEXT VALID ACTION
+Continue site-source audit with Chapter 2 `Глина`.
+Exact next source marker:
+- reader line 1232: `Глава 2. Глина`;
+- narrative starts at line 1234: `Марта прокинулася раніше будильника.`
 
-Before translating further, retrieve the next contiguous paragraph from `Скульптор.docx`. Do not bridge missing source from memory or inference.
+Do NOT continue from old `chapter-05-part-26.txt` or create `chapter-05-part-27.txt` until the verified audit reaches that point.
 
-## Partial recovered work
+If the canonical site source cannot be retrieved, stop translation. Never improvise.
 
-- Three Novels Nobody Reads — Sections 1–8 only, physically preserved under `mavik-sklad/translations/en/partial/`.
-- Social — archival partial batches only; not public/complete while the Ukrainian source is unfinished.
+## RECOVERY
+Search `main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library before declaring non-excluded work lost. Recovery never overrides the published-site source rule.
 
-## Still to finish after The Sculptor
-
-- UNIVERSE
-- The Devil’s Advocate
-- The Patient
-- The Loop
-- The Light-Bringer
-- Olena
-- Letters to the Colonel
-- Three Novels Nobody Reads — remaining sections after Section 8
-- How Vitko Fought the Russians
-
-## Authority
-
-Read before continuing:
-1. `mavik-sklad/START-HERE.txt`
-2. `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-3. `mavik-sklad/files/EN-SOURCE-POLICY.md`
-4. this file
-5. `mavik-sklad/translations/en/work/skulptor/STATUS.md`
-6. active source manuscript / saved translation files
-
-Old pre-R193 site checkpoints/workspaces must not override current R193 site authority or current translation status.
+## QUEUE AFTER THE SCULPTOR
+UNIVERSE; The Devil’s Advocate; The Patient; The Loop; The Light-Bringer; Olena; Letters to the Colonel; remaining Three Novels Nobody Reads; How Vitko Fought the Russians.
