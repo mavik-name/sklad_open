@@ -1,44 +1,52 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
-Updated: 2026-08-17
-Status: **QUARANTINED / SITE-SOURCE AUDIT REQUIRED**
+Updated: 2026-08-18
+Status: **SITE-SOURCE AUDIT ACTIVE — CHAPTER 1 VERIFIED**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Canonical source: `https://mavik.name/books/skulptor/read/`
 Safety branch: `backup/english-translations-2026-08-17`
+Verified audit status: `mavik-sklad/translations/en/work/skulptor/verified/STATUS.md`
 
 ## HARD RULE
 The ONLY authoritative source for English translation is the canonical Ukrainian `Скульптор` text actually published on mavik.name.
 
-Do not translate from:
-- File Library `Скульптор.docx`;
-- warehouse manuscripts;
-- chat memory;
-- previous English files;
-- summaries/checkpoints;
-- guessed continuation.
+Do not translate from File Library manuscripts, warehouse manuscripts, chat/model memory, previous English files, summaries/checkpoints or guessed continuation. No invented or added text.
 
-No invented or added text of any kind.
+## QUARANTINED RECOVERY FILES
+The older English files directly under `work/skulptor/` remain recovery artifacts and are NOT publication canon merely because they exist.
 
-## CURRENT PHYSICAL FILES — NOT CANONICAL YET
-The directory contains English work already written before this hard rule was imposed.
+Physical pre-audit recovery state remains:
+- `main`: through `chapter-05-part-26.txt`;
+- safety branch: through `chapter-05-part-25.txt`;
+- old Part 26 remains intentionally absent from the safety branch.
 
-Physical state:
-- `main`: files through `chapter-05-part-26.txt`.
-- safety branch: files through `chapter-05-part-25.txt`.
-- `chapter-05-part-26.txt` exists only on `main`; it was written immediately before the user interruption and intentionally was not mirrored afterward.
+Do not deploy or continue from these old files without site verification.
 
-ALL of these files are **UNVERIFIED AGAINST THE CANONICAL SITE PUBLICATION / NOT FOR PUBLICATION** until checked line-by-line against mavik.name.
+## VERIFIED LAYER
+Verified files live under:
+`mavik-sklad/translations/en/work/skulptor/verified/`
 
-Do not use their apparent chapter/part completion as proof that the translation is valid.
+### Completed
+Chapter 1 `Бруд на дитячих руках` has been audited against the canonical site reader from line 26 through line 1231 and saved as five contiguous verified files:
+- `chapter-01-part-01.txt`
+- `chapter-01-part-02.txt`
+- `chapter-01-part-03.txt`
+- `chapter-01-part-04.txt`
+- `chapter-01-part-05.txt`
+
+All five were saved to `main`, read back, and mirrored to the safety branch.
+
+Corrections discovered during Chapter 1 audit include:
+- non-site `Lviv · 2026` metadata excluded from verified content;
+- incorrect old genre label `mystical psychological thriller` not carried forward;
+- unsupported sentence `The walls were light-colored but slightly cracked.` removed because it has no canonical Ukrainian source sentence.
 
 ## NEXT VALID ACTION
-1. Retrieve the canonical Ukrainian reader text from mavik.name.
-2. Start source parity audit from the beginning of the book, or from the earliest point independently proven to have been translated from the site publication.
-3. Retain an English passage only if it matches the canonical site source without additions.
-4. Replace any invented/extra/mismatched text with a translation made only from the exact site passage.
-5. Record the exact site-source marker for each verified block.
+Continue with Chapter 2 `Глина` from the canonical site reader.
+Exact next source marker:
+- heading: reader line 1232 `Глава 2. Глина`;
+- first narrative sentence: reader line 1234 `Марта прокинулася раніше будильника.`
 
-If site text is unavailable, STOP. Do not improvise.
+For every block: retrieve site source → translate/retain only justified text → save to `verified/` → read back → record site marker → mirror to safety branch → update status.
 
-## RECOVERY
-`main` → safety branch → Git history/tree/blob → historical translation workspaces recovery-only → File Library.
-Recovery is for preservation/comparison only; the published site text always wins.
+If the site source becomes unavailable, STOP. Do not improvise.
