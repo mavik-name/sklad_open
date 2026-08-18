@@ -1,30 +1,28 @@
 # ENGLISH TRANSLATION RECOVERY NOTE
 
-Updated: 2026-08-17
-Canonical site/core: **R193**
+Updated: 2026-08-18
+Canonical structural/functional site core: **R210G**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Continuation authority: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+Current status: `mavik-sklad/translations/en/STATUS.md`
+Integrity audit: `mavik-sklad/translations/en/RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`
+Safety branch: `backup/english-translations-2026-08-17`
 
 Recovered translation directories were copied from immutable Git tree objects on the archival `r188-english-work` branch. This preserves exact old English files without retranslating or rewriting them.
 
-Current continuation authority:
-`mavik-sklad/translations/en/CONTINUATION-CANON.md`
+Recovery assets are comparison/preservation material only. They do NOT become authoritative translation source because they are old, complete, mirrored or found in Git history.
 
-Current status:
-`mavik-sklad/translations/en/STATUS.md`
+For new or verified English book prose, the ONLY source is the canonical Ukrainian text actually published on mavik.name, or a physically retrieved site-generated reader-text representation demonstrated to be the same publication.
 
-Dedicated safety branch:
-`backup/english-translations-2026-08-17`
+Do NOT use File Library manuscripts, DOCX/TXT, warehouse manuscripts, historical release copies, old English files, summaries, checkpoints or chat/model memory to generate translation prose.
 
-The active publication/source authority is R193 plus the latest approved Ukrainian manuscript when that manuscript is explicitly newer than the site copy.
+If the exact canonical site source is unavailable, verified translation stops; recovery search may continue without creating new prose.
 
-Recovered text must still be parity-checked against the current authoritative Ukrainian source before public deployment, but it must NOT be retranslated merely because it came from an older English workspace.
-
-A historical `r188`/other old release prefix on a translation-content filename does not make the content obsolete.
-
-Before declaring translation work lost, search all layers:
-1. current `main` tree;
+Before declaring non-excluded translation work lost, search:
+1. current `main`;
 2. safety branch;
 3. Git commit history and tree/blob SHAs;
-4. historical translation branches/workspaces as read-only recovery sources;
-5. File Library for authoritative manuscript binaries.
+4. historical translation branches/workspaces as read-only recovery layers;
+5. File Library as recovery evidence only.
 
-Checking one directory is never sufficient evidence of loss.
+Explicit author deletion/exclusion overrides preservation. In particular, old English `Соціальна` Chapters 8–16 were intentionally deleted and must not be restored unless the author explicitly reverses that decision.
