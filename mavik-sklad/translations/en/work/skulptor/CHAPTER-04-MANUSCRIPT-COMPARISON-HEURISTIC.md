@@ -1,54 +1,85 @@
 # THE SCULPTOR — CHAPTER 4 MANUSCRIPT COMPARISON HEURISTIC
 
 Updated: 2026-08-18
-Status: **NON-CANONICAL PREPARATION ONLY / NOT SITE-VERIFIED / NOT FOR PUBLICATION**
+Status: **NON-CANONICAL PREPARATION COMPLETE FOR RECOVERY PARTS 01–38 / NOT SITE-VERIFIED / NOT FOR PUBLICATION**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
-Canonical source required for verification: Ukrainian text actually published on mavik.name.
+Canonical verification source: Ukrainian text actually published on mavik.name.
+Safety branch: `backup/english-translations-2026-08-17`
 
-## PURPOSE
-While the canonical site reader is temporarily unavailable through the current retrieval path, this file records a limited comparison between quarantined old English recovery chunks and the old File Library manuscript `Скульптор.docx`.
+## PURPOSE AND LIMIT
+Because the canonical site reader is temporarily unavailable through the current retrieval path, quarantined English Chapter 4 recovery parts were compared against physically retrieved excerpts of the old File Library manuscript `Скульптор.docx` only as a **triage heuristic**.
 
-This manuscript is **NOT an authorized translation source**. Nothing here may promote English text into `verified/`, generate new translation prose, settle final wording, settle the chapter title, or override the site publication.
+The manuscript is NOT an authorized translation source. This pass may identify likely old chunking defects or gross drift, but it may NOT:
+- create or alter verified English prose;
+- settle exact wording or translation quality;
+- validate the legacy title `The Guide` for `Пам’ятка`;
+- validate wrapper text (`THE SCULPTOR`, author line, `Part XX`);
+- prove that the old manuscript equals the current site publication;
+- advance the canonical verified point.
 
-The only purpose is triage: identify obvious old chunking defects or gross additions/omissions that can be checked first when the site source becomes retrievable again.
+When the site source is physically retrievable again, site parity overrides every observation below.
 
-## PARTS 01–08 — LOW-RISK HEURISTIC, NOT VERIFIED
-Retrieved manuscript excerpts covering the opening of Chapter 4 through the call with Olena were compared against recovery files `chapter-04-part-01.txt` through `chapter-04-part-08.txt`.
+## COVERAGE
+Recovery files `chapter-04-part-01.txt` through `chapter-04-part-38.txt` were all included in the manuscript-comparison triage.
 
-Within the manuscript excerpts physically retrieved during this pass, no obvious gross content addition, missing event, repeated sentence or narrative reordering was detected in the recovery prose of parts 01–08.
+Across physically retrieved manuscript spans corresponding to the recovery sequence, no obvious gross event omission, invented scene, narrative reordering or additional exact boundary duplication was found beyond the two chunking defects recorded below.
 
-This statement is deliberately narrow:
-- it does not certify sentence-level translation accuracy;
-- it does not certify style/word choice;
-- it does not certify that the manuscript equals the published site;
-- it does not validate legacy wrappers such as `THE SCULPTOR`, author line, `Chapter 4. The Guide`, or `Part XX`;
-- it does not make `The Guide` the final/canonical translation of `Пам’ятка`.
+This is a coarse structural observation only. Subtle omissions, paraphrases, wording drift, translation mistakes or manuscript-vs-site differences can still exist and require site parity.
 
-## PARTS 09 → 10 — CONFIRMED OLD CHUNKING DUPLICATE AGAINST MANUSCRIPT
-Recovery `chapter-04-part-09.txt` ends with:
+## CONFIRMED OLD CHUNKING DEFECT 1 — PARTS 09 → 10
+Recovery part 09 ends with:
 `Serhii was silent.`
 
-Recovery `chapter-04-part-10.txt` begins its prose with the same sentence:
-`Serhii was silent.`
+Recovery part 10 begins with the same sentence.
 
-The physically retrieved manuscript passage contains the corresponding Ukrainian sentence `Сергій мовчав.` only once, followed immediately by `Це було незвично.`
+The retrieved manuscript contains the corresponding `Сергій мовчав.` once, followed by `Це було незвично.`
 
-Therefore the old English 09→10 repetition is independently supported as a **recovery chunking duplicate relative to the manuscript**.
+Conclusion: **09→10 is a confirmed old recovery chunking duplicate relative to the manuscript.**
 
-However, the final canonical correction must still be confirmed against the Ukrainian text actually published on mavik.name before any verified file is created or edited.
+It must still be resolved from the canonical Ukrainian site text before any verified English file is created/changed.
 
-## PARTS 09–10 OTHER CONTENT
-Within the retrieved manuscript span around Nazar's debt list, `час поліції`, Serhii's reflection, and arrival of Lucas Martyn's documents, no other obvious gross addition/reordering was detected in the visible recovery text.
+## CONFIRMED OLD CHUNKING DEFECT 2 — PARTS 21 → 22
+Recovery part 21 ends with the standalone fragment:
+`“Second.”`
+
+Recovery part 22 begins:
+`“Second. Don’t give children your phone numbers, social media, or personal promises...`
+
+The retrieved manuscript contains one continuous source sentence:
+`— Друге. Не давайте дітям свої телефони, соцмережі, особисті обіцянки...`
+
+Conclusion: **21→22 is a confirmed old recovery chunking duplicate relative to the manuscript.**
+
+As with 09→10, final correction remains blocked until the exact canonical site passage is retrieved.
+
+## OTHER RECOVERY RANGES — HEURISTIC RESULT ONLY
+The physically retrieved manuscript excerpts supported continuous scene/order correspondence for the rest of the Chapter 4 recovery sequence, including:
+- drafting the volunteer guide and checking Lucas's documents;
+- Nazar's debt list and `police time`;
+- volunteer orientation and the `safe hour` discussion;
+- Lucas's comments about ashes and mistakes;
+- Nazar's clay step and the answer about someone nearby who will not laugh;
+- Marta's search for Lucas Martyn / the old `Form Workshop` announcement;
+- the unknown caller saying not to search Lucas in the past and that he is not Martyn;
+- the closing reflection about boundaries and danger already being inside.
+
+No statement above is site verification.
 
 ## CANONICAL POSITION REMAINS UNCHANGED
-The last site-verified point remains the end of Chapter 3, reader line 2878.
+Last site-verified point: end of Chapter 3, reader line 2878.
 
-Exact next canonical site point remains:
+Exact next canonical site point:
 - Chapter 4 `Глава 4. Пам’ятка`;
-- heading recorded reader line 2879;
+- heading recorded line 2879;
 - narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-## HARD STOP
-Do not use this heuristic file or `Скульптор.docx` to create verified English, fill missing prose, continue Chapter 5, or generate `chapter-05-part-27.txt`.
+## NEXT ACTION WHEN SITE SOURCE RETURNS
+1. Retrieve exact Chapter 4 Ukrainian site text from the recorded marker.
+2. Compare recovery part 01 forward line by line.
+3. Confirm and remove only site-proven chunking duplicates/additions.
+4. Translate/correct only text physically justified by the site.
+5. Save under `verified/`.
+6. Read back, record exact site markers, mirror to safety, update statuses.
 
-When the site source returns, site parity overrides every observation in this file.
+## HARD STOP
+Do not use this heuristic file or `Скульптор.docx` to create verified English, fill missing prose, begin Chapter 5 parity, or generate `chapter-05-part-27.txt`.
