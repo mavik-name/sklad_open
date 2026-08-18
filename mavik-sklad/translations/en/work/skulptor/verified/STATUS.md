@@ -19,5 +19,13 @@ Corrections relative to quarantined recovery file:
 - did not carry forward the incorrect `mystical psychological thriller` label;
 - verified layer begins directly at the canonical Chapter 1 heading and contains only translation justified by the retrieved site passage.
 
+### Chapter 1 — Part 02
+File: `verified/chapter-01-part-02.txt`
+Canonical Ukrainian source marker: reader lines 378–752, from `Сергій усе записав.` through `Марта любила ці руки з дитинства.`
+Verification date: 2026-08-18
+State: saved to main, read back, mirrored to safety branch.
+
+No unsupported narrative additions were carried into the verified layer.
+
 ## NEXT
-Continue Chapter 1 from site reader line 378: `Сергій усе записав.`
+Continue Chapter 1 from the next sentence in reader line 752: `Вони підкидали її вгору, коли вона була малою.`
