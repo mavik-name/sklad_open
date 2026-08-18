@@ -14,8 +14,9 @@ Status: **AUTHORITATIVE INDEX**
 
 - Site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Canon checkpoint: `mavik-sklad/files/R212-CANON-CHECKPOINT.md`
-- Sole structural/functional CORE base: **R212**
+- Canon checkpoint: `mavik-sklad/files/R213-CANON-CHECKPOINT.md`
+- Sole structural/functional CORE base: **R213**
+- Recovery: `mavik-sklad/recovery/R213/`
 - Simple-first canon: `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
 - Privacy-media canon: `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
 - Public-blog editorial canon: `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
@@ -25,7 +26,7 @@ Status: **AUTHORITATIVE INDEX**
 
 ### Hard rules
 
-1. Будь-яка наступна site structural/functional робота стартує тільки від **R212**.
+1. Будь-яка наступна site structural/functional робота стартує тільки від **R213**.
 2. SIMPLE FIRST: швидко, якісно, максимально просто; не ускладнювати без реальної необхідності.
 3. `/_site-state/` — protected live state; штатний deploy/patch його не перезаписує.
 4. Routine content work — patch/overlay без прихованих CORE-змін.
@@ -64,6 +65,6 @@ Status: **AUTHORITATIVE INDEX**
 ## Conflict rule
 
 1. Останній прямо затверджений користувачем канон має найвищий пріоритет.
-2. Для site CORE авторитетний **R212**.
+2. Для site CORE авторитетний **R213**.
 3. Для English source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
 4. Історичні або випадкові файли не можуть змінити активний канон.
