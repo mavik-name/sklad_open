@@ -12,7 +12,7 @@ MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
 3. START-HERE активного конкретного проєкту.
 4. Канон конкретного проєкту.
 5. Актуальний checkpoint/STATUS.
-6. Реальний актуальний артефакт, але лише в межах правил джерела конкретного проєкту.
+6. Реальний актуальний артефакт.
 7. Universal canons.
 
 UNIVERSAL CANONS
@@ -23,48 +23,32 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current checkpoint: `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R210G**
-- R1–R210F не використовувати як active site CORE context.
-- `mavik-sklad/files/R211-WIP-CHECKPOINT.md` — WIP, НЕ КАНОН.
-- Routine content work після R210G: PATCH/OVERLAY ONLY, без прихованих PHP/JS/CSS/Boss/template/PWA/navigation/SEO/refactor змін.
+- Canon checkpoint: `mavik-sklad/files/R212-CANON-CHECKPOINT.md`
+- Current structural/functional CORE base: **R212**
+- Recovery duplicate: `mavik-sklad/recovery/R212/START-HERE-R212.md`
+- Technical recovery: `mavik-sklad/recovery/R212/TECHNICAL-RECOVERY-R212.md`
+- Integrity record: `mavik-sklad/recovery/R212/INTEGRITY-R212.txt`
 - `/_site-state/` не перезаписувати штатним deploy/patch.
-- Новий CORE-реліз стає каноном лише після завершення, живої перевірки та прямого затвердження автором.
+- SIMPLE FIRST, privacy-media, public-blog editorial та protected-SEO rules — обов’язкові.
+- Будь-яка наступна structural/functional робота стартує тільки від R212.
 
-ENGLISH CONTENT MAVIK.NAME — ОБОВ’ЯЗКОВИЙ МАРШРУТ
+ENGLISH CONTENT MAVIK.NAME
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 - Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
 - Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 - Exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
-- Safety branch: `backup/english-translations-2026-08-17`
 
 ЖОРСТКИЙ КАНОН ДЖЕРЕЛА ДЛЯ ПЕРЕКЛАДУ КНИГ
 - Єдине джерело нового або verified англійського тексту — точний український текст, фактично опублікований на `mavik.name`.
-- Site-generated `/books/<slug>/read/text/` дозволений лише якщо файл фізично отримано й підтверджено, що це той самий опублікований текст.
-- НЕ генерувати переклад із File Library DOCX, рукописів складу, release ZIP, пам’яті чату/моделі, старих English-файлів, summary/checkpoint або здогадуваного продовження.
-- Якщо точний фрагмент `mavik.name` недоступний — verified-переклад ЗУПИНИТИ, а не домислювати.
-
-THE SCULPTOR / СКУЛЬПТОР — ПОТОЧНИЙ СТАН
-- Canonical source: `https://mavik.name/books/skulptor/read/`
-- Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
-- Глава 1 verified: reader lines 26–1231.
-- Глава 2 verified: lines 1232–2040.
-- Глава 3 verified: lines 2041–2878.
-- Наступна канонічна точка: Глава 4 `Пам’ятка`, heading line 2879; narrative starts line 2881 `Пам’ятка мала вміститися на одну сторінку.`
-- Поточний live-reader source transport недоступний через наявний fetch path. Це blocker джерела, а не втрата роботи.
-- Chapter 4 recovery parts 01–38 механічно проаудитовані; карта: `CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`.
-- Chapter 5 recovery parts 01–26 механічно проаудитовані; part 26 збережений на main і safety; part 27 відсутній; карта: `CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`.
-- Recovery-файли не є verified і не можуть пересунути канонічну точку без site-parity.
+- Якщо exact site-source недоступний — verified-переклад зупинити, не домислювати.
 
 РОМАН «СОЦІАЛЬНА»
 - Start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 - Canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - Manuscript: `mavik-sklad/files/Соціальна.docx`
 - English STOP canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`
-- Українська Книга перша завершена.
-- English-переклад усе ще ЗАБОРОНЕНИЙ до нового прямого дозволу автора.
 
 ІНШІ АКТИВНІ ПРОЄКТИ
 - Всесвіт 25: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
@@ -75,9 +59,7 @@ THE SCULPTOR / СКУЛЬПТОР — ПОТОЧНИЙ СТАН
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для site CORE чинний канон — **R210G**.
-3. R211 — WIP, не канон.
-4. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
-5. Для English continuity чинний `CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
-6. Для «Соціальної» English STOP діє до нового прямого дозволу автора.
-7. Історичні release/checkpoint документи не можуть відновити старішу базу або старі правила поверх новішого канону.
+2. Для site CORE чинний канон — **R212**.
+3. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
+4. Для English continuity чинний `CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
+5. Для «Соціальної» English STOP діє до нового прямого дозволу автора.
