@@ -1,51 +1,72 @@
 # MAVIK.NAME — ACTIVE ENGLISH TRANSLATION ARCHIVE
 
-Canonical site/core: **R193**.
-Authoritative continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+Updated: 2026-08-18
+Canonical structural/functional site core: **R210G**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 Current status: `mavik-sklad/translations/en/STATUS.md`
+Recovery integrity audit: `mavik-sklad/translations/en/RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`
 Safety branch: `backup/english-translations-2026-08-17`
 
-This directory stores English content translations only. It is not a separate English site/core.
+This directory stores English content translation/recovery assets. It is not a separate site/core.
 
-## Recovery and preservation rule
+## HARD SOURCE RULE
+For new or verified English book prose, the ONLY authoritative source is the canonical Ukrainian text actually published on mavik.name, or a physically retrieved site-generated reader-text representation demonstrated to be the same publication.
 
-Translation content survives obsolete site-release numbering. Never delete, ignore, or retranslate a translation merely because an old release number such as `r188` appears in its filename/path.
+Do NOT generate translation prose from File Library manuscripts, DOCX/TXT files, warehouse manuscripts, old English files, historical release ZIPs, chat/model memory, summaries, checkpoints or guessed continuation.
 
-Before declaring translation work lost, search current `main`, the safety branch, Git history/tree/blob SHAs, historical translation workspaces as read-only recovery sources, and File Library.
+If the canonical site text cannot be physically retrieved, verified translation stops. Recovery inspection may continue only as explicitly non-canonical preparation.
 
-Nine complete English translations previously produced during older English work were found physically intact and recovered here instead of being retransmitted or retranslated.
+## PROTECTED RECOVERY ASSETS
+Nine complete recovered English book directory trees are physically present under `books/`:
+- `mamo-zhyty`
+- `bezimenni`
+- `liudyna-bez-akaunta`
+- `vidmova-avansom`
+- `transfer`
+- `pishchynka-solya`
+- `paterny-samorefleksii`
+- `ty-i-ia`
+- `yevanheliie-vid-makariia`
 
-Recovered complete titles:
-- `mamo-zhyty` — *Mom, I Want to Live!*
-- `bezimenni` — *The Nameless*
-- `liudyna-bez-akaunta` — *The Man Without an Account*
-- `vidmova-avansom` — *Rejection in Advance*
-- `transfer` — *Transfer*
-- `pishchynka-solya` — *Solya, the Grain of Sand Who Dreamed of a Skyscraper*
-- `paterny-samorefleksii` — *Patterns of Self-Reflection*
-- `ty-i-ia` — *You and I*
-- `yevanheliie-vid-makariia` — *The Gospel According to Macarius*
+`Three Novels Nobody Reads` partial Sections 1–8 are preserved under `partial/`.
 
-`try-romany-yaki-nikhto-ne-chytaie` is partial archival work: Sections 1–8 are physically preserved and must not be treated as a complete English edition until the rest is translated.
+`Евакуація, або Дорогою до стабіка` has eight physically saved English story files under `work/evakuatsiia/`.
 
-`Евакуація, або Дорогою до стабіка` is fully translated as text: all eight English story files are under `work/evakuatsiia/`.
+On 2026-08-18, storage integrity was checked: all nine recovered book trees, all eight Evacuation story files and the partial Sections 1–8 tree match between `main` and the safety branch. This proves mirror integrity only, not parity with the Ukrainian site publication.
 
-`Соціальна / Social` remains excluded from public English publication until its Ukrainian source is complete, but Chapters 8–16 are protected translation content in three `mavik-sklad/files/r188-social-en-*.md` files.
+## SOCIAL / СОЦІАЛЬНА
+The Ukrainian book is completed, but the separate English STOP canon remains active until the author explicitly permits English translation.
 
-## Current active translation
+Old English Social files for Chapters 8–16 were intentionally deleted on 2026-08-17. Do NOT restore or use them for translation work unless the author explicitly changes that decision.
 
-`Скульптор` → *The Sculptor*
+Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
-Working directory:
-`mavik-sklad/translations/en/work/skulptor/`
+## ACTIVE — THE SCULPTOR
+Working directory: `mavik-sklad/translations/en/work/skulptor/`
+Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
 
-Physical progress:
-- Chapter 1 parts 1–5 COMPLETE.
-- Chapter 2 parts 1–5 SAVED.
+Site-verified:
+- Chapter 1 — reader lines 26–1231;
+- Chapter 2 — reader lines 1232–2040;
+- Chapter 3 — reader lines 2041–2878.
 
-Exact continuation:
-after Ukrainian source line `— Але будете.`
+Chapter 4 and Chapter 5 old English files remain quarantined recovery material only.
 
-Retrieve the next contiguous passage from `Скульптор.docx` before continuing. Do not infer missing source or repeat saved parts.
+Exact next canonical point:
+- Chapter 4 `Глава 4. Пам’ятка`;
+- heading recorded line 2879;
+- narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
 
-For any new branch, read `CONTINUATION-CANON.md` and `STATUS.md` before touching translation files.
+Do NOT continue from `Скульптор.docx` or from old Chapter 4/5 English files. Resume verified translation only after physically retrieving the exact canonical Ukrainian site passage.
+
+## NEW BRANCH READ ORDER
+1. `mavik-sklad/START-HERE.txt`
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
+4. `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+5. `mavik-sklad/files/EN-SOURCE-POLICY.md`
+6. `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+7. `mavik-sklad/translations/en/STATUS.md`
+8. active-book STATUS/checkpoint
+9. canonical Ukrainian publication on mavik.name
