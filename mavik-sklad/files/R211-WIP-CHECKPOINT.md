@@ -1,107 +1,96 @@
-# R211 — release candidate checkpoint
+# R211 — WIP checkpoint
 
 Дата: 2026-08-18
-Статус: **ЗІБРАНИЙ ПОВНИЙ РЕЛІЗ-КАНДИДАТ, НЕ КАНОН**.
+Статус: **ПОВЕРНУТО В РОБОТУ ПІСЛЯ НЕВДАЛОЇ LIVE-ПЕРЕВІРКИ, НЕ КАНОН**.
 Канонічна база: **R210G**.
 
-## Рішення автора про нумерацію
+## Важливо
 
-Буквені ревізії припинено. Наступний повний structural/functional реліз після R210G має номер **R211**. Назву `R210H` не використовувати як активну робочу версію; усі її задачі перенесені сюди.
+Попередньо виданий package R211 з SHA-256 `33d98cf442bb6b3e4f22bc710c281b6ef30c7b5b79ab2eb32229a93b93c8a2a9` **НЕ вважати придатним release candidate**. Під час живої перевірки:
+- public menu не підхопив `Контакт`;
+- `/contact/` працював некоректно;
+- Boss layout роз'їхався через надмірно складну mail-preview/dropdown реалізацію.
 
-## Мета R211
+Цей package не канонізувати і не використовувати як базу подальшої роботи. Корекція R211 триває від канонічного R210G з перенесенням лише підтверджених потрібних змін.
 
-Не лише виправити залишкові баги R210G, а прибрати причини їх повторення: persistent state має бути джерелом правди, deploy/patch не повинен скидати live-контент, SEO та generated public artifacts мають синхронізуватися автоматично.
+## HARD working principle
 
-## Реалізовані зміни
+Перед кожною реалізацією читати `SIMPLE-FIRST-WORKING-CANON.md`.
 
-### 1. Deploy / persistent state
-- Після FULL/PATCH generated public HTML відновлюється з живого `/_site-state/`, де це потрібно.
-- Косметичний patch не має права повертати старі обкладинки анонсів, focus, порядок книг чи інші live-налаштування.
-- User-generated media відділені від release-owned assets; нові Boss-uploaded covers/blog images зберігаються в protected user media paths.
+**Спочатку — найпростіше дієве рішення.** Не додавати dropdown/preview/окремі режими або нові підсистеми без необхідності.
 
-### 2. Analytics
-- `analytics/data` гарантовано існує після clean deploy або створюється runtime без ручного втручання.
-- Boss/self-test перевіряє writable та показує конкретну діагностику.
+## R211 — погоджений склад
 
-### 3. SEO синхронізація книг
-- Одне джерело даних про книги.
-- Автоматично синхронізуються `/books/`, `/books/new/`, sitemap, meta description, JSON-LD, обкладинки та platform links; інші discovery/search artifacts — у межах чинної архітектури.
-- Прибрано залежність від застарілих ручних чисел на кшталт `19 книг`.
-- Нова книга не має з'являтися у видимому каталозі без одночасного оновлення schema.org/search-state.
+### Deploy / persistent state
+- FULL/PATCH не повинен скидати live `/_site-state/`.
+- Generated public HTML після deploy синхронізується з live state там, де це потрібно.
+- User-generated media відділяються від release-owned assets.
 
-### 4. SEO self-test у Boss
-- state = public catalog = JSON-LD count;
-- indexable books present in sitemap;
-- covers exist;
-- canonical/hreflang/robots/noindex consistency;
-- IndexNow key accessible;
-- Bing URL submission configuration status;
-- analytics writable;
-- live generated HTML synchronized with persistent state.
+### Analytics
+- `analytics/data` існує після clean deploy або створюється runtime.
+- Boss/self-test перевіряє writable.
 
-### 5. Boss → Пошта
-- У головному меню є preview останніх отриманих IMAP-листів з unread state.
-- Додано окремий канал **`З сайту`** для повідомлень із форми `Контакт`.
-- Повідомлення `З сайту` зберігаються у захищеному `/_site-state/contact-inbox/` як основне джерело, а `site@mavik.name` отримує резервну email-копію.
-- У каналі `З сайту`: список, unread state, перегляд, відповідь читачеві через SMTP та видалення.
-- У верхньому меню Boss є окремий видимий лічильник `З сайту N`; на головній Boss є окрема картка повідомлень.
-- Якщо SMTP тимчасово недоступний, повідомлення все одно зберігається в Boss і не губиться.
+### SEO
+- Book state синхронізується з `/books/`, `/books/new/`, sitemap, meta description та JSON-LD.
+- Прибираються застарілі hard-coded counts.
+- SEO self-test перевіряє state/public/JSON-LD/sitemap/canonical/hreflang/robots/IndexNow/Bing/analytics.
 
-### 6. Книги → посилання на платформи
-- У створенні та редагуванні книги repeatable поля `назва платформи + URL`.
-- Додавання/видалення без нового релізу.
-- Зберігання у persistent state.
-- Автоматичний показ на сторінці книги.
-- Structured data `sameAs`, де семантично доречно.
+### Protected SEO identity
+- `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — активний IndexNow/Bing verification file.
+- Файл входить у R211 і має правильний content, рівний імені ключа.
+- Cleanup та ordinary overlay/content patches не можуть його видалити або замінити.
+- Full CORE release може штатно оновити файл лише якщо ключ свідомо змінюється.
+- Жорсткий канон: `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
 
-### 7. Медіатека / обкладинки
-- Перевірка `зображення використовується` дивиться на актуальні active bindings/persistent state, а не на будь-яку стару згадку у generated HTML/template/seed.
-- Якщо файл реально використовується, Boss показує **де саме**.
-- У drag&drop-медіатеці клік по мініатюрі відкриває велике preview; drag лишається на окремій ручці.
-- Стару невикористану обкладинку можна видалити без false positive.
+### Boss → Пошта — SIMPLE FIRST
+- У верхньому меню Boss лишається **один звичайний пункт `Пошта`**.
+- Поруч — маленький badge/плашка з числом непрочитаних.
+- Клік по `Пошта` або badge одразу відкриває пошту.
+- **Ніяких dropdown, preview останніх листів, окремого `З сайту` у верхній навігації чи інших елементів, що розтягують header.**
+- Усередині пошти допускається просте розділення `З сайту` / `Скринька`.
 
-### 8. Анонси / обкладинка книги
-- Обкладинка анонсу зберігається у persistent state як джерело правди.
-- Deploy/косметичний patch не має права підміняти її release seed або старим generated `announcements/index.html`.
-- Після deploy generated announcements перебудовуються зі state.
+### Контакт
+- Public menu має пункт `Контакт`.
+- Contact form: ім'я, email, тема, повідомлення + погоджений вступний текст.
+- Повідомлення з форми зберігаються в protected Boss inbox як primary copy.
+- `site@mavik.name` — резервна email-копія.
+- Повідомлення `З сайту` показуються в Boss → Пошта.
+- CSRF + honeypot + простий rate-limit.
 
-### 9. Публічний `Контакт`
-- У UA/EN меню додано `Контакт / Contact`.
-- Публічна форма має вступний авторський текст, ім'я, email, тему та повідомлення.
-- CSRF + honeypot + rate-limit.
-- Основне збереження — protected Boss inbox; резервна доставка — `site@mavik.name` із `Reply-To` читача.
-- Upgrade R210G → R211 додає пункт `Контакт` у live menu рівно один раз і не ламає існуючий порядок/стан.
+### Книги → платформи
+- Repeatable `назва платформи + URL` у create/edit.
+- Persistent state; public book page; `sameAs` де доречно.
 
-## БЛОГ — ЖОРСТКИЙ МЕХАНІЗМ, НЕ CORE
+### Медіатека
+- False-positive `зображення використовується` прибрати: перевіряти active persistent bindings.
+- Якщо використовується — показувати де саме.
+- У drag&drop media list клік по thumbnail відкриває велике preview; drag — окремою ручкою.
 
-**Звичайне додавання нового блогу = content-only ZIP patch через Boss.**
+### Анонси / обкладинки
+- Active cover зберігається в persistent state.
+- Cosmetic deploy не може повернути старий seed/generated cover.
 
-Канонічний workflow:
-1. Асистент створює готовий блоговий запис і, за потреби, ілюстрацію.
-2. Формує **Boss-compatible content-only ZIP patch**.
-3. Користувач завантажує ZIP через штатний механізм патчів у Boss.
-4. Патч додає/оновлює тільки blog content/state та generated public/SEO artifacts, які штатно створює чинний engine.
-5. CORE не змінюється.
+## БЛОГ — ЖОРСТКИЙ МЕХАНІЗМ
 
-Для регулярної публікації блогів **не використовувати** FTP / Cityhost File Manager, ручне копіювання у корінь, `PATCH-*.php`, ручний `?apply=1` або новий CORE release лише заради блогу. Ручний FTP/PHP installer — тільки аварійний recovery за окремим прямим рішенням автора.
+Звичайний новий блог = **content-only ZIP patch через Boss**, без CORE, FTP, ручних PHP installers та `?apply=1`.
 
-Готові записи з `R210G_BLOG_CONTENT_PATCH_2026-08-18.zip` включені в R211 як content snapshot; це не змінює механізм майбутніх blog content-only patches.
+Готові записи з `R210G_BLOG_CONTENT_PATCH_2026-08-18.zip` можуть входити в повний R211 як content snapshot, але подальші blog additions — лише штатними content-only patches.
 
-## Фінальний контроль release candidate
+## Перед наступною видачею R211
 
-- PHP lint: **35/35 OK**.
-- JSON parsing: **15/15 OK**.
-- Contact inbox unit flow: store → unread=1 → read → unread=0 → replied → delete: **OK**.
-- R210G → R211 `Контакт` menu migration, повторний запуск без дубля: **OK**.
-- Managed manifest parity: **636/636**.
-- FULL ZIP: CRC **OK**, deployer validation **OK**.
-- Multipart PART1/PART2: CRC **OK**, deployer validation **OK**, union parity **636/636**.
-- Full manifest SHA-256: `f0bf9e91c7c1edf6aba02e58355cc04f972025432290c962cbaa65398eaaf641`.
-- Multipart set id: `r211-f0bf9e91c7c1edf6`.
-- FULL SHA-256: `33d98cf442bb6b3e4f22bc710c281b6ef30c7b5b79ab2eb32229a93b93c8a2a9`.
-- PART1 SHA-256: `0d3594cd277b090885275481dd0f1a08c9dbdd5d8689a0e9b231a6c020f41e3e`.
-- PART2 SHA-256: `bdefb5fe52aec5184bc6f34e7f21716089d7daaf58cbe8aae83b54d85e28a151`.
+Обов'язково:
+- порівняти Boss geometry з R210G;
+- PHP lint;
+- JSON parse;
+- clean install + upgrade R210G → R211;
+- перевірити public `Контакт` і menu migration;
+- перевірити mail badge без зміни geometry;
+- перевірити contact inbox flow;
+- state → HTML → SEO → media → analytics regression;
+- manifest parity;
+- ZIP CRC;
+- FULL + multipart deployer validation.
 
-## Правило канонізації
+Нові SHA/hash/set-id записувати тільки після повторного повного пакування. Старі R211 hashes вище вказані лише як **REJECTED BUILD IDENTIFIER**.
 
-R211 **не стає каноном автоматично**. Після встановлення потрібна жива перевірка автором. Лише після окремого прямого `R211 канон` змінюється канонічна база. До цього **R210G лишається єдиним каноном**.
+R211 стає каноном тільки після нової живої перевірки та прямого рішення автора `R211 канон`. До цього **R210G — єдиний канон**.
