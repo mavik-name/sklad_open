@@ -23,8 +23,21 @@ FULL CRC OK
 PART1/PART2 CRC OK
 Multipart union 646/646
 
-Local duplicate created in the active artifact runtime:
+Local canonical duplicate in active artifact runtime:
 212 Збірка_Сайт_КАНОН_BACKUP.zip
-SHA-256 identical to FULL.
+SHA-256: 694cd5c247a047c71bf9ccaaa61336a5cfd41cb91016d4a9c85af29d8580b390
+Identical to canonical FULL.
 
-IMPORTANT: the GitHub connector available in this session writes UTF-8 text files but does not upload arbitrary binary ZIP content. Therefore this repository stores the canonical identity, hashes, technical recovery documents and exact artifact names; it does not falsely claim that the 53 MB ZIP binary is physically stored in GitHub.
+Portable technical documentation backup:
+R212_CANON_TECHDOCS_BACKUP.zip
+SHA-256: 146060ec895547ec6420c705828066b3b666b090e73de195af470862f3aebd09
+
+Persistent technical recovery documentation is duplicated in:
+- mavik-sklad/files/R212-CANON-CHECKPOINT.md
+- mavik-sklad/releases/CANON.md
+- mavik-sklad/files/START-HERE-SITE.txt
+- mavik-sklad/recovery/R212/START-HERE-R212.md
+- mavik-sklad/recovery/R212/TECHNICAL-RECOVERY-R212.md
+- mavik-sklad/recovery/R212/INTEGRITY-R212.txt
+
+IMPORTANT: the GitHub connector available in this session writes UTF-8 text files but does not upload arbitrary binary ZIP content. Therefore the repository stores canonical identity, hashes, technical recovery documents and exact artifact names; it does not falsely claim that the 53 MB ZIP binary is physically stored in GitHub.
