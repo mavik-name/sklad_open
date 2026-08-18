@@ -27,5 +27,14 @@ State: saved to main, read back, mirrored to safety branch.
 
 No unsupported narrative additions were carried into the verified layer.
 
+### Chapter 1 — Part 03
+File: `verified/chapter-01-part-03.txt`
+Canonical Ukrainian source marker: reader line 752 continuation through line 934, from `Вони підкидали її вгору, коли вона була малою.` through `Ліхтарик.`
+Verification date: 2026-08-18
+State: saved to main, read back, mirrored to safety branch.
+
+Correction relative to quarantined recovery file:
+- removed the unsupported sentence `The walls were light-colored but slightly cracked.` because no corresponding sentence exists in the canonical site publication.
+
 ## NEXT
-Continue Chapter 1 from the next sentence in reader line 752: `Вони підкидали її вгору, коли вона була малою.`
+Continue Chapter 1 from reader line 936: `Андрій не зрозумів.`
