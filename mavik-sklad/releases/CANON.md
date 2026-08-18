@@ -2,39 +2,36 @@
 
 ## Поточна канонічна база
 
-**R210 — єдина чинна структурно-функціональна CORE-база сайту.**
+**R210G — єдина чинна структурно-функціональна CORE-база сайту.**
 
-Затверджено користувачем: **2026-08-17** після живої перевірки на Cityhost.
+Затверджено користувачем: **2026-08-18** після живої перевірки.
 
 Канонічний checkpoint:
-`mavik-sklad/files/R210-CANON-CHECKPOINT.md`
+`mavik-sklad/files/R210G-CANON-CHECKPOINT.md`
 
-R1–R209 не використовувати як робочу або канонічну structural/functional базу. R207 — попередній канон. R208/R209 — неканонічні кандидати, поглинуті R210.
+R1–R210F не використовувати як робочу або канонічну structural/functional базу. R210 — попередній канон; R210A–R210F — проміжні буквені ревізії, поглинуті R210G.
 
-## Файли R210
+## Канонічний binary R210G
 
-- `210 Збірка_Сайт_PAGE-BUILDER-IMAP_PART-1.zip`
-- `210 Збірка_Сайт_PAGE-BUILDER-IMAP_PART-2.zip`
-- `210 Збірка_Сайт_PAGE-BUILDER-IMAP_bundle.zip` — архівний контейнер.
+- `210G Збірка_Сайт_MENU-BACK-TIGHT_FTP-FULL.zip`
+- повторно завантажена користувачем еквівалентна копія: `210G Збірка_(1).zip`
 
-Постійне збереження: File Library `/Сайт/`.
+FTP-FULL SHA-256:
+`eebcbefaa6683078dd1744b790e42a6526f6db4520a6e344e5e774d9946a672c`
 
-Release manifest SHA-256:
-`5fba1abf760b80f77f1bbbd15a0a2c2a61c7cd2d087c50555601fcd5c77b8d28`
+Full manifest SHA-256:
+`d45830fff4481434ce68be6a236391a566b07987a10b64e82e9019acc3694c02`
 
-ZIP SHA-256:
-- PART-1: `2f4af9aa82aff5560257aee6e33bbc3ca91a3c61cdc119c660dcb667998b49cd`
-- PART-2: `0e52f6bb0241528818d6f35d116253892105e4e76a3c891b98673e9c83b56e66`
-- bundle: `cb6d2938a0195b124aa3926dba3ae2a3fcd003dfd60ac46465968ea32d18fe15`
+Multipart set id: `r210g-d45830fff4481434`.
+Managed files: `627`.
 
-Multipart set id: `r210-5fba1abf760b80f7`.
-Managed files: `618`.
+ZIP-контроль повторно завантаженої копії: CRC **OK**, 627 entries; SHA-256 збігається з R210G FTP-FULL.
 
-## Захищена поведінка R210
+## Захищена поведінка R210G
 
-R210 включає й захищає:
+R210G успадковує захищену поведінку R210 і наступних буквенных ревізій, зокрема:
 
-- mobile PWA install flow; desktop без MaVik install UI;
+- mobile-only PWA install flow; desktop без MaVik install UI;
 - desktop без audio-reader UI і без `▶ Слухати`; mobile `Читати` = text-only; mobile `Слухати` = explicit `?listen=1`;
 - центральну аудіокнопку `▶ Слухати ↔ ⏸ Пауза`;
 - rollback-safe book creation;
@@ -44,29 +41,30 @@ R210 включає й захищає:
 - safe overlay-patch support;
 - direct URL priority over stored language preference;
 - логічне групування плиток Boss;
-- drag&drop-конструктор ключових системних сторінок із preview та rollback попередньої версії;
-- компактний список сторінок конструктора без обрізання назв;
-- інтегрований поштовий клієнт Boss з IMAP/SMTP;
-- автоматичний fallback з PHP IMAP на вбудований TLS IMAP через `stream_socket_client`;
-- захищене server-only зберігання поштового пароля поза релізом/експортом state;
-- порожній стан книги у фокусі без hard-coded fallback `Скульптор`;
-- виправлене desktop-вирівнювання action-блоку в `Анонсах`;
-- погоджену сторінку `Автор` і редагування системних сторінок через Boss.
+- інтегрований поштовий клієнт Boss з IMAP/SMTP і TLS fallback;
+- server-only зберігання поштових облікових даних;
+- порожній focus-state без hard-coded `Скульптор` fallback;
+- один global maintenance mode;
+- `/_site-state/` не перезаписується штатним deploy/patch;
+- global public shell R210E/F/G;
+- `Назад` як перший пункт внутрішнього меню;
+- чинну геометрію desktop/tablet/mobile R210G;
+- Boss → Книги: штатне видалення книги з confirm і cleanup focus/live order.
 
 ## Maintenance — жорстке правило
 
-У R210 **один глобальний maintenance mode**.
+У R210G **один глобальний maintenance mode**.
 
 Не використовувати і не відновлювати без нового прямого рішення автора:
 - окремий UA maintenance;
 - окремий EN maintenance;
 - `.maintenance-uk-on`;
 - `.maintenance-en-on`;
-- `maintenance/index.php` як locale-specific 503 logic.
+- locale-specific 503 logic.
 
-## ЖОРСТКИЙ КАНОН ПІСЛЯ R210 — CODE/CORE FREEZE
+## CODE/CORE FREEZE ПІСЛЯ R210G
 
-Після канонізації R210 звичайна робота із сайтом виконується **лише PATCH/OVERLAY БЕЗ ЗМІНИ CORE-КОДУ R210**.
+Після канонізації R210G звичайна робота із сайтом виконується **PATCH/OVERLAY БЕЗ ЗМІНИ CORE-КОДУ R210G**.
 
 Не змінювати без нового прямого рішення користувача:
 - PHP;
@@ -87,15 +85,15 @@ R210 включає й захищає:
 - музика/медіа;
 - блог і контентні сторінки;
 - контентні дані/метадані;
-- generated public/SEO artifacts, які створюються чинними механізмами R210 без зміни їхнього коду.
+- generated public/SEO artifacts, які створюються чинними механізмами R210G без зміни їхнього коду.
 
 ## Головний канон синхронізації
 
-Контентні зміни через Boss або patch мають лишати узгодженими public state і search state, де релевантно: navigation/internal links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор. Це робиться чинними можливостями R210, без модифікації CORE.
+Контентні зміни через Boss або patch мають лишати узгодженими public state і search state, де релевантно: navigation/internal links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та внутрішній SEO-аудитор. Це робиться чинними можливостями R210G, без модифікації CORE.
 
 ## English
 
-English-контент доставляти штатними overlay-патчами R210. Не змінювати locale routing і не створювати окремий maintenance для `/en/`.
+English-контент доставляти штатними overlay-патчами R210G. Не змінювати locale routing і не створювати окремий maintenance для `/en/`.
 
 Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на `mavik.name`. Ніяких домислів чи доданого тексту.
 
@@ -103,6 +101,6 @@ English-контент доставляти штатними overlay-патча�
 
 ## Робоче правило
 
-**Будь-яке нове наповнення стартує від R210 і доставляється тільки PATCH/OVERLAY без змін CORE-коду.**
+**Будь-яка нова structural/functional робота стартує від R210G.**
 
-R210 не перепаковувати, не refactor-ити й не «покращувати» як CORE без нового прямого дозволу користувача.
+Routine content work — тільки PATCH/OVERLAY поверх R210G. R210G не перепаковувати, не refactor-ити й не «покращувати» як CORE без нового прямого дозволу користувача.
