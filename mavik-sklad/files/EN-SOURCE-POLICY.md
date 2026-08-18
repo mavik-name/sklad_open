@@ -2,16 +2,16 @@
 
 Updated: 2026-08-18
 Status: **ACTIVE / AUTHORITATIVE SOURCE POLICY**
-Current structural-functional site core: **R210G**
+Current structural-functional site core: **R212**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation authority: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 
 ## SOURCE PRIORITY — HARD RULE
 
 1. **The canonical Ukrainian text actually published on mavik.name is the ONLY source that may generate English translation.**
-2. The public reader `/books/<slug>/read/` is authoritative. A site-generated reader-text representation under `/books/<slug>/read/text/` may be used only when it is physically retrieved and demonstrably represents the same published text.
-3. File Library manuscripts, warehouse manuscripts, release archives, old site copies, old translations, summaries, checkpoints and chat/model memory are comparison/recovery aids only. They may not generate new English prose.
-4. A structural release number, including R210G, does not replace live published Ukrainian content as translation authority.
+2. The public reader `/books/<slug>/read/` is authoritative. A site-generated reader-text representation under `/books/<slug>/read/text/` may be used only when physically retrieved and demonstrably identical to the published text.
+3. File Library manuscripts, warehouse manuscripts, release archives, cached site copies, existing translations, summaries, checkpoints and chat/model memory are comparison/recovery aids only. They may not generate new English prose.
+4. A structural release number never replaces live published Ukrainian content as translation authority.
 5. If another source differs from the published Ukrainian site text, mavik.name wins unless the author explicitly changes the source canon.
 
 ## ZERO-ADDITION TRANSLATION RULE
@@ -27,11 +27,11 @@ Continuation authority: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
 
 ## PROJECT EXCLUSION — SOCIAL / СОЦІАЛЬНА
 
-The Ukrainian `Соціальна` is now completed, but the existing project-specific **NO ENGLISH TRANSLATION / STOP** remains active until the author explicitly permits English translation.
+The Ukrainian `Соціальна` is completed, but the project-specific **NO ENGLISH TRANSLATION / STOP** remains active until the author explicitly permits English translation.
 
 Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
 
-Old English Social files deleted on 2026-08-17 are not recovery input and must not be restored unless the author explicitly changes that decision.
+Deleted English Social material must not be restored unless the author explicitly changes that decision.
 
 ## EXISTING ENGLISH FILES
 
@@ -50,11 +50,11 @@ Exact next canonical point:
 - Chapter 4 `Глава 4. Пам’ятка`, heading recorded at reader line 2879;
 - narrative begins recorded line 2881: `Пам’ятка мала вміститися на одну сторінку.`
 
-Current old Chapter 4 and Chapter 5 files outside `verified/` remain quarantined recovery material. Mechanical maps:
+Current Chapter 4 and Chapter 5 files outside `verified/` remain quarantined recovery material. Mechanical maps:
 - `mavik-sklad/translations/en/work/skulptor/CHAPTER-04-RECOVERY-STRUCTURAL-AUDIT.md`
 - `mavik-sklad/translations/en/work/skulptor/CHAPTER-05-RECOVERY-STRUCTURAL-AUDIT.md`
 
-Chapter 5 recovery is physically preserved through `chapter-05-part-26.txt` on both main and safety branch. This does NOT prove that Chapter 5 is complete and does not authorize creation of part 27.
+Chapter 5 recovery is preserved through `chapter-05-part-26.txt`. This does NOT prove that Chapter 5 is complete and does not authorize creation of part 27.
 
 ## REQUIRED WORKFLOW
 
@@ -64,21 +64,20 @@ For every valid translation block:
 3. save physically under the verified/current work layer;
 4. read back;
 5. record exact site-source position/marker;
-6. mirror to safety branch;
+6. mirror to recovery/safety storage;
 7. update status/canon.
 
-## CONTENT SURVIVES RELEASE OBSOLESCENCE
+## RECOVERY CONTENT
 
-Old release numbers do not invalidate translation content by themselves. Historical translation files may be useful recovery content, but they remain subject to published-site parity verification before publication.
+Translation content survives site-version changes only as recovery material and remains subject to published-site parity verification before publication.
 
-An explicit author deletion/exclusion overrides preservation; Social English remains such an exclusion until explicitly released.
+An explicit author deletion/exclusion overrides preservation.
 
 Before declaring non-excluded translation work lost, search:
 1. current `main`;
-2. `backup/english-translations-2026-08-17`;
-3. Git history/tree/blob SHAs;
-4. historical translation workspaces/branches as read-only recovery sources;
-5. File Library.
+2. dedicated recovery/safety storage;
+3. Git recovery data where needed;
+4. File Library.
 
 Recovery never overrides the hard source canon.
 
@@ -103,4 +102,4 @@ Recovery never overrides the hard source canon.
 8. active-book STATUS
 9. canonical Ukrainian publication on mavik.name
 
-Do not translate from chat memory, manuscript files, release archives or old English recovery when the canonical site publication is the required source.
+Do not translate from chat memory, manuscript files, release archives or recovery English when the canonical site publication is the required source.
