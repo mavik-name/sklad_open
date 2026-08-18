@@ -15,6 +15,7 @@ Status: **AUTHORITATIVE INDEX**
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
 - Simple-first working canon: `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
+- Protected SEO files canon: `mavik-sklad/files/PROTECTED-SEO-FILES.md`
 - Current canonical checkpoint: `mavik-sklad/files/R210G-CANON-CHECKPOINT.md`
 - Current structural/functional CORE base: **R210G**
 - Current next-release work: `mavik-sklad/files/R211-WIP-CHECKPOINT.md` — **WIP, NOT CANON**
@@ -38,6 +39,10 @@ Routine content work is **PATCH/OVERLAY ONLY, WITH NO CORE CODE CHANGES**.
 Allowed content patches: books, translations, EPUBs, covers, images, music/media, blog/static content, content data/metadata, and generated public/SEO artifacts produced by existing R210G mechanisms.
 
 Forbidden without a new explicit user decision: PHP/JS/CSS changes; Boss/deployer/template changes; PWA/service-worker/manifest logic; navigation/SEO engine; maintenance architecture; locale routing; refactoring or other CORE modifications.
+
+### PROTECTED SEO IDENTITY
+
+`651fd21ecd39f1571c9d4ab6a9a7574c.txt` in the site root is the active IndexNow/Bing verification key file. It is **not garbage** and must not be deleted by cleanup or ordinary content/overlay patches. See `PROTECTED-SEO-FILES.md`.
 
 ### BLOG CONTENT PATCH — HARD CANON
 
@@ -81,6 +86,7 @@ Manual FTP/PHP installation is an emergency recovery path only when the author e
 - no hard-coded `Скульптор` fallback for empty focus;
 - one global maintenance mode;
 - persistent `/_site-state/` protected from ordinary deploy/patch;
+- root IndexNow verification file `651fd21ecd39f1571c9d4ab6a9a7574c.txt` protected from accidental cleanup/deletion;
 - R210G public geometry and menu behavior.
 
 ### MAINTENANCE HARD RULE
@@ -126,11 +132,12 @@ The ONLY authoritative source for new English book translation text is the canon
 
 1. Latest explicit user-approved canon wins.
 2. For site work, the `SIMPLE-FIRST-WORKING-CANON.md` principle applies before selecting implementation complexity.
-3. For the site, **R210G is the authoritative CORE base** until a newer release is explicitly approved.
-4. R211 is WIP only until explicit approval.
-5. Routine content work is patch/overlay only and may not silently modify CORE.
-6. Routine blog publication specifically uses **content-only ZIP through Boss**.
-7. Any future CODE/CORE change requires a new explicit user decision.
-8. R210G maintenance is global-only.
-9. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is highest authority.
-10. Historical release/checkpoint documents never override a newer approved canon.
+3. `PROTECTED-SEO-FILES.md` protects active SEO verification identity files from accidental cleanup.
+4. For the site, **R210G is the authoritative CORE base** until a newer release is explicitly approved.
+5. R211 is WIP only until explicit approval.
+6. Routine content work is patch/overlay only and may not silently modify CORE.
+7. Routine blog publication specifically uses **content-only ZIP through Boss**.
+8. Any future CODE/CORE change requires a new explicit user decision.
+9. R210G maintenance is global-only.
+10. For English book translation source, `translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md` is highest authority.
+11. Historical release/checkpoint documents never override a newer approved canon.
