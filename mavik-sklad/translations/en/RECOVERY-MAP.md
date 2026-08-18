@@ -1,30 +1,33 @@
 # ENGLISH TRANSLATION RECOVERY MAP
 
-Updated: 2026-08-17
-Canonical site/core: **R193**
+Updated: 2026-08-18
+Canonical structural/functional site core: **R210G**
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+Current status: `mavik-sklad/translations/en/STATUS.md`
+Integrity audit: `mavik-sklad/translations/en/RECOVERY-INTEGRITY-AUDIT-2026-08-18.md`
 Safety branch: `backup/english-translations-2026-08-17`
 
 ## Recovery principle
+Do not conclude that non-excluded translation work is lost after checking one location. Recovery search order:
+1. current `main`;
+2. safety branch;
+3. Git history/tree/blob objects;
+4. historical translation workspaces as read-only recovery sources;
+5. File Library.
 
-Do not conclude that translation work is lost after checking only one directory. Search current content, backup branch, Git history/tree/blob objects, historical translation workspaces as read-only recovery sources, and File Library.
+Recovery preserves existing work but NEVER overrides the hard site-source canon. Recovered English text cannot generate new translation prose and is not publication-canonical until parity with the Ukrainian text actually published on mavik.name.
 
-Old site-release numbers do not invalidate translation content.
-
-## Current main locations
-
-- Complete recovered books: `mavik-sklad/translations/en/books/`
-- Partial work: `mavik-sklad/translations/en/partial/`
-- Active/completed working translations: `mavik-sklad/translations/en/work/`
-- Protected Social English content: `mavik-sklad/files/r188-social-en-ch08-10.md`, `r188-social-en-ch11-13.md`, `r188-social-en-ch14-16.md`
+## Current physical locations
+- Recovered complete English books: `mavik-sklad/translations/en/books/`
+- Partial English work: `mavik-sklad/translations/en/partial/`
+- Current/complete working translations: `mavik-sklad/translations/en/work/`
 
 ## Immutable recovered English book trees
+Historical recovery source branch: `r188-english-work`
+Historical source root: `mavik-sklad/builds/R188-EN-STAGING/en/books/`
 
-Original archival source branch: `r188-english-work`
-Original source root: `mavik-sklad/builds/R188-EN-STAGING/en/books/`
-
-The following immutable directory tree SHAs are the physically recovered English content:
-
+Recovered complete directory tree SHAs:
 - `bezimenni` — `4460f0ef7ca9e8040bf28c0c108ac01d75bd992a`
 - `liudyna-bez-akaunta` — `4d32678995ae6b72a723f3208f6450d11eb2a026`
 - `mamo-zhyty` — `36c8b8612940a9613a11c112c3d39a72d39642fa`
@@ -36,28 +39,40 @@ The following immutable directory tree SHAs are the physically recovered English
 - `yevanheliie-vid-makariia` — `d02185641bfaa71d60f40cecfbc3af91b1d3fb72`
 
 Partial only:
-- `try-romany-yaki-nikhto-ne-chytaie` — `08966db4996b7685da2a9582b5d27548fc58af70` — Sections 1–8 only.
+- `try-romany-yaki-nikhto-ne-chytaie` — tree `08966db4996b7685da2a9582b5d27548fc58af70` — Sections 1–8 only.
 
-Generic untranslated placeholder tree on the archival branch was `57291440dfad9b509a3eac1017da4f28ee7d8b94`; it is not a translation and must not be treated as one.
+Historical untranslated placeholder tree `57291440dfad9b509a3eac1017da4f28ee7d8b94` is NOT a translation and must never be treated as one.
 
-## Additional protected current work
+On 2026-08-18 all nine complete book tree SHAs and the partial tree were confirmed identical between `main` and safety.
 
-### Evacuation
-`mavik-sklad/translations/en/work/evakuatsiia/`
-All eight stories physically saved; translation text complete.
+## Evacuation
+Location: `mavik-sklad/translations/en/work/evakuatsiia/`
+All eight English story files are physically saved. Their blob SHAs were confirmed identical between `main` and safety on 2026-08-18. See the integrity audit.
 
-### The Sculptor
-`mavik-sklad/translations/en/work/skulptor/`
-- Chapter 1: parts 1–5 complete.
-- Chapter 2: parts 1–5 saved.
-- exact continuation after Ukrainian source line `— Але будете.`
+## The Sculptor
+Location: `mavik-sklad/translations/en/work/skulptor/`
+Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
 
-### Social
-Three protected content files remain in `mavik-sklad/files/` despite historical `r188` prefixes. They are translation content, not obsolete release artifacts.
+Site-verified:
+- Chapter 1 — reader lines 26–1231;
+- Chapter 2 — reader lines 1232–2040;
+- Chapter 3 — reader lines 2041–2878.
 
-## Historical recovery commits
+Chapter 4 parts 01–38 and Chapter 5 parts 01–26 are quarantine/recovery only. Mechanical audits exist for both chapters.
 
-Key recovery milestone commit:
+Exact next canonical point remains Chapter 4 `Пам’ятка`, heading recorded line 2879; narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
+
+Do not continue from `Скульптор.docx`, old English recovery or inferred continuation. If the canonical site source cannot be physically retrieved, verified translation stops.
+
+## Social / Соціальна — EXPLICIT EXCEPTION
+The Ukrainian book is completed, but English translation remains blocked by the project-specific STOP canon until new explicit author permission.
+
+Old English Social Chapters 8–16 were intentionally deleted from `main` and safety on 2026-08-17 by explicit author decision. They are NOT protected recovery input for current translation work and must NOT be restored unless the author explicitly reverses that decision.
+
+Authority: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`.
+
+## Historical recovery milestone
+Key historical recovery commit:
 `ffd3b9cfeb6e62273385b16d9f2eb0e313837514` — recovered nine complete English translations and partial Three Novels.
 
-The existence of later site cleanup/removal commits does not erase immutable Git history or tree/blob objects. Use them for recovery only; do not restore obsolete site architecture from them.
+Historical branches/commits are recovery evidence only. Never restore obsolete site architecture or obsolete source rules from them.
