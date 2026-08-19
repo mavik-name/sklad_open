@@ -23,34 +23,50 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Canon checkpoint: `mavik-sklad/files/R215-CANON.md`
+- Current approved checkpoint: `mavik-sklad/files/R215-CANON.md`
+- Tested next-release candidate: `mavik-sklad/files/R216-CANDIDATE.md`
 - Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
-- Current structural/functional CORE base: **R215**
-- **Everything before R215 is obsolete release trash and not a working/recovery base.**
+- Locale architecture/storage: `SITE-LOCALIZATION-ARCHITECTURE-CANON.md` + `SITE-LOCALE-STORAGE-CANON.md`
+- Deploy backup: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+- Permanent SEO/entity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+- Current approved structural/functional CORE base: **R215**
+- **R216 is FINAL TESTED CANDIDATE; it becomes canonical only after explicit author approval.**
+- Everything before R215 is obsolete release trash and not a working/recovery base.
 - `/_site-state/` не перезаписувати штатним content patch.
-- Routine content changes = PATCH/OVERLAY over R215.
-- Structural/functional work starts only from R215.
+
+R216 CANDIDATE
+- Persistent binaries: ChatGPT Library `/Сайт/`.
+- FULL: `216 Збірка_Сайт_ОК.zip`.
+- PART1/PART2 + `R216-AUDIT.txt` + `R216-CHECKPOINT.txt` + `R216-CHECKSUMS.txt` лежать поруч.
+- Manifest: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`.
+- Set id: `r216-ccbfcef34fa96b48`.
+- Final deploy gate PASS: 895 managed files; PHP 37/37; JS 18/18; XML 2/2; JSON-LD 107/107; shared reader-core 42/42; UK 22 / EN 10 locale migration; rollback/database backup/media pipeline PASS.
+
+PERMANENT MAVIK SEO/ENTITY RULE FROM R216 FORWARD
+- `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` = one entity.
+- Exact/ambiguous query `mavik` is a permanent brand-search target, including cases where a user intended `mavic`.
+- Do NOT fake drone-site relevance or target generic drone/DJI product queries through spam.
+- Preserve `/mavik/`, `/about/`, stable `#website/#person`, `sameAs`, author bindings and query monitoring in every future release until explicit author reversal.
 
 ENGLISH CONTENT MAVIK.NAME
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 - Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
-- Publication-ready checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`
+- Publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`
 - Exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
 
 EN PUBLICATION STATUS
-- 10 complete English editions are validated and packaged as R215 Boss `book_patch` overlays.
-- Persistent binaries: ChatGPT Library `/Сайт/book_patches/`.
+- 10 complete English editions are verified; R216 candidate migrates them into the EN locale database.
+- Persistent previous patch binaries: ChatGPT Library `/Сайт/book_patches/`.
 - Do not retranslate these ten from scratch.
-- Active incomplete target: The Sculptor, continue from Chapter 4 using canonical R215 EPUB.
-- Three Novels Nobody Reads remains partial (Sections 1–8).
+- Active incomplete target: The Sculptor.
 - Social / Соціальна English STOP remains active.
 
 ЖОРСТКИЙ КАНОН ДЖЕРЕЛА ДЛЯ ПЕРЕКЛАДУ КНИГ
 - Єдине джерело нового англійського прозового тексту — канонічний український текст, фактично опублікований mavik.name.
-- Дозволені транспортні представлення: live reader, site clean-text reader, provenance-verified canonical R215 EPUB generated directly from the same reader body.
+- Дозволені транспортні представлення: live reader, site clean-text reader, provenance-verified canonical EPUB generated directly from the same reader body.
 - Manuscript/DOCX/old release/recovery English не є українським source authority.
 - Жодних вигадок чи доданого тексту.
 
@@ -69,7 +85,7 @@ EN PUBLICATION STATUS
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для site CORE чинний канон — **R215**.
-3. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
-4. Для готових EN-публікацій чинний `PUBLICATION-READY-R215.md`.
+2. Для site CORE чинний release authority — **R215**, доки R216 не затверджено прямо.
+3. `R216-CANDIDATE.md` — authoritative handoff для перевіреного кандидата, але не замінює release authority сам по собі.
+4. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
 5. Для «Соціальної» English STOP діє до нового прямого дозволу автора.
