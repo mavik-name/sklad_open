@@ -1,10 +1,10 @@
-# MAVIK.NAME — UNIFIED DESIGN / CONTENT / ADMIN LOCALE CANON
+# MAVIK.NAME — UNIFIED DESIGN / CONTENT / ADMIN / LANG LOCALE CANON
 
 Дата: 2026-08-19
 Статус: **HIGHEST-PRIORITY HARD LOCALIZATION CANON**
 Обов'язково для перебудови R216 і всіх наступних релізів.
 
-Цей документ має пріоритет над будь-якими попередніми формулюваннями, які можна було трактувати як окремий EN shell, окремі EN-шаблони, незалежні контентні об'єкти для мов або окреме керування локалями.
+Цей документ має пріоритет над будь-якими попередніми формулюваннями, які можна було трактувати як окремий EN shell, окремі EN-шаблони, незалежні контентні об'єкти для мов, окреме керування локалями або локалізацію через дубльовані HTML/PHP-сторінки.
 
 ## 1. ЄДИНИЙ ДИЗАЙН — РІЗНІ ЛОКАЛІ
 
@@ -23,7 +23,43 @@
 
 Якщо `/books/` і `/en/books/` відрізняються дизайном, структурою, поведінкою чи компонентами — це release-blocking CORE defect.
 
-## 2. ЄДИНЕ НАПОВНЕННЯ КАНОНІЧНИХ СТОРІНОК — РІЗНІ ЛОКАЛІ
+## 2. ЛОКАЛІЗАЦІЯ САЙТУ — ТІЛЬКИ ЧЕРЕЗ LANG FILES
+
+Уся локалізація CORE/shell/canonical pages виконується через спільний language layer.
+
+Канонічна модель:
+
+```text
+/lang/
+  uk.php   або uk.json
+  en.php   або en.json
+  es.php   або es.json
+  fr.php   або fr.json
+  de.php   або de.json
+```
+
+Точний формат може еволюціонувати, але принцип незмінний: **один template/component звертається до одного translation key, а locale підставляє значення з відповідного lang file.**
+
+Приклад:
+
+```text
+t('nav.books')
+t('books.title')
+t('books.lead')
+t('music.title')
+t('footer.rights')
+```
+
+Правила:
+1. Не створювати окремі `en/index.html`, `en/books-template.php`, `en/theme.css` як самостійні джерела дизайну/структури.
+2. EN/ES/FR/DE не мають власного hardcoded shell text у дубльованих templates.
+3. Меню, кнопки, системні labels, aria-labels, footer, canonical page headings/leads/статичні пояснення та інші CORE-controlled тексти локалізуються через lang keys.
+4. Canonical page composition лишається одна; перекладаються значення ключів.
+5. Missing required lang key для активної локалі = validation/release error, а не fallback на випадковий hardcoded EN/UA текст.
+6. Fallback допускається лише технічно контрольований і не повинен робити публічну сторінку змішаномовною.
+7. Додавання нової локалі означає додавання нового lang file + locale content payload/state, а не копіювання сторінок.
+
+## 3. ЄДИНЕ НАПОВНЕННЯ КАНОНІЧНИХ СТОРІНОК — РІЗНІ ЛОКАЛІ
 
 Канонічні public pages мають один логічний page object і одну композицію блоків. До них належать головна, каталог книг, музика, блог як системна сторінка, автор, контакти, анонси, безпека/захист, `/mavik/` та інші canonical CORE routes.
 
@@ -35,11 +71,11 @@
 - функціональність;
 - layout.
 
-Локалі містять тільки відповідні переклади полів, metadata, alt/caption та інші мовозалежні значення.
+Статичні/системні тексти canonical page беруться з lang files. Редагований авторський payload береться з logical content object.
 
 Не створювати окрему англійську композицію сторінки або незалежний EN page object.
 
-## 3. ЄДИНИЙ КОНТЕНТНИЙ ОБ'ЄКТ — ЛОКАЛІЗОВАНІ ПРЕДСТАВЛЕННЯ
+## 4. ЄДИНИЙ КОНТЕНТНИЙ ОБ'ЄКТ — ЛОКАЛІЗОВАНІ ПРЕДСТАВЛЕННЯ
 
 Для редагованого контенту існує один logical content object зі стабільним id/slug/identity.
 
@@ -55,7 +91,7 @@
 
 Локалізовані представлення не є незалежними матеріалами — це одна сутність контенту.
 
-## 4. ЄДИНЕ УПРАВЛІННЯ — ВИБІР SCOPE ЛОКАЛЕЙ
+## 5. ЄДИНЕ УПРАВЛІННЯ — ВИБІР SCOPE ЛОКАЛЕЙ
 
 Boss/адмінка єдина для всіх локалей. Не створювати окрему EN admin, UA admin або дубльовані форми керування.
 
@@ -78,7 +114,7 @@ Boss/адмінка єдина для всіх локалей. Не створю
 7. Для небезпечних масових дій на кількох локалях scope має бути очевидним і підтвердженим у самій формі.
 8. Немає окремих «редакторів EN» і «редакторів UK» — є один редактор з locale selector/scope selector.
 
-## 5. VISIBILITY / PUBLICATION STATE ПО ЛОКАЛЯХ
+## 6. VISIBILITY / PUBLICATION STATE ПО ЛОКАЛЯХ
 
 Кожен logical object має окремий visibility/publication state для кожної локалі:
 - `visible/published`;
@@ -88,9 +124,9 @@ Boss/адмінка єдина для всіх локалей. Не створю
 
 Штатна дія — `Прибрати з локалі` / locale-unpublish, а не фізичне видалення shared files.
 
-## 6. ЯКЩО ПЕРЕКЛАДУ НЕМАЄ — СТАН `HIDDEN`
+## 7. ЯКЩО ПЕРЕКЛАДУ НЕМАЄ — СТАН `HIDDEN`
 
-Якщо для конкретної локалі немає повного придатного до публікації locale payload, цей object/page автоматично має стан `hidden` у цій локалі.
+Якщо для конкретної локалі немає повного придатного до публікації locale payload або required lang keys, цей object/page автоматично має стан `hidden` у цій локалі.
 
 Заборонено публічно показувати замість відсутнього перекладу:
 - `English translation is being prepared`;
@@ -103,7 +139,7 @@ Boss/адмінка єдина для всіх локалей. Не створю
 
 Коли повний locale payload додано і він проходить validation, локальне представлення може бути переведене в visible/published.
 
-## 7. КАНОНІЧНЕ НАПОВНЕННЯ І ЛОКАЛЬНІ ВІДМІННОСТІ
+## 8. КАНОНІЧНЕ НАПОВНЕННЯ І ЛОКАЛЬНІ ВІДМІННОСТІ
 
 Canonical structure/content object один. Різниця між локалями допускається лише в:
 - мові тексту;
@@ -113,9 +149,9 @@ Canonical structure/content object один. Різниця між локаля�
 
 Не допускається незалежне розходження layout, component set, design, route semantics або object identity між локалями.
 
-## 8. RELEASE GATE / VISUAL PARITY
+## 9. RELEASE GATE / VISUAL + LANG PARITY
 
-Жоден multi-locale release не може отримати статус READY/PASS без visual parity audit.
+Жоден multi-locale release не може отримати статус READY/PASS без visual parity audit та lang-key audit.
 
 Обов'язково порівняти щонайменше:
 - `/` ↔ `/en/`;
@@ -130,15 +166,22 @@ Canonical structure/content object один. Різниця між локаля�
 
 Перевірка обов'язкова на desktop і mobile.
 
+Також обов'язково перевірити:
+- required lang keys існують в усіх active locales;
+- немає hardcoded EN/UA shell text поза lang layer;
+- немає окремих locale CSS/layout/template copies;
+- hidden state виставлений для incomplete locale payload;
+- немає публічних translation placeholders.
+
 PASS означає однаковий shell/layout/components/responsive behavior. Різниця допускається тільки через перекладений текст, довжину тексту, locale payload і свідомий locale visibility state.
 
-Якщо хоч одна локаль має окрему оболонку/стилі або canonical page без повного payload показує заглушку — release FAIL.
+Якщо хоч одна локаль має окрему оболонку/стилі, canonical page без повного payload показує заглушку або локалізація обходить lang files — release FAIL.
 
-## 9. ПРІОРИТЕТ
+## 10. ПРІОРИТЕТ
 
 Правильна модель mavik.name:
 
-**ONE SITE → ONE CORE → ONE DESIGN → ONE LOGICAL CONTENT MODEL → ONE ADMIN → MANY LOCALES.**
+**ONE SITE → ONE CORE → ONE DESIGN → ONE LANG LAYER → ONE LOGICAL CONTENT MODEL → ONE ADMIN → MANY LOCALES.**
 
 Локалі — це мовні представлення того самого сайту й тих самих content objects із власними translated payload + visibility state.
 
