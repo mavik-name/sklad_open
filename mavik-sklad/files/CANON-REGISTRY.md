@@ -25,6 +25,7 @@ Status: **AUTHORITATIVE INDEX**
 8. Routine content work — PATCH/OVERLAY поверх R215 без прихованої зміни CORE.
 9. Root `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing identity file.
 10. Перед structural/functional release обов'язково читати `SITE-TECHNICAL-ROADMAP.md`.
+11. **Blog localization hard canon:** кожен новий публічний UA-пост одночасно має отримувати повну EN-версію. Новий UA-пост без повного EN counterpart вважається незавершеною публікацією. Повний канон: `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
 
 ## R215 canonical baseline
 
