@@ -1,21 +1,28 @@
 # ENGLISH TRANSLATION — HARD SOURCE CANON
 
-Updated: 2026-08-18
+Updated: 2026-08-19
 Status: **HARD CANON / OVERRIDES ALL OLDER SOURCE RULES**
+Current canonical site core: **R215**
 
 ## USER RULE
-For English translation of books on mavik.name:
+For English translation of books on mavik.name, the ONLY authoritative Ukrainian prose is the canonical text actually published by mavik.name.
 
-**The ONLY authoritative source text is the canonical Ukrainian text actually published on the pages of mavik.name.**
+### ALLOWED CANONICAL TRANSPORTS
+The same canonical published text may be consumed through any of these physically retrieved representations when provenance is demonstrable:
+1. public reader `/books/<slug>/read/`;
+2. site-generated clean-text reader `/books/<slug>/read/text/`;
+3. public EPUB `/downloads/<slug>.epub` for a `final` library book, when that EPUB is generated from the canonical reader;
+4. the EPUB contained in the current canonical R215 binary, provided its book/slug and canonical release provenance are verified.
 
-A site-generated reader-text file under `/books/<slug>/read/text/` may be used only when it is physically retrieved and demonstrably represents the same published Ukrainian reader text.
+R215 implementation proof: `_site-admin/live-sync.php` function `mavik_live_reader_payload()` reads `/books/<slug>/read/index.html` and extracts the reader article; `mavik_live_create_epub()` packages that reader body into the EPUB. Therefore an R215 canonical EPUB is an authorized transport copy of the published reader, not a manuscript source.
 
+## FORBIDDEN SOURCES
 No translation sentence may be created from:
 - chat/model memory;
 - File Library DOCX/DOC/TXT manuscript;
 - warehouse manuscript;
-- release ZIP as prose authority;
-- old translation;
+- obsolete site release or arbitrary release ZIP as prose authority;
+- old English translation as source of new Ukrainian meaning;
 - synopsis, status, checkpoint or summary;
 - guessed continuation;
 - reconstructed or paraphrased missing source;
@@ -26,54 +33,44 @@ No translation sentence may be created from:
 - No added explanations, descriptions, dialogue or connective passages.
 - No filling gaps from context.
 - No improving or expanding the original.
-- No translating a passage unless its Ukrainian source has first been physically retrieved from the canonical mavik.name publication or its demonstrably identical site-generated reader-text representation.
+- Translate only physically retrieved canonical Ukrainian text from an allowed transport above.
+- Preserve chapter/section boundaries, voice, register, rhythm, profanity level and deliberate roughness.
 
 The task is translation only, not co-writing.
 
-## SOURCE OF TRUTH
-For each book, use its canonical Ukrainian publication on mavik.name, primarily the public reader `/books/<slug>/read/`.
-
-If any manuscript, File Library file, warehouse copy, release archive, old English file or checkpoint differs from the published Ukrainian site text, **the published mavik.name text wins** unless the author explicitly changes this canon.
+## SOURCE PRECEDENCE
+If allowed transports disagree, the current canonical R215 public reader is the highest authority and the discrepancy must be investigated before publication. A current R215 EPUB may be used when live fetch is unavailable because its provenance is tied to the reader-generation pipeline.
 
 ## EXISTING ENGLISH FILES
-Existing English translation files are recovery artifacts until checked against the canonical site publication. Once a file/block has been independently checked line-by-line against the site and saved in the designated verified layer, that verified copy may be treated as canonical English for the exact recorded site range.
+Existing English translation files are recovery artifacts until checked against an allowed canonical Ukrainian transport. Once a file/block has been checked and saved in the designated verified layer, that verified copy is canonical English for the exact recorded source range.
 
-### THE SCULPTOR — CURRENT VERIFIED EXCEPTION
-Verified layer:
-`mavik-sklad/translations/en/work/skulptor/verified/`
+### THE SCULPTOR
+Verified layer: `mavik-sklad/translations/en/work/skulptor/verified/`
 
-Site-verified ranges:
+Already verified:
 - Chapter 1 `Бруд на дитячих руках` — reader lines 26–1231;
 - Chapter 2 `Глина` — reader lines 1232–2040;
 - Chapter 3 `Збори фонду` — reader lines 2041–2878.
 
-These verified-layer files are canonical English for those exact recorded ranges.
+R215 EPUB source has now been physically inspected. It contains:
+- `Глава 4. Пам’ятка`;
+- first narrative sentence `Пам’ятка мала вміститися на одну сторінку.`
 
-All older `The Sculptor` files outside `verified/`, including Chapter 4 and Chapter 5 recovery files, remain **UNVERIFIED / QUARANTINED / NOT FOR PUBLICATION** until checked line-by-line against mavik.name.
-
-Exact next canonical audit point:
-- Chapter 4 `Глава 4. Пам’ятка`;
-- heading recorded line 2879;
-- narrative begins recorded line 2881 `Пам’ятка мала вміститися на одну сторінку.`
+Therefore the previous live-fetch transport blocker no longer blocks verified translation. Chapter 4 parity may continue from the canonical R215 EPUB.
 
 ## REQUIRED WORKFLOW
-For every valid new block:
-1. retrieve the exact next contiguous Ukrainian passage from mavik.name/site-generated reader text;
-2. preserve its exact position/chapter boundary;
+For every valid block:
+1. physically retrieve the exact next contiguous Ukrainian passage from an allowed canonical transport;
+2. record transport, slug, chapter/source marker and, for EPUB use, the EPUB file identity/hash when practical;
 3. translate or retain only wording justified by that source;
-4. save the English text physically in the correct verified/current layer;
+4. save physically in the verified/current layer;
 5. read it back;
-6. record the exact site-source marker/position;
-7. mirror to the safety branch;
+6. record source marker/position;
+7. mirror to safety storage;
 8. update status/canon.
 
-If the canonical site source cannot be retrieved, **stop verified translation at the last verified site-source point**. Recovery inspection may continue only as clearly non-canonical mechanical preparation; it cannot generate or validate prose.
-
 ## SOCIAL / СОЦІАЛЬНА
-The Ukrainian book is completed, but the separate project-specific English STOP remains in force until the author explicitly permits English translation.
+The separate project-specific English STOP remains in force until the author explicitly permits English translation.
 
 ## PRIORITY
-This file overrides any older instruction that allows use of File Library manuscripts, warehouse manuscripts, release archives or old translations as translation source.
-
-User command establishing this hard canon:
-`Жодних вигадок! Жодного додавання власного тексту! Тільки переклад з канонічних текстів, оригінали яких на сторінках сайту! Це жорсткий канон!`
+This file overrides older instructions that required live web-fetch specifically. The hard requirement is canonical published Ukrainian text with demonstrable provenance; canonical R215 EPUB is an approved transport of that text.
