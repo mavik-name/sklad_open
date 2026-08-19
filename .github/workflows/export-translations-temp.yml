@@ -4,6 +4,9 @@ on:
     paths:
       - '.github/workflows/export-translations-temp.yml'
       - 'mavik-sklad/translations/.export-trigger'
+  pull_request:
+    paths:
+      - 'mavik-sklad/translations/.export-trigger'
   workflow_dispatch:
 permissions:
   contents: read
