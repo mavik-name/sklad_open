@@ -1,17 +1,17 @@
 MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
-Оновлено: 18.08.2026
+Оновлено: 19.08.2026
 Статус: ГОЛОВНИЙ МАРШРУТИЗАТОР ДЛЯ НОВОЇ ГІЛКИ
 
 ГОЛОВНЕ ПРАВИЛО
 Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєктів.
-Не відновлювати стан із пам’яті чату, якщо на складі є актуальний START-HERE / CANON / CHECKPOINT / STATUS.
+Не відновлювати current state із пам’яті чату, якщо на складі є актуальний START-HERE / CANON / CHECKPOINT / STATUS / WORK JOURNAL.
 
 ПОРЯДОК ПРІОРИТЕТУ
 1. Цей master START-HERE.
 2. `mavik-sklad/files/CANON-REGISTRY.md`.
 3. START-HERE активного конкретного проєкту.
 4. Канон конкретного проєкту.
-5. Актуальний checkpoint/STATUS.
+5. Актуальний checkpoint/STATUS/work journal.
 6. Реальний актуальний артефакт.
 7. Universal canons.
 
@@ -23,26 +23,36 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Canon checkpoint: `mavik-sklad/files/R213-CANON-CHECKPOINT.md`
-- Current structural/functional CORE base: **R213**
-- Recovery duplicate: `mavik-sklad/recovery/R213/START-HERE-R213.md`
-- Technical recovery: `mavik-sklad/recovery/R213/TECHNICAL-RECOVERY-R213.md`
-- Integrity record: `mavik-sklad/recovery/R213/INTEGRITY-R213.txt`
-- `/_site-state/` не перезаписувати штатним deploy/patch.
-- SIMPLE FIRST, privacy-media, public-blog editorial та protected-SEO rules — обов’язкові.
-- Будь-яка наступна structural/functional робота стартує тільки від R213.
+- Canon checkpoint: `mavik-sklad/files/R215-CANON.md`
+- Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
+- Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
+- Current structural/functional CORE base: **R215**
+- **Everything before R215 is obsolete release trash and not a working/recovery base.**
+- `/_site-state/` не перезаписувати штатним content patch.
+- Routine content changes = PATCH/OVERLAY over R215.
+- Structural/functional work starts only from R215.
 
 ENGLISH CONTENT MAVIK.NAME
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 - Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
-- Continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+- Publication-ready checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`
 - Exact status: `mavik-sklad/translations/en/STATUS.md`
 - Physical workspace: `mavik-sklad/translations/en/`
 
+EN PUBLICATION STATUS
+- 10 complete English editions are validated and packaged as R215 Boss `book_patch` overlays.
+- Persistent binaries: ChatGPT Library `/Сайт/book_patches/`.
+- Do not retranslate these ten from scratch.
+- Active incomplete target: The Sculptor, continue from Chapter 4 using canonical R215 EPUB.
+- Three Novels Nobody Reads remains partial (Sections 1–8).
+- Social / Соціальна English STOP remains active.
+
 ЖОРСТКИЙ КАНОН ДЖЕРЕЛА ДЛЯ ПЕРЕКЛАДУ КНИГ
-- Єдине джерело нового або verified англійського тексту — точний український текст, фактично опублікований на `mavik.name`.
-- Якщо exact site-source недоступний — verified-переклад зупинити, не домислювати.
+- Єдине джерело нового англійського прозового тексту — канонічний український текст, фактично опублікований mavik.name.
+- Дозволені транспортні представлення: live reader, site clean-text reader, provenance-verified canonical R215 EPUB generated directly from the same reader body.
+- Manuscript/DOCX/old release/recovery English не є українським source authority.
+- Жодних вигадок чи доданого тексту.
 
 РОМАН «СОЦІАЛЬНА»
 - Start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
@@ -59,7 +69,7 @@ ENGLISH CONTENT MAVIK.NAME
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямо затверджений користувачем канон має пріоритет.
-2. Для site CORE чинний канон — **R213**.
+2. Для site CORE чинний канон — **R215**.
 3. Для English translation source найвищий пріоритет має `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
-4. Для English continuity чинний `CONTINUATION-CANON.md`, але він підпорядкований hard source canon.
+4. Для готових EN-публікацій чинний `PUBLICATION-READY-R215.md`.
 5. Для «Соціальної» English STOP діє до нового прямого дозволу автора.
