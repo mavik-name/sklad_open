@@ -1,5 +1,5 @@
 MAVIK WORKSPACE / ДАЛЬНІЙ СКЛАД — CURRENT INDEX
-Updated: 2026-08-19
+Updated: 2026-08-20
 Repository: mavik-name/sklad_open
 Branch: main
 
@@ -12,75 +12,87 @@ AUTHORITATIVE CANON REGISTRY:
 UNIVERSAL CANONS
 - writing/editing: `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
 - technical fiction control: `mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`
-- persistent storage/checkpoints: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
+- persistent checkpoints: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
 
 SITE MAVIK.NAME
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release authority: `mavik-sklad/releases/CANON.md`
 - current approved checkpoint: `mavik-sklad/files/R215-CANON.md`
-- tested next-release candidate: `mavik-sklad/files/R216-CANDIDATE.md`
+- current tested candidate: `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
+- rejected R216: `mavik-sklad/files/R216-CANDIDATE.md`
 - cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
-- technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
-- localization architecture: `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`
-- locale storage: `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`
-- deploy backup: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
 - SEO/entity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+- deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+- localization freeze: `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
 - protected SEO files: `mavik-sklad/files/PROTECTED-SEO-FILES.md`
-- reader-header canon: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
-- book-page canon: `mavik-sklad/files/kanon-storinky-knyhy.txt`
+- reader header: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
+- book page: `mavik-sklad/files/kanon-storinky-knyhy.txt`
 
 CURRENT RELEASE AUTHORITY
-- structural/functional base: **R215**
-- everything before R215 is obsolete release trash
-- R216 is **FINAL TESTED CANDIDATE**, not canonical until explicit author approval
+- approved CORE: **R215**
+- **R217_GoodRelise = FINAL TESTED CANDIDATE**
+- **R216 = REJECTED / DO NOT INSTALL**
+- do not promote R217 without direct author approval
 
-R216 CANDIDATE STORAGE
-ChatGPT Library `/Сайт/`:
-- `216 Збірка_Сайт_ОК.zip`
-- `216 Збірка_Сайт_ОК_PART1.zip`
-- `216 Збірка_Сайт_ОК_PART2.zip`
-- `R216-AUDIT.txt`
-- `R216-CHECKPOINT.txt`
-- `R216-CHECKSUMS.txt`
+CURRENT PRIORITY
+- single Ukrainian `uk-UA` site;
+- max performance/indexing/crawlability/Ukrainian reach;
+- first-party Boss statistics and SEO monitoring;
+- install ZIP contains only required live/Boss/deploy files.
 
-R216 identifiers:
-- manifest: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`
-- multipart set: `r216-ccbfcef34fa96b48`
-- FULL SHA-256: `a309b5eff63d92d6b9b910a802a4450dd5de1075ec4858c3cb92b39182449760`
-- PART1 SHA-256: `dcf769b5e4f4bf6e586e2a548376dce6d15d523487659c665b29049264c8e602`
-- PART2 SHA-256: `80a534ceadf3a8233532ca42fc15fcc7de1c58891722b7f4930baaed24e9cc62`
+R217_GOODRELISE STORAGE — ChatGPT Library `/Сайт/`
+- `R217_GoodRelise.zip`
+- `R217_GoodRelise_PART1.zip`
+- `R217_GoodRelise_PART2.zip`
+- `R217_GoodRelise-AUDIT.txt`
+- `R217_GoodRelise-CHECKPOINT.txt`
+- `R217_GoodRelise-CHECKSUMS.txt`
 
-R216 HARD SEO/ENTITY STRATEGY — INHERITED BY ALL FUTURE RELEASES
+R217 identifiers:
+- managed files: 284
+- manifest: `f05a3f5f9d02ad357b88006480c56d8845ba8bcec8dd24f20baf2563d38d0219`
+- set: `r217-f05a3f5f9d02ad35`
+- FULL: `2234dcb886413cd66e5fb75d2c1c1ffe99f8c3c639a4615ae89e6c72d2a5b22d`
+- PART1: `11bd21282ae7fc27760e1824966801df5be1599630f4ddb238bdeed9a1ecab67`
+- PART2: `e0115a39790123c94950678f6386abc6c50ff7f51c79576cd2dd9ed4ebcc3059`
+
+R217 gate:
+- PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81
+- internal refs 5329/5329
+- sitemap 82 unique canonical URLs + 11 images
+- EPUB 21/21 integrity
+- book-cover PNG 0; EPUB-cover PNG 0
+- FULL/PART validators PASS
+- R215→R217 and R216→R217 synthetic deploy PASS
+- protected state preserved; old localization/PWA/empty legacy dirs cleaned
+
+MAVIK SEO/ENTITY — ACTIVE
 - one entity: `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`
-- exact/ambiguous query `mavik` is a permanent brand-search target
-- `/mavik/` is brand/entity landing; `/about/` is author page
-- stable `https://mavik.name/#website` and `https://mavik.name/#person`
-- do NOT target generic drone/DJI product queries with doorway/keyword spam
-- monitor `mavik`, `MaVik`, `мавік`, `mavik name`, author-name queries and Google `mavik → mavic` rewriting
-- full rules: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+- exact/ambiguous `mavik` remains permanent brand target
+- `/mavik/`, `/about/`, `#website`, `#person` preserved
+- no fake DJI/drone relevance
 
-ENGLISH CONTENT
-- start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-- source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
-- hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
-- publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`
-- status: `mavik-sklad/translations/en/STATUS.md`
-- workspace: `mavik-sklad/translations/en/`
-- 10 complete EN editions exist; R216 candidate migrates them into the new EN locale database
-- active incomplete target: The Sculptor
-- Social / Соціальна English STOP remains active
+LOCALIZATION / TRANSLATION — FROZEN
+Implementation paused and excluded from R217.
+Recovery:
+- GitHub branch `freeze/localization-2026-08-19`
+- Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`
+- `mavik-sklad/translations/en/`
+- `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
 
-СОЦІАЛЬНА
-- start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
-- canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
-- manuscript: `mavik-sklad/files/Соціальна.docx`
-- English STOP: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`
+ENGLISH DATA PRESERVED
+- `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
+- `mavik-sklad/files/EN-SOURCE-POLICY.md`
+- `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+- `mavik-sklad/translations/en/STATUS.md`
+- 10 complete EN editions preserved; The Sculptor work preserved; Social English STOP preserved.
 
-ІНШІ АКТИВНІ ПРОЄКТИ
+OTHER PROJECTS
+- Соціальна: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 - Всесвіт 25: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
 - Код легенди: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
 - Евакуація: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
-- НФ роман-притча про поколіннєвий корабель: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
+- Generation Ship: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
 - Статусна: `mavik-sklad/files/STATUSNA/START-HERE.md`
 
-For any named project: read warehouse START-HERE/canon/status first. Do not reconstruct active state from chat memory when persistent project documentation exists.
+For any project, read its persistent START-HERE/canon/status first. Never reconstruct active state from chat memory when persistent documentation exists.
