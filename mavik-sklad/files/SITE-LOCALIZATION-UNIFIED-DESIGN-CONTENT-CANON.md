@@ -25,7 +25,7 @@
 
 ## 2. ЛОКАЛІЗАЦІЯ САЙТУ — ТІЛЬКИ ЧЕРЕЗ LANG FILES
 
-Уся локалізація CORE/shell/canonical pages виконується через спільний language layer.
+Уся локалізація CORE/shell/canonical static pages виконується через спільний language layer.
 
 Канонічна модель:
 
@@ -47,6 +47,7 @@ t('nav.books')
 t('books.title')
 t('books.lead')
 t('music.title')
+t('about.body_01')
 t('footer.rights')
 ```
 
@@ -59,7 +60,39 @@ t('footer.rights')
 6. Fallback допускається лише технічно контрольований і не повинен робити публічну сторінку змішаномовною.
 7. Додавання нової локалі означає додавання нового lang file + locale content payload/state, а не копіювання сторінок.
 
-## 3. ЄДИНЕ НАПОВНЕННЯ КАНОНІЧНИХ СТОРІНОК — РІЗНІ ЛОКАЛІ
+## 3. СТАТИЧНІ КАНОНІЧНІ СТОРІНКИ — ОДИН І ТОЙ САМИЙ ЗМІСТ, РІЗНІ МОВИ
+
+Для статичних канонічних сторінок діє жорстка семантична parity 1:1.
+
+До них належать щонайменше:
+- `Автор` / `About`;
+- `Контакти` / `Contacts`;
+- `Безпека/Захист`;
+- `/mavik/`;
+- інші статичні інформаційні сторінки, які є частиною canonical CORE.
+
+Правильна модель:
+- один semantic source / один набір змістових блоків;
+- той самий порядок блоків;
+- ті самі факти;
+- ті самі твердження;
+- та сама повнота змісту;
+- та сама функціональна роль сторінки;
+- різниться тільки мова перекладу та locale-specific metadata, якщо це справді мовозалежне.
+
+Наприклад, `/about/` і `/en/about/` повинні містити **один і той самий текст за змістом**, але українською та англійською відповідно. EN не може бути скороченою, розширеною або концептуально іншою біографією.
+
+Переклад статичних canonical pages зберігається через lang keys / lang files, а не через окремі незалежні EN page files.
+
+Якщо для статичної canonical page немає повного перекладу потрібною мовою — її представлення в цій локалі має бути `hidden` до появи повного перекладу.
+
+Заборонено:
+- скорочувати EN-версію статичної сторінки відносно UA без прямого рішення автора;
+- додавати в одну локаль факти/блоки, яких немає в іншій;
+- вести незалежне редагування змісту UA та EN статичної сторінки;
+- показувати заглушку замість перекладу.
+
+## 4. ЄДИНЕ НАПОВНЕННЯ КАНОНІЧНИХ СТОРІНОК — РІЗНІ ЛОКАЛІ
 
 Канонічні public pages мають один логічний page object і одну композицію блоків. До них належать головна, каталог книг, музика, блог як системна сторінка, автор, контакти, анонси, безпека/захист, `/mavik/` та інші canonical CORE routes.
 
@@ -75,7 +108,7 @@ t('footer.rights')
 
 Не створювати окрему англійську композицію сторінки або незалежний EN page object.
 
-## 4. ЄДИНИЙ КОНТЕНТНИЙ ОБ'ЄКТ — ЛОКАЛІЗОВАНІ ПРЕДСТАВЛЕННЯ
+## 5. ЄДИНИЙ КОНТЕНТНИЙ ОБ'ЄКТ — ЛОКАЛІЗОВАНІ ПРЕДСТАВЛЕННЯ
 
 Для редагованого контенту існує один logical content object зі стабільним id/slug/identity.
 
@@ -91,7 +124,7 @@ t('footer.rights')
 
 Локалізовані представлення не є незалежними матеріалами — це одна сутність контенту.
 
-## 5. ЄДИНЕ УПРАВЛІННЯ — ВИБІР SCOPE ЛОКАЛЕЙ
+## 6. ЄДИНЕ УПРАВЛІННЯ — ВИБІР SCOPE ЛОКАЛЕЙ
 
 Boss/адмінка єдина для всіх локалей. Не створювати окрему EN admin, UA admin або дубльовані форми керування.
 
@@ -113,8 +146,9 @@ Boss/адмінка єдина для всіх локалей. Не створю
 6. Boss завжди показує поточний scope перед Save/Publish/Unpublish.
 7. Для небезпечних масових дій на кількох локалях scope має бути очевидним і підтвердженим у самій формі.
 8. Немає окремих «редакторів EN» і «редакторів UK» — є один редактор з locale selector/scope selector.
+9. Для статичних canonical pages зміна змісту є зміною semantic source і має бути відображена перекладом в усіх опублікованих локалях; якщо переклад ще не оновлено, відповідна локаль тимчасово `hidden`/needs-translation до синхронізації.
 
-## 6. VISIBILITY / PUBLICATION STATE ПО ЛОКАЛЯХ
+## 7. VISIBILITY / PUBLICATION STATE ПО ЛОКАЛЯХ
 
 Кожен logical object має окремий visibility/publication state для кожної локалі:
 - `visible/published`;
@@ -124,7 +158,7 @@ Boss/адмінка єдина для всіх локалей. Не створю
 
 Штатна дія — `Прибрати з локалі` / locale-unpublish, а не фізичне видалення shared files.
 
-## 7. ЯКЩО ПЕРЕКЛАДУ НЕМАЄ — СТАН `HIDDEN`
+## 8. ЯКЩО ПЕРЕКЛАДУ НЕМАЄ — СТАН `HIDDEN`
 
 Якщо для конкретної локалі немає повного придатного до публікації locale payload або required lang keys, цей object/page автоматично має стан `hidden` у цій локалі.
 
@@ -139,19 +173,21 @@ Boss/адмінка єдина для всіх локалей. Не створю
 
 Коли повний locale payload додано і він проходить validation, локальне представлення може бути переведене в visible/published.
 
-## 8. КАНОНІЧНЕ НАПОВНЕННЯ І ЛОКАЛЬНІ ВІДМІННОСТІ
+## 9. КАНОНІЧНЕ НАПОВНЕННЯ І ЛОКАЛЬНІ ВІДМІННОСТІ
 
 Canonical structure/content object один. Різниця між локалями допускається лише в:
 - мові тексту;
 - locale-specific metadata;
 - visibility/publication state;
-- там, де прямо дозволено автором, локальному порядку/показі матеріалу.
+- там, де прямо дозволено автором, локальному порядку/показі редагованого матеріалу.
+
+Для статичних canonical pages локальні відмінності змісту не допускаються без прямого рішення автора.
 
 Не допускається незалежне розходження layout, component set, design, route semantics або object identity між локалями.
 
-## 9. RELEASE GATE / VISUAL + LANG PARITY
+## 10. RELEASE GATE / VISUAL + LANG + SEMANTIC PARITY
 
-Жоден multi-locale release не може отримати статус READY/PASS без visual parity audit та lang-key audit.
+Жоден multi-locale release не може отримати статус READY/PASS без visual parity audit, lang-key audit та semantic parity audit статичних сторінок.
 
 Обов'язково порівняти щонайменше:
 - `/` ↔ `/en/`;
@@ -170,18 +206,19 @@ Canonical structure/content object один. Різниця між локаля�
 - required lang keys існують в усіх active locales;
 - немає hardcoded EN/UA shell text поза lang layer;
 - немає окремих locale CSS/layout/template copies;
+- static canonical pages мають однаковий зміст/структуру у перекладі;
 - hidden state виставлений для incomplete locale payload;
 - немає публічних translation placeholders.
 
-PASS означає однаковий shell/layout/components/responsive behavior. Різниця допускається тільки через перекладений текст, довжину тексту, locale payload і свідомий locale visibility state.
+PASS означає однаковий shell/layout/components/responsive behavior і, для статичних canonical pages, однаковий зміст у перекладі. Різниця допускається тільки через мову, довжину перекладеного тексту, locale metadata та свідомий visibility state.
 
-Якщо хоч одна локаль має окрему оболонку/стилі, canonical page без повного payload показує заглушку або локалізація обходить lang files — release FAIL.
+Якщо хоч одна локаль має окрему оболонку/стилі, canonical page без повного payload показує заглушку, статична сторінка має інший зміст або локалізація обходить lang files — release FAIL.
 
-## 10. ПРІОРИТЕТ
+## 11. ПРІОРИТЕТ
 
 Правильна модель mavik.name:
 
-**ONE SITE → ONE CORE → ONE DESIGN → ONE LANG LAYER → ONE LOGICAL CONTENT MODEL → ONE ADMIN → MANY LOCALES.**
+**ONE SITE → ONE CORE → ONE DESIGN → ONE LANG LAYER → ONE SEMANTIC STATIC CONTENT → ONE LOGICAL EDITABLE CONTENT MODEL → ONE ADMIN → MANY LOCALES.**
 
 Локалі — це мовні представлення того самого сайту й тих самих content objects із власними translated payload + visibility state.
 
