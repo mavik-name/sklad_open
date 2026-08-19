@@ -89,6 +89,16 @@ Other incomplete work:
 
 Social / Соціальна: **NO ENGLISH TRANSLATION / STOP** remains active until explicit author reversal.
 
+## CLEANUP RESULT — 2026-08-19
+
+Active release/storage cleanup completed after R215 canonization:
+- ChatGPT Library `/Сайт/` contains only the R215 full/PART binaries, R215 audit/checkpoint/checksums, `book_patches/` and project-content folder; R214 full/PART/checkpoint/checksum were overwritten with obsolete markers and deleted.
+- obsolete `mavik-sklad/files/R214-CANON.md` removed from current GitHub tree.
+- temporary `.github/workflows/export-translations-temp.yml` used only to retrieve the translation workspace was removed from current GitHub tree.
+- temporary PR #1 was closed unmerged.
+- connector does not expose delete-ref; temporary branch `temp/export-translations-20260819` was force-aligned to current `main`, leaving **0 commit / 0 file difference** and no unique temporary content.
+- Git commit history and provider trash/retention are historical storage and are not claimed to be physically erased by normal file deletion.
+
 ## MANDATORY TECHNICAL ROADMAP
 
 Next structural/functional work must include or continue the automatic cover media pipeline:
@@ -107,10 +117,12 @@ Full rules: `SITE-TECHNICAL-ROADMAP.md`.
 ## NEW-BRANCH START RULE
 
 For any new site branch read, in order:
-1. `mavik-sklad/releases/CANON.md`
-2. `mavik-sklad/files/R215-CANON.md`
-3. this journal
-4. `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
-5. relevant project/translation checkpoint.
+1. `mavik-sklad/START-HERE.txt`
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. `mavik-sklad/releases/CANON.md`
+4. `mavik-sklad/files/R215-CANON.md`
+5. this journal
+6. `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
+7. relevant project/translation checkpoint.
 
 Never reconstruct current state from old release archives or chat memory when these checkpoints exist.
