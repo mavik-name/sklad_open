@@ -2,33 +2,33 @@ MAVIK.NAME — START HERE
 Оновлено: 19.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R213-reload.
-R213 — попередник, більше не робоча база.
-R214 WIP — зібраний від старого R213 і НЕ МОЖЕ використовуватися без повного rebase на R213-reload.
+ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R214.
 
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R213-RELOAD-CANON.md`.
+2. Прочитати `mavik-sklad/files/R214-CANON.md`.
 3. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
 4. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
 5. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
 6. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-7. Не перезаписувати `/_site-state/` штатним deploy/patch.
+7. Не перезаписувати `/_site-state/` штатним content patch.
 8. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
 КНИГИ / SEO
 - Канонічний стан: 21 книга, 21 final, 0 beta, EPUB 21/21.
 - `publication_mode` — єдине джерело істини.
-- `final ↔ beta` автоматично синхронізує EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata та related public/SEO artifacts.
+- `final ↔ beta` автоматично синхронізує EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata, structured data та динамічні статусні SEO-описи.
 - Основний `/read/` final-книги: `index,follow`, self-canonical, у sitemap.
 - `/read/text/`: завжди `noindex,follow`, canonical на основну `/read/`.
-- Sitemap канонічного R213-reload: 86 unique URLs.
+- Sitemap: 86 унікальних page URL; image entries живуть у власному image namespace.
+- EPUB regeneration: ZipArchive з fallback через PharData.
 
 STATE / DEPLOY
-- `/_site-state/` — protected live state.
+- `/_site-state/` — protected live state для контентних налаштувань.
 - Deploy/patch не повинен скидати live focus, порядок, статуси або media bindings.
-- Будь-яка structural/functional робота стартує ТІЛЬКИ від R213-reload.
-- Routine content work — PATCH/OVERLAY поверх R213-reload.
+- Після успішного full/multipart deploy старі release-owned файли, migration markers, deployment history і rollback backups попередньої збірки очищуються.
+- Будь-яка structural/functional робота стартує ТІЛЬКИ від R214.
+- Routine content work — PATCH/OVERLAY поверх R214.
 
 SEO
 - `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing key.
@@ -40,4 +40,4 @@ MAINTENANCE
 ENGLISH CONTENT
 Перед English-роботою читати чинні EN canons. Єдине джерело нового verified English-тексту книги — точний український текст, фактично опублікований на mavik.name.
 
-ЖОРСТКЕ ПРАВИЛО: жодна стара збірка або кандидат, зібраний не від R213-reload, не може бути використаний як база наступної роботи.
+ЖОРСТКЕ ПРАВИЛО: жоден попередній реліз, його ZIP, checkpoint, recovery або candidate не використовується як база. Єдина робоча база — R214.
