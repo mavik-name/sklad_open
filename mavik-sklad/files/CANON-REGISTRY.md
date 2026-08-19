@@ -7,21 +7,20 @@ Status: **AUTHORITATIVE INDEX**
 
 - Site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Canon checkpoint: `mavik-sklad/files/R213-RELOAD-CANON.md`
-- Sole structural/functional CORE base: **R213-reload**
-- Direct predecessor: R213 — superseded, not a working base
-- R214 WIP: built from superseded R213; **invalid until fully rebased onto R213-reload**
+- Canon checkpoint: `mavik-sklad/files/R214-CANON.md`
+- Sole structural/functional CORE base: **R214**
 
 ### Hard rules
 
-1. Будь-яка наступна site structural/functional робота стартує тільки від **R213-reload**.
+1. Будь-яка наступна site structural/functional робота стартує тільки від **R214**.
 2. `publication_mode` — єдине джерело істини для статусу книги та похідного SEO/public state.
-3. `final ↔ beta` має автоматично синхронізувати EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata та related public/SEO artifacts.
+3. `final ↔ beta` автоматично синхронізує EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata, structured data та статусні SEO-описи.
 4. Основний `/read/` final-книги індексується; `/read/text/` завжди `noindex,follow` з canonical на основну читанку.
-5. `/_site-state/` — protected live state; deploy/patch не повинен ламати узгодженість live/public/search state.
-6. Routine content work — patch/overlay без прихованих CORE-змін.
-7. Root `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing identity file.
-8. Майбутня збірка стає каноном лише після окремого прямого затвердження автора.
+5. EPUB regeneration має працювати і через ZipArchive, і через PharData fallback.
+6. `/_site-state/` — protected live state; deploy/patch не повинен ламати узгодженість live/public/search state.
+7. Після успішного нового full/multipart release старі rollback/release artifacts очищуються з робочого стану.
+8. Routine content work — patch/overlay без прихованих CORE-змін.
+9. Root `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing identity file.
 
 ## Canonical state
 
@@ -30,7 +29,9 @@ Status: **AUTHORITATIVE INDEX**
 - Beta: 0
 - EPUB: 21/21
 - Main indexable readers: 21
-- Sitemap: 86 unique URLs
+- Sitemap page URLs: 86 unique
+- Public JSON-LD: 55 valid blocks
+- PHP: 35/35 lint OK
 
 ## Other active canons
 
@@ -45,4 +46,4 @@ Status: **AUTHORITATIVE INDEX**
 
 ## Conflict rule
 
-Останній прямо затверджений користувачем канон має найвищий пріоритет. Для site CORE авторитетний тільки **R213-reload**.
+Останній прямо затверджений користувачем канон має найвищий пріоритет. Для site CORE авторитетний тільки **R214**.
