@@ -1,94 +1,43 @@
 MAVIK.NAME — START HERE
-Оновлено: 18.08.2026
+Оновлено: 19.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R213.
-ПОТОЧНИЙ КАНДИДАТ: R214 — SEO / CLEANUP, НЕ КАНОН.
+ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R213-reload.
+R213 — попередник, більше не робоча база.
+R214 WIP — зібраний від старого R213 і НЕ МОЖЕ використовуватися без повного rebase на R213-reload.
 
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R213-CANON-CHECKPOINT.md`.
-3. Якщо продовжується робота з поточним кандидатом — прочитати `mavik-sklad/files/R214-WIP-CHECKPOINT.md`.
-4. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
-5. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
-6. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
-7. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-8. Не перезаписувати `/_site-state/` штатним deploy/patch.
-9. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+2. Прочитати `mavik-sklad/files/R213-RELOAD-CANON.md`.
+3. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
+4. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
+5. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
+6. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
+7. Не перезаписувати `/_site-state/` штатним deploy/patch.
+8. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
-SIMPLE FIRST — ЖОРСТКИЙ КАНОН
-- Робити швидко, якісно і максимально просто.
-- Спочатку найпростіше рішення, яке повністю закриває задачу.
-- Не додавати зайві dropdown, preview, режими, дублікати, підсистеми або workflow.
-- Якщо два варіанти однаково дієві — брати простіший для розуміння, перевірки, підтримки й відкату.
-
-ПРИВАТНІСТЬ МЕДІА
-- Приватні фото/відео автора не є загальною медіатекою.
-- Дозвіл на використання завжди локальний і діє лише для конкретної прямо погодженої задачі.
-- Без нового прямого дозволу не використовувати приватні матеріали або похідні від них у нових публічних матеріалах.
-
-БЛОГ
-- Тематика: література, твори автора, задуми, ідеї, читач.
-- Не робити блог технологічним і не акцентувати ШІ в літературному контенті.
-- Виняток — музика, де згадка ШІ допустима як чесний опис аранжування/виконання.
-- Нормальна публікація нового блогу = CONTENT-ONLY ZIP PATCH ЧЕРЕЗ BOSS.
-- Без FTP, standalone PHP installer, `?apply=1` і без нового CORE-релізу лише заради блогу.
-- Великий пост «У фокусі» і три малі картки на головній беруться з одного актуального списку блогу.
-- Вилучені старі пости не повинні залишатися читабельними: для явного видалення застосовувати 410/cleanup, а фізичне сміття прибирати idempotent cleanup.
-
-КНИГИ / АНОНСИ
-- При додаванні книги автор обирає `Бібліотека` або `Анонси`.
-- Анонс — статус тієї самої книги, не окрема сутність.
-- У редагуванні книги статус можна змінювати в обидва боки.
-- `Опис для анонсу` — редаговане поле.
-- Обкладинка анонсу береться з книги.
-- Canonical book page є публічною незалежно від placement, тому всі публічні book pages повинні входити в sitemap.
-
-CONTACT / MAIL
-- Public `Контакт / Contact` працює в global public shell.
-- Contact form: ім’я, email, тема, повідомлення; CSRF + honeypot + simple rate-limit.
-- Primary delivery: `/_site-state/contact-inbox/`; backup email: `site@mavik.name`.
-- Boss top nav: один пункт `Пошта` + маленький числовий unread badge. Без dropdown/preview/pulse.
-
-PUBLIC SHELL
-- Один global public shell.
-- Font-family: `Georgia, 'Times New Roman', serif`.
-- Breakpoints: mobile `<=767`, tablet `768–1099`, desktop `>=1100`.
-- `Назад` — перший пункт меню внутрішньої сторінки.
-- Desktop active menu item — золотий.
-- Public share action — `Поділитись`.
-
-READER / PWA
-- Mobile-only install flow.
-- Desktop без install UI і без audio-reader UI.
-- Mobile `Читати` = текст.
-- Mobile `Слухати` = explicit listen mode.
-- Central audio control: `▶ Слухати ↔ ⏸ Пауза`.
+КНИГИ / SEO
+- Канонічний стан: 21 книга, 21 final, 0 beta, EPUB 21/21.
+- `publication_mode` — єдине джерело істини.
+- `final ↔ beta` автоматично синхронізує EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata та related public/SEO artifacts.
+- Основний `/read/` final-книги: `index,follow`, self-canonical, у sitemap.
+- `/read/text/`: завжди `noindex,follow`, canonical на основну `/read/`.
+- Sitemap канонічного R213-reload: 86 unique URLs.
 
 STATE / DEPLOY
 - `/_site-state/` — protected live state.
-- Deploy/patch не повинен скидати live focus, порядок, анонсні статуси або media bindings.
-- User media відокремлена від release-owned assets.
-- Media delete check дивиться на активні bindings/state і показує реальне місце використання.
+- Deploy/patch не повинен скидати live focus, порядок, статуси або media bindings.
+- Будь-яка structural/functional робота стартує ТІЛЬКИ від R213-reload.
+- Routine content work — PATCH/OVERLAY поверх R213-reload.
 
-SEO / ANALYTICS
-- `analytics/data` створюється runtime; writable перевіряється diagnostics/self-test.
-- Books state/public/meta/JSON-LD/sitemap синхронізуються з актуального стану.
+SEO
 - `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing key.
-- Контентні зміни мають лишати узгодженими public state і search state: links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та SEO self-test — де релевантно.
-- R214 candidate додає одноразовий full sitemap refresh через IndexNow і Bing (якщо Bing key уже є), плюс dead-URL notification для вилученого legacy blog URL.
+- Public/search state має залишатися узгодженим: links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та SEO self-test — де релевантно.
 
 MAINTENANCE
 - Один global maintenance mode для всього сайту.
 
 ENGLISH CONTENT
-Перед English-роботою читати:
-- `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`;
-- `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`;
-- `mavik-sklad/files/EN-SOURCE-POLICY.md`;
-- `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
-- `mavik-sklad/translations/en/STATUS.md`.
+Перед English-роботою читати чинні EN canons. Єдине джерело нового verified English-тексту книги — точний український текст, фактично опублікований на mavik.name.
 
-Єдине джерело нового English-тексту книги — канонічний український текст, фактично опублікований на mavik.name. Якщо exact site-source недоступний — переклад зупинити, не домислювати.
-
-Будь-яка нова structural/functional робота стартує тільки від R213. R214 лишається кандидатом до прямого затвердження автора.
+ЖОРСТКЕ ПРАВИЛО: жодна стара збірка або кандидат, зібраний не від R213-reload, не може бути використаний як база наступної роботи.
