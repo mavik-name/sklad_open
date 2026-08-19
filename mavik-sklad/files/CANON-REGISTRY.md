@@ -9,75 +9,74 @@ Status: **AUTHORITATIVE INDEX**
 - Site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
 - Current canonical checkpoint: `mavik-sklad/files/R215-CANON.md`
-- Tested next-release candidate: `mavik-sklad/files/R216-CANDIDATE.md`
-- Cross-branch work journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
+- R216 status/checkpoint: `mavik-sklad/files/R216-CANDIDATE.md`
+- Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
+- Highest-priority localization canon: `mavik-sklad/files/SITE-LOCALIZATION-UNIFIED-DESIGN-CONTENT-CANON.md`
+- All-pages locale parity override: `mavik-sklad/files/SITE-ALL-PAGES-LOCALE-PARITY-OVERRIDE.md`
 - Localization architecture canon: `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`
 - Locale storage canon: `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`
 - Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
 - SEO identity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-- Sole approved structural/functional CORE base: **R215** until R216 is explicitly approved by the author.
 
-### Hard rules
+## CURRENT RELEASE AUTHORITY
 
-1. Будь-яка site structural/functional робота стартує тільки від **R215** до прямого затвердження R216; `R216-CANDIDATE.md` є перевіреним кандидатом, але ще не release authority.
-2. Усе до R215 — obsolete release trash; не використовувати як робочу, recovery або comparison base без прямої історичної вимоги автора.
-3. `publication_mode` — джерело істини для статусу української книги в R215; R216 переводить locale-aware publication state у physically separate locale databases.
-4. `final ↔ beta` синхронізує EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata, structured data та status-dependent SEO copy.
-5. Основний `/read/` final-книги індексується; `/read/text/` — `noindex,follow`, canonical на main reader.
-6. EPUB regeneration: ZipArchive + PharData fallback.
-7. `/_site-state/` — protected live state; routine patch/deploy не повинен скидати live focus, порядок, статуси або media bindings.
-8. Routine content work — PATCH/OVERLAY без прихованої зміни CORE.
-9. Root `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing identity file.
-10. Перед structural/functional release обов'язково читати `SITE-TECHNICAL-ROADMAP.md`.
-11. **Blog locale scope:** Boss має явний multi-select локалей публікації. Дефолт може бути UA+EN, але автор визначає фактичний scope. Повний канон: `PUBLIC-BLOG-EDITORIAL-CANON.md` + `SITE-LOCALIZATION-ARCHITECTURE-CANON.md`.
-12. **Localization architecture:** локалі є функціональними дзеркалами на одному CORE; системні тексти — через lang/locale layer; авторський контент — locale content state/patches без зміни CORE.
-13. **Locale storage:** фізичні контентні файли спільні; окремими є папки тільки для locale databases/registries/bindings. Патч змінює лише явно задекларовані locale targets. Штатне прибирання матеріалу в Boss — тільки `Прибрати з локалі`, без фізичного видалення shared file.
-14. **R216 migration:** 10 уже встановлених EN book editions мають бути перенесені в нову EN locale database/bindings; старий `_published`/legacy marker state видаляється лише після успішної міграції й не лишається паралельним source of truth.
-15. **SEO/entity hard canon від R216 і назавжди далі:** `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`; exact/ambiguous query `mavik` є окремою довгостроковою SEO-ціллю. Не ранжувати сайт штучно за загальними drone/DJI product queries. Повний спадковий канон: `SITE-SEO-IDENTITY-CANON.md`.
-16. **Deploy backup від R216:** persistent backup = mutable database/JSON state only; affected CORE/shared files = short-lived transaction snapshot. Повний канон: `SITE-DEPLOY-BACKUP-CANON.md`.
-17. Усі наступні збірки повинні успадковувати SEO/entity contract R216 автоматично, доки автор прямо його не змінить.
+**R215 remains the sole approved structural/functional CORE base.**
 
-## R216 tested final candidate — 2026-08-19
+The previous R216 binary candidate is **REJECTED / DO NOT INSTALL / REBUILD REQUIRED** because visual/semantic locale parity failed. Backend/static/deploy tests from that artifact are historical technical results only and do not constitute a release PASS.
 
-Candidate checkpoint: `mavik-sklad/files/R216-CANDIDATE.md`.
-Persistent binaries: ChatGPT Library `/Сайт/`.
+## HIGHEST-PRIORITY LOCALIZATION MODEL
 
-- Managed files: 895.
-- Manifest SHA-256: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`.
-- Multipart set: `r216-ccbfcef34fa96b48`.
-- FULL: `a309b5eff63d92d6b9b910a802a4450dd5de1075ec4858c3cb92b39182449760`.
-- PART1: `dcf769b5e4f4bf6e586e2a548376dce6d15d523487659c665b29049264c8e602`.
-- PART2: `80a534ceadf3a8233532ca42fc15fcc7de1c58891722b7f4930baaed24e9cc62`.
+This model overrides any older ambiguous wording:
 
-Release gate passed: PHP 37/37; JS 18/18; XML 2/2; JSON-LD 107/107; shared reader-core 42/42; real FULL deployment over R215+10 EN patches PASS; locale migration UK 22 / EN 10 PASS; DB-only backup + transaction rollback PASS; media pipeline PASS.
+**ONE SITE → ONE CORE → ONE DESIGN → ONE PAGE MODEL → ONE LANG LAYER → ONE LOGICAL CONTENT MODEL → ONE ADMIN → MANY LOCALES.**
 
-**R216 is not canonical until explicit author approval. R215 remains release authority until then.**
+Hard rules:
+1. **All pages have the same design in all locales.** Same layout, component tree, CSS, typography, cards, spacing, responsive behavior, menus, reader shell, controls and functionality.
+2. **Homepage/title page is the same page in every locale.** `/` and `/en/` use the same template/components/blocks/order/content model; only language values differ.
+3. The same rule applies to every public route: books, book pages, readers, music, blog, author, contacts, security, `/mavik/`, announcements and all other pages.
+4. **Localization of shell/canonical static pages is only through lang files.** No independent EN HTML/PHP/CSS/layout source.
+5. **Static canonical pages have the same semantic text in every locale, only translated.** Example: `Автор` and `About` are the same content 1:1 in different languages.
+6. **Editable content is one logical object** with localized payloads, not independent UA/EN objects.
+7. **One Boss/admin for all locales.** Each content operation has explicit locale scope: one locale, several, or all active locales.
+8. CORE/design changes automatically affect all locales.
+9. Each logical content object has per-locale visibility/publication state.
+10. If a locale translation/payload is absent or incomplete, that locale representation is **hidden**. No placeholders, no partial translation pages, no Ukrainian text under EN URLs.
+11. A multi-locale release cannot be READY/PASS without desktop + mobile visual parity, lang-key parity and semantic parity audits.
+12. Any separate locale shell/design is a release-blocking defect.
 
-## R215 canonical baseline
+Primary authority:
+- `SITE-LOCALIZATION-UNIFIED-DESIGN-CONTENT-CANON.md`
+- `SITE-ALL-PAGES-LOCALE-PARITY-OVERRIDE.md`
 
-- Public book objects: 22 = 21 final library + 1 announcement.
-- Ukrainian EPUB: 21/21.
-- Main indexable Ukrainian readers: 21.
-- Sitemap baseline: 86 unique canonical page URLs + 11 image entries.
-- PHP: 35/35; JS: 17/17; XML: 2/2.
-- Crawler verification: 86 URLs × Browser/Googlebot/Bingbot/OAI-SearchBot/ChatGPT-User = 430/430 HTTP 200 in verified Apache configuration.
+## R216 REBUILD REQUIREMENTS
 
-## English publication state before R216 migration
+R216 must be rebuilt from R215 while retaining already approved R216 technical intentions where compatible:
+- locale-aware publication state and isolated locale databases/bindings;
+- shared physical content files;
+- locale-unpublish instead of routine physical file deletion;
+- declared locale targets for patches;
+- migration of 10 verified EN editions into the locale model;
+- database-only persistent deploy backup + short-lived transaction rollback;
+- responsive media pipeline;
+- MaVik/Mavik/Мавік SEO/entity package;
+- query `mavik` long-term brand strategy.
 
-Publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`.
-Persistent binaries: ChatGPT Library `/Сайт/book_patches/`.
+But the rebuild must remove the separate EN public shell and implement all localization through the one shared page/design/lang architecture.
 
-10 complete English editions exist and were delivered as R215 native Boss book patches: Mom, I Want to Live!; The Nameless; The Man Without an Account; Rejection in Advance; Transfer; Solya...; Patterns of Self-Reflection; You and I...; The Gospel According to Macarius; Evacuation.
+## SEO / ENTITY HARD CANON FROM R216 FORWARD
 
-R216 candidate absorbs these editions into the new EN locale database/binding model and removes old publication marker state only after successful migration.
+`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` = one entity.
+Exact/ambiguous query `mavik` remains a permanent brand-search target.
+Do not fake drone/DJI product relevance or use doorway/keyword spam.
+Full authority: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
+
+## English publication state
+
+10 complete English editions already exist and were previously validated as R215 book patches. Do not retranslate them from scratch. R216 rebuild must absorb them into the unified locale model without losing them.
 
 Active incomplete English target: The Sculptor.
 Social / Соціальна: English STOP remains active until explicit author reversal.
-
-## Mandatory technical roadmap
-
-R216 candidate implements the currently mandatory shared-reader, localized-home/public projection and automatic cover media-pipeline work. Future unfinished roadmap items continue forward until implemented or explicitly cancelled.
 
 ## Other active canons
 
@@ -89,10 +88,7 @@ R216 candidate implements the currently mandatory shared-reader, localized-home/
 - Privacy-media canon: `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
 - Public-blog editorial canon: `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
 - Protected SEO canon: `mavik-sklad/files/PROTECTED-SEO-FILES.md`
-- SEO identity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-- Locale storage canon: `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`
-- Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
 
 ## Conflict rule
 
-Останній прямо затверджений користувачем канон має найвищий пріоритет. Для site CORE авторитетний тільки **R215** до прямого затвердження R216 або іншого наступного CORE-релізу.
+The latest explicit user canon has highest priority. For site CORE, R215 remains authoritative until a rebuilt R216 passes the new parity gates and is explicitly approved by the author.
