@@ -30,6 +30,21 @@
 7. Не ламати indexability: reader content має залишатися серверно доступним у HTML; shared UI не повинен робити текст залежним від JS.
 8. Не дублювати shell у book_patch: book_patch має постачати книгу/метадані/EPUB/locale content, а CORE — навігацію й стандартний reader UI.
 
+## ОБОВ'ЯЗКОВО: parity книжок на локалізованих головних сторінках
+
+Виявлено після встановлення EN book patches: опубліковані англійські книги з'являються в `/en/books/`, sitemap і hreflang, але не з'являються на головній `/en/`. Це не mobile-CSS проблема: картки книг взагалі відсутні в DOM `/en/index.html` і тому відсутні як на mobile, так і на desktop.
+
+Причина в R215 CORE: українська головна має `mavik_live_sync_home_books()`, тоді як `mavik_live_sync_en_publications()` викликає лише EN catalog/sitemap/hreflang і не має аналога `mavik_live_sync_en_home_books()`.
+
+У найближчому CORE-релізі обов'язково:
+1. Додати мовно-нейтральний генератор home-book projection для всіх активних локалей, а не окремі ручні HTML-копії.
+2. `/en/` має автоматично показувати лише реально опубліковані EN книги з `en/books/_published/*.json`, без заглушок і без книг, для яких EN edition ще не встановлена.
+3. Використовувати ті самі desktop/mobile limits, порядок і responsive-контракт, що й українська головна, якщо для конкретної мови не задано окремої канонічної політики.
+4. Після будь-якого book_patch/deploy автоматично перебудовувати локалізовану головну разом із каталогом, sitemap та hreflang.
+5. Картки повинні бути server-rendered у HTML і доступні crawler-ам без JS.
+6. Додати Boss/self-test: якщо мова має N published book markers, `/LANG/` повинна мати очікуваний home-book block/cards згідно з home limits; missing localized home projection — помилка.
+7. Той самий механізм від початку застосувати для майбутніх `/es/`, `/fr/`, `/de/`, щоб баг не повторювався.
+
 ## ОБОВ'ЯЗКОВО: автоматичний media-pipeline для обкладинок
 
 Запланувати в найближчий structural/functional release після чинної бази повноцінний автоматичний pipeline оптимізації книжкових обкладинок.
