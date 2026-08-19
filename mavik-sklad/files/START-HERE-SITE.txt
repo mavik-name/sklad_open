@@ -2,22 +2,26 @@ MAVIK.NAME — START HERE
 Оновлено: 19.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R215.
+ПОТОЧНА ЗАТВЕРДЖЕНА КАНОНІЧНА CORE-БАЗА: R215.
+R216: FINAL TESTED CANDIDATE, ГОТОВИЙ ДО ПЕРЕДАЧІ/ВСТАНОВЛЕННЯ, АЛЕ ЩЕ НЕ КАНОНІЧНИЙ БЕЗ ПРЯМОГО ОК АВТОРА.
 УСЕ ДО R215 — obsolete release trash, не робоча база.
 
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R215-CANON.md`.
-3. Прочитати `mavik-sklad/files/SITE-WORK-JOURNAL.md`.
-4. Прочитати `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`.
-5. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
-6. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
-7. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
-8. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-9. Не перезаписувати `/_site-state/` штатним content patch.
-10. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+2. Прочитати `mavik-sklad/files/CANON-REGISTRY.md`.
+3. Прочитати `mavik-sklad/files/R215-CANON.md`.
+4. Якщо робота стосується нового релізу/перевірки кандидата — прочитати `mavik-sklad/files/R216-CANDIDATE.md`.
+5. Прочитати `mavik-sklad/files/SITE-WORK-JOURNAL.md`.
+6. Прочитати `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`.
+7. Прочитати `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`.
+8. Прочитати `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`.
+9. Прочитати `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`.
+10. Прочитати `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
+11. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`, `PRIVACY-MEDIA-CANON.md`, `PUBLIC-BLOG-EDITORIAL-CANON.md`, `PROTECTED-SEO-FILES.md`.
+12. Не перезаписувати `/_site-state/` штатним content patch.
+13. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
-R215 BASELINE
+R215 BASELINE / CURRENT AUTHORITY
 - 22 public book objects = 21 final library + 1 announcement.
 - UA EPUB: 21/21.
 - Main UA readers: 21 indexable.
@@ -26,32 +30,49 @@ R215 BASELINE
 - PHP 35/35; JS 17/17; XML 2/2.
 - Crawler matrix: 430/430 HTTP 200 для Browser, Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User у перевіреній Apache-конфігурації.
 
-ENGLISH BOOK PATCHES — ГОТОВІ ДО ПУБЛІКАЦІЇ
-- 10 завершених англійських книг підготовлено як native Boss `mavik-overlay`, `base_release=215`.
-- Checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`.
-- Binary storage: ChatGPT Library `/Сайт/book_patches/`.
-- Після встановлення всіх 10 очікуваний sitemap: 107 unique canonical page URL.
-- EN books: 10; EN EPUB: 10; `/en/books/` — 10 cards; reciprocal UA↔EN hreflang.
-- Поточна незавершена EN-книга: The Sculptor, продовжити з Chapter 4 через canonical R215 EPUB.
+R216 FINAL TESTED CANDIDATE
+- Checkpoint: `mavik-sklad/files/R216-CANDIDATE.md`.
+- Persistent binaries: ChatGPT Library `/Сайт/`.
+- FULL: `216 Збірка_Сайт_ОК.zip`.
+- PARTS: `216 Збірка_Сайт_ОК_PART1.zip`, `216 Збірка_Сайт_ОК_PART2.zip`.
+- Audit/checkpoint/checksums лежать поруч у `/Сайт/`.
+- Managed files: 895.
+- Manifest SHA-256: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`.
+- Set id: `r216-ccbfcef34fa96b48`.
+- FULL SHA-256: `a309b5eff63d92d6b9b910a802a4450dd5de1075ec4858c3cb92b39182449760`.
+- Release gate: PHP 37/37; JS 18/18; XML 2/2; JSON-LD 107/107; reader-core 42/42; real deploy R215+10 EN patches PASS; locale migration UK 22 / EN 10 PASS; rollback/DB-backup/media pipeline PASS.
+
+R216 KEY ARCHITECTURE
+- shared physical content files + separate locale JSON databases/bindings;
+- штатне прибирання = `Прибрати з локалі`, без routine physical delete;
+- patch writes only declared locale targets;
+- 10 EN editions migrate into EN locale database;
+- shared reader CORE and localized projections;
+- persistent database-only backup + short-lived transaction rollback;
+- automatic responsive cover/media pipeline;
+- SEO/entity graph `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`.
+
+ПОСТІЙНИЙ SEO / ENTITY КАНОН ВІД R216
+Головна довгострокова SEO-ціль — exact/ambiguous query `mavik`: пошуковик має отримувати достатньо власних сигналів, щоб сприймати Mavik як окрему авторську сутність MaVik, а не лише як можливу помилку в `mavic`.
+
+Не таргетувати загальні `дрони`, `купити дрон` або DJI/Mavic product queries через спам/doorway. Постійні сутності/URL: `/mavik/`, `/about/`, `https://mavik.name/#website`, `https://mavik.name/#person`; усі майбутні збірки зобов'язані це успадковувати. Повний канон: `SITE-SEO-IDENTITY-CANON.md`.
+
+ENGLISH CONTENT
+- 10 завершених англійських книг перевірені; R216 candidate поглинає їх у нову EN locale database.
+- Попередній publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`.
+- Поточна незавершена EN-книга: The Sculptor.
 - Соціальна: English STOP чинний.
 
 STATE / DEPLOY
-- `publication_mode` — source of truth для українського publication state.
-- `final ↔ beta` синхронізує EPUB, `/books/free/`, reader robots/canonical, sitemap, metadata/structured data.
+- R215 лишається release authority до прямого затвердження R216.
 - `/_site-state/` — protected live state.
-- Routine content work — PATCH/OVERLAY поверх R215.
-- Structural/functional робота стартує ТІЛЬКИ від R215.
+- R216 deploy persistent backup = database/JSON state only; affected CORE = short-lived transaction snapshot.
+- Routine content changes = PATCH/OVERLAY із locale target isolation.
 
 SEO / CRAWL
 - `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing key.
 - OAI-SearchBot / ChatGPT-User access explicit.
-- Після успішного deploy — IndexNow; Bing URL Submission додатково при API key.
-- Public/search state тримати узгодженим: links, sitemap, robots/noindex, canonical, hreflang, structured data.
-
-TECHNICAL ROADMAP
-- Обов'язковий наступний structural пункт: automatic cover media pipeline.
-- Master original; JPEG fallback для opaque PNG; WebP/AVIF де безпечно; responsive sizes; `<picture>`; batch rebuild; Boss self-test.
-- Невиконані обов'язкові пункти не губляться між релізами.
+- Після успішного live deploy R216 — live SEO check, Google Search Console reindex materially changed entity URLs, IndexNow/Bing submission.
 
 ЖОРСТКЕ ПРАВИЛО
-Жоден R1–R214 ZIP/checkpoint/recovery/candidate/WIP не використовується як current state або база. Єдина робоча CORE-база — R215.
+Жоден R1–R214 ZIP/checkpoint/recovery/candidate/WIP не використовується як current state або база. Єдина затверджена CORE-база — R215. R216 — перевірений кандидат, який стане новою базою тільки після прямого затвердження автора.
