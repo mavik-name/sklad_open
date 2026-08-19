@@ -2,48 +2,56 @@ MAVIK.NAME — START HERE
 Оновлено: 19.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R214.
+ПОТОЧНА КАНОНІЧНА CORE-БАЗА: R215.
+УСЕ ДО R215 — obsolete release trash, не робоча база.
 
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/R214-CANON.md`.
-3. Прочитати `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`.
-4. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
-5. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
-6. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
-7. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-8. Не перезаписувати `/_site-state/` штатним content patch.
-9. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+2. Прочитати `mavik-sklad/files/R215-CANON.md`.
+3. Прочитати `mavik-sklad/files/SITE-WORK-JOURNAL.md`.
+4. Прочитати `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`.
+5. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
+6. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
+7. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
+8. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
+9. Не перезаписувати `/_site-state/` штатним content patch.
+10. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
-КНИГИ / SEO
-- Канонічний стан: 21 книга, 21 final, 0 beta, EPUB 21/21.
-- `publication_mode` — єдине джерело істини.
-- `final ↔ beta` автоматично синхронізує EPUB, `/books/free/`, reader robots, sitemap, canonical/metadata, structured data та динамічні статусні SEO-описи.
-- Основний `/read/` final-книги: `index,follow`, self-canonical, у sitemap.
-- `/read/text/`: завжди `noindex,follow`, canonical на основну `/read/`.
-- Sitemap: 86 унікальних page URL; image entries живуть у власному image namespace.
-- EPUB regeneration: ZipArchive з fallback через PharData.
+R215 BASELINE
+- 22 public book objects = 21 final library + 1 announcement.
+- UA EPUB: 21/21.
+- Main UA readers: 21 indexable.
+- `/read/text/`: `noindex,follow`, canonical на main reader.
+- Sitemap baseline: 86 unique canonical page URL + 11 image entries.
+- PHP 35/35; JS 17/17; XML 2/2.
+- Crawler matrix: 430/430 HTTP 200 для Browser, Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User у перевіреній Apache-конфігурації.
 
-TECHNICAL ROADMAP
-- `SITE-TECHNICAL-ROADMAP.md` — обов'язковий план розвитку.
-- Невиконані обов'язкові пункти не губляться між релізами; переносяться вперед до реалізації або прямого скасування автором.
-- У roadmap зафіксований автоматичний media-pipeline для обкладинок: master original, JPEG fallback для непрозорих PNG, WebP/AVIF де безпечно, responsive sizes, `<picture>`, batch rebuild старих обкладинок і Boss self-test.
+ENGLISH BOOK PATCHES — ГОТОВІ ДО ПУБЛІКАЦІЇ
+- 10 завершених англійських книг підготовлено як native Boss `mavik-overlay`, `base_release=215`.
+- Checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`.
+- Binary storage: ChatGPT Library `/Сайт/book_patches/`.
+- Після встановлення всіх 10 очікуваний sitemap: 107 unique canonical page URL.
+- EN books: 10; EN EPUB: 10; `/en/books/` — 10 cards; reciprocal UA↔EN hreflang.
+- Поточна незавершена EN-книга: The Sculptor, продовжити з Chapter 4 через canonical R215 EPUB.
+- Соціальна: English STOP чинний.
 
 STATE / DEPLOY
-- `/_site-state/` — protected live state для контентних налаштувань.
-- Deploy/patch не повинен скидати live focus, порядок, статуси або media bindings.
-- Після успішного full/multipart deploy старі release-owned файли, migration markers, deployment history і rollback backups попередньої збірки очищуються.
-- Будь-яка structural/functional робота стартує ТІЛЬКИ від R214.
-- Routine content work — PATCH/OVERLAY поверх R214.
+- `publication_mode` — source of truth для українського publication state.
+- `final ↔ beta` синхронізує EPUB, `/books/free/`, reader robots/canonical, sitemap, metadata/structured data.
+- `/_site-state/` — protected live state.
+- Routine content work — PATCH/OVERLAY поверх R215.
+- Structural/functional робота стартує ТІЛЬКИ від R215.
 
-SEO
+SEO / CRAWL
 - `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing key.
-- Public/search state має залишатися узгодженим: links, sitemap, robots/noindex, canonical, hreflang, structured data, IndexNow та SEO self-test — де релевантно.
+- OAI-SearchBot / ChatGPT-User access explicit.
+- Після успішного deploy — IndexNow; Bing URL Submission додатково при API key.
+- Public/search state тримати узгодженим: links, sitemap, robots/noindex, canonical, hreflang, structured data.
 
-MAINTENANCE
-- Один global maintenance mode для всього сайту.
+TECHNICAL ROADMAP
+- Обов'язковий наступний structural пункт: automatic cover media pipeline.
+- Master original; JPEG fallback для opaque PNG; WebP/AVIF де безпечно; responsive sizes; `<picture>`; batch rebuild; Boss self-test.
+- Невиконані обов'язкові пункти не губляться між релізами.
 
-ENGLISH CONTENT
-Перед English-роботою читати чинні EN canons. Єдине джерело нового verified English-тексту книги — точний український текст, фактично опублікований на mavik.name.
-
-ЖОРСТКЕ ПРАВИЛО: жоден попередній реліз, його ZIP, checkpoint, recovery або candidate не використовується як база. Єдина робоча база — R214.
+ЖОРСТКЕ ПРАВИЛО
+Жоден R1–R214 ZIP/checkpoint/recovery/candidate/WIP не використовується як current state або база. Єдина робоча CORE-база — R215.
