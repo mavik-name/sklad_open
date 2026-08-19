@@ -8,6 +8,7 @@ Status: **AUTHORITATIVE INDEX**
 - Site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
 - Canon checkpoint: `mavik-sklad/files/R214-CANON.md`
+- Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
 - Sole structural/functional CORE base: **R214**
 
 ### Hard rules
@@ -21,6 +22,7 @@ Status: **AUTHORITATIVE INDEX**
 7. Після успішного нового full/multipart release старі rollback/release artifacts очищуються з робочого стану.
 8. Routine content work — patch/overlay без прихованих CORE-змін.
 9. Root `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing identity file.
+10. Перед новим structural/functional release обов'язково читати `SITE-TECHNICAL-ROADMAP.md`; невиконані обов'язкові задачі переносяться вперед до реалізації або прямого скасування автором.
 
 ## Canonical state
 
