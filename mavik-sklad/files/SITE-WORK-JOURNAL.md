@@ -1,160 +1,155 @@
 # MAVIK.NAME — SITE WORK / HANDOFF JOURNAL
 
-Updated: 2026-08-19
+Updated: 2026-08-20
 Status: **AUTHORITATIVE CROSS-BRANCH HANDOFF**
 
 ## CURRENT RELEASE AUTHORITY
 
 Sole explicitly approved structural/functional CORE base: **R215**.
-Everything before R215 is obsolete release trash and must not be used as the current working/recovery/continuation base.
 
-**R216 is a FINAL TESTED CANDIDATE and is ready for author installation/approval, but is not canonical until explicit approval.**
+- R216 = **REJECTED / DO NOT INSTALL** because the EN public shell failed visual/semantic parity.
+- R217_GoodRelise = **FINAL TESTED CANDIDATE**, ready for installation/review, but not canonical until direct author approval.
 
-Release authority: `mavik-sklad/releases/CANON.md`
-Current approved checkpoint: `mavik-sklad/files/R215-CANON.md`
-R216 candidate checkpoint: `mavik-sklad/files/R216-CANDIDATE.md`
-Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
-Permanent SEO/entity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-Locale storage canon: `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`
-Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+Authority/checkpoints:
+- `mavik-sklad/releases/CANON.md`
+- `mavik-sklad/files/R215-CANON.md`
+- `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
+- `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
 
-Persistent binary storage: ChatGPT Library `/Сайт/`.
+Persistent release storage: ChatGPT Library `/Сайт/`.
 
-## R215 CURRENT CANON BASELINE
+## USER PRIORITY CHANGE — 2026-08-20
 
-R215 hashes:
-- Manifest: `39c99c980a186d6630a4a0be4ae370ac20f647333e14f474c7a44ad325d484d5`
-- Set id: `r215-39c99c980a186d66`
-- FULL: `3e2da10b16c6e697a6f4f945c4f3ed781d4ddd751b00e558c587be9e0ac2c8eb`
-- PART1: `5424ca74462e06b2cd492dc952151197b5b044a889ddd08ae6202d5700903777`
-- PART2: `28999d59144430fa92797487b280f2705afaa792f7ecdb2f450d5b12978eeb3c`
+Author stopped all active localization implementation.
 
-- 22 public book objects = 21 final library books + 1 announcement.
-- 21/21 Ukrainian EPUB.
-- 21 indexable Ukrainian main readers.
-- Sitemap baseline: 86 unique canonical page URLs + 11 image entries.
-- PHP 35/35; JS 17/17; XML 2/2.
-- Crawler matrix: 430/430 HTTP 200 for Browser, Googlebot, Bingbot, OAI-SearchBot and ChatGPT-User in verified Apache configuration.
-- Protected live state: `/_site-state/` must not be overwritten by routine content patches.
+Current hard priority:
+1. pure Ukrainian one-locale site (`uk-UA`);
+2. maximum performance;
+3. maximum crawlability/indexing;
+4. maximum distribution/presence in Ukrainian segment;
+5. comprehensive first-party statistics/SEO monitoring in Boss;
+6. remove all non-required install garbage.
 
-## R216 FINAL TESTED CANDIDATE — COMPLETED 2026-08-19
+Localization/translation work is preserved separately and must not be merged into active site releases until explicit author command to resume.
 
-Artifacts saved in ChatGPT Library `/Сайт/`:
-- `216 Збірка_Сайт_ОК.zip`
-- `216 Збірка_Сайт_ОК_PART1.zip`
-- `216 Збірка_Сайт_ОК_PART2.zip`
-- `R216-AUDIT.txt`
-- `R216-CHECKPOINT.txt`
-- `R216-CHECKSUMS.txt`
+## LOCALIZATION FREEZE
+
+Recovery points:
+- GitHub branch `freeze/localization-2026-08-19`;
+- Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`;
+- checksum sidecar beside the archive;
+- translation workspace `mavik-sklad/translations/en/`.
+
+Ten complete EN editions and all work/checkpoints remain preserved. Incomplete The Sculptor material remains preserved. Do not retranslate completed editions from scratch.
+
+## R217_GOODRELISE — COMPLETED CANDIDATE
+
+Built fresh from canonical R215. R216 was used only as a reference source for useful non-localization mechanisms.
+
+Artifacts:
+- `R217_GoodRelise.zip`
+- `R217_GoodRelise_PART1.zip`
+- `R217_GoodRelise_PART2.zip`
+- `R217_GoodRelise-AUDIT.txt`
+- `R217_GoodRelise-CHECKPOINT.txt`
+- `R217_GoodRelise-CHECKSUMS.txt`
 
 Identifiers:
-- release: 216;
-- base release: 215;
-- managed files: 895;
-- manifest SHA-256: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`;
-- multipart set: `r216-ccbfcef34fa96b48`;
-- FULL SHA-256: `a309b5eff63d92d6b9b910a802a4450dd5de1075ec4858c3cb92b39182449760`;
-- PART1 SHA-256: `dcf769b5e4f4bf6e586e2a548376dce6d15d523487659c665b29049264c8e602`;
-- PART2 SHA-256: `80a534ceadf3a8233532ca42fc15fcc7de1c58891722b7f4930baaed24e9cc62`.
+- release 217 / base 215 / label `217_GoodRelise`;
+- managed files 284;
+- raw tree 44,225,038 bytes;
+- FULL ZIP 26,239,709 bytes;
+- manifest `f05a3f5f9d02ad357b88006480c56d8845ba8bcec8dd24f20baf2563d38d0219`;
+- set `r217-f05a3f5f9d02ad35`;
+- FULL SHA-256 `2234dcb886413cd66e5fb75d2c1c1ffe99f8c3c639a4615ae89e6c72d2a5b22d`;
+- PART1 `11bd21282ae7fc27760e1824966801df5be1599630f4ddb238bdeed9a1ecab67`;
+- PART2 `e0115a39790123c94950678f6386abc6c50ff7f51c79576cd2dd9ed4ebcc3059`.
 
-### R216 implementation
+## R217 IMPLEMENTATION
 
-1. Locale-aware persistent databases under `/_site-state/locales/<locale>/`; physical media/content binaries remain shared.
-2. R215→R216 migration absorbs 22 UK objects and 10 already installed EN editions into isolated locale databases.
-3. Legacy EN `_published` markers are removed only after successful migration.
-4. Routine Boss removal becomes locale-unpublish (`Прибрати з локалі`), not shared-file physical delete.
-5. Locale-aware patch contract: declared target databases only; cross-locale writes fail validation.
-6. Boss blog workflow has visible UA/EN scope and complete EN payload fields; locale-aware book/music controls are present.
-7. Shared reader CORE for UA/EN; locale UI does not duplicate reader logic in book patches.
-8. EN home/public projections are generated from actual published EN state.
-9. Persistent deploy backup contains mutable DB/JSON state only; affected CORE/shared files use short-lived transaction snapshot.
-10. Automatic media pipeline has responsive derivatives, JPEG fallback for opaque PNG, WebP/AVIF where supported, GD and ImageMagick fallback, self-test and prebuilt derivatives.
-11. Service-worker/cache/release identity moved to R216.
-12. Entity SEO package implemented on home/About plus `/mavik/` and `/en/mavik/`, stable `#website` / `#person`, ProfilePage/Person/WebSite JSON-LD.
+### Pure Ukrainian cleanup
+- `/en/` removed;
+- hreflang/locale/lang runtime removed;
+- language selector and EN state removed;
+- PWA/service worker/offline shell removed;
+- third-party Cloudflare analytics JS removed;
+- Ukrainian UI/Boss/system-message cleanup completed;
+- no localization/WIP/checkpoint/audit/dev artifacts inside install ZIP.
 
-### R216 final release gate
+### Performance/media
+- book-cover JPG 23 / book-cover PNG 0;
+- 4 legacy opaque PNG covers converted to progressive JPG;
+- same 4 EPUB covers converted from embedded PNG to JPG;
+- EPUB PNG-cover count 0;
+- 248 duplicated clean-text TXT parts removed;
+- one immediate clean HTML read-aloud mirror retained per book, no JS, `lang=uk-UA`, `noindex,follow`, canonical to main reader;
+- heavy blog/author images optimized.
 
-Actual final FULL ZIP was deployed through the real deploy path over a fresh R215 state with all ten verified EN edition patches.
+### SEO/indexing
+- `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` entity package retained;
+- stable `#website/#person`, `/mavik/`, `/about/` retained;
+- robots/sitemap/IndexNow key retained;
+- OAI-SearchBot / ChatGPT-User access retained;
+- sitemap 82/82 unique canonical URLs + 11 images;
+- public HTML 107; indexable 81;
+- JSON-LD 81/81 parse;
+- internal refs 5329/5329.
 
-PASS:
-- copied managed files: 895;
-- UK locale book DB: 22;
-- EN locale book DB: 10;
-- protected live sentinel/state survived deploy;
-- legacy EN `_published` removed after migration;
-- `/mavik/` and `/en/mavik/` present;
-- sitemap: 109/109 unique canonical URLs;
-- EN book projection: `/en/books/` + 10 landings + 10 readers;
-- database-only persistent backup about 104 KB;
-- transaction snapshot cleaned after successful deploy;
-- transaction rollback PASS;
-- database rollback PASS;
-- media pipeline PASS;
-- PHP lint 37/37;
-- JS syntax 18/18;
-- XML 2/2;
-- real JSON-LD 107/107 parse;
-- readers with shared reader-core 42/42;
-- FULL/PART1/PART2 Boss validation PASS.
+### Boss statistics
+First-party, no-cookie/no-third-party-JS analytics:
+- views, 30s/120s engagement, average time, scroll;
+- reader progress 25/50/75/100, read clicks, EPUB downloads;
+- blog interactions, music starts/30s/completion, coffee/support, outbound;
+- devices/referrers/search engines/UTM;
+- native Web Vitals TTFB/FCP/LCP/CLS/INP.
 
-## PERMANENT SEO / ENTITY STRATEGY FROM R216 FORWARD
+Dashboard also reports index/noindex counts, sitemap/robots/IndexNow, SEO scans, technical weight/deltas, content counts, latest deploy, popular/largest pages/files and CSV exports. It does not fabricate Search Console data without an authorized source.
 
-This is inherited by every future site build until the author explicitly changes it.
+### Deploy/rollback/cleanup
+- database-only persistent pre-deploy backup;
+- short-lived transaction snapshot for affected CORE;
+- automatic rollback;
+- uploaded release archive cleanup after success;
+- obsolete managed files removed;
+- empty legacy trees pruned;
+- protected state preserved;
+- retired localization runtime state removed only after the pre-deploy database backup exists.
 
-One entity:
-`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`.
+## FINAL TESTS
 
-Primary brand-search objective: exact/ambiguous query `mavik`, including the case where a searcher typed `mavik` while meaning `mavic`. The site must accumulate its own entity/brand/search signals strongly enough to be treated as a distinct meaning of the query.
+Static/code:
+- PHP 31/31 PASS;
+- JS 14/14 PASS;
+- XML 2/2 PASS;
+- JSON-LD 81/81 PASS;
+- refs 5329/5329 PASS;
+- FULL/PART1/PART2 validators PASS;
+- EPUB 21/21 integrity/mimetype/XML PASS;
+- install garbage scan PASS.
 
-Do not target generic `дрони`, `купити дрон`, DJI/Mavic product queries through keyword stuffing, doorway pages or fake topical relevance.
+Synthetic actual deploy using `mavik_deploy_archive()`:
 
-Permanent identity contract:
-- `/mavik/` = brand/entity landing;
-- `/about/` = author page;
-- `https://mavik.name/#website` and `https://mavik.name/#person` stable across releases/locales;
-- books/blog/music consistently bind to the same author entity;
-- real external profiles via `sameAs`/`rel=me` where appropriate;
-- monitor `mavik`, `MaVik`, `мавік`, `mavik name`, author-name queries and Google `mavik → mavic` rewriting.
+### R215 → R217
+PASS. copied 284; removed obsolete files 349. Old `/en/`, PWA/language files and empty trees removed. Live sentinel preserved. Old locale-shaped `site-core` migrated to version 7 direct Ukrainian label/path. Retired languages/locales state removed after backup. tx/stage/pending garbage = 0. Post-deploy gate PASS.
 
-Full authority: `SITE-SEO-IDENTITY-CANON.md`.
+### R216 → R217
+PASS. copied 284; removed obsolete files 615. Old `/en/` and locale runtime state removed. Live sentinel preserved. `site-core` migrated to version 7. tx/stage = 0.
 
-## ENGLISH PUBLICATION STATE
+## PERMANENT SEO/ENTITY RULE
 
-Ten complete English editions were previously validated as R215 Boss overlays and are now included in the R216 migration test/state model:
-1. Mom, I Want to Live! (`mamo-zhyty`)
-2. The Nameless (`bezimenni`)
-3. The Man Without an Account (`liudyna-bez-akaunta`)
-4. Rejection in Advance (`vidmova-avansom`)
-5. Transfer (`transfer`)
-6. Solya, the Grain of Sand Who Dreamed of a Skyscraper (`pishchynka-solya`)
-7. Patterns of Self-Reflection (`paterny-samorefleksii`)
-8. You and I... (`ty-i-ia`)
-9. The Gospel According to Macarius (`yevanheliie-vid-makariia`)
-10. Evacuation, or On the Road to the Stabilization Point (`evakuatsiia-abo-dorohoiu-do-stabika`)
-
-Previous publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`.
-Previous patch storage: `/Сайт/book_patches/`.
-
-Active incomplete English target: **The Sculptor**.
-Social / Соціальна: **NO ENGLISH TRANSLATION / STOP** remains active until explicit author reversal.
-
-## TRANSLATION SOURCE CANON
-
-Only canonical Ukrainian prose actually published by mavik.name may generate new verified English prose.
-Approved transports: live reader, clean-text reader, provenance-verified canonical EPUB generated from the same reader body.
-Do not regenerate the ten completed EN editions from scratch.
+Independent of localization pause:
+`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` remains one entity; exact/ambiguous query `mavik` remains a long-term brand target. Do not fake DJI/drone topical relevance.
 
 ## NEW-BRANCH START RULE
 
-For any new site branch read, in order:
+For any new site branch:
 1. `mavik-sklad/START-HERE.txt`
 2. `mavik-sklad/files/CANON-REGISTRY.md`
 3. `mavik-sklad/releases/CANON.md`
 4. `mavik-sklad/files/START-HERE-SITE.txt`
 5. `mavik-sklad/files/R215-CANON.md`
-6. if reviewing/continuing next release: `mavik-sklad/files/R216-CANDIDATE.md`
+6. `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
 7. this journal
-8. `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
-9. relevant SEO/locale/deploy canon and project/translation checkpoint.
+8. relevant SEO/deploy/privacy/blog canons.
 
-Never reconstruct current state from old release archives or chat memory when these checkpoints exist. Do not promote R216 to canonical status without explicit author approval.
+Do not use R216 as working base. Do not resume localization without explicit author command. Do not promote R217_GoodRelise to canonical without explicit author approval.
