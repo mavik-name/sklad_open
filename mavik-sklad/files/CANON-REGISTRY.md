@@ -11,6 +11,7 @@ Status: **AUTHORITATIVE INDEX**
 - Canon checkpoint: `mavik-sklad/files/R215-CANON.md`
 - Cross-branch work journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
+- Localization architecture canon: `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`
 - Sole structural/functional CORE base: **R215**
 
 ### Hard rules
@@ -26,6 +27,7 @@ Status: **AUTHORITATIVE INDEX**
 9. Root `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing identity file.
 10. Перед structural/functional release обов'язково читати `SITE-TECHNICAL-ROADMAP.md`.
 11. **Blog localization hard canon:** кожен новий публічний UA-пост одночасно має отримувати повну EN-версію. Новий UA-пост без повного EN counterpart вважається незавершеною публікацією. Повний канон: `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
+12. **Localization architecture hard canon:** EN є функціональним дзеркалом UA на єдиному CORE. Системні/інтерфейсні тексти локалізуються через `lang`/locale files; книги, блог, сторінки автора/контактів/анонсу та інший користувацький контент перекладаються окремо і доставляються content PATCH/OVERLAY без втручання в CORE. Content patches не дублюють PHP/JS/CSS/templates/shell. Повний канон: `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`.
 
 ## R215 canonical baseline
 
@@ -69,4 +71,4 @@ Automatic cover media pipeline remains required: master original, JPEG fallback 
 
 ## Conflict rule
 
-Останній прямо затверджений користувачем канон має найвищий пріоритет. Для site CORE авторитетний тільки **R215**.
+Останній прямо затверджений користувачем канон має найвищий пріоритет. Для site CORE авторитетний тільки **R215** до прямого затвердження наступного CORE-релізу.
