@@ -7,12 +7,13 @@ MAVIK.NAME — START HERE
 Перед будь-якою роботою із сайтом:
 1. Прочитати `mavik-sklad/releases/CANON.md`.
 2. Прочитати `mavik-sklad/files/R214-CANON.md`.
-3. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
-4. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
-5. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
-6. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
-7. Не перезаписувати `/_site-state/` штатним content patch.
-8. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+3. Прочитати `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`.
+4. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`.
+5. Прочитати `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`.
+6. Прочитати `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`.
+7. Прочитати `mavik-sklad/files/PROTECTED-SEO-FILES.md`.
+8. Не перезаписувати `/_site-state/` штатним content patch.
+9. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
 
 КНИГИ / SEO
 - Канонічний стан: 21 книга, 21 final, 0 beta, EPUB 21/21.
@@ -22,6 +23,11 @@ MAVIK.NAME — START HERE
 - `/read/text/`: завжди `noindex,follow`, canonical на основну `/read/`.
 - Sitemap: 86 унікальних page URL; image entries живуть у власному image namespace.
 - EPUB regeneration: ZipArchive з fallback через PharData.
+
+TECHNICAL ROADMAP
+- `SITE-TECHNICAL-ROADMAP.md` — обов'язковий план розвитку.
+- Невиконані обов'язкові пункти не губляться між релізами; переносяться вперед до реалізації або прямого скасування автором.
+- У roadmap зафіксований автоматичний media-pipeline для обкладинок: master original, JPEG fallback для непрозорих PNG, WebP/AVIF де безпечно, responsive sizes, `<picture>`, batch rebuild старих обкладинок і Boss self-test.
 
 STATE / DEPLOY
 - `/_site-state/` — protected live state для контентних налаштувань.
