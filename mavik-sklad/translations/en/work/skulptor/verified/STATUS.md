@@ -1,10 +1,10 @@
 # THE SCULPTOR — SITE-VERIFIED ENGLISH AUDIT
 
-Updated: 2026-08-18
-Status: ACTIVE — CHAPTERS 1–3 VERIFIED / WAITING FOR CANONICAL CHAPTER 4 SOURCE
-Canonical source: https://mavik.name/books/skulptor/read/
-Hard source canon: mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md
-Safety branch: backup/english-translations-2026-08-17
+Updated: 2026-08-19
+Status: **ACTIVE — CHAPTERS 1–5 VERIFIED / CHAPTER 6 NEXT**
+Canonical source: current R215 published Ukrainian reader / provenance-equivalent R215 EPUB body.
+Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
+Detailed Chapters 4–5 audit: `mavik-sklad/translations/en/work/skulptor/CHAPTERS-04-05-R215-VERIFICATION.md`
 
 ## VERIFIED — CHAPTER 1
 Canonical reader range: lines 26–1231. Complete in five verified files.
@@ -13,39 +13,34 @@ Corrections from old recovery: unsupported `Lviv · 2026`, incorrect genre label
 ## VERIFIED — CHAPTER 2 `Глина`
 Canonical reader range: lines 1232–2040. Complete.
 Files: parts 01, 02, 03a, 03b, 04, 05, 06.
-Old recovery stopped at line 1964; lines 1966–2040 were newly translated directly from mavik.name as part 06.
+Old recovery stopped at line 1964; lines 1966–2040 were newly translated directly from canonical site text as part 06.
 
 ## VERIFIED — CHAPTER 3 `Збори фонду`
-Canonical reader range: lines 2041–2878. Complete.
-Verified files:
-- `chapter-03-part-01.txt` — lines 2041–2106
-- `chapter-03-part-02.txt` — lines 2108–2209
-- `chapter-03-part-03.txt` — lines 2211–2310
-- `chapter-03-part-04.txt` — lines 2312–2398
-- `chapter-03-part-05.txt` — lines 2400–2524
-- `chapter-03-part-06.txt` — lines 2526–2656
-- `chapter-03-part-07.txt` — lines 2658 through the first two sentences of line 2704
-- `chapter-03-part-08.txt` — continuation of line 2704 through line 2827
-- `chapter-03-part-09.txt` — lines 2829–2878
+Canonical reader range: lines 2041–2878. Complete in nine verified files.
+Old recovery boundary duplicates (`I’m a mother...`, `Nothing mystical`) were removed against canonical source.
 
-All Chapter 3 verified files were saved to main, read back, and mirrored to the safety branch.
+## VERIFIED — CHAPTER 4 `Пам’ятка`
+Complete in four verified files:
+- `chapter-04-part-01.txt`
+- `chapter-04-part-02.txt`
+- `chapter-04-part-03.txt`
+- `chapter-04-part-04.txt`
 
-Corrections discovered during Chapter 3 audit:
-1. Old parts 05/06 duplicated the beginning `I’m a mother...`; verified boundary now contains the canonical sentence once.
-2. Old parts 07/08 duplicated `Nothing mystical`; verified boundary now translates canonical line 2704 once, without repetition.
+Canonical R215 source was physically extracted. Recovery was audited against that source. Three chunking defects were removed: 04→05 partial duplicate `Olena says...`, 09→10 duplicate `Serhii was silent.`, and 21→22 duplicate fragment `Second.`. Two apparent boundary repetitions were checked and correctly retained where R215 contains distinct source occurrences.
 
-Older files outside `verified/` remain quarantined recovery artifacts and are not publication canon.
+## VERIFIED — CHAPTER 5 `Свідок`
+Complete in three verified files:
+- `chapter-05-part-01.txt`
+- `chapter-05-part-02.txt`
+- `chapter-05-part-03.txt`
 
-## CHAPTER 4 RECOVERY — NOT VERIFIED
-Old recovery contains Chapter 4 parts 01–38 outside `verified/`. They are preserved for comparison only. None is canonical merely because it exists.
+Recovery 01–26 was verified against canonical R215. No historical Part 27 exists. The missing continuation after Nazar's message `I’m not ready to be good yet.` was translated newly only from R215 through the exact chapter end: `a child is not a stone` / she would say it to his face.
 
-No `verified/chapter-04-*` file may be created until its exact Ukrainian source is physically retrieved from the canonical site publication.
-
-## CURRENT SOURCE CONDITION — 2026-08-18
-The canonical live reader is temporarily unavailable through the current external fetch path. The hard source canon therefore requires a stop at the last verified point rather than fallback to a manuscript or old translation.
+## SOURCE IDENTITY CONTROL
+For audit control only, R215 Chapters 4–5 were compared with the corresponding DOCX passages: Chapter 4 812/812 normalized paragraphs exact; Chapter 5 502/502 exact. This proves the old structural triage happened against text identical to current R215, but does not authorize the manuscript as a translation source.
 
 ## NEXT
-Chapter 4 `Пам’ятка`.
-Next canonical site marker: reader line 2879 heading; narrative begins line 2881: `Пам’ятка мала вміститися на одну сторінку.`
+Chapter 6 `Глава 6. Не камінь`.
+Continue new English directly from canonical R215 only.
 
-Once the site source is retrievable, resume from exactly this marker and audit old Chapter 4 recovery against the site line by line.
+Older files outside `verified/` remain quarantined recovery artifacts and are not publication canon.
