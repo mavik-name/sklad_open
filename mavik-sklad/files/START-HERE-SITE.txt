@@ -1,78 +1,82 @@
 MAVIK.NAME — START HERE
-Оновлено: 19.08.2026
+Оновлено: 20.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ПОТОЧНА ЗАТВЕРДЖЕНА КАНОНІЧНА CORE-БАЗА: R215.
-R216: FINAL TESTED CANDIDATE, ГОТОВИЙ ДО ПЕРЕДАЧІ/ВСТАНОВЛЕННЯ, АЛЕ ЩЕ НЕ КАНОНІЧНИЙ БЕЗ ПРЯМОГО ОК АВТОРА.
-УСЕ ДО R215 — obsolete release trash, не робоча база.
+ПОТОЧНА ПРЯМО ЗАТВЕРДЖЕНА CORE-БАЗА: R215.
+R217_GoodRelise: FINAL TESTED CANDIDATE, ГОТОВА ДО ВСТАНОВЛЕННЯ/ПЕРЕВІРКИ, але ще не канонічна без прямого ОК автора.
+R216: REJECTED / DO NOT INSTALL.
 
-Перед будь-якою роботою із сайтом:
-1. Прочитати `mavik-sklad/releases/CANON.md`.
-2. Прочитати `mavik-sklad/files/CANON-REGISTRY.md`.
-3. Прочитати `mavik-sklad/files/R215-CANON.md`.
-4. Якщо робота стосується нового релізу/перевірки кандидата — прочитати `mavik-sklad/files/R216-CANDIDATE.md`.
-5. Прочитати `mavik-sklad/files/SITE-WORK-JOURNAL.md`.
-6. Прочитати `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`.
-7. Прочитати `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`.
-8. Прочитати `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`.
-9. Прочитати `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`.
-10. Прочитати `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
-11. Прочитати `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`, `PRIVACY-MEDIA-CANON.md`, `PUBLIC-BLOG-EDITORIAL-CANON.md`, `PROTECTED-SEO-FILES.md`.
-12. Не перезаписувати `/_site-state/` штатним content patch.
-13. Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєкту.
+ПЕРЕД БУДЬ-ЯКОЮ РОБОТОЮ ІЗ САЙТОМ
+1. `mavik-sklad/releases/CANON.md`
+2. `mavik-sklad/files/CANON-REGISTRY.md`
+3. `mavik-sklad/files/R215-CANON.md`
+4. `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
+5. `mavik-sklad/files/SITE-WORK-JOURNAL.md`
+6. `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+7. `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+8. `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
+9. `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
+10. `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
+11. `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
+12. `mavik-sklad/files/PROTECTED-SEO-FILES.md`
 
-R215 BASELINE / CURRENT AUTHORITY
-- 22 public book objects = 21 final library + 1 announcement.
-- UA EPUB: 21/21.
-- Main UA readers: 21 indexable.
-- `/read/text/`: `noindex,follow`, canonical на main reader.
-- Sitemap baseline: 86 unique canonical page URL + 11 image entries.
-- PHP 35/35; JS 17/17; XML 2/2.
-- Crawler matrix: 430/430 HTTP 200 для Browser, Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User у перевіреній Apache-конфігурації.
+CURRENT HARD PRIORITY
+- один український сайт / одна locale `uk-UA`;
+- максимальна швидкодія;
+- максимальна crawlability та індексація;
+- максимальна присутність/поширення в українському сегменті;
+- first-party статистика/SEO monitoring у Boss;
+- максимально чистий install tree без localization/WIP/backup/dev/legacy garbage.
 
-R216 FINAL TESTED CANDIDATE
-- Checkpoint: `mavik-sklad/files/R216-CANDIDATE.md`.
-- Persistent binaries: ChatGPT Library `/Сайт/`.
-- FULL: `216 Збірка_Сайт_ОК.zip`.
-- PARTS: `216 Збірка_Сайт_ОК_PART1.zip`, `216 Збірка_Сайт_ОК_PART2.zip`.
-- Audit/checkpoint/checksums лежать поруч у `/Сайт/`.
-- Managed files: 895.
-- Manifest SHA-256: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`.
-- Set id: `r216-ccbfcef34fa96b48`.
-- FULL SHA-256: `a309b5eff63d92d6b9b910a802a4450dd5de1075ec4858c3cb92b39182449760`.
-- Release gate: PHP 37/37; JS 18/18; XML 2/2; JSON-LD 107/107; reader-core 42/42; real deploy R215+10 EN patches PASS; locale migration UK 22 / EN 10 PASS; rollback/DB-backup/media pipeline PASS.
+LOCALIZATION
+Упровадження локалізацій ЗУПИНЕНО. Воно не входить до R217_GoodRelise.
+Вся робота збережена:
+- GitHub `freeze/localization-2026-08-19`;
+- Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`;
+- `mavik-sklad/translations/en/`;
+- `LOCALIZATION-FREEZE-2026-08-20.md`.
+Не відновлювати localization implementation без прямої команди автора.
 
-R216 KEY ARCHITECTURE
-- shared physical content files + separate locale JSON databases/bindings;
-- штатне прибирання = `Прибрати з локалі`, без routine physical delete;
-- patch writes only declared locale targets;
-- 10 EN editions migrate into EN locale database;
-- shared reader CORE and localized projections;
-- persistent database-only backup + short-lived transaction rollback;
-- automatic responsive cover/media pipeline;
-- SEO/entity graph `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`.
+R217_GOODRELISE
+Persistent storage: ChatGPT Library `/Сайт/`.
+- FULL: `R217_GoodRelise.zip`
+- PART1: `R217_GoodRelise_PART1.zip`
+- PART2: `R217_GoodRelise_PART2.zip`
+- sidecars: AUDIT / CHECKPOINT / CHECKSUMS
 
-ПОСТІЙНИЙ SEO / ENTITY КАНОН ВІД R216
-Головна довгострокова SEO-ціль — exact/ambiguous query `mavik`: пошуковик має отримувати достатньо власних сигналів, щоб сприймати Mavik як окрему авторську сутність MaVik, а не лише як можливу помилку в `mavic`.
+Identifiers:
+- release 217 / base 215 / managed files 284;
+- manifest `f05a3f5f9d02ad357b88006480c56d8845ba8bcec8dd24f20baf2563d38d0219`;
+- set `r217-f05a3f5f9d02ad35`;
+- FULL `2234dcb886413cd66e5fb75d2c1c1ffe99f8c3c639a4615ae89e6c72d2a5b22d`;
+- PART1 `11bd21282ae7fc27760e1824966801df5be1599630f4ddb238bdeed9a1ecab67`;
+- PART2 `e0115a39790123c94950678f6386abc6c50ff7f51c79576cd2dd9ed4ebcc3059`.
 
-Не таргетувати загальні `дрони`, `купити дрон` або DJI/Mavic product queries через спам/doorway. Постійні сутності/URL: `/mavik/`, `/about/`, `https://mavik.name/#website`, `https://mavik.name/#person`; усі майбутні збірки зобов'язані це успадковувати. Повний канон: `SITE-SEO-IDENTITY-CANON.md`.
+FINAL GATE
+- PHP 31/31;
+- JS 14/14;
+- XML 2/2;
+- JSON-LD 81/81;
+- internal refs 5329/5329;
+- sitemap 82 unique canonical URLs + 11 image entries;
+- 21/21 EPUB integrity PASS;
+- book-cover PNG 0; EPUB cover PNG 0;
+- FULL/PART1/PART2 validators PASS;
+- actual synthetic deploy R215→R217 PASS;
+- actual synthetic deploy R216→R217 PASS;
+- old EN/PWA/locale runtime removed, live state preserved, site-core migrated to single-UA model, tx/stage garbage 0.
 
-ENGLISH CONTENT
-- 10 завершених англійських книг перевірені; R216 candidate поглинає їх у нову EN locale database.
-- Попередній publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`.
-- Поточна незавершена EN-книга: The Sculptor.
-- Соціальна: English STOP чинний.
+SEO / ENTITY — АКТИВНИЙ
+`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` лишається постійним SEO/entity contract.
+Exact/ambiguous `mavik` лишається довгостроковою бренд-ціллю.
+Не маскувати сайт під DJI/drone тематику.
 
 STATE / DEPLOY
-- R215 лишається release authority до прямого затвердження R216.
-- `/_site-state/` — protected live state.
-- R216 deploy persistent backup = database/JSON state only; affected CORE = short-lived transaction snapshot.
-- Routine content changes = PATCH/OVERLAY із locale target isolation.
-
-SEO / CRAWL
-- `651fd21ecd39f1571c9d4ab6a9a7574c.txt` — protected IndexNow/Bing key.
-- OAI-SearchBot / ChatGPT-User access explicit.
-- Після успішного live deploy R216 — live SEO check, Google Search Console reindex materially changed entity URLs, IndexNow/Bing submission.
+- `/_site-state/` = protected live state;
+- persistent backup перед deploy = mutable JSON/database state only;
+- CORE = short-lived transaction snapshot;
+- після успіху tx/stage/archive garbage прибирається;
+- retired localization runtime state прибирається тільки після створення pre-deploy database backup.
 
 ЖОРСТКЕ ПРАВИЛО
-Жоден R1–R214 ZIP/checkpoint/recovery/candidate/WIP не використовується як current state або база. Єдина затверджена CORE-база — R215. R216 — перевірений кандидат, який стане новою базою тільки після прямого затвердження автора.
+До прямого затвердження R217_GoodRelise чинний release authority — R215. Нову роботу над кандидатом продовжувати від `R217-GOODRELISE-CANDIDATE.md`, а не від R216 і не реконструювати стан із чату.
