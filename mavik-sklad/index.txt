@@ -1,6 +1,7 @@
 MAVIK WORKSPACE / ДАЛЬНІЙ СКЛАД — CURRENT INDEX
-Updated: 2026-08-18
+Updated: 2026-08-19
 Repository: mavik-name/sklad_open
+Branch: main
 
 FIRST FILE FOR EVERY NEW CHAT BRANCH:
 `mavik-sklad/START-HERE.txt`
@@ -14,43 +15,72 @@ UNIVERSAL CANONS
 - persistent storage/checkpoints: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
 
 SITE MAVIK.NAME
-- start: `mavik-sklad/files/START-HERE-SITE.txt`
-- release canon: `mavik-sklad/releases/CANON.md`
-- current checkpoint: `mavik-sklad/files/R213-CANON-CHECKPOINT.md`
-- structural/functional base: **R213**
-- recovery mirror: `mavik-sklad/recovery/R213/`
+- site start: `mavik-sklad/files/START-HERE-SITE.txt`
+- release authority: `mavik-sklad/releases/CANON.md`
+- current approved checkpoint: `mavik-sklad/files/R215-CANON.md`
+- tested next-release candidate: `mavik-sklad/files/R216-CANDIDATE.md`
+- cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
+- technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
+- localization architecture: `mavik-sklad/files/SITE-LOCALIZATION-ARCHITECTURE-CANON.md`
+- locale storage: `mavik-sklad/files/SITE-LOCALE-STORAGE-CANON.md`
+- deploy backup: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+- SEO/entity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+- protected SEO files: `mavik-sklad/files/PROTECTED-SEO-FILES.md`
 - reader-header canon: `mavik-sklad/files/kanon-shapky-mobilnoi-chytanky.txt`
 - book-page canon: `mavik-sklad/files/kanon-storinky-knyhy.txt`
-- SIMPLE FIRST, privacy-media, public-blog editorial and protected-SEO rules are mandatory
+
+CURRENT RELEASE AUTHORITY
+- structural/functional base: **R215**
+- everything before R215 is obsolete release trash
+- R216 is **FINAL TESTED CANDIDATE**, not canonical until explicit author approval
+
+R216 CANDIDATE STORAGE
+ChatGPT Library `/Сайт/`:
+- `216 Збірка_Сайт_ОК.zip`
+- `216 Збірка_Сайт_ОК_PART1.zip`
+- `216 Збірка_Сайт_ОК_PART2.zip`
+- `R216-AUDIT.txt`
+- `R216-CHECKPOINT.txt`
+- `R216-CHECKSUMS.txt`
+
+R216 identifiers:
+- manifest: `ccbfcef34fa96b48261643de6c1635edf7c1f16f482bebd03763e322775214c5`
+- multipart set: `r216-ccbfcef34fa96b48`
+- FULL SHA-256: `a309b5eff63d92d6b9b910a802a4450dd5de1075ec4858c3cb92b39182449760`
+- PART1 SHA-256: `dcf769b5e4f4bf6e586e2a548376dce6d15d523487659c665b29049264c8e602`
+- PART2 SHA-256: `80a534ceadf3a8233532ca42fc15fcc7de1c58891722b7f4930baaed24e9cc62`
+
+R216 HARD SEO/ENTITY STRATEGY — INHERITED BY ALL FUTURE RELEASES
+- one entity: `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`
+- exact/ambiguous query `mavik` is a permanent brand-search target
+- `/mavik/` is brand/entity landing; `/about/` is author page
+- stable `https://mavik.name/#website` and `https://mavik.name/#person`
+- do NOT target generic drone/DJI product queries with doorway/keyword spam
+- monitor `mavik`, `MaVik`, `мавік`, `mavik name`, author-name queries and Google `mavik → mavic` rewriting
+- full rules: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
 
 ENGLISH CONTENT
 - start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
 - source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
 - hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
-- continuation canon: `mavik-sklad/translations/en/CONTINUATION-CANON.md`
+- publication checkpoint: `mavik-sklad/translations/en/PUBLICATION-READY-R215.md`
 - status: `mavik-sklad/translations/en/STATUS.md`
 - workspace: `mavik-sklad/translations/en/`
-- canonical Ukrainian publication on mavik.name is the only source for new verified English book translation
+- 10 complete EN editions exist; R216 candidate migrates them into the new EN locale database
+- active incomplete target: The Sculptor
+- Social / Соціальна English STOP remains active
 
 СОЦІАЛЬНА
 - start: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
 - canon notes: `mavik-sklad/files/socialna-kanonichni-zamitky.txt`
 - manuscript: `mavik-sklad/files/Соціальна.docx`
-- English STOP canon: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`
+- English STOP: `mavik-sklad/files/SOCIALNA-NO-ENGLISH-TRANSLATION-CANON.md`
 
-ВСЕСВІТ 25
-- start: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
+ІНШІ АКТИВНІ ПРОЄКТИ
+- Всесвіт 25: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
+- Код легенди: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
+- Евакуація: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
+- НФ роман-притча про поколіннєвий корабель: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
+- Статусна: `mavik-sklad/files/STATUSNA/START-HERE.md`
 
-КОД ЛЕГЕНДИ
-- start: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
-
-ЕВАКУАЦІЯ, АБО ДОРОГОЮ ДО СТАБІКА
-- start: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
-
-НФ ПРИТЧА ПРО ПОКОЛІННЄВИЙ КОРАБЕЛЬ
-- start: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
-
-СТАТУСНА
-- start: `mavik-sklad/files/STATUSNA/START-HERE.md`
-
-For any named project: read the warehouse START-HERE/canon/status first. Do not reconstruct active state from chat memory when persistent project documentation exists.
+For any named project: read warehouse START-HERE/canon/status first. Do not reconstruct active state from chat memory when persistent project documentation exists.
