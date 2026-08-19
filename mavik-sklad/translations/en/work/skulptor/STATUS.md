@@ -1,7 +1,7 @@
 # THE SCULPTOR — ENGLISH WORK STATUS
 
 Updated: 2026-08-19
-Status: **CHAPTERS 1–7 VERIFIED / CHAPTER 8 `Конверт` NEXT**
+Status: **CHAPTERS 1–8 VERIFIED / CHAPTER 9 `Межа` NEXT**
 Hard source canon: `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
 Current site core: **R215**
 Canonical reader: `https://mavik.name/books/skulptor/read/`
@@ -14,12 +14,13 @@ Only canonical Ukrainian prose published by mavik.name may generate new/verified
 
 ## VERIFIED
 - Chapters 1–5 — complete and canonical-source verified.
-- Chapter 6 `Не камінь` — complete; direct R215 translation, 506 UA → 506 EN paragraphs.
-- Chapter 7 `Софія` — complete; direct R215 translation in three verified files, 474 UA → 474 EN paragraphs, no adjacent duplicate paragraphs or Cyrillic residue.
+- Chapter 6 `Не камінь` — 506 UA → 506 EN paragraphs.
+- Chapter 7 `Софія` — 474 UA → 474 EN paragraphs.
+- Chapter 8 `Конверт` — 445 UA → 445 EN paragraphs; three verified files were written and read back from GitHub, exact chapter end confirmed.
 
 ## CURRENT NEXT SOURCE
-Chapter 8: `Глава 8. Конверт`.
-Canonical R215 source: 445 source paragraphs, 2813 Ukrainian words. Continue directly from its first paragraph.
+Chapter 9: `Глава 9. Межа`.
+Canonical R215 source: 499 source paragraphs, 3228 Ukrainian words. Continue directly from its first paragraph.
 
 ## PUBLICATION STATE
 The Sculptor is **not publication-ready yet**. Do not build its `book_patch` until all 47 chapters have complete verified English coverage and final whole-book parity/readback passes.
