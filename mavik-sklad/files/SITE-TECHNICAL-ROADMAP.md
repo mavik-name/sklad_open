@@ -1,93 +1,77 @@
 # MAVIK.NAME — TECHNICAL ROADMAP
 
-Оновлено: 2026-08-19
-Статус: АКТИВНИЙ ПЛАН ТЕХНІЧНОГО РОЗВИТКУ
+Оновлено: 2026-08-20
+Статус: **R222 STABILIZATION ROADMAP**
 
-## Канонічне технічне завдання
+## Канонічна база
 
-Для mavik.name постійно застосовувати всі безпечні практичні покращення, що підвищують:
-- crawlability та індексацію;
-- доступність для Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User та інших легітимних crawler-ів;
-- швидкодію, Core Web Vitals і стабільність;
-- технічну безпеку;
-- узгодженість public/search state.
+Єдина structural/functional CORE-база: **R222**.
+Усі pre-R222 site-release tasks/checkpoints/implementation notes = obsolete і не є активним roadmap.
 
-Такі покращення не потребують окремого погодження автора, якщо не змінюють творчий контент, дизайн-концепцію або бізнес-логіку сайту і не несуть неприйнятного ризику втрати даних.
+## Поточна фаза: 7-денна стабілізація
 
-## ОБОВ'ЯЗКОВО: shared reader-shell / parity для всіх мов
+До завершення паузи не виконувати безпідставних змін:
+- URL structure;
+- canonical;
+- robots.txt;
+- sitemap.xml;
+- entity IDs/graph;
+- global layout/navigation;
+- mass metadata rewrites;
+- CORE/deploy architecture.
 
-Виявлено після live-встановлення першого EN book patch (`R215-book-en-mamo-zhyty-v1`): англійська читанка отримала контент і SEO/publication state, але не підхопила частину стандартного reader UI, який існує в українському ядрі.
+Винятки: production outage, security defect, broken route, data-loss risk або критичний publishing need.
 
-У найближчому structural/functional CORE-релізі обов'язково зробити reader shell мовно-нейтральним і спільним для UA/EN та наступних мовних версій. Book/content patch не повинен дублювати або вручну відтворювати функції ядра.
+## Що дозволено під час паузи
 
-Обов'язкові елементи shared reader shell:
-1. Плаваюча/стандартна стрілка «Повернутись нагору» / Back to top з тією самою поведінкою, що в канонічній UA-читанці.
-2. Повне стандартне меню читанки з ядра — та сама функціональність, адаптивність і поведінка на desktop/mobile.
-3. Стандартний блок/плашка «Меню» читанки (точну поточну реалізацію в R215 CORE перевірити й перенести як shared component, а не копіювати в EN book patches).
-4. Усі reader-core controls, які є в UA читанці й не залежать від мови, мають автоматично працювати в `/en/books/<slug>/read/` та майбутніх `/es/`, `/fr/`, `/de/` без окремих content patches.
-5. Мовозалежні labels/aria-labels/тексти інтерфейсу брати з locale dictionary; сама логіка й DOM/component contract — одна спільна.
-6. Додати Boss/self-test reader parity: порівнювати наявність обов'язкових core controls між UA та активними мовними reader-ами й сигналізувати про missing shell element.
-7. Не ламати indexability: reader content має залишатися серверно доступним у HTML; shared UI не повинен робити текст залежним від JS.
-8. Не дублювати shell у book_patch: book_patch має постачати книгу/метадані/EPUB/locale content, а CORE — навігацію й стандартний reader UI.
+- збір first-party statistics;
+- Boss monitoring;
+- Search Console/Bing observation;
+- Web Vitals observation;
+- аналіз crawler/referrer/404/410/5xx;
+- звичайний трафік/читання;
+- точкова публікація контенту через штатний workflow без structural churn.
 
-## ОБОВ'ЯЗКОВО: parity книжок на локалізованих головних сторінках
+## Контроль після 7 днів
 
-Виявлено після встановлення EN book patches: опубліковані англійські книги з'являються в `/en/books/`, sitemap і hreflang, але не з'являються на головній `/en/`. Це не mobile-CSS проблема: картки книг взагалі відсутні в DOM `/en/index.html` і тому відсутні як на mobile, так і на desktop.
+Порівняти з checkpoint `R222-PRE-PAUSE-AUDIT-2026-08-20.md`:
+1. Search Console discovered/crawled/indexed counts;
+2. sitemap processing/errors;
+3. 404/410/5xx/canonical/noindex anomalies;
+4. IndexNow/Bing status;
+5. query visibility для `mavik`, `MaVik`, `мавік`, `mavik name` та авторських запитів;
+6. first-party referrers/search engines/AI referrals;
+7. Core Web Vitals: TTFB/FCP/LCP/CLS/INP;
+8. popular pages/read completion/EPUB downloads;
+9. robots/crawler availability;
+10. site weight/file-count deltas.
 
-Причина в R215 CORE: українська головна має `mavik_live_sync_home_books()`, тоді як `mavik_live_sync_en_publications()` викликає лише EN catalog/sitemap/hreflang і не має аналога `mavik_live_sync_en_home_books()`.
+## Постійні технічні цілі
 
-У найближчому CORE-релізі обов'язково:
-1. Додати мовно-нейтральний генератор home-book projection для всіх активних локалей, а не окремі ручні HTML-копії.
-2. `/en/` має автоматично показувати лише реально опубліковані EN книги з `en/books/_published/*.json`, без заглушок і без книг, для яких EN edition ще не встановлена.
-3. Використовувати ті самі desktop/mobile limits, порядок і responsive-контракт, що й українська головна, якщо для конкретної мови не задано окремої канонічної політики.
-4. Після будь-якого book_patch/deploy автоматично перебудовувати локалізовану головну разом із каталогом, sitemap та hreflang.
-5. Картки повинні бути server-rendered у HTML і доступні crawler-ам без JS.
-6. Додати Boss/self-test: якщо мова має N published book markers, `/LANG/` повинна мати очікуваний home-book block/cards згідно з home limits; missing localized home projection — помилка.
-7. Той самий механізм від початку застосувати для майбутніх `/es/`, `/fr/`, `/de/`, щоб баг не повторювався.
+Після стабілізаційного періоду будь-яке нове покращення оцінювати за R222 baseline:
+- crawlability/indexability;
+- performance/Core Web Vitals;
+- security;
+- accessibility;
+- first-party observability;
+- clean minimal install tree;
+- backward-safe deploy/rollback;
+- zero unnecessary third-party JS;
+- server-rendered critical content/navigation.
 
-## ОБОВ'ЯЗКОВО: повний parity усіх публічних сторінок між UA та локалями
+## Localization
 
-У наступному structural/functional CORE-релізі локалізація не повинна обмежуватися книжками, каталогом або окремими вручну створеними EN-сторінками. Активна мовна версія має бути повноцінною проєкцією всього публічного українського сайту.
+Localization implementation **frozen** і не є активною частиною roadmap. Усі localization/translation recovery data збережені окремо. Не відновлювати цю роботу без прямої команди автора.
 
-Обов'язковий мінімум для EN, а надалі тим самим механізмом для ES/FR/DE:
-1. Для кожної публічної української сторінки, яка має користувацький зміст і входить до штатної навігації/інформаційної архітектури, має існувати відповідна локалізована сторінка. Винятки — лише приватні, адміністративні, службові, технічні та явно locale-neutral endpoints.
-2. Це прямо стосується, зокрема: головної, каталогу книг, сторінки захисту/безпеки, анонсу, сторінки автора, контактів, інформаційних/довідкових сторінок та інших публічних UA-сторінок. Перелік не вважати закритим: джерелом істини є фактичний набір публічних UA routes у CORE.
-3. Побудувати єдиний мовно-нейтральний public-page registry/router: додавання або зміна публічної UA-сторінки повинно автоматично сигналізувати, якщо для активної локалі немає відповідної route projection/content state.
-4. Не підтримувати окремі розходящіся ручні копії shell/layout. Структура, меню, footer, системні блоки, адаптивність, accessibility і поведінка desktop/mobile мають успадковуватися зі спільного CORE; локалізуються лише тексти/metadata/content, які залежать від мови.
-5. Усі локалізовані сторінки мають бути повноцінними server-rendered HTML-документами, доступними crawler-ам без виконання JS.
-6. Для кожної пари UA↔LANG забезпечити коректні canonical, reciprocal hreflang, `x-default` де доречно, OpenGraph/Twitter metadata, JSON-LD і включення в sitemap лише тоді, коли локалізована сторінка реально придатна для публікації та індексації.
-7. Не залишати EN-сторінки як порожні shell/заглушки, якщо відповідна UA-сторінка є повноцінною. Якщо переклад контенту ще не готовий, route не повинен удавати готову індексовану локалізовану сторінку.
-8. Усі внутрішні посилання в межах локалі мають за можливості вести на ту саму локаль, а не скидати користувача назад на українську версію. Мовний перемикач має переводити на відповідну сторінку-пару, а не завжди на головну.
-9. Mobile/desktop parity обов'язковий: відсутність блоку або сторінки лише в одному breakpoint вважати дефектом CORE, а не окремою «мобільною особливістю».
-10. Додати Boss/self-test `public locale parity`: автоматично порівнювати фактичний набір публічних UA routes з усіма активними локалями та показувати missing route, missing localized content, broken internal link, missing reciprocal hreflang, missing canonical/metadata і layout-shell divergence.
-11. Перед release gate сформувати machine-readable parity report UA↔EN (пізніше UA↔ES/FR/DE) і не вважати локаль повною, якщо критичні public routes відсутні.
-12. Архітектура має бути масштабованою: наступні мови повинні підключатися через locale dictionary/content registry і shared routing, без повторення EN-специфічного коду.
+## Заборона регресії
 
-## ОБОВ'ЯЗКОВО: автоматичний media-pipeline для обкладинок
+Не повертати:
+- окремі locale shells;
+- PWA/service-worker без окремої доведеної потреби;
+- third-party analytics JS;
+- PNG book covers;
+- duplicated clean-text TXT trees;
+- full-site persistent deploy backups;
+- pre-R222 release artifacts як development/recovery base.
 
-Запланувати в найближчий structural/functional release після чинної бази повноцінний автоматичний pipeline оптимізації книжкових обкладинок.
-
-Вимоги:
-1. Вихідний PNG/JPEG зберігати як master-файл; не втрачати оригінал.
-2. При завантаженні/заміні обкладинки автоматично аналізувати формат, dimensions і alpha transparency.
-3. Для непрозорих PNG автоматично генерувати оптимізований JPEG fallback.
-4. Для всіх придатних обкладинок автоматично генерувати WebP; AVIF — якщо серверна бібліотека/інструментарій підтримує його безпечно й стабільно.
-5. Генерувати кілька web-розмірів (орієнтир: 480 / 960 / 1440 px по довшій стороні або еквівалентні responsive widths) без upscaling понад master.
-6. Зберігати правильні width/height для кожного похідного файлу.
-7. Публічний HTML переводити на <picture> / srcset / sizes із сучасним форматом та JPEG/PNG fallback.
-8. Hero/LCP-обкладинку не lazy-load; ставити fetchpriority="high" там, де це справді LCP-зображення.
-9. Нижчеекранні обкладинки: loading="lazy" і decoding="async".
-10. Після генерації автоматично оновлювати bindings/public HTML/JSON-LD/OpenGraph/Twitter image references без розриву canonical URL сторінки.
-11. Для старих обкладинок передбачити idempotent batch rebuild усієї бібліотеки через Boss/maintenance tool.
-12. Пайплайн має бути повторюваним і безпечним: повторний запуск не створює дублі, не накопичує сміття й прибирає obsolete derivatives лише після успішного створення нових.
-13. У Boss додати self-test: missing derivative, надмірна вага, неправильні dimensions, битий файл, невідповідність bindings.
-14. Не перекодовувати PNG з реально потрібною прозорістю в JPEG; для них WebP/AVIF або PNG fallback.
-15. Не погіршувати читабельність тексту на обкладинці: quality/resize thresholds перевіряти візуально та за file-size target, без агресивного стискання.
-
-## Ціль
-
-Зменшити вагу обкладинок і LCP без втрати якості, прибрати ручну оптимізацію медіа та зробити цей процес частиною штатного publishing workflow.
-
-## Жорстке правило продовження
-
-Перед кожним новим structural/functional релізом mavik.name читати цей roadmap разом із release authority та START-HERE-SITE. Невиконані обов'язкові пункти мають переноситися вперед, доки не реалізовані або прямо не скасовані автором.
+Наступний structural release створюється **тільки від R222** і лише після завершення стабілізації або за реальною необхідністю.
