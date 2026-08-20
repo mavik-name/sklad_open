@@ -1,11 +1,12 @@
 # MAVIK.NAME — R222 CLEAN / STABILIZATION CANDIDATE
 
 Оновлено: 2026-08-20
-Статус: **FINAL TESTED CANDIDATE / ГОТОВО ДО ВСТАНОВЛЕННЯ / НЕ КАНОНІЧНИЙ ДО ПРЯМОГО ЗАТВЕРДЖЕННЯ АВТОРОМ**
+Статус: **FINAL TESTED + INSTALLED / PRE-PAUSE AUDIT PASS / НЕ КАНОНІЧНИЙ ДО ПРЯМОГО ЗАТВЕРДЖЕННЯ АВТОРОМ**
 
 ## База
 
-- фактично встановлена live-база перед R222: **R217_GoodRelise**;
+- фактично встановлена live-база: **R222** (автор підтвердив встановлення 2026-08-20);
+- попередня встановлена база: R217_GoodRelise;
 - остання прямо затверджена release authority у канонах: **R215**;
 - R216: REJECTED / DO NOT INSTALL;
 - localization implementation: PAUSED/FROZEN, не входить у R222.
@@ -23,6 +24,9 @@ ChatGPT Library `/Сайт/`:
 - `R222-AUDIT.txt`
 - `R222-CHECKPOINT.txt`
 - `R222-CHECKSUMS.txt`
+
+Pre-pause checkpoint:
+- `mavik-sklad/files/R222-PRE-PAUSE-AUDIT-2026-08-20.md`
 
 ## Identity
 
@@ -108,13 +112,39 @@ Forced failure rollback:
 - live state preserved;
 - tx garbage = 0.
 
-## Scope note
+## Post-install pre-pause audit — 2026-08-20
 
-Internet production DNS/HTTP access to `mavik.name` was unavailable from the build container during this session. Therefore the crawler matrix is a real local Apache test against the post-deploy R222 tree and active `.htaccess`, not a claim about CDN/Internet routing. After author installs R222, perform a separate live-site verification.
+Автор підтвердив встановлення R222. Після цього незалежно повторно перевірено FULL artifact і зовнішню search-visible картину.
 
-## Next action
+PASS / confirmed:
+- FULL SHA та ZIP integrity;
+- 261-file allowlist tree;
+- 82/82 unique sitemap URLs, EN URL = 0;
+- sitemap images missing = 0;
+- public JSON-LD parses;
+- public indexable duplicate title/description/canonical = 0;
+- one-H1 structure retained;
+- CSS/JS cache-busting `?v=222` complete;
+- external public scripts = 0;
+- missing local static assets = 0;
+- cover JPG policy retained;
+- robots/llms/sitemap/canonical/entity configuration retained.
 
-1. Install R222 FULL or PART1+PART2.
-2. Run live HTTP/SEO/crawler verification against `mavik.name`.
-3. If live PASS, author may explicitly approve R222 as canonical stabilization base.
-4. After approval, avoid unnecessary structural SEO changes for a stabilization period and let search robots recrawl the site.
+Non-blocking observations:
+- three meta descriptions measure 172–174 characters; possible snippet truncation only, not crawl/index failure;
+- books catalog uses the same stable `#person` ID with fuller name `Макарчук Віктор Вікторович`; this is a naming variant, not a duplicate entity;
+- analytics collector key is visible client-side and cannot prevent deliberate event spoofing by an attacker; this affects stats integrity only, not SEO/content security.
+
+External search snapshot: the available public search channel does not yet show direct `site:mavik.name` results, while external author/book pages already mention MaVik and/or `mavik.name`. This supports the decision to avoid structural churn and allow recrawl time.
+
+Direct production DNS/HTTP fetch from the available audit environment was still unavailable (DNS/cache miss), so no fabricated CDN/live-HTTP claim is made. Full details: `R222-PRE-PAUSE-AUDIT-2026-08-20.md`.
+
+## Stabilization decision
+
+**NO RELEASE-BLOCKING DEFECT FOUND.**
+
+Recommended pause: **7 days without structural URL/canonical/robots/sitemap/entity/layout changes**, except genuine outage/security/broken-route emergency.
+
+After 7 days compare Search Console/Bing/indexing, query visibility, sitemap processing, crawler errors, IndexNow/Bing status, first-party referrers/Web Vitals and any 404/410/5xx/canonical/noindex anomalies.
+
+R222 remains installed and tested but formally non-canonical until explicit author canonization.
