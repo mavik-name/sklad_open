@@ -9,18 +9,11 @@ FIRST FILE FOR EVERY NEW CHAT BRANCH:
 AUTHORITATIVE CANON REGISTRY:
 `mavik-sklad/files/CANON-REGISTRY.md`
 
-UNIVERSAL CANONS
-- writing/editing: `mavik-sklad/files/golovnyi-kanon-dlya-napysannya-na-redaguvannya-tekstiv-ta-rozmov--b6bbd0fff372f719b852d222.txt`
-- technical fiction control: `mavik-sklad/files/technic-files--8f66396249b19de717d81870.txt`
-- persistent checkpoints: `mavik-sklad/files/KANON-POSTIINYKH-CHECKPOINTIV.txt`
-
 SITE MAVIK.NAME
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release authority: `mavik-sklad/releases/CANON.md`
-- last explicitly approved checkpoint: `mavik-sklad/files/R215-CANON.md`
-- installed pre-R222 base: `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
-- current tested candidate: `mavik-sklad/files/R222-CANDIDATE.md`
-- rejected R216: `mavik-sklad/files/R216-CANDIDATE.md`
+- **current canonical checkpoint: `mavik-sklad/files/R222-CANON.md`**
+- pre-pause audit: `mavik-sklad/files/R222-PRE-PAUSE-AUDIT-2026-08-20.md`
 - cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - SEO/entity/query canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
 - deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
@@ -28,10 +21,8 @@ SITE MAVIK.NAME
 - protected SEO files: `mavik-sklad/files/PROTECTED-SEO-FILES.md`
 
 CURRENT SITE STATE
-- R217_GoodRelise is installed before R222.
-- R222 = FINAL TESTED CLEAN/STABILIZATION CANDIDATE.
-- R215 = last explicitly approved release authority.
-- R216 = REJECTED / DO NOT INSTALL.
+- **R222 = sole canonical CORE.**
+- all pre-R222 site releases/candidates/checkpoints/binaries = obsolete trash and removed from active storage/routing.
 
 R222 STORAGE — ChatGPT Library `/Сайт/`
 - `R222.zip`
@@ -49,54 +40,22 @@ R222 identifiers:
 - PART1: `bff28f101563376f9d9ecc371118b0b3a6a51f01d98bbb08942266c8e15573d0`
 - PART2: `14ddadc437251d51400895fdcaea4f34b0517917241f9a69a104b30d3fd9b470`
 
-R222 gate:
-- exact manifest inventory 261/261; garbage 0
-- EN/localization/PWA refs 0; third-party scripts 0
-- PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81
-- sitemap 82/82; broken refs 0
-- EPUB 21/21; covers JPG 23/23
-- FULL/PART validators PASS
-- full deploy R217→R222 PASS
-- multipart deploy R217→R222 PASS
-- post-deploy audit 0 issues
-- Apache crawler matrix 410/410 HTTP 200
-- security/cache/compression/maintenance suite PASS
-- forced rollback PASS
-
 CURRENT PRIORITY
 - single Ukrainian `uk-UA` site;
 - maximum performance/indexing/crawlability/Ukrainian reach;
 - first-party Boss statistics and SEO monitoring;
-- install ZIP contains only required live/Boss/deploy files;
+- clean minimal install tree;
 - localization remains frozen;
-- after R222 live PASS, keep structural SEO stable for a recrawl period.
-
-MAVIK SEO/ENTITY — ACTIVE
-- one entity: `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`
-- exact/ambiguous `mavik` remains permanent brand target
-- `/mavik/`, `/about/`, `#website`, `#person` preserved
-- no fake DJI/drone relevance
+- 7-day stabilization pause without unnecessary structural SEO changes.
 
 LOCALIZATION / TRANSLATION — FROZEN
-Recovery:
+Recovery preserved separately:
 - GitHub branch `freeze/localization-2026-08-19`
 - Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`
 - `mavik-sklad/translations/en/`
 - `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
 
-ENGLISH DATA PRESERVED
-- `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
-- `mavik-sklad/files/EN-SOURCE-POLICY.md`
-- `mavik-sklad/translations/en/SITE-PUBLISHED-SOURCE-HARD-CANON.md`
-- `mavik-sklad/translations/en/STATUS.md`
-- 10 complete EN editions preserved; The Sculptor work preserved; Social English STOP preserved.
-
 OTHER PROJECTS
-- Соціальна: `mavik-sklad/files/00-SOCIALNA-START-HERE.txt`
-- Всесвіт 25: `mavik-sklad/files/START-HERE-VSESVIT-25.md`
-- Код легенди: `mavik-sklad/files/START-HERE-KOD-LEHENDY.md`
-- Евакуація: `mavik-sklad/files/START-HERE-EVAKUATSIIA.md`
-- Generation Ship: `mavik-sklad/files/START-HERE-GENERATION-SHIP.md`
-- Статусна: `mavik-sklad/files/STATUSNA/START-HERE.md`
+Files under `/Сайт/Проєкти/` and their warehouse canons are unrelated to site-release cleanup and remain intact.
 
-For any project, read its persistent START-HERE/canon/status first. Never reconstruct active state from chat memory when persistent documentation exists.
+For site work, never reconstruct active state from pre-R222 artifacts or chat memory.
