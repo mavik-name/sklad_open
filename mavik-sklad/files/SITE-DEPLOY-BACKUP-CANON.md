@@ -1,58 +1,64 @@
 # MAVIK.NAME — DEPLOY BACKUP CANON
 
-Дата: 2026-08-19
-Статус: **HARD DEPLOY CANON / ОБОВ'ЯЗКОВО ВІД R216**
+Дата актуалізації: 2026-08-20
+Статус: **HARD DEPLOY CANON / ОБОВ'ЯЗКОВО ВІД R222**
 
 ## Головний принцип
 
 Під час розгортання нового CORE-релізу Boss **не створює постійну повну резервну копію всього сайту**.
 
-Постійний pre-deploy backup містить **лише файлові бази даних / JSON state**, необхідні для відновлення mutable content/state.
+Persistent pre-deploy backup містить лише mutable database/JSON state, необхідний для відновлення живих даних.
 
-Мета — не дублювати десятки мегабайт статичних HTML, EPUB, MP3, зображень та CORE-файлів при кожному релізі й не витрачати зайве місце на сервері.
+Не дублювати десятки мегабайт статичних HTML, EPUB, MP3, зображень і CORE-файлів при кожному deploy.
 
 ## Що входить у persistent backup
 
-- `/_site-state/locales/<locale>/*.json`;
-- locale indexes / bindings / publication state;
-- legacy JSON state, якщо він ще існує під час одноразової міграції R215 → R216;
-- інші JSON-файли `/_site-state`, які є mutable database/state і можуть бути змінені deploy/live-sync.
+- mutable JSON/files under protected `/_site-state/`;
+- content/order/focus/statistics/other live database state, який може змінюватися незалежно від release package;
+- інші явно визначені mutable database/state файли.
 
-Не включати до persistent deploy backup:
+Не включати:
 - HTML/PHP/JS/CSS CORE;
 - EPUB;
 - MP3;
-- обкладинки та інші зображення;
-- статичні downloads;
-- інші великі shared content binaries.
+- обкладинки/зображення;
+- static downloads;
+- інші великі immutable/release-managed binaries.
 
 ## Crash-safe rollback CORE
 
-Відмова від повного persistent backup не означає відмову від rollback.
-
-Перед зміною CORE Boss створює **короткоживучий transaction snapshot тільки тих CORE/shared файлів, які реально будуть змінені або прибрані**.
+Перед зміною CORE Boss створює короткоживучий transaction snapshot **тільки affected CORE/shared files**, які реально будуть змінені або видалені.
 
 Правила:
-1. Для transaction snapshot за можливості використовувати filesystem hard links, щоб не дублювати байти.
-2. Якщо hard link недоступний — допустимий тимчасовий copy fallback тільки для affected files.
-3. Transaction snapshot зберігається у захищеному `/_site-state/deploy/`.
-4. Після успішного deploy transaction snapshot негайно видаляється.
-5. При помилці він використовується для відновлення старого CORE, після чого також видаляється.
-6. Persistent після deploy лишається тільки database backup.
+1. За можливості використовувати filesystem hard links.
+2. Якщо hard link недоступний — допустимий тимчасовий copy fallback для affected files.
+3. Transaction snapshot лежить у protected `/_site-state/deploy/`.
+4. Після успішного deploy snapshot негайно видаляється.
+5. При помилці snapshot відновлює попередній CORE і також видаляється.
+6. Persistent після deploy лишається тільки database/state backup.
 
 ## Retention
 
-Зберігати обмежену кількість останніх database-only backup (орієнтир: 3). Старі автоматично прибирати.
+Зберігати обмежену кількість останніх database-only backup; орієнтир — 3. Старі автоматично прибирати.
 
 ## Patch / overlay
 
-Locale/content patch дотримується того самого принципу:
-- persistent backup — лише цільові/актуальні бази даних;
-- changed shared/CORE files страхуються лише короткоживучим transaction snapshot;
-- patch не створює повну копію сайту.
+Content patch дотримується тієї самої моделі:
+- persistent backup — лише mutable state, якого реально торкається operation;
+- changed CORE/shared files страхуються короткоживучим transaction snapshot;
+- patch не створює повну копію site tree.
+
+## R222 continuity
+
+R222 deploy/rollback gate підтвердив:
+- live mutable state survives successful deploy;
+- tx/stage/pending garbage after success = 0;
+- forced post-copy failure restores previous CORE/state;
+- uploaded release archive cleans only after successful install;
+- obsolete managed files may be removed safely under manifest control.
 
 ## Заборона регресії
 
-Не повертати в майбутніх релізах автоматичне архівування всього site tree перед кожним deploy, якщо автор прямо не змінить цей канон.
+Не повертати автоматичне архівування всього site tree перед кожним deploy, якщо автор прямо не змінить цей канон.
 
-Правильна модель: **persistent database-only backup + short-lived affected-files transaction rollback**.
+Правильна модель: **persistent mutable-state backup + short-lived affected-files transaction rollback**.
