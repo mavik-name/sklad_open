@@ -42,7 +42,7 @@ Stable entity IDs remain:
 - `https://mavik.name/#website`
 - `https://mavik.name/#person`
 
-Home/About/MaVik bind `MaVik / Mavik / Мавік / Viktor Makarchuk` to the same person ID. The books catalog uses the same `#person` ID with the fuller name `Макарчук Віктор Вікторович`; this is a minor naming-variant consistency note, not a duplicate-entity error because the `@id` is identical and `Віктор Макарчук` is included as alternateName.
+Автор підтвердив повне ім'я: **Віктор Вікторович Макарчук**. Тому `Макарчук Віктор Вікторович` у каталозі та коротка авторська форма `Віктор Макарчук` на Home/About/MaVik — коректні варіанти імені тієї самої особи, а не inconsistency. Вони використовують той самий `https://mavik.name/#person`; `Віктор Макарчук`, `MaVik / Mavik / Мавік` і `Viktor Makarchuk` можуть лишатися alternate/author identity forms. Окремого SEO/entity дефекту тут немає.
 
 ## First-party analytics / monitoring
 - collector writes only aggregate JSON under protected `/_site-state/analytics`;
