@@ -2,95 +2,81 @@
 
 Оновлено: 2026-08-20 Europe/Kyiv
 
-## Єдина чинна канонічна база
+## Release authority
 
-**R215 — єдина прямо затверджена structural/functional CORE-база mavik.name.**
+**R215 — остання прямо затверджена structural/functional CORE-база mavik.name.**
 
-R215 прямо затверджено автором 2026-08-19.
+R217_GoodRelise фактично встановлена на сайті й використана як база для R222.
 
-**R217_GoodRelise — FINAL TESTED CANDIDATE, але НЕ канонічна до прямого затвердження автором.**
+**R222 — FINAL TESTED CLEAN/STABILIZATION CANDIDATE, але НЕ канонічна до прямого затвердження автором після live-перевірки.**
 
-**R216 — REJECTED / DO NOT INSTALL.** Причина й історичний аудит: `mavik-sklad/files/R216-CANDIDATE.md`.
+R216 — REJECTED / DO NOT INSTALL.
 
-Канонічний checkpoint R215: `mavik-sklad/files/R215-CANON.md`.
-R217 candidate checkpoint: `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`.
-Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`.
+Checkpoints:
+- R215: `mavik-sklad/files/R215-CANON.md`
+- R217 installed candidate history: `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
+- R222 current candidate: `mavik-sklad/files/R222-CANDIDATE.md`
+- journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 
-## R217_GoodRelise
+## R222
 
-Модель: **одна українська locale `uk-UA`**.
-Localization implementation поставлено на паузу і законсервовано окремо; воно не є частиною R217.
-
-Поточний пріоритет:
-- максимальна швидкодія;
-- максимальна crawlability/індексація;
-- максимальна присутність у українському сегменті;
-- розширена first-party статистика в Boss;
-- install tree без localization/WIP/backup/dev/legacy garbage.
+Модель: одна українська locale `uk-UA`; localization implementation frozen and excluded.
 
 Persistent artifacts: ChatGPT Library `/Сайт/`:
-- `R217_GoodRelise.zip`
-- `R217_GoodRelise_PART1.zip`
-- `R217_GoodRelise_PART2.zip`
-- `R217_GoodRelise-AUDIT.txt`
-- `R217_GoodRelise-CHECKPOINT.txt`
-- `R217_GoodRelise-CHECKSUMS.txt`
+- `R222.zip`
+- `R222_PART1.zip`
+- `R222_PART2.zip`
+- `R222-AUDIT.txt`
+- `R222-CHECKPOINT.txt`
+- `R222-CHECKSUMS.txt`
 
-Identifiers:
-- release: 217;
-- base_release: 215;
-- release_label: `217_GoodRelise`;
-- managed files: **284**;
-- manifest SHA-256: `f05a3f5f9d02ad357b88006480c56d8845ba8bcec8dd24f20baf2563d38d0219`;
-- multipart set: `r217-f05a3f5f9d02ad35`;
-- FULL SHA-256: `2234dcb886413cd66e5fb75d2c1c1ffe99f8c3c639a4615ae89e6c72d2a5b22d`;
-- PART1 SHA-256: `11bd21282ae7fc27760e1824966801df5be1599630f4ddb238bdeed9a1ecab67`;
-- PART2 SHA-256: `e0115a39790123c94950678f6386abc6c50ff7f51c79576cd2dd9ed4ebcc3059`.
+Identity:
+- release 222;
+- base_release 217;
+- managed files 261;
+- raw managed tree 44,235,022 bytes;
+- manifest SHA-256 `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
+- multipart set `r222-38a1a21936163bef`;
+- FULL SHA-256 `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`;
+- PART1 SHA-256 `bff28f101563376f9d9ecc371118b0b3a6a51f01d98bbb08942266c8e15573d0`;
+- PART2 SHA-256 `14ddadc437251d51400895fdcaea4f34b0517917241f9a69a104b30d3fd9b470`.
 
-Final gate:
-- PHP 31/31 OK;
-- JS 14/14 OK;
-- XML 2/2 valid;
-- JSON-LD 81/81 parse;
-- internal refs 5329/5329;
-- sitemap 82 unique canonical URLs + 11 image entries;
-- 21/21 EPUB integrity PASS;
-- book-cover PNG 0; EPUB cover PNG 0;
+Final candidate gate:
+- install tree ↔ manifest 261/261 exact;
+- garbage 0; EN/localization/PWA refs 0; third-party scripts 0;
+- PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81;
+- sitemap 82/82 unique;
+- internal broken refs 0;
+- EPUB 21/21;
+- 23/23 covers JPG;
 - FULL/PART1/PART2 validators PASS;
-- synthetic real deploy R215→R217 PASS;
-- synthetic real deploy R216→R217 PASS;
-- protected live state preserved;
-- old EN/PWA/locale files and empty legacy trees removed;
-- site-core migrated to direct Ukrainian model;
-- tx/stage temporary garbage after success = 0.
+- actual FULL deploy R217→R222 PASS;
+- actual multipart deploy R217→R222 PASS;
+- post-deploy audit 0 issues;
+- Apache crawler matrix 82 URLs × Browser/Googlebot/Bingbot/OAI-SearchBot/ChatGPT-User = 410/410 HTTP 200;
+- redirect/security/cache/compression/maintenance suite PASS;
+- forced failure rollback PASS.
+
+## Stabilization rule after R222
+
+Після встановлення R222 виконати окремий live HTTP/SEO check `mavik.name`. Якщо live PASS і автор прямо затверджує R222, зробити R222 єдиною канонічною базою та не вносити безпідставних structural/SEO змін протягом стабілізаційного періоду — дати пошуковим роботам переобійти стабільний сайт.
+
+## Permanent SEO/entity contract
+
+`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`.
+Exact/ambiguous `mavik` лишається довгостроковою бренд-ціллю. Не маскувати сайт під DJI/drone тематику і не застосовувати doorway/keyword spam.
 
 ## Localization freeze
 
-Implementation frozen until explicit author command to resume.
-
-Recovery:
-- GitHub branch `freeze/localization-2026-08-19`;
-- Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`;
-- translation workspace `mavik-sklad/translations/en/`;
-- authority `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`.
-
-## Постійний SEO/entity contract
-
-Незалежно від localization pause зберігати:
-`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name`.
-
-Exact/ambiguous query `mavik` лишається довгостроковою бренд-ціллю. Не маскувати сайт під DJI/drone тематику і не застосовувати doorway/keyword spam. Authority: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
+Localization implementation не входить у R222 і лишається frozen до прямого наказу автора.
+Recovery: `freeze/localization-2026-08-19`, Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`, `mavik-sklad/translations/en/`.
 
 ## Deploy/state continuity
 
-- `/_site-state/` — protected live state;
+- `/_site-state/` — protected runtime state;
 - persistent backup = mutable JSON/database state only;
 - affected CORE = short-lived transaction snapshot;
-- successful deploy cleans tx/stage archives;
-- retired locale runtime state може прибиратися тільки після pre-deploy database backup.
+- successful deploy cleans tx/stage/pending garbage;
+- rollback tested by forced post-copy failure.
 
-## Робоче правило
-
-До прямого затвердження R217_GoodRelise будь-яка production-authority перевірка посилається на R215. Якщо треба продовжувати/виправляти новий кандидат — продовжувати саме від `R217-GOODRELISE-CANDIDATE.md`/його binary, не від R216.
-
-Будь-який новий full release стає єдиною канонічною базою тільки після прямого рішення автора.
+R222 becomes release authority only after explicit author approval.
