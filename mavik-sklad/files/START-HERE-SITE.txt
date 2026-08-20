@@ -2,23 +2,23 @@ MAVIK.NAME — START HERE
 Оновлено: 20.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ПОТОЧНА ПРЯМО ЗАТВЕРДЖЕНА CORE-БАЗА: R215.
-R217_GoodRelise: FINAL TESTED CANDIDATE, ГОТОВА ДО ВСТАНОВЛЕННЯ/ПЕРЕВІРКИ, але ще не канонічна без прямого ОК автора.
+ФАКТИЧНА ВСТАНОВЛЕНА БАЗА ПЕРЕД НАСТУПНИМ DEPLOY: R217_GoodRelise.
+ОСТАННЯ ПРЯМО ЗАТВЕРДЖЕНА RELEASE AUTHORITY: R215.
+R222: FINAL TESTED CLEAN/STABILIZATION CANDIDATE, ГОТОВА ДО ВСТАНОВЛЕННЯ.
 R216: REJECTED / DO NOT INSTALL.
 
 ПЕРЕД БУДЬ-ЯКОЮ РОБОТОЮ ІЗ САЙТОМ
 1. `mavik-sklad/releases/CANON.md`
 2. `mavik-sklad/files/CANON-REGISTRY.md`
-3. `mavik-sklad/files/R215-CANON.md`
-4. `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
-5. `mavik-sklad/files/SITE-WORK-JOURNAL.md`
-6. `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-7. `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
-8. `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
-9. `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
-10. `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
-11. `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
-12. `mavik-sklad/files/PROTECTED-SEO-FILES.md`
+3. `mavik-sklad/files/R222-CANDIDATE.md`
+4. `mavik-sklad/files/SITE-WORK-JOURNAL.md`
+5. `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+6. `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+7. `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
+8. `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
+9. `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
+10. `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
+11. `mavik-sklad/files/PROTECTED-SEO-FILES.md`
 
 CURRENT HARD PRIORITY
 - один український сайт / одна locale `uk-UA`;
@@ -26,57 +26,57 @@ CURRENT HARD PRIORITY
 - максимальна crawlability та індексація;
 - максимальна присутність/поширення в українському сегменті;
 - first-party статистика/SEO monitoring у Boss;
-- максимально чистий install tree без localization/WIP/backup/dev/legacy garbage.
+- clean/stable install tree без localization/WIP/backup/dev/legacy garbage;
+- після R222 не робити безпідставних structural SEO змін, дати роботам стабільний період обходу.
+
+R222 STORAGE — ChatGPT Library `/Сайт/`
+- `R222.zip`
+- `R222_PART1.zip`
+- `R222_PART2.zip`
+- `R222-AUDIT.txt`
+- `R222-CHECKPOINT.txt`
+- `R222-CHECKSUMS.txt`
+
+R222 IDENTITY
+- release 222 / base 217 / managed 261;
+- manifest `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
+- set `r222-38a1a21936163bef`;
+- FULL `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`;
+- PART1 `bff28f101563376f9d9ecc371118b0b3a6a51f01d98bbb08942266c8e15573d0`;
+- PART2 `14ddadc437251d51400895fdcaea4f34b0517917241f9a69a104b30d3fd9b470`.
+
+R222 FINAL GATE
+- manifest 261/261 exact; garbage 0; EN/localization/PWA refs 0;
+- PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81;
+- sitemap 82/82 unique; internal broken refs 0;
+- EPUB 21/21; covers JPG 23/23;
+- FULL/PART validators PASS;
+- actual FULL R217→R222 deploy PASS;
+- actual multipart R217→R222 deploy PASS;
+- post-deploy audit 0 issues;
+- Apache crawler matrix 82 URLs × 5 agents = 410/410 HTTP 200;
+- canonical redirects/security/cache/compression/maintenance suite PASS;
+- forced-failure rollback PASS.
 
 LOCALIZATION
-Упровадження локалізацій ЗУПИНЕНО. Воно не входить до R217_GoodRelise.
-Вся робота збережена:
+Упровадження локалізацій ЗУПИНЕНО. У R222 його немає.
+Recovery preserved:
 - GitHub `freeze/localization-2026-08-19`;
 - Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`;
 - `mavik-sklad/translations/en/`;
 - `LOCALIZATION-FREEZE-2026-08-20.md`.
 Не відновлювати localization implementation без прямої команди автора.
 
-R217_GOODRELISE
-Persistent storage: ChatGPT Library `/Сайт/`.
-- FULL: `R217_GoodRelise.zip`
-- PART1: `R217_GoodRelise_PART1.zip`
-- PART2: `R217_GoodRelise_PART2.zip`
-- sidecars: AUDIT / CHECKPOINT / CHECKSUMS
-
-Identifiers:
-- release 217 / base 215 / managed files 284;
-- manifest `f05a3f5f9d02ad357b88006480c56d8845ba8bcec8dd24f20baf2563d38d0219`;
-- set `r217-f05a3f5f9d02ad35`;
-- FULL `2234dcb886413cd66e5fb75d2c1c1ffe99f8c3c639a4615ae89e6c72d2a5b22d`;
-- PART1 `11bd21282ae7fc27760e1824966801df5be1599630f4ddb238bdeed9a1ecab67`;
-- PART2 `e0115a39790123c94950678f6386abc6c50ff7f51c79576cd2dd9ed4ebcc3059`.
-
-FINAL GATE
-- PHP 31/31;
-- JS 14/14;
-- XML 2/2;
-- JSON-LD 81/81;
-- internal refs 5329/5329;
-- sitemap 82 unique canonical URLs + 11 image entries;
-- 21/21 EPUB integrity PASS;
-- book-cover PNG 0; EPUB cover PNG 0;
-- FULL/PART1/PART2 validators PASS;
-- actual synthetic deploy R215→R217 PASS;
-- actual synthetic deploy R216→R217 PASS;
-- old EN/PWA/locale runtime removed, live state preserved, site-core migrated to single-UA model, tx/stage garbage 0.
-
-SEO / ENTITY — АКТИВНИЙ
-`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` лишається постійним SEO/entity contract.
-Exact/ambiguous `mavik` лишається довгостроковою бренд-ціллю.
-Не маскувати сайт під DJI/drone тематику.
+SEO / ENTITY
+`MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` = постійний entity contract.
+Exact/ambiguous `mavik` = довгострокова бренд-ціль. Не маскувати сайт під DJI/drone тематику.
 
 STATE / DEPLOY
-- `/_site-state/` = protected live state;
-- persistent backup перед deploy = mutable JSON/database state only;
+- `/_site-state/` = protected runtime state, не входить до install tree;
+- persistent backup = mutable database/JSON state only;
 - CORE = short-lived transaction snapshot;
-- після успіху tx/stage/archive garbage прибирається;
-- retired localization runtime state прибирається тільки після створення pre-deploy database backup.
+- successful deploy прибирає tx/stage/pending garbage;
+- rollback перевірений примусовою помилкою.
 
-ЖОРСТКЕ ПРАВИЛО
-До прямого затвердження R217_GoodRelise чинний release authority — R215. Нову роботу над кандидатом продовжувати від `R217-GOODRELISE-CANDIDATE.md`, а не від R216 і не реконструювати стан із чату.
+НАСТУПНА ДІЯ
+Встановити R222. Після встановлення зробити live HTTP/SEO/crawler check `mavik.name`. Якщо PASS — автор може прямо затвердити R222 як канонічну стабілізаційну базу.
