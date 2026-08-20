@@ -23,49 +23,53 @@ UNIVERSAL CANONS
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current approved checkpoint: `mavik-sklad/files/R215-CANON.md`
-- Current final tested candidate: `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
+- Last explicitly approved checkpoint: `mavik-sklad/files/R215-CANON.md`
+- Installed pre-R222 base history: `mavik-sklad/files/R217-GOODRELISE-CANDIDATE.md`
+- Current final tested candidate: `mavik-sklad/files/R222-CANDIDATE.md`
 - Rejected R216: `mavik-sklad/files/R216-CANDIDATE.md`
 - Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - SEO/entity canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
 - Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
 - Localization freeze: `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
 
-CURRENT SITE AUTHORITY
-- **R215** = last explicitly approved CORE.
-- **R217_GoodRelise** = FINAL TESTED CANDIDATE, not canonical until explicit author approval.
-- **R216** = REJECTED / DO NOT INSTALL.
+CURRENT SITE STATE
+- R217_GoodRelise фактично встановлена перед R222.
+- R222 = FINAL TESTED CLEAN/STABILIZATION CANDIDATE, ready to install.
+- R215 = last explicitly approved release authority.
+- R216 = REJECTED / DO NOT INSTALL.
 
 CURRENT SITE PRIORITY
 - pure Ukrainian single-locale `uk-UA`;
-- maximum performance;
-- maximum crawlability/indexing;
-- maximum reach/presence in Ukrainian segment;
-- rich first-party Boss statistics/SEO monitoring;
-- minimum install tree, no localization/WIP/backup/dev/legacy garbage.
+- maximum performance/crawlability/indexing/Ukrainian reach;
+- first-party Boss statistics/SEO monitoring;
+- clean minimal install tree;
+- localization remains frozen;
+- after R222 live PASS: stabilization period without unnecessary structural SEO changes.
 
-R217_GOODRELISE STORAGE
-ChatGPT Library `/Сайт/`:
-- `R217_GoodRelise.zip`
-- `R217_GoodRelise_PART1.zip`
-- `R217_GoodRelise_PART2.zip`
-- `R217_GoodRelise-AUDIT.txt`
-- `R217_GoodRelise-CHECKPOINT.txt`
-- `R217_GoodRelise-CHECKSUMS.txt`
+R222 STORAGE — ChatGPT Library `/Сайт/`
+- `R222.zip`
+- `R222_PART1.zip`
+- `R222_PART2.zip`
+- `R222-AUDIT.txt`
+- `R222-CHECKPOINT.txt`
+- `R222-CHECKSUMS.txt`
 
-Identifiers:
-- managed files 284;
-- manifest `f05a3f5f9d02ad357b88006480c56d8845ba8bcec8dd24f20baf2563d38d0219`;
-- set `r217-f05a3f5f9d02ad35`;
-- FULL SHA-256 `2234dcb886413cd66e5fb75d2c1c1ffe99f8c3c639a4615ae89e6c72d2a5b22d`.
+R222 identity:
+- managed 261;
+- manifest `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
+- set `r222-38a1a21936163bef`;
+- FULL `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`.
 
-Gate summary:
+R222 gate:
+- garbage 0; EN/localization/PWA refs 0;
 - PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81;
-- refs 5329/5329; sitemap 82 unique URLs + 11 images;
-- EPUB 21/21 integrity; book-cover PNG 0; EPUB cover PNG 0;
+- sitemap 82/82; broken refs 0; EPUB 21/21; covers JPG 23/23;
 - FULL/PART validators PASS;
-- R215→R217 and R216→R217 synthetic real deploy PASS;
-- live state preserved; old localization/PWA garbage removed; tx/stage garbage 0.
+- FULL and multipart R217→R222 deploy PASS;
+- post-deploy audit 0 issues;
+- Apache crawler matrix 410/410 HTTP 200;
+- HTTP/security/cache/compression/maintenance PASS;
+- forced rollback PASS.
 
 LOCALIZATION / TRANSLATIONS — FROZEN
 Implementation paused until explicit author command to resume.
@@ -78,7 +82,7 @@ Do not retranslate completed EN works from scratch when work later resumes.
 
 PERMANENT MAVIK SEO/ENTITY RULE
 `MaVik / Mavik / Мавік ↔ Віктор Макарчук / Viktor Makarchuk ↔ mavik.name` = one entity.
-Exact/ambiguous `mavik` remains a long-term brand-search target. Preserve `/mavik/`, `/about/`, stable `#website/#person`, author bindings and real `sameAs`. Do not fake drone/DJI relevance.
+Exact/ambiguous `mavik` remains long-term brand target. Preserve `/mavik/`, `/about/`, stable `#website/#person`, author bindings and real `sameAs`. Do not fake DJI/drone relevance.
 
 ENGLISH TRANSLATION DATA
 - Start: `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`
@@ -86,7 +90,7 @@ ENGLISH TRANSLATION DATA
 - Source policy: `mavik-sklad/files/EN-SOURCE-POLICY.md`
 - Status: `mavik-sklad/translations/en/STATUS.md`
 - 10 complete English editions preserved.
-- Active historical incomplete target: The Sculptor.
+- Historical incomplete target: The Sculptor.
 - Social / Соціальна English STOP preserved until explicit reversal.
 
 РОМАН «СОЦІАЛЬНА»
@@ -104,7 +108,7 @@ ENGLISH TRANSLATION DATA
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямий наказ автора має найвищий пріоритет.
-2. Site release authority = R215 до прямого затвердження R217_GoodRelise.
-3. Для продовження candidate work використовувати R217 checkpoint/artifact, не R216.
+2. R222 не стає canonical без прямого approval після live check.
+3. Для продовження current site work використовувати R222 checkpoint/artifact, не R216/R217 реконструкцію з чату.
 4. Localization не відновлювати без прямого наказу.
-5. Translation source authority лишається `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
+5. Translation source authority = `SITE-PUBLISHED-SOURCE-HARD-CANON.md`.
