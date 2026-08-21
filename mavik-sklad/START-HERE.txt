@@ -1,5 +1,5 @@
 MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
-Оновлено: 20.08.2026
+Оновлено: 21.08.2026
 Статус: ГОЛОВНИЙ МАРШРУТИЗАТОР ДЛЯ НОВОЇ ГІЛКИ
 
 ГОЛОВНЕ ПРАВИЛО
@@ -9,16 +9,17 @@ MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- **Current canonical checkpoint: `mavik-sklad/files/R222-CANON.md`**
-- Pre-pause audit: `mavik-sklad/files/R222-PRE-PAUSE-AUDIT-2026-08-20.md`
+- **Current canonical checkpoint: `mavik-sklad/files/R223_TTS-CANON.md`**
 - Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - SEO/entity canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
 - Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
 - Localization freeze: `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
 
 CURRENT SITE AUTHORITY
-- **R222 = sole canonical CORE.**
-- All pre-R222 site releases/candidates/checkpoints/binaries = obsolete trash and removed from active routing/storage.
+- **R223_TTS = sole canonical working CORE.**
+- R223_TTS built directly from R222_Statistic and author-approved on 2026-08-21.
+- R222_Statistic = rollback reserve only; do not use for normal work.
+- Pre-R222_Statistic site releases remain obsolete/history.
 
 CURRENT SITE PRIORITY
 - pure Ukrainian single-locale `uk-UA`;
@@ -26,21 +27,24 @@ CURRENT SITE PRIORITY
 - first-party Boss statistics/SEO monitoring;
 - clean minimal install tree;
 - localization remains frozen;
-- 7-day stabilization pause without unnecessary structural SEO changes.
+- no unnecessary structural SEO changes.
 
-R222 STORAGE — ChatGPT Library `/Сайт/`
-- `R222.zip`
-- `R222_PART1.zip`
-- `R222_PART2.zip`
-- `R222-AUDIT.txt`
-- `R222-CHECKPOINT.txt`
-- `R222-CHECKSUMS.txt`
+R223_TTS STORAGE — ChatGPT Library `/Сайт/`
+- `R223_TTS.zip`
+- `R223_TTS.sha256.txt`
+- `R223_TTS-CHANGELOG.txt`
+- `R223_TTS-CHECKPOINT.txt`
+- `R223_TTS-CANON.txt`
+- `CANONICAL_RELEASE.txt`
 
-R222 identity:
-- managed 261;
-- manifest `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
-- set `r222-38a1a21936163bef`;
-- FULL `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`.
+R223_TTS identity:
+- size `26847258` bytes;
+- SHA-256 `d199f2dbd4d5d48aed71b85866176d141d3f4340b268fbd7c5f03159bfeb95bc`;
+- base `R222_Statistic`.
+
+ROLLBACK RESERVE
+- Library `/Сайт/reserve/R222_Statistic/`.
+- Preserve; do not modify; do not use as a work base unless the author explicitly orders rollback.
 
 LOCALIZATION / TRANSLATIONS — FROZEN
 Implementation paused until explicit author command to resume.
@@ -57,6 +61,6 @@ Authority: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямий наказ автора має найвищий пріоритет.
-2. Site CORE = тільки R222.
-3. Pre-R222 site release artifacts не відновлювати.
+2. Site CORE = тільки R223_TTS.
+3. R222_Statistic = rollback reserve only.
 4. Localization не відновлювати без прямого наказу.
