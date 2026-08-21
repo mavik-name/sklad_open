@@ -1,6 +1,6 @@
 # MAVIK — CANON REGISTRY
 
-Updated: 2026-08-20
+Updated: 2026-08-21
 Status: **AUTHORITATIVE INDEX**
 
 ## Site MAVIK.NAME
@@ -8,8 +8,7 @@ Status: **AUTHORITATIVE INDEX**
 - Master start: `mavik-sklad/START-HERE.txt`
 - Site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- **Current canonical checkpoint: `mavik-sklad/files/R222-CANON.md`**
-- Pre-pause audit: `mavik-sklad/files/R222-PRE-PAUSE-AUDIT-2026-08-20.md`
+- **Current canonical checkpoint: `mavik-sklad/files/R223_TTS-CANON.md`**
 - Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
 - Technical roadmap: `mavik-sklad/files/SITE-TECHNICAL-ROADMAP.md`
 - Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
@@ -19,9 +18,13 @@ Status: **AUTHORITATIVE INDEX**
 
 ## CURRENT RELEASE AUTHORITY
 
-**R222 = sole canonical structural/functional CORE base.**
+**R223_TTS = sole canonical structural/functional working base.**
 
-All pre-R222 site releases/candidates/checkpoints/binaries = obsolete trash and are removed from active storage/routing.
+Built directly from `R222_Statistic` and explicitly approved by the author on 2026-08-21.
+
+`R222_Statistic` is preserved only as rollback reserve. It is not a working base and must not receive new changes.
+
+All site releases before `R222_Statistic` remain obsolete/history unless the author explicitly orders otherwise.
 
 ## CURRENT HARD PRIORITY
 
@@ -30,27 +33,36 @@ All pre-R222 site releases/candidates/checkpoints/binaries = obsolete trash and 
 3. comprehensive first-party Boss statistics/SEO monitoring;
 4. minimum clean install tree;
 5. localization implementation frozen;
-6. 7-day stabilization period without unnecessary structural SEO changes.
+6. no unnecessary structural SEO changes.
 
-## R222
+## R223_TTS
 
-Persistent binaries: ChatGPT Library `/Сайт/`:
-- `R222.zip`
-- `R222_PART1.zip`
-- `R222_PART2.zip`
-- `R222-AUDIT.txt`
-- `R222-CHECKPOINT.txt`
-- `R222-CHECKSUMS.txt`
+Persistent binaries/control files: ChatGPT Library `/Сайт/`:
+- `R223_TTS.zip`
+- `R223_TTS.sha256.txt`
+- `R223_TTS-CHANGELOG.txt`
+- `R223_TTS-CHECKPOINT.txt`
+- `R223_TTS-CANON.txt`
+- `CANONICAL_RELEASE.txt`
 
 Identity:
-- managed files 261;
-- manifest `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
-- multipart set `r222-38a1a21936163bef`;
-- FULL `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`;
-- PART1 `bff28f101563376f9d9ecc371118b0b3a6a51f01d98bbb08942266c8e15573d0`;
-- PART2 `14ddadc437251d51400895fdcaea4f34b0517917241f9a69a104b30d3fd9b470`.
+- size `26847258` bytes;
+- SHA-256 `d199f2dbd4d5d48aed71b85866176d141d3f4340b268fbd7c5f03159bfeb95bc`;
+- base `R222_Statistic`.
 
-Gate summary: manifest 261/261; garbage 0; EN/localization/PWA refs 0; PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81; sitemap 82/82; broken refs 0; EPUB 21/21; JPG covers 23/23; archive/deploy/rollback/crawler/security/cache/compression gates PASS.
+Key delta:
+- strict Ukrainian TTS voice selection (`uk-UA` / `uk-*`);
+- no foreign-language fallback;
+- install-help shown only if Ukrainian system voice is absent;
+- platform-specific help for iPhone/iPad and Android;
+- reader-listen cache-buster `v=224` across 21 readers;
+- mobile PWA/install handling retained.
+
+## Rollback reserve
+
+Library: `/Сайт/reserve/R222_Statistic/`.
+
+Preserve R222_Statistic unchanged. Use only on explicit rollback order from the author.
 
 ## SEO/entity
 
@@ -62,4 +74,4 @@ Preserved but inactive. Recovery: GitHub `freeze/localization-2026-08-19`, Libra
 
 ## Conflict rule
 
-Latest explicit author instruction has highest priority. For site CORE, R222 is the only valid base.
+Latest explicit author instruction has highest priority. For site CORE, R223_TTS is the only valid working base; R222_Statistic is reserve only.
