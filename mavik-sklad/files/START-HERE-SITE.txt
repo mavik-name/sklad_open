@@ -1,23 +1,25 @@
 MAVIK.NAME — START HERE
-Оновлено: 20.08.2026
+Оновлено: 21.08.2026
 Статус: АКТИВНИЙ SITE START
 
-ЄДИНА КАНОНІЧНА CORE-БАЗА: **R222**.
-Усі site release artifacts до R222 = obsolete trash і не використовуються.
+ЄДИНА КАНОНІЧНА РОБОЧА БАЗА: **R223_TTS**.
+R223_TTS побудовано безпосередньо від R222_Statistic і прямо затверджено автором.
+
+R222_Statistic = тільки rollback reserve. Не використовувати як робочу базу без прямого наказу автора.
+Усі релізи до R222_Statistic = obsolete/history і не відновлюються як робочі бази.
 
 ПЕРЕД БУДЬ-ЯКОЮ РОБОТОЮ ІЗ САЙТОМ
 1. `mavik-sklad/releases/CANON.md`
 2. `mavik-sklad/files/CANON-REGISTRY.md`
-3. `mavik-sklad/files/R222-CANON.md`
-4. `mavik-sklad/files/R222-PRE-PAUSE-AUDIT-2026-08-20.md`
-5. `mavik-sklad/files/SITE-WORK-JOURNAL.md`
-6. `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-7. `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
-8. `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
-9. `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
-10. `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
-11. `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
-12. `mavik-sklad/files/PROTECTED-SEO-FILES.md`
+3. `mavik-sklad/files/R223_TTS-CANON.md`
+4. `mavik-sklad/files/SITE-WORK-JOURNAL.md`
+5. `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
+6. `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
+7. `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
+8. `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
+9. `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
+10. `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
+11. `mavik-sklad/files/PROTECTED-SEO-FILES.md`
 
 CURRENT HARD PRIORITY
 - один український сайт / `uk-UA`;
@@ -26,25 +28,28 @@ CURRENT HARD PRIORITY
 - максимальна присутність у українському сегменті;
 - first-party статистика/SEO monitoring у Boss;
 - clean minimal install tree;
-- 7 днів без безпідставних structural URL/canonical/robots/sitemap/entity/layout змін.
+- без безпідставних structural URL/canonical/robots/sitemap/entity/layout змін.
 
-R222 STORAGE — ChatGPT Library `/Сайт/`
-- `R222.zip`
-- `R222_PART1.zip`
-- `R222_PART2.zip`
-- `R222-AUDIT.txt`
-- `R222-CHECKPOINT.txt`
-- `R222-CHECKSUMS.txt`
+R223_TTS STORAGE — ChatGPT Library `/Сайт/`
+- `R223_TTS.zip`
+- `R223_TTS.sha256.txt`
+- `R223_TTS-CHANGELOG.txt`
+- `R223_TTS-CHECKPOINT.txt`
+- `R223_TTS-CANON.txt`
+- `CANONICAL_RELEASE.txt`
 
-R222 IDENTITY
-- managed 261;
-- manifest `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
-- set `r222-38a1a21936163bef`;
-- FULL `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`.
+R223_TTS IDENTITY
+- size `26847258` bytes;
+- SHA-256 `d199f2dbd4d5d48aed71b85866176d141d3f4340b268fbd7c5f03159bfeb95bc`;
+- base `R222_Statistic`.
+
+ROLLBACK RESERVE
+Library: `/Сайт/reserve/R222_Statistic/`.
+R222_Statistic зберігати, не модифікувати, не використовувати для нової роботи без прямого rollback-наказу.
 
 LOCALIZATION
 Упровадження локалізацій зупинено. Дані перекладів законсервовані окремо й не є release trash.
 Recovery: `freeze/localization-2026-08-19`, Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`, `mavik-sklad/translations/en/`.
 
 ЖОРСТКЕ ПРАВИЛО
-Нова робота/відновлення сайту = тільки R222. Pre-R222 release files не використовувати й не відновлювати.
+Нова робота/відновлення сайту = тільки R223_TTS.

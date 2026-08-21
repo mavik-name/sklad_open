@@ -1,39 +1,51 @@
 # Канон збірок MAVIK.NAME
 
-Оновлено: 2026-08-20 Europe/Kyiv
+Оновлено: 2026-08-21 Europe/Uzhgorod
 
 ## Єдина чинна канонічна база
 
-**R222 — єдина чинна structural/functional CORE-база mavik.name.**
+**R223_TTS — єдина чинна робоча structural/functional база mavik.name.**
 
-R222 прямо затверджено після встановлення та pre-pause аудиту.
+R223_TTS прямо затверджено автором 21.08.2026. Реліз побудовано безпосередньо від R222_Statistic.
 
-Усі site releases, candidates, checkpoints, ZIP/PART, recovery/backup artifacts і release-specific control files **до R222 = obsolete trash**. Вони не є робочими або recovery-базами й видаляються з активних сховищ.
+Усі наступні зміни, виправлення, відновлення та нові релізи починати **тільки від R223_TTS**.
 
-Canonical checkpoint:
-`mavik-sklad/files/R222-CANON.md`
+## Rollback reserve
 
-Pre-pause audit:
-`mavik-sklad/files/R222-PRE-PAUSE-AUDIT-2026-08-20.md`
+**R222_Statistic зберігається окремо лише як перевірений резерв для аварійного rollback.**
 
-Persistent binaries: ChatGPT Library `/Сайт/`:
-- `R222.zip`
-- `R222_PART1.zip`
-- `R222_PART2.zip`
-- `R222-AUDIT.txt`
-- `R222-CHECKPOINT.txt`
-- `R222-CHECKSUMS.txt`
+- не використовувати його як робочу базу;
+- не вносити в нього нових змін;
+- повертатися до нього тільки за прямим наказом автора на rollback;
+- усі релізи до R222_Statistic залишаються obsolete/history і не відновлюються як робочі бази.
 
-Identifiers:
-- release: 222;
-- managed files: 261;
-- manifest SHA-256: `38a1a21936163bef3f17f517dac6daa1d3b753ce26e9afb326f17ebacf4a27e2`;
-- multipart set: `r222-38a1a21936163bef`;
-- FULL SHA-256: `89f8d3079027f1b0041e142f004ae547c81f957c35fdbb4c1a7cf38b26b0229d`;
-- PART1 SHA-256: `bff28f101563376f9d9ecc371118b0b3a6a51f01d98bbb08942266c8e15573d0`;
-- PART2 SHA-256: `14ddadc437251d51400895fdcaea4f34b0517917241f9a69a104b30d3fd9b470`.
+Library reserve: `/Сайт/reserve/R222_Statistic/`.
 
-Gate: manifest 261/261 exact; garbage 0; EN/localization/PWA refs 0; PHP 31/31; JS 14/14; XML 2/2; JSON-LD 81/81; sitemap 82/82; broken refs 0; EPUB 21/21; covers JPG 23/23; FULL/PART validators PASS; deploy/rollback/crawler/security/cache/compression gates PASS.
+## R223_TTS identity
+
+Persistent binaries/control files: ChatGPT Library `/Сайт/`:
+- `R223_TTS.zip`
+- `R223_TTS.sha256.txt`
+- `R223_TTS-CHANGELOG.txt`
+- `R223_TTS-CHECKPOINT.txt`
+- `R223_TTS-CANON.txt`
+- `CANONICAL_RELEASE.txt`
+
+Identity:
+- file: `R223_TTS.zip`;
+- size: `26847258` bytes;
+- SHA-256: `d199f2dbd4d5d48aed71b85866176d141d3f4340b268fbd7c5f03159bfeb95bc`;
+- base: `R222_Statistic`.
+
+## Ключова дельта R223_TTS
+
+- TTS використовує тільки українські системні голоси `uk-UA` / `uk-*`;
+- іншомовний fallback за відсутності українського голосу заборонено;
+- інструкція зі встановлення українського голосу показується тільки коли українського голосу реально немає;
+- окремі підказки для iPhone/iPad та Android;
+- `reader-listen.js/css` cache-buster `v=224` на всіх 21 читалках;
+- мобільна PWA/install-логіка для Android та iPhone/iPad збережена;
+- функціонал R222_Statistic, включно з first-party Boss statistics, збережено як базу релізу.
 
 ## Поточний пріоритет
 
@@ -42,7 +54,7 @@ Gate: manifest 261/261 exact; garbage 0; EN/localization/PWA refs 0; PHP 31/31; 
 - first-party Boss statistics/SEO monitoring;
 - clean minimal install tree;
 - localization implementation frozen;
-- 7-денна стабілізаційна пауза без безпідставних structural SEO змін.
+- не робити безпідставних structural SEO змін.
 
 ## SEO/entity
 
@@ -50,8 +62,8 @@ Permanent authority: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
 
 ## Localization freeze
 
-Localization/translation data preserved separately and inactive; this is not pre-R222 release trash. Recovery: `freeze/localization-2026-08-19`, Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`, `mavik-sklad/translations/en/`.
+Localization/translation data preserved separately and inactive. Recovery: `freeze/localization-2026-08-19`, Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`, `mavik-sklad/translations/en/`.
 
 ## Робоче правило
 
-Будь-яка наступна site work/recovery починається **тільки від R222**. Pre-R222 release artifacts не використовувати й не відновлювати.
+Будь-яка наступна site work/recovery починається **тільки від R223_TTS**. R222_Statistic = rollback reserve, не робоча база.
