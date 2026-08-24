@@ -1,90 +1,12 @@
-# MAVIK.NAME — SEO IDENTITY CANON
+# MAVIK.NAME — SEO IDENTITY NOTE
 
-Дата актуалізації: 2026-08-20
-Статус: **HARD SEO / ENTITY CANON / ОБОВ'ЯЗКОВО ДЛЯ R222 І ВСІХ НАСТУПНИХ РЕЛІЗІВ**
+Current authority: **R223_TTS only**.
 
-## Ідентичність
+This file does not define an independent canon and must not override `R223_TTS`.
 
-Пошукова та структурована ідентичність сайту має однозначно зв'язувати:
-- `MaVik`;
-- `Mavik`;
-- `Мавік`;
-- авторське ім'я українською та `Viktor Makarchuk` як допустимий alternateName;
-- `mavik.name`.
+Current identity used by R223_TTS:
+- MaVik / Mavik / Мавік
+- Віктор Макарчук / Viktor Makarchuk
+- mavik.name
 
-Це **одна авторська/брендова сутність**, а не окремі бренди або окремі Person-сутності.
-
-## Обов'язково від R222
-
-1. Головна сторінка природно зв'язує `MaVik`, `Mavik`, `Мавік` і автора без keyword stuffing.
-2. Сторінка автора містить те саме семантичне зв'язування.
-3. `<title>` головної та сторінки автора має достатню ідентифікацію автора/бренду без штучного переліку ключових слів.
-4. Schema.org `WebSite`: canonical `name` = `MaVik`; `alternateName` містить релевантні написання бренду/автора.
-5. Schema.org `Person`: одна стабільна сутність автора; альтернативні форми імені не створюють дубльованих Person.
-6. Стабільні `@id`: `https://mavik.name/#website` і `https://mavik.name/#person`.
-7. Canonical не змінювати заради entity-пакета; не створювати дубльованих URL під різні написання бренду.
-8. OpenGraph та JSON-LD не повинні суперечити видимим title/name/author identity.
-9. Boss/SEO self-test перевіряє title, `WebSite`, `Person`, required alternateName, JSON-LD і canonical.
-10. Entity-логіка є частиною спільного CORE, а не content patch.
-
-## ПОСТІЙНА СТРАТЕГІЯ ЗАПИТУ `mavik`
-
-### Головна ціль
-
-Накопичувати достатньо власних brand/entity/search signals, щоб пошуковик сприймав `Mavik` як самостійну назву MaVik, а не лише як можливу помилку в `mavic`.
-
-Цільові бренд-запити: `mavik`, `MaVik`, `мавік`, `mavik name` та авторські запити, пов'язані з `mavik.name`.
-
-### Чого НЕ робити
-
-- не таргетувати загальні `дрони`, `купити дрон` або DJI/Mavic product queries;
-- не маскувати літературний сайт під сайт про дрони;
-- не створювати doorway pages, hidden keywords, keyword stuffing, штучні каталоги або spam backlink schemes;
-- не засмічувати публічний сайт зайвими згадками DJI/Mavic.
-
-Мета — **закріпити власне значення слова `mavik`**, не вводячи пошуковик або користувача в оману.
-
-## Brand/entity pages
-
-1. `/mavik/` — постійна канонічна бренд-сторінка.
-2. `/about/` — сторінка автора; не дублювати `/mavik/` дослівно.
-3. Усі книги, блог, музика та інші авторські сторінки послідовно посилаються на `https://mavik.name/#person`.
-4. Внутрішня перелінковка може природно використовувати `MaVik`, `Mavik`, `Мавік`; не повторювати анкори механічно.
-5. Якщо локалізації колись буде відновлено, усі locale representations повинні використовувати ті самі стабільні entity IDs через спільний CORE/lang model.
-
-## Зовнішні сигнали
-
-На реальних авторських/соціальних/книжкових/музичних профілях, де можливо:
-- уніфікувати MaVik/автора як одну сутність;
-- вести на `https://mavik.name/`;
-- використовувати `sameAs` тільки для реальних профілів;
-- використовувати `rel="me"` там, де це доречно;
-- не створювати штучних профілів або посилань лише заради SEO.
-
-## KPI / контроль
-
-В Search Console та ручному контролі відстежувати:
-- `mavik`;
-- `MaVik`;
-- `мавік`;
-- `mavik name`;
-- авторські запити українською та `Viktor Makarchuk`.
-
-Довгостроковий KPI: чи Google зменшує/припиняє автоматичне трактування `mavik` → `mavic` і чи показує `mavik.name` як самостійну релевантну сутність.
-
-Не гарантувати конкретну позицію або поведінку автокорекції: сайт формує сигнали, але ранжування/query rewriting контролює пошуковик.
-
-## Після materially changed release
-
-1. перевірити live HTML/JSON-LD головної, `/about/`, `/mavik/`;
-2. перевірити sitemap/canonical;
-3. за потреби повторно подати materially changed ключові URL у Search Console;
-4. виконати штатний IndexNow/Bing submission;
-5. зафіксувати результат у SITE-WORK-JOURNAL;
-6. не руйнувати накопичені entity signals наступними релізами.
-
-## Заборона регресії
-
-Усі майбутні релізи автоматично успадковують цей документ. Не прибирати `/mavik/`, aliases `MaVik/Mavik/Мавік`, стабільні `#person/#website`, author bindings, `sameAs` або search monitoring без прямої вказівки автора.
-
-Правильна модель: **одна сутність автора/бренду, кілька коректних alternative names, стабільний entity graph, узгоджені visible text + title + structured data + реальні зовнішні сигнали**.
+For all current structural, schema, canonical, title, author and crawl decisions use the actual `R223_TTS` release and fresh live production data. Do not import rules from older releases or archived localization work.
