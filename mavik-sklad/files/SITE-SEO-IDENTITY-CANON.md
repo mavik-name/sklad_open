@@ -9,4 +9,4 @@ Current identity used by R223_TTS:
 - Віктор Макарчук / Viktor Makarchuk
 - mavik.name
 
-For all current structural, schema, canonical, title, author and crawl decisions use the actual `R223_TTS` release and fresh live production data. Do not import rules from older releases or archived localization work.
+For all current structural, schema, canonical, title, author and crawl decisions use the actual `R223_TTS` release and fresh live production data. Do not import rules from older releases.
