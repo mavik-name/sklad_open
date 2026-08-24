@@ -1,55 +1,11 @@
 MAVIK.NAME — START HERE
-Оновлено: 21.08.2026
-Статус: АКТИВНИЙ SITE START
 
-ЄДИНА КАНОНІЧНА РОБОЧА БАЗА: **R223_TTS**.
-R223_TTS побудовано безпосередньо від R222_Statistic і прямо затверджено автором.
+CURRENT CANONICAL RELEASE: R223_TTS
+STATUS: AUTHOR APPROVED / ONLY WORKING BASE
 
-R222_Statistic = тільки rollback reserve. Не використовувати як робочу базу без прямого наказу автора.
-Усі релізи до R222_Statistic = obsolete/history і не відновлюються як робочі бази.
-
-ПЕРЕД БУДЬ-ЯКОЮ РОБОТОЮ ІЗ САЙТОМ
-1. `mavik-sklad/releases/CANON.md`
-2. `mavik-sklad/files/CANON-REGISTRY.md`
-3. `mavik-sklad/files/R223_TTS-CANON.md`
-4. `mavik-sklad/files/SITE-WORK-JOURNAL.md`
-5. `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-6. `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
-7. `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
-8. `mavik-sklad/files/SIMPLE-FIRST-WORKING-CANON.md`
-9. `mavik-sklad/files/PRIVACY-MEDIA-CANON.md`
-10. `mavik-sklad/files/PUBLIC-BLOG-EDITORIAL-CANON.md`
-11. `mavik-sklad/files/PROTECTED-SEO-FILES.md`
-
-CURRENT HARD PRIORITY
-- один український сайт / `uk-UA`;
-- максимальна швидкодія;
-- максимальна crawlability та індексація;
-- максимальна присутність у українському сегменті;
-- first-party статистика/SEO monitoring у Boss;
-- clean minimal install tree;
-- без безпідставних structural URL/canonical/robots/sitemap/entity/layout змін.
-
-R223_TTS STORAGE — ChatGPT Library `/Сайт/`
-- `R223_TTS.zip`
-- `R223_TTS.sha256.txt`
-- `R223_TTS-CHANGELOG.txt`
-- `R223_TTS-CHECKPOINT.txt`
-- `R223_TTS-CANON.txt`
-- `CANONICAL_RELEASE.txt`
-
-R223_TTS IDENTITY
-- size `26847258` bytes;
-- SHA-256 `d199f2dbd4d5d48aed71b85866176d141d3f4340b268fbd7c5f03159bfeb95bc`;
-- base `R222_Statistic`.
-
-ROLLBACK RESERVE
-Library: `/Сайт/reserve/R222_Statistic/`.
-R222_Statistic зберігати, не модифікувати, не використовувати для нової роботи без прямого rollback-наказу.
-
-LOCALIZATION
-Упровадження локалізацій зупинено. Дані перекладів законсервовані окремо й не є release trash.
-Recovery: `freeze/localization-2026-08-19`, Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`, `mavik-sklad/translations/en/`.
-
-ЖОРСТКЕ ПРАВИЛО
-Нова робота/відновлення сайту = тільки R223_TTS.
+1. Усі нові зміни, виправлення, відновлення та наступні релізи починати тільки від `R223_TTS`.
+2. Усі попередні релізи, збірки, release-аудити, контрольні release-файли та rollback-копії вважати сміттям/історією й не використовувати.
+3. R222, R222_Statistic та будь-які старші релізи НЕ є резервами або recovery bases.
+4. Старі англомовні/локалізаційні робочі й архівні файли не є частиною поточного сайту і не повинні використовуватися в роботі чи аудиті.
+5. Для live-аудиту використовувати тільки свіжі production-дані, робочий web-crawler та актуальний Search Console; не підміняти live-стан старими release-аудитами.
+6. Структурно-функціональна істина сайту: тільки `R223_TTS`.
