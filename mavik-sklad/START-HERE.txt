@@ -1,66 +1,47 @@
 MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
-Оновлено: 21.08.2026
+Оновлено: 2026-08-28
 Статус: ГОЛОВНИЙ МАРШРУТИЗАТОР ДЛЯ НОВОЇ ГІЛКИ
 
 ГОЛОВНЕ ПРАВИЛО
 Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєктів.
-Не відновлювати current state із пам’яті чату, якщо на складі є актуальний START-HERE / CANON / CHECKPOINT / STATUS / WORK JOURNAL.
+Не відновлювати current state із пам’яті чату, якщо на складі є актуальний START-HERE / CANON / CHECKPOINT / STATUS.
 
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- **Current canonical checkpoint: `mavik-sklad/files/R223_TTS-CANON.md`**
-- Cross-branch journal: `mavik-sklad/files/SITE-WORK-JOURNAL.md`
-- SEO/entity canon: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`
-- Deploy backup canon: `mavik-sklad/files/SITE-DEPLOY-BACKUP-CANON.md`
-- Localization freeze: `mavik-sklad/files/LOCALIZATION-FREEZE-2026-08-20.md`
+- Current canonical checkpoint: `mavik-sklad/files/R225_OK-CANON.md`
+- Registry: `mavik-sklad/files/CANON-REGISTRY.md`
 
 CURRENT SITE AUTHORITY
-- **R223_TTS = sole canonical working CORE.**
-- R223_TTS built directly from R222_Statistic and author-approved on 2026-08-21.
-- R222_Statistic = rollback reserve only; do not use for normal work.
-- Pre-R222_Statistic site releases remain obsolete/history.
+- **R225_OK = sole canonical working CORE.**
+- Усі release-артефакти, кандидати, патчі, rollback/recovery копії та control-файли до R225_OK — obsolete/garbage і не використовуються.
+- Старого rollback reserve немає.
+
+R225_OK STORAGE — ChatGPT Library `/Сайт/`
+- `R225_OK.zip`
+- `R225_OK.sha256.txt`
+- `R225_OK-CHANGELOG.txt`
+- `R225_OK-CHECKPOINT.txt`
+- `R225_OK-CANON.txt`
+- `R225_OK-validation.json`
+- `CANONICAL_RELEASE.txt`
+- `START-HERE-SITE.txt`
+
+R225_OK identity:
+- size `27830938` bytes;
+- SHA-256 `daba3a1f47ef431aa54dc9376cf7262def75de2681ae472aad0818f96b5a4e16`.
 
 CURRENT SITE PRIORITY
-- pure Ukrainian single-locale `uk-UA`;
-- maximum performance/crawlability/indexing/Ukrainian reach;
-- first-party Boss statistics/SEO monitoring;
+- українська locale `uk-UA`;
+- максимальна швидкодія, crawlability та індексація;
+- first-party Boss statistics;
 - clean minimal install tree;
-- localization remains frozen;
-- no unnecessary structural SEO changes.
-
-R223_TTS STORAGE — ChatGPT Library `/Сайт/`
-- `R223_TTS.zip`
-- `R223_TTS.sha256.txt`
-- `R223_TTS-CHANGELOG.txt`
-- `R223_TTS-CHECKPOINT.txt`
-- `R223_TTS-CANON.txt`
-- `CANONICAL_RELEASE.txt`
-
-R223_TTS identity:
-- size `26847258` bytes;
-- SHA-256 `d199f2dbd4d5d48aed71b85866176d141d3f4340b268fbd7c5f03159bfeb95bc`;
-- base `R222_Statistic`.
-
-ROLLBACK RESERVE
-- Library `/Сайт/reserve/R222_Statistic/`.
-- Preserve; do not modify; do not use as a work base unless the author explicitly orders rollback.
-
-LOCALIZATION / TRANSLATIONS — FROZEN
-Implementation paused until explicit author command to resume.
-Recovery preserved separately:
-- GitHub `freeze/localization-2026-08-19`;
-- Library `/Сайт/archive/MAVIK_LOCALIZATION_FREEZE_2026-08-19.zip`;
-- workspace `mavik-sklad/translations/en/`.
-
-PERMANENT MAVIK SEO/ENTITY RULE
-Authority: `mavik-sklad/files/SITE-SEO-IDENTITY-CANON.md`.
+- без повернення старих релізних дерев.
 
 ІНШІ ПРОЄКТИ
 Для кожного проєкту читати його START-HERE/canon/status; файли інших проєктів не є site-release trash.
 
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямий наказ автора має найвищий пріоритет.
-2. Site CORE = тільки R223_TTS.
-3. R222_Statistic = rollback reserve only.
-4. Localization не відновлювати без прямого наказу.
+2. Site CORE = тільки R225_OK.
+3. Старі site releases не відновлювати без нового прямого наказу автора.
