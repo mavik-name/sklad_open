@@ -1,5 +1,5 @@
 MAVIK — ЖОРСТКИЙ КАНОН ПОСТІЙНОГО ЗБЕРЕЖЕННЯ РОБОТИ
-Оновлено: 18.08.2026
+Оновлено: 28.08.2026
 Статус: КАНОН / ОБОВ'ЯЗКОВО ДО ВИКОНАННЯ
 
 ЦЕ ПРАВИЛО ДІЄ ДЛЯ ВСІХ ПРОЄКТІВ І НАПРЯМІВ, ЯКІ ВЕДУТЬСЯ ЧЕРЕЗ ДАЛЬНІЙ СКЛАД `mavik-name/sklad_open`, ДОКИ КОРИСТУВАЧ ПРЯМО ЙОГО НЕ ЗМІНИТЬ.
@@ -25,25 +25,20 @@ MAVIK — ЖОРСТКИЙ КАНОН ПОСТІЙНОГО ЗБЕРЕЖЕННЯ 
 - master: `mavik-sklad/START-HERE.txt`;
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`;
 - release canon: `mavik-sklad/releases/CANON.md`;
-- canonical checkpoint: `mavik-sklad/files/R213-CANON-CHECKPOINT.md`;
-- current structural/functional base: **R213**;
-- recovery duplicate: `mavik-sklad/recovery/R213/`;
-- `/_site-state/` не перезаписувати штатним deploy/patch;
-- кандидат не називати каноном без прямого затвердження автора.
+- canonical checkpoint: `mavik-sklad/files/R225_OK-CHECKPOINT.md`;
+- canonical identity: `mavik-sklad/files/R225_OK-CANON.md`;
+- current structural/functional base: **R225_OK**;
+- `/_site-state/` та user media не перезаписувати штатним deploy;
+- кандидат не називати каноном без прямого затвердження автора;
+- усі site-release артефакти до R225_OK не використовувати й не відновлювати без нового прямого наказу автора.
 
-6. ДЛЯ ENGLISH CONTENT:
-- `mavik-sklad/files/EN-TRANSLATION-START-HERE.md`;
-- `mavik-sklad/files/EN-SOURCE-POLICY.md`;
-- `mavik-sklad/translations/en/CONTINUATION-CANON.md`;
-- `mavik-sklad/translations/en/STATUS.md`.
+6. ДЛЯ ХУДОЖНЬОГО ТЕКСТУ перед новим написанням/редактурою звіряти project START-HERE/canon, головний канон людського письма, technical canon та актуальний рукопис.
 
 7. ПЕРЕД ЗАЯВОЮ «РОБОТУ ВТРАЧЕНО» перевірити current main tree, dedicated recovery/safety paths, Git history якщо потрібен recovery контенту, File Library та інші прямо зафіксовані місця.
 
-8. ДЛЯ ХУДОЖНЬОГО ТЕКСТУ перед новим написанням/редактурою звіряти project START-HERE/canon, головний канон людського письма, technical canon та актуальний рукопис.
+8. Перед завершенням сесії або переходом у нову гілку — фінальний checkpoint.
 
-9. Перед завершенням сесії або переходом у нову гілку — фінальний checkpoint.
-
-10. ЗАБОРОНЕНО стартувати з пам’яті чату за наявності актуального START-HERE/checkpoint, змушувати користувача повторювати зафіксовані рішення, лишати критичні результати тільки в тимчасовій сесії, перезаписувати канон незатвердженим кандидатом або оголошувати роботу втраченою без recovery search.
+9. ЗАБОРОНЕНО стартувати з пам’яті чату за наявності актуального START-HERE/checkpoint, змушувати користувача повторювати зафіксовані рішення, лишати критичні результати тільки в тимчасовій сесії, перезаписувати канон незатвердженим кандидатом або оголошувати роботу втраченою без recovery search.
 
 КОРОТКА ФОРМУЛА:
 START-HERE → КАНОН → CHECKPOINT → РОБОТА → ЗБЕРЕЖЕННЯ → CHECKPOINT.
