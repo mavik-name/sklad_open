@@ -1,125 +1,90 @@
 # MAVIK.NAME — R230 MAIL BROADCAST CHECKPOINT
 
 Дата: 2026-08-30
-База: **R229 (CANONICAL / ONLY WORKING BASE)**
-Статус R230: **RELEASE CANDIDATE / BUILT / VALIDATED / NOT CANONICAL**
+База: **R229**
+Фінальний статус R230: **AUTHOR APPROVED / OFFICIAL / CANONICAL / SOLE WORKING BASE**
 
-## Ідентичність кандидата
+## Фінальна ідентичність
 - file: `R230.zip`
-- size: `28005713` bytes
-- SHA-256: `d76f9dcfc12eb28f9132e209ebf1e7a817953eab276a8896288aea238d78b778`
-- ZIP entries: `393` (`268` files + `125` directories)
-- managed files: `268`
-- source R229 SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8` — verified exact
+- size: `28005558` bytes
+- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
+- ZIP/Boss deploy validation: PASS — `393` entries / `268` managed files
+- source R229 SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
+
+## Канонічне рішення автора
+- R230 затверджено канонічною версією 2026-08-30.
+- Усі наступні зміни, recovery та нові релізи починати тільки від R230.
+- R229 зберігати як **verified rollback reserve**.
+- R229 не видаляти, не вважати сміттям і не використовувати як робочу базу без прямого наказу автора на rollback.
 
 ## UX: один лист — багато адресатів
-Користувач пише **один лист один раз**: одна тема, одне поле тексту, один набір вкладень. У полі «Кому» додає 1, 2, 10, 50 або більше адресатів.
-
-Поле «Кому»:
-- одне компактне chip/tag поле замість великих полів адрес;
+- один compose: одна тема, одне поле тексту, один набір вкладень;
+- одне компактне chip/tag поле «Кому»;
 - Enter, кома або `;` завершують адресу;
-- масове вставлення списку адрес;
-- автопідказки з адресної книги;
+- bulk paste списку адрес;
+- autocomplete з адресної книги;
 - case-insensitive дедуплікація;
-- Backspace видаляє останній chip, `×` — вибраний;
 - лічильник унікальних отримувачів;
-- кнопка показує `Надіслати N окремих листів`;
-- перед масовим Send є підтвердження, що кожен адресат бачитиме тільки себе.
+- один Send запускає окреме SMTP-відправлення кожному адресату.
 
-Після одного натискання «Надіслати» Boss автоматично формує окреме SMTP-відправлення на кожну адресу.
-
-## Приватність розсилки
-- НЕ надсилається один RFC-лист із кількома адресами в `To:`.
-- Кожна адреса = окремий message payload / SMTP transaction.
-- У видимому `To:` кожного листа є тільки поточний адресат.
-- Інші адреси розсилки не присутні у видимих headers.
-- Для кожного адресата генерується окремий `Message-ID`.
+## Приватність
+- кожна унікальна адреса = окремий message payload / SMTP transaction;
+- у видимому `To:` тільки поточний адресат;
+- інші адреси розсилки не присутні у видимих headers;
+- окремий Message-ID для кожного адресата;
 - HTML + plain-text alternative R229 збережено.
-- Видиме поле BCC у новому compose прибране: масова приватність забезпечується окремим листом кожному.
-- Старі R229-чернетки з BCC не втрачають адреси: legacy BCC автоматично мігрує в єдиний потік отримувачів при відкритті.
 
-## Результат по кожному адресату
-Після розсилки Boss показує окремо для кожної адреси:
-- email;
-- timestamp;
-- статус `accepted` / `failed`;
-- Message-ID;
-- короткий SMTP result/error без секретів.
-
-Підсумок: `Сервер прийняв X із Y окремих листів`.
-Термінологія UI: **«Сервер прийняв»** / **«Помилка відправлення»**. Не заявляти «доставлено» або «прочитано», якщо є лише SMTP acceptance.
-
-## Часткові помилки та безпечний повтор
-- Помилка однієї адреси не маскується загальним успіхом.
-- Обробка наступних адрес продовжується.
-- Якщо частина адрес не пройшла, автоматична retry-чернетка містить **тільки невдалі адреси** разом із тією самою темою/текстом.
-- Успішним адресатам повторний лист випадково не надсилається.
+## Результат і повтор
+- окремий accepted/failed статус по кожній адресі;
+- підсумок `X із Y`;
+- SMTP acceptance не називати «доставлено»;
+- після часткової помилки retry містить тільки невдалі адреси;
+- успішним адресатам лист повторно не надсилається.
 
 ## Надіслані
 Після кожного SMTP `accepted` Boss окремо намагається додати саме цей лист у IMAP `Надіслані`. Помилка IMAP append не змінює вже успішний SMTP-статус.
 
-## Журнал розсилок
-Protected runtime storage:
-`/_site-state/mail-send-log.json`
-
-Зберігаються без тіла листа і без секретів:
-- batch_id;
-- subject;
-- created_at;
-- recipient / role;
-- status;
-- message_id;
-- smtp_result/error;
-- sent_saved status.
-
-Boss має окремий перегляд історії розсилок з результатом по кожному адресату.
+## Protected runtime
+- send log: `/_site-state/mail-send-log.json`;
+- address book: `/_site-state/mail-address-book.json`;
+- тіло листів і SMTP-секрети там не зберігаються;
+- runtime-файли переживають full deploy.
 
 ## Адресна книга
-Protected runtime storage:
-`/_site-state/mail-address-book.json`
-
-Функції:
-- автоматична case-insensitive дедуплікація;
-- автопідказки в compose за ім’ям/назвою та email;
-- додавання / редагування / видалення контактів;
+- dedupe;
+- autocomplete за ім’ям/назвою/email;
+- add/edit/delete;
 - швидка дія `Написати`;
 - `last_used`, `attempt_count`, `send_count`;
-- автоматичне навчання з адрес, використаних у відправленнях/чернетках та відкритих вхідних повідомленнях;
-- runtime-файл зберігається в захищеному `/_site-state/` і не стирається full deploy.
+- навчання з використаних адрес/чернеток/відкритих вхідних/site-contact повідомлень.
 
-## Реалізовані файли відносно R229
-Змінено тільки:
-1. `.htaccess` — release header R230;
-2. `.mavik-release.json` — release identity R230 / base R229;
-3. `_site-admin/boss-mail-ui.php` — chips, autocomplete, address book, history, per-recipient result;
-4. `_site-admin/mail-client.php` — per-recipient SMTP, Message-ID, logs, contacts;
-5. `_site-admin/seo-tools.php` — очікуваний release header R230;
-6. `boss/index.php` — handlers/actions/styles, retry only failed recipients;
-7. `stats/index.php` — release label R230.
+## Змінені файли відносно R229
+1. `.htaccess`;
+2. `.mavik-release.json`;
+3. `_site-admin/boss-mail-ui.php`;
+4. `_site-admin/mail-client.php`;
+5. `_site-admin/seo-tools.php`;
+6. `boss/index.php`;
+7. `stats/index.php`.
 
-Публічний контент і його cache-busters не перебудовувалися без потреби; сайтова частина успадкована безпосередньо з R229.
-
-## Валідація
+## Validation
 PASS:
-- canonical source R229 SHA-256 exact;
-- managed files: `268/268`;
-- PHP: `31/31` syntax PASS;
-- JS: `15/15` syntax PASS;
-- JSON: `12/12` parse PASS;
-- public JSON-LD: `82/82` parse PASS і збігається з R229;
-- EPUB CRC: `21/21` PASS;
-- compose inline JavaScript syntax PASS;
-- 3 адресати → 3 окремі MIME payloads;
-- у кожного payload тільки власний `To:`;
-- 3 унікальні Message-ID;
-- симуляція `2 accepted + 1 failed` → точний результат 2/3;
-- address-book dedupe / counters PASS;
-- retry draft only failed recipients PASS;
-- send-log persistence PASS;
-- ZIP integrity PASS.
+- PHP syntax;
+- compose JavaScript syntax;
+- address dedupe;
+- 3 recipients → 3 unique Message-ID;
+- no cross-recipient `To:` leakage;
+- BCC hidden-header check;
+- simulated `2 accepted + 1 failed` accounting;
+- address-book persistence;
+- send-log persistence;
+- ZIP integrity;
+- Boss deploy validation.
 
-Реальний Cityhost SMTP-тест із production-паролем у release environment не запускався: пароль правильно живе тільки у production `/_site-state/` і не входить до ZIP. Налаштування SMTP/IMAP з R229 не змінювалися.
+Live SMTP delivery test was not run in the release environment because production credentials are intentionally absent from release ZIP.
 
-## Канон
-**R229 залишається єдиним каноном.**
-R230 не отримує канонічного статусу без прямого затвердження автора після встановлення і перевірки.
+## Авторитетні записи
+- current canon: `mavik-sklad/files/R230-CANON.md`;
+- release authority: `mavik-sklad/releases/CANON.md`;
+- registry: `mavik-sklad/files/CANON-REGISTRY.md`;
+- rollback reserve: `mavik-sklad/files/R229-RESERVE.md`.
