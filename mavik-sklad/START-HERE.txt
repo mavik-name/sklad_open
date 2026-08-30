@@ -14,15 +14,22 @@ MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R229-CANON.md`
+- Current canonical checkpoint: `mavik-sklad/files/R230-CANON.md`
+- Previous rollback reserve: `mavik-sklad/files/R229-RESERVE.md`
 - Registry: `mavik-sklad/files/CANON-REGISTRY.md`
 
 CURRENT SITE AUTHORITY
-- **R229 = sole canonical working CORE.**
-- Усі наступні релізи починати виключно від R229, доки автор прямо не затвердить новішу канонічну збірку.
-- Попередні site releases не використовувати як робочу базу без прямого наказу автора.
+- **R230 = sole canonical working CORE.**
+- Усі наступні релізи починати виключно від R230, доки автор прямо не затвердить новішу канонічну збірку.
+- **R229 = preserved verified rollback reserve.** Не видаляти, не вважати сміттям, не використовувати як робочу базу без прямого наказу автора на rollback.
 
-R229 IDENTITY
+R230 IDENTITY
+- file: `R230.zip`
+- size: `28005558` bytes
+- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
+- base: R229
+
+R229 ROLLBACK IDENTITY
 - file: `R229.zip`
 - size: `27999098` bytes
 - SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
@@ -33,11 +40,10 @@ CURRENT SITE PRIORITY
 - first-party Boss statistics;
 - clean full-release update path;
 - захист live-текстів книг та `/_site-state/` під час deploy;
-- поштовий клієнт Boss: SMTP/IMAP, rich-text, чернетки, multi-recipient, BCC.
-
-NEXT SITE WORK
-- `R230` — робочий кандидат від R229.
-- Не канонізувати R230 до прямого затвердження автора після встановлення/перевірки.
+- Boss mail client R230: one compose → many recipients → separate SMTP per recipient;
+- recipient chips + autocomplete + protected address book;
+- per-recipient accepted/failed status + protected send log;
+- IMAP Sent append окремо для кожного accepted повідомлення.
 
 ІНШІ ПРОЄКТИ
 Для кожного проєкту читати його START-HERE/canon/status; файли інших проєктів не є site-release trash.
@@ -45,5 +51,6 @@ NEXT SITE WORK
 КОНФЛІКТ ПРАВИЛ
 1. Останній прямий наказ автора має найвищий пріоритет.
 2. Універсальний непорушний алгоритм роботи над романами діє для всіх художніх проєктів, якщо автор прямо не вирішив інакше.
-3. Site CORE = тільки R229.
-4. Старі site releases не відновлювати без нового прямого наказу автора.
+3. Site CORE = тільки R230.
+4. R229 = збережений rollback reserve, а не робоча база.
+5. Інші старі site releases не відновлювати без нового прямого наказу автора.
