@@ -4,43 +4,44 @@
 
 ## Єдина чинна канонічна база
 
-**R230_Blog — єдина чинна робоча structural/functional база mavik.name.**
+**R236 — єдина чинна робоча structural/functional база mavik.name.**
 
 Статус: **AUTHOR APPROVED / OFFICIAL / CANONICAL / ONLY WORKING BASE**
 
 Identity:
-- file: `R230_Blog.zip`
-- size: `28005701` bytes
-- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- base release: `R230`
-- managed files: `268`
-- ZIP entries: `393`
+- file: `R236.zip`
+- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- approved: `2026-08-31`
+- base release: `R235`
 
-Усі наступні зміни, виправлення, recovery та нові релізи починати **тільки від R230_Blog**, доки автор прямо не затвердить новішу канонічну збірку.
+Усі наступні зміни, виправлення, recovery та нові релізи починати **тільки від R236**, доки автор прямо не затвердить новішу канонічну збірку.
 
-## Ключовий стан R230_Blog
-- повний функціонал R230 з mail redesign;
-- one compose → many recipients → separate SMTP per recipient;
-- recipient chips/autocomplete/address book/send log/per-recipient status/selective retry;
-- blog article body на контрастній panel-картці за візуальною логікою «Про автора»;
-- тексти блогових постів не змінені;
-- `assets/blog/blog.css` cache-buster `v=230blog`;
-- `/_site-state/` preservation PASS;
-- full Boss deploy validation PASS.
+## Hard exclusion of older site releases
+Усі site releases, candidates, patches і checkpoints до R236 є історичними/застарілими та НЕ є source-of-truth. Не використовувати їх для поточної розробки, відновлення чи аудиту без нового прямого наказу автора.
+
+## Language architecture
+- public site architecture: Ukrainian-only;
+- canonical R236 contains no `/en/` tree and no public English hreflang branch;
+- Polish `Ewakuacja` remains a public direct-link book only, not an international site branch;
+- LIVE hotfix on 2026-08-31: root `.htaccess` returns HTTP 410 Gone for all legacy `/en/*` URLs;
+- the next full release derived from R236 must fold this 410 rule into the canonical build.
+
+## Key R236 state
+- shared editor select bug fixed;
+- text color selectors work and preserve selection;
+- background highlight selectors work and preserve selection;
+- shared internal-link picker available across blog/books/static/mail editors;
+- external http(s) links open in a new tab while internal mavik.name paths stay in current tab;
+- editor cache key `v=236`;
+- LIVE CONTENT FIRST deploy protection retained;
+- Ukrainian-only architecture inherited from R235;
+- public JSON-LD gate passed in R235/R236 lineage.
+
+## Confirmed live SEO/structure issue after R236
+The `/books/petlia/read/` reader currently exposes an ordinary prose paragraph as a heading/TOC item and also shows a duplicate `Глава четверта` TOC heading. This is a confirmed structural defect, not a generic SEO recommendation. Fix it in the next full release based only on R236 and then validate all readers for heading/TOC pollution.
 
 ## LIVE CONTENT FIRST
-Канонічний ZIP є базою коду/структури, але не вважається автоматично повною копією найсвіжішого live-content. Майбутній full deploy не має права перезаписувати новіший Boss-managed production content. При конфлікті старішого ZIP-контенту з новішою live-версією зберігати live-версію, доки автор прямо не наказав інакше.
+Canonical ZIP is the code/structure baseline, not automatically the newest mutable production content. A full deploy must preserve newer Boss-managed live content unless the author explicitly orders otherwise.
 
-## Rollback reserves
-1. **R230** — immediate verified rollback reserve:
-   - file: `R230.zip`
-   - size: `28005558` bytes
-   - SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
-   - record: `mavik-sklad/files/R230-RESERVE.md`
-2. **R229** — older verified rollback reserve:
-   - file: `R229.zip`
-   - size: `27999098` bytes
-   - SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
-   - record: `mavik-sklad/files/R229-RESERVE.md`
-
-Current canon checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`.
+Current canon checkpoint: `mavik-sklad/files/R236-CANON.md`.
+Current technical checkpoint: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`.
