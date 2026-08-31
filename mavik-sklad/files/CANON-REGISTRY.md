@@ -1,48 +1,51 @@
 # CANON REGISTRY — MAVIK.NAME
 
 ## ЄДИНИЙ КАНОН
-`R230_Blog`
+`R236`
 
 Статус: **AUTHOR APPROVED / OFFICIAL / CANONICAL / ONLY WORKING BASE**
 Дата затвердження: 2026-08-31
 
 Identity:
-- file: `R230_Blog.zip`
-- size: `28005701` bytes
-- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- base: `R230`
+- file: `R236.zip`
+- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- base: `R235`
 
 Правила:
-- усі зміни, виправлення, recovery та наступні релізи починати тільки від `R230_Blog`;
-- `R230` зберігати як immediate verified rollback reserve;
-- `R229` зберігати як older verified rollback reserve;
-- резерви не видаляти і не використовувати як робочу базу без прямого наказу автора;
-- чинний сайт і робочий контекст — українські;
-- production визначати за R230_Blog + свіжими live-даними.
+- усі зміни, виправлення, recovery та наступні релізи починати тільки від `R236`;
+- усі pre-R236 site releases/candidates/patches/checkpoints вважати застарілими і не використовувати як source-of-truth;
+- не відновлювати старіший site release без нового прямого наказу автора;
+- production визначати за R236 + свіжими live-даними;
+- LIVE CONTENT FIRST залишається обов’язковим.
 
-## R230_Blog STATE
-- R230 mail baseline повністю збережено;
-- blog article body має контрастну panel-картку в стилі «Про автора»;
-- blog text content не змінювався;
-- blog CSS cache-buster `v=230blog`;
-- ZIP integrity / Boss deploy / PHP / JS / JSON / EPUB validation PASS.
+## LANGUAGE ARCHITECTURE
+- public architecture: Ukrainian-only;
+- canonical R236: no `/en/`, no public English hreflang branch;
+- exception: Polish `Ewakuacja` is public by direct link and remains indexable; it is not an international branch;
+- LIVE 2026-08-31: legacy `/en/*` explicitly returns HTTP 410 Gone through root `.htaccess`;
+- next full release from R236 must include that 410 rule.
+
+## R236 STATE
+- shared editor fixes for native selects, text colors and background highlights;
+- shared internal-link picker across common editors;
+- safe internal/external link behavior;
+- editor cache `v=236`;
+- Ukrainian-only architecture and deploy protections retained.
+
+## CONFIRMED POST-R236 TECHNICAL ISSUE
+LIVE reader `/books/petlia/read/` currently shows:
+1. duplicate TOC heading `Глава четверта` after `Глава четверта: Сергій`;
+2. an ordinary prose paragraph beginning `Частина підійшла до Лідії та Олени...` as a heading/TOC entry.
+This must be fixed in the next full release based on R236. After fixing, run a heading/TOC integrity scan across every reader.
 
 ## LIVE CONTENT FIRST — ПОСТІЙНЕ ПРАВИЛО
 - canonical ZIP = база коду/структури, а не гарантовано найсвіжіша копія mutable production content;
 - full deploy не має права затерти новіший Boss-managed live-content;
 - blog/books/media та інший mutable content захищати, синхронізувати або відновлювати;
-- у конфлікті старішого ZIP та новішого live content зберігати live content, якщо автор прямо не наказав інакше.
-
-## RESERVES
-### R230
-- file: `R230.zip`
-- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
-- record: `mavik-sklad/files/R230-RESERVE.md`
-
-### R229
-- file: `R229.zip`
-- SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
-- record: `mavik-sklad/files/R229-RESERVE.md`
+- у конфлікті canonical ZIP та новішого live content зберігати live content, якщо автор прямо не наказав інакше.
 
 ## ПОСТІЙНЕ ПРАВИЛО АУДИТУ
-Для досліджень mavik.name використовувати реальний зовнішній production-доступ; ізольований container DNS/curl не видавати за live-стан.
+Для production досліджень використовувати реальний зовнішній доступ до mavik.name. Чітко маркувати LIVE / CANONICAL BUILD / NOT VERIFIED. Search cache/snippets та сторонні SEO-аудити не видавати за live-стан.
+
+Current canon checkpoint: `mavik-sklad/files/R236-CANON.md`.
+Current technical checkpoint: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`.
