@@ -29,6 +29,15 @@ R230 MAIL BASELINE
 - адресна книга: `/_site-state/mail-address-book.json`;
 - runtime-дані переживають наступні full deploy.
 
+CURRENT RELEASE CANDIDATE
+- `R230_Blog` — validated candidate від канонічного R230; НЕ канонічний без прямого затвердження автора.
+- Мета: додати під текст статей блогу контрастну panel-картку за візуальною логікою «Про автора».
+- Тексти постів не змінені; cache-buster змінено тільки для `assets/blog/blog.css`.
+- file: `R230_Blog.zip`
+- size: `28005701` bytes
+- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
+- checkpoint: `mavik-sklad/files/R230_BLOG-CHECKPOINT.md`
+
 ROLLBACK RESERVE
 - `R229.zip`
 - SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
