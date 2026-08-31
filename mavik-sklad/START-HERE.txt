@@ -6,42 +6,41 @@ MAVIK — MASTER START HERE / УСІ ПРОЄКТИ
 Нова гілка ChatGPT = нова розмова, але НЕ новий стан проєктів.
 Не відновлювати current state із пам’яті чату, якщо на складі є актуальний START-HERE / CANON / CHECKPOINT / STATUS.
 
-УНІВЕРСАЛЬНЕ ПРАВИЛО ДЛЯ ВСІХ РОМАНІВ
+УНІВЕРСАЛЬНЕ ПРАВИЛО ДЛЯ РОМАНІВ
 - Обов’язково читати: `mavik-sklad/files/00-NEPORUSHNYI-ALHORYTM-SPIVPRATSI-ROMANY.md`
 - Непорушний цикл: анонс / задум → ОК або корекція автора → повна глава → DOCX → аналіз / рецензія → наступна глава.
 
 SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
-- Current canonical checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`
-- Current work/status checkpoint: `mavik-sklad/files/R230_BLOG-CHECKPOINT.md`
-- Immediate rollback reserve: `mavik-sklad/files/R230-RESERVE.md`
-- Older rollback reserve: `mavik-sklad/files/R229-RESERVE.md`
-- Registry: `mavik-sklad/files/CANON-REGISTRY.md`
+- Canon registry: `mavik-sklad/files/CANON-REGISTRY.md`
+- Current canonical checkpoint: `mavik-sklad/files/R236-CANON.md`
+- Current SEO/technical checkpoint: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`
 
 CURRENT SITE AUTHORITY
-- **R230_Blog = sole canonical working CORE.**
-- Усі наступні site releases починати виключно від R230_Blog.
-- **R230 = preserved immediate rollback reserve.**
-- **R229 = preserved older rollback reserve.**
-- Резерви не використовувати як робочу базу без прямого наказу автора на rollback.
+- **R236 = sole canonical / working / recovery / reference base.**
+- File: `R236.zip`
+- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- Author approval: 2026-08-31.
+- Усі релізи, кандидати, патчі й site-checkpoints до R236 є історичними/застарілими й НЕ можуть бути source-of-truth без нового прямого наказу автора.
+- Усі наступні site changes/releases починати виключно від R236, доки автор прямо не затвердить новіший канон.
 
-R230_Blog IDENTITY
-- file: `R230_Blog.zip`
-- size: `28005701` bytes
-- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- base: R230
+LANGUAGE ARCHITECTURE
+- Публічна архітектура сайту — українська.
+- Старої міжнародної `/en/` гілки в канонічній збірці немає.
+- Єдиний іншомовний виняток: польська `Ewakuacja`, public direct-link resource, не міжнародна гілка.
+- На production 2026-08-31 вручну додано HTTP 410 Gone для всіх legacy `/en/*`; цей live hotfix обов’язково включити в наступний повний реліз від R236.
 
 LIVE CONTENT FIRST
 - canonical ZIP = база коду/структури, а не автоматично найсвіжіший production content;
 - майбутній full deploy не має права затерти новіший Boss-managed live-content;
-- при конфлікті старішого ZIP з новішим live content зберігати live content, доки автор прямо не наказав інакше.
+- при конфлікті canonical ZIP з новішим live content зберігати live content, доки автор прямо не наказав інакше.
+
+PRODUCTION REPORTING
+Завжди розділяти:
+1. LIVE — фактично перевірено на mavik.name;
+2. CANONICAL BUILD — підтверджено в R236;
+3. NOT VERIFIED — не видавати припущення за факт.
 
 ІНШІ ПРОЄКТИ
 Для кожного проєкту читати його START-HERE/canon/status; файли інших проєктів не є site-release trash.
-
-КОНФЛІКТ ПРАВИЛ
-1. Останній прямий наказ автора має найвищий пріоритет.
-2. Site CORE = тільки R230_Blog.
-3. R230/R229 = rollback reserves, не робочі бази.
-4. Новіший live Boss-content не стирати релізним ZIP.
