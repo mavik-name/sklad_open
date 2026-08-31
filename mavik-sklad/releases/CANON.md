@@ -1,59 +1,46 @@
 # Канон збірок MAVIK.NAME
 
-Оновлено: 2026-08-30
+Оновлено: 2026-08-31
 
 ## Єдина чинна канонічна база
 
-**R230 — єдина чинна робоча structural/functional база mavik.name.**
+**R230_Blog — єдина чинна робоча structural/functional база mavik.name.**
 
 Статус: **AUTHOR APPROVED / OFFICIAL / CANONICAL / ONLY WORKING BASE**
 
 Identity:
-- file: `R230.zip`
-- size: `28005558` bytes
-- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
-- base release: `R229`
+- file: `R230_Blog.zip`
+- size: `28005701` bytes
+- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
+- base release: `R230`
+- managed files: `268`
+- ZIP entries: `393`
 
-Усі наступні зміни, виправлення, recovery та нові релізи починати **тільки від R230**, доки автор прямо не затвердить новішу канонічну збірку.
+Усі наступні зміни, виправлення, recovery та нові релізи починати **тільки від R230_Blog**, доки автор прямо не затвердить новішу канонічну збірку.
 
-## Ключовий стан R230
-- повна база R229 зі збереженням чинних функцій;
-- один compose-лист для багатьох адресатів;
-- recipient chips у полі «Кому»: Enter / кома / `;` / bulk paste;
-- autocomplete з адресної книги;
-- окреме SMTP-відправлення кожному унікальному адресату;
-- у видимому `To:` тільки поточний адресат;
-- окремий Message-ID для кожного адресата;
-- окремий accepted/failed статус і загальний підсумок X/Y;
-- selective retry тільки для невдалих адрес;
-- окремий IMAP append у «Надіслані» після успішного SMTP;
-- protected `/_site-state/mail-send-log.json`;
-- protected `/_site-state/mail-address-book.json`;
-- дедуплікація контактів, autocomplete, ручне редагування/видалення;
-- адресна книга навчається з відправлень, чернеток, відкритих листів і site-contact повідомлень;
-- захист live-текстів книг і `/_site-state/` під час full deploy збережено.
+## Ключовий стан R230_Blog
+- повний функціонал R230 з mail redesign;
+- one compose → many recipients → separate SMTP per recipient;
+- recipient chips/autocomplete/address book/send log/per-recipient status/selective retry;
+- blog article body на контрастній panel-картці за візуальною логікою «Про автора»;
+- тексти блогових постів не змінені;
+- `assets/blog/blog.css` cache-buster `v=230blog`;
+- `/_site-state/` preservation PASS;
+- full Boss deploy validation PASS.
 
-Validation R230:
-- PHP syntax PASS;
-- compose JavaScript PASS;
-- 3 recipients / 3 unique Message-ID PASS;
-- no cross-recipient `To:` leakage PASS;
-- simulated 2 accepted + 1 failed PASS;
-- address-book persistence PASS;
-- send-log persistence PASS;
-- ZIP integrity PASS;
-- Boss deploy validation PASS — 393 entries / 268 managed files.
+## LIVE CONTENT FIRST
+Канонічний ZIP є базою коду/структури, але не вважається автоматично повною копією найсвіжішого live-content. Майбутній full deploy не має права перезаписувати новіший Boss-managed production content. При конфлікті старішого ZIP-контенту з новішою live-версією зберігати live-версію, доки автор прямо не наказав інакше.
 
-## Попередня канонічна збірка — збережений резерв
+## Rollback reserves
+1. **R230** — immediate verified rollback reserve:
+   - file: `R230.zip`
+   - size: `28005558` bytes
+   - SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
+   - record: `mavik-sklad/files/R230-RESERVE.md`
+2. **R229** — older verified rollback reserve:
+   - file: `R229.zip`
+   - size: `27999098` bytes
+   - SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
+   - record: `mavik-sklad/files/R229-RESERVE.md`
 
-**R229 зберігається як verified rollback reserve.**
-
-Identity:
-- file: `R229.zip`
-- size: `27999098` bytes
-- SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
-
-R229 НЕ видаляти і НЕ трактувати як сміття. Водночас нову роботу від R229 не починати, якщо автор прямо не наказав виконати rollback.
-
-Reserve record: `mavik-sklad/files/R229-RESERVE.md`.
-Current canon checkpoint: `mavik-sklad/files/R230-CANON.md`.
+Current canon checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`.
