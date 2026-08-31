@@ -1,65 +1,48 @@
 MAVIK.NAME — START HERE
 
-ЄДИНИЙ КАНОН: R230_Blog
-
-- `R230_Blog` — єдина канонічна, робоча, recovery і reference база сайту.
-- Канон не змінювати без прямої команди автора.
-- `R230` зберігається як verified rollback reserve.
-- `R229` зберігається як старіша verified rollback reserve.
-- Чинний сайт і робочий контекст — українські.
+ЄДИНИЙ КАНОН: R236
 
 CANON IDENTITY
-- file: `R230_Blog.zip`
-- size: `28005701` bytes
-- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`
+- file: `R236.zip`
+- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- approved: 2026-08-31
+- status: AUTHOR APPROVED / OFFICIAL / CANONICAL / ONLY WORKING BASE
+- checkpoint: `mavik-sklad/files/R236-CANON.md`
 
-CURRENT RELEASE CANDIDATE: R232
-- base: `R231_LinkFix`;
-- full file: `R232.zip`;
-- size: `28007292` bytes;
-- SHA-256: `723b8c107f77dbffef2840c8d5f1eb5205d1682fc507ca847d05cc9268398d53`;
-- status: VALIDATED / NOT CANONICAL;
-- checkpoint: `mavik-sklad/files/R232-CHECKPOINT.md`.
+HARD RULES
+- R236 — єдина канонічна, робоча, recovery і reference база сайту.
+- Усі релізи/кандидати/патчі/checkpoints до R236 є застарілими для поточної роботи.
+- Не відновлювати і не використовувати pre-R236 як source-of-truth без нового прямого наказу автора.
+- Усі нові зміни починати тільки від R236, доки автор прямо не затвердить новіший канон.
 
-R232 INCLUDES
-- весь R231/R231_LinkFix функціонал;
-- BookFix;
-- blog editor `Візуальний` / `</> HTML`;
-- internal editor scroll;
-- DOM Range link insertion;
-- LIVE CONTENT FIRST deploy protection;
-- SERVER LINK SAVE FIX: corrected href sanitizer regex that previously could silently strip href;
-- bare domains normalize to `https://`;
-- safe schemes/paths: http, https, internal `/`, relative `./`/`../`, `#anchor`, `mailto:`;
-- unsafe schemes such as `javascript:` blocked;
-- if sanitizer cannot preserve submitted href, saving fails explicitly instead of silent success;
-- blog edit mode is now an isolated `Редагувати допис` screen: the posts list is hidden while editing;
-- edit screen has `← До списку` and `Відкрити ↗`.
+LANGUAGE ARCHITECTURE
+- Публічний сайт — український.
+- У R236 немає `/en/`, публічних `hreflang=en` чи англомовної навігаційної гілки.
+- Польська `Ewakuacja` — окремий public direct-link resource; не міжнародна версія сайту.
+- LIVE 2026-08-31: для всіх legacy `/en/*` встановлено HTTP 410 Gone через кореневий `.htaccess`.
+- Цей 410-rule поки є live hotfix і має бути включений у наступний повний реліз від R236.
 
-INSTALLATION
-If R231 is already installed: install `R232.zip` directly. No bootstrap is required.
+R236 CORE STATE
+- shared rich-text editor works in blog/books/static pages/mail;
+- text color and background controls fixed;
+- internal-link picker works across shared editors;
+- external links open in a new tab, internal mavik.name links remain in current tab;
+- public JSON-LD validation inherited from R235/R236 gate;
+- Ukrainian-only architecture inherited from R235;
+- `discover` retired to `/shcho-pochytaty/` via 301;
+- LIVE CONTENT FIRST deploy protection retained.
 
-VALIDATION R232
-- PHP 31/31 PASS;
-- JS 15/15 PASS;
-- inline blog editor JS PASS;
-- JSON 12/12 PASS;
-- public JSON-LD 82/82 PASS;
-- EPUB 21/21 PASS;
-- manifest 268/268 PASS;
-- ZIP 393 entries / 268 files PASS;
-- full deploy simulation PASS;
-- live blog article/index/RSS/live-only new post/user media preserved;
-- deleted live post not resurrected.
+CURRENT SEO/TECHNICAL WORK
+Read: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`.
+Known confirmed live issue: reader heading/TOC pollution in `Петля` — ordinary body text appears as H2/TOC item; also duplicate `Глава четверта` heading is visible. This is a real structural defect and must be corrected in the next release from R236.
 
 LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
-- release ZIP = база коду/структури, а не автоматично найсвіжіший production content;
+- release ZIP = база коду/структури, не автоматично найсвіжіший production content;
 - full deploy не має права перезаписувати новіший Boss-managed live content;
-- при конфлікті старішого ZIP із новішим live content зберігати live-версію, доки автор прямо не наказав інакше.
+- при конфлікті canonical ZIP із новішим live content зберігати live content, доки автор прямо не наказав інакше.
 
-ROLLBACK RESERVES
-- `mavik-sklad/files/R230-RESERVE.md`
-- `mavik-sklad/files/R229-RESERVE.md`
-
-Для production-аудиту використовувати чинний live-сайт + канонічну базу; search cache/snippets не видавати за live-стан.
+PRODUCTION AUDIT RULE
+Завжди розділяти:
+- LIVE — перевірено на чинному mavik.name;
+- CANONICAL BUILD — підтверджено у R236;
+- NOT VERIFIED — припущення/зовнішні кеші/сторонні аудити.
