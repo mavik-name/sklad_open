@@ -14,22 +14,30 @@ SITE MAVIK.NAME
 - Start: `mavik-sklad/files/START-HERE-SITE.txt`
 - Release authority: `mavik-sklad/releases/CANON.md`
 - Canon registry: `mavik-sklad/files/CANON-REGISTRY.md`
-- Current canonical checkpoint: `mavik-sklad/files/R236-CANON.md`
-- Current SEO/technical checkpoint: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`
+- Current canonical checkpoint: `mavik-sklad/files/R237-CANON.md`
+- Current release checkpoint: `mavik-sklad/files/R237-CHECKPOINT.md`
 
 CURRENT SITE AUTHORITY
-- **R236 = sole canonical / working / recovery / reference base.**
-- File: `R236.zip`
-- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- **R237 = sole canonical / working / recovery / reference base.**
+- File: `R237.zip`
+- SHA-256: `35a9a05fe45523916b702ed07775e6f6127c76672a15e9da8dd868d23ff583bd`
 - Author approval: 2026-08-31.
-- Усі релізи, кандидати, патчі й site-checkpoints до R236 є історичними/застарілими й НЕ можуть бути source-of-truth без нового прямого наказу автора.
-- Усі наступні site changes/releases починати виключно від R236, доки автор прямо не затвердить новіший канон.
+- Усі релізи, кандидати, патчі й site-checkpoints до R237 є історичними/застарілими й НЕ можуть бути source-of-truth без нового прямого наказу автора.
+- Усі наступні site changes/releases починати виключно від R237, доки автор прямо не затвердить новіший канон.
 
 LANGUAGE ARCHITECTURE
 - Публічна архітектура сайту — українська.
-- Старої міжнародної `/en/` гілки в канонічній збірці немає.
+- `/en/` відсутня в каноні; усі legacy `/en/*` повертають HTTP 410 Gone.
 - Єдиний іншомовний виняток: польська `Ewakuacja`, public direct-link resource, не міжнародна гілка.
-- На production 2026-08-31 вручну додано HTTP 410 Gone для всіх legacy `/en/*`; цей live hotfix обов’язково включити в наступний повний реліз від R236.
+
+R237 KEY STATE
+- R236 editor/link fixes retained;
+- `Петля` reader heading/TOC defect repaired;
+- reader normalization runs after LIVE CONTENT FIRST restore;
+- structure gate checks prose-like headings, missing TOC targets and duplicate reader IDs;
+- BlogPosting/Breadcrumb JSON-LD and OG/Twitter image metadata hardened;
+- image dimensions normalized;
+- deploy simulation and LIVE CONTENT FIRST preservation PASS.
 
 LIVE CONTENT FIRST
 - canonical ZIP = база коду/структури, а не автоматично найсвіжіший production content;
@@ -39,7 +47,7 @@ LIVE CONTENT FIRST
 PRODUCTION REPORTING
 Завжди розділяти:
 1. LIVE — фактично перевірено на mavik.name;
-2. CANONICAL BUILD — підтверджено в R236;
+2. CANONICAL BUILD — підтверджено в R237;
 3. NOT VERIFIED — не видавати припущення за факт.
 
 ІНШІ ПРОЄКТИ
