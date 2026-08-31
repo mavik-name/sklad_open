@@ -14,49 +14,44 @@ CANON IDENTITY
 - SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
 - checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`
 
-CURRENT RELEASE CANDIDATE: R231_LinkFix
-- base: `R231`;
-- full file: `R231_LinkFix.zip`;
-- full size: `28007089` bytes;
-- full SHA-256: `d0ec1a1c974be773e1446d7dc128b462e3bcc3c16c2ca166020c7d5752961ec2`;
+CURRENT RELEASE CANDIDATE: R232
+- base: `R231_LinkFix`;
+- full file: `R232.zip`;
+- size: `28007292` bytes;
+- SHA-256: `723b8c107f77dbffef2840c8d5f1eb5205d1682fc507ca847d05cc9268398d53`;
 - status: VALIDATED / NOT CANONICAL;
-- checkpoint: `mavik-sklad/files/R231-LINKFIX-CHECKPOINT.md`.
+- checkpoint: `mavik-sklad/files/R232-CHECKPOINT.md`.
 
-SAFE LIVE FIX IF R231 IS ALREADY INSTALLED
-- `R231_LinkFix_PATCH.zip`;
-- size: `81983` bytes;
-- SHA-256: `5d4ae0ed53a666a0b1fdf0de45e00695b906e4f8da426a9a54f255deca5bf080`;
-- changes exactly `boss/index.php`;
-- does NOT overwrite blog posts, books, user media, EPUB or `/_site-state/`.
-
-R231 / R231_LinkFix INCLUDES
-- весь mail/core функціонал R230/R230_Blog;
-- BookFix: genre checkbox filters optional; fallback from `Жанр / підзаголовок`;
-- блог-редактор `Візуальний` / `</> HTML`;
-- внутрішній scroll редактора;
-- LIVE CONTENT FIRST blog snapshot/restore in deploy;
-- LinkFix: blog links no longer depend on deprecated `document.execCommand('createLink')`;
-- selected text is linked by DOM Range and real `<a href>`;
-- internal `До допису…` picker uses the same mechanism;
-- visual HTML, HTML-code textarea and hidden `body_html` synchronize immediately after link insertion.
+R232 INCLUDES
+- весь R231/R231_LinkFix функціонал;
+- BookFix;
+- blog editor `Візуальний` / `</> HTML`;
+- internal editor scroll;
+- DOM Range link insertion;
+- LIVE CONTENT FIRST deploy protection;
+- SERVER LINK SAVE FIX: corrected href sanitizer regex that previously could silently strip href;
+- bare domains normalize to `https://`;
+- safe schemes/paths: http, https, internal `/`, relative `./`/`../`, `#anchor`, `mailto:`;
+- unsafe schemes such as `javascript:` blocked;
+- if sanitizer cannot preserve submitted href, saving fails explicitly instead of silent success;
+- blog edit mode is now an isolated `Редагувати допис` screen: the posts list is hidden while editing;
+- edit screen has `← До списку` and `Відкрити ↗`.
 
 INSTALLATION
-A) If R231 is already installed: install only `R231_LinkFix_PATCH.zip`.
-B) If production is still R230_Blog: install R231 bootstrap protection first, then the full `R231_LinkFix.zip`.
+If R231 is already installed: install `R232.zip` directly. No bootstrap is required.
 
-VALIDATION R231_LinkFix
+VALIDATION R232
 - PHP 31/31 PASS;
 - JS 15/15 PASS;
 - inline blog editor JS PASS;
-- deprecated createLink removed PASS;
-- DOM Range insertion present PASS;
-- immediate body_html sync PASS;
 - JSON 12/12 PASS;
+- public JSON-LD 82/82 PASS;
 - EPUB 21/21 PASS;
 - manifest 268/268 PASS;
-- full ZIP integrity PASS;
-- patch ZIP integrity PASS;
-- patch simulation against exact R231: only `boss/index.php` differs.
+- ZIP 393 entries / 268 files PASS;
+- full deploy simulation PASS;
+- live blog article/index/RSS/live-only new post/user media preserved;
+- deleted live post not resurrected.
 
 LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
 - release ZIP = база коду/структури, а не автоматично найсвіжіший production content;
