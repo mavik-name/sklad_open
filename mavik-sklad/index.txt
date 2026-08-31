@@ -12,21 +12,30 @@ AUTHORITATIVE CANON REGISTRY:
 SITE MAVIK.NAME
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release authority: `mavik-sklad/releases/CANON.md`
-- current canonical checkpoint: `mavik-sklad/files/R236-CANON.md`
-- current SEO/technical checkpoint: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`
+- current canonical checkpoint: `mavik-sklad/files/R237-CANON.md`
+- current release checkpoint: `mavik-sklad/files/R237-CHECKPOINT.md`
 
 CURRENT SITE STATE
-- **R236 = sole canonical CORE / only working base.**
-- file: `R236.zip`
-- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- **R237 = sole canonical CORE / only working base.**
+- file: `R237.zip`
+- SHA-256: `35a9a05fe45523916b702ed07775e6f6127c76672a15e9da8dd868d23ff583bd`
 - author approved: 2026-08-31.
-- Everything before R236 is obsolete for current site work and must not be used as source-of-truth unless the author explicitly orders rollback/recovery from an older artifact.
+- Everything before R237 is obsolete for current site work and must not be used as source-of-truth unless the author explicitly orders rollback/recovery from an older artifact.
 
 LANGUAGE STATE
 - Ukrainian-only public architecture.
-- No `/en/` branch in canonical R236.
+- No `/en/` branch in canonical R237.
+- Legacy `/en/*` permanently returns HTTP 410 Gone.
 - Polish `Ewakuacja` remains a separate public direct-link resource only.
-- LIVE hotfix 2026-08-31: legacy `/en/*` returns HTTP 410 Gone; fold this into the next full release from R236.
+
+R237 CORE
+- R236 editor/link fixes retained;
+- `Петля` reader structure fixed;
+- post-restore reader normalization active;
+- reader structure validation gate active;
+- BlogPosting/Breadcrumb JSON-LD and OG/Twitter metadata hardened;
+- public image dimensions normalized;
+- deploy simulation PASS.
 
 LIVE CONTENT FIRST
 - full deploy must not overwrite newer Boss-managed production content;
