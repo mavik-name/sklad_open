@@ -1,47 +1,39 @@
 MAVIK.NAME — START HERE
 
-ЄДИНИЙ КАНОН: R230
+ЄДИНИЙ КАНОН: R230_Blog
 
-- `R230` — єдина канонічна, робоча, recovery і reference база сайту.
-- Усі наступні зміни та релізи починати виключно від `R230`, доки автор прямо не затвердить новішу канонічну збірку.
-- `R229` зберігається як перевірена попередня rollback reserve; не видаляти і не вважати сміттям.
-- R229 не використовувати як робочу базу без прямого наказу автора на відкат.
+- `R230_Blog` — єдина канонічна, робоча, recovery і reference база сайту.
+- Усі наступні зміни та релізи починати виключно від `R230_Blog`, доки автор прямо не затвердить новішу канонічну збірку.
+- `R230` зберігається як безпосередня verified rollback reserve.
+- `R229` зберігається як старіша verified rollback reserve.
+- R230/R229 не використовувати як робочу базу без прямого наказу автора на rollback.
 - Чинний сайт і робочий контекст — українські.
-- Для production-аудиту використовувати R230 і свіжі live-дані; пошуковий кеш не видавати за live-стан.
 
 IDENTITY
-- file: `R230.zip`
-- size: `28005558` bytes
-- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
-- base: `R229`
-
-R230 MAIL BASELINE
-- один compose-лист для багатьох адресатів;
-- chips у полі «Кому»: Enter / кома / `;` / bulk paste;
-- autocomplete з адресної книги;
-- кожна унікальна адреса = окреме SMTP-відправлення;
-- у видимому `To:` тільки поточний адресат;
-- окремий Message-ID для кожного адресата;
-- accepted/failed статус по кожній адресі та підсумок X/Y;
-- невдалі адреси можна повторити без дублювання успішних;
-- окремий IMAP append у «Надіслані» для кожного SMTP accepted листа;
-- журнал: `/_site-state/mail-send-log.json`;
-- адресна книга: `/_site-state/mail-address-book.json`;
-- runtime-дані переживають наступні full deploy.
-
-CURRENT RELEASE CANDIDATE
-- `R230_Blog` — validated candidate від канонічного R230; НЕ канонічний без прямого затвердження автора.
-- Мета: додати під текст статей блогу контрастну panel-картку за візуальною логікою «Про автора».
-- Тексти постів не змінені; cache-buster змінено тільки для `assets/blog/blog.css`.
 - file: `R230_Blog.zip`
 - size: `28005701` bytes
 - SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- checkpoint: `mavik-sklad/files/R230_BLOG-CHECKPOINT.md`
+- base: `R230`
+- managed files: `268`
 
-ROLLBACK RESERVE
-- `R229.zip`
-- SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
-- record: `mavik-sklad/files/R229-RESERVE.md`
+R230_Blog BASELINE
+- весь mail/core функціонал R230 збережено;
+- текст блогу має контрастну panel-картку в стилі «Про автора»;
+- blog CSS cache-buster: `v=230blog`;
+- тексти блогів у релізі не змінювалися.
+
+LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
+- канонічний ZIP є базою коду/структури, але не автоматично повною копією найсвіжішого production content;
+- наступний full deploy НЕ має права перезаписати новіший контент, створений/змінений через Boss;
+- Boss-managed blog/books/media та інший mutable content захищати/синхронізувати/відновлювати;
+- при конфлікті старішого ZIP-контенту з новішим live-контентом зберігати live-версію, доки автор прямо не наказав інакше.
 
 CANON CHECKPOINT
-- `mavik-sklad/files/R230-CANON.md`
+- `mavik-sklad/files/R230_BLOG-CANON.md`
+- `mavik-sklad/files/R230_BLOG-CHECKPOINT.md`
+
+ROLLBACK RESERVES
+- immediate: `mavik-sklad/files/R230-RESERVE.md`
+- older: `mavik-sklad/files/R229-RESERVE.md`
+
+Для production-аудиту використовувати R230_Blog + свіжі live-дані; search cache/snippets не видавати за live-стан.
