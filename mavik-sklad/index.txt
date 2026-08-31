@@ -1,5 +1,5 @@
 MAVIK WORKSPACE / ДАЛЬНІЙ СКЛАД — CURRENT INDEX
-Updated: 2026-08-30
+Updated: 2026-08-31
 Repository: mavik-name/sklad_open
 Branch: main
 
@@ -12,47 +12,33 @@ AUTHORITATIVE CANON REGISTRY:
 SITE MAVIK.NAME
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release authority: `mavik-sklad/releases/CANON.md`
-- current canonical checkpoint: `mavik-sklad/files/R230-CANON.md`
-- previous rollback reserve: `mavik-sklad/files/R229-RESERVE.md`
+- current canonical checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`
+- immediate rollback reserve: `mavik-sklad/files/R230-RESERVE.md`
+- older rollback reserve: `mavik-sklad/files/R229-RESERVE.md`
 
 CURRENT SITE STATE
-- **R230 = sole canonical CORE / only working base.**
-- **R229 = preserved verified rollback reserve.**
-- R229 не видаляти і не вважати сміттям; використовувати тільки за прямим наказом автора на rollback.
-- усі наступні site changes/releases починати тільки від R230.
+- **R230_Blog = sole canonical CORE / only working base.**
+- **R230 = preserved immediate rollback reserve.**
+- **R229 = preserved older rollback reserve.**
+- усі наступні site changes/releases починати тільки від R230_Blog.
 
-R230 IDENTITY
-- file: `R230.zip`
-- size: `28005558` bytes
-- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
-- base: R229
+R230_Blog IDENTITY
+- file: `R230_Blog.zip`
+- size: `28005701` bytes
+- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
+- base: R230
 
-R229 RESERVE IDENTITY
-- file: `R229.zip`
-- size: `27999098` bytes
-- SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
+R230_Blog CHANGE
+- контрастна panel-картка під текстом блогових статей за логікою «Про автора»;
+- тексти постів не змінені;
+- blog.css cache-buster `v=230blog`.
 
-R230 MAIL CORE
-- one compose → many recipients;
-- recipient chips: Enter / comma / semicolon / bulk paste;
-- address-book autocomplete;
-- separate SMTP transaction/message per recipient;
-- unique visible To and Message-ID per recipient;
-- per-recipient accepted/failed status + X/Y summary;
-- selective retry for failed recipients only;
-- separate IMAP Sent append after successful SMTP;
-- protected runtime `/_site-state/mail-send-log.json`;
-- protected runtime `/_site-state/mail-address-book.json`.
-
-CURRENT PRIORITY
-- single Ukrainian `uk-UA` site;
-- maximum performance/indexing/crawlability/Ukrainian reach;
-- first-party Boss statistics and SEO monitoring;
-- clean full-release update path;
-- protect live reader text and `/_site-state/` during deploy;
-- preserve R229 as immediate rollback reserve.
+LIVE CONTENT FIRST
+- full deploy не повинен перезаписувати новіший Boss-managed production content;
+- canonical ZIP = code/structure baseline, а не автоматично найсвіжіший mutable content;
+- у конфлікті старішого ZIP і новішого live content зберігати live content.
 
 OTHER PROJECTS
 Files under project-specific folders/canons are unrelated to site-release cleanup and remain intact.
 
-For site work, never reconstruct active state from older artifacts or chat memory when R230 canon records are available.
+For site work, never reconstruct active state from older artifacts or chat memory when R230_Blog canon records are available.
