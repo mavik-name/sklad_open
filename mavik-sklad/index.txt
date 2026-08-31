@@ -12,33 +12,29 @@ AUTHORITATIVE CANON REGISTRY:
 SITE MAVIK.NAME
 - site start: `mavik-sklad/files/START-HERE-SITE.txt`
 - release authority: `mavik-sklad/releases/CANON.md`
-- current canonical checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`
-- immediate rollback reserve: `mavik-sklad/files/R230-RESERVE.md`
-- older rollback reserve: `mavik-sklad/files/R229-RESERVE.md`
+- current canonical checkpoint: `mavik-sklad/files/R236-CANON.md`
+- current SEO/technical checkpoint: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`
 
 CURRENT SITE STATE
-- **R230_Blog = sole canonical CORE / only working base.**
-- **R230 = preserved immediate rollback reserve.**
-- **R229 = preserved older rollback reserve.**
-- усі наступні site changes/releases починати тільки від R230_Blog.
+- **R236 = sole canonical CORE / only working base.**
+- file: `R236.zip`
+- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- author approved: 2026-08-31.
+- Everything before R236 is obsolete for current site work and must not be used as source-of-truth unless the author explicitly orders rollback/recovery from an older artifact.
 
-R230_Blog IDENTITY
-- file: `R230_Blog.zip`
-- size: `28005701` bytes
-- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- base: R230
-
-R230_Blog CHANGE
-- контрастна panel-картка під текстом блогових статей за логікою «Про автора»;
-- тексти постів не змінені;
-- blog.css cache-buster `v=230blog`.
+LANGUAGE STATE
+- Ukrainian-only public architecture.
+- No `/en/` branch in canonical R236.
+- Polish `Ewakuacja` remains a separate public direct-link resource only.
+- LIVE hotfix 2026-08-31: legacy `/en/*` returns HTTP 410 Gone; fold this into the next full release from R236.
 
 LIVE CONTENT FIRST
-- full deploy не повинен перезаписувати новіший Boss-managed production content;
-- canonical ZIP = code/structure baseline, а не автоматично найсвіжіший mutable content;
-- у конфлікті старішого ZIP і новішого live content зберігати live content.
+- full deploy must not overwrite newer Boss-managed production content;
+- canonical ZIP = code/structure baseline, not automatically the newest mutable content;
+- in conflicts preserve newer live content unless the author explicitly orders otherwise.
+
+AUDIT RULE
+Always separate LIVE / CANONICAL BUILD / NOT VERIFIED. Search-engine cache or third-party crawler output is evidence, not production truth.
 
 OTHER PROJECTS
-Files under project-specific folders/canons are unrelated to site-release cleanup and remain intact.
-
-For site work, never reconstruct active state from older artifacts or chat memory when R230_Blog canon records are available.
+Project-specific files/canons remain intact and are unrelated to site-release cleanup.
