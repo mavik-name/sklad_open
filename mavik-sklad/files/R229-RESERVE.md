@@ -2,7 +2,7 @@
 
 Дата переведення в резерв: 2026-08-30
 
-Статус: **PRESERVED PREVIOUS CANON / VERIFIED ROLLBACK RESERVE / NOT WORKING BASE**
+Статус: **PRESERVED HISTORICAL CANON / VERIFIED OLDER ROLLBACK RESERVE / NOT WORKING BASE**
 
 ## Identity
 - file: `R229.zip`
@@ -10,17 +10,16 @@
 - SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
 
 ## Правило збереження
-- `R229` НЕ видаляти.
-- `R229` НЕ вважати сміттям або застарілим непотрібним артефактом.
-- `R229` зберігати як останню перевірену попередню канонічну збірку для аварійного rollback.
-- Нову роботу від `R229` не починати, якщо автор прямо не наказав виконати відкат.
-- Поточний канон і sole working base: `R230`.
+- `R229` НЕ видаляти і НЕ вважати сміттям.
+- Зберігати як старішу перевірену rollback-збірку.
+- Нову роботу від R229 не починати без прямого наказу автора на rollback.
+- Поточний sole working canon: `R230_Blog`.
+- Безпосередній rollback reserve: `R230`.
 
-## Що резервує R229
-- перевірену SMTP-логіку попередньої редакції;
+## Історична роль R229
+- verified SMTP baseline до R230 mail redesign;
 - HTML + plain-text mail;
 - Message-ID;
-- multi-recipient/BCC попереднього типу;
+- legacy multi-recipient/BCC;
 - IMAP append у «Надіслані»;
-- захист live-текстів книг і `/_site-state/` під час full deploy;
-- попередній стабільний структурно-функціональний стан сайту до R230 mail redesign.
+- попередній стабільний structural/functional стан.
