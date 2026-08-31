@@ -3,45 +3,67 @@ MAVIK.NAME — START HERE
 ЄДИНИЙ КАНОН: R230_Blog
 
 - `R230_Blog` — єдина канонічна, робоча, recovery і reference база сайту.
-- Усі наступні зміни та релізи починати виключно від `R230_Blog`, доки автор прямо не затвердить новішу канонічну збірку.
-- `R230` зберігається як безпосередня verified rollback reserve.
+- Канон не змінювати без прямої команди автора.
+- `R230` зберігається як verified rollback reserve.
 - `R229` зберігається як старіша verified rollback reserve.
-- R230/R229 не використовувати як робочу базу без прямого наказу автора на rollback.
 - Чинний сайт і робочий контекст — українські.
 
-IDENTITY
+CANON IDENTITY
 - file: `R230_Blog.zip`
 - size: `28005701` bytes
 - SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
-- base: `R230`
-- managed files: `268`
+- checkpoint: `mavik-sklad/files/R230_BLOG-CANON.md`
 
-R230_Blog BASELINE
-- весь mail/core функціонал R230 збережено;
-- текст блогу має контрастну panel-картку в стилі «Про автора»;
-- blog CSS cache-buster: `v=230blog`;
-- тексти блогів у релізі не змінювалися.
+CURRENT RELEASE CANDIDATE: R231
+- file: `R231.zip`
+- size: `28007076` bytes
+- SHA-256: `3175cfa7c7a9b599c9760b98d2702cadd6389cca6f053dad3f7e1d6001b25498`
+- status: VALIDATED / NOT CANONICAL;
+- checkpoint: `mavik-sklad/files/R231-CHECKPOINT.md`.
 
-CURRENT FIX READY — BOOK ADD
-- `R230_Blog_BookFix` — validated candidate, НЕ канонічний без прямого затвердження автора;
-- причина: додавання/редагування книги помилково вимагало окремий `genre_keys[]`, навіть коли поле `Жанр / підзаголовок` було заповнене;
-- fix: жанрові checkbox-фільтри необов'язкові; якщо їх не вибрати, Boss автоматично знаходить/створює фільтр із введеного жанру;
-- safe live install: `R230_Blog_BookFix_PATCH.zip` — overlay, змінює тільки `boss/index.php`, не торкається live content;
-- full candidate: `R230_Blog_BookFix.zip`;
-- checkpoint: `mavik-sklad/files/R230_BLOG-BOOKFIX-CHECKPOINT.md`.
+R231 INCLUDES
+- весь mail/core функціонал R230/R230_Blog;
+- BookFix: жанрові checkbox-фільтри при додаванні/редагуванні книги необов'язкові; якщо не вибрані — фільтр створюється/підбирається з `Жанр / підзаголовок`;
+- блог-редактор `Візуальний` / `</> HTML`;
+- двостороння синхронізація visual ↔ HTML;
+- внутрішній scroll редактора; toolbar не їде разом із довгим текстом;
+- server-side blog HTML sanitizer збережено;
+- LIVE CONTENT FIRST реалізовано в deploy-коді: snapshot/restore актуального blog index, RSS та blog article pages; deleted live posts не воскресають.
+
+ВАЖЛИВО — ПЕРШЕ ВСТАНОВЛЕННЯ R231
+Встановлювати строго у два кроки:
+1. `R231_BOOTSTRAP.zip`
+2. `R231.zip`
+
+R231_BOOTSTRAP:
+- size: `11352` bytes;
+- SHA-256: `d579201f7da236ca603ad744c8c39e8540cfd33464bf7f6a8831d2945ed43329`;
+- base release numeric: `230`;
+- змінює тільки `_site-admin/deploy.php`;
+- потрібен, щоб чинний R230-family deployer отримав LIVE CONTENT FIRST protection ДО першого full deploy R231.
+
+VALIDATION R231
+- PHP 31/31 PASS;
+- JS 15/15 PASS;
+- inline editor JS PASS;
+- browser visual/HTML + internal-scroll test PASS;
+- JSON 12/12 PASS;
+- public JSON-LD 82/82 PASS;
+- EPUB 21/21 PASS;
+- manifest 268/268 PASS;
+- ZIP 393 entries / 268 files PASS;
+- two-step deploy simulation PASS;
+- existing live article/index/RSS/new article/user media preserved;
+- deleted live article not resurrected;
+- R231 deployer remains installed after full release.
 
 LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
-- канонічний ZIP є базою коду/структури, але не автоматично повною копією найсвіжішого production content;
-- наступний full deploy НЕ має права перезаписати новіший контент, створений/змінений через Boss;
-- Boss-managed blog/books/media та інший mutable content захищати/синхронізувати/відновлювати;
-- при конфлікті старішого ZIP-контенту з новішим live-контентом зберігати live-версію, доки автор прямо не наказав інакше.
-
-CANON CHECKPOINT
-- `mavik-sklad/files/R230_BLOG-CANON.md`
-- `mavik-sklad/files/R230_BLOG-CHECKPOINT.md`
+- release ZIP = база коду/структури, а не автоматично найсвіжіший production content;
+- full deploy не має права перезаписувати новіший Boss-managed live content;
+- при конфлікті старішого ZIP із новішим live content зберігати live-версію, доки автор прямо не наказав інакше.
 
 ROLLBACK RESERVES
-- immediate: `mavik-sklad/files/R230-RESERVE.md`
-- older: `mavik-sklad/files/R229-RESERVE.md`
+- `mavik-sklad/files/R230-RESERVE.md`
+- `mavik-sklad/files/R229-RESERVE.md`
 
-Для production-аудиту використовувати R230_Blog + свіжі live-дані; search cache/snippets не видавати за live-стан.
+Для production-аудиту використовувати чинний live-сайт + канонічну базу; search cache/snippets не видавати за live-стан.
