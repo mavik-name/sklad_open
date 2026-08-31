@@ -1,7 +1,7 @@
 # MAVIK.NAME — R237 RELEASE CHECKPOINT
 
 Date: 2026-08-31
-Status: VALIDATED RELEASE CANDIDATE / NOT YET CANONICAL
+Status: **AUTHOR APPROVED / OFFICIAL / CANONICAL**
 Base: exact canonical `R236.zip`
 
 ## Input identity
@@ -54,4 +54,7 @@ Base: exact canonical `R236.zip`
 - Post-restore reader normalization: scanned 21; one Petlia collapse applied in dirty-live simulation, then clean on second pass.
 
 ## Canon rule
-R237 is NOT canonical until the author explicitly approves/canonizes it. Until then R236 remains the sole canonical working base.
+**R237 is now the sole canonical working/recovery/reference base.**
+All future site changes must start only from R237 until the author explicitly approves a newer canonical release. Pre-R237 site releases are historical/obsolete and must not be used as source-of-truth without explicit rollback instruction.
+
+Canonical checkpoint: `mavik-sklad/files/R237-CANON.md`.
