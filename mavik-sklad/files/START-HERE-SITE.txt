@@ -22,6 +22,14 @@ R230_Blog BASELINE
 - blog CSS cache-buster: `v=230blog`;
 - тексти блогів у релізі не змінювалися.
 
+CURRENT FIX READY — BOOK ADD
+- `R230_Blog_BookFix` — validated candidate, НЕ канонічний без прямого затвердження автора;
+- причина: додавання/редагування книги помилково вимагало окремий `genre_keys[]`, навіть коли поле `Жанр / підзаголовок` було заповнене;
+- fix: жанрові checkbox-фільтри необов'язкові; якщо їх не вибрати, Boss автоматично знаходить/створює фільтр із введеного жанру;
+- safe live install: `R230_Blog_BookFix_PATCH.zip` — overlay, змінює тільки `boss/index.php`, не торкається live content;
+- full candidate: `R230_Blog_BookFix.zip`;
+- checkpoint: `mavik-sklad/files/R230_BLOG-BOOKFIX-CHECKPOINT.md`.
+
 LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
 - канонічний ZIP є базою коду/структури, але не автоматично повною копією найсвіжішого production content;
 - наступний full deploy НЕ має права перезаписати новіший контент, створений/змінений через Boss;
