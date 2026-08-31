@@ -1,40 +1,50 @@
 MAVIK.NAME — START HERE
 
-ЄДИНИЙ КАНОН: R236
+ЄДИНИЙ КАНОН: R237
 
 CANON IDENTITY
-- file: `R236.zip`
-- SHA-256: `aea84cdc069b5cf695d628698d67d3e2c0c9c662b30b1734405e1ef7ee83f0a6`
+- file: `R237.zip`
+- SHA-256: `35a9a05fe45523916b702ed07775e6f6127c76672a15e9da8dd868d23ff583bd`
 - approved: 2026-08-31
 - status: AUTHOR APPROVED / OFFICIAL / CANONICAL / ONLY WORKING BASE
-- checkpoint: `mavik-sklad/files/R236-CANON.md`
+- checkpoint: `mavik-sklad/files/R237-CANON.md`
+- release checkpoint: `mavik-sklad/files/R237-CHECKPOINT.md`
 
 HARD RULES
-- R236 — єдина канонічна, робоча, recovery і reference база сайту.
-- Усі релізи/кандидати/патчі/checkpoints до R236 є застарілими для поточної роботи.
-- Не відновлювати і не використовувати pre-R236 як source-of-truth без нового прямого наказу автора.
-- Усі нові зміни починати тільки від R236, доки автор прямо не затвердить новіший канон.
+- R237 — єдина канонічна, робоча, recovery і reference база сайту.
+- Усі релізи/кандидати/патчі/checkpoints до R237 є застарілими для поточної роботи.
+- Не відновлювати і не використовувати pre-R237 як source-of-truth без нового прямого наказу автора.
+- Усі нові зміни починати тільки від R237, доки автор прямо не затвердить новіший канон.
 
 LANGUAGE ARCHITECTURE
 - Публічний сайт — український.
-- У R236 немає `/en/`, публічних `hreflang=en` чи англомовної навігаційної гілки.
+- У R237 немає `/en/`, публічних `hreflang=en` чи англомовної навігаційної гілки.
+- Усі legacy `/en/*` повертають HTTP 410 Gone із канонічного `.htaccess`.
 - Польська `Ewakuacja` — окремий public direct-link resource; не міжнародна версія сайту.
-- LIVE 2026-08-31: для всіх legacy `/en/*` встановлено HTTP 410 Gone через кореневий `.htaccess`.
-- Цей 410-rule поки є live hotfix і має бути включений у наступний повний реліз від R236.
 
-R236 CORE STATE
-- shared rich-text editor works in blog/books/static pages/mail;
-- text color and background controls fixed;
-- internal-link picker works across shared editors;
-- external links open in a new tab, internal mavik.name links remain in current tab;
-- public JSON-LD validation inherited from R235/R236 gate;
-- Ukrainian-only architecture inherited from R235;
-- `discover` retired to `/shcho-pochytaty/` via 301;
-- LIVE CONTENT FIRST deploy protection retained.
+R237 CORE STATE
+- усі R236 editor/link fixes збережено;
+- виправлена структура читанки `Петля`;
+- reader normalization запускається після LIVE CONTENT FIRST restore;
+- release gate ловить prose-like headings, missing TOC targets і duplicate reader IDs;
+- BlogPosting/Breadcrumb JSON-LD збережено/посилено;
+- OG/Twitter image metadata та image dimensions нормалізовано;
+- blog generator `$language` path виправлено;
+- crawl/media integrity та deploy preservation validated.
 
-CURRENT SEO/TECHNICAL WORK
-Read: `mavik-sklad/files/R236-SEO-CHECKPOINT.md`.
-Known confirmed live issue: reader heading/TOC pollution in `Петля` — ordinary body text appears as H2/TOC item; also duplicate `Глава четверта` heading is visible. This is a real structural defect and must be corrected in the next release from R236.
+VALIDATION R237
+- ZIP integrity PASS;
+- managed files 273, missing 0;
+- `/en/` refs 0;
+- JSON-LD 85/85 PASS;
+- missing image dimensions 0;
+- reader prose headings 0;
+- missing TOC targets 0;
+- duplicate reader IDs 0;
+- broken internal refs 0;
+- EPUB 21/21 PASS;
+- static SEO gate PASS;
+- deploy simulation PASS.
 
 LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
 - release ZIP = база коду/структури, не автоматично найсвіжіший production content;
@@ -44,5 +54,5 @@ LIVE CONTENT FIRST — НЕПОРУШНЕ ПРАВИЛО
 PRODUCTION AUDIT RULE
 Завжди розділяти:
 - LIVE — перевірено на чинному mavik.name;
-- CANONICAL BUILD — підтверджено у R236;
+- CANONICAL BUILD — підтверджено у R237;
 - NOT VERIFIED — припущення/зовнішні кеші/сторонні аудити.
