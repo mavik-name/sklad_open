@@ -1,49 +1,48 @@
 # CANON REGISTRY — MAVIK.NAME
 
 ## ЄДИНИЙ КАНОН
-`R230`
+`R230_Blog`
 
 Статус: **AUTHOR APPROVED / OFFICIAL / CANONICAL / ONLY WORKING BASE**
-Дата затвердження: 2026-08-30
+Дата затвердження: 2026-08-31
 
 Identity:
-- file: `R230.zip`
-- size: `28005558` bytes
-- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
-- base: `R229`
+- file: `R230_Blog.zip`
+- size: `28005701` bytes
+- SHA-256: `ad1d46c7209e53e0c4058ad033a30946a3cffc85b5ec9677f8af4d2d7bdcc348`
+- base: `R230`
 
 Правила:
-- усі зміни, виправлення, recovery та наступні релізи починати тільки від `R230`;
-- `R229` зберігати як попередню перевірену rollback reserve;
-- `R229` не видаляти і не трактувати як сміття;
-- `R229` не використовувати як робочу базу без прямого наказу автора на відкат;
+- усі зміни, виправлення, recovery та наступні релізи починати тільки від `R230_Blog`;
+- `R230` зберігати як immediate verified rollback reserve;
+- `R229` зберігати як older verified rollback reserve;
+- резерви не видаляти і не використовувати як робочу базу без прямого наказу автора;
 - чинний сайт і робочий контекст — українські;
-- актуальний production визначати за `R230` + свіжими live-даними; search snippets/cache відокремлювати від live-стану.
+- production визначати за R230_Blog + свіжими live-даними.
 
-## R230 MAIL BASELINE
-- один compose-лист для багатьох адресатів;
-- recipient chips: Enter / кома / `;` / bulk paste;
-- autocomplete з protected адресної книги;
-- кожна унікальна адреса = окрема SMTP-транзакція/повідомлення;
-- у `To:` тільки поточний адресат;
-- окремий Message-ID для кожного адресата;
-- окремий accepted/failed статус по кожному адресату;
-- підсумок X/Y і selective retry тільки невдалих адрес;
-- окремий IMAP Sent append після SMTP acceptance;
-- protected send log: `/_site-state/mail-send-log.json`;
-- protected address book: `/_site-state/mail-address-book.json`;
-- validation: PHP PASS, JS PASS, dedupe PASS, 3 unique Message-ID PASS, cross-recipient To leakage absent PASS, 2 accepted + 1 failed simulation PASS, ZIP integrity PASS, Boss deploy PASS.
+## R230_Blog STATE
+- R230 mail baseline повністю збережено;
+- blog article body має контрастну panel-картку в стилі «Про автора»;
+- blog text content не змінювався;
+- blog CSS cache-buster `v=230blog`;
+- ZIP integrity / Boss deploy / PHP / JS / JSON / EPUB validation PASS.
 
-## R229 — ЗБЕРЕЖЕНИЙ ПОПЕРЕДНІЙ КАНОН
-Статус: **VERIFIED ROLLBACK RESERVE / NOT WORKING BASE**
+## LIVE CONTENT FIRST — ПОСТІЙНЕ ПРАВИЛО
+- canonical ZIP = база коду/структури, а не гарантовано найсвіжіша копія mutable production content;
+- full deploy не має права затерти новіший Boss-managed live-content;
+- blog/books/media та інший mutable content захищати, синхронізувати або відновлювати;
+- у конфлікті старішого ZIP та новішого live content зберігати live content, якщо автор прямо не наказав інакше.
 
-Identity:
+## RESERVES
+### R230
+- file: `R230.zip`
+- SHA-256: `e03cbfdd328d176eacb9548c75fc73d119ec8f924fbe1f2e669fefca2f2abea0`
+- record: `mavik-sklad/files/R230-RESERVE.md`
+
+### R229
 - file: `R229.zip`
-- size: `27999098` bytes
 - SHA-256: `9f047a6b0fc71699bd6a9ab070fe65c291d257110b77bc935f74953b087166c8`
-
-Record: `mavik-sklad/files/R229-RESERVE.md`.
+- record: `mavik-sklad/files/R229-RESERVE.md`
 
 ## ПОСТІЙНЕ ПРАВИЛО АУДИТУ
-- Для досліджень `mavik.name` використовувати тільки робочий веб-механізм із реальним зовнішнім доступом до production.
-- Не використовувати ізольований контейнерний DNS/`curl` як джерело висновків про DNS, HTTP/TLS, crawlability чи індексацію.
+Для досліджень mavik.name використовувати реальний зовнішній production-доступ; ізольований container DNS/curl не видавати за live-стан.
