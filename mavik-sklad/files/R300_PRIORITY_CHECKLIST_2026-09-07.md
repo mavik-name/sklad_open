@@ -30,6 +30,7 @@ Architecture rule: after deployment, all application functionality works only th
 - [DONE] 2026-09-07 — Created persistent remote checklist at `mavik-sklad/files/R300_PRIORITY_CHECKLIST_2026-09-07.md`.
 - [DONE] 2026-09-07 — Root cause refined: current runtime has two parallel loaders (Core ModuleRegistry + LegacyModuleManager/overlay) while Boss separately infers module state from module.json; this allows a module to run but appear disabled/unversioned.
 - [DONE] 2026-09-07 — Compared supplied Template against current Full Build: 20 overlapping design files differ; Template must be refreshed from live before new UI/module work.
+- [DONE] 2026-09-07 — Created isolated working trees for Full Build, Core and Template; original supplied archives remain untouched as rollback/reference sources.
 
 ## Next action
-- Build canonical baseline by diffing current Full Build against Core and Template, then patch Core/Template source trees before implementing new features.
+- Implement a single module catalog/state source and migrate Boss/module loaders to it.
