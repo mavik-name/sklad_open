@@ -31,6 +31,9 @@ Architecture rule: after deployment, all application functionality works only th
 - [DONE] 2026-09-07 — Root cause refined: current runtime has two parallel loaders (Core ModuleRegistry + LegacyModuleManager/overlay) while Boss separately infers module state from module.json; this allows a module to run but appear disabled/unversioned.
 - [DONE] 2026-09-07 — Compared supplied Template against current Full Build: 20 overlapping design files differ; Template must be refreshed from live before new UI/module work.
 - [DONE] 2026-09-07 — Created isolated working trees for Full Build, Core and Template; original supplied archives remain untouched as rollback/reference sources.
+- [DONE] 2026-09-07 — Added canonical `R300\Core\Modules\ModuleCatalog`: installed modules auto-register into the compatibility state manifest; explicit disabled state is preserved; Boss/System are protected; dependencies, menu visibility and ordering have dedicated state.
+- [DONE] 2026-09-07 — Added missing module metadata for Analytics, Author, Releases, Search, Support, System and Warehouse; hardened Boss metadata as system/non-replaceable.
+- [DONE] 2026-09-07 — Wired ModuleCatalog synchronization into bootstrap before any module loader runs, making runtime and Boss start from the same installed-module state.
 
 ## Next action
-- Implement a single module catalog/state source and migrate Boss/module loaders to it.
+- Migrate Boss ModuleManager and module UI/actions to ModuleCatalog, including protected modules, dependencies, menu hiding and ordering.
