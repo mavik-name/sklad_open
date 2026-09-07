@@ -1,0 +1,274 @@
+--- a/_app/Core/Compatibility/LegacyModuleManager.php
++++ b/_app/Core/Compatibility/LegacyModuleManager.php
+@@ -8,6 +8,7 @@
+ use Mavik\Core\Router as LegacyRouter;
+ use R300\Core\Config\Config;
+ use R300\Core\Logging\Logger;
++use R300\Core\Modules\ModuleCatalog;
+ use R300\Core\Maintenance\MaintenanceMode;
+ use R300\Core\Routing\Router;
+ use R300\Core\Security\AuthManager;
+@@ -31,7 +32,7 @@
+ 
+     public function load(): array
+     {
+-        $manifest = $this->readManifest();
++        $manifest = (new ModuleCatalog($this->root))->enabledMap();
+         if ($manifest === []) {
+             return [];
+         }
+--- /dev/null
++++ b/_app/Core/Modules/ModuleCatalog.php
+@@ -0,0 +1,202 @@
++<?php
++declare(strict_types=1);
++
++namespace R300\Core\Modules;
++
++use RuntimeException;
++
++final class ModuleCatalog
++{
++    private string $modulesDir;
++    private string $stateFile;
++    private string $uiFile;
++    private array $protected = ['Boss' => true, 'System' => true];
++
++    public function __construct(private string $root)
++    {
++        $this->root = rtrim($root, '/\\');
++        $this->modulesDir = $this->root . '/_app/Modules';
++        $this->stateFile = $this->root . '/_data/system/modules.json';
++        $this->uiFile = $this->root . '/_data/system/modules-ui.json';
++    }
++
++    public function syncInstalled(): void
++    {
++        $state = $this->readJson($this->stateFile);
++        foreach ($this->installedIds() as $id) {
++            if (!array_key_exists($id, $state)) {
++                $state[$id] = true;
++            }
++        }
++        foreach (array_keys($this->protected) as $id) {
++            if (is_dir($this->modulesDir . '/' . $id)) {
++                $state[$id] = true;
++            }
++        }
++        $this->writeJson($this->stateFile, $state);
++    }
++
++    public function all(): array
++    {
++        $this->syncInstalled();
++        $state = $this->readJson($this->stateFile);
++        $ui = $this->readJson($this->uiFile);
++        $rows = [];
++        foreach ($this->installedIds() as $id) {
++            $meta = $this->metadata($id);
++            $rows[] = [
++                'id' => $id,
++                'label' => (string)($meta['label'] ?? $meta['name'] ?? $id),
++                'version' => (string)($meta['version'] ?? '300-core-1'),
++                'enabled' => $this->isProtected($id) ? true : (($state[$id] ?? true) === true),
++                'protected' => $this->isProtected($id) || !empty($meta['system']),
++                'replaceable' => !empty($meta['system']) ? false : (bool)($meta['replaceable'] ?? true),
++                'menu_visible' => (bool)($ui[$id]['menu_visible'] ?? true),
++                'order' => (int)($ui[$id]['order'] ?? ($meta['order'] ?? 500)),
++                'dependencies' => array_values(array_filter((array)($meta['dependencies'] ?? []), 'is_string')),
++                'settings_url' => $this->settingsUrl($id, $meta),
++                'has_factory' => is_file($this->modulesDir . '/' . $id . '/module.php'),
++            ];
++        }
++        usort($rows, static fn(array $a, array $b): int => ($a['order'] <=> $b['order']) ?: strnatcasecmp($a['label'], $b['label']));
++        return $rows;
++    }
++
++    public function enabledMap(): array
++    {
++        $this->syncInstalled();
++        $state = $this->readJson($this->stateFile);
++        foreach (array_keys($this->protected) as $id) {
++            if (is_dir($this->modulesDir . '/' . $id)) $state[$id] = true;
++        }
++        return $state;
++    }
++
++    public function isEnabled(string $id): bool
++    {
++        if ($this->isProtected($id)) return true;
++        $state = $this->enabledMap();
++        return ($state[$id] ?? false) === true;
++    }
++
++    public function setEnabled(string $id, bool $enabled): void
++    {
++        $id = $this->assertId($id);
++        if ($this->isProtected($id)) throw new RuntimeException($id . ' є системним модулем і не може бути відключений.');
++        if (!is_dir($this->modulesDir . '/' . $id)) throw new RuntimeException('Модуль не встановлено.');
++        if (!$enabled) {
++            $dependants = $this->enabledDependants($id);
++            if ($dependants !== []) throw new RuntimeException('Спочатку відключіть залежні модулі: ' . implode(', ', $dependants) . '.');
++        } else {
++            foreach ($this->dependenciesOf($id) as $dependency) {
++                if (!$this->isEnabled($dependency)) throw new RuntimeException('Спочатку підключіть залежність: ' . $dependency . '.');
++            }
++        }
++        $state = $this->readJson($this->stateFile);
++        $state[$id] = $enabled;
++        $this->writeJson($this->stateFile, $state);
++    }
++
++    public function setMenuVisible(string $id, bool $visible): void
++    {
++        $id = $this->assertId($id);
++        $ui = $this->readJson($this->uiFile);
++        $ui[$id] = is_array($ui[$id] ?? null) ? $ui[$id] : [];
++        $ui[$id]['menu_visible'] = $visible;
++        $this->writeJson($this->uiFile, $ui);
++    }
++
++    public function reorder(array $ids): void
++    {
++        $ui = $this->readJson($this->uiFile);
++        $order = 10;
++        foreach ($ids as $raw) {
++            $id = (string)$raw;
++            if (!is_dir($this->modulesDir . '/' . $id)) continue;
++            $id = $this->assertId($id);
++            $ui[$id] = is_array($ui[$id] ?? null) ? $ui[$id] : [];
++            $ui[$id]['order'] = $order;
++            $order += 10;
++        }
++        $this->writeJson($this->uiFile, $ui);
++    }
++
++    public function isProtected(string $id): bool
++    {
++        return isset($this->protected[$id]) || !empty($this->metadata($id)['system']);
++    }
++
++    public function metadata(string $id): array
++    {
++        $id = $this->assertId($id);
++        $path = $this->modulesDir . '/' . $id . '/module.json';
++        if (!is_file($path)) return ['id' => $id, 'label' => $id, 'version' => '300-core-1'];
++        $data = json_decode((string)file_get_contents($path), true);
++        return is_array($data) ? $data : ['id' => $id, 'label' => $id, 'version' => '300-core-1'];
++    }
++
++    public function dependenciesOf(string $id): array
++    {
++        return array_values(array_filter((array)($this->metadata($id)['dependencies'] ?? []), 'is_string'));
++    }
++
++    private function enabledDependants(string $id): array
++    {
++        $out = [];
++        foreach ($this->installedIds() as $candidate) {
++            if ($candidate === $id || !$this->isEnabled($candidate)) continue;
++            if (in_array($id, $this->dependenciesOf($candidate), true)) $out[] = $candidate;
++        }
++        return $out;
++    }
++
++    private function installedIds(): array
++    {
++        $ids = [];
++        foreach (glob($this->modulesDir . '/*', GLOB_ONLYDIR) ?: [] as $dir) {
++            $id = basename($dir);
++            if (preg_match('/^[A-Za-z][A-Za-z0-9_]*$/', $id)) $ids[] = $id;
++        }
++        sort($ids, SORT_NATURAL | SORT_FLAG_CASE);
++        return $ids;
++    }
++
++    private function settingsUrl(string $id, array $meta): string
++    {
++        if (isset($meta['boss_settings_url']) && is_string($meta['boss_settings_url'])) return $meta['boss_settings_url'];
++        return match ($id) {
++            'Blog' => '/boss/?tab=blog',
++            'Books' => '/boss/?tab=book',
++            'Music', 'Player' => '/boss/?tab=music',
++            'Analytics' => '/boss/?tab=ga4',
++            'Releases' => '/boss/?tab=releases',
++            'Warehouse' => '/boss/?tab=warehouse',
++            'System' => '/boss/?tab=system',
++            default => '',
++        };
++    }
++
++    private function assertId(string $id): string
++    {
++        $id = trim($id);
++        if (!preg_match('/^[A-Za-z][A-Za-z0-9_]*$/', $id)) throw new RuntimeException('Некоректний id модуля.');
++        return $id;
++    }
++
++    private function readJson(string $path): array
++    {
++        if (!is_file($path)) return [];
++        $data = json_decode((string)file_get_contents($path), true);
++        return is_array($data) ? $data : [];
++    }
++
++    private function writeJson(string $path, array $data): void
++    {
++        @mkdir(dirname($path), 0775, true);
++        ksort($data);
++        $tmp = $path . '.tmp-' . bin2hex(random_bytes(4));
++        $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . PHP_EOL;
++        if (file_put_contents($tmp, $json, LOCK_EX) === false) throw new RuntimeException('Не вдалося записати конфігурацію модулів.');
++        if (!rename($tmp, $path)) { @unlink($tmp); throw new RuntimeException('Не вдалося оновити конфігурацію модулів.'); }
++    }
++}
+--- /dev/null
++++ b/_app/Modules/Analytics/module.json
+@@ -0,0 +1,7 @@
++{
++  "id": "Analytics",
++  "label": "Аналітика",
++  "version": "300-core-2",
++  "replaceable": true,
++  "boss_settings_url": "/boss/?tab=ga4"
++}
+--- /dev/null
++++ b/_app/Modules/Author/module.json
+@@ -0,0 +1,6 @@
++{
++  "id": "Author",
++  "label": "Автор",
++  "version": "300-core-2",
++  "replaceable": true
++}
+--- a/_app/Modules/Boss/Module.php
++++ b/_app/Modules/Boss/Module.php
+@@ -489,6 +489,10 @@
+                     $id=$moduleManager->install($request->file('module_zip')??[]);$redirect='/boss/?tab=modules';self::flash($session,'success','Модуль '.$id.' встановлено й підключено.');
+                 } elseif ($action === 'module_toggle') {
+                     $moduleManager->setEnabled((string)$request->input('id',''),(string)$request->input('enabled','0')==='1');$redirect='/boss/?tab=modules';self::flash($session,'success','Стан модуля змінено. Застосовується з наступного запиту.');
++                } elseif ($action === 'module_menu_toggle') {
++                    $moduleManager->setMenuVisible((string)$request->input('id',''),(string)$request->input('visible','0')==='1');$redirect='/boss/?tab=modules';self::flash($session,'success','Видимість модуля в меню змінено.');
++                } elseif ($action === 'module_reorder') {
++                    $ids=$request->input('module_order',[]);if(!is_array($ids))$ids=[];$moduleManager->reorder($ids);$redirect='/boss/?tab=modules';self::flash($session,'success','Порядок модулів збережено.');
+                 } elseif ($action === 'module_delete') {
+                     $moduleManager->delete((string)$request->input('id',''));$redirect='/boss/?tab=modules';self::flash($session,'success','Модуль видалено; backup збережено в runtime.');
+                 } elseif ($action === 'module_restore') {
+--- a/_app/Modules/Boss/ModuleManager.php
++++ b/_app/Modules/Boss/ModuleManager.php
+@@ -4,33 +4,41 @@
+ 
+ use RuntimeException;
+ use ZipArchive;
++use R300\Core\Modules\ModuleCatalog;
+ 
+ final class ModuleManager
+ {
+-    private string $modulesDir; private string $manifestFile; private string $backupDir; private string $stageDir;
++    private string $modulesDir; private string $manifestFile; private string $backupDir; private string $stageDir; private ModuleCatalog $catalog;
+     public function __construct(private string $root)
+     {
+-        $root=rtrim($root,'/\\');$this->modulesDir=$root.'/_app/Modules';$this->manifestFile=$root.'/_data/system/modules.json';$this->backupDir=$root.'/_runtime/module-backups';$this->stageDir=$root.'/_runtime/module-stage';
+-        @mkdir($this->backupDir,0775,true);@mkdir($this->stageDir,0775,true);
++        $root=rtrim($root,'/\\');$this->modulesDir=$root.'/_app/Modules';$this->manifestFile=$root.'/_data/system/modules.json';$this->backupDir=$root.'/_runtime/module-backups';$this->stageDir=$root.'/_runtime/module-stage';$this->catalog=new ModuleCatalog($root);
++
