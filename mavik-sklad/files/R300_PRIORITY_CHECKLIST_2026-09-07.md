@@ -31,9 +31,13 @@ Architecture rule: after deployment, all application functionality works only th
 - [DONE] 2026-09-07 — Root cause refined: current runtime has two parallel loaders (Core ModuleRegistry + LegacyModuleManager/overlay) while Boss separately infers module state from module.json; this allows a module to run but appear disabled/unversioned.
 - [DONE] 2026-09-07 — Compared supplied Template against current Full Build: 20 overlapping design files differ; Template must be refreshed from live before new UI/module work.
 - [DONE] 2026-09-07 — Created isolated working trees for Full Build, Core and Template; original supplied archives remain untouched as rollback/reference sources.
-- [DONE] 2026-09-07 — Added canonical `R300\Core\Modules\ModuleCatalog`: installed modules auto-register into the compatibility state manifest; explicit disabled state is preserved; Boss/System are protected; dependencies, menu visibility and ordering have dedicated state.
-- [DONE] 2026-09-07 — Added missing module metadata for Analytics, Author, Releases, Search, Support, System and Warehouse; hardened Boss metadata as system/non-replaceable.
-- [DONE] 2026-09-07 — Wired ModuleCatalog synchronization into bootstrap before any module loader runs, making runtime and Boss start from the same installed-module state.
+- [DONE] 2026-09-07 — Added canonical `R300\Core\Modules\ModuleCatalog` as the single source of module metadata/state.
+- [DONE] 2026-09-07 — Added missing module metadata for Analytics, Author, Releases, Search, Support, System and Warehouse; hardened Boss/System as protected system modules.
+- [DONE] 2026-09-07 — Reworked bootstrap so installed Core modules self-register from module directories instead of a second hard-coded module list; compatibility overlay now consumes the same ModuleCatalog state.
+- [DONE] 2026-09-07 — Migrated Boss ModuleManager to ModuleCatalog; protected modules cannot be disabled/deleted; module order and Boss-menu visibility are stored separately from enabled state.
+- [DONE] 2026-09-07 — Added Boss module controls for move up/down and hide/show in Boss without disabling the module.
+- [DONE] 2026-09-07 — PHP syntax validation passed for ModuleCatalog, bootstrap, LegacyModuleManager, ModuleManager, Boss Module and Boss system view after registry changes.
+- [DONE] 2026-09-07 — Player bug root cause confirmed: Reader player currently builds its list only from `music.json` and narrows it to the selected album; audio files physically present in the folder but absent from JSON are invisible.
 
 ## Next action
-- Migrate Boss ModuleManager and module UI/actions to ModuleCatalog, including protected modules, dependencies, menu hiding and ordering.
+- Implement Player module/library so directory contents are authoritative for physical audio discovery, while JSON supplies metadata/visibility/playlists; then connect Reader and Boss Player Manager to that module.
