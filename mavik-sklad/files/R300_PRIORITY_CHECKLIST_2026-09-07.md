@@ -17,6 +17,7 @@ Architecture rule: after deployment, all application functionality works only th
 4. Blog sandbox: imported blog package is unpacked and previewed in an isolated sandbox; publication to live only after explicit manual approval.
 5. Player Manager in Boss: upload/hide/delete tracks; create/manage playlists; assign playlists to books; optionally allow reader to choose among allowed playlists.
 6. Boss modularization: connect/disconnect/sort/hide modules, dependencies, versions, states; system modules cannot be disabled/deleted.
+7. Boss module UX: module connection menu must be simple and obvious; each module exposes only its most useful logical settings, while technical/internal parameters remain hidden from normal admin use.
 
 ## Action log
 - [DONE] 2026-09-07 — Official start received from user.
@@ -38,6 +39,7 @@ Architecture rule: after deployment, all application functionality works only th
 - [DONE] 2026-09-07 — Added Boss module controls for move up/down and hide/show in Boss without disabling the module.
 - [DONE] 2026-09-07 — PHP syntax validation passed for ModuleCatalog, bootstrap, LegacyModuleManager, ModuleManager, Boss Module and Boss system view after registry changes.
 - [DONE] 2026-09-07 — Player bug root cause confirmed: Reader player currently builds its list only from `music.json` and narrows it to the selected album; audio files physically present in the folder but absent from JSON are invisible.
+- [DONE] 2026-09-07 — User UX requirement recorded: Boss module manager must remain simple/obvious; normal UI exposes only connect/disconnect, menu visibility/order and each module's essential logical settings, not raw technical configuration.
 
 ## Next action
 - Implement Player module/library so directory contents are authoritative for physical audio discovery, while JSON supplies metadata/visibility/playlists; then connect Reader and Boss Player Manager to that module.
