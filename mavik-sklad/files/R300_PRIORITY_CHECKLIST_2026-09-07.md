@@ -19,27 +19,18 @@ Architecture rule: after deployment, all application functionality works only th
 6. Boss modularization: connect/disconnect/sort/hide modules, dependencies, versions, states; system modules cannot be disabled/deleted.
 7. Boss module UX: module connection menu must be simple and obvious; each module exposes only its most useful logical settings, while technical/internal parameters remain hidden from normal admin use.
 
-## Action log
+## Action log — verified completed actions only
 - [DONE] 2026-09-07 — Official start received from user.
 - [DONE] 2026-09-07 — Established immutable output rule: Core + Template + Full Build, synchronized to one canonical state.
 - [DONE] 2026-09-07 — Established immutable modular architecture rule: application functionality only via modules.
-- [DONE] 2026-09-07 — Extracted and inspected all 3 supplied archives.
-- [DONE] 2026-09-07 — Confirmed Full Build is newer than R300_Core_R1 and must be treated as current runtime source of truth before new changes.
-- [DONE] 2026-09-07 — Confirmed current live build contains modules absent or newer than Core baseline, including About, Legal, Warehouse and changed Core classes.
-- [DONE] 2026-09-07 — Confirmed module-state root symptom: design modules contain module.json/version metadata; Analytics, Author, Releases, Search, Support, System and Warehouse lack module.json and therefore appear as `v— / disabled` in Boss.
-- [DONE] 2026-09-07 — Confirmed remote warehouse implementation is GitHub repository `mavik-name/sklad_open`, branch `main`, prefix `mavik-sklad`.
-- [DONE] 2026-09-07 — Created persistent remote checklist at `mavik-sklad/files/R300_PRIORITY_CHECKLIST_2026-09-07.md`.
-- [DONE] 2026-09-07 — Root cause refined: current runtime has two parallel loaders (Core ModuleRegistry + LegacyModuleManager/overlay) while Boss separately infers module state from module.json; this allows a module to run but appear disabled/unversioned.
-- [DONE] 2026-09-07 — Compared supplied Template against current Full Build: 20 overlapping design files differ; Template must be refreshed from live before new UI/module work.
-- [DONE] 2026-09-07 — Created isolated working trees for Full Build, Core and Template; original supplied archives remain untouched as rollback/reference sources.
-- [DONE] 2026-09-07 — Added canonical `R300\Core\Modules\ModuleCatalog` as the single source of module metadata/state.
-- [DONE] 2026-09-07 — Added missing module metadata for Analytics, Author, Releases, Search, Support, System and Warehouse; hardened Boss/System as protected system modules.
-- [DONE] 2026-09-07 — Reworked bootstrap so installed Core modules self-register from module directories instead of a second hard-coded module list; compatibility overlay now consumes the same ModuleCatalog state.
-- [DONE] 2026-09-07 — Migrated Boss ModuleManager to ModuleCatalog; protected modules cannot be disabled/deleted; module order and Boss-menu visibility are stored separately from enabled state.
-- [DONE] 2026-09-07 — Added Boss module controls for move up/down and hide/show in Boss without disabling the module.
-- [DONE] 2026-09-07 — PHP syntax validation passed for ModuleCatalog, bootstrap, LegacyModuleManager, ModuleManager, Boss Module and Boss system view after registry changes.
-- [DONE] 2026-09-07 — Player bug root cause confirmed: Reader player currently builds its list only from `music.json` and narrows it to the selected album; audio files physically present in the folder but absent from JSON are invisible.
-- [DONE] 2026-09-07 — User UX requirement recorded: Boss module manager must remain simple/obvious; normal UI exposes only connect/disconnect, menu visibility/order and each module's essential logical settings, not raw technical configuration.
+- [DONE] 2026-09-07 — Extracted and inspected all 3 supplied archives in isolated working directories; originals remain untouched.
+- [DONE] 2026-09-07 — Confirmed Full Build is newer than R300_Core_R1 and is the runtime source of truth for reconciliation.
+- [DONE] 2026-09-07 — Confirmed module-state root symptom: several modules exist as directories/classes but lack module.json and are absent from modules.json, therefore Boss reports `v— / disabled` although functionality may exist elsewhere.
+- [DONE] 2026-09-07 — Confirmed current runtime has two parallel module paths: Core ModuleRegistry plus LegacyModuleManager/overlay, while Boss independently infers state from module.json/modules.json.
+- [DONE] 2026-09-07 — Confirmed Player bug root cause: Reader builds its playlist only from `_data/content/music.json` and further narrows it to the selected album; physical audio files not represented there are invisible.
+- [DONE] 2026-09-07 — Confirmed remote warehouse is GitHub repository `mavik-name/sklad_open`, branch `main`, prefix `mavik-sklad`; created this persistent checklist.
+- [DONE] 2026-09-07 — User UX requirement recorded: Boss module manager must remain simple/obvious; expose only everyday controls and each module's essential logical settings.
+- [DONE] 2026-09-07 — Created and syntax-validated `_app/Core/Modules/ModuleCatalog.php` in the Full Build working tree. It provides canonical installed-module discovery, enabled state, protected modules, dependencies, Boss menu visibility and ordering while preserving boolean `modules.json` compatibility.
 
-## Next action
-- Implement Player module/library so directory contents are authoritative for physical audio discovery, while JSON supplies metadata/visibility/playlists; then connect Reader and Boss Player Manager to that module.
+## Current action
+- Wire ModuleCatalog into bootstrap, LegacyModuleManager and Boss ModuleManager; add/normalize module metadata. Then syntax-test before moving to Player Core.
