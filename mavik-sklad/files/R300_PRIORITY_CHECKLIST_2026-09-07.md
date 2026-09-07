@@ -31,6 +31,7 @@ Architecture rule: after deployment, all application functionality works only th
 - [DONE] 2026-09-07 — Confirmed remote warehouse is GitHub repository `mavik-name/sklad_open`, branch `main`, prefix `mavik-sklad`; created this persistent checklist.
 - [DONE] 2026-09-07 — User UX requirement recorded: Boss module manager must remain simple/obvious; expose only everyday controls and each module's essential logical settings.
 - [DONE] 2026-09-07 — Created and syntax-validated `_app/Core/Modules/ModuleCatalog.php` in the Full Build working tree. It provides canonical installed-module discovery, enabled state, protected modules, dependencies, Boss menu visibility and ordering while preserving boolean `modules.json` compatibility.
+- [DONE] 2026-09-07 — Wired ModuleCatalog into bootstrap and LegacyModuleManager. Compatibility/Design modules now consume the same enabled-state catalog instead of reading a second independent manifest path. PHP syntax validation passed for both files.
 
 ## Current action
-- Wire ModuleCatalog into bootstrap, LegacyModuleManager and Boss ModuleManager; add/normalize module metadata. Then syntax-test before moving to Player Core.
+- Migrate Boss ModuleManager and module UI/actions to ModuleCatalog; then add/normalize module metadata and syntax-test before moving to Player Core.
