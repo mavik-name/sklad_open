@@ -1,0 +1,33 @@
+# R300 PRIORITY WORK — CHECKLIST / HANDOFF
+
+Date: 2026-09-07
+Status: IN PROGRESS
+Canonical rule: every completed work package produces 3 synchronized archives: Core + Template + Full Build.
+Architecture rule: after deployment, all application functionality works only through modules; Core is kernel only; Template is presentation only.
+
+## Source artifacts
+- R300_Core_R1(1).zip — supplied canonical Core baseline.
+- R300_Design(2).zip — supplied canonical Template/Design baseline.
+- Lite_R300_Canon_V1_07_09_2026 (1).zip — supplied current Full Build / live canonical baseline.
+
+## Priority scope approved by user
+1. Player Core: player scans its own audio directory and builds a complete playlist automatically; no manual hard-coded track list or artificial limit.
+2. Module Registry: all installed modules self-register; eliminate false `v— / disabled` state; protect system modules.
+3. Blog Publisher: import prepared ZIP packages with content, images, tags, links and SEO metadata.
+4. Blog sandbox: imported blog package is unpacked and previewed in an isolated sandbox; publication to live only after explicit manual approval.
+5. Player Manager in Boss: upload/hide/delete tracks; create/manage playlists; assign playlists to books; optionally allow reader to choose among allowed playlists.
+6. Boss modularization: connect/disconnect/sort/hide modules, dependencies, versions, states; system modules cannot be disabled/deleted.
+
+## Action log
+- [DONE] 2026-09-07 — Official start received from user.
+- [DONE] 2026-09-07 — Established immutable output rule: Core + Template + Full Build, synchronized to one canonical state.
+- [DONE] 2026-09-07 — Established immutable modular architecture rule: application functionality only via modules.
+- [DONE] 2026-09-07 — Extracted and inspected all 3 supplied archives.
+- [DONE] 2026-09-07 — Confirmed Full Build is newer than R300_Core_R1 and must be treated as current runtime source of truth before new changes.
+- [DONE] 2026-09-07 — Confirmed current live build contains modules absent or newer than Core baseline, including About, Legal, Warehouse and changed Core classes.
+- [DONE] 2026-09-07 — Confirmed module-state root symptom: design modules contain module.json/version metadata; Analytics, Author, Releases, Search, Support, System and Warehouse lack module.json and therefore appear as `v— / disabled` in Boss.
+- [DONE] 2026-09-07 — Confirmed remote warehouse implementation is GitHub repository `mavik-name/sklad_open`, branch `main`, prefix `mavik-sklad`.
+- [DONE] 2026-09-07 — Created persistent remote checklist at `mavik-sklad/files/R300_PRIORITY_CHECKLIST_2026-09-07.md`.
+
+## Next action
+- Build canonical baseline by diffing current Full Build against Core and Template, then patch Core/Template source trees before implementing new features.
