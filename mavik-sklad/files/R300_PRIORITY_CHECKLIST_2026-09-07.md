@@ -162,6 +162,8 @@ All three must correspond to the same version.
 - [DONE] 2026-09-07 — Created and syntax-validated `_app/Core/Modules/ModuleCatalog.php` in the Full Build working tree. It provides canonical installed-module discovery, enabled state, protected modules, dependencies, Boss menu visibility and ordering while preserving boolean `modules.json` compatibility.
 - [DONE] 2026-09-07 — Wired ModuleCatalog into bootstrap and LegacyModuleManager. Compatibility/Design modules now consume the same enabled-state catalog instead of reading a second independent manifest path. PHP syntax validation passed for both files.
 - [DONE] 2026-09-07 — Added canonical task 8: permanent modular SEO/Discover landing page `Що почитати` at `/shcho-pochytaty/`, with `/discover/` 301 redirect, dynamic module-fed content, Boss settings, structured data, sitemap/internal-linking rules, and 3-package canonization requirement.
+- [DONE] 2026-09-07 — Migrated Boss ModuleManager and module actions/UI to ModuleCatalog. Boss now exposes simple connect/disconnect, hide/show in Boss menu, move up/down, settings link only when a module actually has settings, and keeps destructive delete under an advanced section. Boss/System cannot be disabled or deleted.
+- [DONE] 2026-09-07 — Normalized/added module.json metadata and validated all module JSON files. PHP syntax validation passed for ModuleCatalog, LegacyModuleManager, Boss ModuleManager, Boss Module and bootstrap.
 
 ## Current action
-- Continue migrating Boss ModuleManager and module UI/actions to ModuleCatalog; then add/normalize module metadata and syntax-test before moving to Player Core. SEO/Discover module task is now part of the canonical work queue and must be included before final three-package release.
+- Implement Player Core so physical audio files in the player-owned folder become the authoritative track inventory; metadata remains separate. Then add Player Manager/playlist/book assignment controls in Boss.
