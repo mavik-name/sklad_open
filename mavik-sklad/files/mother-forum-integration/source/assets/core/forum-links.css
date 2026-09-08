@@ -15,3 +15,5 @@
 .home-page .home-menu>a:not(.owner-pill):not(.home-ding):focus-visible::after,
 .mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding):hover::after,
 .mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding):focus-visible::after{left:0;right:0}
+
+@media(max-width:767px){.mavik-forum-invite{text-align:center}.mavik-forum-invite>div{margin-inline:auto}}
