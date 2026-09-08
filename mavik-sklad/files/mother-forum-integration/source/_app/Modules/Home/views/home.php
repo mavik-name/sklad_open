@@ -5,7 +5,7 @@
       <div class="kicker">Авторський простір</div>
       <h1 class="mavik-author-h1">Макарчук Віктор <span>| MaVik</span></h1>
       <p class="hero-statement">Історії, які не відпускають.</p>
-      <p class="hero-copy">Офіційний авторський сайт Макарчука Віктора (MaVik). Книги, проза, поезія, музика та авторський блог.</p>
+      <p class="hero-copy">Офіційний авторський сайт Макарчука Віктора (MaVik). Книги, проза, поезія, музика, авторський блог та форум.</p>
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="/books/">Читати</a>
