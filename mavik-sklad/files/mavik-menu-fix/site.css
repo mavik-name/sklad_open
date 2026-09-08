@@ -504,9 +504,3 @@ body.site-page>main#top>.mavik-global-page>.contact-hero{padding-top:0}
 .home-page .home-menu>a:not(.owner-pill):not(.home-ding):focus-visible::after,
 .mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding):hover::after,
 .mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding):focus-visible::after{left:0;right:0}
-
-/* Keep the current page underlined, independently of hover. */
-.home-page .home-menu>a[aria-current="page"]:not(.owner-pill):not(.home-ding)::after,
-.home-page .home-menu>a.active:not(.owner-pill):not(.home-ding)::after,
-.mavik-site-desktop-nav>a[aria-current="page"]:not(.owner-pill):not(.mavik-site-ding)::after,
-.mavik-site-desktop-nav>a.active:not(.owner-pill):not(.mavik-site-ding)::after{left:0;right:0}
