@@ -43,3 +43,9 @@ function require_writable_forum(): void {
     member_required();
     if (setting('maintenance_mode','1')==='1' && !is_admin()) {http_response_code(403);exit('Запис закрито до відкриття форуму.');}
 }
+
+function registration_blocked(string $email, string $provider='', string $uid=''): bool {
+ $keys=[hash('sha256','email:'.mb_strtolower(trim($email)))];
+ if($provider!=='' && $uid!=='')$keys[]=hash('sha256',$provider.':'.$uid);
+ $st=db()->prepare('SELECT 1 FROM registration_bans WHERE fingerprint IN ('.implode(',',array_fill(0,count($keys),'?')).')');$st->execute($keys);return (bool)$st->fetchColumn();
+}

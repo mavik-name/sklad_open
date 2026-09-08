@@ -6,6 +6,8 @@
 
 > Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
 
+> Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
+
 > Актуальне виправлення: [0.9.1 checkpoint](releases/0.9.1/CHECKPOINT.md) — категорії, ширина 1120px, оригінальний SVG 42/40px.
 
 > Актуальний тестовий кандидат 0.9 і checkpoint: [START-HERE-0.9.md](START-HERE-0.9.md). Архіви 0.8/0.7 відновлено. 100% візуального приймання ще не завершено.

@@ -29,6 +29,10 @@ function db(): PDO {
     $pdo->exec('PRAGMA journal_mode = WAL');
     $pdo->exec('PRAGMA busy_timeout = 5000');
     forum_upgrade($pdo);
+    $pdo->exec("CREATE TABLE IF NOT EXISTS account_bans (user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, until_at INTEGER, reason TEXT NOT NULL DEFAULT '')");
+    $pdo->exec("CREATE TABLE IF NOT EXISTS registration_bans (fingerprint TEXT PRIMARY KEY, label TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)");
+    $pdo->exec('UPDATE users SET blocked_at=NULL WHERE id IN (SELECT user_id FROM account_bans WHERE until_at IS NOT NULL AND until_at<=unixepoch())');
+    $pdo->exec('DELETE FROM account_bans WHERE until_at IS NOT NULL AND until_at<=unixepoch()');
     return $pdo;
 }
 

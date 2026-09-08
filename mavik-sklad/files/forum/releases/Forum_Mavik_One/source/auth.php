@@ -4,7 +4,7 @@ if(isset($_GET['logout'])){ unset($_SESSION['user_id'],$_SESSION['admin_id']); u
 maintenance_gate();
 if(is_logged_in()){header('Location:/');exit;}
 $error=''; $mode=(string)($_GET['mode']??'login');
-$registrationOpen = setting('maintenance_mode','1') !== '1';
+$registrationOpen = setting('maintenance_mode','1') !== '1' && setting('registration_open','1')==='1';
 if($_SERVER['REQUEST_METHOD']==='POST'){
     csrf_check();login_rate_limit();
     $action=(string)($_POST['action']??'login');
@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         if(!$registrationOpen){$error='Реєстрація поки закрита.';}
         else {
             $name=trim((string)($_POST['display_name']??''));
-            if(empty($_POST['accept_rules'])){$error='Потрібна згода з Правилами форуму.';} elseif($name==='' || !filter_var($email,FILTER_VALIDATE_EMAIL) || strlen($pass)<10){$error='Перевір ім’я, email і пароль (мінімум 10 символів).';}
+            if(registration_blocked($email)){$error='Реєстрація для цього акаунта недоступна.';} elseif(empty($_POST['accept_rules'])){$error='Потрібна згода з Правилами форуму.';} elseif($name==='' || !filter_var($email,FILTER_VALIDATE_EMAIL) || strlen($pass)<10){$error='Перевір ім’я, email і пароль (мінімум 10 символів).';}
             else { try{$st=db()->prepare('INSERT INTO users(display_name,email,password_hash,role,rules_accepted_at) VALUES(?,?,?,?,CURRENT_TIMESTAMP)');$st->execute([$name,$email,password_hash($pass,PASSWORD_DEFAULT),'member']);session_regenerate_id(true);$_SESSION['user_id']=(int)db()->lastInsertId();header('Location:/');exit;}catch(Throwable $e){$error='Такий email уже зареєстрований.';} }
         }
     } else {

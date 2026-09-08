@@ -28,6 +28,7 @@ try{
    $data=$_GET;unset($data['provider'],$data['callback'],$data['state']);if(!telegram_verify($data,forum_social_setting('FORUM_TELEGRAM_BOT_TOKEN'),time()))throw new RuntimeException('Telegram-підпис недійсний або застарів.');
    $pending=['provider'=>$provider,'uid'=>(string)$data['id'],'name'=>trim(($data['first_name']??'').' '.($data['last_name']??''))?:'Учасник','email'=>'','photo'=>$data['photo_url']??null];
   }
+  if(registration_blocked($pending['email'],$provider,$pending['uid']))throw new RuntimeException('Цей акаунт заблоковано.');
   $pending['time']=time();$pending['link_user']=$flow['link_user'];
   $st=db()->prepare('SELECT i.user_id,u.blocked_at FROM identities i JOIN users u ON u.id=i.user_id WHERE i.provider=? AND i.provider_uid=?');$st->execute([$provider,$pending['uid']]);$existing=$st->fetch();
   if($existing){
@@ -41,6 +42,8 @@ try{
  if(!$pending||$pending['provider']!==$provider||time()-$pending['time']>600)throw new RuntimeException('Почніть вхід зі сторінки авторизації.');
  if($_SERVER['REQUEST_METHOD']==='POST'){
   csrf_check();$link=$pending['link_user'];
+  if(registration_blocked($pending['email'],$provider,$pending['uid']))throw new RuntimeException('Цей акаунт заблоковано.');
+  if(!$link && setting('registration_open','1')!=='1')throw new RuntimeException('Нові реєстрації закриті.');
   if($link && current_user_id()!==(int)$link)throw new RuntimeException('Увійдіть у локальний акаунт повторно.');
   if(!$link&&empty($_POST['accept_rules']))throw new RuntimeException('Потрібна згода з Правилами форуму.');
   $avatar=social_avatar($pending['photo']);$email=$pending['email']?:'telegram-'.$pending['uid'].'@social.invalid';
