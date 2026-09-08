@@ -148,7 +148,7 @@ function forum_header(string $title): void {
 <title><?=e($title)?> — Форум MaVik</title>
 <link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/assets/app/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0b0b0c">
-<link rel="stylesheet" href="/assets/style.css?v=0.9"><link rel="stylesheet" href="/assets/release.css?v=0.9.1">
+<link rel="stylesheet" href="/assets/style.css?v=0.9"><link rel="stylesheet" href="/assets/release.css?v=0.9.1.2">
 <?php if ($maintenance): ?><meta name="robots" content="noindex,nofollow,noarchive"><?php endif; ?>
 </head>
 <body class="<?=basename($_SERVER['SCRIPT_NAME']??'')==='topic.php'?'topic-page':'forum-page'?>">
