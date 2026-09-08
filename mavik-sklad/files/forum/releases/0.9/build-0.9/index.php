@@ -43,6 +43,7 @@ forum_header('Форум');
 
   <div class="section-head recent-head"><h2>Останні теми</h2><a class="section-link" href="/topics.php">Усі теми →</a></div>
   <div class="topic-list">
+  <div class="topic-table-head" aria-hidden="true"><span>Тема</span><span>Відповіді</span><span>Перегляди</span><span>Останнє повідомлення</span></div>
   <?php foreach($latest as $t): ?>
     <a class="topic-row" href="/topic.php?slug=<?=urlencode($t['slug'])?>">
       <div class="topic-kind"><?=category_icon($t['category_slug'])?></div>

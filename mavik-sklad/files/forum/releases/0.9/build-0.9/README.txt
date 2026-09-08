@@ -1,3 +1,5 @@
+BUILD 0.9 — тестовий кандидат. Почніть з README-UPDATE-0.9.md. Нижче — історичні інструкції бази 0.8.
+
 Forum MaVik — test build 0.8 Visual Rebuild
 
 Target: https://forum.mavik.name/
