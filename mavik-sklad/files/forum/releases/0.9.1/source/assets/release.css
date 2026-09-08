@@ -118,3 +118,8 @@ body{background:var(--bg);color:var(--text)}
 .category-topic-meta{display:block;font-size:13px;line-height:1.7}.category-topic-last{display:flex;gap:9px;align-items:flex-start;min-width:0;font-size:13px;line-height:1.6}.category-topic-last>div{min-width:0}.category-topic-last time{display:block;color:var(--muted);font-size:12px}.category-topic-arrow{font-size:21px;align-self:center;margin-left:auto}
 @media(max-width:780px){.category-list-head{display:none}.category-topic-row{grid-template-columns:minmax(0,1fr);gap:12px;padding:16px 14px}.category-topic-summary{grid-column:1;grid-row:auto}.category-topic-copy{grid-column:auto;grid-row:auto}.category-topic-meta{grid-column:1;grid-row:auto;display:flex;gap:16px;padding-left:49px;font-size:12px}.category-topic-last{grid-column:1;padding-left:49px;font-size:12px}.category-topic-last>.avatar{width:28px;height:28px}.category-topic-last time{font-size:11px}.category-topic-arrow{grid-column:auto;grid-row:auto}}
 .category-topic-summary>.category-topic-copy{flex:1}.header-inner>a:last-child{white-space:nowrap}
+
+/* Photographic background only: reference controls must never appear behind live controls. */
+@media(min-width:781px){.forum-hero:before{background-image:linear-gradient(90deg,#080c0d,transparent 30%),url('/assets/forum-hero.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}}
+
+.category-toolbar{display:flex;justify-content:flex-end;margin:0 0 14px}.category-toolbar .btn{min-height:44px}

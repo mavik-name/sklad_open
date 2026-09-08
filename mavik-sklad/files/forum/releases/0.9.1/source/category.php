@@ -4,6 +4,7 @@ $slug=(string)($_GET['slug']??''); $st=db()->prepare('SELECT * FROM categories W
 $st=db()->prepare('SELECT t.*,u.display_name,u.avatar_path,lu.display_name last_author,lu.avatar_path last_avatar,lp.id last_post_id,(SELECT COUNT(*) FROM posts p WHERE p.topic_id=t.id AND p.is_hidden=0) replies FROM topics t LEFT JOIN users u ON u.id=t.user_id LEFT JOIN posts lp ON lp.id=(SELECT p2.id FROM posts p2 WHERE p2.topic_id=t.id AND p2.is_hidden=0 ORDER BY p2.created_at DESC,p2.id DESC LIMIT 1) LEFT JOIN users lu ON lu.id=lp.user_id WHERE t.category_id=? AND t.is_hidden=0 ORDER BY t.is_pinned DESC,t.last_activity_at DESC,t.id DESC');$st->execute([$cat['id']]);$topics=$st->fetchAll();
 forum_header($cat['title']); ?>
 <section class="page-title"><a href="/">← Форум</a><h1><?=e($cat['title'])?></h1><p><?=e($cat['description'])?></p></section>
+<div class="category-toolbar"><a class="btn primary" href="/new-topic.php?category_id=<?=(int)$cat['id']?>">+ Створити тему</a></div>
 <div class="category-topics">
 <div class="category-list-head"><span>Теми</span><span>Статистика</span><span>Останнє повідомлення</span></div>
 <?php foreach($topics as $t): ?>
