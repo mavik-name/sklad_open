@@ -1,0 +1,42 @@
+[
+  {
+    "name": "1448: floating coffee removed",
+    "passed": true
+  },
+  {
+    "name": "1448: arrow hidden at top",
+    "passed": true
+  },
+  {
+    "name": "1448: arrow at bottom right",
+    "passed": true
+  },
+  {
+    "name": "1448: arrow shown on scroll",
+    "passed": true
+  },
+  {
+    "name": "1448: arrow scrolls to top",
+    "passed": true
+  },
+  {
+    "name": "390: floating coffee removed",
+    "passed": true
+  },
+  {
+    "name": "390: arrow hidden at top",
+    "passed": true
+  },
+  {
+    "name": "390: arrow at bottom right",
+    "passed": true
+  },
+  {
+    "name": "390: arrow shown on scroll",
+    "passed": true
+  },
+  {
+    "name": "390: arrow scrolls to top",
+    "passed": true
+  }
+]

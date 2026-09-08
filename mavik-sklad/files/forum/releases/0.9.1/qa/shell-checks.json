@@ -1,0 +1,182 @@
+[
+  {
+    "width": 1889,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 1889,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 1889,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 1889,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 1448,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 1448,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 1448,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 1448,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 1120,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 1120,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 1120,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 1120,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 1024,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 1024,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 1024,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 1024,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 780,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 780,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 780,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 780,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 767,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 767,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 767,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 767,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "name": "headerSpacing",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "name": "shell",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "name": "logo",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "name": "noOverflow",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "name": "headerSpacing",
+    "passed": true
+  }
+]

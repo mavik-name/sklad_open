@@ -1,0 +1,1 @@
+<?php http_response_code(404); require __DIR__.'/app/bootstrap.php'; if(file_exists(DB_PATH)){forum_header('404');}?><main class="wrap"><section class="page-title"><h1>404</h1><p>Такої сторінки немає.</p><a class="btn" href="/">До форуму</a></section></main><?php if(file_exists(DB_PATH)){forum_footer();} ?>

@@ -1,3 +1,5 @@
+> Актуальне виправлення: [0.9.1 checkpoint](releases/0.9.1/CHECKPOINT.md) — категорії, ширина 1120px, оригінальний SVG 42/40px.
+
 # Початок роботи з forum 0.9
 
 Актуальний код, тестовий ZIP і checkpoint: [releases/0.9/CHECKPOINT.md](releases/0.9/CHECKPOINT.md).
