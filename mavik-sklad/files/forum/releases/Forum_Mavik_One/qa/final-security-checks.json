@@ -1,0 +1,42 @@
+[
+  {
+    "check": "Admin login rejects missing CSRF",
+    "passed": true
+  },
+  {
+    "check": "/auth.php noindex",
+    "passed": true
+  },
+  {
+    "check": "/auth.php nosniff",
+    "passed": true
+  },
+  {
+    "check": "/search.php?q=test noindex",
+    "passed": true
+  },
+  {
+    "check": "/search.php?q=test nosniff",
+    "passed": true
+  },
+  {
+    "check": "Home canonical",
+    "passed": true
+  },
+  {
+    "check": "Sitemap valid public origin",
+    "passed": true
+  },
+  {
+    "check": "Protected /storage/forum.sqlite",
+    "passed": true
+  },
+  {
+    "check": "Protected /app/bootstrap.php",
+    "passed": true
+  },
+  {
+    "check": "Rate limit returns 429",
+    "passed": true
+  }
+]

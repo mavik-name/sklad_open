@@ -1,0 +1,13 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+RewriteRule ^robots\.txt$ robots.php [L]
+RewriteRule ^storage/ - [F,L]
+RewriteRule ^app/ - [F,L]
+RewriteRule ^assets/avatars/.*\.(php|phtml|phar|html|svg)$ - [F,L,NC]
+<FilesMatch "(\.backup|\.sqlite(-wal|-shm)?$|\.env$)">
+  Require all denied
+</FilesMatch>
+<FilesMatch "\.(sqlite|db|log|ini)$">
+  Require all denied
+</FilesMatch>

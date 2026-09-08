@@ -1,0 +1,26 @@
+[
+  {
+    "name": "1448: registration label",
+    "passed": true
+  },
+  {
+    "name": "1448: ISO date",
+    "passed": true
+  },
+  {
+    "name": "1448: date on separate line",
+    "passed": true
+  },
+  {
+    "name": "390: registration label",
+    "passed": true
+  },
+  {
+    "name": "390: ISO date",
+    "passed": true
+  },
+  {
+    "name": "390: date on separate line",
+    "passed": true
+  }
+]
