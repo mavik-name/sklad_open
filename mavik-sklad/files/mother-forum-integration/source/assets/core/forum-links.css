@@ -1,0 +1,17 @@
+.mavik-forum-invite{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-top:32px;padding-bottom:32px;margin-top:32px;margin-bottom:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mavik-forum-invite>div{max-width:720px}.mavik-forum-invite h2{font:500 clamp(26px,3vw,36px)/1.15 Georgia,'Times New Roman',serif;margin:0 0 14px;color:var(--text)}.mavik-forum-invite p{font:400 16px/1.65 Georgia,'Times New Roman',serif;color:var(--muted);margin:0}.mavik-forum-invite>.btn{flex-shrink:0;white-space:nowrap}
+@media(max-width:767px){.mavik-forum-invite{display:block;margin-top:24px;margin-bottom:28px;padding-top:24px;padding-bottom:24px}.mavik-forum-invite>.btn{margin-top:20px}}
+
+/* Preserve the agreed hover/focus underline fix; active links stay gold. */
+
+.home-page .home-menu>a:not(.owner-pill):not(.home-ding),
+.mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding){position:relative}
+.home-page .home-menu>a:not(.owner-pill):not(.home-ding)::after,
+.mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding)::after{
+ content:"";position:absolute;left:50%;right:50%;bottom:-10px;height:1px;
+ background:var(--gold);pointer-events:none;transition:left .18s ease,right .18s ease;
+}
+.home-page .home-menu>a:not(.owner-pill):not(.home-ding):hover::after,
+.home-page .home-menu>a:not(.owner-pill):not(.home-ding):focus-visible::after,
+.mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding):hover::after,
+.mavik-site-desktop-nav>a:not(.owner-pill):not(.mavik-site-ding):focus-visible::after{left:0;right:0}
