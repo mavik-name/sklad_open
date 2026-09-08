@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Persistent cookie expires in 30 days",
+    "passed": true
+  },
+  {
+    "name": "HttpOnly and SameSite",
+    "passed": true
+  },
+  {
+    "name": "Browser restart retains login",
+    "passed": true
+  },
+  {
+    "name": "Visit after 29 days retains login",
+    "passed": true
+  },
+  {
+    "name": "Visit renews server inactivity clock",
+    "passed": true
+  },
+  {
+    "name": "31 days inactivity requires login",
+    "passed": true
+  },
+  {
+    "name": "Explicit logout ends access",
+    "passed": true
+  }
+]
