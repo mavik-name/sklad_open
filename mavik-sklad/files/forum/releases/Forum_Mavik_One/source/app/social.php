@@ -1,7 +1,16 @@
 <?php
-// Provider secrets are environment settings, never repository contents.
+// Environment takes priority; private local configuration is never packaged with real keys.
+function forum_social_setting(string $key): string {
+ $env=getenv($key);if($env!==false&&$env!=='')return $env;
+ static $config=null;
+ if($config===null){
+  $config=[];$path=__DIR__.'/../storage/social-config.php';
+  if(is_file($path)){$loaded=require $path;if(is_array($loaded))$config=$loaded;}
+ }
+ return isset($config[$key])&&is_string($config[$key])?trim($config[$key]):'';
+}
 function social_enabled(string $provider): bool {
- return $provider==='google' ? (bool)(getenv('FORUM_GOOGLE_CLIENT_ID')&&getenv('FORUM_GOOGLE_CLIENT_SECRET')) : ($provider==='telegram'&&(bool)(getenv('FORUM_TELEGRAM_BOT_TOKEN')&&getenv('FORUM_TELEGRAM_BOT_USERNAME')));
+ return $provider==='google' ? (bool)(forum_social_setting('FORUM_GOOGLE_CLIENT_ID')&&forum_social_setting('FORUM_GOOGLE_CLIENT_SECRET')) : ($provider==='telegram'&&(bool)(forum_social_setting('FORUM_TELEGRAM_BOT_TOKEN')&&forum_social_setting('FORUM_TELEGRAM_BOT_USERNAME')));
 }
 function social_request(string $url,?array $body=null,?string $token=null): array {
  if(!extension_loaded('curl'))throw new RuntimeException('На сервері потрібен модуль cURL.');

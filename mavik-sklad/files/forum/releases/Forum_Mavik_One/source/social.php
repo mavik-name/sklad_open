@@ -4,28 +4,28 @@ require __DIR__.'/app/bootstrap.php';require __DIR__.'/app/social.php';maintenan
 if(setting('maintenance_mode','1')==='1'){http_response_code(403);exit('Соціальний вхід доступний після відкриття форуму.');}
 $provider=(string)($_GET['provider']??$_POST['provider']??'');$error='';
 if(!social_enabled($provider)){http_response_code(404);exit('Сервіс входу не підключено.');}
-$origin=rtrim(getenv('FORUM_PUBLIC_URL')?:'https://forum.mavik.name','/');$callback=$origin.'/social.php?provider='.$provider.'&callback=1';
+$origin=rtrim(forum_social_setting('FORUM_PUBLIC_URL')?:'https://forum.mavik.name','/');$callback=$origin.'/social.php?provider='.$provider.'&callback=1';
 try{
  if(isset($_GET['start'])){
   $_SESSION['social_flow']=['provider'=>$provider,'state'=>bin2hex(random_bytes(32)),'verifier'=>bin2hex(random_bytes(32)),'time'=>time(),'link_user'=>current_user_id()];
   $flow=$_SESSION['social_flow'];
   if($provider==='google'){
-   $args=['client_id'=>getenv('FORUM_GOOGLE_CLIENT_ID'),'redirect_uri'=>$callback,'response_type'=>'code','scope'=>'openid email profile','state'=>$flow['state'],'code_challenge'=>rtrim(strtr(base64_encode(hash('sha256',$flow['verifier'],true)),'+/','-_'),'='),'code_challenge_method'=>'S256','prompt'=>'select_account'];
+   $args=['client_id'=>forum_social_setting('FORUM_GOOGLE_CLIENT_ID'),'redirect_uri'=>$callback,'response_type'=>'code','scope'=>'openid email profile','state'=>$flow['state'],'code_challenge'=>rtrim(strtr(base64_encode(hash('sha256',$flow['verifier'],true)),'+/','-_'),'='),'code_challenge_method'=>'S256','prompt'=>'select_account'];
    header('Location: https://accounts.google.com/o/oauth2/v2/auth?'.http_build_query($args));exit;
   }
-  forum_header('Вхід через Telegram');?><section class="panel"><h1>Вхід через Telegram</h1><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="<?=e(getenv('FORUM_TELEGRAM_BOT_USERNAME'))?>" data-size="large" data-auth-url="<?=e($callback.'&state='.$flow['state'])?>"></script></section><?php forum_footer();exit;
+  forum_header('Вхід через Telegram');?><section class="panel"><h1>Вхід через Telegram</h1><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="<?=e(forum_social_setting('FORUM_TELEGRAM_BOT_USERNAME'))?>" data-size="large" data-auth-url="<?=e($callback.'&state='.$flow['state'])?>"></script></section><?php forum_footer();exit;
  }
  if(isset($_GET['callback'])){
   $flow=$_SESSION['social_flow']??[];unset($_SESSION['social_flow']);
   if(($flow['provider']??'')!==$provider||time()-($flow['time']??0)>600||!hash_equals((string)($flow['state']??''),(string)($_GET['state']??''))||empty($flow['state']))throw new RuntimeException('Спроба входу застаріла. Почніть знову.');
   if($provider==='google'){
-   $token=social_request('https://oauth2.googleapis.com/token',['code'=>(string)($_GET['code']??''),'client_id'=>getenv('FORUM_GOOGLE_CLIENT_ID'),'client_secret'=>getenv('FORUM_GOOGLE_CLIENT_SECRET'),'redirect_uri'=>$callback,'grant_type'=>'authorization_code','code_verifier'=>$flow['verifier']]);
+   $token=social_request('https://oauth2.googleapis.com/token',['code'=>(string)($_GET['code']??''),'client_id'=>forum_social_setting('FORUM_GOOGLE_CLIENT_ID'),'client_secret'=>forum_social_setting('FORUM_GOOGLE_CLIENT_SECRET'),'redirect_uri'=>$callback,'grant_type'=>'authorization_code','code_verifier'=>$flow['verifier']]);
    if(empty($token['access_token']))throw new RuntimeException('Вхід не підтверджено.');
    $profile=social_request('https://openidconnect.googleapis.com/v1/userinfo',null,$token['access_token']);
    if(empty($profile['sub'])||empty($profile['email_verified']))throw new RuntimeException('Потрібен підтверджений Google-профіль.');
    $pending=['provider'=>$provider,'uid'=>(string)$profile['sub'],'name'=>(string)($profile['name']??'Учасник'),'email'=>(string)($profile['email']??''),'photo'=>$profile['picture']??null];
   }else{
-   $data=$_GET;unset($data['provider'],$data['callback'],$data['state']);if(!telegram_verify($data,getenv('FORUM_TELEGRAM_BOT_TOKEN'),time()))throw new RuntimeException('Telegram-підпис недійсний або застарів.');
+   $data=$_GET;unset($data['provider'],$data['callback'],$data['state']);if(!telegram_verify($data,forum_social_setting('FORUM_TELEGRAM_BOT_TOKEN'),time()))throw new RuntimeException('Telegram-підпис недійсний або застарів.');
    $pending=['provider'=>$provider,'uid'=>(string)$data['id'],'name'=>trim(($data['first_name']??'').' '.($data['last_name']??''))?:'Учасник','email'=>'','photo'=>$data['photo_url']??null];
   }
   $pending['time']=time();$pending['link_user']=$flow['link_user'];

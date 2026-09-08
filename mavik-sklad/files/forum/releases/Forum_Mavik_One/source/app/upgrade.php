@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 /** Additive, transactional upgrade: existing IDs, content and credentials stay intact. */
 function forum_upgrade(PDO $pdo): void {
+    $pdo->exec('CREATE TABLE IF NOT EXISTS user_presence (user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, seen_at INTEGER NOT NULL)');
     if ((int)$pdo->query('PRAGMA user_version')->fetchColumn() >= 9) return;
     $pdo->exec('BEGIN IMMEDIATE');
     try {
@@ -28,9 +29,12 @@ function forum_upgrade(PDO $pdo): void {
     } catch (Throwable $error) { $pdo->exec('ROLLBACK'); throw $error; }
 }
 
-function avatar(?string $path, string $name='', string $class=''): string {
+function avatar(?string $path, string $name='', string $class='', ?int $userId=null): string {
     $valid = $path && preg_match('~^/assets/avatars/[a-f0-9]{32}\.webp$~D',$path);
-    return '<img class="avatar '.e($class).($valid?'':' default-avatar').'" src="'.e($valid?$path:'/assets/default-mask.svg').'" alt="'.e($name).'" loading="lazy">';
+    $online=false;
+    if($userId){$st=db()->prepare('SELECT 1 FROM user_presence JOIN users ON users.id=user_presence.user_id WHERE user_id=? AND seen_at>=? AND users.blocked_at IS NULL');$st->execute([$userId,time()-300]);$online=(bool)$st->fetchColumn();}
+    $img = '<img class="avatar '.e($class).($valid?'':' default-avatar').'" src="'.e($valid?$path:'/assets/default-mask.svg').'" alt="'.e($name).'" loading="lazy">';
+    return $userId ? '<span class="avatar-presence '.e($class).'">'.$img.($online?'<i class="online-dot" role="img" aria-label="На сайті протягом останніх 5 хвилин" title="На сайті протягом останніх 5 хвилин"></i>':'').'</span>' : $img;
 }
 function excerpt(string $text, int $length=180): string {
     return mb_strimwidth(preg_replace('/\s+/u',' ',trim($text))??'',0,$length,'…','UTF-8');

@@ -57,6 +57,7 @@ function authenticated_user(): ?array {
     $st=db()->prepare('SELECT * FROM users WHERE id=? AND blocked_at IS NULL');$st->execute([$id]);
     $user=$st->fetch()?:null;
     if (!$user) unset($_SESSION['user_id'],$_SESSION['admin_id']);
+    if($user){db()->prepare('INSERT INTO user_presence(user_id,seen_at) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET seen_at=excluded.seen_at WHERE seen_at < excluded.seen_at-60')->execute([$user['id'],time()]);}
     return $user;
 }
 function is_admin(): bool { return (authenticated_user()['role']??'')==='admin'; }
@@ -170,7 +171,7 @@ function forum_header(string $title): void {
 <title><?=e($title)?> — Форум MaVik</title>
 <link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/assets/app/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0b0b0c">
-<link rel="stylesheet" href="/assets/style.css?v=Forum_Mavik_One"><link rel="stylesheet" href="/assets/release.css?v=Forum_Mavik_One">
+<link rel="stylesheet" href="/assets/style.css?v=Forum_Mavik_One"><link rel="stylesheet" href="/assets/release.css?v=Forum_Mavik_One-20260908b">
 <meta name="description" content="<?=e($title)?> — спільнота MaVik: книги, поезія, тексти, музика та розмови."><?php if($seoPublic):?><link rel="canonical" href="<?=e($canonical)?>"><?php endif;?>
 <?php if ($maintenance || !$seoPublic): ?><meta name="robots" content="noindex,nofollow,noarchive"><?php endif; ?>
 </head>
@@ -188,10 +189,9 @@ function forum_header(string $title): void {
       <a href="https://mavik.name/music/">Музика</a>
       <a class="active" href="/">Форум</a>
       <a href="https://mavik.name/about/">Про автора</a>
-      <a class="coffee-nav" href="https://mavik.name/support" aria-label="Пригостити автора кавою" title="Пригостити автора кавою"><img src="/assets/icons/coffee.svg" alt="" width="42" height="42"></a>
     </nav>
-    <a class="header-search" href="/search.php" aria-label="Пошук"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></a>
-    <a class="account-link" href="<?=e($accountUrl)?>"><?=e($accountLabel)?></a>
+      <a class="coffee-nav" href="https://mavik.name/support" aria-label="Пригостити автора кавою" title="Пригостити автора кавою"><img src="/assets/icons/coffee.svg" alt="" width="42" height="42"></a>
+    <?php if(is_admin()):?><a class="account-link owner-pill" href="/admin/">Адмінка</a><?php else:?><a class="account-link" href="<?=e($accountUrl)?>"><?=e($accountLabel)?></a><?php endif;?>
     <?php if(!is_logged_in()):?><a class="btn register-nav" href="/auth.php?mode=register">Зареєструватися</a><?php endif;?>
     <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Відкрити меню" class="mobile-menu-toggle" id="mobileMenuToggle" type="button"><span></span><span></span><span></span></button>
   </div>
@@ -204,6 +204,7 @@ function forum_header(string $title): void {
       <a class="active" href="/">Форум</a>
       <a href="https://mavik.name/about/">Про автора</a>
       <a href="<?=e($accountUrl)?>"><?=e($accountLabel)?></a>
+      <?php if(is_admin()):?><a class="owner-pill" href="/admin/">Адмінка</a><?php endif;?>
     </div>
   </nav>
 </header>
