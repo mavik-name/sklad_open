@@ -1,6 +1,6 @@
 {
   "CHECKPOINT.md": "d95d467c276c369f85fedfed7b2604cb4b0c85c0d5e85100d824a8087862c7a0",
-  "forum_mavik_test_build_0.9.1.zip": "860715c94abcc6cc312edcbaa939dfaa7557f60607daa7199bcc9fbfa26475e9",
+  "forum_mavik_test_build_0.9.1.zip": "7e2fd9ed0715019dae5aea5100cf184479219d68f324454492439e62f817e3df",
   "RELEASE-NOTES.md": "9ce40f654cb552154340286b5632b653d8a680cc737155e4364450fb84f3ff40",
   "qa/ads-check.cjs": "5951c52ae88d0911e81c7a116c7dd9656016ee7476af9f77c86a7a8184e843d7",
   "qa/category-1889.png": "eef82713a8c80e58e755430533c0ee802fda93e9fa30991a3c34ef0d84e82351",
@@ -55,7 +55,7 @@
   "source/admin/users.php": "d6c44b675fea00abc3956586a9c1630e6dd3c0b8329ba4f173c74a7788315306",
   "source/app/.htaccess": "fa28d421a28ed9b6f4b997d5119c2b8adbacff6e2dd119a179b71230f9664934",
   "source/app/ads.php": "170df1c583791f223ace63fc5a883fafd511cb9a1f07cd33fc1471e98c84b516",
-  "source/app/bootstrap.php": "f0972954d3e1ee975d89a507db483a74851f3efd1a160948b33198aab6063009",
+  "source/app/bootstrap.php": "eed0a1da938def5e9836e6d036c8763e6061207dfcda8e09bdf449589870dc61",
   "source/app/session.php": "45e5b3c7e4f6657beb2dcd9490a51a141ed6a28b2ddf2b12fbf50ee79d3c2166",
   "source/app/social.php": "8e23d6636b880f2348989121401ae81baf038e348011e133650f258c7b7a9939",
   "source/app/upgrade.php": "ea78256f18b410472e9c5a4db7b0b86018f303aea88f849d3ddec9e42010bfb1",
