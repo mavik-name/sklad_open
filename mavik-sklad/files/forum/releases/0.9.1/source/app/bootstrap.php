@@ -139,7 +139,7 @@ function format_forum_date(string $date): string {
 
 function forum_header(string $title): void {
     $maintenance = setting('maintenance_mode','1') === '1';
-    $accountLabel = is_admin() ? 'Адмінка' : (is_logged_in() ? 'Профіль' : 'Увійти');
+    $accountLabel = is_admin() ? 'Адмінка форуму' : (is_logged_in() ? 'Профіль' : 'Увійти');
     $accountUrl = is_admin() ? '/admin/' : (is_logged_in() ? '/profile.php' : '/auth.php');
     ?>
 <!doctype html>
