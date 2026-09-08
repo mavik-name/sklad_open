@@ -128,3 +128,5 @@ body{background:var(--bg);color:var(--text)}
 .desktop-menu,.account-link{font:400 14px/1 Georgia,'Times New Roman',serif}.desktop-menu>a.active{font-weight:700}
 @media(min-width:768px) and (max-width:1099px){.desktop-menu{font-size:13px}}
 .mobile-menu a{font:400 24px/1.12 Georgia,'Times New Roman',serif}.mobile-menu a.active{font-weight:700}
+
+.tags a{padding:4px 8px;border:1px solid rgba(255,255,255,.11);border-radius:999px;background:#161a1b;color:#b4aea5;font-size:12px}.tags a:hover{color:var(--gold2);border-color:var(--gold)}
