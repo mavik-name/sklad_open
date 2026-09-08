@@ -8,6 +8,8 @@
 
 > Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
 
+> Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
+
 # Поточний пакет: 0.9.1
 
 Категорії, ширина оболонки та логотип виправлені. Код/ZIP/checkpoint у releases/0.9.1/. Попередній 0.9 нижче збережений як історія.

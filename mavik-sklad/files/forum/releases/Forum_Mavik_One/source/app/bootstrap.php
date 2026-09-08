@@ -175,7 +175,7 @@ function forum_header(string $title): void {
 <title><?=e($title)?> — Форум MaVik</title>
 <link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/assets/app/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0b0b0c">
-<link rel="stylesheet" href="/assets/style.css?v=Forum_Mavik_One"><link rel="stylesheet" href="/assets/release.css?v=Forum_Mavik_One-20260908b">
+<link rel="stylesheet" href="/assets/style.css?v=Forum_Mavik_One"><link rel="stylesheet" href="/assets/release.css?v=Forum_Mavik_One-20260908c">
 <meta name="description" content="<?=e($title)?> — спільнота MaVik: книги, поезія, тексти, музика та розмови."><?php if($seoPublic):?><link rel="canonical" href="<?=e($canonical)?>"><?php endif;?>
 <?php if ($maintenance || !$seoPublic): ?><meta name="robots" content="noindex,nofollow,noarchive"><?php endif; ?>
 </head>
@@ -187,26 +187,27 @@ function forum_header(string $title): void {
       <span class="site-brand-copy"><strong><span class="forum-brand-prefix">Форум. </span><em>MaVik</em></strong><span>МАКАРЧУК ВІКТОР</span></span>
     </a>
     <nav class="desktop-menu menu" aria-label="Головне меню">
-      <a href="https://mavik.name/">Головна</a>
       <a href="https://mavik.name/books/">Книги</a>
-      <a href="https://mavik.name/blog/">Блог</a>
       <a href="https://mavik.name/music/">Музика</a>
-      <a class="active" href="/">Форум</a>
-      <a href="https://mavik.name/about/">Про автора</a>
+      <a href="https://mavik.name/blog/">Блог</a>
+      <a class="active" aria-current="page" href="/">Форум</a>
+      <a href="https://mavik.name/about/">Автор</a>
+      <a href="https://mavik.name/announcements/">Анонси</a>
+      <a href="https://mavik.name/contact/">Контакт</a>
     </nav>
+    <?php if(is_admin()):?><a class="account-link owner-pill" href="/admin/">Адмінка</a><?php endif;?>
       <a class="coffee-nav" href="https://mavik.name/support" aria-label="Пригостити автора кавою" title="Пригостити автора кавою"><img src="/assets/icons/coffee.svg" alt="" width="42" height="42"></a>
-    <?php if(is_admin()):?><a class="account-link owner-pill" href="/admin/">Адмінка</a><?php else:?><a class="account-link" href="<?=e($accountUrl)?>"><?=e($accountLabel)?></a><?php endif;?>
-    <?php if(!is_logged_in()):?><a class="btn register-nav" href="/auth.php?mode=register">Зареєструватися</a><?php endif;?>
     <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Відкрити меню" class="mobile-menu-toggle" id="mobileMenuToggle" type="button"><span></span><span></span><span></span></button>
   </div>
   <nav aria-hidden="true" aria-label="Мобільне меню" class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-inner">
-      <a href="https://mavik.name/">Головна</a>
       <a href="https://mavik.name/books/">Книги</a>
-      <a href="https://mavik.name/blog/">Блог</a>
       <a href="https://mavik.name/music/">Музика</a>
-      <a class="active" href="/">Форум</a>
-      <a href="https://mavik.name/about/">Про автора</a>
+      <a href="https://mavik.name/blog/">Блог</a>
+      <a class="active" aria-current="page" href="/">Форум</a>
+      <a href="https://mavik.name/about/">Автор</a>
+      <a href="https://mavik.name/announcements/">Анонси</a>
+      <a href="https://mavik.name/contact/">Контакт</a>
       <a href="<?=e($accountUrl)?>"><?=e($accountLabel)?></a>
       <?php if(is_admin()):?><a class="owner-pill" href="/admin/">Адмінка</a><?php endif;?>
     </div>
