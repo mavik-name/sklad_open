@@ -5,7 +5,7 @@ body{background:var(--bg);color:var(--text)}
 .site-brand-mark,.site-brand-mark img{width:40px;height:40px}
 .site-brand-copy strong{font-size:24px}.site-brand-copy span{font-size:10px;letter-spacing:.2em}
 .desktop-menu{justify-content:flex-end;gap:28px}.desktop-menu>a{padding:23px 0}
-.desktop-menu>a:after{bottom:12px!important;height:2px!important}
+.desktop-menu>a:after{bottom:12px!important;height:1px!important}
 .register-nav{color:var(--gold2);border-color:var(--gold2);background:transparent;font-size:14px;white-space:nowrap}
 .coffee-nav,.floating-btn,.floating-btn:hover{border:0;border-radius:0;background:transparent;backdrop-filter:none;box-shadow:none}
 .coffee-nav img,.floating-btn img{width:42px;height:42px}.coffee-nav{width:44px;height:44px}
