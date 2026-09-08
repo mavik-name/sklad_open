@@ -1,0 +1,5 @@
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+build-0.9/assets/avatars/*.webp
+node_modules/

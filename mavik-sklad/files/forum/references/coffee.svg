@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" role="img" aria-label="Кава">
+  <circle cx="21" cy="21" r="19.6" fill="#0a0a0b" stroke="#d9bd86" stroke-width="1.6"/>
+  <g fill="none" stroke="#d9bd86" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12.7 17.2h15.5v6.2a6.9 6.9 0 0 1-6.9 6.9h-1.7a6.9 6.9 0 0 1-6.9-6.9v-6.2Z"/>
+    <path d="M28.2 19.4H30a3.6 3.6 0 0 1 0 7.2h-2.4"/>
+    <path d="M11.5 32.7h19.8"/>
+    <path d="M16.6 10.8c0 1.4 1.6 1.6 1.6 3"/>
+    <path d="M23 9.9c0 1.5 1.6 1.7 1.6 3.2"/>
+  </g>
+</svg>

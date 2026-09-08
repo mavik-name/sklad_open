@@ -1,0 +1,142 @@
+[
+  {
+    "check": "Fresh 0.8-schema install",
+    "passed": true
+  },
+  {
+    "check": "Maintenance returns 503 and noindex",
+    "passed": true
+  },
+  {
+    "check": "Robots blocks all",
+    "passed": true
+  },
+  {
+    "check": "Admin preview works",
+    "passed": true
+  },
+  {
+    "check": "Migration preserves topics",
+    "passed": true
+  },
+  {
+    "check": "Upgrade version",
+    "passed": true
+  },
+  {
+    "check": "Public opening needs confirmation",
+    "passed": true
+  },
+  {
+    "check": "Public forum opens",
+    "passed": true
+  },
+  {
+    "check": "Consent enforced by server",
+    "passed": true
+  },
+  {
+    "check": "Consent timestamp stored",
+    "passed": true
+  },
+  {
+    "check": "Reply created",
+    "passed": true
+  },
+  {
+    "check": "Thread and quote IDs stored",
+    "passed": true
+  },
+  {
+    "check": "Every post has stable anchor",
+    "passed": true
+  },
+  {
+    "check": "Quote markup and attribution",
+    "passed": true
+  },
+  {
+    "check": "Branch route",
+    "passed": true
+  },
+  {
+    "check": "Unicode search finds post",
+    "passed": true
+  },
+  {
+    "check": "Title search finds topic",
+    "passed": true
+  },
+  {
+    "check": "Editing does not bump activity",
+    "passed": true
+  },
+  {
+    "check": "Hidden post excluded from search",
+    "passed": true
+  },
+  {
+    "check": "Nonempty category protected",
+    "passed": true
+  },
+  {
+    "check": "Hidden category topic inaccessible",
+    "passed": true
+  },
+  {
+    "check": "Hidden category excluded from search",
+    "passed": true
+  },
+  {
+    "check": "Storage protected",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /topics.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /topic.php?slug=shcho-pochytaty-pered-snom",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /category.php?slug=knyhy",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /rules.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /profile.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /admin/",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /admin/topics.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /admin/users.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /admin/categories.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /admin/settings.php",
+    "passed": true
+  },
+  {
+    "check": "No runtime error /admin/moderation.php",
+    "passed": true
+  }
+]

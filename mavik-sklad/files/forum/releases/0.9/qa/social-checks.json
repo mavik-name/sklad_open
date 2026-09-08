@@ -1,0 +1,8 @@
+{
+    "valid Telegram signature": true,
+    "wrong secret rejected": true,
+    "expired signature rejected": true,
+    "forged profile rejected": true,
+    "unconfigured providers disabled": true,
+    "arbitrary avatar host rejected": true
+}

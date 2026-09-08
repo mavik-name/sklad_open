@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Quote chooses post ID",
+    "passed": true
+  },
+  {
+    "name": "Quote has author preview",
+    "passed": true
+  },
+  {
+    "name": "Reply clears quote",
+    "passed": true
+  },
+  {
+    "name": "Reply retains parent",
+    "passed": true
+  },
+  {
+    "name": "Reply can be cancelled",
+    "passed": true
+  },
+  {
+    "name": "Avatar upload succeeds",
+    "passed": true
+  },
+  {
+    "name": "Avatar is normalized WebP",
+    "passed": true
+  },
+  {
+    "name": "Default mask restored",
+    "passed": true
+  },
+  {
+    "name": "Drag reorder saved",
+    "passed": true
+  },
+  {
+    "name": "Mobile move controls visible",
+    "passed": true
+  },
+  {
+    "name": "Mobile move saved",
+    "passed": true
+  },
+  {
+    "name": "Mobile coffee points to support",
+    "passed": true
+  }
+]

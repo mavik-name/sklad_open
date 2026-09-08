@@ -1,0 +1,38 @@
+[
+  {
+    "check": "Closed search returns 503",
+    "passed": true
+  },
+  {
+    "check": "Wrong preview password denied",
+    "passed": true
+  },
+  {
+    "check": "Correct preview password permits reading",
+    "passed": true
+  },
+  {
+    "check": "Preview still sends noindex",
+    "passed": true
+  },
+  {
+    "check": "Preview cannot register",
+    "passed": true
+  },
+  {
+    "check": "Password rotation revokes preview",
+    "passed": true
+  },
+  {
+    "check": "Ban revokes existing session",
+    "passed": true
+  },
+  {
+    "check": "Malformed reorder rejected",
+    "passed": true
+  },
+  {
+    "check": "CSRF mutation rejected",
+    "passed": true
+  }
+]

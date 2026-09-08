@@ -1,0 +1,8 @@
+{
+    "existing user hash preserved": true,
+    "legacy parent migrated": true,
+    "activity from replies, not edit date": true,
+    "topic IDs and content preserved": true,
+    "foreign key integrity": true,
+    "idempotent migration": true
+}
