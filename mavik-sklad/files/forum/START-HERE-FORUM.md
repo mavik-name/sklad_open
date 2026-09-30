@@ -1,4 +1,4 @@
-> Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
+> CURRENT LIVE LITE 2026-09-30: [checkpoint](releases/2026-09-30-live-lite/CHECKPOINT.md) — **mavik.name/forum is now authoritative**. It supersedes the old forum.mavik.name architecture described lower in this historical handoff. Password reset, Europe/Kyiv time and admin edit button on every reply are included.\n\n> Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
 
 > Поточний канонічний реліз: [Forum_Mavik_One](releases/Forum_Mavik_One/CHECKPOINT.md).
 
