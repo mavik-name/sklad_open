@@ -58,4 +58,6 @@ The exact updated ZIP is the recovery artifact for this change set. Do not fall 
 ## LIVE verification 2026-09-30
 - Password recovery email flow: VERIFIED WORKING by author on production.
 - Admin edit button on every reply: VERIFIED WORKING by author on production.
-- Europe/Kyiv displayed publication time: pending live confirmation.
+- Europe/Kyiv displayed publication time: VERIFIED WORKING by author on production.
+
+- All three production checks PASS: password recovery, admin edit on every reply, and correct Europe/Kyiv publication time.
