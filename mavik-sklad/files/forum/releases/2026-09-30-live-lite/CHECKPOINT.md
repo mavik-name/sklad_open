@@ -54,3 +54,8 @@ Updated LITE artifact:
 
 ## Important
 The exact updated ZIP is the recovery artifact for this change set. Do not fall back to the old subdomain-oriented Forum_Mavik_One source when continuing work.
+
+## LIVE verification 2026-09-30
+- Password recovery email flow: VERIFIED WORKING by author on production.
+- Admin edit button on every reply: pending live confirmation.
+- Europe/Kyiv displayed publication time: pending live confirmation.
